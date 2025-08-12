@@ -1,0 +1,4 @@
+timeout 1200 'qs ipc call globalIPC toggleLock'
+timeout 1250 'niri msg action power-off-monitors'
+timeout 7200 'systemctl suspend'
+before-sleep 'swaylock'
