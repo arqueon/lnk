@@ -374,7 +374,7 @@ def init_widgets_list(monitor_num):
             foreground = colors[5],
             background = backgroundColor
         ),
-        widget.CurrentLayoutIcon(
+        widget.CurrentLayout(
             scale = 0.5,
             foreground = foregroundColor,
             background = backgroundColor

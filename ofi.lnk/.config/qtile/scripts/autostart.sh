@@ -76,7 +76,6 @@ run flameshot &
 run kdeconnect-indicator &
 run fusuma -d &
 #run spotify &
-#run atom &
 #run telegram-desktop &
 #run /usr/bin/octopi-notifier &
 #run code &

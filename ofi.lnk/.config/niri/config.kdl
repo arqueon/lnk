@@ -315,7 +315,6 @@ spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "copyq"
 //spawn-at-startup "cosmic-ext-alternative-startup"
 spawn-at-startup "niriswitcher"
-spawn-at-startup "variety"
 spawn-at-startup "ferdium"
 spawn-at-startup "niri" "msg" "action"  "focus-workspace" "web"
 

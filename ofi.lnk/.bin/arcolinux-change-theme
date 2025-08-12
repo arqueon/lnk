@@ -34,10 +34,10 @@ installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
 tput setaf 3
 echo "We will apply these settings"
 echo
-echo "THEME='catppuccin-mocha-mauve-standard+default'"
+echo "THEME='catppuccin-mocha-blue-standard+default'"
 echo "ICONS='Papirus-Dark'"
 echo "FONT='Noto Sans 11'"
-echo "CURSOR='Catppuccin-Mocha-Dark'"
+echo "CURSOR='Bibata-Modern-Ice'"
 echo "SCHEMA='gsettings set org.gnome.desktop.interface'"
 tput sgr0
 echo
@@ -49,10 +49,10 @@ then
 
 
 
-THEME='catppuccin-mocha-mauve-standard+default'
+THEME='catppuccin-mocha-blue-standard+default'
 ICONS='Papirus-Dark'
-FONT='Noto Sans 11'
-CURSOR='Catppuccin-Mocha-Dark'
+FONT='Noto Sans 10'
+CURSOR='Bibata-Modern-Ice'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 
