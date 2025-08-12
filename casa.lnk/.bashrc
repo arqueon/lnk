@@ -449,4 +449,4 @@ fastfetch --config $HOME/.config/fastfetch/mokka.jsonc
 #sysinfo-retro
 #cpufetch
 #colorscript random
-#hyfetch
+hyfetch
