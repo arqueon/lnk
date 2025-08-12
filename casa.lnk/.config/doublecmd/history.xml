@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <History>
+    <Navigation>
+      <Item>/home/</Item>
+      <Item>/media/insync/DATA/arqueon-conf/home/.config/</Item>
+      <Item>/home/ruben/.config/</Item>
+      <Item>/home/ruben/.config/alacritty/</Item>
+      <Item>/home/ruben/</Item>
+      <Item>/media/insync/DATA/arqueon-conf/home/</Item>
+      <Item>/media/insync/DATA/arqueon-conf/</Item>
+      <Item>/media/insync/DATA/arqueon-conf/home/wallpaper/</Item>
+      <Item>/media/insync/DATA/arqueon-conf/home/assets/</Item>
+      <Item>/media/insync/DATA/arqueon-conf/_various/</Item>
+      <Item>/media/insync/DATA/</Item>
+      <Item>/media/insync/</Item>
+      <Item>/media/</Item>
+      <Item>/</Item>
+      <Item>/usr/lib/</Item>
+    </Navigation>
+    <CommandLine/>
+    <FileMask/>
+    <VolumeSize/>
+    <CreateDirectories/>
+    <SearchText/>
+    <SearchTextPath/>
+    <ReplaceText/>
+    <ReplaceTextPath/>
+    <RenameNameMask/>
+    <RenameExtMask/>
+    <SearchDirectories/>
+    <SearchExcludeFiles/>
+    <SearchExcludeDirectories/>
+  </History>
+</doublecmd>
