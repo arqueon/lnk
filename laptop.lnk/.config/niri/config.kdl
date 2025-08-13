@@ -45,6 +45,7 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     focus-follows-mouse  max-scroll-amount="40%"
+    workspace-auto-back-and-forth
 }
 
 // Workspaces configuration
