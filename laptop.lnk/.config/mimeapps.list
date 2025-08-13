@@ -103,6 +103,7 @@ x-scheme-handler/webcals=userapp-Thunderbird-I51C52.desktop;
 application/epub+zip=okularApplication_epub.desktop;com.github.johnfactotum.Foliate.desktop;com.github.babluboy.bookworm.desktop;calibre-ebook-viewer.desktop;
 x-scheme-handler/bitwarden=bitwarden.desktop;Bitwarden.desktop;
 image/heif=org.kde.showfoto.desktop;org.kde.gwenview.desktop;
+text/x-opml+xml=sublime_text.desktop;
 
 [Default Applications]
 x-scheme-handler/webcal=google-chrome.desktop

@@ -3,7 +3,7 @@
   <Tabs>
     <OpenedTabs>
       <Left>
-        <ActiveTab>6</ActiveTab>
+        <ActiveTab>4</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -176,7 +176,9 @@
                 <FileSource Type="FileSystem"/>
                 <Paths>
                   <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="kdedefaults">/home/ruben/.config/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -282,25 +284,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
-                  <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/gtk-4.0/</Path>
-                  <Path Filename="KDE">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/KDE/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
-                  <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/gtk-4.0/</Path>
-                  <Path Filename="wlogout">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/wlogout/</Path>
-                  <Path Filename="archlinux-logout">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/archlinux-logout/</Path>
-                  <Path Filename="dconf">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/dconf/</Path>
-                  <Path Filename="..">/home/ruben/.config/</Path>
-                  <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
                   <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/gtk-4.0/</Path>
@@ -331,7 +314,26 @@
                   <Path Filename="waybar">/home/ruben/.config/niri/</Path>
                   <Path Filename="..">/home/ruben/.config/niri/waybar/</Path>
                   <Path Filename="..">/home/ruben/.config/niri/</Path>
-                  <Path Filename="archlinux-betterlockscreen">/home/ruben/.config/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename="ofi.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/gtk-3.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="ofi.lnk">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -382,7 +384,11 @@
                   <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="quickshell">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/quickshell/</Path>
-                  <Path Filename="quickshell">/home/ruben/.config/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="environment.d">/home/ruben/.config/</Path>
                 </Paths>
               </Entry>
             </History>
