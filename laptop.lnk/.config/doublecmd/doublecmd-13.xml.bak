@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.28 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.0.11" ConfigVersion="13">
   <Toolbars>
     <MainToolbar>
       <Row>
         <Command>
-          <ID>{726F2805-406C-495A-A61E-49CF0888F3FE}</ID>
+          <ID>{C8B92E87-30F9-450B-B479-D963F72425E8}</ID>
           <Icon>cm_refresh</Icon>
           <Command>cm_Refresh</Command>
         </Command>
         <Command>
-          <ID>{38EB8B0E-821B-437B-B33D-591CE57D5942}</ID>
+          <ID>{20785F7C-A388-4142-870B-18571A8CDE53}</ID>
           <Icon>cm_runterm</Icon>
           <Command>cm_RunTerm</Command>
         </Command>
         <Command>
-          <ID>{A02DA3F6-832B-4408-8281-98532F2201D9}</ID>
+          <ID>{55A51BCB-AF6C-41F8-8943-44905AD053C8}</ID>
           <Icon>cm_options</Icon>
           <Command>cm_Options</Command>
         </Command>
@@ -22,17 +22,17 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{20100876-518C-4965-B4D4-47BC3B30B3FD}</ID>
+          <ID>{CB52DD3C-4DF5-4D88-ADA9-66C73BB1D0BE}</ID>
           <Icon>cm_briefview</Icon>
           <Command>cm_BriefView</Command>
         </Command>
         <Command>
-          <ID>{0A7999BF-277F-46D9-8378-827FAD55B039}</ID>
+          <ID>{297B614A-E35B-4521-9F1A-801C0CBA64F4}</ID>
           <Icon>cm_columnsview</Icon>
           <Command>cm_ColumnsView</Command>
         </Command>
         <Command>
-          <ID>{8A14C248-D6EE-4D50-99C2-81BAC22FE691}</ID>
+          <ID>{F20F05AB-90B5-4242-AE48-FD619841964B}</ID>
           <Icon>cm_thumbnailsview</Icon>
           <Command>cm_ThumbnailsView</Command>
         </Command>
@@ -40,7 +40,7 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{172AF090-2A44-433E-984C-CDA039C589D5}</ID>
+          <ID>{61231CCC-10BD-4AD1-A475-CD862D2EFA36}</ID>
           <Icon>cm_flatview</Icon>
           <Command>cm_FlatView</Command>
         </Command>
@@ -48,12 +48,12 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{719A937C-72C6-4047-9796-80C0E30E05D4}</ID>
+          <ID>{29325F5F-0781-4233-BD2D-13EE2E82FEF0}</ID>
           <Icon>cm_viewhistoryprev</Icon>
           <Command>cm_ViewHistoryPrev</Command>
         </Command>
         <Command>
-          <ID>{4D983E6D-511B-4A88-B901-A5F58A9638CB}</ID>
+          <ID>{DA9F7258-E3CD-4416-B3C9-DD4FA2A40EC0}</ID>
           <Icon>cm_viewhistorynext</Icon>
           <Command>cm_ViewHistoryNext</Command>
         </Command>
@@ -61,17 +61,17 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{A4BAC01C-8D19-460E-A170-29240D002384}</ID>
+          <ID>{32C75AFE-0267-44B1-AFA9-F11A30AED9E6}</ID>
           <Icon>cm_markplus</Icon>
           <Command>cm_MarkPlus</Command>
         </Command>
         <Command>
-          <ID>{AF722880-BDE3-4464-AA48-AA3458C6EA28}</ID>
+          <ID>{36532D72-DACE-4950-81C1-89790CDD1ABE}</ID>
           <Icon>cm_markminus</Icon>
           <Command>cm_MarkMinus</Command>
         </Command>
         <Command>
-          <ID>{40EC2693-A390-4E00-B320-26FCD1BCB352}</ID>
+          <ID>{262B86D2-36C1-451E-973B-A38527FEBF5C}</ID>
           <Icon>cm_markinvert</Icon>
           <Command>cm_MarkInvert</Command>
         </Command>
@@ -79,12 +79,12 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{10DAA77E-C34D-4B9F-8203-07884E5DCC94}</ID>
+          <ID>{2A2A7B39-8213-4EDB-B992-3C21805581EB}</ID>
           <Icon>cm_packfiles</Icon>
           <Command>cm_PackFiles</Command>
         </Command>
         <Command>
-          <ID>{03D18515-D668-43FE-91E3-ABE3B0EFBCE8}</ID>
+          <ID>{0B746D62-B95A-4445-9EE5-1F6891F0EA0F}</ID>
           <Icon>cm_extractfiles</Icon>
           <Command>cm_ExtractFiles</Command>
         </Command>
@@ -92,27 +92,22 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{46C63602-1D75-4471-B53C-3742809C4D5C}</ID>
-          <Icon>cm_networkconnect</Icon>
-          <Command>cm_NetworkConnect</Command>
-        </Command>
-        <Command>
-          <ID>{50390357-9381-4942-A3C7-F95A04BDBB94}</ID>
+          <ID>{52AF53F3-7AC5-48DE-ACFB-0ED68A1294AF}</ID>
           <Icon>cm_search</Icon>
           <Command>cm_Search</Command>
         </Command>
         <Command>
-          <ID>{DE85AB9D-49DA-4D51-B569-E95C2F29D525}</ID>
+          <ID>{9AA9ED55-D521-4DC0-B209-B608AE76AADB}</ID>
           <Icon>cm_multirename</Icon>
           <Command>cm_MultiRename</Command>
         </Command>
         <Command>
-          <ID>{BB40F29B-8B91-481C-A3F7-05CB5C41B898}</ID>
+          <ID>{ABA9842F-BA0A-474B-A0DB-B31461E86AC0}</ID>
           <Icon>cm_syncdirs</Icon>
           <Command>cm_SyncDirs</Command>
         </Command>
         <Command>
-          <ID>{1B4514BE-A620-4145-9B72-2F53D62E1A64}</ID>
+          <ID>{49A485CC-7DEE-4AAA-8574-2E818860A60B}</ID>
           <Icon>cm_copyfullnamestoclip</Icon>
           <Command>cm_CopyFullNamesToClip</Command>
         </Command>
@@ -121,22 +116,22 @@
     <MiddleToolbar>
       <Row>
         <Command>
-          <ID>{8ED8D632-170E-4EF6-83A8-83F5A148D761}</ID>
+          <ID>{A23DAF16-A560-4B54-8D6C-82590DAC5DC9}</ID>
           <Icon>cm_view</Icon>
           <Command>cm_View</Command>
         </Command>
         <Command>
-          <ID>{43B384A4-FC9D-4F88-9423-32953B2E64F4}</ID>
+          <ID>{7D0D8912-9DB7-462D-A074-ACC24C4BDE81}</ID>
           <Icon>cm_edit</Icon>
           <Command>cm_Edit</Command>
         </Command>
         <Command>
-          <ID>{136426CE-6501-4BC7-8699-ADE6B686FBB4}</ID>
+          <ID>{629E9F58-DCEA-4DDC-AA82-313BF0F0DD3B}</ID>
           <Icon>cm_copy</Icon>
           <Command>cm_Copy</Command>
         </Command>
         <Command>
-          <ID>{9DA6FE03-7DAC-43AE-B050-236CD0C70D5A}</ID>
+          <ID>{07118C21-C11D-4E9E-A9A8-3A9A3F7498F4}</ID>
           <Icon>cm_rename</Icon>
           <Command>cm_Rename</Command>
         </Command>
@@ -144,12 +139,12 @@
           <Style>True</Style>
         </Separator>
         <Command>
-          <ID>{D2441638-E76D-4589-A99B-A4AABF48DC34}</ID>
+          <ID>{C43DB3D8-464B-4161-BA7B-711ACF144CC6}</ID>
           <Icon>cm_packfiles</Icon>
           <Command>cm_PackFiles</Command>
         </Command>
         <Command>
-          <ID>{30FA2D25-9D62-4D89-B3BB-92553AFDA4CE}</ID>
+          <ID>{B594F63E-6721-4EB9-8F3A-7A45FDB18AEB}</ID>
           <Icon>cm_makedir</Icon>
           <Command>cm_MakeDir</Command>
         </Command>
@@ -168,17 +163,17 @@
     </Position>
   </MainWindow>
   <Language>
-    <POFileName>doublecmd.pot</POFileName>
+    <POFileName>doublecmd.es.po</POFileName>
   </Language>
   <Behaviours>
     <GoToRoot>False</GoToRoot>
     <ShowCurDirTitleBar>False</ShowCurDirTitleBar>
     <ActiveRight>False</ActiveRight>
-    <RunInTerminalStayOpenCmd>kitty</RunInTerminalStayOpenCmd>
+    <RunInTerminalStayOpenCmd>alacritty</RunInTerminalStayOpenCmd>
     <RunInTerminalStayOpenParams>-e sh -c '{command}; echo -n Press ENTER to exit... ; read a'</RunInTerminalStayOpenParams>
-    <RunInTerminalCloseCmd>kitty</RunInTerminalCloseCmd>
-    <RunInTerminalCloseParams>-e sh -c '{command}'</RunInTerminalCloseParams>
-    <JustRunTerminal>kitty</JustRunTerminal>
+    <RunInTerminalCloseCmd>alacritty</RunInTerminalCloseCmd>
+    <RunInTerminalCloseParams>-e sh -c {command}</RunInTerminalCloseParams>
+    <JustRunTerminal>alacritty</JustRunTerminal>
     <JustRunTermParams/>
     <OnlyOneAppInstance>False</OnlyOneAppInstance>
     <LynxLike>True</LynxLike>
@@ -195,7 +190,6 @@
     <PersonalizedMega>MB</PersonalizedMega>
     <PersonalizedGiga>GB</PersonalizedGiga>
     <PersonalizedTera>TB</PersonalizedTera>
-    <ConfirmQuit>False</ConfirmQuit>
     <MinimizeToTray>False</MinimizeToTray>
     <AlwaysShowTrayIcon>False</AlwaysShowTrayIcon>
     <Mouse>
@@ -212,10 +206,9 @@
     <CustomColumnsChangeAllColumns>False</CustomColumnsChangeAllColumns>
     <BriefViewFileExtAligned>False</BriefViewFileExtAligned>
     <DateTimeFormat>dd/mm/yy hh:nn:ss</DateTimeFormat>
-    <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>True</ShowSystemFiles>
+    <ShowSystemFiles>False</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -252,13 +245,13 @@
       <Quality>0</Quality>
     </Main>
     <Editor>
-      <Name>Noto Sans Mono</Name>
+      <Name>Monospace</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Editor>
     <Viewer>
-      <Name>Noto Sans Mono</Name>
+      <Name>Monospace</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -270,13 +263,13 @@
       <Quality>0</Quality>
     </ViewerBook>
     <Log>
-      <Name>Noto Sans Mono</Name>
+      <Name>Monospace</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>Noto Sans Mono</Name>
+      <Name>Monospace</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -305,27 +298,44 @@
       <Style>0</Style>
       <Quality>0</Quality>
     </TreeViewMenu>
-    <StatusBar>
-      <Name>default</Name>
-      <Size>0</Size>
-      <Style>0</Style>
-      <Quality>0</Quality>
-    </StatusBar>
   </Fonts>
   <Colors>
     <UseCursorBorder>False</UseCursorBorder>
+    <CursorBorderColor>-2147483635</CursorBorderColor>
     <UseFrameCursor>False</UseFrameCursor>
+    <Foreground>-2147483640</Foreground>
+    <Background>-2147483643</Background>
+    <Background2>-2147483643</Background2>
+    <Cursor>-2147483635</Cursor>
+    <CursorText>-2147483634</CursorText>
+    <Mark>255</Mark>
+    <InactiveCursor>-2147483645</InactiveCursor>
+    <InactiveMark>128</InactiveMark>
     <UseInvertedSelection>False</UseInvertedSelection>
     <UseInactiveSelColor>False</UseInactiveSelColor>
     <AllowOverColor>True</AllowOverColor>
     <gBorderFrameWidth>1</gBorderFrameWidth>
+    <PathLabel>
+      <ActiveColor>-2147483635</ActiveColor>
+      <ActiveFontColor>-2147483634</ActiveFontColor>
+      <InactiveColor>-2147483633</InactiveColor>
+      <InactiveFontColor>-2147483630</InactiveFontColor>
+    </PathLabel>
     <InactivePanelBrightness>100</InactivePanelBrightness>
     <FreeSpaceIndicator>
       <UseGradient>True</UseGradient>
+      <ForeColor>0</ForeColor>
+      <BackColor>16777215</BackColor>
     </FreeSpaceIndicator>
+    <LogWindow>
+      <Info>8388608</Info>
+      <Error>255</Error>
+      <Success>32768</Success>
+    </LogWindow>
+    <FileFilters/>
   </Colors>
   <ToolTips>
-    <ShowToolTipMode>False</ShowToolTipMode>
+    <ShowToolTipMode>True</ShowToolTipMode>
     <ActualToolTipMode>0</ActualToolTipMode>
     <ToolTipHideTimeOut>0</ToolTipHideTimeOut>
     <CustomFields/>
@@ -386,7 +396,6 @@
       <UpdatedFilesPosition>2</UpdatedFilesPosition>
     </Sorting>
     <ColumnsView>
-      <LongInStatus>False</LongInStatus>
       <AutoSaveWidth>True</AutoSaveWidth>
       <TitleStyle>2</TitleStyle>
     </ColumnsView>
@@ -401,7 +410,6 @@
     <ExtraLineSpan>2</ExtraLineSpan>
     <FolderPrefix>[</FolderPrefix>
     <FolderPostfix>]</FolderPostfix>
-    <RenameConfirmMouse>False</RenameConfirmMouse>
   </FilesViews>
   <Keyboard>
     <Typing>
@@ -429,7 +437,6 @@
     <UseTrash>True</UseTrash>
     <SkipFileOpError>False</SkipFileOpError>
     <TypeOfDuplicatedRename>0</TypeOfDuplicatedRename>
-    <DefaultDropEffect>True</DefaultDropEffect>
     <ShowDialogOnDragDrop>True</ShowDialogOnDragDrop>
     <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
     <DragAndDropTextHtmlDesireLevel>1</DragAndDropTextHtmlDesireLevel>
@@ -441,8 +448,8 @@
     <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
     <AutoExtractOpenMask/>
     <SearchDefaultTemplate/>
-    <ProgressKind>0</ProgressKind>
-    <Confirmations>15</Confirmations>
+    <ProgressKind>2</ProgressKind>
+    <Confirmations>4</Confirmations>
     <Options>
       <Symlink>0</Symlink>
       <CorrectLinks>False</CorrectLinks>
@@ -476,10 +483,78 @@
     </MultiRename>
   </FileOperations>
   <Tabs>
-    <Options>54033</Options>
+    <Options>49937</Options>
     <CharacterLimit>32</CharacterLimit>
     <Position>0</Position>
     <ActionOnDoubleClick>2</ActionOnDoubleClick>
+    <OpenedTabs>
+      <Left>
+        <ActiveTab>1</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>7</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="Tv">/media/8TB/</Path>
+                  <Path Filename="True.Detective">/media/8TB/Tv/</Path>
+                  <Path Filename="true.detective.s04e01.2160p.web.h265-ancientbugofunknownconversion.mkv">/media/8TB/Tv/True.Detective/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/media/8TB/</Path>
+                  <Path Filename="Descargas">/home/ruben/</Path>
+                  <Path Filename="x">/home/ruben/Descargas/</Path>
+                  <Path Filename="LegalPorno.24.01.18.Karolina.Geiman.XXX.1080p.HEVC.x265.PRT[XvX]">/home/ruben/Descargas/x/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/x/LegalPorno.24.01.18.Karolina.Geiman.XXX.1080p.HEVC.x265.PRT[XvX]/</Path>
+                  <Path Filename="LegalPorno.24.01.18.Karolina.Geiman.XXX.1080p.HEVC.x265.PRT[XvX]">/home/ruben/Descargas/x/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>0</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="True.Detective.S04E02.1080p.WEB.H264-SuccessfulCrab[TGx]">/media/8TB/organizar/1.series/</Path>
+                  <Path Filename="..">/media/8TB/organizar/1.series/True.Detective.S04E02.1080p.WEB.H264-SuccessfulCrab[TGx]/</Path>
+                  <Path Filename="The.Boy.and.The.Heron.2023.aka.Kimitachi.wa.do.ikiru.ka.HDCAM.1080p.x264.Dual.YG">/media/8TB/organizar/1.series/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Right>
+    </OpenedTabs>
   </Tabs>
   <Log Enabled="False" Count="0" LogFileWithDateInName="False">
     <FileName>%DC_CONFIG_PATH%/doublecmd.log</FileName>
@@ -490,11 +565,9 @@
   </Configuration>
   <History>
     <SearchReplaceHistory Save="True"/>
-    <DirHistory Save="True" Count="30"/>
+    <DirHistory Save="True"/>
     <CmdLineHistory Save="True"/>
     <FileMaskHistory Save="True"/>
-    <VolumeSizeHistory Save="True"/>
-    <CreateDirectoriesHistory Save="True"/>
   </History>
   <QuickSearch>
     <MatchBeginning>True</MatchBeginning>
@@ -515,7 +588,6 @@
     <InplaceRename>False</InplaceRename>
     <InplaceRenameButton>True</InplaceRenameButton>
     <DblClickToParent>False</DblClickToParent>
-    <DoubleClickEditPath>False</DoubleClickEditPath>
     <HotDirAddTargetOrNot>False</HotDirAddTargetOrNot>
     <HotDirFullExpandOrNot>False</HotDirFullExpandOrNot>
     <ShowPathInPopup>False</ShowPathInPopup>
@@ -525,8 +597,6 @@
     <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
     <PathModifierElements>0</PathModifierElements>
     <DefaultTextEncoding>none</DefaultTextEncoding>
-    <SystemItemProperties>False</SystemItemProperties>
-    <DecimalSeparator>�</DecimalSeparator>
   </Miscellaneous>
   <Thumbnails Save="True">
     <Width>128</Width>
@@ -546,7 +616,7 @@
     <Theme>dctheme</Theme>
     <ShowHiddenDimmed>False</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
-    <ShowOverlays>True</ShowOverlays>
+    <ShowOverlays>False</ShowOverlays>
     <Size>32</Size>
     <DiskSize>16</DiskSize>
     <DiskAlpha>50</DiskAlpha>
@@ -563,13 +633,17 @@
   <IgnoreList Enabled="False">
     <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
-  <DirectoryHotList/>
+  <DirectoryHotList>
+    <HotDir Name="arch-config" Path="/media/insync/DATA/arch-config"/>
+    <HotDir Name="Insync" Path="/media/insync/Insync"/>
+    <HotDir Name=".config" Path="/home/ruben/.config"/>
+    <HotDir Name="Descargas" Path="/home/ruben/Descargas"/>
+  </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
     <ImageStretch>False</ImageStretch>
     <ImageExifRotate>True</ImageExifRotate>
     <ImageStretchLargeOnly>True</ImageStretchLargeOnly>
-    <ImageShowTransparency>False</ImageShowTransparency>
     <ImageCenter>True</ImageCenter>
     <CopyMovePath1/>
     <CopyMovePath2/>
@@ -580,27 +654,22 @@
     <PaintWidth>5</PaintWidth>
     <NumberOfColumns>1</NumberOfColumns>
     <TabSpaces>8</TabSpaces>
-    <MaxCodeSize>128</MaxCodeSize>
     <MaxTextWidth>1024</MaxTextWidth>
     <ViewerMode>0</ViewerMode>
     <PrintMargins>200|200|200|200</PrintMargins>
     <ShowCaret>False</ShowCaret>
-    <WrapText>False</WrapText>
     <LeftMargin>4</LeftMargin>
     <ExtraLineSpan>0</ExtraLineSpan>
     <PaintColor>255</PaintColor>
+    <BackgroundColor>0</BackgroundColor>
+    <FontColor>16777215</FontColor>
     <TextPosition>0</TextPosition>
-    <AutoCopy>True</AutoCopy>
-    <SynEditMask>*</SynEditMask>
-    <JpegQuality>80</JpegQuality>
   </Viewer>
   <Editor>
     <EditWaitTime>2000</EditWaitTime>
     <SynEditOptions>856075</SynEditOptions>
     <SynEditTabWidth>8</SynEditTabWidth>
     <SynEditRightEdge>80</SynEditRightEdge>
-    <SynEditBlockIndent>2</SynEditBlockIndent>
-    <FindWordAtCursor>True</FindWordAtCursor>
   </Editor>
   <Differ>
     <IgnoreCase>False</IgnoreCase>
@@ -609,6 +678,14 @@
     <PaintBackground>True</PaintBackground>
     <LineDifferences>False</LineDifferences>
     <IgnoreWhiteSpace>False</IgnoreWhiteSpace>
+    <Colors>
+      <Added>11206570</Added>
+      <Deleted>11184895</Deleted>
+      <Modified>16755370</Modified>
+      <Binary>
+        <Modified>255</Modified>
+      </Binary>
+    </Colors>
   </Differ>
   <SyncDirs>
     <Subdirs>False</Subdirs>
@@ -618,18 +695,20 @@
     <FilterCopyRight>True</FilterCopyRight>
     <FilterEqual>True</FilterEqual>
     <FilterNotEqual>True</FilterNotEqual>
-    <FilterUnknown>True</FilterUnknown>
     <FilterCopyLeft>True</FilterCopyLeft>
     <FilterDuplicates>True</FilterDuplicates>
     <FilterSingles>True</FilterSingles>
-    <FileMask Save="True">*</FileMask>
-    <DateTimeFormat>yyyy.mm.dd hh:nn:ss</DateTimeFormat>
+    <FileMask>*</FileMask>
+    <Colors>
+      <Left>32768</Left>
+      <Right>16711680</Right>
+      <Unknown>255</Unknown>
+    </Colors>
   </SyncDirs>
   <InternalAssociations>
     <OfferToAddNewFileType>False</OfferToAddNewFileType>
     <LastCustomAction>Custom action</LastCustomAction>
     <ExpandedContextMenu>False</ExpandedContextMenu>
-    <DefaultContextActions>True</DefaultContextActions>
     <ExecuteViaShell>False</ExecuteViaShell>
     <OpenSystemWithTerminalClose>False</OpenSystemWithTerminalClose>
     <OpenSystemWithTerminalStayOpen>False</OpenSystemWithTerminalStayOpen>
@@ -685,6 +764,18 @@
       <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
     </Context06>
     <TreeViewMenuUseKeyboardShortcut>True</TreeViewMenuUseKeyboardShortcut>
+    <BackgroundColor>-2147483617</BackgroundColor>
+    <ShortcutColor>255</ShortcutColor>
+    <NormalTextColor>-2147483640</NormalTextColor>
+    <SecondaryTextColor>-2147483642</SecondaryTextColor>
+    <FoundTextColor>-2147483635</FoundTextColor>
+    <UnselectableTextColor>-2147483631</UnselectableTextColor>
+    <CursorColor>-2147483635</CursorColor>
+    <ShortcutUnderCursor>-2147483634</ShortcutUnderCursor>
+    <NormalTextUnderCursor>-2147483634</NormalTextUnderCursor>
+    <SecondaryTextUnderCursor>-2147483628</SecondaryTextUnderCursor>
+    <FoundTextUnderCursor>65535</FoundTextUnderCursor>
+    <UnselectableUnderCursor>-2147483631</UnselectableUnderCursor>
   </TreeViewMenu>
   <FavoriteTabsOptions>
     <FavoriteTabsUseRestoreExtraOptions>False</FavoriteTabsUseRestoreExtraOptions>
@@ -696,7 +787,7 @@
     <DfltRightGoTo>1</DfltRightGoTo>
     <DfltKeep>5</DfltKeep>
     <DfltSaveDirHistory>False</DfltSaveDirHistory>
-    <FavTabsLastUniqueID>{046C443B-FB8C-4F4E-AA0E-74E8904B0744}</FavTabsLastUniqueID>
+    <FavTabsLastUniqueID>{2F470E9D-ED9D-4EA8-9AAC-1E7BC64952FE}</FavTabsLastUniqueID>
   </FavoriteTabsOptions>
   <Lua>
     <PathToLibrary>liblua5.1.so.0</PathToLibrary>
@@ -713,20 +804,20 @@
   <MarkDefaultWantedAttribute/>
   <MarkLastWantedAttribute/>
   <SearchTemplates/>
-  <ColumnsSets DefaultTitleHash="540805403">
+  <ColumnsSets DefaultTitleHash="1477829820">
     <ColumnsSet UseFrameCursor="False">
       <Name>Default</Name>
-      <Unique>CBE342FA-0B57-4B91-A145-74E64B542809</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
       <PixelsPerInch>96</PixelsPerInch>
-      <CursorBorder Enabled="False"/>
+      <CursorBorder Enabled="False">
+        <Color>0</Color>
+      </CursorBorder>
       <Columns>
         <Column>
-          <Title>Name</Title>
-          <Unique>99EB1E20-AC92-429F-81D2-351B968A9B87</Unique>
+          <Title>Nombre</Title>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>250</Width>
+          <Width>713</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -734,13 +825,20 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
           <Title>Ext</Title>
-          <Unique>A1EB1C0C-7625-41AB-9BEA-05FEED2CFDA8</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
           <Width>50</Width>
           <Align>0</Align>
@@ -750,13 +848,20 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
-          <Title>Size</Title>
-          <Unique>7D624866-5229-4EED-BCCA-EF80998C191D</Unique>
+          <Title>Tamaño</Title>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
           <Width>70</Width>
           <Align>1</Align>
@@ -766,13 +871,20 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
-          <Title>Date</Title>
-          <Unique>B730F2D4-9BA8-4AC4-A635-596FD35896EC</Unique>
+          <Title>Fecha</Title>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
           <Width>140</Width>
           <Align>1</Align>
@@ -782,13 +894,20 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
-          <Title>Attr</Title>
-          <Unique>731C5572-9D6D-4BF1-BA61-A4DF3488CB1E</Unique>
+          <Title>Atributos</Title>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
           <Width>100</Width>
           <Align>0</Align>
@@ -798,6 +917,14 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
@@ -893,11 +1020,6 @@
         <Path>%commander_path%/plugins/wcx/unrar/unrar.wcx</Path>
         <Flags>607</Flags>
       </WcxPlugin>
-      <WcxPlugin Enabled="True">
-        <ArchiveExt>b64</ArchiveExt>
-        <Path>%commander_path%/plugins/wcx/base64/base64.wcx</Path>
-        <Flags>1</Flags>
-      </WcxPlugin>
     </WcxPlugins>
     <WdxPlugins>
       <WdxPlugin>
@@ -920,6 +1042,10 @@
       <WfxPlugin Enabled="True">
         <Name>FTP</Name>
         <Path>%commander_path%/plugins/wfx/ftp/ftp.wfx</Path>
+      </WfxPlugin>
+      <WfxPlugin Enabled="True">
+        <Name>Windows Network</Name>
+        <Path>%commander_path%/plugins/wfx/samba/samba.wfx</Path>
       </WfxPlugin>
     </WfxPlugins>
     <WlxPlugins/>
