@@ -30,8 +30,7 @@
 .config/environment.d/.gitkeep
 .config/environment.d/firefox.conf
 .config/environment.d/garuda.conf
-.config/gtk-3.0/bookmarks
-.config/gtk-3.0/settings.ini
+.config/gtk-3.0
 .config/gtk-4.0/assets
 .config/gtk-4.0/gtk-dark.css
 .config/gtk-4.0/gtk.css
