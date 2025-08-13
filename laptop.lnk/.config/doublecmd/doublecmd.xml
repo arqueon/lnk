@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.27 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.28 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
         <Command>
-          <ID>{C12E54E3-8CC4-4488-A368-6A5D38806023}</ID>
+          <ID>{726F2805-406C-495A-A61E-49CF0888F3FE}</ID>
           <Icon>cm_refresh</Icon>
           <Command>cm_Refresh</Command>
         </Command>
         <Command>
-          <ID>{1538DE7A-46E3-4833-811B-B72DDA8F0A10}</ID>
+          <ID>{38EB8B0E-821B-437B-B33D-591CE57D5942}</ID>
           <Icon>cm_runterm</Icon>
           <Command>cm_RunTerm</Command>
         </Command>
         <Command>
-          <ID>{9D18632E-D8A6-42FE-AE34-3E80FECBCCBA}</ID>
+          <ID>{A02DA3F6-832B-4408-8281-98532F2201D9}</ID>
           <Icon>cm_options</Icon>
           <Command>cm_Options</Command>
         </Command>
@@ -22,17 +22,17 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{5B88B644-1DBF-4261-89BA-EF82F1D305D9}</ID>
+          <ID>{20100876-518C-4965-B4D4-47BC3B30B3FD}</ID>
           <Icon>cm_briefview</Icon>
           <Command>cm_BriefView</Command>
         </Command>
         <Command>
-          <ID>{162CBE20-62BA-4A6B-A70E-0AF08A1E32F3}</ID>
+          <ID>{0A7999BF-277F-46D9-8378-827FAD55B039}</ID>
           <Icon>cm_columnsview</Icon>
           <Command>cm_ColumnsView</Command>
         </Command>
         <Command>
-          <ID>{D7066A71-322B-4C76-8C3C-978FA601F6ED}</ID>
+          <ID>{8A14C248-D6EE-4D50-99C2-81BAC22FE691}</ID>
           <Icon>cm_thumbnailsview</Icon>
           <Command>cm_ThumbnailsView</Command>
         </Command>
@@ -40,7 +40,7 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{F18653BF-E4D3-405C-B6ED-72F277F27ECB}</ID>
+          <ID>{172AF090-2A44-433E-984C-CDA039C589D5}</ID>
           <Icon>cm_flatview</Icon>
           <Command>cm_FlatView</Command>
         </Command>
@@ -48,12 +48,12 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{B1AF8980-4C83-4C6F-83D0-39527FB6486B}</ID>
+          <ID>{719A937C-72C6-4047-9796-80C0E30E05D4}</ID>
           <Icon>cm_viewhistoryprev</Icon>
           <Command>cm_ViewHistoryPrev</Command>
         </Command>
         <Command>
-          <ID>{EA7A1DC2-8944-4EAC-98B3-72E44E5ECE2F}</ID>
+          <ID>{4D983E6D-511B-4A88-B901-A5F58A9638CB}</ID>
           <Icon>cm_viewhistorynext</Icon>
           <Command>cm_ViewHistoryNext</Command>
         </Command>
@@ -61,17 +61,17 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{44502138-81E0-445B-8724-C16AFC0E7031}</ID>
+          <ID>{A4BAC01C-8D19-460E-A170-29240D002384}</ID>
           <Icon>cm_markplus</Icon>
           <Command>cm_MarkPlus</Command>
         </Command>
         <Command>
-          <ID>{E15C50D4-17E9-47FB-9C38-8C47041ABFF9}</ID>
+          <ID>{AF722880-BDE3-4464-AA48-AA3458C6EA28}</ID>
           <Icon>cm_markminus</Icon>
           <Command>cm_MarkMinus</Command>
         </Command>
         <Command>
-          <ID>{38F60507-FE92-4AB0-8733-04F1224A7653}</ID>
+          <ID>{40EC2693-A390-4E00-B320-26FCD1BCB352}</ID>
           <Icon>cm_markinvert</Icon>
           <Command>cm_MarkInvert</Command>
         </Command>
@@ -79,12 +79,12 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{9F21CC62-96F0-4C81-A6BE-77A42A2F0FB5}</ID>
+          <ID>{10DAA77E-C34D-4B9F-8203-07884E5DCC94}</ID>
           <Icon>cm_packfiles</Icon>
           <Command>cm_PackFiles</Command>
         </Command>
         <Command>
-          <ID>{D244743C-520B-4C4D-868F-9C0B21D5D98E}</ID>
+          <ID>{03D18515-D668-43FE-91E3-ABE3B0EFBCE8}</ID>
           <Icon>cm_extractfiles</Icon>
           <Command>cm_ExtractFiles</Command>
         </Command>
@@ -92,27 +92,27 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{98AB6086-6EF6-4459-B4DD-26BC7BF9E54C}</ID>
+          <ID>{46C63602-1D75-4471-B53C-3742809C4D5C}</ID>
           <Icon>cm_networkconnect</Icon>
           <Command>cm_NetworkConnect</Command>
         </Command>
         <Command>
-          <ID>{3973AA9D-E7CD-4357-AE51-E102DB435818}</ID>
+          <ID>{50390357-9381-4942-A3C7-F95A04BDBB94}</ID>
           <Icon>cm_search</Icon>
           <Command>cm_Search</Command>
         </Command>
         <Command>
-          <ID>{D962DE56-6856-4C67-80B2-5A3CAD0B552B}</ID>
+          <ID>{DE85AB9D-49DA-4D51-B569-E95C2F29D525}</ID>
           <Icon>cm_multirename</Icon>
           <Command>cm_MultiRename</Command>
         </Command>
         <Command>
-          <ID>{D5AEBBBD-21C6-4CC5-B713-442A6E29D2D8}</ID>
+          <ID>{BB40F29B-8B91-481C-A3F7-05CB5C41B898}</ID>
           <Icon>cm_syncdirs</Icon>
           <Command>cm_SyncDirs</Command>
         </Command>
         <Command>
-          <ID>{52F68414-6EAE-4084-9C91-FCB14AB5FA6D}</ID>
+          <ID>{1B4514BE-A620-4145-9B72-2F53D62E1A64}</ID>
           <Icon>cm_copyfullnamestoclip</Icon>
           <Command>cm_CopyFullNamesToClip</Command>
         </Command>
@@ -121,22 +121,22 @@
     <MiddleToolbar>
       <Row>
         <Command>
-          <ID>{FD607737-8927-486C-9655-D042730420D9}</ID>
+          <ID>{8ED8D632-170E-4EF6-83A8-83F5A148D761}</ID>
           <Icon>cm_view</Icon>
           <Command>cm_View</Command>
         </Command>
         <Command>
-          <ID>{2A94B3D0-E390-48CF-ACD2-65465C5C6E84}</ID>
+          <ID>{43B384A4-FC9D-4F88-9423-32953B2E64F4}</ID>
           <Icon>cm_edit</Icon>
           <Command>cm_Edit</Command>
         </Command>
         <Command>
-          <ID>{DDB5111C-73DD-468C-9078-1D5D9F628279}</ID>
+          <ID>{136426CE-6501-4BC7-8699-ADE6B686FBB4}</ID>
           <Icon>cm_copy</Icon>
           <Command>cm_Copy</Command>
         </Command>
         <Command>
-          <ID>{1A05BA26-903A-4AF3-8FC7-7CE9C8CFC12A}</ID>
+          <ID>{9DA6FE03-7DAC-43AE-B050-236CD0C70D5A}</ID>
           <Icon>cm_rename</Icon>
           <Command>cm_Rename</Command>
         </Command>
@@ -144,12 +144,12 @@
           <Style>True</Style>
         </Separator>
         <Command>
-          <ID>{43110BF7-4E43-426F-B8A6-FC01C9AF7B57}</ID>
+          <ID>{D2441638-E76D-4589-A99B-A4AABF48DC34}</ID>
           <Icon>cm_packfiles</Icon>
           <Command>cm_PackFiles</Command>
         </Command>
         <Command>
-          <ID>{1EE94DBA-8C8E-4C5A-A7BD-3862A1EBF70E}</ID>
+          <ID>{30FA2D25-9D62-4D89-B3BB-92553AFDA4CE}</ID>
           <Icon>cm_makedir</Icon>
           <Command>cm_MakeDir</Command>
         </Command>
@@ -158,27 +158,27 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>2</Left>
-      <Top>44</Top>
-      <Width>1128</Width>
-      <Height>1103</Height>
+      <Left>80</Left>
+      <Top>48</Top>
+      <Width>800</Width>
+      <Height>480</Height>
       <PixelsPerInch>96</PixelsPerInch>
-      <Maximized>False</Maximized>
+      <Maximized>True</Maximized>
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
   <Language>
-    <POFileName>doublecmd.es.po</POFileName>
+    <POFileName>doublecmd.pot</POFileName>
   </Language>
   <Behaviours>
     <GoToRoot>False</GoToRoot>
     <ShowCurDirTitleBar>False</ShowCurDirTitleBar>
     <ActiveRight>False</ActiveRight>
-    <RunInTerminalStayOpenCmd>alacritty</RunInTerminalStayOpenCmd>
+    <RunInTerminalStayOpenCmd>kitty</RunInTerminalStayOpenCmd>
     <RunInTerminalStayOpenParams>-e sh -c '{command}; echo -n Press ENTER to exit... ; read a'</RunInTerminalStayOpenParams>
-    <RunInTerminalCloseCmd>alacritty</RunInTerminalCloseCmd>
-    <RunInTerminalCloseParams>-e sh -c {command}</RunInTerminalCloseParams>
-    <JustRunTerminal>alacritty</JustRunTerminal>
+    <RunInTerminalCloseCmd>kitty</RunInTerminalCloseCmd>
+    <RunInTerminalCloseParams>-e sh -c '{command}'</RunInTerminalCloseParams>
+    <JustRunTerminal>kitty</JustRunTerminal>
     <JustRunTermParams/>
     <OnlyOneAppInstance>False</OnlyOneAppInstance>
     <LynxLike>True</LynxLike>
@@ -252,13 +252,13 @@
       <Quality>0</Quality>
     </Main>
     <Editor>
-      <Name>Noto Sans Mono Regular</Name>
+      <Name>Noto Sans Mono</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Editor>
     <Viewer>
-      <Name>Noto Sans Mono Regular</Name>
+      <Name>Noto Sans Mono</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -270,13 +270,13 @@
       <Quality>0</Quality>
     </ViewerBook>
     <Log>
-      <Name>Noto Sans Mono Regular</Name>
+      <Name>Noto Sans Mono</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>Noto Sans Mono Regular</Name>
+      <Name>Noto Sans Mono</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -429,6 +429,7 @@
     <UseTrash>True</UseTrash>
     <SkipFileOpError>False</SkipFileOpError>
     <TypeOfDuplicatedRename>0</TypeOfDuplicatedRename>
+    <DefaultDropEffect>True</DefaultDropEffect>
     <ShowDialogOnDragDrop>True</ShowDialogOnDragDrop>
     <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
     <DragAndDropTextHtmlDesireLevel>1</DragAndDropTextHtmlDesireLevel>
@@ -473,7 +474,6 @@
       <MulRenFilenameWithFullPathInLog>False</MulRenFilenameWithFullPathInLog>
       <MulRenPathRangeSeparator>- </MulRenPathRangeSeparator>
     </MultiRename>
-    <DefaultDropEffect>True</DefaultDropEffect>
   </FileOperations>
   <Tabs>
     <Options>54033</Options>
@@ -618,12 +618,12 @@
     <FilterCopyRight>True</FilterCopyRight>
     <FilterEqual>True</FilterEqual>
     <FilterNotEqual>True</FilterNotEqual>
+    <FilterUnknown>True</FilterUnknown>
     <FilterCopyLeft>True</FilterCopyLeft>
     <FilterDuplicates>True</FilterDuplicates>
     <FilterSingles>True</FilterSingles>
     <FileMask Save="True">*</FileMask>
     <DateTimeFormat>yyyy.mm.dd hh:nn:ss</DateTimeFormat>
-    <FilterUnknown>True</FilterUnknown>
   </SyncDirs>
   <InternalAssociations>
     <OfferToAddNewFileType>False</OfferToAddNewFileType>
@@ -696,7 +696,7 @@
     <DfltRightGoTo>1</DfltRightGoTo>
     <DfltKeep>5</DfltKeep>
     <DfltSaveDirHistory>False</DfltSaveDirHistory>
-    <FavTabsLastUniqueID>{20ADA601-F635-4E0B-A28D-87AD18C391F5}</FavTabsLastUniqueID>
+    <FavTabsLastUniqueID>{046C443B-FB8C-4F4E-AA0E-74E8904B0744}</FavTabsLastUniqueID>
   </FavoriteTabsOptions>
   <Lua>
     <PathToLibrary>liblua5.1.so.0</PathToLibrary>
@@ -713,18 +713,18 @@
   <MarkDefaultWantedAttribute/>
   <MarkLastWantedAttribute/>
   <SearchTemplates/>
-  <ColumnsSets DefaultTitleHash="1477829820">
+  <ColumnsSets DefaultTitleHash="540805403">
     <ColumnsSet UseFrameCursor="False">
       <Name>Default</Name>
-      <Unique>495FD921-3E7A-4C6E-8FDB-D4F0DD4AA833</Unique>
+      <Unique>CBE342FA-0B57-4B91-A145-74E64B542809</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
       <PixelsPerInch>96</PixelsPerInch>
       <CursorBorder Enabled="False"/>
       <Columns>
         <Column>
-          <Title>Nombre</Title>
-          <Unique>E6163007-A313-4486-8A3E-89901E40987B</Unique>
+          <Title>Name</Title>
+          <Unique>99EB1E20-AC92-429F-81D2-351B968A9B87</Unique>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
           <Width>250</Width>
           <Align>0</Align>
@@ -740,9 +740,9 @@
         </Column>
         <Column>
           <Title>Ext</Title>
-          <Unique>419164F7-26A0-412B-85AA-DE3F9AFE8EAF</Unique>
+          <Unique>A1EB1C0C-7625-41AB-9BEA-05FEED2CFDA8</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>100</Width>
+          <Width>50</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -755,8 +755,8 @@
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
-          <Title>Tamaño</Title>
-          <Unique>B66BB307-28E3-4174-9E2E-28109A6E2454</Unique>
+          <Title>Size</Title>
+          <Unique>7D624866-5229-4EED-BCCA-EF80998C191D</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
           <Width>70</Width>
           <Align>1</Align>
@@ -771,8 +771,8 @@
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
-          <Title>Fecha</Title>
-          <Unique>D08CCBFB-7E94-431D-8E30-8FD31C426465</Unique>
+          <Title>Date</Title>
+          <Unique>B730F2D4-9BA8-4AC4-A635-596FD35896EC</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
           <Width>140</Width>
           <Align>1</Align>
@@ -787,8 +787,8 @@
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
-          <Title>Atributos</Title>
-          <Unique>E775086F-9FFC-418F-A0B0-524EF94C359A</Unique>
+          <Title>Attr</Title>
+          <Unique>731C5572-9D6D-4BF1-BA61-A4DF3488CB1E</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
           <Width>100</Width>
           <Align>0</Align>
@@ -920,10 +920,6 @@
       <WfxPlugin Enabled="True">
         <Name>FTP</Name>
         <Path>%commander_path%/plugins/wfx/ftp/ftp.wfx</Path>
-      </WfxPlugin>
-      <WfxPlugin Enabled="False">
-        <Name>Windows Network</Name>
-        <Path>%commander_path%/plugins/wfx/samba/samba.wfx</Path>
       </WfxPlugin>
     </WfxPlugins>
     <WlxPlugins/>

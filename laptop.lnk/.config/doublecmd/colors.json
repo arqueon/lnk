@@ -63,13 +63,13 @@
       },
       ColumnSets : [
         {
-          Unique : "",
+          Unique : "CBE342FA-0B57-4B91-A145-74E64B542809",
           Name : "Default",
-          CursorBorderColor : 0,
+          CursorBorderColor : -2147483635,
           Columns : [
             {
-              Unique : "E6163007-A313-4486-8A3E-89901E40987B",
-              Title : "Nombre",
+              Unique : "99EB1E20-AC92-429F-81D2-351B968A9B87",
+              Title : "Name",
               TextColor : -2147483640,
               Background : -2147483643,
               Background2 : -2147483643,
@@ -80,7 +80,7 @@
               InactiveMarkColor : 128
             },
             {
-              Unique : "419164F7-26A0-412B-85AA-DE3F9AFE8EAF",
+              Unique : "A1EB1C0C-7625-41AB-9BEA-05FEED2CFDA8",
               Title : "Ext",
               TextColor : -2147483640,
               Background : -2147483643,
@@ -92,8 +92,8 @@
               InactiveMarkColor : 128
             },
             {
-              Unique : "B66BB307-28E3-4174-9E2E-28109A6E2454",
-              Title : "Tamaño",
+              Unique : "7D624866-5229-4EED-BCCA-EF80998C191D",
+              Title : "Size",
               TextColor : -2147483640,
               Background : -2147483643,
               Background2 : -2147483643,
@@ -104,8 +104,8 @@
               InactiveMarkColor : 128
             },
             {
-              Unique : "D08CCBFB-7E94-431D-8E30-8FD31C426465",
-              Title : "Fecha",
+              Unique : "B730F2D4-9BA8-4AC4-A635-596FD35896EC",
+              Title : "Date",
               TextColor : -2147483640,
               Background : -2147483643,
               Background2 : -2147483643,
@@ -116,8 +116,8 @@
               InactiveMarkColor : 128
             },
             {
-              Unique : "E775086F-9FFC-418F-A0B0-524EF94C359A",
-              Title : "Atributos",
+              Unique : "731C5572-9D6D-4BF1-BA61-A4DF3488CB1E",
+              Title : "Attr",
               TextColor : -2147483640,
               Background : -2147483643,
               Background2 : -2147483643,
@@ -131,15 +131,6 @@
         }
       ],
       Highlighters : [
-        {
-          Name : "Texto sin formato",
-          Attributes : [
-            {
-              Name : "Default text",
-              Value : "$80000005|$80000008|$1FFFFFFF|0|1|0|0"
-            }
-          ]
-        },
         {
           Name : "C++",
           Attributes : [
@@ -583,18 +574,6 @@
             {
               Name : "Number",
               Value : "$1FFFFFFF|$00800000|$1FFFFFFF|0|1|0|0"
-            },
-            {
-              Name : "PasDoc-Keyword",
-              Value : "$1FFFFFFF|$1FFFFFFF|$1FFFFFFF|0|1|0|0"
-            },
-            {
-              Name : "PasDoc-Symbol",
-              Value : "$1FFFFFFF|$1FFFFFFF|$1FFFFFFF|0|1|0|0"
-            },
-            {
-              Name : "PasDoc-Unknown",
-              Value : "$1FFFFFFF|$1FFFFFFF|$1FFFFFFF|0|1|0|0"
             },
             {
               Name : "Procedure header name",
@@ -1235,6 +1214,90 @@
           ]
         },
         {
+          Name : "Go",
+          Ranges : [
+            {
+              Name : "Root",
+              Attributes : "$80000008,$80000005;False:False.",
+              KeyLists : [
+                {
+                  Name : "Keywords",
+                  Attributes : "$00FF0000,$80000005;False:True."
+                },
+                {
+                  Name : "Types",
+                  Attributes : "$00000080,$80000005;False:True."
+                },
+                {
+                  Name : "Functions",
+                  Attributes : "$00800000,$80000005;False:True."
+                }
+              ],
+              Ranges : [
+                {
+                  Name : "Strings `..`",
+                  Attributes : "$00696969,$80000005;False:True."
+                },
+                {
+                  Name : "Strings \"..\"",
+                  Attributes : "$00696969,$80000005;False:True.",
+                  KeyLists : [
+                    {
+                      Name : "Escape",
+                      Attributes : "$00696969,$80000005;True:True."
+                    }
+                  ]
+                },
+                {
+                  Name : "Remarks //",
+                  Attributes : "$00008000,$80000005;False:True."
+                },
+                {
+                  Name : "Remarks /*..*/",
+                  Attributes : "$00008000,$80000005;False:True."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Name : "JSON",
+          Ranges : [
+            {
+              Name : "Root",
+              Attributes : "$80000008,$80000005;False:False.",
+              Sets : [
+                {
+                  Name : "Numbers",
+                  Attributes : "$00008000,$80000005;False:True."
+                }
+              ],
+              KeyLists : [
+                {
+                  Name : "Keywords",
+                  Attributes : "$000080FF,$80000005;False:True."
+                },
+                {
+                  Name : "Punctuators",
+                  Attributes : "$00800000,$80000005;False:True."
+                }
+              ],
+              Ranges : [
+                {
+                  Name : "Strings \"..\"",
+                  Attributes : "$00000080,$80000005;False:True.",
+                  KeyLists : [
+                    {
+                      Name : "Escape",
+                      Attributes : "$00000080,$80000005;True:True."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           Name : "Java script",
           Ranges : [
             {
@@ -1282,6 +1345,75 @@
                       Attributes : "$000000FF,$80000005;True:True."
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Name : "Kotlin",
+          Ranges : [
+            {
+              Name : "Root",
+              Attributes : "$80000008,$80000005;False:False.",
+              Sets : [
+                {
+                  Name : "Numbers",
+                  Attributes : "$00FF0000,$80000005;False:True."
+                }
+              ],
+              KeyLists : [
+                {
+                  Name : "Keywords",
+                  Attributes : "$00800000,$80000005;False:True.B"
+                },
+                {
+                  Name : "Contextual keywords",
+                  Attributes : "$00800000,$80000005;False:True.B"
+                },
+                {
+                  Name : "Modifier keywords",
+                  Attributes : "$00800000,$80000005;False:True.B"
+                },
+                {
+                  Name : "Special Identifiers",
+                  Attributes : "$00000000,$80000005;False:True.B"
+                },
+                {
+                  Name : "Basic data types",
+                  Attributes : "$1FFFFFFF,$80000005;False:True."
+                }
+              ],
+              Ranges : [
+                {
+                  Name : "@Annotation",
+                  Attributes : "$00008080,$80000005;False:True."
+                },
+                {
+                  Name : "Strings '..'",
+                  Attributes : "$00008000,$80000005;False:True.B"
+                },
+                {
+                  Name : "Strings \"..\"",
+                  Attributes : "$00008000,$80000005;False:True.B",
+                  KeyLists : [
+                    {
+                      Name : "Escape",
+                      Attributes : "$00800000,$80000005;True:True."
+                    }
+                  ]
+                },
+                {
+                  Name : "Remarks //",
+                  Attributes : "$00808080,$80000005;False:True."
+                },
+                {
+                  Name : "Remarks /*..*/",
+                  Attributes : "$00808080,$80000005;False:True."
+                },
+                {
+                  Name : "Remarks /**..*/",
+                  Attributes : "$00808080,$80000005;False:True.I"
                 }
               ]
             }
@@ -1338,6 +1470,51 @@
                 },
                 {
                   Name : "Variables",
+                  Attributes : "$00008000,$80000005;False:True."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Name : "QML",
+          Ranges : [
+            {
+              Name : "Root",
+              Attributes : "$80000008,$80000005;False:False.",
+              KeyLists : [
+                {
+                  Name : "Keywords",
+                  Attributes : "$00008080,$80000005;False:True."
+                },
+                {
+                  Name : "Basic types",
+                  Attributes : "$00008080,$80000005;False:True."
+                },
+                {
+                  Name : "QtQuick Object Types",
+                  Attributes : "$00800080,$80000005;False:True."
+                },
+                {
+                  Name : "Aurora & Sailfish Silica Types",
+                  Attributes : "$00800080,$80000005;False:True."
+                }
+              ],
+              Ranges : [
+                {
+                  Name : "Strings '..'",
+                  Attributes : "$00008000,$80000005;False:True."
+                },
+                {
+                  Name : "Strings \"..\"",
+                  Attributes : "$00008000,$80000005;False:True."
+                },
+                {
+                  Name : "Remarks //",
+                  Attributes : "$00008000,$80000005;False:True."
+                },
+                {
+                  Name : "Remarks /*..*/",
                   Attributes : "$00008000,$80000005;False:True."
                 }
               ]
@@ -1410,6 +1587,57 @@
               ]
             }
           ]
+        },
+        {
+          Name : "Swift",
+          Ranges : [
+            {
+              Name : "Root",
+              Attributes : "$80000008,$80000005;False:False.",
+              KeyLists : [
+                {
+                  Name : "Keywords",
+                  Attributes : "$00FF0000,$00FFFFFF;False:True."
+                },
+                {
+                  Name : "Operators",
+                  Attributes : "$00CC3299,$80000005;False:True."
+                },
+                {
+                  Name : "Punctuators",
+                  Attributes : "$000000FF,$80000005;False:True."
+                },
+                {
+                  Name : "Types",
+                  Attributes : "$00000080,$00FFFFFF;False:True."
+                }
+              ],
+              Ranges : [
+                {
+                  Name : "Remarks //",
+                  Attributes : "$00008000,$00FFFFFF;False:True."
+                },
+                {
+                  Name : "Remarks /*..*/",
+                  Attributes : "$00008000,$00FFFFFF;False:True."
+                },
+                {
+                  Name : "Strings \"..\"",
+                  Attributes : "$00696969,$00FFFFFF;False:True.",
+                  KeyLists : [
+                    {
+                      Name : "Escape",
+                      Attributes : "$00696969,$00FFFFFF;True:True."
+                    }
+                  ]
+                },
+                {
+                  Name : "Strings \"\"\"...\"\"\"",
+                  Attributes : "$00696969,$00FFFFFF;False:True."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1476,76 +1704,76 @@
       },
       ColumnSets : [
         {
-          Unique : "495FD921-3E7A-4C6E-8FDB-D4F0DD4AA833",
+          Unique : "CBE342FA-0B57-4B91-A145-74E64B542809",
           Name : "Default",
-          CursorBorderColor : 0,
+          CursorBorderColor : -2147483635,
           Columns : [
             {
-              Unique : "E6163007-A313-4486-8A3E-89901E40987B",
-              Title : "Nombre",
-              TextColor : 0,
-              Background : 0,
-              Background2 : 0,
-              MarkColor : 0,
-              CursorColor : 0,
-              CursorText : 0,
-              InactiveCursorColor : 0,
-              InactiveMarkColor : 0
+              Unique : "99EB1E20-AC92-429F-81D2-351B968A9B87",
+              Title : "Name",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : -2147483645,
+              InactiveMarkColor : 128
             },
             {
-              Unique : "419164F7-26A0-412B-85AA-DE3F9AFE8EAF",
+              Unique : "A1EB1C0C-7625-41AB-9BEA-05FEED2CFDA8",
               Title : "Ext",
-              TextColor : 0,
-              Background : 0,
-              Background2 : 0,
-              MarkColor : 0,
-              CursorColor : 0,
-              CursorText : 0,
-              InactiveCursorColor : 0,
-              InactiveMarkColor : 0
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : -2147483645,
+              InactiveMarkColor : 128
             },
             {
-              Unique : "B66BB307-28E3-4174-9E2E-28109A6E2454",
-              Title : "Tamaño",
-              TextColor : 0,
-              Background : 0,
-              Background2 : 0,
-              MarkColor : 0,
-              CursorColor : 0,
-              CursorText : 0,
-              InactiveCursorColor : 0,
-              InactiveMarkColor : 0
+              Unique : "7D624866-5229-4EED-BCCA-EF80998C191D",
+              Title : "Size",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : -2147483645,
+              InactiveMarkColor : 128
             },
             {
-              Unique : "D08CCBFB-7E94-431D-8E30-8FD31C426465",
-              Title : "Fecha",
-              TextColor : 0,
-              Background : 0,
-              Background2 : 0,
-              MarkColor : 0,
-              CursorColor : 0,
-              CursorText : 0,
-              InactiveCursorColor : 0,
-              InactiveMarkColor : 0
+              Unique : "B730F2D4-9BA8-4AC4-A635-596FD35896EC",
+              Title : "Date",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : -2147483645,
+              InactiveMarkColor : 128
             },
             {
-              Unique : "E775086F-9FFC-418F-A0B0-524EF94C359A",
-              Title : "Atributos",
-              TextColor : 0,
-              Background : 0,
-              Background2 : 0,
-              MarkColor : 0,
-              CursorColor : 0,
-              CursorText : 0,
-              InactiveCursorColor : 0,
-              InactiveMarkColor : 0
+              Unique : "731C5572-9D6D-4BF1-BA61-A4DF3488CB1E",
+              Title : "Attr",
+              TextColor : -2147483640,
+              Background : -2147483643,
+              Background2 : -2147483643,
+              MarkColor : 255,
+              CursorColor : -2147483635,
+              CursorText : -2147483634,
+              InactiveCursorColor : -2147483645,
+              InactiveMarkColor : 128
             }
           ]
         }
       ],
       Highlighters : [
         {
-          Name : "Texto sin formato",
+          Name : "Plain text",
           Attributes : [
             {
               Name : "Default text",

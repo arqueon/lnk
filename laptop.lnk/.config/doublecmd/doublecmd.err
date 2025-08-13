@@ -77,49 +77,10 @@ Unhandled exception: EAccessViolation: Access violation
   Stack trace:
   $00007984C67A89D4 in /usr/lib/qt6/plugins/platforms/../../../libwayland-client.so.0
 
---------------- 04-07-2025, 21:15:49 ---------------
-| DC v1.1.25 gamma Rev. 754 -- x86_64-Linux-qt6
-| ArcoLinux -- Qt 6.9.0 | PID 72317
+--------------- 14-12-2024, 17:24:42 ---------------
+| DC v1.1.21 gamma Rev. 630 -- x86_64-Linux-qt6
+| ArcoLinux -- Qt 6.8.1, libQt6Pas 6.2.1 | PID 162641
 Unhandled exception: EAccessViolation: Access violation
   Stack trace:
-  $00007FE57832EC42 in /usr/lib/libQt6Core.so.6
-  $00007FE578D80715 in /usr/lib/libQt6Gui.so.6
-  $00007FE578A0066E in /usr/lib/libQt6Gui.so.6
-  $00007FE5793420E0 in /usr/lib/libQt6Widgets.so.6
-  $00007FE57935FF88 in /usr/lib/libQt6Widgets.so.6
-  $00007FE5793441DE in /usr/lib/libQt6Widgets.so.6
-  $00007FE579344485 in /usr/lib/libQt6Widgets.so.6
-  $00007FE5781BFE2C in /usr/lib/libQt6Core.so.6
-  $00007FE5793019A0 in /usr/lib/libQt6Widgets.so.6
-  $00007FE578167558 in /usr/lib/libQt6Core.so.6
-  $00007FE57816793B in /usr/lib/libQt6Core.so.6
-  $00007FE57831BEC4 in /usr/lib/libQt6Core.so.6
-  $00007FE57831BF6F in /usr/lib/libQt6Core.so.6
-  $00007FE579B075E1 in /usr/lib/libc.so.6
-  $00007FE579B076BE in /usr/lib/libc.so.6
-  $00007FE579EFA6CB in /usr/lib/libX11.so.6
-  $00007FE579EFD75C in /usr/lib/libX11.so.6
-
---------------- 04-07-2025, 21:15:49 ---------------
-| DC v1.1.25 gamma Rev. 754 -- x86_64-Linux-qt6
-| ArcoLinux -- Qt 6.9.0 | PID 72317
-Unhandled exception: EAccessViolation: Access violation
-  Stack trace:
-  $00007FE5788E87A6 in /usr/lib/libQt6Gui.so.6
-  $00007FE578AFFC3D in /usr/lib/libQt6Gui.so.6
-  $00007FE5789317FE in /usr/lib/libQt6Gui.so.6
-  $000000000081105A in /usr/lib/doublecmd/doublecmd
-  $000000000061B042 in /usr/lib/doublecmd/doublecmd
-  $00000000006841AF in /usr/lib/doublecmd/doublecmd
-  $00000000006844A9 in /usr/lib/doublecmd/doublecmd
-  $0000000000683EF2 in /usr/lib/doublecmd/doublecmd
-  $0000000000685D4B in /usr/lib/doublecmd/doublecmd
-  $00000000006890F9 in /usr/lib/doublecmd/doublecmd
-  $00000000004399AB in /usr/lib/doublecmd/doublecmd
-  $00000000004399AB in /usr/lib/doublecmd/doublecmd
-  $0000000000AE4185 in /usr/lib/doublecmd/doublecmd
-  $00000000004399AB in /usr/lib/doublecmd/doublecmd
-  $0000000000AE35DF in /usr/lib/doublecmd/doublecmd
-  $0000000000471146 in /usr/lib/doublecmd/doublecmd
-  $000000000066AA29 in /usr/lib/doublecmd/doublecmd
+  $00007AA86BB5D0BD in /usr/lib/libQt6Core.so.6
 
