@@ -178,7 +178,7 @@
                   <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
-                  <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -284,12 +284,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
-                  <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/gtk-4.0/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
-                  <Path Filename="lnk">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/</Path>
                   <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
@@ -331,6 +325,12 @@
                   <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="gtk-3.0">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/gtk-3.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/niri/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename=".git">/home/ruben/.config/lnk/</Path>
