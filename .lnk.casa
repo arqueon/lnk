@@ -135,6 +135,7 @@
 .config/swayidle/config
 .config/user-dirs.dirs
 .config/user-dirs.locale
+.config/variety/banned.txt
 .config/variety/scripts
 .config/xsettingsd/xsettingsd.conf
 .face
