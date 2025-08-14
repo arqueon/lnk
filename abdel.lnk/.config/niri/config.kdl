@@ -330,6 +330,8 @@ spawn-at-startup "copyq"
 //spawn-at-startup "cosmic-ext-alternative-startup"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
+//spawn-at-startup "zotero"
+//spawn-at-startup "logseq"
 spawn-at-startup "niri" "msg" "action"  "focus-workspace" "web"
 
 // Client-side decorations
@@ -629,9 +631,9 @@ binds {
     Mod+Return { spawn "kitty"; }
 //  Mod+Space { spawn "anyrun"; }
     Mod+Space { spawn "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
-    Ctrl+Alt+Escape { spawn "swaylock"; }
-//  Mod+L { spawn "swaylock"; }
+    Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
     Mod+L { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
+//  Mod+L { spawn "swaylock"; }
     Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
     Mod+X { spawn "nwg-bar"; }
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
@@ -642,7 +644,7 @@ binds {
     Mod+B { spawn "qs"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
-    Mod+F4 { spawn "logseq-desktop-electron"; }
+    Mod+F4 { spawn "logseq"; }
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "doublecmd"; }
     Mod+F7 { spawn "virt-manager"; }
