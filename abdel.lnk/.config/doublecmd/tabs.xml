@@ -159,7 +159,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="variety">/home/abdel/.config/</Path>
                   <Path Filename="..">/home/abdel/.config/variety/</Path>
                   <Path Filename="..">/home/abdel/.config/</Path>
                   <Path Filename=".config">/home/abdel/</Path>
@@ -208,7 +207,8 @@
                   <Path Filename=".config">/home/abdel/</Path>
                   <Path Filename="..">/home/abdel/.config/</Path>
                   <Path Filename=".config">/home/abdel/</Path>
-                  <Path Filename="GitHub Desktop">/home/abdel/.config/</Path>
+                  <Path Filename="lnk">/home/abdel/.config/</Path>
+                  <Path Filename="up.sh">/home/abdel/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
