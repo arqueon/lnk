@@ -3,7 +3,7 @@
   <Tabs>
     <OpenedTabs>
       <Left>
-        <ActiveTab>2</ActiveTab>
+        <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -16,8 +16,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/</Path>
-                  <Path Filename="..">/home/ruben/DATA/</Path>
                   <Path Filename="DATA">/home/ruben/</Path>
                   <Path Filename="arqueon-conf">/home/ruben/DATA/</Path>
                   <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
@@ -65,7 +63,9 @@
                   <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/wallpaper/</Path>
                   <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
                   <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename=".Xresources">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="swayidle">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="config">/home/ruben/DATA/arqueon-conf/home/.config/swayidle/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -191,7 +191,7 @@
                   <Path Filename="..">/home/ruben/.config/dconf/</Path>
                   <Path Filename="doublecmd">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/doublecmd/</Path>
-                  <Path Filename="doublecmd">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -425,23 +425,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/ruben/.config/waybar/</Path>
-                  <Path Filename="niri">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/</Path>
-                  <Path Filename="niri">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/</Path>
-                  <Path Filename="niri">/home/ruben/.config/</Path>
-                  <Path Filename="waybar">/home/ruben/.config/niri/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/waybar/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/</Path>
-                  <Path Filename="niri">/home/ruben/.config/</Path>
-                  <Path Filename="waybar">/home/ruben/.config/niri/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/waybar/</Path>
-                  <Path Filename="config.kdl">/home/ruben/.config/niri/</Path>
-                  <Path Filename=".ssh">/home/ruben/</Path>
-                  <Path Filename="id_ed25519_lap.pub">/home/ruben/.ssh/</Path>
-                  <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="niri">/home/ruben/.config/</Path>
                   <Path Filename="waybar">/home/ruben/.config/niri/</Path>
                   <Path Filename="config">/home/ruben/.config/niri/waybar/</Path>
                   <Path Filename=".config">/home/ruben/</Path>
@@ -474,7 +457,24 @@
                   <Path Filename=".config">/home/ruben/.config/lnk/laptop.lnk/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/</Path>
-                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="ofi.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/ofi.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/</Path>
+                  <Path Filename="laptop.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/laptop.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/niri/</Path>
+                  <Path Filename="swayidle">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/swayidle/</Path>
+                  <Path Filename="swayidle">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/swayidle/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/niri/</Path>
+                  <Path Filename="swayidle">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
+                  <Path Filename="config">/home/ruben/.config/lnk/laptop.lnk/.config/swayidle/</Path>
                 </Paths>
               </Entry>
             </History>

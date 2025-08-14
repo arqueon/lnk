@@ -50,28 +50,28 @@ input {
 
 // Workspaces configuration
 workspace "chat" {
-    open-on-output "HDMI-A-1"
+    //open-on-output "HDMI-A-1"
 }
 workspace "web" {
-    open-on-output "DP-2"
+    //open-on-output "DP-2"
 }
 workspace "ref" {
-    open-on-output "HDMI-A-1"
+    //open-on-output "HDMI-A-1"
 }
 workspace "notes" {
-    open-on-output "HDMI-A-1"
+    //open-on-output "HDMI-A-1"
 }
 workspace "write" {
-    open-on-output "HDMI-A-1"
+    //open-on-output "HDMI-A-1"
 }
 workspace "files" {
-    open-on-output "DP-2"
+    //open-on-output "DP-2"
 }
 workspace "virt" {
-    open-on-output "DP-2"
+    //open-on-output "DP-2"
 }
 workspace "media" {
-    open-on-output "DP-2"
+    //open-on-output "DP-2"
 }
 
 // Outputs configuration
@@ -148,7 +148,7 @@ workspace "media" {
     position x=0 y=0
 }
 switch-events {
-    lid-close { spawn "swaylock"; }
+    lid-close { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
     //lid-open { spawn "notify-send" "The laptop lid is open!"; }
 }
 
@@ -629,9 +629,9 @@ binds {
     Mod+Return { spawn "kitty"; }
 //  Mod+Space { spawn "anyrun"; }
     Mod+Space { spawn "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
-    Ctrl+Alt+Escape { spawn "swaylock"; }
-//  Mod+L { spawn "swaylock"; }
+    Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
     Mod+L { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
+//  Mod+L { spawn "swaylock"; }
     Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
     Mod+X { spawn "nwg-bar"; }
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
