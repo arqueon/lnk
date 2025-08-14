@@ -49,7 +49,7 @@ then
 
 
 
-THEME='catppuccin-mocha-mauve-standard+default'
+THEME='catppuccin-mocha-blue-standard+default'
 ICONS='Papirus-Dark'
 FONT='Noto Sans 10'
 CURSOR='Bibata-Modern-Ice'
