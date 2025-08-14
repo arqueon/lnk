@@ -425,9 +425,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="waybar">/home/ruben/.config/niri/</Path>
-                  <Path Filename="config">/home/ruben/.config/niri/waybar/</Path>
-                  <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="..">/home/ruben/.config/</Path>
                   <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="..">/home/ruben/.config/</Path>
@@ -474,7 +471,10 @@
                   <Path Filename="niri">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/niri/</Path>
                   <Path Filename="swayidle">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
-                  <Path Filename="config">/home/ruben/.config/lnk/laptop.lnk/.config/swayidle/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/swayidle/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
