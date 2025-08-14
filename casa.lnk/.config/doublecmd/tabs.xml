@@ -284,8 +284,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
                   <Path Filename="lnk">/home/ruben/.config/</Path>
                   <Path Filename=".config">/home/ruben/.config/lnk/</Path>
@@ -333,7 +331,9 @@
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/</Path>
                   <Path Filename="fish">/home/ruben/.config/</Path>
-                  <Path Filename="config.fish">/home/ruben/.config/fish/</Path>
+                  <Path Filename="..">/home/ruben/.config/fish/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename=".lnk.abdel">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
