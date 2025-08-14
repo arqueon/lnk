@@ -178,7 +178,8 @@
                   <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
+                  <Path Filename="fastfetch">/home/ruben/.config/</Path>
+                  <Path Filename="mokka-fastfetch.png">/home/ruben/.config/fastfetch/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -284,7 +285,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
                   <Path Filename="lnk">/home/ruben/.config/</Path>
                   <Path Filename=".config">/home/ruben/.config/lnk/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/.config/</Path>
@@ -333,7 +333,8 @@
                   <Path Filename="fish">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/fish/</Path>
                   <Path Filename="lnk">/home/ruben/.config/</Path>
-                  <Path Filename=".lnk.abdel">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="abdel.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".face">/home/ruben/.config/lnk/abdel.lnk/</Path>
                 </Paths>
               </Entry>
             </History>
