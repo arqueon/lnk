@@ -3,35 +3,56 @@
   <History>
     <Navigation>
       <Item>/home/ruben/.config/lnk/</Item>
-      <Item>/home/ruben/.config/lnk/casa.lnk/</Item>
-      <Item>/home/ruben/.config/lnk/casa.lnk/.config/</Item>
-      <Item>/home/ruben/.config/lnk/casa.lnk/.config/niri/</Item>
       <Item>/home/ruben/.config/</Item>
-      <Item>/home/ruben/.config/gtk-3.0/</Item>
+      <Item>/home/ruben/.config/doublecmd/</Item>
+      <Item>/home/ruben/.config/dconf/</Item>
+      <Item>/home/ruben/.config/lnk/laptop.lnk/</Item>
+      <Item>/home/ruben/.config/lnk/laptop.lnk/.config/</Item>
       <Item>/home/ruben/</Item>
-      <Item>/home/ruben/.config/lnk/casa.lnk/.config/gtk-3.0/</Item>
-      <Item>/home/ruben/.config/niri/</Item>
-      <Item>/home/ruben/.config/lnk/ofi.lnk/</Item>
-      <Item>/media/insync/DATA/arqueon-conf/</Item>
-      <Item>/media/insync/DATA/arqueon-conf/_various/</Item>
-      <Item>/media/insync/DATA/arqueon-conf/home/</Item>
-      <Item>/home/ruben/.config/niri/waybar/</Item>
-      <Item>/media/insync/DATA/arqueon-conf/.git/</Item>
-      <Item>/media/insync/DATA/arqueon-conf/.git/branches/</Item>
-      <Item>/home/</Item>
-      <Item>/media/insync/DATA/arqueon-conf/home/.config/</Item>
-      <Item>/media/insync/DATA/arqueon-conf/home/.config/gtk-3.0/</Item>
-      <Item>/home/ruben/.ssh/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/home/</Item>
       <Item>/home/ruben/.config/lnk/.config/</Item>
-      <Item>/home/ruben/.config/gtk-4.0/</Item>
-      <Item>/home/ruben/.config/alacritty/</Item>
-      <Item>/media/insync/DATA/arqueon-conf/home/wallpaper/</Item>
-      <Item>/media/insync/DATA/arqueon-conf/home/assets/</Item>
-      <Item>/media/insync/DATA/</Item>
-      <Item>/media/insync/</Item>
-      <Item>/media/</Item>
-      <Item>/</Item>
-      <Item>/usr/lib/</Item>
+      <Item>/home/ruben/.config/lnk/.config/niri/</Item>
+      <Item>/home/ruben/.config/lnk/.git/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/home/.config/</Item>
+      <Item>/home/ruben/wallpaper/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/home/wallpaper/</Item>
+      <Item>/home/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/home/.config/niri/</Item>
+      <Item>/home/ruben/.config/niri/</Item>
+      <Item>/home/ruben/.config/fastfetch/</Item>
+      <Item>/home/ruben/.config/kitty/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/.git/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/_various/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Item>
+      <Item>/home/ruben/dotfiles_ml4w/.config/ml4w/settings/</Item>
+      <Item>/home/ruben/dotfiles_ml4w/.config/ml4w/</Item>
+      <Item>/home/ruben/dotfiles_ml4w/.config/</Item>
+      <Item>/home/ruben/dotfiles_ml4w/</Item>
+      <Item>/home/ruben/dotfiles_ml4w/.config/hypr/conf/keybindings/</Item>
+      <Item>/home/ruben/dotfiles_ml4w/.config/hypr/conf/</Item>
+      <Item>/home/ruben/dotfiles_ml4w/.config/hypr/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/hypr/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/hypr/scripts/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/</Item>
+      <Item>/home/ruben/DATA/</Item>
+      <Item>/home/ruben/Copiar (1) dotfiles_ml4w/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/home/.config/swaync/</Item>
+      <Item>/home/ruben/.config/swaync/</Item>
+      <Item>/home/ruben/.config/swayidle/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/home/.local/</Item>
+      <Item>/home/ruben/.config/fish/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/home/.config/variety/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/home/.config/variety/Favorites/</Item>
+      <Item>/home/ruben/.config/niri/waybar/</Item>
+      <Item>/home/ruben/.ssh/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/.config/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/dotfiles-ML4W/.config/waybar/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/dotfiles-ML4W/.config/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/dotfiles-ML4W/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/</Item>
+      <Item>/home/ruben/DATA/arqueon-conf/old/</Item>
     </Navigation>
     <CommandLine/>
     <FileMask/>

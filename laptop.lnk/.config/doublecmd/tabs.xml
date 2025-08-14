@@ -3,7 +3,7 @@
   <Tabs>
     <OpenedTabs>
       <Left>
-        <ActiveTab>4</ActiveTab>
+        <ActiveTab>2</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -16,56 +16,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="niri">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/niri/</Path>
-                  <Path Filename="niri">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/niri/</Path>
-                  <Path Filename="niriswitcher">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/niriswitcher/</Path>
-                  <Path Filename="quickshell">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/quickshell/</Path>
-                  <Path Filename="kdeconnect">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/kdeconnect/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename=".bin">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="main">/media/insync/DATA/arqueon-conf/home/.bin/</Path>
-                  <Path Filename="fixes">/media/insync/DATA/arqueon-conf/home/.bin/main/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.bin/main/fixes/</Path>
-                  <Path Filename="kernels">/media/insync/DATA/arqueon-conf/home/.bin/main/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.bin/main/kernels/</Path>
-                  <Path Filename="kernels">/media/insync/DATA/arqueon-conf/home/.bin/main/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.bin/main/kernels/</Path>
-                  <Path Filename="keys">/media/insync/DATA/arqueon-conf/home/.bin/main/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.bin/main/keys/</Path>
-                  <Path Filename="nemesis_repo">/media/insync/DATA/arqueon-conf/home/.bin/main/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.bin/main/nemesis_repo/</Path>
-                  <Path Filename="samba">/media/insync/DATA/arqueon-conf/home/.bin/main/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.bin/main/samba/</Path>
-                  <Path Filename="swapfile">/media/insync/DATA/arqueon-conf/home/.bin/main/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.bin/main/swapfile/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.bin/main/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.bin/</Path>
-                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="gtk-3.0">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/gtk-3.0/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="swaync">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/swaync/</Path>
-                  <Path Filename="way-edges">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/way-edges/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="rofi">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/rofi/</Path>
-                  <Path Filename="qtile">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/qtile/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="gtk-3.0">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/gtk-3.0/</Path>
-                  <Path Filename="alacritty">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename=".git">/media/insync/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/DATA/</Path>
+                  <Path Filename="DATA">/home/ruben/</Path>
+                  <Path Filename="arqueon-conf">/home/ruben/DATA/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="dotfiles-ML4W">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/</Path>
+                  <Path Filename="hypr">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/</Path>
+                  <Path Filename="scripts">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/hypr/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/hypr/scripts/</Path>
+                  <Path Filename="conf">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/hypr/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename=".git">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/.git/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="niri">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="wallpaper">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/wallpaper/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".Xresources">/home/ruben/DATA/arqueon-conf/home/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -79,25 +79,119 @@
             <Sortings>
               <Sorting>
                 <Direction>1</Direction>
-                <Function>12</Function>
+                <Function>1</Function>
               </Sorting>
             </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/ruben/.config/</Path>
-                  <Path Filename=".bin">/home/ruben/</Path>
-                  <Path Filename="media">/</Path>
-                  <Path Filename="insync">/media/</Path>
+                  <Path Filename="niri">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/.config/niri/</Path>
+                  <Path Filename="hypr">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/.config/hypr/</Path>
+                  <Path Filename="ranger">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/.config/ranger/</Path>
+                  <Path Filename="wal">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/.config/wal/</Path>
+                  <Path Filename="wal">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/</Path>
+                  <Path Filename="DATA">/home/ruben/</Path>
+                  <Path Filename="arqueon-conf">/home/ruben/DATA/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="variety">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="Favorites">/home/ruben/DATA/arqueon-conf/home/.config/variety/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/variety/Favorites/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/variety/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".local">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.local/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="qt6ct">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="arqueon-conf">/home/ruben/DATA/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="dotfiles-ML4W">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename="arqueon-conf">/home/ruben/DATA/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="nwg-bar">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>1</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/media/insync/arch-config/</Path>
                   <Path Filename="DATA">/media/insync/</Path>
-                  <Path Filename="arqueon-conf">/media/insync/DATA/</Path>
-                  <Path Filename="home">/media/insync/DATA/arqueon-conf/</Path>
-                  <Path Filename="wallpaper">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/wallpaper/</Path>
-                  <Path Filename="wallpaper">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/wallpaper/</Path>
-                  <Path Filename="wallpaper">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="arch-config">/media/insync/DATA/</Path>
+                  <Path Filename="config">/media/insync/DATA/arch-config/</Path>
+                  <Path Filename="2. niri-dots">/media/insync/DATA/arch-config/config/</Path>
+                  <Path Filename="..">/media/insync/DATA/arch-config/config/2. niri-dots/</Path>
+                  <Path Filename="1. hypr-dots">/media/insync/DATA/arch-config/config/</Path>
+                  <Path Filename="hyprdots">/media/insync/DATA/arch-config/config/1. hypr-dots/</Path>
+                  <Path Filename=".config">/media/insync/DATA/arch-config/config/1. hypr-dots/hyprdots/</Path>
+                  <Path Filename="hypr">/media/insync/DATA/arch-config/config/1. hypr-dots/hyprdots/.config/</Path>
+                  <Path Filename="hyprland.conf">/media/insync/DATA/arch-config/config/1. hypr-dots/hyprdots/.config/hypr/</Path>
+                  <Path Filename="Descargas">/home/ruben/</Path>
+                  <Path Filename="sharkler-dots">/home/ruben/Descargas/</Path>
+                  <Path Filename=".config">/home/ruben/Descargas/sharkler-dots/</Path>
+                  <Path Filename="niri">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/.config/niri/</Path>
+                  <Path Filename="hypr">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/.config/hypr/</Path>
+                  <Path Filename="ranger">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/.config/ranger/</Path>
+                  <Path Filename="wal">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/.config/wal/</Path>
+                  <Path Filename="wal">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="sharkler-dots">/home/ruben/Descargas/</Path>
+                  <Path Filename=".config">/home/ruben/Descargas/sharkler-dots/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/.config/</Path>
+                  <Path Filename="..">/home/ruben/Descargas/sharkler-dots/</Path>
+                  <Path Filename="">/home/ruben/Descargas/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="doublecmd">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/doublecmd/</Path>
+                  <Path Filename="dconf">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/dconf/</Path>
+                  <Path Filename="doublecmd">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/doublecmd/</Path>
+                  <Path Filename="doublecmd">/home/ruben/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -118,7 +212,199 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/ruben/.bin/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/dotfiles-ML4W/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/old/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="alacritty">/home/ruben/DATA/arqueon-conf/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/.config/alacritty/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="arqueon-conf">/home/ruben/DATA/</Path>
+                  <Path Filename="old">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/ruben/DATA/arqueon-conf/old/</Path>
+                  <Path Filename="dotfiles-ML4W">/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/dotfiles-ML4W/</Path>
+                  <Path Filename="waybar">/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/dotfiles-ML4W/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/old/1. hypr-dots/dotfiles-ML4W/.config/waybar/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="doublecmd">/home/ruben/DATA/arqueon-conf/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="arqueon-conf">/home/ruben/DATA/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="swaync">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/swaync/</Path>
+                  <Path Filename="doublecmd">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="wallpaper">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/wallpaper/</Path>
+                  <Path Filename="wallpaper">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/wallpaper/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="swaync">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/swaync/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="Copiar (1) dotfiles_ml4w">/home/ruben/</Path>
+                  <Path Filename=".Xresources">/home/ruben/Copiar (1) dotfiles_ml4w/</Path>
+                  <Path Filename="">/home/ruben/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="swaync">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/swaync/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/DATA/</Path>
+                  <Path Filename="DATA">/home/ruben/</Path>
+                  <Path Filename="arqueon-conf">/home/ruben/DATA/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="dotfiles-ML4W">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/</Path>
+                  <Path Filename="hypr">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/</Path>
+                  <Path Filename="scripts">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/hypr/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/hypr/scripts/</Path>
+                  <Path Filename="conf">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/hypr/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="_various">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename=".git">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/.git/</Path>
+                  <Path Filename="home">/home/ruben/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/ruben/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="xsettingsd">/home/ruben/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/ruben/DATA/arqueon-conf/home/.config/xsettingsd/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>1</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/home/ruben/.config/swayidle/</Path>
+                  <Path Filename="swayidle">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/swayidle/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/</Path>
+                  <Path Filename="ruben">/home/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="swayidle">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/swayidle/</Path>
+                  <Path Filename="swaync">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/swaync/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename="dotfiles_ml4w">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/</Path>
+                  <Path Filename="dotfiles_ml4w">/home/ruben/</Path>
+                  <Path Filename=".config">/home/ruben/dotfiles_ml4w/</Path>
+                  <Path Filename="hypr">/home/ruben/dotfiles_ml4w/.config/</Path>
+                  <Path Filename="conf">/home/ruben/dotfiles_ml4w/.config/hypr/</Path>
+                  <Path Filename="keybindings">/home/ruben/dotfiles_ml4w/.config/hypr/conf/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/.config/hypr/conf/keybindings/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/.config/hypr/conf/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/.config/hypr/</Path>
+                  <Path Filename="hypr">/home/ruben/dotfiles_ml4w/.config/</Path>
+                  <Path Filename="conf">/home/ruben/dotfiles_ml4w/.config/hypr/</Path>
+                  <Path Filename="keybindings">/home/ruben/dotfiles_ml4w/.config/hypr/conf/</Path>
+                  <Path Filename="default.conf">/home/ruben/dotfiles_ml4w/.config/hypr/conf/keybindings/</Path>
+                  <Path Filename=".config">/home/ruben/dotfiles_ml4w/</Path>
+                  <Path Filename="ml4w">/home/ruben/dotfiles_ml4w/.config/</Path>
+                  <Path Filename="settings">/home/ruben/dotfiles_ml4w/.config/ml4w/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/.config/ml4w/settings/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="niri">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="kitty">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/kitty/</Path>
+                  <Path Filename="fastfetch">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/fastfetch/</Path>
+                  <Path Filename="fastfetch">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/fastfetch/</Path>
+                  <Path Filename="niri">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/</Path>
+                  <Path Filename="Kvantum">/home/ruben/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -132,380 +418,133 @@
             <Sortings>
               <Sorting>
                 <Direction>2</Direction>
-                <Function>12</Function>
+                <Function>7</Function>
               </Sorting>
             </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename=".config">/etc/skel/</Path>
-                  <Path Filename="..">/etc/skel/.config/</Path>
-                  <Path Filename=".local">/etc/skel/</Path>
-                  <Path Filename="share">/etc/skel/.local/</Path>
-                  <Path Filename="fish">/etc/skel/.local/share/</Path>
-                  <Path Filename="..">/etc/skel/.local/share/fish/</Path>
-                  <Path Filename="..">/etc/skel/.local/share/</Path>
-                  <Path Filename="..">/etc/skel/.local/</Path>
-                  <Path Filename=".bin">/etc/skel/</Path>
-                  <Path Filename="..">/etc/skel/.bin/</Path>
-                  <Path Filename=".config">/etc/skel/</Path>
-                  <Path Filename="rofi">/etc/skel/.config/</Path>
-                  <Path Filename="fonts">/etc/skel/.config/rofi/</Path>
-                  <Path Filename="..">/etc/skel/.config/rofi/fonts/</Path>
-                  <Path Filename="..">/etc/skel/.config/rofi/</Path>
-                  <Path Filename="..">/etc/skel/.config/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="home">/media/insync/DATA/arqueon-conf/</Path>
-                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="rofi">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/rofi/</Path>
-                  <Path Filename="rofi">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/rofi/</Path>
-                  <Path Filename="rofi">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/rofi/</Path>
-                  <Path Filename="kitty">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/kitty/</Path>
-                  <Path Filename="niri">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/niri/</Path>
-                  <Path Filename="niri">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/niri/</Path>
-                  <Path Filename="niriswitcher">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/niriswitcher/</Path>
-                  <Path Filename="niriswitcher">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="Downloads">/home/ruben/</Path>
-                  <Path Filename="nwg">/home/ruben/Downloads/</Path>
-                  <Path Filename="nwg-panel">/home/ruben/Downloads/nwg/</Path>
-                  <Path Filename="hyprland-3">/home/ruben/Downloads/nwg/nwg-panel/</Path>
-                  <Path Filename="..">/home/ruben/Downloads/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="change-waybar-hyprland">/home/ruben/.bin/</Path>
-                  <Path Filename="..">/home/</Path>
-                  <Path Filename="media">/</Path>
-                  <Path Filename="8TB">/media/</Path>
-                  <Path Filename="..">/media/8TB/</Path>
-                  <Path Filename="insync">/media/</Path>
-                  <Path Filename="DATA">/media/insync/</Path>
-                  <Path Filename="arqueon-conf">/media/insync/DATA/</Path>
-                  <Path Filename="home">/media/insync/DATA/arqueon-conf/</Path>
-                  <Path Filename=".bin">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="arcolinux-change-theme">/media/insync/DATA/arqueon-conf/home/.bin/</Path>
-                  <Path Filename=".git">/media/insync/DATA/arqueon-conf/</Path>
-                  <Path Filename="branches">/media/insync/DATA/arqueon-conf/.git/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/.git/branches/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/.git/</Path>
-                  <Path Filename="home">/media/insync/DATA/arqueon-conf/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="_various">/media/insync/DATA/arqueon-conf/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/_various/</Path>
-                  <Path Filename="_various">/media/insync/DATA/arqueon-conf/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-      </Left>
-      <Right>
-        <ActiveTab>0</ActiveTab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
-                  <Path Filename="lnk">/home/ruben/.config/</Path>
-                  <Path Filename=".config">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="lnk">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/waybar/</Path>
+                  <Path Filename="niri">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/</Path>
+                  <Path Filename="niri">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/</Path>
+                  <Path Filename="niri">/home/ruben/.config/</Path>
+                  <Path Filename="waybar">/home/ruben/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/waybar/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/</Path>
+                  <Path Filename="niri">/home/ruben/.config/</Path>
+                  <Path Filename="waybar">/home/ruben/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/waybar/</Path>
+                  <Path Filename="config.kdl">/home/ruben/.config/niri/</Path>
                   <Path Filename=".ssh">/home/ruben/</Path>
-                  <Path Filename="..">/home/ruben/.ssh/</Path>
-                  <Path Filename="..">/home/ruben/</Path>
-                  <Path Filename="ruben">/home/</Path>
+                  <Path Filename="id_ed25519_lap.pub">/home/ruben/.ssh/</Path>
                   <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="niri">/home/ruben/.config/</Path>
                   <Path Filename="waybar">/home/ruben/.config/niri/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/waybar/</Path>
-                  <Path Filename="waybar">/home/ruben/.config/niri/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/waybar/</Path>
-                  <Path Filename="waybar">/home/ruben/.config/niri/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/waybar/</Path>
-                  <Path Filename="waybar">/home/ruben/.config/niri/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/waybar/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/</Path>
-                  <Path Filename="lnk">/home/ruben/.config/</Path>
-                  <Path Filename="ofi.lnk">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="lnk">/home/ruben/.config/</Path>
-                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="niri">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/niri/</Path>
+                  <Path Filename="config">/home/ruben/.config/niri/waybar/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="..">/home/ruben/.config/</Path>
                   <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="lnk">/home/ruben/.config/</Path>
-                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
-                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/gtk-3.0/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
-                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="niri">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/niri/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename=".git">/home/ruben/.config/lnk/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="..">/home/ruben/.bin/</Path>
-                  <Path Filename=".bin">/home/ruben/</Path>
-                  <Path Filename="..">/home/ruben/.bin/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/</Path>
                   <Path Filename="ruben">/home/</Path>
                   <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="..">/home/ruben/.config/</Path>
-                  <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="..">/home/ruben/.config/</Path>
-                  <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="rofi">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/rofi/</Path>
-                  <Path Filename="niri">/home/ruben/.config/</Path>
-                  <Path Filename=".crystal-dock-2">/home/ruben/</Path>
-                  <Path Filename="Niri">/home/ruben/.crystal-dock-2/</Path>
-                  <Path Filename="..">/home/ruben/.crystal-dock-2/Niri/</Path>
-                  <Path Filename="..">/home/ruben/.crystal-dock-2/</Path>
-                  <Path Filename="..">/home/ruben/</Path>
-                  <Path Filename="ruben">/home/</Path>
-                  <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="quickshell">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/quickshell/</Path>
-                  <Path Filename="quickshell">/home/ruben/.config/</Path>
-                  <Path Filename="Assets">/home/ruben/.config/quickshell/</Path>
-                  <Path Filename="..">/home/ruben/.config/quickshell/Assets/</Path>
-                  <Path Filename="..">/home/ruben/.config/quickshell/</Path>
-                  <Path Filename="..">/home/ruben/.config/</Path>
-                  <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="quickshell">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/quickshell/</Path>
-                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
-                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
-                  <Path Filename="..">/home/ruben/.config/</Path>
-                  <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="environment.d">/home/ruben/.config/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="..">/home/ruben/Downloads/</Path>
                   <Path Filename="wallpaper">/home/ruben/</Path>
                   <Path Filename="..">/home/ruben/wallpaper/</Path>
-                  <Path Filename="..">/home/ruben/</Path>
-                  <Path Filename="ruben">/home/</Path>
-                  <Path Filename="Applications">/home/ruben/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="..">/media/insync/DATA/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="..">/home/ruben/.config/</Path>
-                  <Path Filename=".bin">/home/ruben/</Path>
-                  <Path Filename="arcolinux-change-theme">/home/ruben/.bin/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="..">/home/ruben/.config/</Path>
-                  <Path Filename=".bin">/home/ruben/</Path>
-                  <Path Filename="media">/</Path>
-                  <Path Filename="insync">/media/</Path>
-                  <Path Filename="DATA">/media/insync/</Path>
-                  <Path Filename="arqueon-conf">/media/insync/DATA/</Path>
-                  <Path Filename="home">/media/insync/DATA/arqueon-conf/</Path>
-                  <Path Filename="wallpaper">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/wallpaper/</Path>
-                  <Path Filename="wallpaper">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/wallpaper/</Path>
-                  <Path Filename="assets">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/assets/</Path>
-                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
-                  <Path Filename="gtk-3.0">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/gtk-3.0/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="copyq">/home/ruben/.config/</Path>
                   <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename=".git">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/.git/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename="laptop.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/laptop.lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/</Path>
                   <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
-                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
-                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="niri">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="fish">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/fish/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="swayidle">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/swayidle/</Path>
+                  <Path Filename="swayidle">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/swayidle/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/</Path>
+                  <Path Filename="ruben">/home/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="swayidle">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/swayidle/</Path>
+                  <Path Filename="swaync">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/swaync/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename="dotfiles_ml4w">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/</Path>
+                  <Path Filename="dotfiles_ml4w">/home/ruben/</Path>
+                  <Path Filename=".config">/home/ruben/dotfiles_ml4w/</Path>
+                  <Path Filename="hypr">/home/ruben/dotfiles_ml4w/.config/</Path>
+                  <Path Filename="conf">/home/ruben/dotfiles_ml4w/.config/hypr/</Path>
+                  <Path Filename="keybindings">/home/ruben/dotfiles_ml4w/.config/hypr/conf/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/.config/hypr/conf/keybindings/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/.config/hypr/conf/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/.config/hypr/</Path>
+                  <Path Filename="hypr">/home/ruben/dotfiles_ml4w/.config/</Path>
+                  <Path Filename="conf">/home/ruben/dotfiles_ml4w/.config/hypr/</Path>
+                  <Path Filename="keybindings">/home/ruben/dotfiles_ml4w/.config/hypr/conf/</Path>
+                  <Path Filename="default.conf">/home/ruben/dotfiles_ml4w/.config/hypr/conf/keybindings/</Path>
+                  <Path Filename=".config">/home/ruben/dotfiles_ml4w/</Path>
+                  <Path Filename="ml4w">/home/ruben/dotfiles_ml4w/.config/</Path>
+                  <Path Filename="settings">/home/ruben/dotfiles_ml4w/.config/ml4w/</Path>
+                  <Path Filename="..">/home/ruben/dotfiles_ml4w/.config/ml4w/settings/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="niri">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/niri/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
                 </Paths>
               </Entry>
             </History>

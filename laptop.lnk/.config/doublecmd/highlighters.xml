@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doublecmd>
   <Highlighters Version="2">
-    <Highlighter Tag="0" Name="Plain text">
+    <Highlighter Tag="0" Name="Texto sin formato">
       <DefaultFilter/>
     </Highlighter>
     <Highlighter Tag="0" Name="Assembler (x86)">
@@ -38,7 +38,7 @@
       <DefaultFilter>Java Files (*.java)|*.java</DefaultFilter>
     </Highlighter>
     <Highlighter Tag="0" Name="Java script">
-      <DefaultFilter>Java script|*.js</DefaultFilter>
+      <DefaultFilter>Java script|*.js;*.json</DefaultFilter>
     </Highlighter>
     <Highlighter Tag="0" Name="Kotlin">
       <DefaultFilter>Kotlin|*.kt;*.kts</DefaultFilter>
