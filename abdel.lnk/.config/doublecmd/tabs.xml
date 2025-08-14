@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <Tabs>
+    <OpenedTabs>
+      <Left>
+        <ActiveTab>1</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>7</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/hypr other dots/hyprdots/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/hypr other dots/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/</Path>
+                  <Path Filename="..">/home/abdel/</Path>
+                  <Path Filename="..">/home/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="skel">/etc/</Path>
+                  <Path Filename=".config">/etc/skel/</Path>
+                  <Path Filename="..">/etc/skel/.config/</Path>
+                  <Path Filename="DATA">/home/abdel/</Path>
+                  <Path Filename="..">/home/abdel/DATA/</Path>
+                  <Path Filename="DATA">/home/abdel/</Path>
+                  <Path Filename="arch-config">/home/abdel/DATA/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/</Path>
+                  <Path Filename="DATA">/home/abdel/</Path>
+                  <Path Filename="arch-config">/home/abdel/DATA/</Path>
+                  <Path Filename="hypr other dots">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="hyprdots">/home/abdel/DATA/arch-config/hypr other dots/</Path>
+                  <Path Filename="config">/home/abdel/DATA/arch-config/hypr other dots/hyprdots/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/hypr other dots/hyprdots/config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/hypr other dots/hyprdots/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/hypr other dots/</Path>
+                  <Path Filename="hypr other dots">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/hypr other dots/</Path>
+                  <Path Filename="hypr other dots">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="hyprdots">/home/abdel/DATA/arch-config/hypr other dots/</Path>
+                  <Path Filename="config">/home/abdel/DATA/arch-config/hypr other dots/hyprdots/</Path>
+                  <Path Filename="hypr">/home/abdel/DATA/arch-config/hypr other dots/hyprdots/config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="arch-config">/home/abdel/DATA/</Path>
+                  <Path Filename="hypr other dots">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="jaKooLit">/home/abdel/DATA/arch-config/hypr other dots/</Path>
+                  <Path Filename="Hyprland-Dots">/home/abdel/DATA/arch-config/hypr other dots/jaKooLit/</Path>
+                  <Path Filename="config">/home/abdel/DATA/arch-config/hypr other dots/jaKooLit/Hyprland-Dots/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/hypr other dots/jaKooLit/Hyprland-Dots/config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="arch-config">/home/abdel/DATA/</Path>
+                  <Path Filename="config">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="variety">/home/abdel/DATA/arch-config/config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/config/variety/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/config/</Path>
+                  <Path Filename="">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="">/home/abdel/Descargas/</Path>
+                  <Path Filename="">/home/abdel/Imágenes/Capturas de pantalla/</Path>
+                  <Path Filename="arqueon-conf-main">/home/abdel/Descargas/</Path>
+                  <Path Filename="home">/home/abdel/Descargas/arqueon-conf-main/</Path>
+                  <Path Filename=".zshrc">/home/abdel/Descargas/arqueon-conf-main/home/</Path>
+                  <Path Filename="">/home/abdel/Descargas/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/hypr other dots/jaKooLit/Hyprland-Dots/config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="arch-config">/home/abdel/DATA/</Path>
+                  <Path Filename="config">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="variety">/home/abdel/DATA/arch-config/config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/config/variety/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arch-config/config/</Path>
+                  <Path Filename="">/home/abdel/DATA/arch-config/</Path>
+                  <Path Filename="">/home/abdel/Descargas/</Path>
+                  <Path Filename="">/home/abdel/Imágenes/Capturas de pantalla/</Path>
+                  <Path Filename="arqueon-conf-main">/home/abdel/Descargas/</Path>
+                  <Path Filename="home">/home/abdel/Descargas/arqueon-conf-main/</Path>
+                  <Path Filename=".zshrc">/home/abdel/Descargas/arqueon-conf-main/home/</Path>
+                  <Path Filename="..">/home/abdel/Descargas/</Path>
+                  <Path Filename="DATA">/home/abdel/</Path>
+                  <Path Filename="arqueon-conf-main">/home/abdel/DATA/</Path>
+                  <Path Filename="home">/home/abdel/DATA/arqueon-conf-main/</Path>
+                  <Path Filename=".config">/home/abdel/DATA/arqueon-conf-main/home/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arqueon-conf-main/home/.config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arqueon-conf-main/home/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arqueon-conf-main/</Path>
+                  <Path Filename="arqueon-conf-main">/home/abdel/DATA/</Path>
+                  <Path Filename="home">/home/abdel/DATA/arqueon-conf-main/</Path>
+                  <Path Filename=".config">/home/abdel/DATA/arqueon-conf-main/home/</Path>
+                  <Path Filename="">/home/abdel/DATA/arqueon-conf-main/home/.config/</Path>
+                  <Path Filename="..">/media/hrdisk/Drive/</Path>
+                  <Path Filename="abdeluck">/media/hrdisk/</Path>
+                  <Path Filename="..">/media/hrdisk/abdeluck/</Path>
+                  <Path Filename="DATA">/home/abdel/</Path>
+                  <Path Filename="arqueon-conf">/home/abdel/DATA/</Path>
+                  <Path Filename="home">/home/abdel/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/abdel/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="_various">/home/abdel/DATA/arqueon-conf/</Path>
+                  <Path Filename="1. hypr-dots">/home/abdel/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="dotfiles-ML4W">/home/abdel/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename=".config">/home/abdel/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/</Path>
+                  <Path Filename="swaync">/home/abdel/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/</Path>
+                  <Path Filename="style.css">/home/abdel/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/swaync/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="home">/home/abdel/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/abdel/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="home">/home/abdel/DATA/arqueon-conf/</Path>
+                  <Path Filename=".config">/home/abdel/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/home/abdel/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/home/abdel/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="swaync">/home/abdel/DATA/arqueon-conf/home/.config/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>0</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>7</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="variety">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/variety/</Path>
+                  <Path Filename="..">/home/abdel/.config/</Path>
+                  <Path Filename=".config">/home/abdel/</Path>
+                  <Path Filename="hyde">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/hyde/</Path>
+                  <Path Filename="hypr">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/hypr/</Path>
+                  <Path Filename="waybar">/home/abdel/.config/</Path>
+                  <Path Filename="modules">/home/abdel/.config/waybar/</Path>
+                  <Path Filename="weather.jsonc">/home/abdel/.config/waybar/modules/</Path>
+                  <Path Filename="hypr">/home/abdel/.config/</Path>
+                  <Path Filename="hyprland.conf">/home/abdel/.config/hypr/</Path>
+                  <Path Filename=".local">/home/abdel/</Path>
+                  <Path Filename="share">/home/abdel/.local/</Path>
+                  <Path Filename="bin">/home/abdel/.local/share/</Path>
+                  <Path Filename="animations.sh">/home/abdel/.local/share/bin/</Path>
+                  <Path Filename=".config">/home/abdel/</Path>
+                  <Path Filename="swappy">/home/abdel/.config/</Path>
+                  <Path Filename="wallpaper">/home/abdel/</Path>
+                  <Path Filename="..">/home/abdel/wallpaper/</Path>
+                  <Path Filename=".config">/home/abdel/</Path>
+                  <Path Filename="swaylock">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/swaylock/</Path>
+                  <Path Filename="swayidle">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/swayidle/</Path>
+                  <Path Filename="swaylock">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/swaylock/</Path>
+                  <Path Filename="niri">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/niri/</Path>
+                  <Path Filename="alacritty">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/alacritty/</Path>
+                  <Path Filename="DATA">/home/abdel/</Path>
+                  <Path Filename="..">/home/abdel/DATA/</Path>
+                  <Path Filename=".config">/home/abdel/</Path>
+                  <Path Filename="..">/home/abdel/.config/</Path>
+                  <Path Filename=".config">/home/abdel/</Path>
+                  <Path Filename="swaync">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/swaync/</Path>
+                  <Path Filename="gtk-4.0">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/gtk-4.0/</Path>
+                  <Path Filename="niri">/home/abdel/.config/</Path>
+                  <Path Filename="..">/home/abdel/.config/niri/</Path>
+                  <Path Filename="..">/home/abdel/.config/</Path>
+                  <Path Filename=".bin">/home/abdel/</Path>
+                  <Path Filename="..">/home/abdel/.bin/</Path>
+                  <Path Filename=".config">/home/abdel/</Path>
+                  <Path Filename="..">/home/abdel/.config/</Path>
+                  <Path Filename=".config">/home/abdel/</Path>
+                  <Path Filename="GitHub Desktop">/home/abdel/.config/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Right>
+    </OpenedTabs>
+  </Tabs>
+</doublecmd>

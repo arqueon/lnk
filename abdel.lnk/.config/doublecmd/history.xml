@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <History>
+    <Navigation>
+      <Item>/home/abdel/.config/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf/home/.config/</Item>
+      <Item>/home/abdel/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf/home/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf/</Item>
+      <Item>/home/abdel/.bin/</Item>
+      <Item>/home/abdel/.config/ibus/</Item>
+      <Item>/home/abdel/.config/niri/</Item>
+      <Item>/home/abdel/.config/gtk-4.0/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/swaync/</Item>
+      <Item>/home/abdel/.config/swaync/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/.config/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf/_various/1. hypr-dots/dotfiles-ML4W/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf/_various/1. hypr-dots/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf/_various/</Item>
+      <Item>/home/abdel/DATA/</Item>
+      <Item>/media/hrdisk/abdeluck/</Item>
+      <Item>/media/hrdisk/</Item>
+      <Item>/media/hrdisk/Drive/</Item>
+      <Item>/home/abdel/.config/alacritty/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf-main/home/.config/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf-main/home/</Item>
+      <Item>/home/abdel/DATA/arqueon-conf-main/</Item>
+      <Item>/home/abdel/.config/swaylock/</Item>
+      <Item>/home/abdel/.config/swayidle/</Item>
+      <Item>/home/abdel/wallpaper/</Item>
+      <Item>/home/abdel/.local/share/bin/</Item>
+      <Item>/home/abdel/.local/share/</Item>
+      <Item>/home/abdel/.local/</Item>
+      <Item>/home/abdel/.config/hypr/</Item>
+      <Item>/home/abdel/.config/waybar/modules/</Item>
+      <Item>/home/abdel/.config/waybar/</Item>
+      <Item>/home/abdel/Descargas/</Item>
+      <Item>/home/abdel/.config/hyde/</Item>
+      <Item>/home/abdel/Descargas/arqueon-conf-main/home/</Item>
+      <Item>/home/abdel/Descargas/arqueon-conf-main/</Item>
+      <Item>/home/abdel/Imágenes/Capturas de pantalla/</Item>
+      <Item>/home/abdel/DATA/arch-config/</Item>
+      <Item>/home/abdel/DATA/arch-config/config/</Item>
+      <Item>/home/abdel/.config/variety/</Item>
+      <Item>/home/abdel/DATA/arch-config/config/variety/</Item>
+      <Item>/</Item>
+      <Item>/home/</Item>
+      <Item>/home/abdel.bak/</Item>
+      <Item>/home/abdel/.local/state/</Item>
+      <Item>/home/abdel/.cache/</Item>
+      <Item>/home/abdel/.cache/hyprland/</Item>
+      <Item>/home/abdel/.cache/.fr-95Q091/</Item>
+      <Item>/home/abdel/.config/gconf/</Item>
+      <Item>/home/abdel/.config/hypr/UserScripts/</Item>
+    </Navigation>
+    <CommandLine/>
+    <FileMask/>
+    <VolumeSize/>
+    <CreateDirectories>
+      <Item Tag="0">swayidle</Item>
+    </CreateDirectories>
+    <SearchText/>
+    <SearchTextPath/>
+    <ReplaceText/>
+    <ReplaceTextPath/>
+    <RenameNameMask/>
+    <RenameExtMask/>
+    <SearchDirectories/>
+    <SearchExcludeFiles/>
+    <SearchExcludeDirectories/>
+  </History>
+</doublecmd>
