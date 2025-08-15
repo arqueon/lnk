@@ -696,7 +696,7 @@
     <DfltRightGoTo>1</DfltRightGoTo>
     <DfltKeep>5</DfltKeep>
     <DfltSaveDirHistory>False</DfltSaveDirHistory>
-    <FavTabsLastUniqueID>{046C443B-FB8C-4F4E-AA0E-74E8904B0744}</FavTabsLastUniqueID>
+    <FavTabsLastUniqueID>{2BD9FDCC-44C2-4509-81D1-957E5AEA96D4}</FavTabsLastUniqueID>
   </FavoriteTabsOptions>
   <Lua>
     <PathToLibrary>liblua5.1.so.0</PathToLibrary>

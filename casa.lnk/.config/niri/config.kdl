@@ -566,6 +566,7 @@ window-rule {
 }
 
 window-rule {
+   match title=r#"^\s*$"# 
    match title=r#"^Add/Edit Citation$"# 
    match title=r#"^Zotero Settings$"# 
    match title=r#"^Print$"# 
