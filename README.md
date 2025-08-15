@@ -4,4 +4,4 @@
 
 `lnk add --host ofi --recursive ~/.config/fish/` 
 
-`lnk add --host ofi ~/.config/doublecdm/...` 
+`lnk add --host ofi ~/.config/doublecmd/...` 
