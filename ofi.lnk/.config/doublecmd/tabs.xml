@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <Tabs>
+    <OpenedTabs>
+      <Left>
+        <ActiveTab>3</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/media/insync/DATA/arqueon-conf/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/media/insync/DATA/arqueon-conf/_various/1. hypr-dots/</Path>
+                  <Path Filename="">/media/insync/DATA/arqueon-conf/_various/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/etc/skel/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/media/insync/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/home/ruben/ExpanDrive/arq/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>0</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/home/ruben/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/home/ruben/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/home/ruben/.config/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/home/ruben/dotfiles_ml4w/</Path>
+                  <Path Filename="">/home/ruben/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Right>
+    </OpenedTabs>
+  </Tabs>
+</doublecmd>
