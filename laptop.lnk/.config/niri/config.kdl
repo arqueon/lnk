@@ -330,6 +330,8 @@ spawn-at-startup "copyq"
 //spawn-at-startup "cosmic-ext-alternative-startup"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
+//spawn-at-startup "zotero"
+//spawn-at-startup "logseq"
 spawn-at-startup "niri" "msg" "action"  "focus-workspace" "web"
 
 // Client-side decorations
