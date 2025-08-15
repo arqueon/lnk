@@ -5,6 +5,7 @@
 .config/Kvantum/kvantum.kvconfig
 .config/Kvantum/wallbash/wallbash.kvconfig
 .config/Kvantum/wallbash/wallbash.svg
+.config/doublecmd/colors.json
 .config/doublecmd/doublecmd.xml
 .config/doublecmd/favoritetabs.xml
 .config/doublecmd/shortcuts.scf
