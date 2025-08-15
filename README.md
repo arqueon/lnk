@@ -4,4 +4,4 @@
 
 `lnk add --host {HOST} --recursive ~/.config/fish/` 
 
-`lnk add --host {HOST} ~/.config/doublecmd/doublecmd.xml ~/.config/doublecmd/favoritetabs.xml ~/.config/doublecmd/shortcuts.scf ~/ruben/.config/doublecmd/tabs.xml`
+`lnk add --host {HOST} ~/.config/doublecmd/doublecmd.xml ~/.config/doublecmd/favoritetabs.xml ~/.config/doublecmd/shortcuts.scf ~/ruben/.config/doublecmd/tabs.xml .config/variety/banned.txt .config/variety/scripts .config/variety/variety.conf .config/xsettingsd/xsettingsd.conf`
