@@ -148,7 +148,7 @@ output "HDMI-A-1" {
     position x=0 y=0
 }
 switch-events {
-    lid-close { spawn "swaylock"; }
+    lid-close { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
     //lid-open { spawn "notify-send" "The laptop lid is open!"; }
 }
 
@@ -631,9 +631,9 @@ binds {
     Mod+Return { spawn "kitty"; }
 //  Mod+Space { spawn "anyrun"; }
     Mod+Space { spawn "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
-    Ctrl+Alt+Escape { spawn "swaylock"; }
-//  Mod+L { spawn "swaylock"; }
+    Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
     Mod+L { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
+//  Mod+L { spawn "swaylock"; }
     Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
     Mod+X { spawn "nwg-bar"; }
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
