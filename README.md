@@ -2,6 +2,6 @@
 
 `lnk init -r git@github.com:user/dotfiles.git` 
 
-`lnk add --host ofi --recursive ~/.config/fish/` 
+`lnk add --host {HOST} --recursive ~/.config/fish/` 
 
-`lnk add --host ofi ~/.config/doublecmd/...` 
+`lnk add --host {HOST} ~/.config/doublecmd/doublecmd.xml ~/.config/doublecmd/favoritetabs.xml ~/.config/doublecmd/shortcuts.scf ~/ruben/.config/doublecmd/tabs.xml`
