@@ -5,3 +5,6 @@
 `lnk add --host {HOST} --recursive ~/.config/fish/` 
 
 `lnk add --host {HOST} ~/.config/doublecmd/doublecmd.xml ~/.config/doublecmd/favoritetabs.xml ~/.config/doublecmd/shortcuts.scf ~/.config/doublecmd/tabs.xml  ~/.config/doublecmd/colors.json .config/variety/banned.txt .config/variety/scripts .config/variety/variety.conf .config/xsettingsd/xsettingsd.conf`
+
+`lnk add --host {HOST} ~/.config/fastfetch ~/.config/fusuma ~/.config/kdeconnect/ ~/.config/qBittorrent/  ~/.config/qt5ct/ ~/.config/qt6ct/ ~/.config/rofi ~/.config/sway ~/.config/swaylock/ ~/.config/swaync ~/.config/Thunar/ ~/.config/nwg-bar/` 
+
