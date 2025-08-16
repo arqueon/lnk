@@ -630,8 +630,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+D { spawn  "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
     Mod+Return { spawn "kitty"; }
-//  Mod+Space { spawn "anyrun"; }
-    Mod+Space { spawn "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
+    Mod+Space { spawn "anyrun"; }
+//  Mod+Space { spawn "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
     Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
     Mod+L { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
 //  Mod+L { spawn "swaylock"; }
@@ -901,7 +901,7 @@ debug {
 
 // Environment variables
 environment {
-    DISPLAY ":1"
+    DISPLAY ":0"
     QT_QPA_PLATFORMTHEME "qt6ct"
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"

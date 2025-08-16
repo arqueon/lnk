@@ -3,7 +3,7 @@
   <Tabs>
     <OpenedTabs>
       <Left>
-        <ActiveTab>2</ActiveTab>
+        <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -16,7 +16,15 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="fastfetch">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/fastfetch/</Path>
+                  <Path Filename="swaylock">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/swaylock/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -113,7 +121,7 @@
         </Tab>
       </Left>
       <Right>
-        <ActiveTab>2</ActiveTab>
+        <ActiveTab>5</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -184,7 +192,9 @@
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/doublecmd/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename=".lnk.abdel">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="Kvantum">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -233,6 +243,54 @@
                   <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="niri">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="README.md">/home/ruben/.config/lnk/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="quickshell">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/quickshell/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="doublecmd">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/doublecmd/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="doublecmd">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/doublecmd/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="Kvantum">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="sway">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/sway/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="README.md">/home/ruben/.config/lnk/</Path>
