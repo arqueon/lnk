@@ -22,6 +22,7 @@
 .config/gtk-4.0/gtk-dark.css
 .config/gtk-4.0/gtk.css
 .config/gtk-4.0/settings.ini
+.config/kdeconnect
 .config/kitty/colors.conf
 .config/kitty/current-theme.conf
 .config/kitty/kitty.conf
