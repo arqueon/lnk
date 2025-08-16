@@ -38,6 +38,7 @@
 .config/niri/waybar/style2.css
 .config/niriswitcher/config.toml
 .config/niriswitcher/style.css
+.config/nwg-bar
 .config/nwg-dock/style.css
 .config/qBittorrent
 .config/qt5ct/qt5ct.conf
