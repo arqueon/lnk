@@ -209,7 +209,11 @@
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/qt5ct/</Path>
                   <Path Filename="qt6ct">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/qt6ct/</Path>
-                  <Path Filename="qt6ct">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="abdel.lnk">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
