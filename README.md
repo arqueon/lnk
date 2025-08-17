@@ -2,7 +2,7 @@
 
 `lnk init -r git@github.com:user/dotfiles.git` 
 
-`lnk add --host {HOST} --recursive ~/.config/fish/` 
+`lnk add --host {HOST} --recursive ~/.config/fish/config.fish` 
 
 `lnk add --host {HOST} ~/.config/doublecmd/doublecmd.xml ~/.config/doublecmd/favoritetabs.xml ~/.config/doublecmd/shortcuts.scf ~/.config/doublecmd/tabs.xml  ~/.config/doublecmd/colors.json .config/variety/banned.txt .config/variety/scripts .config/variety/variety.conf .config/xsettingsd/xsettingsd.conf`
 
