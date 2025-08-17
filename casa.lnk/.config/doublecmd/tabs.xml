@@ -293,7 +293,17 @@
                   <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="README.md">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/niri/</Path>
+                  <Path Filename="ofi.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/ofi.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
