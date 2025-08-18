@@ -155,7 +155,6 @@
 .bin/unix
 .bin/xmas-tree
 .config/Kvantum/kvantum.kvconfig
-.config/doublecmd/colors.json
 .config/doublecmd/doublecmd.xml
 .config/doublecmd/favoritetabs.xml
 .config/doublecmd/shortcuts.scf
