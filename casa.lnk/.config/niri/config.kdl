@@ -466,9 +466,8 @@ binds {
     Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
 
     // Application launchers and binds
-    Mod+D { spawn "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
-    Mod+Space { spawn "anyrun"; }
-    // Mod+Space { spawn "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
+    Mod+Space { spawn "qs" "ipc" "call" "appLauncher" "toggle"; }
+    Mod+D { spawn "anyrun"; }
     Mod+Return { spawn "kitty"; }
     Mod+Shift+T { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
@@ -492,10 +491,10 @@ binds {
     // System utility binds
     Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
     Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
-    Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
+    //Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
     Mod+X { spawn "nwg-bar"; }
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
-    Mod+Shift+C { spawn "qs" "ipc" "call" "globalIPC" "toggleNotificationPopup"; }
+    Mod+Shift+C { spawn "qs" "ipc" "call" "notifications" "toggleHistory"; }
     Mod+Shift+B { spawn "killall" "qs" "&&" "qs"; }
     Mod+M { spawn "mpv" "/dev/video0"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
