@@ -3,7 +3,7 @@
   <Tabs>
     <OpenedTabs>
       <Left>
-        <ActiveTab>1</ActiveTab>
+        <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -26,7 +26,9 @@
                   <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
                   <Path Filename="..">/media/insync/DATA/arqueon-conf/home/</Path>
                   <Path Filename="home">/media/insync/DATA/arqueon-conf/</Path>
-                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -170,8 +172,8 @@
           <FileView Type="columns">
             <Sortings>
               <Sorting>
-                <Direction>2</Direction>
-                <Function>7</Function>
+                <Direction>1</Direction>
+                <Function>12</Function>
               </Sorting>
             </Sortings>
             <History>
@@ -213,7 +215,11 @@
                   <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="abdel.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename=".git">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
