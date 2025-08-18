@@ -3,7 +3,7 @@
   <Tabs>
     <OpenedTabs>
       <Left>
-        <ActiveTab>2</ActiveTab>
+        <ActiveTab>1</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -16,7 +16,17 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="fastfetch">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/fastfetch/</Path>
+                  <Path Filename="swaylock">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/swaylock/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="home">/media/insync/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -37,7 +47,46 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="">/home/ruben/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="variety">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/variety/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
+                  <Path Filename="assets">/home/ruben/.config/gtk-4.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-4.0/assets/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-4.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="DankMaterialShell">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/DankMaterialShell/</Path>
+                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="qt5ct">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/qt5ct/</Path>
+                  <Path Filename="qt6ct">/home/ruben/.config/</Path>
+                  <Path Filename="colors">/home/ruben/.config/qt6ct/</Path>
+                  <Path Filename="..">/home/ruben/.config/qt6ct/colors/</Path>
+                  <Path Filename="..">/home/ruben/.config/qt6ct/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-4.0/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
+                  <Path Filename="dconf">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/dconf/</Path>
+                  <Path Filename="dconf">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/dconf/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
+                  <Path Filename="assets">/home/ruben/.config/gtk-4.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-4.0/assets/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-4.0/</Path>
+                  <Path Filename="qt5ct">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/qt5ct/</Path>
+                  <Path Filename="qt5ct">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/qt5ct/</Path>
+                  <Path Filename="qt6ct">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/qt6ct/</Path>
+                  <Path Filename="qt6ct">/home/ruben/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -60,7 +109,10 @@
                 <Paths>
                   <Path Filename="doublecmd">/home/ruben/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/doublecmd/</Path>
-                  <Path Filename="autostart">/home/ruben/.config/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/gtk-3.0/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/</Path>
+                  <Path Filename="gtk.css">/home/ruben/.config/gtk-4.0/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -81,7 +133,7 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="">/etc/skel/.config/</Path>
+                  <Path Filename="..">/etc/skel/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -113,7 +165,7 @@
         </Tab>
       </Left>
       <Right>
-        <ActiveTab>2</ActiveTab>
+        <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -126,7 +178,42 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="ofi.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/ofi.lnk/</Path>
+                  <Path Filename="qt5ct">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/qt5ct/</Path>
+                  <Path Filename="qt6ct">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/qt6ct/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/gtk-3.0/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/gtk-4.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="gtk-3.0">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/gtk-3.0/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="assets">/home/ruben/.config/lnk/casa.lnk/.config/gtk-4.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/gtk-4.0/assets/</Path>
+                  <Path Filename="gtk.css">/home/ruben/.config/lnk/casa.lnk/.config/gtk-4.0/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="qt5ct">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/qt5ct/</Path>
+                  <Path Filename="qt6ct">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/qt6ct/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="abdel.lnk">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -147,7 +234,24 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="">/home/ruben/.config/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="assets">/home/ruben/.config/lnk/casa.lnk/.config/gtk-4.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/gtk-4.0/assets/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/gtk-4.0/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="laptop.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/laptop.lnk/</Path>
+                  <Path Filename="gtk-4.0">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
+                  <Path Filename="assets">/home/ruben/.config/lnk/laptop.lnk/.config/gtk-4.0/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/gtk-4.0/assets/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/laptop.lnk/.config/gtk-4.0/</Path>
+                  <Path Filename="qt5ct">/home/ruben/.config/lnk/laptop.lnk/.config/</Path>
+                  <Path Filename="qt5ct.conf">/home/ruben/.config/lnk/laptop.lnk/.config/qt5ct/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -184,7 +288,9 @@
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/doublecmd/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="setup-git-v5.sh">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="Kvantum">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -236,6 +342,107 @@
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="README.md">/home/ruben/.config/lnk/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="doublecmd">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/doublecmd/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="doublecmd">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/doublecmd/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="Kvantum">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="sway">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/sway/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/niri/</Path>
+                  <Path Filename="ofi.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/ofi.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/niri/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/</Path>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/niri/</Path>
+                  <Path Filename="niriswitcher">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="quickshell">/home/ruben/.config/</Path>
+                  <Path Filename="Bar">/home/ruben/.config/quickshell/</Path>
+                  <Path Filename="..">/home/ruben/.config/quickshell/Bar/</Path>
+                  <Path Filename="Components">/home/ruben/.config/quickshell/</Path>
+                  <Path Filename="..">/home/ruben/.config/quickshell/Components/</Path>
+                  <Path Filename="Components">/home/ruben/.config/quickshell/</Path>
+                  <Path Filename="..">/home/ruben/.config/quickshell/Components/</Path>
+                  <Path Filename="Bar">/home/ruben/.config/quickshell/</Path>
+                  <Path Filename="..">/home/ruben/.config/quickshell/Bar/</Path>
+                  <Path Filename="..">/home/ruben/.config/quickshell/</Path>
+                  <Path Filename="quickshell">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/quickshell/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename=".lnk.abdel">/home/ruben/.config/lnk/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
+                  <Path Filename="niri">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="niri_fuzzel_switcher">/home/ruben/.config/lnk/casa.lnk/.config/niri/</Path>
+                  <Path Filename="wallpaper">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/wallpaper/</Path>
+                  <Path Filename="..">/home/ruben/</Path>
+                  <Path Filename="ruben">/home/</Path>
+                  <Path Filename=".bin">/home/ruben/</Path>
+                  <Path Filename="..">/home/ruben/.bin/</Path>
+                  <Path Filename="Downloads">/home/ruben/</Path>
                 </Paths>
               </Entry>
             </History>
