@@ -106,7 +106,8 @@
                   <Path Filename="..">/home/ruben/Downloads/noctalia-shell-main/</Path>
                   <Path Filename="..">/home/ruben/Downloads/</Path>
                   <Path Filename=".config">/home/ruben/</Path>
-                  <Path Filename="..">/home/ruben/.config/</Path>
+                  <Path Filename="">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/sublime-text/Packages/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -138,7 +139,7 @@
                   <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/niri/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/.config/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/ofi.lnk/</Path>
-                  <Path Filename="ofi.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".lnk.abdel">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
