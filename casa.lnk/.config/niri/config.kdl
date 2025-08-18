@@ -408,8 +408,10 @@ window-rule {
     match title=r#"^\s*$"#
     match title=r#"^Add/Edit Citation$"#
     match title=r#"^Zotero Settings$"#
+    match title=r#"^Zotero Item Selector$"#
     match title=r#"^Found Duplicate Items$"#
     match title=r#"^Print$"#
+    match title=r#"^Save File$"#
     match title="^(file_progress)$"
     match title="^(confirm)$"
     match title="^(dialog)$"
@@ -464,9 +466,8 @@ binds {
     Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
 
     // Application launchers and binds
-    Mod+D { spawn "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
-    Mod+Space { spawn "anyrun"; }
-    // Mod+Space { spawn "qs" "ipc" "call" "globalIPC" "toggleLauncher"; }
+    Mod+Space { spawn "qs" "ipc" "call" "appLauncher" "toggle"; }
+    Mod+D { spawn "anyrun"; }
     Mod+Return { spawn "kitty"; }
     Mod+Shift+T { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
@@ -488,12 +489,12 @@ binds {
     Mod+Shift+N { spawn "newsflash"; }
 
     // System utility binds
-    Mod+L { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
-    Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
-    Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
+    Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
+    Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
+    //Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
     Mod+X { spawn "nwg-bar"; }
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
-    Mod+Shift+C { spawn "qs" "ipc" "call" "globalIPC" "toggleNotificationPopup"; }
+    Mod+Shift+C { spawn "qs" "ipc" "call" "notifications" "toggleHistory"; }
     Mod+Shift+B { spawn "killall" "qs" "&&" "qs"; }
     Mod+M { spawn "mpv" "/dev/video0"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
