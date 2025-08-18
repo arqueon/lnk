@@ -491,7 +491,7 @@ binds {
     // System utility binds
     Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
     Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
-    Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
+    //Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
     Mod+X { spawn "nwg-bar"; }
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
     Mod+Shift+C { spawn "qs" "ipc" "call" "notifications" "toggleHistory"; }

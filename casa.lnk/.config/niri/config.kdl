@@ -665,7 +665,7 @@ environment {
     SDL_VIDEODRIVER "wayland"
     BEMENU_BACKEND "wayland"
     XDG_BACKEND "wayland"
-    //ELECTRON_OZONE_PLATFORM_HINT "auto" //No funciona Logseq
+    ELECTRON_OZONE_PLATFORM_HINT "auto" //No funciona Logseq
 
     // UI theming and scaling
     QT_QPA_PLATFORM "wayland"
@@ -677,10 +677,10 @@ environment {
     //GTK_THEME "Colloid"
     XCURSOR_THEME "Bibata-Modern-Ice"
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
-    //QT_QPA_PLATFORMTHEME "gtk3"
-    //QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-    QT_QPA_PLATFORMTHEME "qt5ct"
-    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+    //QT_QPA_PLATFORMTHEME "qt5ct"
+    //QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 
 
     // Application specific

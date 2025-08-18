@@ -219,7 +219,7 @@
                   <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
                   <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename=".git">/home/ruben/.config/lnk/</Path>
+                  <Path Filename=".lnk.abdel">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
