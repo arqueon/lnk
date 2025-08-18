@@ -1,7 +1,7 @@
 [
   {
     "label": "_Lock",
-    "exec": "qs ipc call globalIPC toggleLock",
+    "exec": "qs ipc call lockScreen toggle",
     "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
   },
   {

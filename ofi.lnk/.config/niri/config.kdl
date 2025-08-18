@@ -408,8 +408,10 @@ window-rule {
     match title=r#"^\s*$"#
     match title=r#"^Add/Edit Citation$"#
     match title=r#"^Zotero Settings$"#
+    match title=r#"^Zotero Item Selector$"#
     match title=r#"^Found Duplicate Items$"#
     match title=r#"^Print$"#
+    match title=r#"^Save File$"#
     match title="^(file_progress)$"
     match title="^(confirm)$"
     match title="^(dialog)$"
@@ -488,13 +490,13 @@ binds {
     Mod+Shift+N { spawn "newsflash"; }
 
     // System utility binds
-    Mod+L { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
-    Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
+    Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
+    Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
     Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
     Mod+X { spawn "nwg-bar"; }
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
     Mod+Shift+C { spawn "qs" "ipc" "call" "globalIPC" "toggleNotificationPopup"; }
-    Mod+Shift+B { spawn "pkill" "qs" "&&" "qs"; }
+    Mod+Shift+B { spawn "killall" "qs" "&&" "qs"; }
     Mod+M { spawn "mpv" "/dev/video0"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn "wl-present" "mirror"; }
@@ -651,7 +653,7 @@ debug {
 // Environment variables
 environment {
     // Wayland and session
-    DISPLAY ":1"
+    DISPLAY ":0"
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"
@@ -676,10 +678,10 @@ environment {
     //GTK_THEME "Colloid"
     XCURSOR_THEME "Bibata-Modern-Ice"
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
-    //QT_QPA_PLATFORMTHEME "gtk3"
-    //QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-    QT_QPA_PLATFORMTHEME "qt5ct"
-    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+    //QT_QPA_PLATFORMTHEME "qt5ct"
+    //QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 
 
     // Application specific
