@@ -3,7 +3,7 @@
   <Tabs>
     <OpenedTabs>
       <Left>
-        <ActiveTab>0</ActiveTab>
+        <ActiveTab>4</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -161,10 +161,10 @@
               </Sorting>
             </Sortings>
             <History>
-              <Entry Active="True">
+              <Entry>
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/ruben/Downloads/</Path>
+                  <Path Filename="noctalia-latest.tar.gz">/home/ruben/Downloads/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -175,7 +175,7 @@
         </Tab>
       </Left>
       <Right>
-        <ActiveTab>6</ActiveTab>
+        <ActiveTab>2</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -304,7 +304,11 @@
                   <Path Filename="..">/home/ruben/.config/lnk/casa.lnk/</Path>
                   <Path Filename="casa.lnk">/home/ruben/.config/lnk/</Path>
                   <Path Filename=".config">/home/ruben/.config/lnk/casa.lnk/</Path>
-                  <Path Filename="Kvantum">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="kdeconnect">/home/ruben/.config/lnk/casa.lnk/.config/</Path>
+                  <Path Filename="quickshell">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/quickshell/</Path>
+                  <Path Filename="quickshell">/home/ruben/.config/</Path>
+                  <Path Filename="..">/home/ruben/.config/quickshell/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -458,7 +462,7 @@
                   <Path Filename="..">/home/ruben/.bin/</Path>
                   <Path Filename=".config">/home/ruben/</Path>
                   <Path Filename="lnk">/home/ruben/.config/</Path>
-                  <Path Filename="laptop.lnk">/home/ruben/.config/lnk/</Path>
+                  <Path Filename="..">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
