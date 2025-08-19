@@ -652,7 +652,7 @@ debug {
 // Environment variables
 environment {
     // Wayland and session
-    DISPLAY ":0"
+    DISPLAY ":1"
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"

@@ -158,12 +158,12 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>80</Left>
-      <Top>48</Top>
-      <Width>800</Width>
-      <Height>480</Height>
+      <Left>1933</Left>
+      <Top>44</Top>
+      <Width>2122</Width>
+      <Height>1357</Height>
       <PixelsPerInch>96</PixelsPerInch>
-      <Maximized>True</Maximized>
+      <Maximized>False</Maximized>
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
@@ -704,7 +704,7 @@
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
   <HotKeySortOrder>0</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>zip</LastUsedPacker>
+  <LastUsedPacker>tgz</LastUsedPacker>
   <LastDoAnyCommand>cm_Refresh</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
