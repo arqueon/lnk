@@ -72,7 +72,6 @@
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/9a084bee0e4838bb339279b35f529a81" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/go-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/remove-from-recent" "")
-(gtk_accel_path "<Actions>/ThunarActions/uca-action-open-terminal" "F4")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/open-with-other" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/invert-selection" "<Primary><Shift>i")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-mtime" "")

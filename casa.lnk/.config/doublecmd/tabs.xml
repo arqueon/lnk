@@ -28,7 +28,15 @@
                   <Path Filename="home">/media/insync/DATA/arqueon-conf/</Path>
                   <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
                   <Path Filename="..">/media/insync/DATA/arqueon-conf/home/.config/</Path>
-                  <Path Filename=".config">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="assets">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/assets/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="home">/media/insync/DATA/arqueon-conf/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/home/</Path>
+                  <Path Filename="_various">/media/insync/DATA/arqueon-conf/</Path>
+                  <Path Filename="SSH">/media/insync/DATA/arqueon-conf/_various/</Path>
+                  <Path Filename="..">/media/insync/DATA/arqueon-conf/_various/SSH/</Path>
+                  <Path Filename="etc">/media/insync/DATA/arqueon-conf/_various/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -167,7 +175,7 @@
         </Tab>
       </Left>
       <Right>
-        <ActiveTab>0</ActiveTab>
+        <ActiveTab>6</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -448,7 +456,9 @@
                   <Path Filename="ruben">/home/</Path>
                   <Path Filename=".bin">/home/ruben/</Path>
                   <Path Filename="..">/home/ruben/.bin/</Path>
-                  <Path Filename="Downloads">/home/ruben/</Path>
+                  <Path Filename=".config">/home/ruben/</Path>
+                  <Path Filename="lnk">/home/ruben/.config/</Path>
+                  <Path Filename="laptop.lnk">/home/ruben/.config/lnk/</Path>
                 </Paths>
               </Entry>
             </History>
