@@ -73,7 +73,7 @@ workspace "media" {
 
 // Switch events
 switch-events {
-    lid-close { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
+    lid-close { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
     //lid-open { spawn "notify-send" "The laptop lid is open!"; }
 }
 
@@ -164,6 +164,7 @@ layer-rule {
 
 
 // Startup applications
+spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "swww" "img" "~/wallpaper/default.jpg"
 //spawn-at-startup "~/.config/niri/waybar.sh"
@@ -171,7 +172,6 @@ spawn-at-startup "qs"
 spawn-at-startup "swayosd-server"
 //spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
 spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
-spawn-at-startup "xwayland-satellite"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "swayidle"
 spawn-at-startup "blueman-applet"
