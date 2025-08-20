@@ -64,8 +64,18 @@ workspace "media" {
 // --- Outputs configuration ---
 /-output "eDP-1" {
     // off
-    mode "1920x1080@120.030"
-   position x=1280 y=0
+    mode "3440x1440@165.001"
+    scale 1.0
+    // transform "90"
+    position x=1920 y=0
+}
+
+/-output "HDMI-A-1" {
+    // off
+    mode "1920x1080@60.000"
+    scale 1.0
+    // transform "90"
+    position x=0 y=0
 }
 
 
