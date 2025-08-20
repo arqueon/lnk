@@ -65,9 +65,7 @@ workspace "media" {
 /-output "eDP-1" {
     // off
     mode "1920x1080@120.030"
-    scale 2
-    transform "normal"
-    position x=1280 y=0}
+   position x=1280 y=0
 }
 
 
