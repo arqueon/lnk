@@ -9,7 +9,6 @@
 .config/doublecmd/favoritetabs.xml
 .config/doublecmd/highlighters.xml.bak
 .config/doublecmd/shortcuts.scf
-.config/doublecmd/zip.ini
 .config/environment.d/.gitkeep
 .config/environment.d/firefox.conf
 .config/environment.d/garuda.conf
