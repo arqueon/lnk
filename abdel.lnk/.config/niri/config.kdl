@@ -81,7 +81,8 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    lid-close { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
+    //lid-close { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }    
+    lid-close { spawn "swaylock"; }
     //lid-open { spawn "notify-send" "The laptop lid is open!"; }
 }
 
@@ -489,7 +490,8 @@ binds {
     Mod+Shift+N { spawn "newsflash"; }
 
     // System utility binds
-    Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
+    Mod+L { spawn "swaylock"; }
+    //Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
     Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
     //Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
     Mod+X { spawn "nwg-bar"; }
@@ -501,7 +503,6 @@ binds {
     Mod+Shift+M { spawn "wl-present" "mirror"; }
     Mod+Escape { spawn "kitty" "btop"; }
     // Mod+Shift+B { spawn "~/.config/niri/waybar.sh"; }
-    // Mod+L { spawn "swaylock"; }
 
     // Window navigation and focus
     Mod+Left { focus-column-left; }
