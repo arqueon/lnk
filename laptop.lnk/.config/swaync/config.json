@@ -4,6 +4,7 @@
     "positionY": "top",
     "layer": "overlay",
     "control-center-layer": "top",
+    "notification-window-preferred-output": "HDMI-A-1",
     "layer-shell": true,
     "cssPriority": "user",
     "control-center-margin-top": 13,

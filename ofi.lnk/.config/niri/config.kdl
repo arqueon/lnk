@@ -496,7 +496,7 @@ binds {
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
     Mod+Shift+C { spawn "qs" "ipc" "call" "notifications" "toggleHistory"; }
     Mod+Shift+B { spawn "killall" "qs" "&&" "qs"; }
-    Mod+M { spawn "mpv" "/dev/video0"; }
+    Mod+M { spawn "mpv" "/dev/video2"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn "wl-present" "mirror"; }
     Mod+Escape { spawn "kitty" "btop"; }

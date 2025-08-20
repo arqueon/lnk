@@ -3,6 +3,12 @@
 .bin/arcolinux-change-theme
 .config/Kvantum/Mokka#/Mokka#.kvconfig
 .config/Kvantum/kvantum.kvconfig
+<<<<<<< HEAD
+=======
+.config/Kvantum/wallbash/wallbash.kvconfig
+.config/Kvantum/wallbash/wallbash.svg
+.config/Thunar/uca.xml
+>>>>>>> a84ee857eb26d69e8e8be801d88cbabc5945f1e6
 .config/doublecmd/favoritetabs.xml
 .config/doublecmd/shortcuts.scf
 .config/environment.d/.gitkeep

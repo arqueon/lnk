@@ -81,7 +81,7 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    lid-close { spawn "qs" "ipc" "call" "globalIPC" "toggleLock"; }
+    lid-close { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
     //lid-open { spawn "notify-send" "The laptop lid is open!"; }
 }
 
@@ -496,7 +496,7 @@ binds {
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
     Mod+Shift+C { spawn "qs" "ipc" "call" "notifications" "toggleHistory"; }
     Mod+Shift+B { spawn "killall" "qs" "&&" "qs"; }
-    Mod+M { spawn "mpv" "/dev/video0"; }
+    Mod+M { spawn "mpv" "/dev/video2"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn "wl-present" "mirror"; }
     Mod+Escape { spawn "kitty" "btop"; }
@@ -665,7 +665,7 @@ environment {
     SDL_VIDEODRIVER "wayland"
     BEMENU_BACKEND "wayland"
     XDG_BACKEND "wayland"
-    ELECTRON_OZONE_PLATFORM_HINT "auto" //No funciona Logseq
+    //ELECTRON_OZONE_PLATFORM_HINT "auto" //No funciona Logseq
 
     // UI theming and scaling
     QT_QPA_PLATFORM "wayland"
