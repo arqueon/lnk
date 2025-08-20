@@ -3,7 +3,6 @@
 .bin/arcolinux-change-theme
 .config/Kvantum/Mokka#/Mokka#.kvconfig
 .config/Kvantum/kvantum.kvconfig
-.config/doublecmd/favoritetabs.xml
 .config/doublecmd/shortcuts.scf
 .config/environment.d/.gitkeep
 .config/environment.d/firefox.conf
