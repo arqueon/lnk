@@ -2,7 +2,6 @@
 .bashrc
 .bin/arcolinux-change-theme
 .config/Kvantum/kvantum.kvconfig
-.config/Kvantum/wallbash/wallbash.svg
 .config/doublecmd/doublecmd-13.xml.bak
 .config/doublecmd/highlighters.xml.bak
 .config/doublecmd/shortcuts.scf
