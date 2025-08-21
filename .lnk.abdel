@@ -3,7 +3,6 @@
 .bin/arcolinux-change-theme
 .config/Kvantum/kvantum.kvconfig
 .config/doublecmd/doublecmd-13.xml.bak
-.config/doublecmd/extassoc.xml
 .config/doublecmd/favoritetabs.xml
 .config/doublecmd/highlighters.xml
 .config/doublecmd/highlighters.xml.bak
