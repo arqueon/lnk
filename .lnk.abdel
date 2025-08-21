@@ -2,7 +2,6 @@
 .bashrc
 .bin/arcolinux-change-theme
 .config/Kvantum/kvantum.kvconfig
-.config/doublecmd/colors.json
 .config/doublecmd/doublecmd-13.xml.bak
 .config/doublecmd/doublecmd.cfg
 .config/doublecmd/doublecmd.err
