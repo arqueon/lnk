@@ -4,7 +4,6 @@
 .config/Kvantum/kvantum.kvconfig
 .config/doublecmd/doublecmd-13.xml.bak
 .config/doublecmd/highlighters.xml.bak
-.config/doublecmd/pixmaps.txt
 .config/doublecmd/session.ini
 .config/doublecmd/shortcuts.scf
 .config/doublecmd/tabs.xml
