@@ -112,6 +112,7 @@
 .config/qtile/themes/nord-theme.txt
 .config/rofi
 .config/starship.toml
+.config/sway
 .config/swayidle/config
 .config/user-dirs.dirs
 .config/user-dirs.locale
