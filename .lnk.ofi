@@ -155,7 +155,6 @@
 .bin/unix
 .bin/xmas-tree
 .config/Kvantum/kvantum.kvconfig
-.config/Thunar/uca.xml
 .config/doublecmd/shortcuts.scf
 .config/environment.d/.gitkeep
 .config/environment.d/firefox.conf
