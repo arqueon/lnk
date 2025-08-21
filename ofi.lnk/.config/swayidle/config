@@ -1,4 +1,4 @@
-timeout 300 'qs ipc call lockScreen toggle'
-#timeout 600 'niri msg action power-off-monitors'
+timeout 300 'swaylock'
+timeout 600 'niri msg action power-off-monitors'
 timeout 7200 'systemctl suspend'
-before-sleep 'qs ipc call lockScreen toggle'
+before-sleep 'swaylock'
