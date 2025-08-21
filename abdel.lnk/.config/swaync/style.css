@@ -8,13 +8,14 @@
 @define-color fontcolor #FFFFFF;
 
 * {
-    font-family: "Fira Sans Semibold";
+    font-family: "Inter";
 }
 
 /* Control Center */
 
 .control-center {
     border: 1px solid @bordercolor;
+    border-radius: 0px;
     padding: 10px;
 }
 
@@ -36,7 +37,7 @@ button {
 
 .notification {
     border: 1px solid @bordercolor;
-	border-radius: 10px;
+    border-radius: 0px;
     padding:10px;
 }
 
