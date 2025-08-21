@@ -113,6 +113,7 @@
 .config/starship.toml
 .config/sway
 .config/swayidle/config
+.config/swaylock/config
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/xsettingsd/xsettingsd.conf
