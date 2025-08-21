@@ -10,6 +10,7 @@
 .config/environment.d/garuda.conf
 .config/fastfetch
 .config/fish
+.config/fusuma/config.yml
 .config/gtk-3.0/bookmarks
 .config/gtk-3.0/settings.ini
 .config/gtk-4.0/assets
