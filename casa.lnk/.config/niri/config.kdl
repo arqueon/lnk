@@ -414,6 +414,7 @@ window-rule {
     match title=r#"^Print$"#
     match title=r#"^Save File$"#
     match title="^(file_progress)$"
+    match title="^(Smile)$"
     match title="^(confirm)$"
     match title="^(dialog)$"
     match title="^(download)$"
@@ -486,7 +487,7 @@ binds {
     Mod+F9 { spawn "jdownloader"; }
     Mod+F10 { spawn "youtube-music"; }
     Mod+F11 { spawn "github-desktop"; }
-    Mod+F12 { spawn "planify"; }
+    Mod+F12 { spawn "smile"; }
     Mod+Shift+N { spawn "newsflash"; }
 
     // System utility binds
