@@ -91,6 +91,24 @@ switch-events {
 layout {
     gaps 15
     center-focused-column "never"
+    default-column-display "tabbed"
+    tab-indicator {
+        // off
+        hide-when-single-tab
+        place-within-column
+        gap 4
+        width 15
+        length total-proportion=1.0
+        position "top"
+        gaps-between-tabs 10
+        corner-radius 0
+        active-color "#89b4fa"
+        inactive-color "gray"
+        urgent-color "red"
+        // active-gradient from="#80c8ff" to="#bbddff" angle=45
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        // urgent-gradient from="#800" to="#a33" angle=45
+    }
     preset-column-widths {
         proportion 0.25
         proportion 0.33333
@@ -105,15 +123,7 @@ layout {
         color "#ffc87f80"
         gradient from="#6b8c61" to="#a6da95" angle=45 relative-to="workspace-view"
     }
-    tab-indicator {
-        width 10
-        gap 4
-        length total-proportion=1.0
-        position "top"
-        place-within-column
-    }
     default-column-width { proportion 0.5; }
-    // default-column-width {}
     focus-ring {
         // off
         width 1
@@ -414,6 +424,7 @@ window-rule {
     match title=r#"^Print$"#
     match title=r#"^Save File$"#
     match title="^(file_progress)$"
+    match title="^(Smile)$"
     match title="^(confirm)$"
     match title="^(dialog)$"
     match title="^(download)$"
@@ -465,6 +476,7 @@ binds {
     Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
     Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
+    Mod+Ctrl+Shift+S { toggle-keyboard-shortcuts-inhibit; }
 
     // Application launchers and binds
     Mod+Space { spawn "qs" "ipc" "call" "appLauncher" "toggle"; }
@@ -486,7 +498,7 @@ binds {
     Mod+F9 { spawn "jdownloader"; }
     Mod+F10 { spawn "youtube-music"; }
     Mod+F11 { spawn "github-desktop"; }
-    Mod+F12 { spawn "planify"; }
+    Mod+F12 { spawn "smile"; }
     Mod+Shift+N { spawn "newsflash"; }
 
     // System utility binds
