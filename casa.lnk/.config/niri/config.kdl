@@ -678,7 +678,7 @@ environment {
     SDL_VIDEODRIVER "wayland"
     BEMENU_BACKEND "wayland"
     XDG_BACKEND "wayland"
-    //ELECTRON_OZONE_PLATFORM_HINT "auto" //No funciona Logseq
+    //ELECTRON_OZONE_PLATFORM_HINT "wayland" //No funciona Logseq
 
     // UI theming and scaling
     QT_QPA_PLATFORM "wayland"
