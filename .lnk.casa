@@ -56,7 +56,6 @@
 .config/qtile/__pycache__/config.cpython-312.pyc
 .config/qtile/__pycache__/config.cpython-313.pyc
 .config/qtile/__pycache__/dracula.cpython-310.pyc
-.config/qtile/rofi/launcher2.rasi
 .config/qtile/rofi/themes/dracula.rasi
 .config/qtile/rofi/themes/everblush.rasi
 .config/qtile/rofi/themes/forest.rasi
