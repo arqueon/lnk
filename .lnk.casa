@@ -56,7 +56,6 @@
 .config/qtile/__pycache__/config.cpython-312.pyc
 .config/qtile/__pycache__/config.cpython-313.pyc
 .config/qtile/__pycache__/dracula.cpython-310.pyc
-.config/qtile/icons/python.png
 .config/qtile/rofi/colors.rasi
 .config/qtile/rofi/config.rasi
 .config/qtile/rofi/launcher2.rasi
