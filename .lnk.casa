@@ -56,7 +56,6 @@
 .config/qtile/__pycache__/config.cpython-312.pyc
 .config/qtile/__pycache__/config.cpython-313.pyc
 .config/qtile/__pycache__/dracula.cpython-310.pyc
-.config/qtile/archive/config-old.py
 .config/qtile/archive/picom-arco.conf
 .config/qtile/arcobattery.py
 .config/qtile/colors.py
