@@ -57,7 +57,6 @@
 .config/qtile/__pycache__/config.cpython-313.pyc
 .config/qtile/__pycache__/dracula.cpython-310.pyc
 .config/qtile/settings/__pycache__/path.cpython-313.pyc
-.config/qtile/settings/theme.py
 .config/qtile/settings/widgets.py
 .config/qtile/sxhkd/sxhkdrc
 .config/qtile/themes/arc.json
