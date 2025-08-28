@@ -51,7 +51,6 @@
 .config/qt6ct/qt6ct.conf
 .config/qtile/README.org
 .config/qtile/__pycache__/colors.cpython-310 (copia 1).pyc
-.config/qtile/__pycache__/colors.cpython-310.pyc
 .config/qtile/__pycache__/colors.cpython-311.pyc
 .config/qtile/__pycache__/colors.cpython-312.pyc
 .config/qtile/__pycache__/colors.cpython-313.pyc
