@@ -57,7 +57,6 @@
 .config/qtile/__pycache__/config.cpython-313.pyc
 .config/qtile/__pycache__/dracula.cpython-310.pyc
 .config/qtile/settings/__pycache__/path.cpython-313.pyc
-.config/qtile/themes/arcolinux-crimson.theme
 .config/qtile/themes/arcolinux-default.theme
 .config/qtile/themes/arcolinux-dracula.theme
 .config/qtile/themes/arcolinux-nord.theme
