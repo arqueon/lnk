@@ -56,7 +56,6 @@
 .config/qtile/__pycache__/config.cpython-312.pyc
 .config/qtile/__pycache__/config.cpython-313.pyc
 .config/qtile/__pycache__/dracula.cpython-310.pyc
-.config/qtile/icons/battery_icons_horiz/battery-full-charge.png
 .config/qtile/icons/battery_icons_horiz/battery-full-charged.png
 .config/qtile/icons/battery_icons_horiz/battery-full.png
 .config/qtile/icons/battery_icons_horiz/battery-missing-black.png
