@@ -51,7 +51,7 @@ then
 
 THEME='catppuccin-mocha-blue-standard+default'
 ICONS='Papirus-Dark'
-FONT='Noto Sans 10'
+FONT='Noto Sans 11'
 CURSOR='Bibata-Modern-Ice'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
