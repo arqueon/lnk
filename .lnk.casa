@@ -8,6 +8,7 @@
 .config/environment.d/firefox.conf
 .config/environment.d/garuda.conf
 .config/fastfetch
+.config/fish
 .config/fusuma
 .config/gtk-3.0/bookmarks
 .config/gtk-3.0/settings.ini
