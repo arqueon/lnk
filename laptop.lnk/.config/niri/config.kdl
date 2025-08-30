@@ -126,7 +126,7 @@ layout {
     default-column-width { proportion 0.5; }
     focus-ring {
         // off
-        width 1
+        width 3
         active-color "#ABB2C9"
         inactive-color "#3A3A3E"
         active-gradient from="#ABB2C9" to="#a6da95" angle=45
@@ -476,6 +476,7 @@ binds {
     Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
     Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
+    Mod+Ctrl+Shift+S { toggle-keyboard-shortcuts-inhibit; }
 
     // Application launchers and binds
     Mod+Space { spawn "qs" "ipc" "call" "appLauncher" "toggle"; }
