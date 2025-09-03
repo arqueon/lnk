@@ -690,7 +690,6 @@ environment {
     QT_SCALE_FACTOR "1"
     GDK_SCALE "1"
     GTK_THEME "catppuccin-mocha-blue-standard+default"
-    //GTK_THEME "Colloid"
     XCURSOR_THEME "Bibata-Modern-Ice"
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
     QT_QPA_PLATFORMTHEME "gtk3"
