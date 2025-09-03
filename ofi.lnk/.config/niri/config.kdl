@@ -83,7 +83,6 @@ output "HDMI-A-1" {
 switch-events {
     //lid-close { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }    
     lid-close { spawn "swaylock"; }
-    //lid-open { spawn "notify-send" "The laptop lid is open!"; }
 }
 
 
@@ -185,9 +184,9 @@ layer-rule {
 // Startup applications
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "swww" "img" "~/wallpaper/default.jpg"
+spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 //spawn-at-startup "~/.config/niri/waybar.sh"
-spawn-at-startup "qs"
+spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-at-startup "swayosd-server"
 //spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
 spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
@@ -216,6 +215,10 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
+xwayland-satellite {
+    // off
+    path "xwayland-satellite"
+}
 
 // Animations configuration
 animations {
@@ -484,8 +487,8 @@ binds {
     Mod+Return { spawn "kitty"; }
     Mod+Shift+T { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
-    Mod+period { spawn "rofi" "-show" "drun"; }
-    Mod+Shift+Return { spawn "thunar" "/home/ruben/Downloads/"; }
+    Mod+period { spawn-sh "rofi -show drun"; }
+    Mod+Shift+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+F1 { spawn "google-chrome-stable"; }
     Mod+B { spawn "qs"; }
     Mod+F2 { spawn "ferdium"; }
@@ -504,16 +507,16 @@ binds {
     // System utility binds
     Mod+L { spawn "swaylock"; }
     //Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
-    Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
+    Ctrl+Alt+Escape { spawn-sh "qs ipc call lockScreen toggle"; }
     //Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
     Mod+X { spawn "nwg-bar"; }
     Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
-    Mod+Shift+C { spawn "qs" "ipc" "call" "notifications" "toggleHistory"; }
-    Mod+Shift+B { spawn "killall" "qs" "&&" "qs"; }
-    Mod+M { spawn "mpv" "/dev/video2"; }
+    Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    Mod+Shift+B { spawn-sh "killall qs && qs"; }
+    Mod+M { spawn-sh "mpv /dev/video2"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
-    Mod+Shift+M { spawn "wl-present" "mirror"; }
-    Mod+Escape { spawn "kitty" "btop"; }
+    Mod+Shift+M { spawn-sh "wl-present mirror"; }
+    Mod+Escape { spawn-sh "kitty btop"; }
     // Mod+Shift+B { spawn "~/.config/niri/waybar.sh"; }
 
     // Window navigation and focus
