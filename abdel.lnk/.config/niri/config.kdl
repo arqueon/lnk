@@ -81,9 +81,8 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    //lid-close { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }    
+    //lid-close { spawn qs -c noctalia-shell ipc call lockScreen toggle"; }    
     lid-close { spawn "swaylock"; }
-    //lid-open { spawn "notify-send" "The laptop lid is open!"; }
 }
 
 
@@ -127,9 +126,9 @@ layout {
     focus-ring {
         // off
         width 3
-        active-color "#ABB2C9"
+        active-color "#89b4fa"
         inactive-color "#3A3A3E"
-        active-gradient from="#ABB2C9" to="#a6da95" angle=45
+        active-gradient from="#89b4fa" to="#a6da95" angle=45
         inactive-gradient from="#3A3A3E" to="#808080" angle=45 relative-to="workspace-view"
     }
     shadow {
@@ -185,9 +184,9 @@ layer-rule {
 // Startup applications
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "swww" "img" "~/wallpaper/default.jpg"
+spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 //spawn-at-startup "~/.config/niri/waybar.sh"
-spawn-at-startup "qs"
+spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-at-startup "swayosd-server"
 //spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
 spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
@@ -216,6 +215,10 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
+xwayland-satellite {
+    // off
+    path "xwayland-satellite"
+}
 
 // Animations configuration
 animations {
@@ -479,15 +482,13 @@ binds {
     Mod+Ctrl+Shift+S { toggle-keyboard-shortcuts-inhibit; }
 
     // Application launchers and binds
-    Mod+Space { spawn "qs" "ipc" "call" "appLauncher" "toggle"; }
+    Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+D { spawn "anyrun"; }
     Mod+Return { spawn "kitty"; }
-    Mod+Shift+T { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
-    Mod+period { spawn "rofi" "-show" "drun"; }
-    Mod+Shift+Return { spawn "thunar" "/home/ruben/Downloads/"; }
+    Mod+period { spawn-sh "rofi -show drun"; }
+    Mod+Shift+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+F1 { spawn "google-chrome-stable"; }
-    Mod+B { spawn "qs"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
     Mod+F4 { spawn "logseq"; }
@@ -504,17 +505,18 @@ binds {
     // System utility binds
     Mod+L { spawn "swaylock"; }
     //Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
-    Ctrl+Alt+Escape { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
-    //Mod+Shift+I { spawn "qs" "ipc" "call" "globalIPC" "toggleIdleInhibitor"; }
-    Mod+X { spawn "nwg-bar"; }
-    Mod+Z { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
-    Mod+Shift+C { spawn "qs" "ipc" "call" "notifications" "toggleHistory"; }
-    Mod+Shift+B { spawn "killall" "qs" "&&" "qs"; }
-    Mod+M { spawn "mpv" "/dev/video2"; }
+    Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+    Mod+Shift+I { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
+    //Mod+X { spawn "nwg-bar"; }
+    Mod+X { spawn-sh "qs -c noctalia-shell ipc call powerPanel toggle"; }
+    Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
+    Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
+    Mod+Shift+B { spawn-sh "qs -c noctalia-shell"; }
+    Mod+B { spawn "~/.config/niri/waybar.sh"; }
+    Mod+M { spawn-sh "mpv /dev/video2"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
-    Mod+Shift+M { spawn "wl-present" "mirror"; }
-    Mod+Escape { spawn "kitty" "btop"; }
-    // Mod+Shift+B { spawn "~/.config/niri/waybar.sh"; }
+    Mod+Shift+M { spawn-sh "wl-present mirror"; }
+    Mod+Escape { spawn-sh "kitty btop"; }
 
     // Window navigation and focus
     Mod+Left { focus-column-left; }
@@ -665,7 +667,7 @@ debug {
 // Environment variables
 environment {
     // Wayland and session
-    DISPLAY ":1"
+    // DISPLAY ":1"
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"
@@ -687,7 +689,6 @@ environment {
     QT_SCALE_FACTOR "1"
     GDK_SCALE "1"
     GTK_THEME "catppuccin-mocha-blue-standard+default"
-    //GTK_THEME "Colloid"
     XCURSOR_THEME "Bibata-Modern-Ice"
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
     QT_QPA_PLATFORMTHEME "gtk3"
