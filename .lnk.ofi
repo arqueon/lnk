@@ -183,6 +183,7 @@
 .config/niri/waybar/style2.css
 .config/niriswitcher/config.toml
 .config/niriswitcher/style.css
+.config/noctalia
 .config/nwg-bar/bar.json
 .config/nwg-bar/style.css
 .config/qt5ct/qt5ct.conf
