@@ -510,6 +510,7 @@ binds {
     //Mod+X { spawn "nwg-bar"; }
     Mod+X { spawn-sh "qs -c noctalia-shell ipc call powerPanel toggle"; }
     Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
+    Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
     Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Shift+B { spawn-sh "qs -c noctalia-shell"; }
     Mod+B { spawn "~/.config/niri/waybar.sh"; }
