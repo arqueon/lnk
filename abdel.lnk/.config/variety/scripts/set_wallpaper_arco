@@ -250,7 +250,8 @@ if [[ -n $PID || $XDG_CURRENT_DESKTOP == "Hyprland" ]]; then
     fi
 
 if [[ -n $PID || $XDG_CURRENT_DESKTOP == "niri" ]]; then
-    swww img "$WP"
+#    swww img "$WP"
+    qs -c noctalia-shell ipc call wallpaper set "$WP" "all"
     fi
 
 if [ "$XDG_CURRENT_DESKTOP" == "wayfire" ]; then
