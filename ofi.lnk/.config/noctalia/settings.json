@@ -148,6 +148,7 @@
         "nightTemp": "4000"
     },
     "notifications": {
+        "doNotDisturb": false,
         "monitors": [
             "HDMI-A-1"
         ]
