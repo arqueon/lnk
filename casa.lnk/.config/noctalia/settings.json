@@ -1,0 +1,210 @@
+{
+    "appLauncher": {
+        "backgroundOpacity": 0.73,
+        "enableClipboardHistory": true,
+        "pinnedExecs": [
+        ],
+        "position": "top_center",
+        "useApp2Unit": true
+    },
+    "audio": {
+        "cavaFrameRate": 60,
+        "mprisBlacklist": [
+        ],
+        "preferredPlayer": "",
+        "showMiniplayerAlbumArt": true,
+        "showMiniplayerCava": true,
+        "visualizerType": "linear",
+        "volumeStep": 5
+    },
+    "bar": {
+        "alwaysShowBatteryPercentage": false,
+        "backgroundOpacity": 0.37,
+        "monitors": [
+            "DP-2",
+            "HDMI-A-1"
+        ],
+        "position": "top",
+        "showActiveWindowIcon": true,
+        "showNetworkStats": false,
+        "showWorkspaceLabel": "name",
+        "useDistroLogo": true,
+        "widgets": {
+            "center": [
+                {
+                    "id": "Workspace"
+                },
+                {
+                    "id": "KeepAwake"
+                }
+            ],
+            "left": [
+                {
+                    "icon": "hive",
+                    "id": "CustomButton",
+                    "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
+                    "middleClickExec": "qs -c noctalia-shell ipc call volume muteOutput\n",
+                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
+                },
+                {
+                    "id": "SystemMonitor"
+                },
+                {
+                    "id": "Taskbar"
+                },
+                {
+                    "id": "MediaMini"
+                }
+            ],
+            "right": [
+                {
+                    "id": "ScreenRecorderIndicator"
+                },
+                {
+                    "id": "Tray"
+                },
+                {
+                    "id": "Volume"
+                },
+                {
+                    "id": "Microphone"
+                },
+                {
+                    "id": "Brightness"
+                },
+                {
+                    "id": "NightLight"
+                },
+                {
+                    "id": "ArchUpdater"
+                },
+                {
+                    "id": "ScreenRecorderIndicator"
+                },
+                {
+                    "id": "NotificationHistory"
+                },
+                {
+                    "id": "Clock"
+                },
+                {
+                    "id": "SidePanelToggle"
+                },
+                {
+                    "id": "PowerToggle"
+                }
+            ]
+        }
+    },
+    "brightness": {
+        "brightnessStep": 5
+    },
+    "colorSchemes": {
+        "darkMode": true,
+        "predefinedScheme": "",
+        "useWallpaperColors": true
+    },
+    "dock": {
+        "autoHide": true,
+        "backgroundOpacity": 1,
+        "exclusive": false,
+        "monitors": [
+            "HDMI-A-1",
+            "DP-2"
+        ]
+    },
+    "general": {
+        "animationSpeed": 1,
+        "avatarImage": "/home/ruben/.face",
+        "dimDesktop": false,
+        "radiusRatio": 0,
+        "showScreenCorners": false
+    },
+    "hooks": {
+        "darkModeChange": "",
+        "enabled": false,
+        "wallpaperChange": ""
+    },
+    "location": {
+        "name": "Guadalajara, Mexico",
+        "reverseDayMonth": false,
+        "showDateWithClock": true,
+        "use12HourClock": false,
+        "useFahrenheit": false
+    },
+    "matugen": {
+        "enableUserTemplates": false,
+        "foot": false,
+        "fuzzel": false,
+        "ghostty": false,
+        "gtk3": true,
+        "gtk4": true,
+        "kitty": true,
+        "qt5": true,
+        "qt6": true,
+        "vesktop": false
+    },
+    "network": {
+        "bluetoothEnabled": true,
+        "wifiEnabled": true
+    },
+    "nightLight": {
+        "autoSchedule": true,
+        "dayTemp": "6500",
+        "enabled": true,
+        "manualSunrise": "06:30",
+        "manualSunset": "18:30",
+        "nightTemp": "4000"
+    },
+    "notifications": {
+        "doNotDisturb": false,
+        "monitors": [
+            "HDMI-A-1"
+        ]
+    },
+    "screenRecorder": {
+        "audioCodec": "opus",
+        "audioSource": "default_output",
+        "colorRange": "limited",
+        "directory": "~/Videos",
+        "frameRate": 60,
+        "quality": "very_high",
+        "showCursor": true,
+        "videoCodec": "h264",
+        "videoSource": "portal"
+    },
+    "settingsVersion": 1,
+    "ui": {
+        "fontBillboard": "Inter",
+        "fontDefault": "Roboto",
+        "fontFixed": "DejaVu Sans Mono",
+        "idleInhibitorEnabled": false,
+        "monitorsScaling": [
+        ]
+    },
+    "wallpaper": {
+        "directory": "/home/ruben/.config/variety/Favorites/",
+        "enableMultiMonitorDirectories": true,
+        "enabled": true,
+        "fillColor": "#000000",
+        "fillMode": "crop",
+        "monitors": [
+            {
+                "directory": "/home/ruben/.config/variety/Favorites/",
+                "name": "DP-2",
+                "wallpaper": "/home/ruben/.config/variety/Favorites//archwave.png"
+            },
+            {
+                "directory": "/home/ruben/.config/variety/Favorites/",
+                "name": "HDMI-A-1",
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-vgjol8.jpg"
+            }
+        ],
+        "randomEnabled": true,
+        "randomIntervalSec": 300,
+        "setWallpaperOnAllMonitors": true,
+        "transitionDuration": 1500,
+        "transitionEdgeSmoothness": 0.05,
+        "transitionType": "random"
+    }
+}
