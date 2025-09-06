@@ -1,11 +1,11 @@
 {
     "appLauncher": {
-        "backgroundOpacity": 0.63,
+        "backgroundOpacity": 0.49,
         "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
         "position": "top_center",
-        "useApp2Unit": false
+        "useApp2Unit": true
     },
     "audio": {
         "cavaFrameRate": 60,
@@ -33,9 +33,19 @@
             "center": [
                 {
                     "id": "Workspace"
+                },
+                {
+                    "id": "KeepAwake"
                 }
             ],
             "left": [
+                {
+                    "icon": "hive",
+                    "id": "CustomButton",
+                    "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
+                    "middleClickExec": "qs -c noctalia-shell ipc call volume muteOutput\n",
+                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
+                },
                 {
                     "id": "SystemMonitor"
                 },
@@ -54,18 +64,6 @@
                     "id": "Tray"
                 },
                 {
-                    "id": "NotificationHistory"
-                },
-                {
-                    "id": "WiFi"
-                },
-                {
-                    "id": "Bluetooth"
-                },
-                {
-                    "id": "Battery"
-                },
-                {
                     "id": "Volume"
                 },
                 {
@@ -81,10 +79,19 @@
                     "id": "ArchUpdater"
                 },
                 {
+                    "id": "ScreenRecorderIndicator"
+                },
+                {
+                    "id": "NotificationHistory"
+                },
+                {
                     "id": "Clock"
                 },
                 {
                     "id": "SidePanelToggle"
+                },
+                {
+                    "id": "PowerToggle"
                 }
             ]
         }
@@ -185,12 +192,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-1577064c01054c8e02de7b180b09c6cf.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//far-from-tomorrow.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-1577064c01054c8e02de7b180b09c6cf.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//cpu_city.png"
             }
         ],
         "randomEnabled": true,
