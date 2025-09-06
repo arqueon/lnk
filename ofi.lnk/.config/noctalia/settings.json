@@ -1,10 +1,11 @@
 {
     "appLauncher": {
-        "backgroundOpacity": 0.63,
+        "backgroundOpacity": 0.73,
         "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
-        "position": "top_center"
+        "position": "top_center",
+        "useApp2Unit": true
     },
     "audio": {
         "cavaFrameRate": 60,
@@ -32,9 +33,19 @@
             "center": [
                 {
                     "id": "Workspace"
+                },
+                {
+                    "id": "KeepAwake"
                 }
             ],
             "left": [
+                {
+                    "icon": "hive",
+                    "id": "CustomButton",
+                    "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
+                    "middleClickExec": "qs -c noctalia-shell ipc call volume muteOutput\n",
+                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
+                },
                 {
                     "id": "SystemMonitor"
                 },
@@ -53,18 +64,6 @@
                     "id": "Tray"
                 },
                 {
-                    "id": "NotificationHistory"
-                },
-                {
-                    "id": "WiFi"
-                },
-                {
-                    "id": "Bluetooth"
-                },
-                {
-                    "id": "Battery"
-                },
-                {
                     "id": "Volume"
                 },
                 {
@@ -80,10 +79,19 @@
                     "id": "ArchUpdater"
                 },
                 {
+                    "id": "ScreenRecorderIndicator"
+                },
+                {
+                    "id": "NotificationHistory"
+                },
+                {
                     "id": "Clock"
                 },
                 {
                     "id": "SidePanelToggle"
+                },
+                {
+                    "id": "PowerToggle"
                 }
             ]
         }
@@ -98,6 +106,7 @@
     },
     "dock": {
         "autoHide": true,
+        "backgroundOpacity": 1,
         "exclusive": false,
         "monitors": [
             "HDMI-A-1",
