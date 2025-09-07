@@ -111,7 +111,6 @@
 .config/qtile/themes/gruvbox-theme.txt
 .config/qtile/themes/manjaro-theme.txt
 .config/qtile/themes/nord-theme.txt
-.config/rofi
 .config/starship.toml
 .config/sway
 .config/swayidle/config
