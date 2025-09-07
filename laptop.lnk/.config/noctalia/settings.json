@@ -1,10 +1,10 @@
 {
     "appLauncher": {
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.73,
         "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
-        "position": "center",
+        "position": "top_center",
         "useApp2Unit": true
     },
     "audio": {
@@ -32,9 +32,19 @@
             "center": [
                 {
                     "id": "Workspace"
+                },
+                {
+                    "id": "KeepAwake"
                 }
             ],
             "left": [
+                {
+                    "icon": "hive",
+                    "id": "CustomButton",
+                    "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
+                    "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
+                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
+                },
                 {
                     "id": "SystemMonitor"
                 },
@@ -53,18 +63,6 @@
                     "id": "Tray"
                 },
                 {
-                    "id": "NotificationHistory"
-                },
-                {
-                    "id": "WiFi"
-                },
-                {
-                    "id": "Bluetooth"
-                },
-                {
-                    "id": "Battery"
-                },
-                {
                     "id": "Volume"
                 },
                 {
@@ -74,13 +72,25 @@
                     "id": "Brightness"
                 },
                 {
+                    "id": "NightLight"
+                },
+                {
                     "id": "ArchUpdater"
+                },
+                {
+                    "id": "ScreenRecorderIndicator"
+                },
+                {
+                    "id": "NotificationHistory"
                 },
                 {
                     "id": "Clock"
                 },
                 {
                     "id": "SidePanelToggle"
+                },
+                {
+                    "id": "PowerToggle"
                 }
             ]
         }
@@ -127,7 +137,7 @@
         "ghostty": false,
         "gtk3": true,
         "gtk4": true,
-        "kitty": false,
+        "kitty": true,
         "qt5": true,
         "qt6": true,
         "vesktop": false
@@ -166,7 +176,7 @@
         "fontBillboard": "Inter",
         "fontDefault": "Roboto",
         "fontFixed": "DejaVu Sans Mono",
-        "idleInhibitorEnabled": true,
+        "idleInhibitorEnabled": false,
         "monitorsScaling": [
         ]
     },
@@ -180,7 +190,7 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-f0fd8ee66ef4a93e6ef75bf3707c70b7.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/tsumugi-pixel-art.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
