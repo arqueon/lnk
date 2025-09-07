@@ -81,7 +81,7 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    //lid-close { spawn qs -c noctalia-shell ipc call lockScreen toggle"; }    
+    //lid-close { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }    
     lid-close { spawn "swaylock"; }
 }
 
@@ -202,8 +202,8 @@ spawn-at-startup "copyq"
 //spawn-at-startup "cosmic-ext-alternative-startup"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
-//spawn-at-startup "zotero"
-//spawn-at-startup "logseq"
+spawn-at-startup "zotero"
+// spawn-sh-at-startup "env DISPLAY=:2 logseq"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -491,7 +491,7 @@ binds {
     Mod+F1 { spawn "google-chrome-stable"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
-    Mod+F4 { spawn "logseq"; }
+    Mod+F4 { spawn-sh "env DISPLAY=:2 logseq"; }
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "doublecmd"; }
     Mod+F7 { spawn "virt-manager"; }
@@ -514,7 +514,7 @@ binds {
     Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Shift+B { spawn-sh "qs -c noctalia-shell"; }
     Mod+B { spawn "~/.config/niri/waybar.sh"; }
-    Mod+M { spawn-sh "mpv /dev/video2"; }
+    Mod+M { spawn-sh "mpv /dev/video0"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn-sh "wl-present mirror"; }
     Mod+Escape { spawn-sh "kitty btop"; }
@@ -668,11 +668,11 @@ debug {
 // Environment variables
 environment {
     // Wayland and session
-    // DISPLAY ":1"
+    // DISPLAY ":0"
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"
-    WAYLAND_DISPLAY "wayland-1"
+    // WAYLAND_DISPLAY "wayland-1"
     MOZ_ENABLE_WAYLAND "1"
     CLUTTER_BACKEND "wayland"
     GDK_BACKEND "wayland,x11"

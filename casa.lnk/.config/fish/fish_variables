@@ -1,7 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3800
-SETUVAR --export _fifc_extract_regex:\x1d
 SETUVAR _tide_left_items:\x1d
 SETUVAR _tide_right_items:\x1d
 SETUVAR fifc_open_keybinding:ctrl\x2do
