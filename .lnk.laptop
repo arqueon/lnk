@@ -45,7 +45,6 @@
 .config/starship.toml
 .config/sway
 .config/swayidle/config
-.config/swaylock/config
 .config/swaync
 .config/user-dirs.dirs
 .config/user-dirs.locale
