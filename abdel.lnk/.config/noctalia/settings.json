@@ -1,25 +1,25 @@
 {
     "appLauncher": {
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.73,
         "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
-        "position": "center",
-        "useApp2Unit": false
+        "position": "top_center",
+        "useApp2Unit": true
     },
     "audio": {
         "cavaFrameRate": 60,
         "mprisBlacklist": [
         ],
         "preferredPlayer": "",
-        "showMiniplayerAlbumArt": false,
-        "showMiniplayerCava": false,
+        "showMiniplayerAlbumArt": true,
+        "showMiniplayerCava": true,
         "visualizerType": "linear",
         "volumeStep": 5
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.37,
         "monitors": [
             "DP-2",
             "HDMI-A-1"
@@ -33,9 +33,19 @@
             "center": [
                 {
                     "id": "Workspace"
+                },
+                {
+                    "id": "KeepAwake"
                 }
             ],
             "left": [
+                {
+                    "icon": "hive",
+                    "id": "CustomButton",
+                    "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
+                    "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
+                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
+                },
                 {
                     "id": "SystemMonitor"
                 },
@@ -54,15 +64,6 @@
                     "id": "Tray"
                 },
                 {
-                    "id": "NotificationHistory"
-                },
-                {
-                    "id": "WiFi"
-                },
-                {
-                    "id": "Bluetooth"
-                },
-                {
                     "id": "Volume"
                 },
                 {
@@ -78,10 +79,19 @@
                     "id": "ArchUpdater"
                 },
                 {
+                    "id": "ScreenRecorderIndicator"
+                },
+                {
+                    "id": "NotificationHistory"
+                },
+                {
                     "id": "Clock"
                 },
                 {
                     "id": "SidePanelToggle"
+                },
+                {
+                    "id": "PowerToggle"
                 }
             ]
         }
@@ -116,7 +126,7 @@
         "wallpaperChange": ""
     },
     "location": {
-        "name": "Guadalajara, Jalisco",
+        "name": "Guadalajara, Mexico",
         "reverseDayMonth": false,
         "showDateWithClock": true,
         "use12HourClock": false,
@@ -141,7 +151,7 @@
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "nightTemp": "4000"
@@ -182,12 +192,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-d03a1940f1d9a3d5124c72424e9a3dfc.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-82286fd4dc58adf7d8de0db531584c10.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-d03a1940f1d9a3d5124c72424e9a3dfc.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-82286fd4dc58adf7d8de0db531584c10.jpg"
             }
         ],
         "randomEnabled": true,
