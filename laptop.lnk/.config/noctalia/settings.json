@@ -1,0 +1,198 @@
+{
+    "appLauncher": {
+        "backgroundOpacity": 1,
+        "enableClipboardHistory": true,
+        "pinnedExecs": [
+        ],
+        "position": "center",
+        "useApp2Unit": true
+    },
+    "audio": {
+        "cavaFrameRate": 60,
+        "mprisBlacklist": [
+        ],
+        "preferredPlayer": "",
+        "showMiniplayerAlbumArt": true,
+        "showMiniplayerCava": true,
+        "visualizerType": "linear",
+        "volumeStep": 5
+    },
+    "bar": {
+        "alwaysShowBatteryPercentage": true,
+        "backgroundOpacity": 0.7000000000000001,
+        "monitors": [
+            "eDP-1"
+        ],
+        "position": "top",
+        "showActiveWindowIcon": true,
+        "showNetworkStats": false,
+        "showWorkspaceLabel": "name",
+        "useDistroLogo": false,
+        "widgets": {
+            "center": [
+                {
+                    "id": "Workspace"
+                }
+            ],
+            "left": [
+                {
+                    "id": "SystemMonitor"
+                },
+                {
+                    "id": "Taskbar"
+                },
+                {
+                    "id": "MediaMini"
+                }
+            ],
+            "right": [
+                {
+                    "id": "ScreenRecorderIndicator"
+                },
+                {
+                    "id": "Tray"
+                },
+                {
+                    "id": "NotificationHistory"
+                },
+                {
+                    "id": "WiFi"
+                },
+                {
+                    "id": "Bluetooth"
+                },
+                {
+                    "id": "Battery"
+                },
+                {
+                    "id": "Volume"
+                },
+                {
+                    "id": "Microphone"
+                },
+                {
+                    "id": "Brightness"
+                },
+                {
+                    "id": "ArchUpdater"
+                },
+                {
+                    "id": "Clock"
+                },
+                {
+                    "id": "SidePanelToggle"
+                }
+            ]
+        }
+    },
+    "brightness": {
+        "brightnessStep": 5
+    },
+    "colorSchemes": {
+        "darkMode": true,
+        "predefinedScheme": "",
+        "useWallpaperColors": true
+    },
+    "dock": {
+        "autoHide": true,
+        "backgroundOpacity": 1,
+        "exclusive": false,
+        "monitors": [
+            "eDP-1"
+        ]
+    },
+    "general": {
+        "animationSpeed": 1,
+        "avatarImage": "/home/ruben/.face",
+        "dimDesktop": false,
+        "radiusRatio": 0,
+        "showScreenCorners": false
+    },
+    "hooks": {
+        "darkModeChange": "",
+        "enabled": false,
+        "wallpaperChange": ""
+    },
+    "location": {
+        "name": "Guadalajara, Mexico",
+        "reverseDayMonth": false,
+        "showDateWithClock": true,
+        "use12HourClock": false,
+        "useFahrenheit": false
+    },
+    "matugen": {
+        "enableUserTemplates": true,
+        "foot": false,
+        "fuzzel": false,
+        "ghostty": false,
+        "gtk3": true,
+        "gtk4": true,
+        "kitty": false,
+        "qt5": true,
+        "qt6": true,
+        "vesktop": false
+    },
+    "network": {
+        "bluetoothEnabled": true,
+        "wifiEnabled": true
+    },
+    "nightLight": {
+        "autoSchedule": true,
+        "dayTemp": "6500",
+        "enabled": true,
+        "manualSunrise": "06:30",
+        "manualSunset": "18:30",
+        "nightTemp": "4000"
+    },
+    "notifications": {
+        "doNotDisturb": false,
+        "monitors": [
+            "eDP-1"
+        ]
+    },
+    "screenRecorder": {
+        "audioCodec": "opus",
+        "audioSource": "default_output",
+        "colorRange": "limited",
+        "directory": "~/Videos",
+        "frameRate": 60,
+        "quality": "very_high",
+        "showCursor": true,
+        "videoCodec": "h264",
+        "videoSource": "portal"
+    },
+    "settingsVersion": 1,
+    "ui": {
+        "fontBillboard": "Inter",
+        "fontDefault": "Roboto",
+        "fontFixed": "DejaVu Sans Mono",
+        "idleInhibitorEnabled": true,
+        "monitorsScaling": [
+        ]
+    },
+    "wallpaper": {
+        "directory": "/home/ruben/.config/variety/Favorites",
+        "enableMultiMonitorDirectories": false,
+        "enabled": true,
+        "fillColor": "#000000",
+        "fillMode": "crop",
+        "monitors": [
+            {
+                "directory": "/home/ruben/.config/variety/Favorites",
+                "name": "eDP-1",
+                "wallpaper": "/home/ruben/.config/variety/Favorites/arsthetic-pink-flowers.jpg"
+            },
+            {
+                "directory": "/home/ruben/.config/variety/Favorites",
+                "name": "HDMI-A-1",
+                "wallpaper": "/home/ruben/.config/variety/Favorites/kanji-with-blobs_00_1920x1080.png"
+            }
+        ],
+        "randomEnabled": true,
+        "randomIntervalSec": 300,
+        "setWallpaperOnAllMonitors": true,
+        "transitionDuration": 1500,
+        "transitionEdgeSmoothness": 0.05,
+        "transitionType": "random"
+    }
+}
