@@ -514,7 +514,7 @@ binds {
     Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Shift+B { spawn-sh "qs -c noctalia-shell"; }
     Mod+B { spawn "~/.config/niri/waybar.sh"; }
-    Mod+M { spawn-sh "mpv /dev/video2"; }
+    Mod+M { spawn-sh "mpv /dev/video0"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn-sh "wl-present mirror"; }
     Mod+Escape { spawn-sh "kitty btop"; }

@@ -43,7 +43,7 @@
                     "icon": "hive",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
-                    "middleClickExec": "qs -c noctalia-shell ipc call volume muteOutput\n",
+                    "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
                 },
                 {
@@ -192,12 +192,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//archwave.png"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-d6b0ef9a8cdc07856e9fdfd31252701d.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-vgjol8.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-d6b0ef9a8cdc07856e9fdfd31252701d.jpg"
             }
         ],
         "randomEnabled": true,
