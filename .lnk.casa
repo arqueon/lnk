@@ -50,7 +50,6 @@
 .config/nwg-bar
 .config/qt5ct/qt5ct.conf
 .config/qt6ct/qt6ct.conf
-.config/qtile
 .config/qtile/__pycache__/colors.cpython-313.pyc
 .config/qtile/__pycache__/config.cpython-310.pyc
 .config/qtile/__pycache__/config.cpython-311.pyc
