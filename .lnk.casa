@@ -24,6 +24,7 @@
 .config/hypr/config/input.conf
 .config/hypr/config/keybinds.conf
 .config/hypr/config/monitor.conf
+.config/hypr/config/user-config.conf
 .config/hypr/config/variables.conf
 .config/hypr/config/windowrules.conf
 .config/hypr/hyprland.conf
