@@ -30,7 +30,6 @@
 .config/hypr/scripts/screenshot
 .config/hypr/scripts/screenshot_area
 .config/hypr/scripts/screenshot_full
-.config/hypr/workspaces.conf
 .config/kitty/colors.conf
 .config/kitty/current-theme.conf
 .config/kitty/kitty.conf
