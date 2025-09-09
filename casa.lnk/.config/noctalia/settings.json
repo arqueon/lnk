@@ -32,7 +32,8 @@
         "widgets": {
             "center": [
                 {
-                    "id": "Workspace"
+                    "id": "Workspace",
+                    "labelMode": "name"
                 },
                 {
                     "id": "KeepAwake"
@@ -47,13 +48,21 @@
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
                 },
                 {
-                    "id": "SystemMonitor"
+                    "id": "SystemMonitor",
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showMemoryAsPercent": true,
+                    "showMemoryUsage": true,
+                    "showNetworkStats": false
                 },
                 {
                     "id": "Taskbar"
                 },
                 {
-                    "id": "MediaMini"
+                    "id": "MediaMini",
+                    "showAlbumArt": true,
+                    "showVisualizer": true,
+                    "visualizerType": "linear"
                 }
             ],
             "right": [
@@ -64,12 +73,14 @@
                     "id": "Tray"
                 },
                 {
+                    "alwaysShowPercentage": true,
                     "id": "Volume"
                 },
                 {
                     "id": "Microphone"
                 },
                 {
+                    "alwaysShowPercentage": false,
                     "id": "Brightness"
                 },
                 {
@@ -82,13 +93,20 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
-                    "id": "NotificationHistory"
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
                 },
                 {
-                    "id": "Clock"
+                    "id": "Clock",
+                    "reverseDayMonth": true,
+                    "showDate": true,
+                    "showSeconds": false,
+                    "use12HourClock": false
                 },
                 {
-                    "id": "SidePanelToggle"
+                    "id": "SidePanelToggle",
+                    "useDistroLogo": true
                 },
                 {
                     "id": "PowerToggle"
@@ -183,6 +201,7 @@
         ]
     },
     "wallpaper": {
+        "defaultWallpaper": "/etc/xdg/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
         "directory": "/home/ruben/.config/variety/Favorites/",
         "enableMultiMonitorDirectories": true,
         "enabled": true,
