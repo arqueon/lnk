@@ -194,7 +194,7 @@ spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "swayidle"
 spawn-at-startup "blueman-applet"
 //spawn-at-startup "/opt/ExpanDrive/expandrive" "--autorun"
-spawn-at-startup "~/Applications/ExpanDrive-2025.06.20_76b30d38989b8a7085b991b05018a8e0.AppImage"
+spawn-sh-at-startup "~/Applications/ExpanDrive-2025.06.20_76b30d38989b8a7085b991b05018a8e0.AppImage"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "kdeconnectd"
 spawn-at-startup "kdeconnect-indicator"
@@ -351,7 +351,7 @@ window-rule {
 
 window-rule {
     match app-id="google-chrome"
-    default-column-width { proportion 0.85; }
+    default-column-width { proportion 0.75; }
     open-focused true
 }
 
@@ -390,7 +390,7 @@ window-rule {
     match app-id="sublime_text"
     match app-id="thunar"
     match app-id="nemo"
-    default-column-width { proportion 0.6; }
+    default-column-width { proportion 0.5; }
 }
 
 window-rule {

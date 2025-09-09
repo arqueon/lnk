@@ -11,9 +11,6 @@
 .config/fusuma
 .config/gtk-3.0/bookmarks
 .config/gtk-3.0/settings.ini
-.config/gtk-4.0/assets
-.config/gtk-4.0/gtk-dark.css
-.config/gtk-4.0/gtk.css
 .config/gtk-4.0/settings.ini
 .config/hypr/config/animations.conf
 .config/hypr/config/autostart.conf
