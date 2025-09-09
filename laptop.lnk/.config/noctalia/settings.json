@@ -170,7 +170,6 @@
     },
     "notifications": {
         "doNotDisturb": false,
-        "lastSeenTs": 1757364942000,
         "monitors": [
             "eDP-1"
         ]
@@ -205,7 +204,7 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-c53f94d30049916c517fbfcc2642f0e7.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-484296e3c7baa0a476ca7faaf79e17e9.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
