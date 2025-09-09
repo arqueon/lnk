@@ -203,7 +203,7 @@ spawn-at-startup "copyq"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
-spawn-at-startup "logseq"
+spawn-sh-at-startup "logseq"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -514,7 +514,7 @@ binds {
     Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Shift+B { spawn-sh "qs -c noctalia-shell"; }
     Mod+B { spawn "~/.config/niri/waybar.sh"; }
-    Mod+M { spawn-sh "mpv /dev/video2"; }
+    Mod+M { spawn-sh "mpv /dev/video0"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn-sh "wl-present mirror"; }
     Mod+Escape { spawn-sh "kitty btop"; }
@@ -668,11 +668,11 @@ debug {
 // Environment variables
 environment {
     // Wayland and session
-    // DISPLAY ":1"
+    // DISPLAY ":0"
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"
-    WAYLAND_DISPLAY "wayland-1"
+    // WAYLAND_DISPLAY "wayland-1"
     MOZ_ENABLE_WAYLAND "1"
     CLUTTER_BACKEND "wayland"
     GDK_BACKEND "wayland,x11"

@@ -8,3 +8,4 @@
 
 `lnk add --host {HOST} ~/.config/fastfetch ~/.config/fusuma ~/.config/kdeconnect/ ~/.config/qBittorrent/  ~/.config/qt5ct/ ~/.config/qt6ct/ ~/.config/rofi ~/.config/sway ~/.config/swaylock/ ~/.config/swaync ~/.config/Thunar/ ~/.config/nwg-bar/` 
 
+`lnk add --host casa .config/qtile/config.py .config/qtile/icons/ .config/qtile/archive/ .config/qtile/rofi .config/qtile/scripts/ .config/qtile/settings/ .config/qtile/sxhkd/ .config/qtile/themes/ .config/qtile/arcobattery.py .config/qtile/colors.py`  

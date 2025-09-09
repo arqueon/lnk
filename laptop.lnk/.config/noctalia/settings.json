@@ -18,17 +18,16 @@
         "volumeStep": 5
     },
     "bar": {
-        "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.37,
+        "alwaysShowBatteryPercentage": true,
+        "backgroundOpacity": 0.7000000000000001,
         "monitors": [
-            "DP-2",
-            "HDMI-A-1"
+            "eDP-1"
         ],
         "position": "top",
         "showActiveWindowIcon": true,
         "showNetworkStats": false,
         "showWorkspaceLabel": "name",
-        "useDistroLogo": true,
+        "useDistroLogo": false,
         "widgets": {
             "center": [
                 {
@@ -109,8 +108,7 @@
         "backgroundOpacity": 1,
         "exclusive": false,
         "monitors": [
-            "HDMI-A-1",
-            "DP-2"
+            "eDP-1"
         ]
     },
     "general": {
@@ -133,7 +131,7 @@
         "useFahrenheit": false
     },
     "matugen": {
-        "enableUserTemplates": false,
+        "enableUserTemplates": true,
         "foot": false,
         "fuzzel": false,
         "ghostty": false,
@@ -159,7 +157,7 @@
     "notifications": {
         "doNotDisturb": false,
         "monitors": [
-            "HDMI-A-1"
+            "eDP-1"
         ]
     },
     "screenRecorder": {
@@ -183,21 +181,21 @@
         ]
     },
     "wallpaper": {
-        "directory": "/home/ruben/.config/variety/Favorites/",
-        "enableMultiMonitorDirectories": true,
+        "directory": "/home/ruben/.config/variety/Favorites",
+        "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
         "fillMode": "crop",
         "monitors": [
             {
-                "directory": "/home/ruben/.config/variety/Favorites/",
-                "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//anime-girl-umbrella.png"
+                "directory": "/home/ruben/.config/variety/Favorites",
+                "name": "eDP-1",
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-c87a16ab2c42e7f0f1ec8c0404eaaf46.jpg"
             },
             {
-                "directory": "/home/ruben/.config/variety/Favorites/",
+                "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//cajon-del-maipu-4.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/kanji-with-blobs_00_1920x1080.png"
             }
         ],
         "randomEnabled": true,

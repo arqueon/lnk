@@ -109,13 +109,13 @@
         "backgroundOpacity": 1,
         "exclusive": false,
         "monitors": [
-            "HDMI-A-1",
-            "DP-2"
+            "DP-2",
+            "HDMI-A-1"
         ]
     },
     "general": {
         "animationSpeed": 1,
-        "avatarImage": "/home/ruben/.face",
+        "avatarImage": "/home/abdel/.face",
         "dimDesktop": false,
         "radiusRatio": 0,
         "showScreenCorners": false
@@ -159,7 +159,7 @@
     "notifications": {
         "doNotDisturb": false,
         "monitors": [
-            "HDMI-A-1"
+            "DP-2"
         ]
     },
     "screenRecorder": {
@@ -183,21 +183,21 @@
         ]
     },
     "wallpaper": {
-        "directory": "/home/ruben/.config/variety/Favorites/",
+        "directory": "/home/abdel/.config/variety/Favorites",
         "enableMultiMonitorDirectories": true,
         "enabled": true,
         "fillColor": "#000000",
         "fillMode": "crop",
         "monitors": [
             {
-                "directory": "/home/ruben/.config/variety/Favorites/",
-                "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//anime-girl-umbrella.png"
+                "directory": "/home/abdel/.config/variety/Favorites",
+                "name": "HDMI-A-1",
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-cf370a530a9e5b5af1b13689b9b70ea5.jpg"
             },
             {
-                "directory": "/home/ruben/.config/variety/Favorites/",
-                "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//cajon-del-maipu-4.jpg"
+                "directory": "/home/abdel/.config/variety/Favorites",
+                "name": "DP-2",
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-cf370a530a9e5b5af1b13689b9b70ea5.jpg"
             }
         ],
         "randomEnabled": true,
