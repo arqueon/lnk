@@ -39,6 +39,7 @@
 .config/qtile/sxhkd
 .config/qtile/themes
 .config/rofi
+.config/rofi/config.rasi
 .config/starship.toml
 .config/sway
 .config/swayidle/config
