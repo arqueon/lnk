@@ -263,7 +263,6 @@
 .config/qtile/themes/gruvbox-theme.txt
 .config/qtile/themes/manjaro-theme.txt
 .config/qtile/themes/nord-theme.txt
-.config/rofi/catppuccin-lavrent-mocha.rasi
 .config/rofi/config.rasi
 .config/starship.toml
 .config/sway/cheatsheet.md
