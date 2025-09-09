@@ -5,7 +5,7 @@
         "pinnedExecs": [
         ],
         "position": "top_center",
-        "useApp2Unit": true
+        "useApp2Unit": false
     },
     "audio": {
         "cavaFrameRate": 60,
@@ -32,7 +32,8 @@
         "widgets": {
             "center": [
                 {
-                    "id": "Workspace"
+                    "id": "Workspace",
+                    "labelMode": "name"
                 },
                 {
                     "id": "KeepAwake"
@@ -47,13 +48,17 @@
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
                 },
                 {
-                    "id": "SystemMonitor"
+                    "id": "SystemMonitor",
+                    "showNetworkStats": false
                 },
                 {
                     "id": "Taskbar"
                 },
                 {
-                    "id": "MediaMini"
+                    "id": "MediaMini",
+                    "showAlbumArt": true,
+                    "showVisualizer": true,
+                    "visualizerType": "linear"
                 }
             ],
             "right": [
@@ -64,12 +69,14 @@
                     "id": "Tray"
                 },
                 {
+                    "alwaysShowPercentage": false,
                     "id": "Volume"
                 },
                 {
                     "id": "Microphone"
                 },
                 {
+                    "alwaysShowPercentage": false,
                     "id": "Brightness"
                 },
                 {
@@ -82,13 +89,20 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
-                    "id": "NotificationHistory"
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
                 },
                 {
-                    "id": "Clock"
+                    "id": "Clock",
+                    "reverseDayMonth": false,
+                    "showDate": true,
+                    "showSeconds": false,
+                    "use12HourClock": false
                 },
                 {
-                    "id": "SidePanelToggle"
+                    "id": "SidePanelToggle",
+                    "useDistroLogo": true
                 },
                 {
                     "id": "PowerToggle"
@@ -106,11 +120,9 @@
     },
     "dock": {
         "autoHide": true,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.75,
         "exclusive": false,
         "monitors": [
-            "HDMI-A-1",
-            "DP-2"
         ]
     },
     "general": {
@@ -158,6 +170,7 @@
     },
     "notifications": {
         "doNotDisturb": false,
+        "lastSeenTs": 1757364942000,
         "monitors": [
             "HDMI-A-1"
         ]
