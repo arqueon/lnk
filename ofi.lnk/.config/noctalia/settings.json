@@ -49,13 +49,6 @@
                 },
                 {
                     "id": "SystemMonitor",
-<<<<<<< HEAD
-=======
-                    "showCpuTemp": true,
-                    "showCpuUsage": true,
-                    "showMemoryAsPercent": true,
-                    "showMemoryUsage": true,
->>>>>>> 27b79367efe0535f30d6114a32d6431e3838d90f
                     "showNetworkStats": false
                 },
                 {
@@ -76,11 +69,7 @@
                     "id": "Tray"
                 },
                 {
-<<<<<<< HEAD
                     "alwaysShowPercentage": false,
-=======
-                    "alwaysShowPercentage": true,
->>>>>>> 27b79367efe0535f30d6114a32d6431e3838d90f
                     "id": "Volume"
                 },
                 {
@@ -106,11 +95,7 @@
                 },
                 {
                     "id": "Clock",
-<<<<<<< HEAD
                     "reverseDayMonth": false,
-=======
-                    "reverseDayMonth": true,
->>>>>>> 27b79367efe0535f30d6114a32d6431e3838d90f
                     "showDate": true,
                     "showSeconds": false,
                     "use12HourClock": false
@@ -185,11 +170,7 @@
     },
     "notifications": {
         "doNotDisturb": false,
-<<<<<<< HEAD
-        "lastSeenTs": 1757364942000,
-=======
-        "lastSeenTs": 1757427038000,
->>>>>>> 27b79367efe0535f30d6114a32d6431e3838d90f
+        "lastSeenTs": 1757466710000,
         "monitors": [
             "HDMI-A-1"
         ]

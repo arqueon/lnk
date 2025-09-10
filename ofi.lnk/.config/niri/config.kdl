@@ -18,13 +18,13 @@ input {
         // dwt
         // dwtp
         // natural-scroll
-        accel-speed 0.6
+        accel-speed 0.5
         accel-profile "adaptive"
     }
 
     mouse {
         // natural-scroll
-        accel-speed 0.6
+        accel-speed 0.5
         accel-profile "adaptive"
     }
 
