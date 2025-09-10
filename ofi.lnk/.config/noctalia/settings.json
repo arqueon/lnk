@@ -49,10 +49,13 @@
                 },
                 {
                     "id": "SystemMonitor",
+<<<<<<< HEAD
+=======
                     "showCpuTemp": true,
                     "showCpuUsage": true,
                     "showMemoryAsPercent": true,
                     "showMemoryUsage": true,
+>>>>>>> 27b79367efe0535f30d6114a32d6431e3838d90f
                     "showNetworkStats": false
                 },
                 {
@@ -73,7 +76,11 @@
                     "id": "Tray"
                 },
                 {
+<<<<<<< HEAD
+                    "alwaysShowPercentage": false,
+=======
                     "alwaysShowPercentage": true,
+>>>>>>> 27b79367efe0535f30d6114a32d6431e3838d90f
                     "id": "Volume"
                 },
                 {
@@ -99,7 +106,11 @@
                 },
                 {
                     "id": "Clock",
+<<<<<<< HEAD
+                    "reverseDayMonth": false,
+=======
                     "reverseDayMonth": true,
+>>>>>>> 27b79367efe0535f30d6114a32d6431e3838d90f
                     "showDate": true,
                     "showSeconds": false,
                     "use12HourClock": false
@@ -124,7 +135,7 @@
     },
     "dock": {
         "autoHide": true,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.75,
         "exclusive": false,
         "monitors": [
         ]
@@ -174,7 +185,11 @@
     },
     "notifications": {
         "doNotDisturb": false,
-        "lastSeenTs": 1757431550000,
+<<<<<<< HEAD
+        "lastSeenTs": 1757364942000,
+=======
+        "lastSeenTs": 1757427038000,
+>>>>>>> 27b79367efe0535f30d6114a32d6431e3838d90f
         "monitors": [
             "HDMI-A-1"
         ]
@@ -210,12 +225,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//ofymhd32xkt91.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//sakura-blossoms.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//sakura-japan-pixel-art.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//archlinux-black.png"
             }
         ],
         "randomEnabled": true,

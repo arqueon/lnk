@@ -49,10 +49,6 @@
                 },
                 {
                     "id": "SystemMonitor",
-                    "showCpuTemp": true,
-                    "showCpuUsage": true,
-                    "showMemoryAsPercent": true,
-                    "showMemoryUsage": true,
                     "showNetworkStats": false
                 },
                 {
@@ -73,7 +69,7 @@
                     "id": "Tray"
                 },
                 {
-                    "alwaysShowPercentage": true,
+                    "alwaysShowPercentage": false,
                     "id": "Volume"
                 },
                 {
@@ -99,7 +95,7 @@
                 },
                 {
                     "id": "Clock",
-                    "reverseDayMonth": true,
+                    "reverseDayMonth": false,
                     "showDate": true,
                     "showSeconds": false,
                     "use12HourClock": false
@@ -124,11 +120,9 @@
     },
     "dock": {
         "autoHide": true,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.75,
         "exclusive": false,
         "monitors": [
-            "HDMI-A-1",
-            "DP-2"
         ]
     },
     "general": {
@@ -176,6 +170,7 @@
     },
     "notifications": {
         "doNotDisturb": false,
+        "lastSeenTs": 1757466710000,
         "monitors": [
             "HDMI-A-1"
         ]
@@ -211,12 +206,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-0b7619635561a8f8ed078f415390d97c.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wallpaper-auto-rotated-447e6f6b8b1895efc89b5dd5068ab5ae.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-0b7619635561a8f8ed078f415390d97c.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.IrisGarden_EN-US6778843108_UHD.jpg"
             }
         ],
         "randomEnabled": true,
