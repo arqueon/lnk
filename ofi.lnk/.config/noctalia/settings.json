@@ -174,7 +174,7 @@
     },
     "notifications": {
         "doNotDisturb": false,
-        "lastSeenTs": 1757427038000,
+        "lastSeenTs": 1757431550000,
         "monitors": [
             "HDMI-A-1"
         ]
@@ -210,12 +210,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//sakura-blossoms.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//ofymhd32xkt91.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//archlinux-black.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//sakura-japan-pixel-art.jpg"
             }
         ],
         "randomEnabled": true,
