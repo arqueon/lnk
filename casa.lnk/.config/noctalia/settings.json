@@ -41,7 +41,7 @@
             ],
             "left": [
                 {
-                    "icon": "hive",
+                    "icon": "apps-filled",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
@@ -49,6 +49,12 @@
                 },
                 {
                     "id": "SystemMonitor",
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showGpuTemp": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": true,
                     "showNetworkStats": false
                 },
                 {
@@ -73,6 +79,7 @@
                     "id": "Volume"
                 },
                 {
+                    "alwaysShowPercentage": false,
                     "id": "Microphone"
                 },
                 {
@@ -81,9 +88,6 @@
                 },
                 {
                     "id": "NightLight"
-                },
-                {
-                    "id": "ArchUpdater"
                 },
                 {
                     "id": "ScreenRecorderIndicator"
@@ -134,7 +138,7 @@
     },
     "hooks": {
         "darkModeChange": "",
-        "enabled": false,
+        "enabled": true,
         "wallpaperChange": ""
     },
     "location": {
@@ -157,20 +161,21 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": true,
+        "bluetoothEnabled": false,
         "wifiEnabled": true
     },
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
         "enabled": true,
+        "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "nightTemp": "4000"
     },
     "notifications": {
         "doNotDisturb": false,
-        "lastSeenTs": 1757466710000,
+        "lastSeenTs": 1757612733000,
         "monitors": [
             "HDMI-A-1"
         ]
@@ -196,7 +201,6 @@
         ]
     },
     "wallpaper": {
-        "defaultWallpaper": "/etc/xdg/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
         "directory": "/home/ruben/.config/variety/Favorites/",
         "enableMultiMonitorDirectories": true,
         "enabled": true,
@@ -206,12 +210,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallpaper-auto-rotated-447e6f6b8b1895efc89b5dd5068ab5ae.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-d0e03161433303252aae7ad5e480de76.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.IrisGarden_EN-US6778843108_UHD.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-d0e03161433303252aae7ad5e480de76.jpg"
             }
         ],
         "randomEnabled": true,
