@@ -48,6 +48,12 @@
                 },
                 {
                     "id": "SystemMonitor",
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showGpuTemp": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": true,
                     "showNetworkStats": false
                 },
                 {
@@ -72,6 +78,7 @@
                     "id": "Volume"
                 },
                 {
+                    "alwaysShowPercentage": false,
                     "id": "Microphone"
                 },
                 {
@@ -82,10 +89,15 @@
                     "id": "NightLight"
                 },
                 {
-                    "id": "ArchUpdater"
+                    "id": "ScreenRecorderIndicator"
                 },
                 {
-                    "id": "ScreenRecorderIndicator"
+                    "id": "PowerProfile"
+                },
+                {
+                    "alwaysShowPercentage": true,
+                    "id": "Battery",
+                    "warningThreshold": 30
                 },
                 {
                     "hideWhenZero": true,
@@ -101,7 +113,7 @@
                 },
                 {
                     "id": "SidePanelToggle",
-                    "useDistroLogo": true
+                    "useDistroLogo": false
                 },
                 {
                     "id": "PowerToggle"
@@ -164,12 +176,14 @@
         "autoSchedule": true,
         "dayTemp": "6500",
         "enabled": true,
+        "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "nightTemp": "4000"
     },
     "notifications": {
         "doNotDisturb": false,
+        "lastSeenTs": 0,
         "monitors": [
             "eDP-1"
         ]
@@ -204,12 +218,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-484296e3c7baa0a476ca7faaf79e17e9.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/7_BABYMETAL_2000_GLASTONBURY.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites/kanji-with-blobs_00_1920x1080.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/Clearday.jpg"
             }
         ],
         "randomEnabled": true,
