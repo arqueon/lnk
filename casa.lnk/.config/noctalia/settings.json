@@ -175,7 +175,7 @@
     },
     "notifications": {
         "doNotDisturb": false,
-        "lastSeenTs": 1757612733000,
+        "lastSeenTs": 1757619730000,
         "monitors": [
             "HDMI-A-1"
         ]
@@ -210,12 +210,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-d0e03161433303252aae7ad5e480de76.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-4e3c88912e62c57d553282d853873c89.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-d0e03161433303252aae7ad5e480de76.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-4e3c88912e62c57d553282d853873c89.jpg"
             }
         ],
         "randomEnabled": true,
