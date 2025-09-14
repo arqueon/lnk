@@ -65,7 +65,7 @@ workspace "media" {
 output "DP-2" {
     // off
     mode "3440x1440@165.001"
-    scale 1.0
+    scale 1.1
     // transform "90"
     position x=1920 y=0
 }
@@ -215,6 +215,8 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
+
+// xwayland
 xwayland-satellite {
     // off
     path "xwayland-satellite"
@@ -455,6 +457,7 @@ window-rule {
     match title=r#"^Progress$"#
     match title=r#"^(progress)$"#
     match app-id="^xdm-app$"
+    match app-id="^com.github.hluk.copyq$"
     open-floating true
 }
 
@@ -693,10 +696,10 @@ environment {
     GTK_THEME "catppuccin-mocha-blue-standard+default"
     XCURSOR_THEME "Bibata-Modern-Ice"
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
-    QT_QPA_PLATFORMTHEME "gtk3"
-    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-    //QT_QPA_PLATFORMTHEME "qt5ct"
-    //QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+    // QT_QPA_PLATFORMTHEME "gtk3"
+    // QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+    QT_QPA_PLATFORMTHEME "qt5ct"
+    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 
 
     // Application specific
