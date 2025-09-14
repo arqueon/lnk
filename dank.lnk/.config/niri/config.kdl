@@ -184,7 +184,7 @@ layer-rule {
 // Startup applications
 // spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "swww-daemon"
-spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
+// spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "~/.config/niri/waybar.sh"
 // spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-at-startup "dms" "run"
