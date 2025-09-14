@@ -4,6 +4,7 @@
 .config/kitty/kitty.conf
 .config/niri/config.kdl
 .config/niri/screenshot_swappy.sh
+.config/niriswitcher/config.toml
 .config/qt5ct/qt5ct.conf
 .config/qt6ct/qt6ct.conf
 .config/swayidle/config
