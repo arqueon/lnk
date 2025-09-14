@@ -7,5 +7,6 @@
 .config/qt5ct/qt5ct.conf
 .config/qt6ct/qt6ct.conf
 .config/swayidle/config
+.config/variety/variety.conf
 .config/xsettingsd/xsettingsd.conf
 .vdirsyncer/config
