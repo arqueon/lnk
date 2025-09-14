@@ -65,7 +65,7 @@ workspace "media" {
 output "DP-2" {
     // off
     mode "3440x1440@165.001"
-    scale 1.17
+    scale 1.22
     // transform "90"
     position x=1920 y=0
 }
