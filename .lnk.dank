@@ -1,2 +1,3 @@
 .config/niri/config.kdl
 .config/niri/screenshot_swappy.sh
+.config/swayidle/config
