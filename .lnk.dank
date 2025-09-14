@@ -3,4 +3,5 @@
 .config/niri/config.kdl
 .config/niri/screenshot_swappy.sh
 .config/swayidle/config
+.config/xsettingsd/xsettingsd.conf
 .vdirsyncer/config
