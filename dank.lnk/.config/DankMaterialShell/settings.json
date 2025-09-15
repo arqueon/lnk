@@ -115,8 +115,8 @@
   "topBarNoBackground": false,
   "lockScreenShowPowerActions": true,
   "hideBrightnessSlider": false,
-  "notificationTimeoutLow": 5000,
-  "notificationTimeoutNormal": 5000,
+  "notificationTimeoutLow": 10000,
+  "notificationTimeoutNormal": 15000,
   "notificationTimeoutCritical": 0,
   "screenPreferences": {}
 }
