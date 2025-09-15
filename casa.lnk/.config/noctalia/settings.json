@@ -134,11 +134,11 @@
         ]
     },
     "general": {
-        "animationSpeed": 1,
+        "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
         "radiusRatio": 0,
-        "screenRadiusRatio": 1,
+        "screenRadiusRatio": 0.78,
         "showScreenCorners": false
     },
     "hooks": {
@@ -181,7 +181,7 @@
     "notifications": {
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1757909626000,
+        "lastSeenTs": 1757963391000,
         "lowUrgencyDuration": 3,
         "monitors": [
             "HDMI-A-1"
@@ -218,12 +218,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//tokyo-tower-4k-4v.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//tzmxap01ahi91.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wall-04.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//flower.jpg"
             }
         ],
         "randomEnabled": true,
