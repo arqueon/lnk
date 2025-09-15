@@ -45,7 +45,7 @@
             ],
             "left": [
                 {
-                    "icon": "apps-filled",
+                    "icon": "hive",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
@@ -143,7 +143,7 @@
     },
     "hooks": {
         "darkModeChange": "",
-        "enabled": true,
+        "enabled": false,
         "wallpaperChange": ""
     },
     "location": {
@@ -166,7 +166,7 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": false,
+        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -181,7 +181,7 @@
     "notifications": {
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1757812580000,
+        "lastSeenTs": 1757909626000,
         "lowUrgencyDuration": 3,
         "monitors": [
             "HDMI-A-1"
@@ -218,12 +218,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-vgl568.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//tokyo-tower-4k-4v.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-mddmxy.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wall-04.png"
             }
         ],
         "randomEnabled": true,
