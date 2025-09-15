@@ -45,7 +45,7 @@
             ],
             "left": [
                 {
-                    "icon": "apps-filled",
+                    "icon": "hive",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
@@ -134,16 +134,16 @@
         ]
     },
     "general": {
-        "animationSpeed": 1,
+        "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
         "radiusRatio": 0,
-        "screenRadiusRatio": 1,
+        "screenRadiusRatio": 0.78,
         "showScreenCorners": false
     },
     "hooks": {
         "darkModeChange": "",
-        "enabled": true,
+        "enabled": false,
         "wallpaperChange": ""
     },
     "location": {
@@ -166,7 +166,7 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": false,
+        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -181,7 +181,7 @@
     "notifications": {
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1757812580000,
+        "lastSeenTs": 1757963391000,
         "lowUrgencyDuration": 3,
         "monitors": [
             "HDMI-A-1"
@@ -218,12 +218,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-vgl568.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//tzmxap01ahi91.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-mddmxy.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//flower.jpg"
             }
         ],
         "randomEnabled": true,

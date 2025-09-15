@@ -215,6 +215,8 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
+
+// xwayland
 xwayland-satellite {
     // off
     path "xwayland-satellite"
@@ -455,6 +457,7 @@ window-rule {
     match title=r#"^Progress$"#
     match title=r#"^(progress)$"#
     match app-id="^xdm-app$"
+    match app-id="^com.github.hluk.copyq$"
     open-floating true
 }
 
@@ -504,8 +507,8 @@ binds {
     Mod+Shift+N { spawn "newsflash"; }
 
     // System utility binds
-    Mod+L { spawn "swaylock"; }
-    //Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
+    // Mod+L { spawn "swaylock"; }
+    Mod+L { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Mod+Shift+I { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
     //Mod+X { spawn "nwg-bar"; }
@@ -693,10 +696,10 @@ environment {
     GTK_THEME "catppuccin-mocha-blue-standard+default"
     XCURSOR_THEME "Bibata-Modern-Ice"
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
-    QT_QPA_PLATFORMTHEME "gtk3"
-    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-    //QT_QPA_PLATFORMTHEME "qt5ct"
-    //QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+    // QT_QPA_PLATFORMTHEME "gtk3"
+    // QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+    QT_QPA_PLATFORMTHEME "qt5ct"
+    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 
 
     // Application specific
