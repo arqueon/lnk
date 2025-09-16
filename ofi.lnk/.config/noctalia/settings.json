@@ -134,11 +134,11 @@
         ]
     },
     "general": {
-        "animationSpeed": 1,
+        "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
         "radiusRatio": 0,
-        "screenRadiusRatio": 1,
+        "screenRadiusRatio": 0.78,
         "showScreenCorners": false
     },
     "hooks": {
@@ -179,14 +179,14 @@
         "nightTemp": "4000"
     },
     "notifications": {
-        "criticalUrgencyDuration": 15,
+        "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1757909626000,
-        "lowUrgencyDuration": 3,
+        "lastSeenTs": 1757984235000,
+        "lowUrgencyDuration": 15,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 8
+        "normalUrgencyDuration": 20
     },
     "screenRecorder": {
         "audioCodec": "opus",
