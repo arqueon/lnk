@@ -16,7 +16,7 @@ input {
     touchpad {
         tap
         // off
-        dwt
+        // dwt
         // dwtp
         // drag false
         // drag-lock
