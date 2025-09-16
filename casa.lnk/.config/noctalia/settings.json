@@ -179,14 +179,14 @@
         "nightTemp": "4000"
     },
     "notifications": {
-        "criticalUrgencyDuration": 15,
+        "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1757963391000,
-        "lowUrgencyDuration": 3,
+        "lastSeenTs": 1757984235000,
+        "lowUrgencyDuration": 15,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 8
+        "normalUrgencyDuration": 20
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -218,12 +218,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//p7k9fw9d1fka1.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//798919.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//loneliness-in-the-big-city.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wild.png"
             }
         ],
         "randomEnabled": true,
