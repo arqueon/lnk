@@ -5,7 +5,7 @@
         "pinnedExecs": [
         ],
         "position": "top_center",
-        "useApp2Unit": true
+        "useApp2Unit": false
     },
     "audio": {
         "cavaFrameRate": 60,
@@ -32,7 +32,8 @@
         "widgets": {
             "center": [
                 {
-                    "id": "Workspace"
+                    "id": "Workspace",
+                    "labelMode": "name"
                 },
                 {
                     "id": "KeepAwake"
@@ -47,13 +48,23 @@
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
                 },
                 {
-                    "id": "SystemMonitor"
+                    "id": "SystemMonitor",
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showGpuTemp": false,
+                    "showMemoryAsPercent": true,
+                    "showMemoryUsage": true,
+                    "showNetworkStats": false
                 },
                 {
                     "id": "Taskbar"
                 },
                 {
-                    "id": "MediaMini"
+                    "id": "MediaMini",
+                    "showAlbumArt": true,
+                    "showVisualizer": true,
+                    "visualizerType": "linear"
                 }
             ],
             "right": [
@@ -64,31 +75,38 @@
                     "id": "Tray"
                 },
                 {
+                    "alwaysShowPercentage": false,
                     "id": "Volume"
                 },
                 {
+                    "alwaysShowPercentage": false,
                     "id": "Microphone"
                 },
                 {
+                    "alwaysShowPercentage": false,
                     "id": "Brightness"
                 },
                 {
                     "id": "NightLight"
                 },
                 {
-                    "id": "ArchUpdater"
-                },
-                {
                     "id": "ScreenRecorderIndicator"
                 },
                 {
-                    "id": "NotificationHistory"
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
                 },
                 {
-                    "id": "Clock"
+                    "id": "Clock",
+                    "reverseDayMonth": false,
+                    "showDate": true,
+                    "showSeconds": false,
+                    "use12HourClock": false
                 },
                 {
-                    "id": "SidePanelToggle"
+                    "id": "SidePanelToggle",
+                    "useDistroLogo": true
                 },
                 {
                     "id": "PowerToggle"
@@ -152,12 +170,14 @@
         "autoSchedule": true,
         "dayTemp": "6500",
         "enabled": true,
+        "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "nightTemp": "4000"
     },
     "notifications": {
         "doNotDisturb": false,
+        "lastSeenTs": 0,
         "monitors": [
             "DP-2"
         ]
@@ -192,12 +212,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-cf370a530a9e5b5af1b13689b9b70ea5.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-8d6fb72c23249dfdeffcff840805cec0.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-cf370a530a9e5b5af1b13689b9b70ea5.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-8d6fb72c23249dfdeffcff840805cec0.jpg"
             }
         ],
         "randomEnabled": true,
