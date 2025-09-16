@@ -5,7 +5,7 @@
         "pinnedExecs": [
         ],
         "position": "top_center",
-        "useApp2Unit": true
+        "useApp2Unit": false
     },
     "audio": {
         "cavaFrameRate": 60,
@@ -15,11 +15,14 @@
         "showMiniplayerAlbumArt": true,
         "showMiniplayerCava": true,
         "visualizerType": "linear",
-        "volumeStep": 5
+        "volumeStep": 2
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0.37,
+        "floating": false,
+        "marginHorizontal": 0.25,
+        "marginVertical": 0.25,
         "monitors": [
             "DP-2",
             "HDMI-A-1"
@@ -32,7 +35,9 @@
         "widgets": {
             "center": [
                 {
-                    "id": "Workspace"
+                    "hideUnoccupied": false,
+                    "id": "Workspace",
+                    "labelMode": "name"
                 },
                 {
                     "id": "KeepAwake"
@@ -44,16 +49,28 @@
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
-                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
+                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
+                    "textCommand": "",
+                    "textIntervalMs": 3000
                 },
                 {
-                    "id": "SystemMonitor"
+                    "id": "SystemMonitor",
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showGpuTemp": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": true,
+                    "showNetworkStats": false
                 },
                 {
                     "id": "Taskbar"
                 },
                 {
-                    "id": "MediaMini"
+                    "id": "MediaMini",
+                    "showAlbumArt": true,
+                    "showVisualizer": true,
+                    "visualizerType": "linear"
                 }
             ],
             "right": [
@@ -64,31 +81,40 @@
                     "id": "Tray"
                 },
                 {
+                    "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
                     "id": "Volume"
                 },
                 {
+                    "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
                     "id": "Microphone"
                 },
                 {
+                    "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
                     "id": "Brightness"
                 },
                 {
                     "id": "NightLight"
                 },
                 {
-                    "id": "ArchUpdater"
-                },
-                {
                     "id": "ScreenRecorderIndicator"
                 },
                 {
-                    "id": "NotificationHistory"
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
                 },
                 {
-                    "id": "Clock"
+                    "displayFormat": "time-date",
+                    "id": "Clock",
+                    "reverseDayMonth": false,
+                    "use12HourClock": false
                 },
                 {
-                    "id": "SidePanelToggle"
+                    "id": "SidePanelToggle",
+                    "useDistroLogo": true
                 },
                 {
                     "id": "PowerToggle"
@@ -106,18 +132,19 @@
     },
     "dock": {
         "autoHide": true,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.75,
         "exclusive": false,
+        "floatingRatio": 1,
         "monitors": [
-            "DP-2",
-            "HDMI-A-1"
         ]
     },
     "general": {
-        "animationSpeed": 1,
-        "avatarImage": "/home/abdel/.face",
+        "animationSpeed": 1.2400000000000002,
+        "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
+        "forceBlackScreenCorners": false,
         "radiusRatio": 0,
+        "screenRadiusRatio": 0.78,
         "showScreenCorners": false
     },
     "hooks": {
@@ -140,6 +167,7 @@
         "gtk3": true,
         "gtk4": true,
         "kitty": true,
+        "pywalfox": false,
         "qt5": true,
         "qt6": true,
         "vesktop": false
@@ -152,15 +180,20 @@
         "autoSchedule": true,
         "dayTemp": "6500",
         "enabled": true,
+        "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "nightTemp": "4000"
     },
     "notifications": {
+        "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
+        "lastSeenTs": 1758047279000,
+        "lowUrgencyDuration": 30,
         "monitors": [
             "DP-2"
         ]
+        "normalUrgencyDuration": 30
     },
     "screenRecorder": {
         "audioCodec": "opus",

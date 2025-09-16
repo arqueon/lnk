@@ -15,17 +15,37 @@ input {
 
     touchpad {
         tap
+        // off
         dwt
         // dwtp
+        // drag false
+        // drag-lock
         // natural-scroll
-        accel-speed 0.4
+        accel-speed 0.2
         accel-profile "adaptive"
+        // scroll-factor 1.0
+        scroll-factor vertical=2.0 horizontal=-2.0
+        // scroll-method "two-finger"
+        // scroll-button 273
+        // scroll-button-lock
+        // tap-button-map "left-middle-right"
+        // click-method "clickfinger"
+        // left-handed
+        // disabled-on-external-mouse
+        // middle-emulation
     }
 
     mouse {
         // natural-scroll
-        accel-speed 0.4
+        accel-speed 0.2
         accel-profile "adaptive"
+        // scroll-factor 1.0
+        scroll-factor vertical=2.0 horizontal=-2.0
+        // scroll-method "no-scroll"
+        // scroll-button 273
+        // scroll-button-lock
+        // left-handed
+        // middle-emulation
     }
 
     // warp-mouse-to-focus
@@ -81,8 +101,8 @@ workspace "media" {
 
 // Switch events
 switch-events {
-    //lid-close { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }    
-    lid-close { spawn "swaylock"; }
+    lid-close { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }    
+    // lid-close { spawn "swaylock"; }
 }
 
 
@@ -215,6 +235,8 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
+
+// xwayland
 xwayland-satellite {
     // off
     path "xwayland-satellite"
@@ -455,6 +477,7 @@ window-rule {
     match title=r#"^Progress$"#
     match title=r#"^(progress)$"#
     match app-id="^xdm-app$"
+    match app-id="^com.github.hluk.copyq$"
     open-floating true
 }
 
@@ -504,8 +527,8 @@ binds {
     Mod+Shift+N { spawn "newsflash"; }
 
     // System utility binds
-    Mod+L { spawn "swaylock"; }
-    //Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
+    // Mod+L { spawn "swaylock"; }
+    Mod+L { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Mod+Shift+I { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
     //Mod+X { spawn "nwg-bar"; }
@@ -669,7 +692,7 @@ debug {
 // Environment variables
 environment {
     // Wayland and session
-    // DISPLAY ":0"
+    // DISPLAY ":1"
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"
@@ -693,10 +716,10 @@ environment {
     GTK_THEME "catppuccin-mocha-blue-standard+default"
     XCURSOR_THEME "Bibata-Modern-Ice"
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
-    QT_QPA_PLATFORMTHEME "gtk3"
-    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-    //QT_QPA_PLATFORMTHEME "qt5ct"
-    //QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+    // QT_QPA_PLATFORMTHEME "gtk3"
+    // QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+    QT_QPA_PLATFORMTHEME "qt5ct"
+    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 
 
     // Application specific

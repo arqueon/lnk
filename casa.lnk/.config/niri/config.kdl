@@ -15,8 +15,8 @@ input {
 
     touchpad {
         tap
-         // off
-        // dwt
+        // off
+        dwt
         // dwtp
         // drag false
         // drag-lock
@@ -101,8 +101,8 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    //lid-close { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }    
-    lid-close { spawn "swaylock"; }
+    lid-close { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }    
+    // lid-close { spawn "swaylock"; }
 }
 
 

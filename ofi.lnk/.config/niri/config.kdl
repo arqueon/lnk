@@ -15,17 +15,37 @@ input {
 
     touchpad {
         tap
+         // off
         // dwt
         // dwtp
+        // drag false
+        // drag-lock
         // natural-scroll
-        accel-speed 0.5
+        accel-speed 0.2
         accel-profile "adaptive"
+        // scroll-factor 1.0
+        scroll-factor vertical=2.0 horizontal=-2.0
+        // scroll-method "two-finger"
+        // scroll-button 273
+        // scroll-button-lock
+        // tap-button-map "left-middle-right"
+        // click-method "clickfinger"
+        // left-handed
+        // disabled-on-external-mouse
+        // middle-emulation
     }
 
     mouse {
         // natural-scroll
-        accel-speed 0.5
+        accel-speed 0.2
         accel-profile "adaptive"
+        // scroll-factor 1.0
+        scroll-factor vertical=2.0 horizontal=-2.0
+        // scroll-method "no-scroll"
+        // scroll-button 273
+        // scroll-button-lock
+        // left-handed
+        // middle-emulation
     }
 
     // warp-mouse-to-focus
@@ -204,6 +224,8 @@ spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 spawn-at-startup "logseq"
+// spawn-sh-at-startup "env DISPLAY=:2 logseq"
+// spawn-at-startup "logseq-desktop-electron"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -672,7 +694,7 @@ debug {
 // Environment variables
 environment {
     // Wayland and session
-    // DISPLAY ":0"
+    // DISPLAY ":1"
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"
