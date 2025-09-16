@@ -20,9 +20,6 @@
     "bar": {
         "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0.37,
-        "floating": false,
-        "marginHorizontal": 0.25,
-        "marginVertical": 0.25,
         "monitors": [
         ],
         "position": "top",
@@ -132,7 +129,6 @@
         "autoHide": true,
         "backgroundOpacity": 0.75,
         "exclusive": false,
-        "floatingRatio": 1,
         "monitors": [
         ]
     },
@@ -140,9 +136,7 @@
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
-        "forceBlackScreenCorners": false,
         "radiusRatio": 0,
-        "screenRadiusRatio": 0.78,
         "showScreenCorners": false
     },
     "hooks": {
@@ -165,7 +159,6 @@
         "gtk3": true,
         "gtk4": true,
         "kitty": true,
-        "pywalfox": false,
         "qt5": true,
         "qt6": true,
         "vesktop": false
@@ -184,14 +177,11 @@
         "nightTemp": "4000"
     },
     "notifications": {
-        "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758047279000,
-        "lowUrgencyDuration": 30,
+        "lastSeenTs": 1758050278000,
         "monitors": [
             "HDMI-A-1"
-        ],
-        "normalUrgencyDuration": 30
+        ]
     },
     "screenRecorder": {
         "audioCodec": "opus",
