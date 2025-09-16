@@ -15,11 +15,14 @@
         "showMiniplayerAlbumArt": true,
         "showMiniplayerCava": true,
         "visualizerType": "linear",
-        "volumeStep": 5
+        "volumeStep": 2
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0.37,
+        "floating": false,
+        "marginHorizontal": 0.25,
+        "marginVertical": 0.25,
         "monitors": [
             "DP-2",
             "HDMI-A-1"
@@ -32,6 +35,7 @@
         "widgets": {
             "center": [
                 {
+                    "hideUnoccupied": false,
                     "id": "Workspace",
                     "labelMode": "name"
                 },
@@ -45,7 +49,9 @@
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
-                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
+                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
+                    "textCommand": "",
+                    "textIntervalMs": 3000
                 },
                 {
                     "id": "SystemMonitor",
@@ -53,7 +59,7 @@
                     "showCpuUsage": true,
                     "showDiskUsage": false,
                     "showGpuTemp": false,
-                    "showMemoryAsPercent": true,
+                    "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
                     "showNetworkStats": false
                 },
@@ -76,14 +82,17 @@
                 },
                 {
                     "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
                     "id": "Volume"
                 },
                 {
                     "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
                     "id": "Microphone"
                 },
                 {
                     "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
                     "id": "Brightness"
                 },
                 {
@@ -98,10 +107,9 @@
                     "showUnreadBadge": true
                 },
                 {
+                    "displayFormat": "time-date",
                     "id": "Clock",
                     "reverseDayMonth": false,
-                    "showDate": true,
-                    "showSeconds": false,
                     "use12HourClock": false
                 },
                 {
@@ -124,18 +132,19 @@
     },
     "dock": {
         "autoHide": true,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.75,
         "exclusive": false,
+        "floatingRatio": 1,
         "monitors": [
-            "DP-2",
-            "HDMI-A-1"
         ]
     },
     "general": {
-        "animationSpeed": 1,
-        "avatarImage": "/home/abdel/.face",
+        "animationSpeed": 1.2400000000000002,
+        "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
+        "forceBlackScreenCorners": false,
         "radiusRatio": 0,
+        "screenRadiusRatio": 0.78,
         "showScreenCorners": false
     },
     "hooks": {
@@ -158,6 +167,7 @@
         "gtk3": true,
         "gtk4": true,
         "kitty": true,
+        "pywalfox": false,
         "qt5": true,
         "qt6": true,
         "vesktop": false
@@ -176,11 +186,14 @@
         "nightTemp": "4000"
     },
     "notifications": {
+        "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 0,
+        "lastSeenTs": 1758047279000,
+        "lowUrgencyDuration": 30,
         "monitors": [
             "DP-2"
         ]
+        "normalUrgencyDuration": 30
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -212,12 +225,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-8d6fb72c23249dfdeffcff840805cec0.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-cf370a530a9e5b5af1b13689b9b70ea5.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-8d6fb72c23249dfdeffcff840805cec0.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-cf370a530a9e5b5af1b13689b9b70ea5.jpg"
             }
         ],
         "randomEnabled": true,

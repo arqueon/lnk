@@ -15,11 +15,14 @@
         "showMiniplayerAlbumArt": true,
         "showMiniplayerCava": true,
         "visualizerType": "linear",
-        "volumeStep": 5
+        "volumeStep": 2
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0.37,
+        "floating": false,
+        "marginHorizontal": 0.25,
+        "marginVertical": 0.25,
         "monitors": [
             "eDP-1"
         ],
@@ -31,6 +34,7 @@
         "widgets": {
             "center": [
                 {
+                    "hideUnoccupied": false,
                     "id": "Workspace",
                     "labelMode": "name"
                 },
@@ -44,10 +48,18 @@
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
-                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n"
+                    "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
+                    "textCommand": "",
+                    "textIntervalMs": 3000
                 },
                 {
                     "id": "SystemMonitor",
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showGpuTemp": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": true,
                     "showNetworkStats": false
                 },
                 {
@@ -69,23 +81,32 @@
                 },
                 {
                     "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
                     "id": "Volume"
                 },
                 {
+                    "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
                     "id": "Microphone"
                 },
                 {
                     "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
                     "id": "Brightness"
                 },
                 {
                     "id": "NightLight"
                 },
                 {
-                    "id": "ArchUpdater"
+                    "id": "ScreenRecorderIndicator"
                 },
                 {
-                    "id": "ScreenRecorderIndicator"
+                    "id": "PowerProfile"
+                },
+                {
+                    "alwaysShowPercentage": true,
+                    "id": "Battery",
+                    "warningThreshold": 30
                 },
                 {
                     "hideWhenZero": true,
@@ -93,15 +114,14 @@
                     "showUnreadBadge": true
                 },
                 {
+                    "displayFormat": "time-date",
                     "id": "Clock",
                     "reverseDayMonth": false,
-                    "showDate": true,
-                    "showSeconds": false,
                     "use12HourClock": false
                 },
                 {
                     "id": "SidePanelToggle",
-                    "useDistroLogo": true
+                    "useDistroLogo": false
                 },
                 {
                     "id": "PowerToggle"
@@ -121,15 +141,17 @@
         "autoHide": true,
         "backgroundOpacity": 0.75,
         "exclusive": false,
+        "floatingRatio": 1,
         "monitors": [
-            "eDP-1"
         ]
     },
     "general": {
-        "animationSpeed": 1,
+        "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
+        "forceBlackScreenCorners": false,
         "radiusRatio": 0,
+        "screenRadiusRatio": 0.78,
         "showScreenCorners": false
     },
     "hooks": {
@@ -152,6 +174,7 @@
         "gtk3": true,
         "gtk4": true,
         "kitty": true,
+        "pywalfox": false,
         "qt5": true,
         "qt6": true,
         "vesktop": false
@@ -164,15 +187,20 @@
         "autoSchedule": true,
         "dayTemp": "6500",
         "enabled": true,
+        "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "nightTemp": "4000"
     },
     "notifications": {
+        "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
+        "lastSeenTs": 1758047279000,
+        "lowUrgencyDuration": 30,
         "monitors": [
-            "eDP-1"
-        ]
+            "HDMI-A-1"
+        ],
+        "normalUrgencyDuration": 30
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -195,7 +223,7 @@
         ]
     },
     "wallpaper": {
-        "directory": "/home/ruben/.config/variety/Favorites",
+        "directory": "/home/ruben/.config/variety/Favorites/",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
@@ -204,12 +232,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-484296e3c7baa0a476ca7faaf79e17e9.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/7_BABYMETAL_2000_GLASTONBURY.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites/kanji-with-blobs_00_1920x1080.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/Clearday.jpg"
             }
         ],
         "randomEnabled": true,
