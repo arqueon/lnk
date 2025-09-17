@@ -188,7 +188,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758077872000,
+        "lastSeenTs": 1758080805000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -229,12 +229,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.Misotsuchi2025_EN-US8130053956_UHD.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-15fbc8696ba76f58c8b4cc8fed926c3c.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.IrisGarden_EN-US6778843108_UHD.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-15fbc8696ba76f58c8b4cc8fed926c3c.jpg"
             }
         ],
         "randomEnabled": true,
