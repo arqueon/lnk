@@ -85,7 +85,7 @@ workspace "media" {
 output "DP-2" {
     // off
     mode "3440x1440@165.001"
-    scale 1.22
+    scale 1.18
     // transform "90"
     position x=1920 y=0
 }
@@ -101,7 +101,7 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen toggle"; }    
+    lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }    
     // lid-close { spawn "swaylock"; }
 }
 
@@ -202,19 +202,21 @@ layer-rule {
 
 
 // Startup applications
-spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "swww-daemon"
 // spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "~/.config/niri/waybar.sh"
-spawn-sh-at-startup "qs -c noctalia-shell"
-spawn-at-startup "swayosd-server"
+// spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-at-startup "dms" "run"
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+// spawn-at-startup "swayosd-server"
 // spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
-spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
+// spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "swayidle"
 spawn-at-startup "blueman-applet"
 // spawn-at-startup "/opt/ExpanDrive/expandrive" "--autorun"
-spawn-sh-at-startup "~/Applications/ExpanDrive-2025.06.20_76b30d38989b8a7085b991b05018a8e0.AppImage"
+spawn-sh-at-startup "~/Applications/ExpanDrive.AppImage"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "kdeconnectd"
 spawn-at-startup "kdeconnect-indicator"
@@ -224,9 +226,9 @@ spawn-at-startup "qbittorrent"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
-// spawn-at-startup "logseq"
+spawn-at-startup "logseq"
 // spawn-sh-at-startup "env DISPLAY=:2 logseq"
-spawn-at-startup "logseq-desktop-electron"
+// spawn-at-startup "logseq-desktop-electron"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -285,7 +287,7 @@ animations {
 
 // Cursor configuration
 cursor {
-    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-theme "Colloid"
     xcursor-size 24
     hide-when-typing
     hide-after-inactive-ms 1000
@@ -509,7 +511,10 @@ binds {
     Mod+Ctrl+Shift+S { toggle-keyboard-shortcuts-inhibit; }
 
     // Application launchers and binds
-    Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    // Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+Space hotkey-overlay-title="Application Launcher" { 
+        spawn "dms" "ipc" "call" "spotlight" "toggle"; 
+    }
     Mod+D { spawn "anyrun"; }
     Mod+Return { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
@@ -519,7 +524,7 @@ binds {
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
     // Mod+F4 { spawn-sh "env DISPLAY=:2 logseq"; }
-    Mod+F4 { spawn "logseq-desktop-electron"; }
+    Mod+F4 { spawn-sh "logseq"; }
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "doublecmd"; }
     Mod+F7 { spawn "virt-manager"; }
@@ -531,22 +536,39 @@ binds {
     Mod+Shift+N { spawn "newsflash"; }
 
     // System utility binds
-    // Mod+L { spawn "swaylock"; }
-    Mod+L { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
-    Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
-    Mod+Shift+I { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
-    //Mod+X { spawn "nwg-bar"; }
-    Mod+X { spawn-sh "qs -c noctalia-shell ipc call powerPanel toggle"; }
-    Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
-    Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
-    Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
+    //Mod+L { spawn "swaylock"; }
+    Super+L hotkey-overlay-title="Lock Screen" { 
+        spawn "dms" "ipc" "call" "lock" "lock"; 
+    }
+    // Mod+L { spawn "qs" "ipc" "call" "lockScreen" "toggle"; }
+    // Mod+Shift+I { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
+    // Mod+X { spawn "nwg-bar"; }
+    // Mod+X { spawn-sh "qs -c noctalia-shell ipc call powerPanel toggle"; }
+    Mod+X hotkey-overlay-title="Power Menu" {
+        spawn "dms" "ipc" "call" "powermenu" "toggle";
+    }
+    // Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
+    // Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    Super+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
+    // Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
+    Mod+Shift+C hotkey-overlay-title="Clipboard Manager" { 
+        spawn "dms" "ipc" "call" "clipboard" "toggle"; 
+    }
+    Mod+Comma hotkey-overlay-title="Settings" { 
+        spawn "dms" "ipc" "call" "settings" "toggle"; 
+    }
     Mod+Shift+B { spawn-sh "qs -c noctalia-shell"; }
     Mod+B { spawn "~/.config/niri/waybar.sh"; }
     Mod+M { spawn-sh "mpv /dev/video2"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn-sh "wl-present mirror"; }
     Mod+Escape { spawn-sh "kitty btop"; }
-
+    Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" { 
+        spawn "dms" "ipc" "call" "processlist" "toggle"; 
+    }
+    Mod+P hotkey-overlay-title="Notepad" {
+      spawn "dms" "ipc" "call" "notepad" "toggle";
+    }
     // Window navigation and focus
     Mod+Left { focus-column-left; }
     Mod+Down { focus-window-or-workspace-down; }
@@ -643,15 +665,41 @@ binds {
     Alt+Print { screenshot-window; }
     Mod+Print { spawn "~/.config/niri/screenshot_swappy.sh"; }
 
-    // Multimedia and peripherals
-    XF86AudioLowerVolume { spawn "swayosd-client" "--output-volume" "lower"; }
-    XF86AudioMute { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
-    XF86AudioRaiseVolume { spawn "swayosd-client" "--output-volume" "raise"; }
-    XF86MonBrightnessDown { spawn "swayosd-client" "--brightness" "lower"; }
-    XF86MonBrightnessUp { spawn "swayosd-client" "--brightness" "raise"; }
-    F11 { spawn "swayosd-client" "--output-volume" "lower"; }
-    F10 { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
-    F12 { spawn "swayosd-client" "--output-volume" "raise"; }
+    //// Multimedia and peripherals
+    // XF86AudioLowerVolume { spawn "swayosd-client" "--output-volume" "lower"; }
+    // XF86AudioMute { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
+    // XF86AudioRaiseVolume { spawn "swayosd-client" "--output-volume" "raise"; }
+    // XF86MonBrightnessDown { spawn "swayosd-client" "--brightness" "lower"; }
+    // XF86MonBrightnessUp { spawn "swayosd-client" "--brightness" "raise"; }
+    // F11 { spawn "swayosd-client" "--output-volume" "lower"; }
+    // F10 { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
+    // F12 { spawn "swayosd-client" "--output-volume" "raise"; }
+
+    //// === Audio Controls ===
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "increment" "3";
+    }
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "decrement" "3";
+    }
+    XF86AudioMute allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "mute";
+    }
+    XF86AudioMicMute allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "micmute";
+    }
+    F11 { spawn "dms" "ipc" "call" "audio" "decrement" "3"; }
+    F10 { spawn "dms" "ipc" "call" "audio" "mute"; }
+    F12 { spawn "dms" "ipc" "call" "audio" "increment" "3"; }   
+    // === Brightness Controls ===
+    XF86MonBrightnessUp allow-when-locked=true {
+       spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
+    }
+    XF86MonBrightnessDown allow-when-locked=true {
+       spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
+    }  
+    
+
 
     // Mouse wheel binds
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
@@ -717,8 +765,9 @@ environment {
     QT_AUTO_SCREEN_SCALE_FACTOR "1"
     QT_SCALE_FACTOR "1"
     GDK_SCALE "1"
-    GTK_THEME "catppuccin-mocha-blue-standard+default"
-    XCURSOR_THEME "Bibata-Modern-Ice"
+    // GTK_THEME "catppuccin-mocha-blue-standard+default"
+    GTK_THEME "Colloid-Dark"
+    XCURSOR_THEME "Colloid"
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
     // QT_QPA_PLATFORMTHEME "gtk3"
     // QT_QPA_PLATFORMTHEME_QT6 "gtk3"

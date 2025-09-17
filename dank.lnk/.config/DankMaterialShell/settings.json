@@ -1,0 +1,122 @@
+{
+  "currentThemeName": "dynamic",
+  "customThemeFile": "",
+  "topBarTransparency": 0.63,
+  "topBarWidgetTransparency": 0,
+  "popupTransparency": 0.82,
+  "dockTransparency": 0.58,
+  "use24HourClock": true,
+  "useFahrenheit": false,
+  "nightModeEnabled": false,
+  "weatherLocation": "40.7128, -74.0060",
+  "weatherCoordinates": "40.7128,-74.0060",
+  "useAutoLocation": true,
+  "weatherEnabled": true,
+  "showLauncherButton": true,
+  "showWorkspaceSwitcher": true,
+  "showFocusedWindow": true,
+  "showWeather": true,
+  "showMusic": true,
+  "showClipboard": true,
+  "showCpuUsage": true,
+  "showMemUsage": true,
+  "showCpuTemp": true,
+  "showGpuTemp": true,
+  "selectedGpuIndex": 0,
+  "enabledGpuPciIds": [],
+  "showSystemTray": true,
+  "showClock": true,
+  "showNotificationButton": true,
+  "showBattery": true,
+  "showControlCenterButton": true,
+  "controlCenterShowNetworkIcon": true,
+  "controlCenterShowBluetoothIcon": true,
+  "controlCenterShowAudioIcon": true,
+  "showWorkspaceIndex": false,
+  "showWorkspacePadding": false,
+  "showWorkspaceApps": true,
+  "maxWorkspaceIcons": 3,
+  "workspacesPerMonitor": true,
+  "workspaceNameIcons": {},
+  "waveProgressEnabled": true,
+  "clockCompactMode": false,
+  "focusedWindowCompactMode": false,
+  "runningAppsCompactMode": true,
+  "runningAppsCurrentWorkspace": false,
+  "clockDateFormat": "",
+  "lockDateFormat": "",
+  "mediaSize": 1,
+  "topBarLeftWidgets": [
+    "launcherButton",
+    "workspaceSwitcher",
+    "focusedWindow"
+  ],
+  "topBarCenterWidgets": [
+    "music",
+    "clock",
+    "weather"
+  ],
+  "topBarRightWidgets": [
+    {
+      "id": "systemTray",
+      "enabled": true
+    },
+    {
+      "id": "clipboard",
+      "enabled": true
+    },
+    {
+      "id": "cpuUsage",
+      "enabled": true
+    },
+    {
+      "id": "memUsage",
+      "enabled": true
+    },
+    {
+      "id": "notificationButton",
+      "enabled": true
+    },
+    {
+      "id": "battery",
+      "enabled": true
+    },
+    {
+      "id": "controlCenterButton",
+      "enabled": true
+    }
+  ],
+  "appLauncherViewMode": "list",
+  "spotlightModalViewMode": "list",
+  "networkPreference": "auto",
+  "iconTheme": "Colloid-Dark",
+  "useOSLogo": false,
+  "osLogoColorOverride": "",
+  "osLogoBrightness": 0.5,
+  "osLogoContrast": 1,
+  "wallpaperDynamicTheming": true,
+  "fontFamily": "Inter Variable",
+  "monoFontFamily": "Fira Code",
+  "fontWeight": 400,
+  "fontScale": 1,
+  "gtkThemingEnabled": false,
+  "qtThemingEnabled": false,
+  "showDock": true,
+  "dockAutoHide": true,
+  "cornerRadius": 12,
+  "notificationOverlayEnabled": true,
+  "topBarAutoHide": false,
+  "topBarOpenOnOverview": true,
+  "topBarVisible": true,
+  "topBarSpacing": 0,
+  "topBarBottomGap": 0,
+  "topBarInnerPadding": 0,
+  "topBarSquareCorners": true,
+  "topBarNoBackground": false,
+  "lockScreenShowPowerActions": true,
+  "hideBrightnessSlider": false,
+  "notificationTimeoutLow": 30000,
+  "notificationTimeoutNormal": 60000,
+  "notificationTimeoutCritical": 0,
+  "screenPreferences": {}
+}
