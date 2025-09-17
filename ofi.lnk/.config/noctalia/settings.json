@@ -19,29 +19,23 @@
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.37,
-        "floating": false,
+        "backgroundOpacity": 0.8,
+        "density": "compact",
+        "floating": true,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
             "DP-2",
             "HDMI-A-1"
         ],
-        "position": "top",
+        "position": "right",
         "showActiveWindowIcon": true,
+        "showCapsule": false,
         "showNetworkStats": false,
         "showWorkspaceLabel": "name",
         "useDistroLogo": true,
         "widgets": {
             "center": [
-                {
-                    "hideUnoccupied": false,
-                    "id": "Workspace",
-                    "labelMode": "name"
-                },
-                {
-                    "id": "KeepAwake"
-                }
             ],
             "left": [
                 {

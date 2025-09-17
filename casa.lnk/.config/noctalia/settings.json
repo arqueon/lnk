@@ -20,8 +20,8 @@
     "bar": {
         "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0.8,
-        "density": "default",
-        "floating": false,
+        "density": "compact",
+        "floating": true,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
@@ -71,6 +71,9 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
+                    "id": "KeepAwake"
+                },
+                {
                     "id": "Tray"
                 },
                 {
@@ -100,6 +103,9 @@
                 {
                     "id": "SidePanelToggle",
                     "useDistroLogo": true
+                },
+                {
+                    "id": "PowerToggle"
                 }
             ]
         }
@@ -172,7 +178,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758129609000,
+        "lastSeenTs": 1758151572000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -213,12 +219,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-a8504db40f008718b177d07becbd0bbf.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//cajon-del-maipu-3.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-a8504db40f008718b177d07becbd0bbf.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//late-afternoon-pixel-art-71.jpg"
             }
         ],
         "randomEnabled": true,
