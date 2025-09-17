@@ -20,28 +20,21 @@
     "bar": {
         "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0.37,
+        "density": "compact",
         "floating": false,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
-            "DP-2",
-            "HDMI-A-1"
+            "DP-2"
         ],
-        "position": "top",
+        "position": "left",
         "showActiveWindowIcon": true,
+        "showCapsule": false,
         "showNetworkStats": false,
         "showWorkspaceLabel": "name",
         "useDistroLogo": true,
         "widgets": {
             "center": [
-                {
-                    "hideUnoccupied": false,
-                    "id": "Workspace",
-                    "labelMode": "name"
-                },
-                {
-                    "id": "KeepAwake"
-                }
             ],
             "left": [
                 {
@@ -91,14 +84,6 @@
                     "id": "Microphone"
                 },
                 {
-                    "alwaysShowPercentage": false,
-                    "displayMode": "onhover",
-                    "id": "Brightness"
-                },
-                {
-                    "id": "NightLight"
-                },
-                {
                     "id": "ScreenRecorderIndicator"
                 },
                 {
@@ -115,9 +100,6 @@
                 {
                     "id": "SidePanelToggle",
                     "useDistroLogo": true
-                },
-                {
-                    "id": "PowerToggle"
                 }
             ]
         }
@@ -136,6 +118,8 @@
         "exclusive": false,
         "floatingRatio": 1,
         "monitors": [
+            "HDMI-A-1",
+            "DP-2"
         ]
     },
     "general": {
@@ -188,7 +172,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758080805000,
+        "lastSeenTs": 1758123187000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -229,12 +213,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-6a3028a3e5dc93095beb728e89387e99.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.HoliColors_EN-US9033637774_UHD.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-6a3028a3e5dc93095beb728e89387e99.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//49 - O87PY0i.jpg"
             }
         ],
         "randomEnabled": true,
