@@ -183,7 +183,7 @@
     },
     "notifications": {
         "doNotDisturb": false,
-        "lastSeenTs": 0,
+        "lastSeenTs": 1758129623000,
         "monitors": [
             "eDP-1"
         ]
@@ -218,7 +218,7 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites/7_BABYMETAL_2000_GLASTONBURY.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-e87bad12743e75139e10fa47a64fd624.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
