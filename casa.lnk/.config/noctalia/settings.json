@@ -188,7 +188,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758047279000,
+        "lastSeenTs": 1758077872000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -213,6 +213,10 @@
         "fontFixed": "DejaVu Sans Mono",
         "idleInhibitorEnabled": false,
         "monitorsScaling": [
+            {
+                "name": "DP-2",
+                "scale": 1.1199999999999999
+            }
         ]
     },
     "wallpaper": {
@@ -225,12 +229,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//vecteezy_the-neon-lit-streets-of-a-cyberpunk-anime-night-city-with_26481531_715.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.Misotsuchi2025_EN-US8130053956_UHD.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-83763y.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.IrisGarden_EN-US6778843108_UHD.jpg"
             }
         ],
         "randomEnabled": true,
