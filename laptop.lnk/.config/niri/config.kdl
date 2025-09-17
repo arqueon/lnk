@@ -101,7 +101,7 @@ workspace "media" {
 
 // Switch events
 switch-events {
-    lid-close { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }    
+    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }    
     // lid-close { spawn "swaylock"; }
 }
 
