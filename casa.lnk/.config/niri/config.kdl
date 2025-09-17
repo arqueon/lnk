@@ -101,7 +101,7 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    lid-close { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }    
+    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen toggle"; }    
     // lid-close { spawn "swaylock"; }
 }
 
@@ -203,8 +203,8 @@ layer-rule {
 
 // Startup applications
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "swww-daemon"
-spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
+// spawn-at-startup "swww-daemon"
+// spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 //spawn-at-startup "~/.config/niri/waybar.sh"
 spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-at-startup "swayosd-server"
@@ -213,13 +213,14 @@ spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "swayidle"
 spawn-at-startup "blueman-applet"
-//spawn-at-startup "/opt/ExpanDrive/expandrive" "--autorun"
+// spawn-at-startup "/opt/ExpanDrive/expandrive" "--autorun"
 spawn-sh-at-startup "~/Applications/ExpanDrive-2025.06.20_76b30d38989b8a7085b991b05018a8e0.AppImage"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "kdeconnectd"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "copyq"
-//spawn-at-startup "cosmic-ext-alternative-startup"
+spawn-at-startup "qbittorrent"
+// spawn-at-startup "cosmic-ext-alternative-startup"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
