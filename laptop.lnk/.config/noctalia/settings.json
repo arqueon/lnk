@@ -15,11 +15,11 @@
         "showMiniplayerAlbumArt": true,
         "showMiniplayerCava": true,
         "visualizerType": "linear",
-        "volumeStep": 5
+        "volumeStep": 2
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.37,
+        "backgroundOpacity": 0.8,
         "density": "default",
         "floating": false,
         "marginHorizontal": 0.25,
@@ -27,19 +27,14 @@
         "monitors": [
             "eDP-1"
         ],
-        "position": "top",
+        "position": "left",
         "showActiveWindowIcon": true,
-        "showCapsule": true,
+        "showCapsule": false,
         "showNetworkStats": false,
         "showWorkspaceLabel": "name",
         "useDistroLogo": true,
         "widgets": {
             "center": [
-                {
-                    "hideUnoccupied": false,
-                    "id": "Workspace",
-                    "labelMode": "name"
-                },
                 {
                     "id": "KeepAwake"
                 }
@@ -197,14 +192,14 @@
         "nightTemp": "4000"
     },
     "notifications": {
-        "criticalUrgencyDuration": 15,
+        "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758129623000,
-        "lowUrgencyDuration": 3,
+        "lastSeenTs": 1758129609000,
+        "lowUrgencyDuration": 30,
         "monitors": [
             "eDP-1"
         ],
-        "normalUrgencyDuration": 8
+        "normalUrgencyDuration": 30
     },
     "screenRecorder": {
         "audioCodec": "opus",
