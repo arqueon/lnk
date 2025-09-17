@@ -19,15 +19,15 @@
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.37,
-        "density": "compact",
+        "backgroundOpacity": 0.8,
+        "density": "default",
         "floating": false,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
-            "DP-2"
+            "HDMI-A-1"
         ],
-        "position": "left",
+        "position": "right",
         "showActiveWindowIcon": true,
         "showCapsule": false,
         "showNetworkStats": false,
@@ -172,7 +172,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758123187000,
+        "lastSeenTs": 1758129609000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -213,12 +213,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.HoliColors_EN-US9033637774_UHD.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//SyIdvZyTzvsYrxbYObEYZaQ5yRO3_xfNqz4ssMR0fEY.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//49 - O87PY0i.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//Arch Linux (Text Purple).png"
             }
         ],
         "randomEnabled": true,
