@@ -72,6 +72,9 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
+                    "id": "KeepAwake"
+                },
+                {
                     "id": "Tray"
                 },
                 {
@@ -83,14 +86,6 @@
                     "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Microphone"
-                },
-                {
-                    "alwaysShowPercentage": false,
-                    "displayMode": "onhover",
-                    "id": "Brightness"
-                },
-                {
-                    "id": "NightLight"
                 },
                 {
                     "id": "ScreenRecorderIndicator"

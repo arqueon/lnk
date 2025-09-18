@@ -24,7 +24,7 @@ input {
         accel-speed 0.2
         accel-profile "adaptive"
         // scroll-factor 1.0
-        scroll-factor vertical=2.0 horizontal=-2.0
+        scroll-factor vertical=2.0 horizontal=-3.0
         // scroll-method "two-finger"
         // scroll-button 273
         // scroll-button-lock
@@ -40,7 +40,7 @@ input {
         accel-speed 0.2
         accel-profile "adaptive"
         // scroll-factor 1.0
-        scroll-factor vertical=2.0 horizontal=-2.0
+        scroll-factor vertical=2.0 horizontal=-3.0
         // scroll-method "no-scroll"
         // scroll-button 273
         // scroll-button-lock
@@ -85,7 +85,7 @@ workspace "media" {
 output "DP-2" {
     // off
     mode "3440x1440@165.001"
-    scale 1.18
+    scale 1.22
     // transform "90"
     position x=1920 y=0
 }
@@ -202,7 +202,7 @@ layer-rule {
 
 
 // Startup applications
-// spawn-at-startup "xwayland-satellite"
+spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "swww-daemon"
 // spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "~/.config/niri/waybar.sh"
@@ -748,7 +748,7 @@ environment {
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"
-    // WAYLAND_DISPLAY "wayland-1"
+    WAYLAND_DISPLAY "wayland-1"
     MOZ_ENABLE_WAYLAND "1"
     CLUTTER_BACKEND "wayland"
     GDK_BACKEND "wayland,x11"

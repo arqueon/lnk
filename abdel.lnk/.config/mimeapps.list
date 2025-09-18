@@ -162,3 +162,4 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoff
 x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/discord=vesktop.desktop
