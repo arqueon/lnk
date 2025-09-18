@@ -122,7 +122,7 @@
         "autoHide": true,
         "backgroundOpacity": 0.75,
         "exclusive": false,
-        "floatingRatio": 1,
+        "floatingRatio": 0,
         "monitors": [
             "HDMI-A-1",
             "DP-2"
@@ -134,7 +134,7 @@
         "dimDesktop": false,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
-        "screenRadiusRatio": 0.78,
+        "screenRadiusRatio": 1,
         "showScreenCorners": false
     },
     "hooks": {
@@ -219,12 +219,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-77b86ea1a87adf5687ce310da24d5ba4.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//0197.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-77b86ea1a87adf5687ce310da24d5ba4.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//gritty.png"
             }
         ],
         "randomEnabled": true,

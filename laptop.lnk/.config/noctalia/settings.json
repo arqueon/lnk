@@ -136,7 +136,7 @@
         "autoHide": true,
         "backgroundOpacity": 0.75,
         "exclusive": false,
-        "floatingRatio": 1,
+        "floatingRatio": 0,
         "monitors": [
             "eDP-1"
         ]
