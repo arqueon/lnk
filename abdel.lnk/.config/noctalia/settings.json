@@ -19,7 +19,7 @@
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.8,
+        "backgroundOpacity": 0.9500000000000001,
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
@@ -178,7 +178,7 @@
     "notifications": {
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1758156150000,
+        "lastSeenTs": 1758159054000,
         "lowUrgencyDuration": 3,
         "monitors": [
             "HDMI-A-1"
@@ -215,12 +215,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/5530933.jpg"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/wallhaven-47k2py.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/19069.jpg"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/fantasy-digital-painting-artwork.jpg"
             }
         ],
         "randomEnabled": true,
