@@ -19,24 +19,22 @@
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.37,
+        "backgroundOpacity": 0.9500000000000001,
+        "density": "compact",
+        "floating": true,
+        "marginHorizontal": 0.25,
+        "marginVertical": 0.25,
         "monitors": [
+            "DP-2"
         ],
-        "position": "top",
+        "position": "left",
         "showActiveWindowIcon": true,
+        "showCapsule": false,
         "showNetworkStats": false,
         "showWorkspaceLabel": "name",
         "useDistroLogo": true,
         "widgets": {
             "center": [
-                {
-                    "hideUnoccupied": false,
-                    "id": "Workspace",
-                    "labelMode": "name"
-                },
-                {
-                    "id": "KeepAwake"
-                }
             ],
             "left": [
                 {
@@ -73,6 +71,9 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
+                    "id": "KeepAwake"
+                },
+                {
                     "id": "Tray"
                 },
                 {
@@ -84,14 +85,6 @@
                     "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Microphone"
-                },
-                {
-                    "alwaysShowPercentage": false,
-                    "displayMode": "onhover",
-                    "id": "Brightness"
-                },
-                {
-                    "id": "NightLight"
                 },
                 {
                     "id": "ScreenRecorderIndicator"
@@ -129,14 +122,19 @@
         "autoHide": true,
         "backgroundOpacity": 0.75,
         "exclusive": false,
+        "floatingRatio": 0,
         "monitors": [
+            "HDMI-A-1",
+            "DP-2"
         ]
     },
     "general": {
         "animationSpeed": 1.2400000000000002,
-        "avatarImage": "/home/ruben/.face",
+        "avatarImage": "/home/abdel/.face",
         "dimDesktop": false,
+        "forceBlackScreenCorners": false,
         "radiusRatio": 0,
+        "screenRadiusRatio": 1,
         "showScreenCorners": false
     },
     "hooks": {
@@ -159,6 +157,7 @@
         "gtk3": true,
         "gtk4": true,
         "kitty": true,
+        "pywalfox": false,
         "qt5": true,
         "qt6": true,
         "vesktop": false
@@ -177,11 +176,14 @@
         "nightTemp": "4000"
     },
     "notifications": {
+        "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1758050278000,
+        "lastSeenTs": 1758159054000,
+        "lowUrgencyDuration": 3,
         "monitors": [
             "HDMI-A-1"
-        ]
+        ],
+        "normalUrgencyDuration": 8
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -204,21 +206,21 @@
         ]
     },
     "wallpaper": {
-        "directory": "/home/abdel/Pictures/Wallpapers",
-        "enableMultiMonitorDirectories": false,
+        "directory": "/home/abdel/.config/variety/Favorites",
+        "enableMultiMonitorDirectories": true,
         "enabled": true,
         "fillColor": "#000000",
         "fillMode": "crop",
         "monitors": [
             {
-                "directory": "/home/abdel/Pictures/Wallpapers",
+                "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-0cd5e3a9e7ea16374bfe571387ae7ade.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-fbdbfa111786b40571eebdda49739d1d.jpg"
             },
             {
-                "directory": "/home/abdel/Pictures/Wallpapers",
+                "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-0cd5e3a9e7ea16374bfe571387ae7ade.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-fbdbfa111786b40571eebdda49739d1d.jpg"
             }
         ],
         "randomEnabled": true,

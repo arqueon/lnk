@@ -19,9 +19,9 @@
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.7000000000000001,
-        "density": "comfortable",
-        "floating": false,
+        "backgroundOpacity": 0.8,
+        "density": "compact",
+        "floating": true,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
@@ -35,9 +35,6 @@
         "useDistroLogo": true,
         "widgets": {
             "center": [
-                {
-                    "id": "KeepAwake"
-                }
             ],
             "left": [
                 {
@@ -72,6 +69,9 @@
             "right": [
                 {
                     "id": "ScreenRecorderIndicator"
+                },
+                {
+                    "id": "KeepAwake"
                 },
                 {
                     "id": "Tray"
@@ -134,7 +134,7 @@
     },
     "dock": {
         "autoHide": true,
-        "backgroundOpacity": 0.58,
+        "backgroundOpacity": 0.75,
         "exclusive": false,
         "floatingRatio": 0,
         "monitors": [
@@ -142,7 +142,7 @@
         ]
     },
     "general": {
-        "animationSpeed": 1,
+        "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
         "forceBlackScreenCorners": false,
