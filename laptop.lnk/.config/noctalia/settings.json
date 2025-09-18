@@ -191,7 +191,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758133235000,
+        "lastSeenTs": 1758141108000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "eDP-1"
@@ -228,7 +228,7 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites/rocket-lambda.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/Rin_Shima_Programming_In_Lua.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
