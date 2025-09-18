@@ -19,7 +19,7 @@
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.37,
+        "backgroundOpacity": 0.8,
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
@@ -215,12 +215,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/window-panic.png"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-976628557e8e920e799257f1ecec9b61.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/u986tntya6ee1.jpeg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-976628557e8e920e799257f1ecec9b61.jpg"
             }
         ],
         "randomEnabled": true,
