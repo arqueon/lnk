@@ -108,7 +108,7 @@ switch-events {
 
 // Layout configuration
 layout {
-    gaps 15
+    gaps 10
     center-focused-column "never"
     default-column-display "tabbed"
     tab-indicator {
