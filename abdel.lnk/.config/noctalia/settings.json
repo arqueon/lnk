@@ -20,28 +20,21 @@
     "bar": {
         "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0.37,
-        "density": "default",
-        "floating": false,
+        "density": "compact",
+        "floating": true,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
+            "DP-2"
         ],
-        "position": "top",
+        "position": "left",
         "showActiveWindowIcon": true,
-        "showCapsule": true,
+        "showCapsule": false,
         "showNetworkStats": false,
         "showWorkspaceLabel": "name",
         "useDistroLogo": true,
         "widgets": {
             "center": [
-                {
-                    "hideUnoccupied": false,
-                    "id": "Workspace",
-                    "labelMode": "name"
-                },
-                {
-                    "id": "KeepAwake"
-                }
             ],
             "left": [
                 {
@@ -78,6 +71,9 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
+                    "id": "KeepAwake"
+                },
+                {
                     "id": "Tray"
                 },
                 {
@@ -89,14 +85,6 @@
                     "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Microphone"
-                },
-                {
-                    "alwaysShowPercentage": false,
-                    "displayMode": "onhover",
-                    "id": "Brightness"
-                },
-                {
-                    "id": "NightLight"
                 },
                 {
                     "id": "ScreenRecorderIndicator"
@@ -134,13 +122,15 @@
         "autoHide": true,
         "backgroundOpacity": 0.75,
         "exclusive": false,
-        "floatingRatio": 1,
+        "floatingRatio": 0,
         "monitors": [
+            "HDMI-A-1",
+            "DP-2"
         ]
     },
     "general": {
         "animationSpeed": 1.2400000000000002,
-        "avatarImage": "/home/ruben/.face",
+        "avatarImage": "/home/abdel/.face",
         "dimDesktop": false,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
@@ -188,7 +178,7 @@
     "notifications": {
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1758130939000,
+        "lastSeenTs": 1758156150000,
         "lowUrgencyDuration": 3,
         "monitors": [
             "HDMI-A-1"
@@ -216,21 +206,21 @@
         ]
     },
     "wallpaper": {
-        "directory": "/home/abdel/Pictures/Wallpapers",
-        "enableMultiMonitorDirectories": false,
+        "directory": "/home/abdel/.config/variety/Favorites",
+        "enableMultiMonitorDirectories": true,
         "enabled": true,
         "fillColor": "#000000",
         "fillMode": "crop",
         "monitors": [
             {
-                "directory": "/home/abdel/Pictures/Wallpapers",
+                "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-3d193046d0a4cb643cc1603e43cceecc.jpg"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/window-panic.png"
             },
             {
-                "directory": "/home/abdel/Pictures/Wallpapers",
+                "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-3d193046d0a4cb643cc1603e43cceecc.jpg"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/u986tntya6ee1.jpeg"
             }
         ],
         "randomEnabled": true,
