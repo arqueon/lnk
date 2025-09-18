@@ -19,28 +19,22 @@
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.37,
-        "floating": false,
+        "backgroundOpacity": 0.8,
+        "density": "compact",
+        "floating": true,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
             "eDP-1"
         ],
-        "position": "top",
+        "position": "left",
         "showActiveWindowIcon": true,
+        "showCapsule": false,
         "showNetworkStats": false,
         "showWorkspaceLabel": "name",
         "useDistroLogo": true,
         "widgets": {
             "center": [
-                {
-                    "hideUnoccupied": false,
-                    "id": "Workspace",
-                    "labelMode": "name"
-                },
-                {
-                    "id": "KeepAwake"
-                }
             ],
             "left": [
                 {
@@ -77,6 +71,9 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
+                    "id": "KeepAwake"
+                },
+                {
                     "id": "Tray"
                 },
                 {
@@ -101,10 +98,8 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
-                    "id": "PowerProfile"
-                },
-                {
                     "alwaysShowPercentage": true,
+                    "displayMode": "onhover",
                     "id": "Battery",
                     "warningThreshold": 30
                 },
@@ -143,6 +138,7 @@
         "exclusive": false,
         "floatingRatio": 1,
         "monitors": [
+            "eDP-1"
         ]
     },
     "general": {
@@ -151,7 +147,7 @@
         "dimDesktop": false,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
-        "screenRadiusRatio": 0.78,
+        "screenRadiusRatio": 1,
         "showScreenCorners": false
     },
     "hooks": {
@@ -195,10 +191,10 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758047279000,
+        "lastSeenTs": 1758141108000,
         "lowUrgencyDuration": 30,
         "monitors": [
-            "HDMI-A-1"
+            "eDP-1"
         ],
         "normalUrgencyDuration": 30
     },
@@ -223,7 +219,7 @@
         ]
     },
     "wallpaper": {
-        "directory": "/home/ruben/.config/variety/Favorites/",
+        "directory": "/home/ruben/.config/variety/Favorites",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
@@ -232,7 +228,7 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites/7_BABYMETAL_2000_GLASTONBURY.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/Rin_Shima_Programming_In_Lua.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",

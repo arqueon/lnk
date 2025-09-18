@@ -104,7 +104,7 @@
   "showDock": true,
   "dockAutoHide": true,
   "cornerRadius": 12,
-  "notificationOverlayEnabled": false,
+  "notificationOverlayEnabled": true,
   "topBarAutoHide": false,
   "topBarOpenOnOverview": true,
   "topBarVisible": true,
@@ -115,8 +115,8 @@
   "topBarNoBackground": false,
   "lockScreenShowPowerActions": true,
   "hideBrightnessSlider": false,
-  "notificationTimeoutLow": 10000,
-  "notificationTimeoutNormal": 15000,
+  "notificationTimeoutLow": 30000,
+  "notificationTimeoutNormal": 60000,
   "notificationTimeoutCritical": 0,
   "screenPreferences": {}
 }

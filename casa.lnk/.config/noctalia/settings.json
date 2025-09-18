@@ -19,29 +19,22 @@
     },
     "bar": {
         "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.37,
-        "floating": false,
+        "backgroundOpacity": 0.8,
+        "density": "compact",
+        "floating": true,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
-            "DP-2",
             "HDMI-A-1"
         ],
-        "position": "top",
+        "position": "right",
         "showActiveWindowIcon": true,
+        "showCapsule": false,
         "showNetworkStats": false,
         "showWorkspaceLabel": "name",
         "useDistroLogo": true,
         "widgets": {
             "center": [
-                {
-                    "hideUnoccupied": false,
-                    "id": "Workspace",
-                    "labelMode": "name"
-                },
-                {
-                    "id": "KeepAwake"
-                }
             ],
             "left": [
                 {
@@ -78,6 +71,9 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
+                    "id": "KeepAwake"
+                },
+                {
                     "id": "Tray"
                 },
                 {
@@ -89,14 +85,6 @@
                     "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Microphone"
-                },
-                {
-                    "alwaysShowPercentage": false,
-                    "displayMode": "onhover",
-                    "id": "Brightness"
-                },
-                {
-                    "id": "NightLight"
                 },
                 {
                     "id": "ScreenRecorderIndicator"
@@ -136,6 +124,8 @@
         "exclusive": false,
         "floatingRatio": 1,
         "monitors": [
+            "HDMI-A-1",
+            "DP-2"
         ]
     },
     "general": {
@@ -188,7 +178,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758047279000,
+        "lastSeenTs": 1758151572000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -213,6 +203,10 @@
         "fontFixed": "DejaVu Sans Mono",
         "idleInhibitorEnabled": false,
         "monitorsScaling": [
+            {
+                "name": "DP-2",
+                "scale": 1.1199999999999999
+            }
         ]
     },
     "wallpaper": {
@@ -225,12 +219,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//vecteezy_the-neon-lit-streets-of-a-cyberpunk-anime-night-city-with_26481531_715.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wall-04.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-83763y.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-47k2py.jpg"
             }
         ],
         "randomEnabled": true,

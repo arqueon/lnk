@@ -15,17 +15,37 @@ input {
 
     touchpad {
         tap
+        // off
         // dwt
         // dwtp
+        // drag false
+        // drag-lock
         // natural-scroll
-        accel-speed 0.5
+        accel-speed 0.2
         accel-profile "adaptive"
+        // scroll-factor 1.0
+        scroll-factor vertical=2.0 horizontal=-3.0
+        // scroll-method "two-finger"
+        // scroll-button 273
+        // scroll-button-lock
+        // tap-button-map "left-middle-right"
+        // click-method "clickfinger"
+        // left-handed
+        // disabled-on-external-mouse
+        // middle-emulation
     }
 
     mouse {
         // natural-scroll
-        accel-speed 0.5
+        accel-speed 0.2
         accel-profile "adaptive"
+        // scroll-factor 1.0
+        scroll-factor vertical=2.0 horizontal=-3.0
+        // scroll-method "no-scroll"
+        // scroll-button 273
+        // scroll-button-lock
+        // left-handed
+        // middle-emulation
     }
 
     // warp-mouse-to-focus
@@ -81,8 +101,8 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    //lid-close { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }    
-    lid-close { spawn "swaylock"; }
+    lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }    
+    // lid-close { spawn "swaylock"; }
 }
 
 
@@ -182,7 +202,7 @@ layer-rule {
 
 
 // Startup applications
-// spawn-at-startup "xwayland-satellite"
+spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "swww-daemon"
 // spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "~/.config/niri/waybar.sh"
@@ -206,8 +226,9 @@ spawn-at-startup "qbittorrent"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
+spawn-at-startup "logseq"
 // spawn-sh-at-startup "env DISPLAY=:2 logseq"
-spawn-sh-at-startup "logseq"
+// spawn-at-startup "logseq-desktop-electron"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -723,11 +744,11 @@ debug {
 // Environment variables
 environment {
     // Wayland and session
-    // DISPLAY ":0"
+    // DISPLAY ":1"
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"
-    // WAYLAND_DISPLAY "wayland-1"
+    WAYLAND_DISPLAY "wayland-1"
     MOZ_ENABLE_WAYLAND "1"
     CLUTTER_BACKEND "wayland"
     GDK_BACKEND "wayland,x11"

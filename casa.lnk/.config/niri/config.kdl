@@ -24,7 +24,7 @@ input {
         accel-speed 0.2
         accel-profile "adaptive"
         // scroll-factor 1.0
-        scroll-factor vertical=2.0 horizontal=-2.0
+        scroll-factor vertical=2.0 horizontal=-3.0
         // scroll-method "two-finger"
         // scroll-button 273
         // scroll-button-lock
@@ -40,7 +40,7 @@ input {
         accel-speed 0.2
         accel-profile "adaptive"
         // scroll-factor 1.0
-        scroll-factor vertical=2.0 horizontal=-2.0
+        scroll-factor vertical=2.0 horizontal=-3.0
         // scroll-method "no-scroll"
         // scroll-button 273
         // scroll-button-lock
@@ -85,7 +85,7 @@ workspace "media" {
 output "DP-2" {
     // off
     mode "3440x1440@165.001"
-    scale 1.18
+    scale 1.22
     // transform "90"
     position x=1920 y=0
 }
@@ -101,7 +101,7 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    lid-close { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }    
+    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen toggle"; }    
     // lid-close { spawn "swaylock"; }
 }
 
@@ -203,29 +203,30 @@ layer-rule {
 
 // Startup applications
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "swww-daemon"
-spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
-//spawn-at-startup "~/.config/niri/waybar.sh"
+// spawn-at-startup "swww-daemon"
+// spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
+// spawn-at-startup "~/.config/niri/waybar.sh"
 spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-at-startup "swayosd-server"
-//spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
+// spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
 spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "swayidle"
 spawn-at-startup "blueman-applet"
-//spawn-at-startup "/opt/ExpanDrive/expandrive" "--autorun"
+// spawn-at-startup "/opt/ExpanDrive/expandrive" "--autorun"
 spawn-sh-at-startup "~/Applications/ExpanDrive-2025.06.20_76b30d38989b8a7085b991b05018a8e0.AppImage"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "kdeconnectd"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "copyq"
-//spawn-at-startup "cosmic-ext-alternative-startup"
+spawn-at-startup "qbittorrent"
+// spawn-at-startup "cosmic-ext-alternative-startup"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
-spawn-at-startup "logseq"
+// spawn-at-startup "logseq"
 // spawn-sh-at-startup "env DISPLAY=:2 logseq"
-// spawn-at-startup "logseq-desktop-electron"
+spawn-at-startup "logseq-desktop-electron"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -519,6 +520,7 @@ binds {
     Mod+F3 { spawn "zotero"; }
     // Mod+F4 { spawn-sh "env DISPLAY=:2 logseq"; }
     Mod+F4 { spawn "logseq-desktop-electron"; }
+    // Mod+F4 { spawn "logseq"; }
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "doublecmd"; }
     Mod+F7 { spawn "virt-manager"; }
@@ -699,7 +701,7 @@ environment {
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "Niri"
     XDG_CURRENT_DESKTOP "Niri"
-    // WAYLAND_DISPLAY "wayland-1"
+    WAYLAND_DISPLAY "wayland-1"
     MOZ_ENABLE_WAYLAND "1"
     CLUTTER_BACKEND "wayland"
     GDK_BACKEND "wayland,x11"
