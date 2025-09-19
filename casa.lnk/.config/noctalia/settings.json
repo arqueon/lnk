@@ -5,6 +5,7 @@
         "pinnedExecs": [
         ],
         "position": "top_center",
+        "sortByMostUsed": true,
         "useApp2Unit": false
     },
     "audio": {
@@ -12,13 +13,10 @@
         "mprisBlacklist": [
         ],
         "preferredPlayer": "",
-        "showMiniplayerAlbumArt": true,
-        "showMiniplayerCava": true,
         "visualizerType": "linear",
         "volumeStep": 2
     },
     "bar": {
-        "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0.8,
         "density": "compact",
         "floating": true,
@@ -28,11 +26,7 @@
             "HDMI-A-1"
         ],
         "position": "right",
-        "showActiveWindowIcon": true,
         "showCapsule": false,
-        "showNetworkStats": false,
-        "showWorkspaceLabel": "name",
-        "useDistroLogo": true,
         "widgets": {
             "center": [
             ],
@@ -63,7 +57,7 @@
                     "id": "MediaMini",
                     "showAlbumArt": true,
                     "showVisualizer": true,
-                    "visualizerType": "linear"
+                    "visualizerType": "wave"
                 }
             ],
             "right": [
@@ -96,9 +90,7 @@
                 },
                 {
                     "displayFormat": "time-date",
-                    "id": "Clock",
-                    "reverseDayMonth": false,
-                    "use12HourClock": false
+                    "id": "Clock"
                 },
                 {
                     "id": "SidePanelToggle",
@@ -131,7 +123,7 @@
     "general": {
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
-        "dimDesktop": false,
+        "dimDesktop": true,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
         "screenRadiusRatio": 1,
@@ -143,10 +135,10 @@
         "wallpaperChange": ""
     },
     "location": {
+        "monthBeforeDay": false,
         "name": "Guadalajara, Mexico",
-        "reverseDayMonth": false,
-        "showDateWithClock": true,
-        "use12HourClock": false,
+        "showWeekNumberInCalendar": false,
+        "use12hourFormat": false,
         "useFahrenheit": false
     },
     "matugen": {
@@ -163,7 +155,7 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": false,
+        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -178,7 +170,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758234490000,
+        "lastSeenTs": 1758255938000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -219,12 +211,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//rainbowarch.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//0197.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//totoro.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//11.png"
             }
         ],
         "randomEnabled": true,

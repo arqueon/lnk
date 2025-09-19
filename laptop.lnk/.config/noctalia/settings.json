@@ -5,6 +5,7 @@
         "pinnedExecs": [
         ],
         "position": "top_center",
+        "sortByMostUsed": true,
         "useApp2Unit": false
     },
     "audio": {
@@ -23,16 +24,12 @@
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
-        "marginVertical": 0.25,
+        "marginVertical": 0.4,
         "monitors": [
             "eDP-1"
         ],
         "position": "left",
-        "showActiveWindowIcon": true,
         "showCapsule": false,
-        "showNetworkStats": false,
-        "showWorkspaceLabel": "name",
-        "useDistroLogo": true,
         "widgets": {
             "center": [
             ],
@@ -63,7 +60,7 @@
                     "id": "MediaMini",
                     "showAlbumArt": true,
                     "showVisualizer": true,
-                    "visualizerType": "linear"
+                    "visualizerType": "wave"
                 }
             ],
             "right": [
@@ -110,9 +107,7 @@
                 },
                 {
                     "displayFormat": "time-date",
-                    "id": "Clock",
-                    "reverseDayMonth": false,
-                    "use12HourClock": false
+                    "id": "Clock"
                 },
                 {
                     "id": "SidePanelToggle",
@@ -144,7 +139,7 @@
     "general": {
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
-        "dimDesktop": false,
+        "dimDesktop": true,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
         "screenRadiusRatio": 1,
@@ -156,10 +151,10 @@
         "wallpaperChange": ""
     },
     "location": {
+        "monthBeforeDay": false,
         "name": "Guadalajara, Mexico",
-        "reverseDayMonth": false,
-        "showDateWithClock": true,
-        "use12HourClock": false,
+        "showWeekNumberInCalendar": false,
+        "use12hourFormat": false,
         "useFahrenheit": false
     },
     "matugen": {
