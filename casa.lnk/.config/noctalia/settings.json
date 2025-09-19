@@ -23,7 +23,7 @@
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
-        "marginVertical": 0.25,
+        "marginVertical": 0.4,
         "monitors": [
             "HDMI-A-1"
         ],
@@ -178,7 +178,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758168554000,
+        "lastSeenTs": 1758234490000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -219,12 +219,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wirefeather.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//rainbowarch.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//0188.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//totoro.png"
             }
         ],
         "randomEnabled": true,
