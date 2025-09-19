@@ -5,7 +5,6 @@
         "pinnedExecs": [
         ],
         "position": "top_center",
-        "sortByMostUsed": true,
         "useApp2Unit": false
     },
     "audio": {
@@ -29,7 +28,11 @@
             "eDP-1"
         ],
         "position": "left",
+        "showActiveWindowIcon": true,
         "showCapsule": false,
+        "showNetworkStats": false,
+        "showWorkspaceLabel": "name",
+        "useDistroLogo": true,
         "widgets": {
             "center": [
             ],
@@ -107,7 +110,9 @@
                 },
                 {
                     "displayFormat": "time-date",
-                    "id": "Clock"
+                    "id": "Clock",
+                    "reverseDayMonth": false,
+                    "use12HourClock": false
                 },
                 {
                     "id": "SidePanelToggle",
@@ -151,10 +156,10 @@
         "wallpaperChange": ""
     },
     "location": {
-        "monthBeforeDay": false,
         "name": "Guadalajara, Mexico",
-        "showWeekNumberInCalendar": false,
-        "use12hourFormat": false,
+        "reverseDayMonth": false,
+        "showDateWithClock": true,
+        "use12HourClock": false,
         "useFahrenheit": false
     },
     "matugen": {
@@ -223,12 +228,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-df08a4ae0be2383dc6425c317fd0f4f4.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/wp9418819.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites/Clearday.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites/yayayayayaya.png"
             }
         ],
         "randomEnabled": true,
