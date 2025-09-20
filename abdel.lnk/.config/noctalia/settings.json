@@ -5,6 +5,7 @@
         "pinnedExecs": [
         ],
         "position": "top_center",
+        "sortByMostUsed": true,
         "useApp2Unit": false
     },
     "audio": {
@@ -12,27 +13,21 @@
         "mprisBlacklist": [
         ],
         "preferredPlayer": "",
-        "showMiniplayerAlbumArt": true,
-        "showMiniplayerCava": true,
         "visualizerType": "linear",
         "volumeStep": 2
     },
     "bar": {
-        "alwaysShowBatteryPercentage": false,
-        "backgroundOpacity": 0.9500000000000001,
+        "backgroundOpacity": 0.8,
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
-        "marginVertical": 0.25,
+        "marginVertical": 0.4,
         "monitors": [
             "DP-2"
         ],
         "position": "left",
         "showActiveWindowIcon": true,
         "showCapsule": false,
-        "showNetworkStats": false,
-        "showWorkspaceLabel": "name",
-        "useDistroLogo": true,
         "widgets": {
             "center": [
             ],
@@ -63,7 +58,7 @@
                     "id": "MediaMini",
                     "showAlbumArt": true,
                     "showVisualizer": true,
-                    "visualizerType": "linear"
+                    "visualizerType": "wave"
                 }
             ],
             "right": [
@@ -96,9 +91,7 @@
                 },
                 {
                     "displayFormat": "time-date",
-                    "id": "Clock",
-                    "reverseDayMonth": false,
-                    "use12HourClock": false
+                    "id": "Clock"
                 },
                 {
                     "id": "SidePanelToggle",
@@ -131,7 +124,7 @@
     "general": {
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/abdel/.face",
-        "dimDesktop": false,
+        "dimDesktop": true,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
         "screenRadiusRatio": 1,
@@ -143,10 +136,10 @@
         "wallpaperChange": ""
     },
     "location": {
+        "monthBeforeDay": false,
         "name": "Guadalajara, Mexico",
-        "reverseDayMonth": false,
-        "showDateWithClock": true,
-        "use12HourClock": false,
+        "showWeekNumberInCalendar": false,
+        "use12hourFormat": false,
         "useFahrenheit": false
     },
     "matugen": {
@@ -176,14 +169,14 @@
         "nightTemp": "4000"
     },
     "notifications": {
-        "criticalUrgencyDuration": 15,
+        "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758159054000,
-        "lowUrgencyDuration": 3,
+        "lastSeenTs": 1758324349000,
+        "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 8
+        "normalUrgencyDuration": 30
     },
     "screenRecorder": {
         "audioCodec": "opus",

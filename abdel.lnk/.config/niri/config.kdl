@@ -101,14 +101,14 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen toggle"; }    
+    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }    
     // lid-close { spawn "swaylock"; }
 }
 
 
 // Layout configuration
 layout {
-    gaps 15
+    gaps 10
     center-focused-column "never"
     default-column-display "tabbed"
     tab-indicator {
@@ -202,12 +202,12 @@ layer-rule {
 
 
 // Startup applications
-spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "swww-daemon"
 // spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "~/.config/niri/waybar.sh"
 spawn-sh-at-startup "qs -c noctalia-shell"
-spawn-at-startup "swayosd-server"
+// spawn-at-startup "swayosd-server"
 // spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
 spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
@@ -645,14 +645,23 @@ binds {
     Mod+Print { spawn "~/.config/niri/screenshot_swappy.sh"; }
 
     // Multimedia and peripherals
-    XF86AudioLowerVolume { spawn "swayosd-client" "--output-volume" "lower"; }
-    XF86AudioMute { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
-    XF86AudioRaiseVolume { spawn "swayosd-client" "--output-volume" "raise"; }
-    XF86MonBrightnessDown { spawn "swayosd-client" "--brightness" "lower"; }
-    XF86MonBrightnessUp { spawn "swayosd-client" "--brightness" "raise"; }
-    F11 { spawn "swayosd-client" "--output-volume" "lower"; }
-    F10 { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
-    F12 { spawn "swayosd-client" "--output-volume" "raise"; }
+    // XF86AudioLowerVolume { spawn "swayosd-client" "--output-volume" "lower"; }
+    // XF86AudioMute { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
+    // XF86AudioRaiseVolume { spawn "swayosd-client" "--output-volume" "raise"; }
+    // XF86MonBrightnessDown { spawn "swayosd-client" "--brightness" "lower"; }
+    // XF86MonBrightnessUp { spawn "swayosd-client" "--brightness" "raise"; }
+    // F10 { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
+    // F11 { spawn "swayosd-client" "--output-volume" "lower"; }
+    // F12 { spawn "swayosd-client" "--output-volume" "raise"; }
+
+    XF86AudioMute { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    XF86AudioLowerVolume { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    XF86AudioRaiseVolume { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    XF86MonBrightnessDown { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+    XF86MonBrightnessUp { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    F10 { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    F11 { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    F12 { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
 
     // Mouse wheel binds
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
@@ -671,8 +680,10 @@ binds {
     Mod+MouseMiddle { maximize-column; }
 
     // Touchpad binds
-    Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
-    Mod+TouchpadScrollUp { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
+    // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
+    // Mod+TouchpadScrollUp { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
+    Mod+TouchpadScrollDown { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    Mod+TouchpadScrollUp { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
 
     // Switcher binds
     Alt+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
