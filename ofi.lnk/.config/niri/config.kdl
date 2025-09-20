@@ -101,14 +101,14 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen toggle"; }    
+    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }    
     // lid-close { spawn "swaylock"; }
 }
 
 
 // Layout configuration
 layout {
-    gaps 15
+    gaps 10
     center-focused-column "never"
     default-column-display "tabbed"
     tab-indicator {
@@ -202,7 +202,7 @@ layer-rule {
 
 
 // Startup applications
-spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "swww-daemon"
 // spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "~/.config/niri/waybar.sh"

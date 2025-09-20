@@ -5,6 +5,7 @@
         "pinnedExecs": [
         ],
         "position": "top_center",
+        "sortByMostUsed": true,
         "useApp2Unit": false
     },
     "audio": {
@@ -12,28 +13,20 @@
         "mprisBlacklist": [
         ],
         "preferredPlayer": "",
-        "showMiniplayerAlbumArt": true,
-        "showMiniplayerCava": true,
         "visualizerType": "linear",
         "volumeStep": 2
     },
     "bar": {
-        "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0.8,
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
-        "marginVertical": 0.25,
+        "marginVertical": 0.4,
         "monitors": [
-            "DP-2",
             "HDMI-A-1"
         ],
         "position": "right",
-        "showActiveWindowIcon": true,
         "showCapsule": false,
-        "showNetworkStats": false,
-        "showWorkspaceLabel": "name",
-        "useDistroLogo": true,
         "widgets": {
             "center": [
             ],
@@ -64,7 +57,7 @@
                     "id": "MediaMini",
                     "showAlbumArt": true,
                     "showVisualizer": true,
-                    "visualizerType": "linear"
+                    "visualizerType": "wave"
                 }
             ],
             "right": [
@@ -97,9 +90,7 @@
                 },
                 {
                     "displayFormat": "time-date",
-                    "id": "Clock",
-                    "reverseDayMonth": false,
-                    "use12HourClock": false
+                    "id": "Clock"
                 },
                 {
                     "id": "SidePanelToggle",
@@ -123,17 +114,19 @@
         "autoHide": true,
         "backgroundOpacity": 0.75,
         "exclusive": false,
-        "floatingRatio": 1,
+        "floatingRatio": 0,
         "monitors": [
+            "HDMI-A-1",
+            "DP-2"
         ]
     },
     "general": {
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
-        "dimDesktop": false,
+        "dimDesktop": true,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
-        "screenRadiusRatio": 0.78,
+        "screenRadiusRatio": 1,
         "showScreenCorners": false
     },
     "hooks": {
@@ -142,10 +135,10 @@
         "wallpaperChange": ""
     },
     "location": {
+        "monthBeforeDay": false,
         "name": "Guadalajara, Mexico",
-        "reverseDayMonth": false,
-        "showDateWithClock": true,
-        "use12HourClock": false,
+        "showWeekNumberInCalendar": false,
+        "use12hourFormat": false,
         "useFahrenheit": false
     },
     "matugen": {

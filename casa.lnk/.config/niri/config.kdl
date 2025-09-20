@@ -202,7 +202,7 @@ layer-rule {
 
 
 // Startup applications
-spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "swww-daemon"
 // spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "~/.config/niri/waybar.sh"
@@ -224,9 +224,9 @@ spawn-at-startup "qbittorrent"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
-// spawn-at-startup "logseq"
+spawn-at-startup "logseq"
 // spawn-sh-at-startup "env DISPLAY=:2 logseq"
-spawn-at-startup "logseq-desktop-electron"
+// spawn-at-startup "logseq-desktop-electron"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -519,8 +519,8 @@ binds {
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
     // Mod+F4 { spawn-sh "env DISPLAY=:2 logseq"; }
-    Mod+F4 { spawn "logseq-desktop-electron"; }
-    // Mod+F4 { spawn "logseq"; }
+    // Mod+F4 { spawn "logseq-desktop-electron"; }
+    Mod+F4 { spawn "logseq"; }
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "doublecmd"; }
     Mod+F7 { spawn "virt-manager"; }
