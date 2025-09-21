@@ -58,6 +58,7 @@
 .config/qtile/sxhkd
 .config/qtile/themes
 .config/rofi/config.rasi
+.config/satty/config.toml
 .config/starship.toml
 .config/sway
 .config/swayidle/config
