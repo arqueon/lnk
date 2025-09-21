@@ -41,16 +41,6 @@
                     "textIntervalMs": 300000
                 },
                 {
-                    "id": "SystemMonitor",
-                    "showCpuTemp": true,
-                    "showCpuUsage": true,
-                    "showDiskUsage": false,
-                    "showGpuTemp": false,
-                    "showMemoryAsPercent": false,
-                    "showMemoryUsage": true,
-                    "showNetworkStats": false
-                },
-                {
                     "id": "Taskbar"
                 },
                 {
