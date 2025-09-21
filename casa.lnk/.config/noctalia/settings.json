@@ -42,12 +42,12 @@
                 },
                 {
                     "id": "SystemMonitor",
-                    "showCpuTemp": true,
+                    "showCpuTemp": false,
                     "showCpuUsage": true,
                     "showDiskUsage": false,
                     "showGpuTemp": false,
                     "showMemoryAsPercent": false,
-                    "showMemoryUsage": true,
+                    "showMemoryUsage": false,
                     "showNetworkStats": false
                 },
                 {
@@ -155,7 +155,7 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": false,
+        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -170,7 +170,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758324349000,
+        "lastSeenTs": 1758378900000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -211,12 +211,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-3lx9oy.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//dkzxq5cud3x91.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-j5ky3m.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//3bvp41gzgzk91.jpg"
             }
         ],
         "randomEnabled": true,
