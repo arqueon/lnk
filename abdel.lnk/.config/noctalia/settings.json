@@ -37,8 +37,8 @@
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
-                    "textCommand": "lnk push",
-                    "textIntervalMs": 300000
+                    "textCommand": "",
+                    "textIntervalMs": 300
                 },
                 {
                     "id": "SystemMonitor",
@@ -171,11 +171,11 @@
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
         "lastSeenTs": 1758324349000,
-        "lowUrgencyDuration": 30,
+        "lowUrgencyDuration": 10,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 30
+        "normalUrgencyDuration": 20
     },
     "screenRecorder": {
         "audioCodec": "opus",

@@ -1,5 +1,5 @@
 [general]
-output-filename = "/home/ruben/Pictures/Screenshots/screenshot-%Y-%m-%d_%H:%M:%S.png"
+output-filename = "/home/abdel/Pictures/Screenshots/screenshot-%Y-%m-%d_%H:%M:%S.png"
 no-window-decoration = true
 annotation-size-factor = 1
 save-after-copy = true
