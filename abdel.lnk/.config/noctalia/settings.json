@@ -17,16 +17,15 @@
         "volumeStep": 2
     },
     "bar": {
-        "backgroundOpacity": 0.8,
+        "backgroundOpacity": 0.9500000000000001,
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
         "marginVertical": 0.4,
         "monitors": [
-            "DP-2"
+            "HDMI-A-1"
         ],
-        "position": "left",
-        "showActiveWindowIcon": true,
+        "position": "right",
         "showCapsule": false,
         "widgets": {
             "center": [
@@ -39,16 +38,16 @@
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
                     "textCommand": "",
-                    "textIntervalMs": 3000
+                    "textIntervalMs": 300
                 },
                 {
                     "id": "SystemMonitor",
-                    "showCpuTemp": true,
+                    "showCpuTemp": false,
                     "showCpuUsage": true,
                     "showDiskUsage": false,
                     "showGpuTemp": false,
                     "showMemoryAsPercent": false,
-                    "showMemoryUsage": true,
+                    "showMemoryUsage": false,
                     "showNetworkStats": false
                 },
                 {
@@ -95,7 +94,7 @@
                 },
                 {
                     "id": "SidePanelToggle",
-                    "useDistroLogo": false
+                    "useDistroLogo": true
                 },
                 {
                     "id": "PowerToggle"
@@ -172,11 +171,11 @@
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
         "lastSeenTs": 1758324349000,
-        "lowUrgencyDuration": 30,
+        "lowUrgencyDuration": 10,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 30
+        "normalUrgencyDuration": 20
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -208,12 +207,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-fbdbfa111786b40571eebdda49739d1d.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-7893654fdae47a58ad0d98e56a51eb3e.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-fbdbfa111786b40571eebdda49739d1d.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-7893654fdae47a58ad0d98e56a51eb3e.jpg"
             }
         ],
         "randomEnabled": true,
