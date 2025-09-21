@@ -37,8 +37,8 @@
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
-                    "textCommand": "",
-                    "textIntervalMs": 3000
+                    "textCommand": "lnk push",
+                    "textIntervalMs": 300000
                 },
                 {
                     "id": "SystemMonitor",
@@ -207,12 +207,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-2ff123bc57c2df71fea777cab1c62f7c.jpg"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/kanji-with-blobs_00_1920x1080.png"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-2ff123bc57c2df71fea777cab1c62f7c.jpg"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/xfce_night.png"
             }
         ],
         "randomEnabled": true,
