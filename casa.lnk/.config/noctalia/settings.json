@@ -171,11 +171,11 @@
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
         "lastSeenTs": 1758378900000,
-        "lowUrgencyDuration": 30,
+        "lowUrgencyDuration": 15,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 30
+        "normalUrgencyDuration": 20
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -211,12 +211,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-d80a53db34839794fc599615d082d714.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wallpaper-auto-rotated-d961f251e1579b12a277b719e36266cb.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-d80a53db34839794fc599615d082d714.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.GreenMacaw_EN-US1646325635_UHD.jpg"
             }
         ],
         "randomEnabled": true,
