@@ -23,7 +23,7 @@
         "marginHorizontal": 0.25,
         "marginVertical": 0.4,
         "monitors": [
-            "DP-2"
+            "HDMI-A-1"
         ],
         "position": "right",
         "showCapsule": false,
@@ -39,6 +39,16 @@
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
                     "textCommand": "lnk push",
                     "textIntervalMs": 300000
+                },
+                {
+                    "id": "SystemMonitor",
+                    "showCpuTemp": false,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showGpuTemp": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": false,
+                    "showNetworkStats": false
                 },
                 {
                     "id": "Taskbar"
@@ -197,12 +207,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/7.png"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/kernel2.png"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/wall-02.png"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/pink_unicat.png"
             }
         ],
         "randomEnabled": true,
