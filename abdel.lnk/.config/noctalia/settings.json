@@ -41,13 +41,13 @@
                     "textIntervalMs": 300000
                 },
                 {
-                    "id": "Taskbar"
-                },
-                {
                     "id": "MediaMini",
                     "showAlbumArt": true,
                     "showVisualizer": true,
                     "visualizerType": "wave"
+                },
+                {
+                    "id": "Taskbar"
                 }
             ],
             "right": [
