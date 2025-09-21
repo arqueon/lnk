@@ -41,16 +41,6 @@
                     "textIntervalMs": 3000
                 },
                 {
-                    "id": "SystemMonitor",
-                    "showCpuTemp": false,
-                    "showCpuUsage": true,
-                    "showDiskUsage": false,
-                    "showGpuTemp": false,
-                    "showMemoryAsPercent": false,
-                    "showMemoryUsage": false,
-                    "showNetworkStats": false
-                },
-                {
                     "id": "Taskbar"
                 },
                 {
@@ -76,11 +66,6 @@
                     "id": "Volume"
                 },
                 {
-                    "alwaysShowPercentage": false,
-                    "displayMode": "onhover",
-                    "id": "Microphone"
-                },
-                {
                     "id": "ScreenRecorderIndicator"
                 },
                 {
@@ -95,9 +80,6 @@
                 {
                     "id": "SidePanelToggle",
                     "useDistroLogo": true
-                },
-                {
-                    "id": "PowerToggle"
                 }
             ]
         }
@@ -170,8 +152,8 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758378900000,
-        "lowUrgencyDuration": 15,
+        "lastSeenTs": 1758324349000,
+        "lowUrgencyDuration": 10,
         "monitors": [
             "HDMI-A-1"
         ],
@@ -211,12 +193,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallpaper-auto-rotated-d961f251e1579b12a277b719e36266cb.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//flower-field-2.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//OHR.GreenMacaw_EN-US1646325635_UHD.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-d6q21o.jpg"
             }
         ],
         "randomEnabled": true,

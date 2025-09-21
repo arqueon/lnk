@@ -17,7 +17,7 @@
         "volumeStep": 2
     },
     "bar": {
-        "backgroundOpacity": 0.8,
+        "backgroundOpacity": 0.9500000000000001,
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
@@ -39,16 +39,6 @@
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
                     "textCommand": "",
                     "textIntervalMs": 3000
-                },
-                {
-                    "id": "SystemMonitor",
-                    "showCpuTemp": true,
-                    "showCpuUsage": true,
-                    "showDiskUsage": false,
-                    "showGpuTemp": false,
-                    "showMemoryAsPercent": false,
-                    "showMemoryUsage": true,
-                    "showNetworkStats": false
                 },
                 {
                     "id": "Taskbar"
@@ -76,11 +66,6 @@
                     "id": "Volume"
                 },
                 {
-                    "alwaysShowPercentage": false,
-                    "displayMode": "onhover",
-                    "id": "Microphone"
-                },
-                {
                     "id": "ScreenRecorderIndicator"
                 },
                 {
@@ -95,9 +80,6 @@
                 {
                     "id": "SidePanelToggle",
                     "useDistroLogo": true
-                },
-                {
-                    "id": "PowerToggle"
                 }
             ]
         }

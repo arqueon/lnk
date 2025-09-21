@@ -40,6 +40,11 @@
           "keyColor": "32",
       },
       {
+          "type": "theme",
+          "key": " ├ 󰉼 ",
+          "keyColor": "32"
+      },
+      {
           "type": "icons",
           "key": " ├ 󰀻 ",
           "keyColor": "32",

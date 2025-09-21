@@ -24,7 +24,7 @@ input {
         accel-speed 0.2
         accel-profile "adaptive"
         // scroll-factor 1.0
-        scroll-factor vertical=2.0 horizontal=-3.0
+        scroll-factor vertical=2.0 horizontal=0.2
         // scroll-method "two-finger"
         // scroll-button 273
         // scroll-button-lock
@@ -225,8 +225,7 @@ spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 spawn-at-startup "logseq"
-// spawn-sh-at-startup "env DISPLAY=:2 logseq"
-// spawn-at-startup "logseq-desktop-electron"
+//spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json && logseq"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -288,7 +287,7 @@ cursor {
     xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 24
     hide-when-typing
-    hide-after-inactive-ms 1000
+    // hide-after-inactive-ms 1000
 }
 
 
@@ -518,8 +517,7 @@ binds {
     Mod+F1 { spawn "google-chrome-stable"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
-    // Mod+F4 { spawn-sh "env DISPLAY=:2 logseq"; }
-    // Mod+F4 { spawn "logseq-desktop-electron"; }
+    // Mod+F4 { spawn-sh "rm /home/ruben/.config/Logseq/window-state.json && logseq"; }
     Mod+F4 { spawn "logseq"; }
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "doublecmd"; }
