@@ -37,7 +37,7 @@
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
-                    "textCommand": "lnk push",
+                    "textCommand": " lnk push",
                     "textIntervalMs": 300
                 },
                 {
