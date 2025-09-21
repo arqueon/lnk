@@ -25,7 +25,7 @@
         "monitors": [
             "DP-2"
         ],
-        "position": "left",
+        "position": "right",
         "showCapsule": false,
         "widgets": {
             "center": [
@@ -41,13 +41,13 @@
                     "textIntervalMs": 300000
                 },
                 {
+                    "id": "Taskbar"
+                },
+                {
                     "id": "MediaMini",
                     "showAlbumArt": true,
                     "showVisualizer": true,
                     "visualizerType": "wave"
-                },
-                {
-                    "id": "Taskbar"
                 }
             ],
             "right": [
