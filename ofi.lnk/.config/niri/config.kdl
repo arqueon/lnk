@@ -225,8 +225,6 @@ spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 spawn-at-startup "logseq"
-// spawn-sh-at-startup "env DISPLAY=:2 logseq"
-// spawn-at-startup "logseq-desktop-electron"
 // spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json && logseq"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
@@ -519,8 +517,6 @@ binds {
     Mod+F1 { spawn "google-chrome-stable"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
-    // Mod+F4 { spawn-sh "env DISPLAY=:2 logseq"; }
-    // Mod+F4 { spawn "logseq-desktop-electron"; }
     Mod+F4 { spawn "logseq"; }
     // Mod+F4 { spawn-sh "rm /home/ruben/.config/Logseq/window-state.json && logseq"; }
     Mod+F5 { spawn "zettlr"; }

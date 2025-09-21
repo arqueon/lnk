@@ -225,8 +225,6 @@ spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 // spawn-at-startup "logseq"
-// spawn-sh-at-startup "env DISPLAY=:2 logseq"
-// spawn-at-startup "logseq-desktop-electron"
 spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json && logseq"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
