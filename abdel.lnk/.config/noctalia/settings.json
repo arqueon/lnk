@@ -84,7 +84,7 @@
                 },
                 {
                     "id": "SidePanelToggle",
-                    "useDistroLogo": false
+                    "useDistroLogo": true
                 },
                 {
                     "id": "PowerToggle"
@@ -197,12 +197,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/kanji-with-blobs_00_1920x1080.png"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/7.png"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/xfce_night.png"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/wall-02.png"
             }
         ],
         "randomEnabled": true,
