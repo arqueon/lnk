@@ -211,12 +211,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-85a5233d790de32889b57c67000f7e61.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//tux-dark.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-85a5233d790de32889b57c67000f7e61.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//0305.jpg"
             }
         ],
         "randomEnabled": true,
