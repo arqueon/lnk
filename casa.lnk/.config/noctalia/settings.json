@@ -37,8 +37,8 @@
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
-                    "textCommand": "",
-                    "textIntervalMs": 3000
+                    "textCommand": "lnk push",
+                    "textIntervalMs": 300000
                 },
                 {
                     "id": "SystemMonitor",
@@ -211,12 +211,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//dkzxq5cud3x91.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-60ed8e9f1101aed3f28829e47c56b1a1.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//3bvp41gzgzk91.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-60ed8e9f1101aed3f28829e47c56b1a1.jpg"
             }
         ],
         "randomEnabled": true,
