@@ -154,7 +154,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758324349000,
+        "lastSeenTs": 1758601365000,
         "lowUrgencyDuration": 10,
         "monitors": [
             "HDMI-A-1"
@@ -195,12 +195,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-a7fdd9203336f8cf886133a0dd1eab90.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//loneliness-in-the-big-city.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-a7fdd9203336f8cf886133a0dd1eab90.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-gpxxq7.jpg"
             }
         ],
         "randomEnabled": true,
