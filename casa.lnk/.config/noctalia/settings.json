@@ -32,7 +32,7 @@
             ],
             "left": [
                 {
-                    "icon": "hive",
+                    "icon": "skull",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
@@ -61,7 +61,6 @@
                     "id": "Tray"
                 },
                 {
-                    "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Volume"
                 },
@@ -74,10 +73,14 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "displayFormat": "time-date",
-                    "id": "Clock"
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "useMonospacedFont": true,
+                    "usePrimaryColor": true
                 },
                 {
+                    "icon": "noctalia",
                     "id": "SidePanelToggle",
                     "useDistroLogo": true
                 }
@@ -117,7 +120,6 @@
         "wallpaperChange": ""
     },
     "location": {
-        "monthBeforeDay": false,
         "name": "Guadalajara, Mexico",
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
@@ -193,12 +195,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//flower-field-2.png"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-a7fdd9203336f8cf886133a0dd1eab90.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-d6q21o.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-a7fdd9203336f8cf886133a0dd1eab90.jpg"
             }
         ],
         "randomEnabled": true,
