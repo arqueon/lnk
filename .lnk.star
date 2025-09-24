@@ -1,6 +1,7 @@
 .config/mimeapps.list
 .config/niri
 .config/starship.toml
+.config/swayidle/config
 .config/swaylock
 .config/swaync
 .config/user-dirs.dirs
