@@ -1,5 +1,6 @@
 .config/mimeapps.list
 .config/niri
+.config/satty/config.toml
 .config/starship.toml
 .config/sway
 .config/swayidle/config
