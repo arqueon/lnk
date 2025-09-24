@@ -1,4 +1,5 @@
 .config/Kvantum/kvantum.kvconfig
+.config/doublecmd/doublecmd.cfg
 .config/environment.d
 .config/fastfetch
 .config/fish
