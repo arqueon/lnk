@@ -7,6 +7,7 @@
 .config/qtile/icons
 .config/qtile/rofi
 .config/qtile/settings
+.config/qtile/sxhkd
 .config/qtile/themes
 .config/rofi/config.rasi
 .config/satty/config.toml
