@@ -32,23 +32,13 @@
             ],
             "left": [
                 {
-                    "icon": "hive",
+                    "icon": "skull",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
-                    "textCommand": "lnk push",
-                    "textIntervalMs": 300000
-                },
-                {
-                    "id": "SystemMonitor",
-                    "showCpuTemp": false,
-                    "showCpuUsage": true,
-                    "showDiskUsage": false,
-                    "showGpuTemp": false,
-                    "showMemoryAsPercent": false,
-                    "showMemoryUsage": false,
-                    "showNetworkStats": false
+                    "textCommand": "",
+                    "textIntervalMs": 3000000
                 },
                 {
                     "id": "Taskbar"
@@ -62,23 +52,14 @@
             ],
             "right": [
                 {
-                    "id": "ScreenRecorderIndicator"
-                },
-                {
                     "id": "KeepAwake"
                 },
                 {
                     "id": "Tray"
                 },
                 {
-                    "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Volume"
-                },
-                {
-                    "alwaysShowPercentage": false,
-                    "displayMode": "onhover",
-                    "id": "Microphone"
                 },
                 {
                     "id": "ScreenRecorderIndicator"
@@ -89,15 +70,16 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "displayFormat": "time-date",
-                    "id": "Clock"
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "useMonospacedFont": true,
+                    "usePrimaryColor": true
                 },
                 {
+                    "icon": "noctalia",
                     "id": "SidePanelToggle",
                     "useDistroLogo": true
-                },
-                {
-                    "id": "PowerToggle"
                 }
             ]
         }
@@ -135,7 +117,6 @@
         "wallpaperChange": ""
     },
     "location": {
-        "monthBeforeDay": false,
         "name": "Guadalajara, Mexico",
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
@@ -170,7 +151,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758378900000,
+        "lastSeenTs": 1758734817000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -211,16 +192,16 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//lgmgfn2155h91.png"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-9e1a543473026930ef65eff804765e76.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//image26.png"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-9e1a543473026930ef65eff804765e76.jpg"
             }
         ],
         "randomEnabled": true,
-        "randomIntervalSec": 300,
+        "randomIntervalSec": 1800,
         "setWallpaperOnAllMonitors": true,
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,

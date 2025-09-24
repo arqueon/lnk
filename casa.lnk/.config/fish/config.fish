@@ -550,6 +550,6 @@ set fish_color_search_match --background="#60AEFF"
 # reporting tools - leave this in for ATT
 #fastfetch
 if status --is-interactive && type -q fastfetch
-   fastfetch --config $HOME/.config/fastfetch/mokka.jsonc
+   fastfetch
    pokemon-colorscripts -r --no-title
 end

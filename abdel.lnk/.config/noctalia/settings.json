@@ -38,17 +38,7 @@
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
                     "textCommand": "",
-                    "textIntervalMs": 300
-                },
-                {
-                    "id": "SystemMonitor",
-                    "showCpuTemp": false,
-                    "showCpuUsage": true,
-                    "showDiskUsage": false,
-                    "showGpuTemp": false,
-                    "showMemoryAsPercent": false,
-                    "showMemoryUsage": false,
-                    "showNetworkStats": false
+                    "textIntervalMs": 3000
                 },
                 {
                     "id": "Taskbar"
@@ -74,11 +64,6 @@
                     "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Volume"
-                },
-                {
-                    "alwaysShowPercentage": false,
-                    "displayMode": "onhover",
-                    "id": "Microphone"
                 },
                 {
                     "id": "ScreenRecorderIndicator"

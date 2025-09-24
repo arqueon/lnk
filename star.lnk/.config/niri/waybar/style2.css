@@ -1,0 +1,109 @@
+window#waybar {
+	background-color: rgb(30, 30, 46);
+	color: #cdd6f4;
+	transition-property: background-color;
+	transition-duration: .5s;
+	border-radius: 0px;
+	border: none;
+	/*border: 1px solid rgba(144, 140, 170, 0.35);*/
+}
+
+* {
+	font-family: "MonaspiceNe Nerd Font Propo";
+	font-size: 10pt;
+}
+
+#workspaces button {
+	padding: 7px 8px 7px 8px;
+	background-color: transparent;
+	border-radius: 100%;
+	border: 6px #f5c2e7;
+	font-weight: 800;
+	color: #908caa; 
+}
+
+#workspaces button.urgent {
+	color: #fab387;
+}
+
+#workspaces button:hover {
+	background: rgba(69, 71, 90, 0.65);
+	color: #cdd6f4;
+	border: 12px #f5c2e7;
+	transition: none;
+}
+
+#workspaces button.focused {
+	color: #9ccfd8;
+	border: 12px #f5c2e7;
+}
+
+label.module {
+	padding: 0 10px 0 10px;
+}
+
+box.module button:hover {
+	box-shadow: none;
+	outline: none;
+	font-style: normal;
+	text-shadow: none;
+}
+
+#tray,
+#taskbar {
+	padding: 10px 0 0 0;
+}
+
+menu {
+	background-color: #181825;
+	color: #cdd6f4;
+	border: 1px solid #494d64;
+	padding: 6px;
+	border-radius: 12px;
+}
+
+#tray menu menuitem:hover {
+	background-color: #1e1e2e;
+	color: #f5c2e7;
+	border-radius: 5px;
+}
+
+#window {
+	font-weight: 800;
+	/* Hacky way to brute force width as the niri window module doesn't support the length value */
+	padding: 0px 512px 0px 8px;
+}
+
+#privacy {
+	margin-bottom: 0px
+}
+
+#privacy-item {
+	background-color: #F47910;
+	color: white;
+	margin: 0px 5px 4px 5px; 
+	padding: 6px 4px;
+	border-radius: 32px;
+}
+
+#clock {
+	padding: 4px;
+	margin: 0px 7px 0px 7px;
+}
+
+#power-profiles-daemon, #battery, #pulseaudio {
+	margin: 12px 0px 0px 0px;
+	font-size: 16px;
+}
+
+#battery, #pulseaudio {
+	margin: 10px 0px 0px 0px;
+}
+
+#custom-powermenu  {
+	margin: 12px 0px 12px 0px;
+}
+#custom-notification, 
+#custom-launcher {
+	margin: 12px 0px 12px 0px;
+}
