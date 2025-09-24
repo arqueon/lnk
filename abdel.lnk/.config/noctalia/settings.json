@@ -32,7 +32,7 @@
             ],
             "left": [
                 {
-                    "icon": "hive",
+                    "icon": "ghost",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
@@ -191,12 +191,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/wp3745684.png"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-31a12b6827b35333b7d73b50a17a63be.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/anime-girls-selective-coloring-simple-background-black-background-dark-background-2137099-wallhere.com.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-31a12b6827b35333b7d73b50a17a63be.jpg"
             }
         ],
         "randomEnabled": true,
