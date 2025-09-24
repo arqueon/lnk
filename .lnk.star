@@ -1,5 +1,6 @@
 .config/mimeapps.list
 .config/niri
+.config/qtile/config.py
 .config/rofi/config.rasi
 .config/satty/config.toml
 .config/starship.toml
