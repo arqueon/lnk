@@ -1,3 +1,4 @@
+.config/Kvantum/kvantum.kvconfig
 .config/kitty/kitty.conf
 .config/mimeapps.list
 .config/niri
