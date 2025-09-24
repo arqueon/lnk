@@ -52,16 +52,12 @@
             ],
             "right": [
                 {
-                    "id": "ScreenRecorderIndicator"
-                },
-                {
                     "id": "KeepAwake"
                 },
                 {
                     "id": "Tray"
                 },
                 {
-                    "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Volume"
                 },
@@ -74,10 +70,14 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "displayFormat": "time-date",
-                    "id": "Clock"
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "useMonospacedFont": true,
+                    "usePrimaryColor": true
                 },
                 {
+                    "icon": "noctalia",
                     "id": "SidePanelToggle",
                     "useDistroLogo": true
                 },
@@ -120,7 +120,6 @@
         "wallpaperChange": ""
     },
     "location": {
-        "monthBeforeDay": false,
         "name": "Guadalajara, Mexico",
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
