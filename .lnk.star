@@ -1,4 +1,5 @@
 .config/Kvantum/kvantum.kvconfig
+.config/fastfetch
 .config/fish
 .config/fusuma
 .config/gtk-3.0/settings.ini
