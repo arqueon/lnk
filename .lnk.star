@@ -2,6 +2,7 @@
 .config/niri
 .config/qtile/archive
 .config/qtile/arcobattery.py
+.config/qtile/colors.py
 .config/qtile/config.py
 .config/qtile/icons
 .config/qtile/rofi
