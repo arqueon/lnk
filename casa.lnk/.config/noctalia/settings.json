@@ -38,7 +38,7 @@
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
                     "rightClickExec": "qs -c noctalia-shell ipc call launcher clipboard\n",
                     "textCommand": "",
-                    "textIntervalMs": 3000
+                    "textIntervalMs": 3000000
                 },
                 {
                     "id": "Taskbar"
@@ -51,9 +51,6 @@
                 }
             ],
             "right": [
-                {
-                    "id": "ScreenRecorderIndicator"
-                },
                 {
                     "id": "KeepAwake"
                 },
@@ -154,12 +151,12 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758601365000,
-        "lowUrgencyDuration": 10,
+        "lastSeenTs": 1758734817000,
+        "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 20
+        "normalUrgencyDuration": 30
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -195,16 +192,16 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//loneliness-in-the-big-city.png"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-b439778b883c5a6f081ff71f08475e4b.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-gpxxq7.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-b439778b883c5a6f081ff71f08475e4b.jpg"
             }
         ],
         "randomEnabled": true,
-        "randomIntervalSec": 300,
+        "randomIntervalSec": 1800,
         "setWallpaperOnAllMonitors": true,
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
