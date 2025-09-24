@@ -1,4 +1,5 @@
 .config/Kvantum/kvantum.kvconfig
+.config/hypr
 .config/kitty/kitty.conf
 .config/mimeapps.list
 .config/niri
