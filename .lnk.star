@@ -6,6 +6,7 @@
 .config/qtile/config.py
 .config/qtile/icons
 .config/qtile/rofi
+.config/qtile/scripts
 .config/qtile/settings
 .config/qtile/sxhkd
 .config/qtile/themes
