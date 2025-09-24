@@ -1,3 +1,4 @@
+.config/kitty/kitty.conf
 .config/mimeapps.list
 .config/niri
 .config/niriswitcher
