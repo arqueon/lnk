@@ -1,4 +1,5 @@
 .config/Kvantum/kvantum.kvconfig
+.config/environment.d
 .config/fastfetch
 .config/fish
 .config/fusuma
