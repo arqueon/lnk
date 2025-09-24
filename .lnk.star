@@ -1,5 +1,6 @@
 .config/mimeapps.list
 .config/niri
+.config/niriswitcher
 .config/noctalia/settings.json
 .config/nwg-bar
 .config/qtile/archive
