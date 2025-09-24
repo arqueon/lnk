@@ -1,5 +1,6 @@
 .config/mimeapps.list
 .config/niri
+.config/qtile/archive
 .config/qtile/arcobattery.py
 .config/qtile/config.py
 .config/qtile/icons
