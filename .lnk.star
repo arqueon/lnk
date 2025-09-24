@@ -1,5 +1,6 @@
 .config/Kvantum/kvantum.kvconfig
 .config/gtk-3.0/settings.ini
+.config/gtk-4.0/settings.ini
 .config/hypr
 .config/kitty/kitty.conf
 .config/mimeapps.list
