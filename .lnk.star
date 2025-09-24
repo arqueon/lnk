@@ -1,6 +1,7 @@
 .config/mimeapps.list
 .config/niri
 .config/qtile/config.py
+.config/qtile/icons
 .config/qtile/rofi
 .config/qtile/settings
 .config/qtile/themes
