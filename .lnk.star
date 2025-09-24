@@ -1,5 +1,6 @@
 .config/mimeapps.list
 .config/niri
+.config/nwg-bar
 .config/qtile/archive
 .config/qtile/arcobattery.py
 .config/qtile/colors.py
