@@ -14,7 +14,7 @@
         ],
         "preferredPlayer": "",
         "visualizerType": "linear",
-        "volumeStep": 2
+        "volumeStep": 1
     },
     "bar": {
         "backgroundOpacity": 0.9500000000000001,
@@ -23,7 +23,6 @@
         "marginHorizontal": 0.25,
         "marginVertical": 0.4,
         "monitors": [
-            "HDMI-A-1"
         ],
         "position": "right",
         "showCapsule": false,
@@ -80,12 +79,15 @@
                     "icon": "noctalia",
                     "id": "SidePanelToggle",
                     "useDistroLogo": true
+                },
+                {
+                    "id": "PowerToggle"
                 }
             ]
         }
     },
     "brightness": {
-        "brightnessStep": 5
+        "brightnessStep": 1
     },
     "colorSchemes": {
         "darkMode": true,
@@ -198,6 +200,11 @@
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
                 "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-51864a4fb9d4c4c1d5ffdb20370470cf.jpg"
+            },
+            {
+                "directory": "/home/ruben/.config/variety/Favorites/",
+                "name": "eDP-1",
+                "wallpaper": ".config/variety/Downloaded/Bing/OHR.YoungMoose_EN-US2991221135_UHD.jpg"
             }
         ],
         "randomEnabled": true,
