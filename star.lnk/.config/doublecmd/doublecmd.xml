@@ -160,9 +160,9 @@
     <Position Save="True">
       <Left>0</Left>
       <Top>0</Top>
-      <Width>2043</Width>
-      <Height>1381</Height>
-      <PixelsPerInch>96</PixelsPerInch>
+      <Width>1388</Width>
+      <Height>1019</Height>
+      <PixelsPerInch>115</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>50</Splitter>
     </Position>
@@ -554,7 +554,7 @@
     <Exclude>False</Exclude>
     <ExcludeDirs/>
     <CustomIcons>0</CustomIcons>
-    <PixelsPerInch>96</PixelsPerInch>
+    <PixelsPerInch>115</PixelsPerInch>
     <ShowInMenus Enabled="False">
       <Size>16</Size>
     </ShowInMenus>
@@ -719,14 +719,14 @@
       <Unique>CBE342FA-0B57-4B91-A145-74E64B542809</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
-      <PixelsPerInch>96</PixelsPerInch>
+      <PixelsPerInch>115</PixelsPerInch>
       <CursorBorder Enabled="False"/>
       <Columns>
         <Column>
           <Title>Name</Title>
           <Unique>99EB1E20-AC92-429F-81D2-351B968A9B87</Unique>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>485</Width>
+          <Width>581</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -742,7 +742,7 @@
           <Title>Ext</Title>
           <Unique>A1EB1C0C-7625-41AB-9BEA-05FEED2CFDA8</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>50</Width>
+          <Width>60</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -758,7 +758,7 @@
           <Title>Size</Title>
           <Unique>7D624866-5229-4EED-BCCA-EF80998C191D</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>70</Width>
+          <Width>84</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
@@ -774,7 +774,7 @@
           <Title>Date</Title>
           <Unique>B730F2D4-9BA8-4AC4-A635-596FD35896EC</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>140</Width>
+          <Width>168</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
@@ -790,7 +790,7 @@
           <Title>Attr</Title>
           <Unique>731C5572-9D6D-4BF1-BA61-A4DF3488CB1E</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>100</Width>
+          <Width>120</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
