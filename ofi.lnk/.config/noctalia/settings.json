@@ -87,6 +87,9 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": true
+                },
+                {
+                    "id": "SessionMenu"
                 }
             ]
         }
@@ -201,12 +204,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//earth-in-space.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-q2r9rq.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//Kurzgesagt.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//tokyo-night34.png"
             }
         ],
         "randomEnabled": true,
