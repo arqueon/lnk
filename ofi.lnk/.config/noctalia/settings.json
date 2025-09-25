@@ -14,6 +14,7 @@
         ],
         "preferredPlayer": "",
         "visualizerType": "linear",
+        "volumeOverdrive": false,
         "volumeStep": 2
     },
     "bar": {
@@ -44,7 +45,9 @@
                     "id": "Taskbar"
                 },
                 {
+                    "autoHide": true,
                     "id": "MediaMini",
+                    "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showVisualizer": true,
                     "visualizerType": "wave"
@@ -52,7 +55,7 @@
             ],
             "right": [
                 {
-                    "id": "ScreenRecorderIndicator"
+                    "id": "ScreenRecorder"
                 },
                 {
                     "id": "KeepAwake"
@@ -61,12 +64,11 @@
                     "id": "Tray"
                 },
                 {
-                    "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Volume"
                 },
                 {
-                    "id": "ScreenRecorderIndicator"
+                    "id": "ScreenRecorder"
                 },
                 {
                     "hideWhenZero": true,
@@ -74,11 +76,16 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "displayFormat": "time-date",
-                    "id": "Clock"
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "useMonospacedFont": true,
+                    "usePrimaryColor": true
                 },
                 {
-                    "id": "SidePanelToggle",
+                    "customIconPath": "",
+                    "icon": "noctalia",
+                    "id": "ControlCenter",
                     "useDistroLogo": true
                 }
             ]
@@ -100,6 +107,8 @@
         "monitors": [
             "HDMI-A-1",
             "DP-2"
+        ],
+        "pinnedApps": [
         ]
     },
     "general": {
@@ -117,7 +126,6 @@
         "wallpaperChange": ""
     },
     "location": {
-        "monthBeforeDay": false,
         "name": "Guadalajara, Mexico",
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
@@ -150,14 +158,18 @@
         "nightTemp": "4000"
     },
     "notifications": {
+        "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
+        "enableOSD": true,
         "lastSeenTs": 1758047279000,
+        "location": "top_right",
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 30
+        "normalUrgencyDuration": 30,
+        "respectExpireTimeout": false
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -189,12 +201,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//sakura-blossoms.jpg"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//799052.png"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//archlinux-black.png"
+                "wallpaper": "/home/ruben/.config/variety/Favorites//cute-cat-ball.jpg"
             }
         ],
         "randomEnabled": true,
