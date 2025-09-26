@@ -38,6 +38,7 @@ WP=$1
 # copy to wallpaper dir
 cp "$WP" ~/wallpaper/default.jpg
 cp "$WP" /usr/share/sddm/themes/arcolinux-simplicity/images/background.jpg
+cp "$WP" /usr/share/sddm/themes/simplicity/images/background.jpg
 # qs -c DankMaterialShell ipc call wallpaper set "$WP"
 # Enlightenment
 # Needs Modules/System/DBus Extension loaded to work

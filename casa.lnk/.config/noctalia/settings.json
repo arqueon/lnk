@@ -46,7 +46,6 @@
                     "showCpuTemp": true,
                     "showCpuUsage": true,
                     "showDiskUsage": false,
-                    "showGpuTemp": false,
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
                     "showNetworkStats": false
@@ -55,7 +54,9 @@
                     "id": "Taskbar"
                 },
                 {
+                    "autoHide": true,
                     "id": "MediaMini",
+                    "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showVisualizer": true,
                     "visualizerType": "linear"
@@ -63,7 +64,7 @@
             ],
             "right": [
                 {
-                    "id": "ScreenRecorderIndicator"
+                    "id": "ScreenRecorder"
                 },
                 {
                     "id": "KeepAwake"
@@ -72,17 +73,15 @@
                     "id": "Tray"
                 },
                 {
-                    "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Volume"
                 },
                 {
-                    "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Microphone"
                 },
                 {
-                    "id": "ScreenRecorderIndicator"
+                    "id": "ScreenRecorder"
                 },
                 {
                     "hideWhenZero": true,
@@ -90,17 +89,20 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "displayFormat": "time-date",
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
-                    "reverseDayMonth": false,
-                    "use12HourClock": false
+                    "useMonospacedFont": true,
+                    "usePrimaryColor": true
                 },
                 {
-                    "id": "SidePanelToggle",
+                    "customIconPath": "",
+                    "icon": "noctalia",
+                    "id": "ControlCenter",
                     "useDistroLogo": true
                 },
                 {
-                    "id": "PowerToggle"
+                    "id": "SessionMenu"
                 }
             ]
         }
@@ -219,12 +221,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-9239348a2beb8e34b7d6906b3742f9ec.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-225264ef391211b346837f053092abce.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-9239348a2beb8e34b7d6906b3742f9ec.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-225264ef391211b346837f053092abce.jpg"
             }
         ],
         "randomEnabled": true,
