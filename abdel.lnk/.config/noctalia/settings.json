@@ -14,6 +14,7 @@
         ],
         "preferredPlayer": "",
         "visualizerType": "linear",
+        "volumeOverdrive": false,
         "volumeStep": 2
     },
     "bar": {
@@ -44,7 +45,9 @@
                     "id": "Taskbar"
                 },
                 {
+                    "autoHide": true,
                     "id": "MediaMini",
+                    "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showVisualizer": true,
                     "visualizerType": "wave"
@@ -66,7 +69,7 @@
                     "id": "Microphone"
                 },
                 {
-                    "id": "ScreenRecorderIndicator"
+                    "id": "ScreenRecorder"
                 },
                 {
                     "hideWhenZero": true,
@@ -81,12 +84,13 @@
                     "usePrimaryColor": true
                 },
                 {
+                    "customIconPath": "",
                     "icon": "noctalia",
-                    "id": "SidePanelToggle",
+                    "id": "ControlCenter",
                     "useDistroLogo": true
                 },
                 {
-                    "id": "PowerToggle"
+                    "id": "SessionMenu"
                 }
             ]
         }
@@ -107,6 +111,8 @@
         "monitors": [
             "HDMI-A-1",
             "DP-2"
+        ],
+        "pinnedApps": [
         ]
     },
     "general": {
@@ -156,14 +162,18 @@
         "nightTemp": "4000"
     },
     "notifications": {
+        "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
+        "enableOSD": true,
         "lastSeenTs": 1758324349000,
+        "location": "top_right",
         "lowUrgencyDuration": 10,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 20
+        "normalUrgencyDuration": 20,
+        "respectExpireTimeout": false
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -195,16 +205,16 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-b9e1ebeda110a3e16e918be8f461358e.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-f6e741747907f2c8551cd04630360b41.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-b9e1ebeda110a3e16e918be8f461358e.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-f6e741747907f2c8551cd04630360b41.jpg"
             }
         ],
         "randomEnabled": true,
-        "randomIntervalSec": 300,
+        "randomIntervalSec": 900,
         "setWallpaperOnAllMonitors": true,
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
