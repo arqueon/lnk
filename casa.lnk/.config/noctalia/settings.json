@@ -15,14 +15,14 @@
         "preferredPlayer": "",
         "visualizerType": "linear",
         "volumeOverdrive": false,
-        "volumeStep": 1
+        "volumeStep": 2
     },
     "bar": {
-        "backgroundOpacity": 0.9500000000000001,
+        "backgroundOpacity": 0.8,
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
-        "marginVertical": 0.4,
+        "marginVertical": 0.25,
         "monitors": [
             "HDMI-A-1"
         ],
@@ -33,7 +33,7 @@
             ],
             "left": [
                 {
-                    "icon": "skull",
+                    "icon": "hive",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
@@ -42,18 +42,29 @@
                     "textIntervalMs": 3000
                 },
                 {
+                    "id": "SystemMonitor",
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showGpuTemp": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": true,
+                    "showNetworkStats": false
+                },
+                {
                     "id": "Taskbar"
                 },
                 {
-                    "autoHide": true,
                     "id": "MediaMini",
-                    "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showVisualizer": true,
-                    "visualizerType": "wave"
+                    "visualizerType": "linear"
                 }
             ],
             "right": [
+                {
+                    "id": "ScreenRecorderIndicator"
+                },
                 {
                     "id": "KeepAwake"
                 },
@@ -61,11 +72,17 @@
                     "id": "Tray"
                 },
                 {
+                    "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Volume"
                 },
                 {
-                    "id": "ScreenRecorder"
+                    "alwaysShowPercentage": false,
+                    "displayMode": "onhover",
+                    "id": "Microphone"
+                },
+                {
+                    "id": "ScreenRecorderIndicator"
                 },
                 {
                     "hideWhenZero": true,
@@ -73,26 +90,23 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
-                    "formatVertical": "HH mm - dd MM",
+                    "displayFormat": "time-date",
                     "id": "Clock",
-                    "useMonospacedFont": true,
-                    "usePrimaryColor": true
+                    "reverseDayMonth": false,
+                    "use12HourClock": false
                 },
                 {
-                    "customIconPath": "",
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
+                    "id": "SidePanelToggle",
                     "useDistroLogo": true
                 },
                 {
-                    "id": "SessionMenu"
+                    "id": "PowerToggle"
                 }
             ]
         }
     },
     "brightness": {
-        "brightnessStep": 1
+        "brightnessStep": 5
     },
     "colorSchemes": {
         "darkMode": true,
@@ -114,7 +128,7 @@
     "general": {
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
-        "dimDesktop": true,
+        "dimDesktop": false,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
         "screenRadiusRatio": 1,
@@ -162,7 +176,7 @@
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
         "enableOSD": true,
-        "lastSeenTs": 1758047279000,
+        "lastSeenTs": 1758151572000,
         "location": "top_right",
         "lowUrgencyDuration": 30,
         "monitors": [
@@ -205,16 +219,16 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-678b991bec7f16b7e101c30210dc138e.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-e94968bbe397779890de837e6af32f93.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-678b991bec7f16b7e101c30210dc138e.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-e94968bbe397779890de837e6af32f93.jpg"
             }
         ],
         "randomEnabled": true,
-        "randomIntervalSec": 900,
+        "randomIntervalSec": 300,
         "setWallpaperOnAllMonitors": true,
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
