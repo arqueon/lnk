@@ -15,7 +15,7 @@
         "preferredPlayer": "",
         "visualizerType": "linear",
         "volumeOverdrive": false,
-        "volumeStep": 2
+        "volumeStep": 1
     },
     "bar": {
         "backgroundOpacity": 0.9500000000000001,
@@ -92,7 +92,7 @@
         }
     },
     "brightness": {
-        "brightnessStep": 5
+        "brightnessStep": 1
     },
     "colorSchemes": {
         "darkMode": true,
@@ -214,7 +214,7 @@
             }
         ],
         "randomEnabled": true,
-        "randomIntervalSec": 300,
+        "randomIntervalSec": 900,
         "setWallpaperOnAllMonitors": true,
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
