@@ -32,7 +32,7 @@
             ],
             "left": [
                 {
-                    "icon": "ghost",
+                    "icon": "skull",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
@@ -60,6 +60,10 @@
                 {
                     "displayMode": "onhover",
                     "id": "Volume"
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Microphone"
                 },
                 {
                     "id": "ScreenRecorderIndicator"
@@ -191,12 +195,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-31a12b6827b35333b7d73b50a17a63be.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-b9e1ebeda110a3e16e918be8f461358e.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-31a12b6827b35333b7d73b50a17a63be.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-b9e1ebeda110a3e16e918be8f461358e.jpg"
             }
         ],
         "randomEnabled": true,
