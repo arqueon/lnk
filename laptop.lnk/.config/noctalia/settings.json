@@ -177,7 +177,7 @@
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
         "enableOSD": true,
-        "lastSeenTs": 1758765219000,
+        "lastSeenTs": 1758843485000,
         "location": "top_right",
         "lowUrgencyDuration": 30,
         "monitors": [
@@ -216,7 +216,7 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-d951833ef495b4a09690fcdcd42aee2c.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-4d386eb030d4df34234f450aa68dac33.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
