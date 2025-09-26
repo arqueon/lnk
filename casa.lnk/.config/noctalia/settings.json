@@ -55,9 +55,6 @@
             ],
             "right": [
                 {
-                    "id": "ScreenRecorder"
-                },
-                {
                     "id": "KeepAwake"
                 },
                 {
@@ -87,6 +84,9 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": true
+                },
+                {
+                    "id": "SessionMenu"
                 }
             ]
         }
@@ -205,12 +205,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-8ac3fa3ca68cfe921e50ce140d060c0f.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-3ce11a55e152b05b532883a65a285637.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-8ac3fa3ca68cfe921e50ce140d060c0f.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-3ce11a55e152b05b532883a65a285637.jpg"
             }
         ],
         "randomEnabled": true,

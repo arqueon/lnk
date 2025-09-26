@@ -55,9 +55,6 @@
             ],
             "right": [
                 {
-                    "id": "ScreenRecorder"
-                },
-                {
                     "id": "KeepAwake"
                 },
                 {
