@@ -42,6 +42,15 @@
                     "textIntervalMs": 3000
                 },
                 {
+                    "id": "SystemMonitor",
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": true,
+                    "showNetworkStats": false
+                },
+                {
                     "id": "Taskbar"
                 },
                 {
@@ -63,6 +72,10 @@
                 {
                     "displayMode": "onhover",
                     "id": "Volume"
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Microphone"
                 },
                 {
                     "id": "ScreenRecorder"
@@ -114,7 +127,7 @@
     "general": {
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
-        "dimDesktop": true,
+        "dimDesktop": false,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
         "screenRadiusRatio": 1,
@@ -201,12 +214,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-30c3f9d674b61cb5ca1a0bb513ef72bd.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-8be0f5f1f7b4e3d609267c7e30bfe770.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-30c3f9d674b61cb5ca1a0bb513ef72bd.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-8be0f5f1f7b4e3d609267c7e30bfe770.jpg"
             }
         ],
         "randomEnabled": true,
