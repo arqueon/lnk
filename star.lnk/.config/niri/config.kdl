@@ -24,7 +24,7 @@ input {
         accel-speed 0.2
         accel-profile "adaptive"
         // scroll-factor 1.0
-        scroll-factor vertical=2.0 horizontal=0.1
+        scroll-factor vertical=2.0 horizontal=0.2
         // scroll-method "two-finger"
         // scroll-button 273
         // scroll-button-lock
@@ -535,7 +535,7 @@ binds {
     Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Mod+Shift+I { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
     //Mod+X { spawn "nwg-bar"; }
-    Mod+X { spawn-sh "qs -c noctalia-shell ipc call powerPanel toggle"; }
+    Mod+X { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
     Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
     Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
