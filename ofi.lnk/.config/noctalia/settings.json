@@ -43,11 +43,11 @@
                 },
                 {
                     "id": "SystemMonitor",
-                    "showCpuTemp": true,
+                    "showCpuTemp": false,
                     "showCpuUsage": true,
                     "showDiskUsage": false,
                     "showMemoryAsPercent": false,
-                    "showMemoryUsage": true,
+                    "showMemoryUsage": false,
                     "showNetworkStats": false
                 },
                 {
@@ -214,12 +214,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-8be0f5f1f7b4e3d609267c7e30bfe770.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-551a4ffc13e3ef67976beab97aef52e2.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-8be0f5f1f7b4e3d609267c7e30bfe770.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-551a4ffc13e3ef67976beab97aef52e2.jpg"
             }
         ],
         "randomEnabled": true,
