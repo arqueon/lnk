@@ -161,7 +161,7 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": true,
+        "bluetoothEnabled": false,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -221,12 +221,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-225264ef391211b346837f053092abce.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-c736be3399a4dc64b295125ea6ab5c45.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-225264ef391211b346837f053092abce.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-c736be3399a4dc64b295125ea6ab5c45.jpg"
             }
         ],
         "randomEnabled": true,
