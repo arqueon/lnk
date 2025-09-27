@@ -2,6 +2,7 @@
 .bashrc
 .bin/arcolinux-change-theme
 .config/Kvantum/kvantum.kvconfig
+.config/doublecmd/doublecmd.cfg
 .config/doublecmd/shortcuts.scf
 .config/environment.d/.gitkeep
 .config/environment.d/firefox.conf
