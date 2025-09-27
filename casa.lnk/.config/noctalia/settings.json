@@ -158,7 +158,7 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": false,
+        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -174,7 +174,6 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "enableOSD": true,
         "lastSeenTs": 1758151572000,
         "location": "top_right",
         "lowUrgencyDuration": 30,
@@ -183,6 +182,13 @@
         ],
         "normalUrgencyDuration": 30,
         "respectExpireTimeout": false
+    },
+    "osd": {
+        "autoHideMs": 2000,
+        "enabled": true,
+        "location": "top_right",
+        "monitors": [
+        ]
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -218,16 +224,16 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-e8dacbb107e69e56df69a851a3304f99.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-a5e543df21d7b389b7119f3f9896d140.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-e8dacbb107e69e56df69a851a3304f99.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-a5e543df21d7b389b7119f3f9896d140.jpg"
             }
         ],
         "randomEnabled": true,
-        "randomIntervalSec": 300,
+        "randomIntervalSec": 900,
         "setWallpaperOnAllMonitors": true,
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
