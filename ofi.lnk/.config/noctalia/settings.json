@@ -18,7 +18,7 @@
         "volumeStep": 2
     },
     "bar": {
-        "backgroundOpacity": 0.9500000000000001,
+        "backgroundOpacity": 0.8,
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
@@ -42,6 +42,15 @@
                     "textIntervalMs": 3000
                 },
                 {
+                    "id": "SystemMonitor",
+                    "showCpuTemp": false,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": false,
+                    "showNetworkStats": false
+                },
+                {
                     "id": "Taskbar"
                 },
                 {
@@ -63,6 +72,10 @@
                 {
                     "displayMode": "onhover",
                     "id": "Volume"
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Microphone"
                 },
                 {
                     "id": "ScreenRecorder"
@@ -114,7 +127,7 @@
     "general": {
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
-        "dimDesktop": true,
+        "dimDesktop": false,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
         "screenRadiusRatio": 1,
@@ -201,12 +214,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//wallhaven-q2r9rq.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-551a4ffc13e3ef67976beab97aef52e2.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/Favorites//tokyo-night34.png"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-551a4ffc13e3ef67976beab97aef52e2.jpg"
             }
         ],
         "randomEnabled": true,

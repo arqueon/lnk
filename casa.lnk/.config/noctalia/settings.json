@@ -22,7 +22,7 @@
         "density": "compact",
         "floating": true,
         "marginHorizontal": 0.25,
-        "marginVertical": 0.25,
+        "marginVertical": 0.4,
         "monitors": [
             "HDMI-A-1"
         ],
@@ -33,7 +33,7 @@
             ],
             "left": [
                 {
-                    "icon": "hive",
+                    "icon": "skull",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle\n",
                     "middleClickExec": "qs -c noctalia-shell ipc call wallpaper random\n",
@@ -59,13 +59,10 @@
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showVisualizer": true,
-                    "visualizerType": "linear"
+                    "visualizerType": "wave"
                 }
             ],
             "right": [
-                {
-                    "id": "ScreenRecorder"
-                },
                 {
                     "id": "KeepAwake"
                 },
