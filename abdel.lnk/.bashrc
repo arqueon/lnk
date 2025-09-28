@@ -434,7 +434,7 @@ alias personal='cp -Rf /personal/* ~'
 
 # reporting tools - install when not installed
 pokemon-colorscripts -r --no-title
-fastfetch --config $HOME/.config/fastfetch/mokka.jsonc
+fastfetch
 #neofetch
 #screenfetch
 #alsi
