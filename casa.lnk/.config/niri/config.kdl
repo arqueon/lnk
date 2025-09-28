@@ -451,6 +451,7 @@ window-rule {
     match title=r#"^Found Duplicate Items$"#
     match title=r#"^Print$"#
     match title=r#"^Save File$"#
+    match title=r#"^Satty$"#
     match title="^(file_progress)$"
     match title="^(Smile)$"
     match title="^(confirm)$"
