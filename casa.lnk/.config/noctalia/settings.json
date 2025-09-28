@@ -102,8 +102,7 @@
         "exclusive": false,
         "floatingRatio": 0,
         "monitors": [
-            "HDMI-A-1",
-            "DP-2"
+            "HDMI-A-1"
         ],
         "pinnedApps": [
             "obsidian",
@@ -165,19 +164,20 @@
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
         "lastSeenTs": 1759034128000,
-        "location": "top_right",
-        "lowUrgencyDuration": 30,
+        "location": "bottom_right",
+        "lowUrgencyDuration": 20,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 30,
+        "normalUrgencyDuration": 25,
         "respectExpireTimeout": false
     },
     "osd": {
         "autoHideMs": 2000,
         "enabled": true,
-        "location": "top_right",
+        "location": "bottom",
         "monitors": [
+            "HDMI-A-1"
         ]
     },
     "screenRecorder": {
@@ -214,12 +214,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-90042e3ae572aaa9ed59a1f6d16be8d2.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-55d6372362a051f6468fed9365355990.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-90042e3ae572aaa9ed59a1f6d16be8d2.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-55d6372362a051f6468fed9365355990.jpg"
             }
         ],
         "randomEnabled": true,
