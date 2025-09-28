@@ -548,6 +548,7 @@ binds {
     Mod+Escape { spawn-sh "kitty btop"; }
     Mod+Alt+F { spawn-sh "variety -f && notify-send 'Copied to favorites'"; }
     Mod+Alt+N { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
+    Mod+Alt+S { spawn-sh "systemctl suspend"; }
 
     // Window navigation and focus
     Mod+Left { focus-column-left; }
