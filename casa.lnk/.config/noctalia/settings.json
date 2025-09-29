@@ -93,6 +93,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "matugenSchemeType": "scheme-fruit-salad",
         "predefinedScheme": "",
         "useWallpaperColors": true
     },
@@ -114,6 +115,7 @@
         ]
     },
     "general": {
+        "animationDisabled": false,
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
@@ -147,7 +149,6 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -162,8 +163,8 @@
     "notifications": {
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
-        "doNotDisturb": false,
-        "lastSeenTs": 1759034128000,
+        "doNotDisturb": true,
+        "lastSeenTs": 1759121757000,
         "location": "bottom_right",
         "lowUrgencyDuration": 20,
         "monitors": [
@@ -214,12 +215,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-55d6372362a051f6468fed9365355990.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-44ea1da87b4e6f7890f3d776a8a20488.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-55d6372362a051f6468fed9365355990.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-44ea1da87b4e6f7890f3d776a8a20488.jpg"
             }
         ],
         "randomEnabled": true,
