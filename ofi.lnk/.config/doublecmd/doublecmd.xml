@@ -160,7 +160,7 @@
     <Position Save="True">
       <Left>1922</Left>
       <Top>44</Top>
-      <Width>1136</Width>
+      <Width>1517</Width>
       <Height>1034</Height>
       <PixelsPerInch>96</PixelsPerInch>
       <Maximized>False</Maximized>
@@ -247,7 +247,7 @@
   <Fonts>
     <Main>
       <Name>default</Name>
-      <Size>11</Size>
+      <Size>10</Size>
       <Style>1</Style>
       <Quality>0</Quality>
     </Main>
