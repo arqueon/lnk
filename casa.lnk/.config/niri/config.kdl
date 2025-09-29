@@ -222,8 +222,8 @@ spawn-at-startup "qbittorrent"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
-spawn-at-startup "logseq"
 spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json"
+spawn-at-startup "logseq"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
