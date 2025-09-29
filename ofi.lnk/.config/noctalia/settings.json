@@ -42,15 +42,6 @@
                     "textIntervalMs": 3000
                 },
                 {
-                    "id": "SystemMonitor",
-                    "showCpuTemp": false,
-                    "showCpuUsage": true,
-                    "showDiskUsage": false,
-                    "showMemoryAsPercent": false,
-                    "showMemoryUsage": false,
-                    "showNetworkStats": false
-                },
-                {
                     "id": "Taskbar"
                 },
                 {
@@ -64,18 +55,11 @@
             ],
             "right": [
                 {
-                    "id": "KeepAwake"
-                },
-                {
                     "id": "Tray"
                 },
                 {
                     "displayMode": "onhover",
                     "id": "Volume"
-                },
-                {
-                    "displayMode": "onhover",
-                    "id": "Microphone"
                 },
                 {
                     "id": "ScreenRecorder"
@@ -109,6 +93,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "matugenSchemeType": "scheme-fruit-salad",
         "predefinedScheme": "",
         "useWallpaperColors": true
     },
@@ -118,13 +103,19 @@
         "exclusive": false,
         "floatingRatio": 0,
         "monitors": [
-            "HDMI-A-1",
-            "DP-2"
+            "HDMI-A-1"
         ],
         "pinnedApps": [
+            "obsidian",
+            "google-chrome",
+            "Logseq",
+            "Zotero",
+            "ferdium",
+            "io.gitlab.news_flash.NewsFlash"
         ]
     },
     "general": {
+        "animationDisabled": false,
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
         "dimDesktop": false,
@@ -158,7 +149,6 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -174,15 +164,22 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "enableOSD": true,
-        "lastSeenTs": 1758047279000,
-        "location": "top_right",
-        "lowUrgencyDuration": 30,
+        "lastSeenTs": 1759121757000,
+        "location": "bottom_right",
+        "lowUrgencyDuration": 20,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 30,
+        "normalUrgencyDuration": 25,
         "respectExpireTimeout": false
+    },
+    "osd": {
+        "autoHideMs": 2000,
+        "enabled": true,
+        "location": "bottom",
+        "monitors": [
+            "HDMI-A-1"
+        ]
     },
     "screenRecorder": {
         "audioCodec": "opus",
