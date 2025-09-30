@@ -96,6 +96,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "matugenSchemeType": "scheme-rainbow",
         "predefinedScheme": "",
         "useWallpaperColors": true
     },
@@ -112,6 +113,7 @@
         ]
     },
     "general": {
+        "animationDisabled": false,
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/abdel/.face",
         "dimDesktop": true,
@@ -145,7 +147,6 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -161,15 +162,22 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "enableOSD": true,
         "lastSeenTs": 1759000441000,
-        "location": "top_right",
+        "location": "bottom_right",
         "lowUrgencyDuration": 10,
         "monitors": [
             "HDMI-A-1"
         ],
         "normalUrgencyDuration": 20,
         "respectExpireTimeout": false
+    },
+    "osd": {
+        "autoHideMs": 2000,
+        "enabled": true,
+        "location": "bottom",
+        "monitors": [
+            "HDMI-A-1"
+        ]
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -201,12 +209,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-b96ced2982b94efe0103f6cab513bf90.jpg"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/OHR.PlumParakeet_EN-US9359235355_UHD.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-b96ced2982b94efe0103f6cab513bf90.jpg"
+                "wallpaper": "/home/abdel/.config/variety/Favorites/077.jpg"
             }
         ],
         "randomEnabled": true,
