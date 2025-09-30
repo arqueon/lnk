@@ -164,14 +164,14 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1759161921000,
+        "lastSeenTs": 1759194914000,
         "location": "bottom_right",
         "lowUrgencyDuration": 20,
         "monitors": [
             "HDMI-A-1"
         ],
         "normalUrgencyDuration": 25,
-        "respectExpireTimeout": false
+        "respectExpireTimeout": true
     },
     "osd": {
         "autoHideMs": 2000,
@@ -215,12 +215,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-6d092f05986e72b0b4adc21b547e32c5.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-62786ba00782ead083545fc99143bae2.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-6d092f05986e72b0b4adc21b547e32c5.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-62786ba00782ead083545fc99143bae2.jpg"
             }
         ],
         "randomEnabled": true,
