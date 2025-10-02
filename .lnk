@@ -10,3 +10,4 @@
 .config/gtk-4.0/settings.ini
 .config/kitty/kitty.conf
 .config/niriswitcher/config.toml
+.config/nwg-bar
