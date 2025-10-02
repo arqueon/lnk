@@ -2,3 +2,4 @@
 .config/doublecmd/doublecmd.cfg
 .config/doublecmd/shortcuts.scf
 .config/environment.d
+.config/niriswitcher/config.toml
