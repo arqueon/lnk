@@ -18,7 +18,6 @@
 .config/hypr/scripts/screenshot_full
 .config/kitty/colors.conf
 .config/kitty/current-theme.conf
-.config/kitty/kitty.conf
 .config/mimeapps.list
 .config/niri/config.kdl
 .config/niri/screenshot_swappy.sh
