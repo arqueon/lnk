@@ -2,7 +2,6 @@
 .config/Kvantum/kvantum.kvconfig
 .config/doublecmd/doublecmd.xml
 .config/environment.d/.gitkeep
-.config/environment.d/garuda.conf
 .config/fastfetch/config.jsonc
 .config/fastfetch/config.jsonc.bak
 .config/fastfetch/mokka-fastfetch.png
