@@ -2,7 +2,6 @@
 .bin/arcolinux-change-theme
 .config/Kvantum/kvantum.kvconfig
 .config/doublecmd/doublecmd.xml
-.config/doublecmd/shortcuts.scf
 .config/environment.d/.gitkeep
 .config/environment.d/firefox.conf
 .config/environment.d/garuda.conf
