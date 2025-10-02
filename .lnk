@@ -21,5 +21,6 @@
 .config/satty/config.toml
 .config/starship.toml
 .config/sway
+.config/user-dirs.dirs
 .config/user-dirs.locale
 .face
