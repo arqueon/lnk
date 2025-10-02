@@ -29,6 +29,5 @@
 .config/noctalia/settings.json
 .config/swayidle/config
 .config/swaync
-.config/variety/variety.conf
 .config/xsettingsd/xsettingsd.conf
 .face
