@@ -1,6 +1,5 @@
 .Xresources
 .config/Kvantum/kvantum.kvconfig
-.config/doublecmd/doublecmd.xml
 .config/environment.d/.gitkeep
 .config/fastfetch/config.jsonc
 .config/fastfetch/config.jsonc.bak
