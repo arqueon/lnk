@@ -86,7 +86,6 @@
 .config/qtile/themes/manjaro-theme.txt
 .config/qtile/themes/nord-theme.txt
 .config/starship.toml
-.config/sway/cheatsheet.md
 .config/sway/config
 .config/sway/config.d.azerty/autostart_applications
 .config/sway/config.d.azerty/clamshell
