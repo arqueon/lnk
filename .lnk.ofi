@@ -19,7 +19,6 @@
 .config/niri/waybar/style2.css
 .config/niriswitcher/style.css
 .config/noctalia/settings.json
-.config/qt5ct/qt5ct.conf
 .config/qt6ct/qt6ct.conf
 .config/qtile/archive/config-old.py
 .config/qtile/archive/picom-arco.conf
