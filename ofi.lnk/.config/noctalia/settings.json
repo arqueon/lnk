@@ -6,6 +6,7 @@
         ],
         "position": "top_center",
         "sortByMostUsed": true,
+        "terminalCommand": "xterm -e",
         "useApp2Unit": false
     },
     "audio": {
@@ -42,7 +43,9 @@
                     "textIntervalMs": 3000
                 },
                 {
-                    "id": "Taskbar"
+                    "id": "Taskbar",
+                    "onlyActiveWorkspaces": true,
+                    "onlySameOutput": true
                 },
                 {
                     "autoHide": true,
@@ -70,10 +73,11 @@
                     "showUnreadBadge": true
                 },
                 {
+                    "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
-                    "useMonospacedFont": true,
+                    "useCustomFont": false,
                     "usePrimaryColor": true
                 },
                 {
@@ -105,6 +109,7 @@
         "monitors": [
             "HDMI-A-1"
         ],
+        "onlySameOutput": true,
         "pinnedApps": [
             "obsidian",
             "google-chrome",
@@ -194,9 +199,10 @@
     },
     "settingsVersion": 1,
     "ui": {
-        "fontBillboard": "Inter",
         "fontDefault": "Roboto",
+        "fontDefaultScale": 1,
         "fontFixed": "DejaVu Sans Mono",
+        "fontFixedScale": 1,
         "idleInhibitorEnabled": false,
         "monitorsScaling": [
         ]
@@ -211,12 +217,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-0012b2b114b770a2cb346815faf7d776.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-c9dff7dcae3d16c2fd79c9e76ba80697.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-0012b2b114b770a2cb346815faf7d776.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-c9dff7dcae3d16c2fd79c9e76ba80697.jpg"
             }
         ],
         "randomEnabled": true,
