@@ -4,7 +4,6 @@
 .config/fastfetch/config.jsonc.bak
 .config/fastfetch/mokka-fastfetch.png
 .config/fastfetch/mokka.jsonc
-.config/fish/config.fish
 .config/gtk-3.0/bookmarks
 .config/gtk-3.0/settings.ini
 .config/gtk-4.0/settings.ini
