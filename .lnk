@@ -18,3 +18,4 @@
 .config/rofi/config.rasi
 .config/satty/config.toml
 .config/sway
+.face
