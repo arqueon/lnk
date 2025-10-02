@@ -11,6 +11,7 @@
 .config/gtk-3.0/settings.ini
 .config/gtk-4.0/settings.ini
 .config/kitty/kitty.conf
+.config/mimeapps.list
 .config/niriswitcher/config.toml
 .config/nwg-bar
 .config/qt5ct/qt5ct.conf
