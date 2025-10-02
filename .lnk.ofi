@@ -19,7 +19,6 @@
 .config/noctalia/settings.json
 .config/swayidle/config
 .config/swaylock/config
-.config/user-dirs.locale
 .config/variety/banned.txt
 .config/variety/scripts
 .config/variety/variety.conf
