@@ -1,5 +1,4 @@
 .Xresources
-.bin/arcolinux-change-theme
 .config/Kvantum/kvantum.kvconfig
 .config/doublecmd/doublecmd.xml
 .config/environment.d/.gitkeep
