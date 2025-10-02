@@ -3,6 +3,5 @@
 .config/doublecmd/doublecmd.cfg
 .config/doublecmd/shortcuts.scf
 .config/environment.d
-.config/gtk-3.0
 .config/kitty/kitty.conf
 .config/niriswitcher/config.toml
