@@ -6,6 +6,7 @@
         ],
         "position": "top_center",
         "sortByMostUsed": true,
+        "terminalCommand": "xterm -e",
         "useApp2Unit": false
     },
     "audio": {
@@ -42,7 +43,9 @@
                     "textIntervalMs": 3000
                 },
                 {
-                    "id": "Taskbar"
+                    "id": "Taskbar",
+                    "onlyActiveWorkspaces": false,
+                    "onlySameOutput": false
                 },
                 {
                     "autoHide": true,
@@ -70,10 +73,11 @@
                     "showUnreadBadge": true
                 },
                 {
+                    "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
-                    "useMonospacedFont": true,
+                    "useCustomFont": false,
                     "usePrimaryColor": true
                 },
                 {
@@ -105,6 +109,7 @@
         "monitors": [
             "HDMI-A-1"
         ],
+        "onlySameOutput": false,
         "pinnedApps": [
             "obsidian",
             "google-chrome",
@@ -161,17 +166,17 @@
         "nightTemp": "4000"
     },
     "notifications": {
-        "alwaysOnTop": false,
+        "alwaysOnTop": true,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1759194914000,
+        "lastSeenTs": 1759343570000,
         "location": "bottom_right",
         "lowUrgencyDuration": 20,
         "monitors": [
             "HDMI-A-1"
         ],
         "normalUrgencyDuration": 25,
-        "respectExpireTimeout": true
+        "respectExpireTimeout": false
     },
     "osd": {
         "autoHideMs": 2000,
@@ -194,9 +199,10 @@
     },
     "settingsVersion": 1,
     "ui": {
-        "fontBillboard": "Inter",
         "fontDefault": "Roboto",
+        "fontDefaultScale": 1,
         "fontFixed": "DejaVu Sans Mono",
+        "fontFixedScale": 1,
         "idleInhibitorEnabled": false,
         "monitorsScaling": [
             {
@@ -215,12 +221,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-62786ba00782ead083545fc99143bae2.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-ea13b709a029bb145e715af17129ca1c.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-62786ba00782ead083545fc99143bae2.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-ea13b709a029bb145e715af17129ca1c.jpg"
             }
         ],
         "randomEnabled": true,
