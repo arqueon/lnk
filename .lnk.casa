@@ -27,7 +27,6 @@
 .config/niri/waybar/style2.css
 .config/niriswitcher/style.css
 .config/noctalia/settings.json
-.config/starship.toml
 .config/swayidle/config
 .config/swaylock/config
 .config/swaync
