@@ -28,7 +28,6 @@
 .config/niriswitcher/style.css
 .config/noctalia/settings.json
 .config/swayidle/config
-.config/swaylock/config
 .config/swaync
 .config/user-dirs.dirs
 .config/user-dirs.locale
