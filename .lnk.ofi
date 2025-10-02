@@ -1,4 +1,3 @@
-.Xresources
 .config/environment.d/.gitkeep
 .config/fastfetch/config.jsonc.bak
 .config/fastfetch/mokka-fastfetch.png
