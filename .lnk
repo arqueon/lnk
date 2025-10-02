@@ -3,4 +3,5 @@
 .config/doublecmd/doublecmd.cfg
 .config/doublecmd/shortcuts.scf
 .config/environment.d
+.config/kitty/kitty.conf
 .config/niriswitcher/config.toml
