@@ -44,8 +44,8 @@
                 },
                 {
                     "id": "Taskbar",
-                    "onlyActiveWorkspaces": true,
-                    "onlySameOutput": true
+                    "onlyActiveWorkspaces": false,
+                    "onlySameOutput": false
                 },
                 {
                     "autoHide": true,
@@ -229,7 +229,7 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-3add189f58ba98c721646eea21a25b51.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-bb9e0cac543757ba7258b908671584d5.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
