@@ -188,13 +188,11 @@ overview {
 
 
 // Layer rules
-layer-rule {
+/-layer-rule {
     match namespace="^swww-daemon$"
     place-within-backdrop true
 }
-layer-rule {
-    match namespace="^quickshell-wallpaper$"
-}
+
 layer-rule {
     match namespace="^quickshell-overview$"
     place-within-backdrop true
@@ -224,8 +222,8 @@ spawn-at-startup "qbittorrent"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 // spawn-at-startup "zotero"
+// spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json"
 // spawn-at-startup "logseq"
-//spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json && logseq"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -451,6 +449,7 @@ window-rule {
     match title=r#"^Found Duplicate Items$"#
     match title=r#"^Print$"#
     match title=r#"^Save File$"#
+    match title=r#"^Satty$"#
     match title="^(file_progress)$"
     match title="^(Smile)$"
     match title="^(confirm)$"
@@ -517,7 +516,6 @@ binds {
     Mod+F1 { spawn "google-chrome-stable"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
-    // Mod+F4 { spawn-sh "rm /home/ruben/.config/Logseq/window-state.json && logseq"; }
     Mod+F4 { spawn "logseq"; }
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "doublecmd"; }
@@ -545,6 +543,10 @@ binds {
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn-sh "wl-present mirror"; }
     Mod+Escape { spawn-sh "kitty btop"; }
+    Mod+Alt+F { spawn-sh "variety -f && notify-send 'Copied to favorites'"; }
+    Mod+Alt+N { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
+    Mod+Alt+S { spawn-sh "systemctl suspend"; }
+    Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
 
     // Window navigation and focus
     Mod+Left { focus-column-left; }
