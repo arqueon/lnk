@@ -4,17 +4,17 @@
     <MainToolbar>
       <Row>
         <Command>
-          <ID>{726F2805-406C-495A-A61E-49CF0888F3FE}</ID>
+          <ID>{96FFA623-1145-4954-B861-BB3B4480C84E}</ID>
           <Icon>cm_refresh</Icon>
           <Command>cm_Refresh</Command>
         </Command>
         <Command>
-          <ID>{38EB8B0E-821B-437B-B33D-591CE57D5942}</ID>
+          <ID>{24604196-B75F-4317-ACFC-616E136BAA90}</ID>
           <Icon>cm_runterm</Icon>
           <Command>cm_RunTerm</Command>
         </Command>
         <Command>
-          <ID>{A02DA3F6-832B-4408-8281-98532F2201D9}</ID>
+          <ID>{223309B9-C3CF-4AF2-9E5B-4CB7F5ACB435}</ID>
           <Icon>cm_options</Icon>
           <Command>cm_Options</Command>
         </Command>
@@ -22,17 +22,17 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{20100876-518C-4965-B4D4-47BC3B30B3FD}</ID>
+          <ID>{0F50ABA6-4CDC-40F1-8D73-33F13699F9F6}</ID>
           <Icon>cm_briefview</Icon>
           <Command>cm_BriefView</Command>
         </Command>
         <Command>
-          <ID>{0A7999BF-277F-46D9-8378-827FAD55B039}</ID>
+          <ID>{F0C7D831-0770-4537-9D49-3B50C2F80380}</ID>
           <Icon>cm_columnsview</Icon>
           <Command>cm_ColumnsView</Command>
         </Command>
         <Command>
-          <ID>{8A14C248-D6EE-4D50-99C2-81BAC22FE691}</ID>
+          <ID>{3D0FB470-7015-4953-A4C3-297E90912CED}</ID>
           <Icon>cm_thumbnailsview</Icon>
           <Command>cm_ThumbnailsView</Command>
         </Command>
@@ -40,7 +40,7 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{172AF090-2A44-433E-984C-CDA039C589D5}</ID>
+          <ID>{59166CB2-CAB8-4AFE-93EA-91FE85CAB366}</ID>
           <Icon>cm_flatview</Icon>
           <Command>cm_FlatView</Command>
         </Command>
@@ -48,12 +48,12 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{719A937C-72C6-4047-9796-80C0E30E05D4}</ID>
+          <ID>{3A972AAF-7167-48EC-BA5F-A18B2908C52D}</ID>
           <Icon>cm_viewhistoryprev</Icon>
           <Command>cm_ViewHistoryPrev</Command>
         </Command>
         <Command>
-          <ID>{4D983E6D-511B-4A88-B901-A5F58A9638CB}</ID>
+          <ID>{8F3678DE-D2BC-4B72-8DB7-160007F82D1E}</ID>
           <Icon>cm_viewhistorynext</Icon>
           <Command>cm_ViewHistoryNext</Command>
         </Command>
@@ -61,17 +61,17 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{A4BAC01C-8D19-460E-A170-29240D002384}</ID>
+          <ID>{60AAE293-0B30-414A-AB95-556AC5E62521}</ID>
           <Icon>cm_markplus</Icon>
           <Command>cm_MarkPlus</Command>
         </Command>
         <Command>
-          <ID>{AF722880-BDE3-4464-AA48-AA3458C6EA28}</ID>
+          <ID>{1E4D0105-8592-4031-BE51-42AA79008D18}</ID>
           <Icon>cm_markminus</Icon>
           <Command>cm_MarkMinus</Command>
         </Command>
         <Command>
-          <ID>{40EC2693-A390-4E00-B320-26FCD1BCB352}</ID>
+          <ID>{F61C83AF-86CF-4CE9-A06E-BF19E92B8076}</ID>
           <Icon>cm_markinvert</Icon>
           <Command>cm_MarkInvert</Command>
         </Command>
@@ -79,12 +79,12 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{10DAA77E-C34D-4B9F-8203-07884E5DCC94}</ID>
+          <ID>{A50119F4-3FFF-4BC3-8315-6C19FA8D25D3}</ID>
           <Icon>cm_packfiles</Icon>
           <Command>cm_PackFiles</Command>
         </Command>
         <Command>
-          <ID>{03D18515-D668-43FE-91E3-ABE3B0EFBCE8}</ID>
+          <ID>{445D9D62-EDE1-4CBA-919F-1DB53D992533}</ID>
           <Icon>cm_extractfiles</Icon>
           <Command>cm_ExtractFiles</Command>
         </Command>
@@ -92,27 +92,27 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{46C63602-1D75-4471-B53C-3742809C4D5C}</ID>
+          <ID>{4121133F-7F28-411B-96E9-79C272FC8B31}</ID>
           <Icon>cm_networkconnect</Icon>
           <Command>cm_NetworkConnect</Command>
         </Command>
         <Command>
-          <ID>{50390357-9381-4942-A3C7-F95A04BDBB94}</ID>
+          <ID>{86DF5BE7-C853-4786-ABC3-CE8FE03E2B02}</ID>
           <Icon>cm_search</Icon>
           <Command>cm_Search</Command>
         </Command>
         <Command>
-          <ID>{DE85AB9D-49DA-4D51-B569-E95C2F29D525}</ID>
+          <ID>{53BB4A11-16EE-4756-A4BC-ED4742A89BC0}</ID>
           <Icon>cm_multirename</Icon>
           <Command>cm_MultiRename</Command>
         </Command>
         <Command>
-          <ID>{BB40F29B-8B91-481C-A3F7-05CB5C41B898}</ID>
+          <ID>{1544F565-DAE7-4BC3-AE5E-0F4A97E2F78D}</ID>
           <Icon>cm_syncdirs</Icon>
           <Command>cm_SyncDirs</Command>
         </Command>
         <Command>
-          <ID>{1B4514BE-A620-4145-9B72-2F53D62E1A64}</ID>
+          <ID>{7C5C1795-EA6E-46B8-BF16-1BB4E007B652}</ID>
           <Icon>cm_copyfullnamestoclip</Icon>
           <Command>cm_CopyFullNamesToClip</Command>
         </Command>
@@ -121,22 +121,22 @@
     <MiddleToolbar>
       <Row>
         <Command>
-          <ID>{8ED8D632-170E-4EF6-83A8-83F5A148D761}</ID>
+          <ID>{404B544D-1C6E-4294-8083-D28BC01B16E4}</ID>
           <Icon>cm_view</Icon>
           <Command>cm_View</Command>
         </Command>
         <Command>
-          <ID>{43B384A4-FC9D-4F88-9423-32953B2E64F4}</ID>
+          <ID>{1AC7E475-228D-49A0-83D2-27E53A1F4F41}</ID>
           <Icon>cm_edit</Icon>
           <Command>cm_Edit</Command>
         </Command>
         <Command>
-          <ID>{136426CE-6501-4BC7-8699-ADE6B686FBB4}</ID>
+          <ID>{BC873E13-66A8-47B1-B1BA-0BEAF5B4CEC9}</ID>
           <Icon>cm_copy</Icon>
           <Command>cm_Copy</Command>
         </Command>
         <Command>
-          <ID>{9DA6FE03-7DAC-43AE-B050-236CD0C70D5A}</ID>
+          <ID>{F0956852-264E-416F-B0A3-192859E3F42C}</ID>
           <Icon>cm_rename</Icon>
           <Command>cm_Rename</Command>
         </Command>
@@ -144,12 +144,12 @@
           <Style>True</Style>
         </Separator>
         <Command>
-          <ID>{D2441638-E76D-4589-A99B-A4AABF48DC34}</ID>
+          <ID>{D90C112C-0FC6-4F9A-A039-0670761EAB3F}</ID>
           <Icon>cm_packfiles</Icon>
           <Command>cm_PackFiles</Command>
         </Command>
         <Command>
-          <ID>{30FA2D25-9D62-4D89-B3BB-92553AFDA4CE}</ID>
+          <ID>{04ECFA6A-8AE7-4A2F-B899-0D7AC245C056}</ID>
           <Icon>cm_makedir</Icon>
           <Command>cm_MakeDir</Command>
         </Command>
@@ -158,12 +158,12 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>0</Left>
-      <Top>0</Top>
-      <Width>2043</Width>
-      <Height>1381</Height>
+      <Left>80</Left>
+      <Top>48</Top>
+      <Width>800</Width>
+      <Height>480</Height>
       <PixelsPerInch>96</PixelsPerInch>
-      <Maximized>False</Maximized>
+      <Maximized>True</Maximized>
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
@@ -247,18 +247,18 @@
   <Fonts>
     <Main>
       <Name>default</Name>
-      <Size>11</Size>
+      <Size>10</Size>
       <Style>1</Style>
       <Quality>0</Quality>
     </Main>
     <Editor>
-      <Name>Noto Sans Mono</Name>
+      <Name>JetBrains Mono</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Editor>
     <Viewer>
-      <Name>Noto Sans Mono</Name>
+      <Name>JetBrains Mono</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -270,13 +270,13 @@
       <Quality>0</Quality>
     </ViewerBook>
     <Log>
-      <Name>Noto Sans Mono</Name>
+      <Name>JetBrains Mono</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>Noto Sans Mono</Name>
+      <Name>JetBrains Mono</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -704,7 +704,7 @@
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
   <HotKeySortOrder>0</HotKeySortOrder>
   <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
-  <LastUsedPacker>tgz</LastUsedPacker>
+  <LastUsedPacker>zip</LastUsedPacker>
   <LastDoAnyCommand>cm_Refresh</LastDoAnyCommand>
   <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
   <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
@@ -716,7 +716,7 @@
   <ColumnsSets DefaultTitleHash="540805403">
     <ColumnsSet UseFrameCursor="False">
       <Name>Default</Name>
-      <Unique>CBE342FA-0B57-4B91-A145-74E64B542809</Unique>
+      <Unique>102F0BF2-0079-4851-8B14-44CB417EDB7C</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
       <PixelsPerInch>96</PixelsPerInch>
@@ -724,9 +724,9 @@
       <Columns>
         <Column>
           <Title>Name</Title>
-          <Unique>99EB1E20-AC92-429F-81D2-351B968A9B87</Unique>
+          <Unique>CC022C7E-6D83-4746-A5D2-DF3E6526D77A</Unique>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>485</Width>
+          <Width>250</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -740,7 +740,7 @@
         </Column>
         <Column>
           <Title>Ext</Title>
-          <Unique>A1EB1C0C-7625-41AB-9BEA-05FEED2CFDA8</Unique>
+          <Unique>6B41B617-B946-4CD0-B127-28171C21B66D</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
           <Width>50</Width>
           <Align>0</Align>
@@ -756,7 +756,7 @@
         </Column>
         <Column>
           <Title>Size</Title>
-          <Unique>7D624866-5229-4EED-BCCA-EF80998C191D</Unique>
+          <Unique>781071D1-133C-43FF-9174-645EC194B9BE</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
           <Width>70</Width>
           <Align>1</Align>
@@ -772,7 +772,7 @@
         </Column>
         <Column>
           <Title>Date</Title>
-          <Unique>B730F2D4-9BA8-4AC4-A635-596FD35896EC</Unique>
+          <Unique>25472EE3-D443-4FAE-9FF2-738AE7D1BA2B</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
           <Width>140</Width>
           <Align>1</Align>
@@ -788,7 +788,7 @@
         </Column>
         <Column>
           <Title>Attr</Title>
-          <Unique>731C5572-9D6D-4BF1-BA61-A4DF3488CB1E</Unique>
+          <Unique>26B763D7-A611-4ACC-92B0-A48032DB2859</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
           <Width>100</Width>
           <Align>0</Align>
