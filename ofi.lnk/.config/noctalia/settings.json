@@ -190,7 +190,7 @@
         "audioCodec": "opus",
         "audioSource": "default_output",
         "colorRange": "limited",
-        "directory": "~/Videos",
+        "directory": "$HOME/Videos",
         "frameRate": 60,
         "quality": "very_high",
         "showCursor": true,
@@ -217,12 +217,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-8b5ea738d8d4dc3fbd4ab3cacdcab701.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-98321530c64ea3af087224de7ee43d8d.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-8b5ea738d8d4dc3fbd4ab3cacdcab701.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-98321530c64ea3af087224de7ee43d8d.jpg"
             }
         ],
         "randomEnabled": true,
