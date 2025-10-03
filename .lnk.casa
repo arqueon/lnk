@@ -1,5 +1,4 @@
 .config/gtk-3.0/bookmarks
-.config/hypr/config/variables.conf
 .config/hypr/config/windowrules.conf
 .config/hypr/hyprland.conf
 .config/hypr/pyprland.toml
