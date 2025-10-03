@@ -4,7 +4,6 @@
 .config/Kvantum/kvantum.kvconfig
 .config/Thunar/accels.scm
 .config/Thunar/uca.xml
-.config/doublecmd/doublecmd.cfg
 .config/doublecmd/doublecmd.xml
 .config/doublecmd/shortcuts.scf
 .config/environment.d
