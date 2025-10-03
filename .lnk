@@ -23,6 +23,7 @@
 .config/sway
 .config/swaylock/config
 .config/swaync/config.json
+.config/swaync/style.css
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/variety/banned.txt
