@@ -6,6 +6,7 @@
         ],
         "position": "top_center",
         "sortByMostUsed": true,
+        "terminalCommand": "xterm -e",
         "useApp2Unit": false
     },
     "audio": {
@@ -42,7 +43,9 @@
                     "textIntervalMs": 3000
                 },
                 {
-                    "id": "Taskbar"
+                    "id": "Taskbar",
+                    "onlyActiveWorkspaces": true,
+                    "onlySameOutput": true
                 },
                 {
                     "autoHide": true,
@@ -89,10 +92,11 @@
                     "id": "PowerProfile"
                 },
                 {
+                    "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
-                    "useMonospacedFont": true,
+                    "useCustomFont": false,
                     "usePrimaryColor": true
                 },
                 {
@@ -112,6 +116,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "matugenSchemeType": "scheme-fruit-salad",
         "predefinedScheme": "",
         "useWallpaperColors": true
     },
@@ -123,10 +128,12 @@
         "monitors": [
             "eDP-1"
         ],
+        "onlySameOutput": true,
         "pinnedApps": [
         ]
     },
     "general": {
+        "animationDisabled": false,
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/ruben/.face",
         "dimDesktop": true,
@@ -160,7 +167,6 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -176,15 +182,21 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "enableOSD": true,
-        "lastSeenTs": 1758843485000,
+        "lastSeenTs": 1759086355000,
         "location": "top_right",
-        "lowUrgencyDuration": 30,
+        "lowUrgencyDuration": 20,
         "monitors": [
             "eDP-1"
         ],
-        "normalUrgencyDuration": 30,
+        "normalUrgencyDuration": 25,
         "respectExpireTimeout": false
+    },
+    "osd": {
+        "autoHideMs": 2000,
+        "enabled": true,
+        "location": "top_right",
+        "monitors": [
+        ]
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -199,9 +211,10 @@
     },
     "settingsVersion": 1,
     "ui": {
-        "fontBillboard": "Inter",
         "fontDefault": "Roboto",
+        "fontDefaultScale": 1,
         "fontFixed": "DejaVu Sans Mono",
+        "fontFixedScale": 1,
         "idleInhibitorEnabled": false,
         "monitorsScaling": [
         ]
@@ -216,12 +229,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "eDP-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-4d386eb030d4df34234f450aa68dac33.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-3add189f58ba98c721646eea21a25b51.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-1fb3f13a2e8821be31eae55597c22b05.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-994020ba626a026103dd00b5e4e684ab.jpg"
             }
         ],
         "randomEnabled": true,
