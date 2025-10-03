@@ -2,6 +2,7 @@
 .bashrc
 .bin/arcolinux-change-theme
 .config/Kvantum/kvantum.kvconfig
+.config/Thunar/accels.scm
 .config/doublecmd/doublecmd.cfg
 .config/doublecmd/doublecmd.xml
 .config/doublecmd/shortcuts.scf
