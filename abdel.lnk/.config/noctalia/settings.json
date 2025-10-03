@@ -6,6 +6,7 @@
         ],
         "position": "top_center",
         "sortByMostUsed": true,
+        "terminalCommand": "xterm -e",
         "useApp2Unit": false
     },
     "audio": {
@@ -42,7 +43,9 @@
                     "textIntervalMs": 3000
                 },
                 {
-                    "id": "Taskbar"
+                    "id": "Taskbar",
+                    "onlyActiveWorkspaces": false,
+                    "onlySameOutput": false
                 },
                 {
                     "autoHide": true,
@@ -73,10 +76,11 @@
                     "showUnreadBadge": true
                 },
                 {
+                    "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
-                    "useMonospacedFont": true,
+                    "useCustomFont": false,
                     "usePrimaryColor": true
                 },
                 {
@@ -109,6 +113,7 @@
             "HDMI-A-1",
             "DP-2"
         ],
+        "onlySameOutput": true,
         "pinnedApps": [
         ]
     },
@@ -162,7 +167,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1759000441000,
+        "lastSeenTs": 1759330598000,
         "location": "bottom_right",
         "lowUrgencyDuration": 10,
         "monitors": [
@@ -192,10 +197,11 @@
     },
     "settingsVersion": 1,
     "ui": {
-        "fontBillboard": "Inter",
         "fontDefault": "Roboto",
+        "fontDefaultScale": 1,
         "fontFixed": "DejaVu Sans Mono",
-        "idleInhibitorEnabled": true,
+        "fontFixedScale": 1,
+        "idleInhibitorEnabled": false,
         "monitorsScaling": [
         ]
     },
@@ -209,12 +215,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/OHR.PlumParakeet_EN-US9359235355_UHD.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-60118d1c1288fff6acdf9ccee0f3ed14.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/Favorites/077.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-60118d1c1288fff6acdf9ccee0f3ed14.jpg"
             }
         ],
         "randomEnabled": true,
