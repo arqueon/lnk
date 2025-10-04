@@ -1,21 +1,4 @@
 .config/gtk-3.0/bookmarks
-.config/hypr/config/animations.conf
-.config/hypr/config/autostart.conf
-.config/hypr/config/colors.conf
-.config/hypr/config/decorations.conf
-.config/hypr/config/defaults.conf
-.config/hypr/config/environment.conf
-.config/hypr/config/input.conf
-.config/hypr/config/keybinds.conf
-.config/hypr/config/monitor.conf
-.config/hypr/config/user-config.conf
-.config/hypr/config/variables.conf
-.config/hypr/config/windowrules.conf
-.config/hypr/hyprland.conf
-.config/hypr/pyprland.toml
-.config/hypr/scripts/screenshot
-.config/hypr/scripts/screenshot_area
-.config/hypr/scripts/screenshot_full
 .config/kitty/colors.conf
 .config/kitty/current-theme.conf
 .config/niri/config.kdl
@@ -28,4 +11,5 @@
 .config/niriswitcher/config.toml
 .config/niriswitcher/style.css
 .config/noctalia/settings.json
+.config/satty/config.toml
 .config/swayidle/config
