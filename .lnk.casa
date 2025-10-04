@@ -11,4 +11,5 @@
 .config/niriswitcher/config.toml
 .config/niriswitcher/style.css
 .config/noctalia/settings.json
+.config/satty/config.toml
 .config/swayidle/config
