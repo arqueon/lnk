@@ -546,6 +546,9 @@ binds {
     Mod+Alt+F { spawn-sh "variety -f && notify-send 'Copied to favorites'"; }
     Mod+Alt+N { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
     Mod+Alt+S { spawn-sh "systemctl suspend"; }
+    Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
+    Mod+Alt+2 { spawn-sh "~/.bin/lnk_push.sh"; }
+    Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; }
 
     // Window navigation and focus
     Mod+Left { focus-column-left; }
