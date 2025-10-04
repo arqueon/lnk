@@ -113,7 +113,7 @@
             "HDMI-A-1",
             "DP-2"
         ],
-        "onlySameOutput": true,
+        "onlySameOutput": false,
         "pinnedApps": [
         ]
     },
@@ -215,12 +215,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-d169f9cb1e68519b5eb33f71218b9760.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-aff13f3a5e4231a238fb3e65adcf596b.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-d169f9cb1e68519b5eb33f71218b9760.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-aff13f3a5e4231a238fb3e65adcf596b.jpg"
             }
         ],
         "randomEnabled": true,
