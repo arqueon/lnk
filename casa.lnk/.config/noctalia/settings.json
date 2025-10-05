@@ -97,17 +97,19 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "generateTemplatesForPredefined": true,
         "matugenSchemeType": "scheme-fruit-salad",
         "predefinedScheme": "",
         "useWallpaperColors": true
     },
+    "controlCenter": {
+        "position": "close_to_bar_button"
+    },
     "dock": {
-        "autoHide": true,
         "backgroundOpacity": 0.75,
-        "exclusive": false,
+        "displayMode": "always_visible",
         "floatingRatio": 0,
         "monitors": [
-            "HDMI-A-1"
         ],
         "onlySameOutput": false,
         "pinnedApps": [
@@ -140,19 +142,6 @@
         "use12hourFormat": false,
         "useFahrenheit": false
     },
-    "matugen": {
-        "enableUserTemplates": false,
-        "foot": false,
-        "fuzzel": false,
-        "ghostty": false,
-        "gtk3": true,
-        "gtk4": true,
-        "kitty": true,
-        "pywalfox": false,
-        "qt5": true,
-        "qt6": true,
-        "vesktop": false
-    },
     "network": {
         "wifiEnabled": true
     },
@@ -169,7 +158,7 @@
         "alwaysOnTop": true,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1759640934000,
+        "lastSeenTs": 1759681884000,
         "location": "bottom_right",
         "lowUrgencyDuration": 10,
         "monitors": [
@@ -198,6 +187,17 @@
         "videoSource": "portal"
     },
     "settingsVersion": 1,
+    "templates": {
+        "enableUserTemplates": false,
+        "foot": false,
+        "fuzzel": false,
+        "ghostty": false,
+        "gtk": true,
+        "kitty": true,
+        "pywalfox": false,
+        "qt": true,
+        "vesktop": false
+    },
     "ui": {
         "fontDefault": "Roboto",
         "fontDefaultScale": 1,
@@ -209,9 +209,11 @@
                 "name": "DP-2",
                 "scale": 1.1199999999999999
             }
-        ]
+        ],
+        "tooltipsEnabled": true
     },
     "wallpaper": {
+        "defaultWallpaper": "/etc/xdg/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
         "directory": "/home/ruben/.config/variety/Favorites/",
         "enableMultiMonitorDirectories": true,
         "enabled": true,
@@ -221,12 +223,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-25050072efbcd4f2ae970162ac7d3c15.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-b49953e5193ab45b912467ef72f9079b.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-25050072efbcd4f2ae970162ac7d3c15.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-b49953e5193ab45b912467ef72f9079b.jpg"
             }
         ],
         "randomEnabled": true,
