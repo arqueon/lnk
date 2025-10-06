@@ -167,7 +167,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1759330598000,
+        "lastSeenTs": 1759683612000,
         "location": "bottom_right",
         "lowUrgencyDuration": 10,
         "monitors": [
@@ -215,12 +215,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-aff13f3a5e4231a238fb3e65adcf596b.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-69dcc19bb3df95d9edba3e1fefb127da.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-aff13f3a5e4231a238fb3e65adcf596b.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-69dcc19bb3df95d9edba3e1fefb127da.jpg"
             }
         ],
         "randomEnabled": true,
