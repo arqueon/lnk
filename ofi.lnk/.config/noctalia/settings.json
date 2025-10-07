@@ -97,14 +97,17 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "generateTemplatesForPredefined": true,
         "matugenSchemeType": "scheme-fruit-salad",
         "predefinedScheme": "",
         "useWallpaperColors": true
     },
+    "controlCenter": {
+        "position": "close_to_bar_button"
+    },
     "dock": {
-        "autoHide": true,
         "backgroundOpacity": 0.75,
-        "exclusive": false,
+        "displayMode": "auto_hide",
         "floatingRatio": 0,
         "monitors": [
             "HDMI-A-1"
@@ -140,19 +143,6 @@
         "use12hourFormat": false,
         "useFahrenheit": false
     },
-    "matugen": {
-        "enableUserTemplates": false,
-        "foot": false,
-        "fuzzel": false,
-        "ghostty": false,
-        "gtk3": true,
-        "gtk4": true,
-        "kitty": true,
-        "pywalfox": false,
-        "qt5": true,
-        "qt6": true,
-        "vesktop": false
-    },
     "network": {
         "wifiEnabled": true
     },
@@ -167,15 +157,15 @@
     },
     "notifications": {
         "alwaysOnTop": false,
-        "criticalUrgencyDuration": 30,
+        "criticalUrgencyDuration": 25,
         "doNotDisturb": false,
-        "lastSeenTs": 1759249845000,
+        "lastSeenTs": 1759847564000,
         "location": "bottom_right",
-        "lowUrgencyDuration": 20,
+        "lowUrgencyDuration": 15,
         "monitors": [
             "HDMI-A-1"
         ],
-        "normalUrgencyDuration": 25,
+        "normalUrgencyDuration": 20,
         "respectExpireTimeout": false
     },
     "osd": {
@@ -198,6 +188,17 @@
         "videoSource": "portal"
     },
     "settingsVersion": 1,
+    "templates": {
+        "enableUserTemplates": false,
+        "foot": false,
+        "fuzzel": false,
+        "ghostty": false,
+        "gtk": false,
+        "kitty": false,
+        "pywalfox": false,
+        "qt": false,
+        "vesktop": false
+    },
     "ui": {
         "fontDefault": "Roboto",
         "fontDefaultScale": 1,
@@ -205,9 +206,11 @@
         "fontFixedScale": 1,
         "idleInhibitorEnabled": false,
         "monitorsScaling": [
-        ]
+        ],
+        "tooltipsEnabled": true
     },
     "wallpaper": {
+        "defaultWallpaper": "/etc/xdg/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
         "directory": "/home/ruben/.config/variety/Favorites/",
         "enableMultiMonitorDirectories": true,
         "enabled": true,
@@ -217,12 +220,12 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "DP-2",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-cbd502321208d9ac68809229f8d5c8f0.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-14ffdc79fdc121ce539f7cc3b0a1d7bf.jpg"
             },
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-cbd502321208d9ac68809229f8d5c8f0.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-14ffdc79fdc121ce539f7cc3b0a1d7bf.jpg"
             }
         ],
         "randomEnabled": true,
