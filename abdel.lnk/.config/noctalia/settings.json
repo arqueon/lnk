@@ -110,7 +110,7 @@
     },
     "dock": {
         "backgroundOpacity": 0.75,
-        "displayMode": "always_visible",
+        "displayMode": "auto_hide",
         "floatingRatio": 0,
         "monitors": [
             "HDMI-A-1",
@@ -218,12 +218,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-d2353e5d2decfb0dd6dfe5e1385f039b.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-a998bec431f04d6259fac91a0e2e1932.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-d2353e5d2decfb0dd6dfe5e1385f039b.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-a998bec431f04d6259fac91a0e2e1932.jpg"
             }
         ],
         "randomEnabled": true,
