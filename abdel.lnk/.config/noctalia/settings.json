@@ -100,14 +100,17 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "generateTemplatesForPredefined": true,
         "matugenSchemeType": "scheme-rainbow",
         "predefinedScheme": "",
         "useWallpaperColors": true
     },
+    "controlCenter": {
+        "position": "close_to_bar_button"
+    },
     "dock": {
-        "autoHide": true,
         "backgroundOpacity": 0.75,
-        "exclusive": false,
+        "displayMode": "always_visible",
         "floatingRatio": 0,
         "monitors": [
             "HDMI-A-1",
@@ -137,19 +140,6 @@
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
         "useFahrenheit": false
-    },
-    "matugen": {
-        "enableUserTemplates": false,
-        "foot": false,
-        "fuzzel": false,
-        "ghostty": false,
-        "gtk3": true,
-        "gtk4": true,
-        "kitty": true,
-        "pywalfox": false,
-        "qt5": true,
-        "qt6": true,
-        "vesktop": false
     },
     "network": {
         "wifiEnabled": true
@@ -196,6 +186,17 @@
         "videoSource": "portal"
     },
     "settingsVersion": 1,
+    "templates": {
+        "enableUserTemplates": false,
+        "foot": false,
+        "fuzzel": false,
+        "ghostty": false,
+        "gtk": false,
+        "kitty": false,
+        "pywalfox": false,
+        "qt": false,
+        "vesktop": false
+    },
     "ui": {
         "fontDefault": "Roboto",
         "fontDefaultScale": 1,
@@ -203,9 +204,11 @@
         "fontFixedScale": 1,
         "idleInhibitorEnabled": false,
         "monitorsScaling": [
-        ]
+        ],
+        "tooltipsEnabled": true
     },
     "wallpaper": {
+        "defaultWallpaper": "/etc/xdg/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
         "directory": "/home/abdel/.config/variety/Favorites",
         "enableMultiMonitorDirectories": true,
         "enabled": true,
@@ -215,12 +218,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-69dcc19bb3df95d9edba3e1fefb127da.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-d2353e5d2decfb0dd6dfe5e1385f039b.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-69dcc19bb3df95d9edba3e1fefb127da.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-d2353e5d2decfb0dd6dfe5e1385f039b.jpg"
             }
         ],
         "randomEnabled": true,
