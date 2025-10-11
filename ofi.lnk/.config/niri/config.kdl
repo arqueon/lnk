@@ -221,6 +221,7 @@ spawn-at-startup "qbittorrent"
 // spawn-at-startup "cosmic-ext-alternative-startup"
 spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
+spawn-at-startup "thunderbird"
 spawn-at-startup "zotero"
 spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json"
 spawn-at-startup "logseq"
@@ -323,6 +324,7 @@ window-rule {
 
 window-rule {
     match app-id=r#"[Ff]erdium"#
+    match app-id=r#"^thunderbird"#
     match title=r#"^Planify$"#
     match title=r#"^Akregator$"#
     match app-id=r#"^io.github.martinrotter.rssguard$"#
@@ -520,7 +522,7 @@ binds {
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "doublecmd"; }
     Mod+F7 { spawn "virt-manager"; }
-    Mod+F8 { spawn "qbittorrent"; }
+    Mod+F8 { spawn "thunderbird"; }
     Mod+F9 { spawn "jdownloader"; }
     Mod+F10 { spawn "youtube-music"; }
     Mod+F11 { spawn "github-desktop"; }
