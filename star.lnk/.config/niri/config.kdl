@@ -209,7 +209,8 @@ spawn-sh-at-startup "qs -c noctalia-shell"
 // spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
 spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-spawn-at-startup "swayidle"
+// spawn-at-startup "swayidle"
+spawn-at-startup "stasis"
 spawn-at-startup "blueman-applet"
 // spawn-at-startup "/opt/ExpanDrive/expandrive" "--autorun"
 spawn-sh-at-startup "~/Applications/ExpanDrive-2025.06.20_76b30d38989b8a7085b991b05018a8e0.AppImage"
@@ -323,6 +324,7 @@ window-rule {
 
 window-rule {
     match app-id=r#"[Ff]erdium"#
+    match app-id=r#"^thunderbird"#
     match title=r#"^Planify$"#
     match title=r#"^Akregator$"#
     match app-id=r#"^io.github.martinrotter.rssguard$"#
@@ -520,7 +522,7 @@ binds {
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "doublecmd"; }
     Mod+F7 { spawn "virt-manager"; }
-    Mod+F8 { spawn "qbittorrent"; }
+    Mod+F8 { spawn "thunderbird"; }
     Mod+F9 { spawn "jdownloader"; }
     Mod+F10 { spawn "youtube-music"; }
     Mod+F11 { spawn "github-desktop"; }
