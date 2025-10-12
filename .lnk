@@ -42,6 +42,7 @@
 .config/qtile
 .config/rofi/config.rasi
 .config/starship.toml
+.config/stasis/stasis.rune
 .config/sway
 .config/swaylock/config
 .config/swaync/config.json

@@ -1,0 +1,94 @@
+@author "Dustin Pilgrim"
+@description "Stasis configuration file"
+
+app_default_timeout 300
+
+idle:
+  resume_command "systemctl resume-sessions"
+  pre_suspend_command "notify-send 'System suspending in 5 seconds' && sleep 5"
+  monitor_media true
+  respect_idle_inhibitors true
+
+  inhibit_apps [
+    "vlc"
+    "Spotify"
+    "mpv"
+    r".*\.exe"
+    r"steam_app_.*"
+    r"firefox.*"
+  ]
+
+  # Desktop-only idle actions
+  lock_screen:
+    timeout = 300
+    command "brightnessctl set 10% && sleep 0.2 && swaylock"
+  end
+
+  suspend:
+    timeout 1800
+    command "systemctl suspend"
+  end
+
+  dpms:
+    timeout 330
+    command "niri msg action power-off-monitors"
+  end
+
+  # Laptop-only AC actions
+  on_ac:
+
+    lock_screen:
+      command "brightnessctl set 20% && sleep 0.2 && swaylock"
+      timeout 300
+    end
+
+    dpms:
+      command "niri msg action power-off-monitors"
+      timeout 300
+    end
+
+    brightness:
+      command "brightnessctl set 100%"
+      timeout 0
+    end
+
+    suspend:
+      command "systemctl suspend"
+      timeout 1800
+    end
+
+    custom:
+      command "notify-send 'AC mode custom action'"
+      timeout 300
+    end
+  end
+
+  # Laptop-only battery actions
+  on_battery:
+
+    lock_screen:
+      command "brightnessctl set 10% && sleep 0.2 && swaylock"
+      timeout 300
+    end
+
+    dpms:
+      command "niri msg action power-off-monitors"
+      timeout 300
+    end
+
+    brightness:
+      command "brightnessctl set 30%"
+      timeout 0
+    end
+
+    suspend:
+      command "systemctl suspend"
+      timeout 1200
+    end
+
+    custom:
+      command "notify-send 'Battery mode custom action'"
+      timeout 300
+    end
+  end
+end
