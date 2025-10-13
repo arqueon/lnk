@@ -347,7 +347,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="Zettlr"
+    match title=r#"^Zettlr$"#
     match app-id=r#"libreoffice"#
     match app-id=r#"soffice"#
     open-on-workspace "write"
@@ -450,7 +450,8 @@ window-rule {
     match title=r#"^Zotero Settings$"#
     match title=r#"^Zotero Item Selector$"#
     match title=r#"^Found Duplicate Items$"#
-    match title=r#"^Print$"#
+    match title="^(Preferences)$"
+    match title="^(Print)$"
     match title=r#"^Save File$"#
     match title=r#"^Satty$"#
     match title="^(file_progress)$"
