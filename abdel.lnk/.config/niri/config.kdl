@@ -532,7 +532,7 @@ binds {
 
     // System utility binds
     // Mod+L { spawn "swaylock"; }
-    Mod+L { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+    Mod+L allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Mod+Shift+I { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
     //Mod+X { spawn "nwg-bar"; }
@@ -540,7 +540,7 @@ binds {
     Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
     Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
     Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
-    Mod+Shift+B { spawn-sh "qs -c noctalia-shell"; }
+    Mod+Shift+B allow-when-locked=true { spawn-sh "qs -c noctalia-shell"; }
     Mod+B { spawn "~/.config/niri/waybar.sh"; }
     Mod+M { spawn-sh "mpv /dev/video2"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
