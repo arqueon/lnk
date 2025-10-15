@@ -454,6 +454,7 @@ window-rule {
     match title="^(Print)$"
     match title=r#"^Save File$"#
     match title=r#"^Satty$"#
+    match title=r#"^[Rr][Ee][Mm][Ii][Nn][Dd][Ee][Rr]$"#
     match title="^(file_progress)$"
     match title="^(Smile)$"
     match title="^(confirm)$"
