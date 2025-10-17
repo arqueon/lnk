@@ -5,11 +5,10 @@ input {
     keyboard {
         numlock
         xkb {
-            layout "us"
-            variant "intl"
-            options "ctrl:nocaps"
+            layout "es"
+            options "ctrl:nocaps" 
         }
-        repeat-delay 300
+        repeat-delay 300 
         repeat-rate 25
     }
 
@@ -59,7 +58,7 @@ workspace "chat" {
     open-on-output "HDMI-A-1"
 }
 workspace "web" {
-    open-on-output "DP-2"
+    open-on-output "DVI-D-1"
 }
 workspace "ref" {
     open-on-output "HDMI-A-1"
@@ -71,23 +70,23 @@ workspace "write" {
     open-on-output "HDMI-A-1"
 }
 workspace "files" {
-    open-on-output "DP-2"
+    open-on-output "DVI-D-1"
 }
 workspace "virt" {
-    open-on-output "DP-2"
+    open-on-output "DVI-D-1"
 }
 workspace "media" {
-    open-on-output "DP-2"
+    open-on-output "DVI-D-1"
 }
 
 
 // Outputs configuration
-output "DP-2" {
+output "DVI-D-1" {
     // off
-    mode "3440x1440@165.001"
-    scale 1.22
+    mode "1920x1080@60.000"
+    scale 1.0
     // transform "90"
-    position x=1920 y=0
+    position x=0 y=0
 }
 
 output "HDMI-A-1" {
@@ -95,7 +94,7 @@ output "HDMI-A-1" {
     mode "1920x1080@60.000"
     scale 1.0
     // transform "90"
-    position x=0 y=0
+    position x=1920 y=0
 }
 
 
