@@ -1,4 +1,3 @@
-.config/gtk-3.0/bookmarks
 .config/kitty/colors.conf
 .config/kitty/current-theme.conf
 .config/niri/config.kdl
@@ -7,9 +6,7 @@
 .config/niri/waybar/config.jsonc
 .config/niri/waybar/config2.jsonc
 .config/niri/waybar/style.css
-.config/niri/waybar/style2.css
-.config/niriswitcher/config.toml
+ .config/niriswitcher/config.toml
 .config/niriswitcher/style.css
-.config/noctalia/settings.json
 .config/satty/config.toml
 .config/swayidle/config
