@@ -2,3 +2,4 @@
 .config/niri/config.kdl
 .config/niri/screenshot_swappy.sh
 .config/niri/waybar.sh
+.config/niri/waybar/config.jsonc
