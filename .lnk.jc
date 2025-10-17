@@ -3,3 +3,4 @@
 .config/niri/screenshot_swappy.sh
 .config/niri/waybar.sh
 .config/niri/waybar/config.jsonc
+.config/niri/waybar/config2.jsonc
