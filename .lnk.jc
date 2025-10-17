@@ -4,3 +4,4 @@
 .config/niri/waybar.sh
 .config/niri/waybar/config.jsonc
 .config/niri/waybar/config2.jsonc
+.config/niri/waybar/style.css
