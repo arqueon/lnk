@@ -1,0 +1,13 @@
+window-rule {
+    match app-id="thunar"
+    open-floating true
+    default-column-width { fixed 900; }
+    default-floating-position x=130 y=200 relative-to="bottom-right"
+    min-width 900
+    min-height 700
+    opacity 0.9
+}
+
+
+    Mod+Shift+Z { spawn "thunar"; }
+    Mod+Shift+Return { spawn-sh "nemo /home/ruben/Downloads/"; }

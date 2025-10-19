@@ -754,3 +754,5 @@ environment {
     MANGOHUD "0"
     MANGOHUD_DLSYM "1"
 }
+
+// include "user.kdl"
