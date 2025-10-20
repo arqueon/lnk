@@ -521,7 +521,7 @@ binds {
     Mod+Return { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
     Mod+period { spawn-sh "rofi -show drun"; }
-    Mod+Shift+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
+    Mod+Shift+Return { spawn-sh "thunar"; }
     Mod+F1 { spawn "google-chrome-stable"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
