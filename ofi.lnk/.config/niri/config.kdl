@@ -55,30 +55,30 @@ input {
 
 
 // Workspaces configuration
-// workspace "chat" {
-//     open-on-output "HDMI-A-1"
-// }
-// workspace "web" {
-//     open-on-output "DP-2"
-// }
-// workspace "ref" {
-//     open-on-output "HDMI-A-1"
-// }
-// workspace "notes" {
-//     open-on-output "HDMI-A-1"
-// }
-// workspace "write" {
-//     open-on-output "HDMI-A-1"
-// }
-// workspace "files" {
-//     open-on-output "DP-2"
-// }
-// workspace "virt" {
-//     open-on-output "DP-2"
-// }
-// workspace "media" {
-//     open-on-output "DP-2"
-// }
+workspace "chat" {
+    open-on-output "HDMI-A-1"
+}
+workspace "web" {
+    open-on-output "DP-2"
+}
+workspace "ref" {
+    open-on-output "HDMI-A-1"
+}
+workspace "notes" {
+    open-on-output "HDMI-A-1"
+}
+workspace "write" {
+    open-on-output "HDMI-A-1"
+}
+workspace "files" {
+    open-on-output "DP-2"
+}
+workspace "virt" {
+    open-on-output "DP-2"
+}
+workspace "media" {
+    open-on-output "DP-2"
+}
 
 
 // Outputs configuration
@@ -314,16 +314,14 @@ window-rule {
 
 window-rule {
     match app-id="Logseq"
-    //open-on-workspace "notes"
-    open-on-output "HDMI-A-1"
+    open-on-workspace "notes"
     open-maximized true
     open-focused false
 }
 
 window-rule {
     match title=r#"^Zotero$"#
-    //open-on-workspace "ref"
-    open-on-output "HDMI-A-1"
+    open-on-workspace "ref"
     open-maximized true
     open-focused false
 }
@@ -334,23 +332,20 @@ window-rule {
     match title=r#"^Planify$"#
     match title=r#"^Akregator$"#
     match app-id=r#"^io.github.martinrotter.rssguard$"#
-    open-on-output "HDMI-A-1"
-    //open-on-workspace "chat"
+    open-on-workspace "chat"
     open-maximized true
     open-focused true
 }
 
 window-rule {
     match title=r#"^Newsflash$"#
-    open-on-output "HDMI-A-1"
-    //open-on-workspace "chat"
+    open-on-workspace "chat"
     default-column-width { proportion 0.6; }
 }
 
 window-rule {
     match title=r#"^Waydroid$"#
-    open-on-output "DP-2"
-    //open-on-workspace "web"
+    open-on-workspace "web"
     default-column-width { proportion 0.35; }
 }
 
@@ -358,8 +353,7 @@ window-rule {
     match title=r#"^Zettlr$"#
     match app-id=r#"libreoffice"#
     match app-id=r#"soffice"#
-    open-on-output "HDMI-A-1"
-    //open-on-workspace "write"
+    open-on-workspace "write"
     open-maximized true
     open-focused true
 }
@@ -375,8 +369,7 @@ window-rule {
     match app-id="virt-manager" title="Virtual Machine Manager"
     match app-id="virt-manager" title="Gestor de máquinas virtuales"
     default-column-width { proportion 0.25; }
-    open-on-output "HDMI-A-1"
-    //open-on-workspace "virt"
+    open-on-workspace "virt"
 }
 
 window-rule {
@@ -396,8 +389,7 @@ window-rule {
     match title=r#"^GitHub Desktop$"#
     match app-id=r#"^GitHub Desktop$"#
     default-column-width { proportion 0.6; }
-    open-on-output "DP-2"
-    //open-on-workspace "files"
+    open-on-workspace "files"
 }
 
 window-rule {
@@ -411,8 +403,7 @@ window-rule {
     match app-id=r#"qbittorrent"#
     match title=r#"^JDownloader 2$"#
     default-column-width { proportion 0.3; }
-    open-on-output "DP-2"
-    //open-on-workspace "files"
+    open-on-workspace "files"
     open-focused false
 }
 
@@ -507,8 +498,7 @@ window-rule {
     match app-id=r#"com.github.th_ch.youtube_music"#
     match app-id=r#"Steam"#
     default-column-width { proportion 0.7; }
-    open-on-output "DP-2"
-    //open-on-workspace "media"
+    open-on-workspace "media"
 }
 
 
