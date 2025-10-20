@@ -229,7 +229,7 @@ spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json"
 spawn-at-startup "logseq"
-// spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
+spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
 // Client-side decorations
@@ -457,6 +457,7 @@ window-rule {
     match title="^(Print)$"
     match title=r#"^Save File$"#
     match title=r#"^Satty$"#
+    match title=r#"^[Rr][Ee][Mm][Ii][Nn][Dd][Ee][Rr]$"#
     match title="^(file_progress)$"
     match title="^(Smile)$"
     match title="^(confirm)$"
@@ -780,3 +781,5 @@ environment {
     MANGOHUD "0"
     MANGOHUD_DLSYM "1"
 }
+
+// include "user.kdl"
