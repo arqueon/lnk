@@ -101,7 +101,8 @@ output "HDMI-A-1" {
 
 // Switch events
 switch-events {
-    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }    
+    lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }    
+    // lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }    
     // lid-close { spawn "swaylock"; }
 }
 
@@ -200,15 +201,15 @@ layer-rule {
 
 
 // Startup applications
-spawn-sh-at-startup "bash -c wl-paste --watch cliphist store &"
-// spawn-at-startup "xwayland-satellite"
-// spawn-at-startup "swww-daemon"
-// spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "~/.config/niri/waybar.sh"
 // spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-sh-at-startup "dms run"
+// spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "swww-daemon"
+// spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "swayosd-server"
 // spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
+spawn-sh-at-startup "bash -c wl-paste --watch cliphist store &"
 spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 // spawn-at-startup "swayidle"
@@ -228,7 +229,7 @@ spawn-at-startup "thunderbird"
 spawn-at-startup "zotero"
 spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json"
 spawn-at-startup "logseq"
-spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
+// spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
 // Client-side decorations
