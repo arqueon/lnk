@@ -55,30 +55,30 @@ input {
 
 
 // Workspaces configuration
-workspace "chat" {
-    open-on-output "HDMI-A-1"
-}
-workspace "web" {
-    open-on-output "DP-2"
-}
-workspace "ref" {
-    open-on-output "HDMI-A-1"
-}
-workspace "notes" {
-    open-on-output "HDMI-A-1"
-}
-workspace "write" {
-    open-on-output "HDMI-A-1"
-}
-workspace "files" {
-    open-on-output "DP-2"
-}
-workspace "virt" {
-    open-on-output "DP-2"
-}
-workspace "media" {
-    open-on-output "DP-2"
-}
+// workspace "chat" {
+//     open-on-output "HDMI-A-1"
+// }
+// workspace "web" {
+//     open-on-output "DP-2"
+// }
+// workspace "ref" {
+//     open-on-output "HDMI-A-1"
+// }
+// workspace "notes" {
+//     open-on-output "HDMI-A-1"
+// }
+// workspace "write" {
+//     open-on-output "HDMI-A-1"
+// }
+// workspace "files" {
+//     open-on-output "DP-2"
+// }
+// workspace "virt" {
+//     open-on-output "DP-2"
+// }
+// workspace "media" {
+//     open-on-output "DP-2"
+// }
 
 
 // Outputs configuration
@@ -200,17 +200,19 @@ layer-rule {
 
 
 // Startup applications
+spawn-sh-at-startup "bash -c wl-paste --watch cliphist store &"
 // spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "swww-daemon"
 // spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "~/.config/niri/waybar.sh"
-spawn-sh-at-startup "qs -c noctalia-shell"
+// spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-sh-at-startup "dms run"
 // spawn-at-startup "swayosd-server"
 // spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
 spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 // spawn-at-startup "swayidle"
-spawn-at-startup "stasis"
+// spawn-at-startup "stasis"
 spawn-at-startup "blueman-applet"
 // spawn-at-startup "/opt/ExpanDrive/expandrive" "--autorun"
 spawn-sh-at-startup "~/Applications/ExpanDrive-2025.06.20_76b30d38989b8a7085b991b05018a8e0.AppImage"
@@ -311,14 +313,16 @@ window-rule {
 
 window-rule {
     match app-id="Logseq"
-    open-on-workspace "notes"
+    //open-on-workspace "notes"
+    open-on-output "HDMI-A-1"
     open-maximized true
     open-focused false
 }
 
 window-rule {
     match title=r#"^Zotero$"#
-    open-on-workspace "ref"
+    //open-on-workspace "ref"
+    open-on-output "HDMI-A-1"
     open-maximized true
     open-focused false
 }
@@ -329,20 +333,23 @@ window-rule {
     match title=r#"^Planify$"#
     match title=r#"^Akregator$"#
     match app-id=r#"^io.github.martinrotter.rssguard$"#
-    open-on-workspace "chat"
+    open-on-output "HDMI-A-1"
+    //open-on-workspace "chat"
     open-maximized true
     open-focused true
 }
 
 window-rule {
     match title=r#"^Newsflash$"#
-    open-on-workspace "chat"
+    open-on-output "HDMI-A-1"
+    //open-on-workspace "chat"
     default-column-width { proportion 0.6; }
 }
 
 window-rule {
     match title=r#"^Waydroid$"#
-    open-on-workspace "web"
+    open-on-output "DP-2"
+    //open-on-workspace "web"
     default-column-width { proportion 0.35; }
 }
 
@@ -350,7 +357,8 @@ window-rule {
     match title=r#"^Zettlr$"#
     match app-id=r#"libreoffice"#
     match app-id=r#"soffice"#
-    open-on-workspace "write"
+    open-on-output "HDMI-A-1"
+    //open-on-workspace "write"
     open-maximized true
     open-focused true
 }
@@ -366,7 +374,8 @@ window-rule {
     match app-id="virt-manager" title="Virtual Machine Manager"
     match app-id="virt-manager" title="Gestor de máquinas virtuales"
     default-column-width { proportion 0.25; }
-    open-on-workspace "virt"
+    open-on-output "HDMI-A-1"
+    //open-on-workspace "virt"
 }
 
 window-rule {
@@ -386,7 +395,8 @@ window-rule {
     match title=r#"^GitHub Desktop$"#
     match app-id=r#"^GitHub Desktop$"#
     default-column-width { proportion 0.6; }
-    open-on-workspace "files"
+    open-on-output "DP-2"
+    //open-on-workspace "files"
 }
 
 window-rule {
@@ -400,7 +410,8 @@ window-rule {
     match app-id=r#"qbittorrent"#
     match title=r#"^JDownloader 2$"#
     default-column-width { proportion 0.3; }
-    open-on-workspace "files"
+    open-on-output "DP-2"
+    //open-on-workspace "files"
     open-focused false
 }
 
@@ -495,7 +506,8 @@ window-rule {
     match app-id=r#"com.github.th_ch.youtube_music"#
     match app-id=r#"Steam"#
     default-column-width { proportion 0.7; }
-    open-on-workspace "media"
+    open-on-output "DP-2"
+    //open-on-workspace "media"
 }
 
 
@@ -511,7 +523,8 @@ binds {
     Mod+Ctrl+Shift+S { toggle-keyboard-shortcuts-inhibit; }
 
     // Application launchers and binds
-    Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    // Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+Space hotkey-overlay-title="Application Launcher" { spawn-sh "dms ipc call spotlight toggle"; }
     Mod+D { spawn "anyrun"; }
     Mod+Return { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
@@ -533,15 +546,23 @@ binds {
 
     // System utility binds
     // Mod+L { spawn "swaylock"; }
-    Mod+L allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
-    Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
-    Mod+Shift+I { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
+    //Mod+L allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+    Mod+L allow-when-locked=true hotkey-overlay-title="Lock Screen" { spawn-sh "dms ipc call lock lock"; }
+    //Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+    Ctrl+Alt+Escape { spawn-sh "dms ipc call lock lock"; }
     //Mod+X { spawn "nwg-bar"; }
-    Mod+X { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
-    Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
-    Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
-    Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
-    Mod+Shift+B allow-when-locked=true { spawn-sh "qs -c noctalia-shell"; }
+    //Mod+X { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+X hotkey-overlay-title="Power Menu" { spawn-sh "dms ipc call powermenu toggle"; }
+    //Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
+    //Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    Mod+N hotkey-overlay-title="Notification Center" { spawn-sh "dms ipc call notifications toggle"; }
+    //Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
+    Mod+Shift+C hotkey-overlay-title="Clipboard Manager" { spawn-sh "dms ipc call clipboard toggle"; }
+    //Mod+Shift+B allow-when-locked=true { spawn-sh "qs -c noctalia-shell"; }
+    Mod+Shift+B allow-when-locked=true { spawn-sh "dms run"; }
+    Mod+Alt+T hotkey-overlay-title="Task Manager" { spawn-sh "dms ipc call processlist toggle"; }
+    Mod+Alt+P hotkey-overlay-title="Notepad" { spawn-sh "dms ipc call notepad toggle"; }
+    Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
     Mod+B { spawn "~/.config/niri/waybar.sh"; }
     Mod+M { spawn-sh "mpv /dev/video2"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
@@ -660,14 +681,26 @@ binds {
     // F11 { spawn "swayosd-client" "--output-volume" "lower"; }
     // F12 { spawn "swayosd-client" "--output-volume" "raise"; }
 
-    XF86AudioMute { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    XF86AudioLowerVolume { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    XF86AudioRaiseVolume { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-    XF86MonBrightnessDown { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
-    XF86MonBrightnessUp { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
-    F10 { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    F11 { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    F12 { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    // XF86AudioMute { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    // XF86AudioLowerVolume { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    // XF86AudioRaiseVolume { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    // XF86MonBrightnessDown { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+    // XF86MonBrightnessUp { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    // F10 { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    // F11 { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    // F12 { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "dms ipc call audio increment 3"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "dms ipc call audio decrement 3"; }
+    XF86AudioMute allow-when-locked=true { spawn-sh "dms ipc call audio mute"; }
+    XF86AudioMicMute allow-when-locked=true { spawn-sh "dms ipc call audio micmute"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "increment" "5" ""; }
+    // You can override the default device for e.g. keyboards by adding the device name to the last param
+    XF86MonBrightnessDown allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""; }
+    F10 { spawn-sh "dms ipc call audio mute"; }
+    F11 { spawn-sh "dms ipc call audio decrement 3"; }
+    F12 { spawn-sh "dms ipc call audio increment 3"; }
+
 
     // Mouse wheel binds
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
@@ -688,8 +721,11 @@ binds {
     // Touchpad binds
     // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
     // Mod+TouchpadScrollUp { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
-    Mod+TouchpadScrollDown { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    Mod+TouchpadScrollUp { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    // Mod+TouchpadScrollDown { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    // Mod+TouchpadScrollUp { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    Mod+TouchpadScrollDown { spawn-sh "dms ipc call audio decrement 3"; }
+    Mod+TouchpadScrollUp { spawn-sh "dms ipc call audio increment 3"; }
+
 
     // Switcher binds
     Alt+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
