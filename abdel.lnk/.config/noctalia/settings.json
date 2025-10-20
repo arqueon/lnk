@@ -43,12 +43,14 @@
                     "textIntervalMs": 3000
                 },
                 {
+                    "colorizeIcons": false,
+                    "hideMode": "hidden",
                     "id": "Taskbar",
                     "onlyActiveWorkspaces": false,
                     "onlySameOutput": false
                 },
                 {
-                    "autoHide": true,
+                    "hideMode": "hidden",
                     "id": "MediaMini",
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
@@ -61,6 +63,9 @@
                     "id": "KeepAwake"
                 },
                 {
+                    "blacklist": [
+                    ],
+                    "colorizeIcons": false,
                     "id": "Tray"
                 },
                 {
@@ -95,6 +100,9 @@
             ]
         }
     },
+    "battery": {
+        "chargingMode": 0
+    },
     "brightness": {
         "brightnessStep": 5
     },
@@ -106,10 +114,63 @@
         "useWallpaperColors": true
     },
     "controlCenter": {
-        "position": "close_to_bar_button"
+        "cards": [
+            {
+                "enabled": true,
+                "id": "profile-card"
+            },
+            {
+                "enabled": true,
+                "id": "shortcuts-card"
+            },
+            {
+                "enabled": true,
+                "id": "audio-card"
+            },
+            {
+                "enabled": true,
+                "id": "weather-card"
+            },
+            {
+                "enabled": true,
+                "id": "media-sysmon-card"
+            }
+        ],
+        "position": "close_to_bar_button",
+        "shortcuts": {
+            "left": [
+                {
+                    "id": "WiFi"
+                },
+                {
+                    "id": "Bluetooth"
+                },
+                {
+                    "id": "ScreenRecorder"
+                },
+                {
+                    "id": "WallpaperSelector"
+                }
+            ],
+            "right": [
+                {
+                    "id": "Notifications"
+                },
+                {
+                    "id": "PowerProfile"
+                },
+                {
+                    "id": "KeepAwake"
+                },
+                {
+                    "id": "NightLight"
+                }
+            ]
+        }
     },
     "dock": {
         "backgroundOpacity": 0.75,
+        "colorizeIcons": false,
         "displayMode": "auto_hide",
         "floatingRatio": 0,
         "monitors": [
@@ -124,9 +185,11 @@
         "animationDisabled": false,
         "animationSpeed": 1.2400000000000002,
         "avatarImage": "/home/abdel/.face",
+        "compactLockScreen": false,
         "dimDesktop": true,
         "forceBlackScreenCorners": false,
         "radiusRatio": 0,
+        "scaleRatio": 1,
         "screenRadiusRatio": 1,
         "showScreenCorners": false
     },
@@ -139,7 +202,8 @@
         "name": "Guadalajara, Mexico",
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
-        "useFahrenheit": false
+        "useFahrenheit": false,
+        "weatherEnabled": true
     },
     "network": {
         "wifiEnabled": true
@@ -157,7 +221,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1759683612000,
+        "lastSeenTs": 1760196804000,
         "location": "bottom_right",
         "lowUrgencyDuration": 10,
         "monitors": [
@@ -167,6 +231,7 @@
         "respectExpireTimeout": false
     },
     "osd": {
+        "alwaysOnTop": false,
         "autoHideMs": 2000,
         "enabled": true,
         "location": "bottom",
@@ -185,17 +250,25 @@
         "videoCodec": "h264",
         "videoSource": "portal"
     },
-    "settingsVersion": 1,
+    "settingsVersion": 16,
+    "setupCompleted": true,
     "templates": {
+        "discord": false,
+        "discord_armcord": false,
+        "discord_dorion": false,
+        "discord_equibop": false,
+        "discord_lightcord": false,
+        "discord_vesktop": false,
+        "discord_webcord": false,
         "enableUserTemplates": false,
         "foot": false,
         "fuzzel": false,
         "ghostty": false,
         "gtk": false,
+        "kcolorscheme": false,
         "kitty": false,
         "pywalfox": false,
-        "qt": false,
-        "vesktop": false
+        "qt": false
     },
     "ui": {
         "fontDefault": "Roboto",
@@ -203,8 +276,6 @@
         "fontFixed": "DejaVu Sans Mono",
         "fontFixedScale": 1,
         "idleInhibitorEnabled": false,
-        "monitorsScaling": [
-        ],
         "tooltipsEnabled": true
     },
     "wallpaper": {
@@ -218,12 +289,12 @@
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "HDMI-A-1",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-a998bec431f04d6259fac91a0e2e1932.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-f37be7f25995de846a3bc93670c5b51f.jpg"
             },
             {
                 "directory": "/home/abdel/.config/variety/Favorites",
                 "name": "DP-2",
-                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-a998bec431f04d6259fac91a0e2e1932.jpg"
+                "wallpaper": "/home/abdel/.config/variety/wallpaper/wallpaper-auto-rotated-f37be7f25995de846a3bc93670c5b51f.jpg"
             }
         ],
         "randomEnabled": true,
