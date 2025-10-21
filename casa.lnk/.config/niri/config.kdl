@@ -768,7 +768,7 @@ environment {
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
     // QT_QPA_PLATFORMTHEME "gtk3"
     // QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-    QT_QPA_PLATFORMTHEME "qt5ct"
+    // QT_QPA_PLATFORMTHEME "qt5ct"
     QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 
 
