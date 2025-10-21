@@ -209,7 +209,7 @@ spawn-sh-at-startup "dms run"
 // spawn-sh-at-startup "swww img ~/wallpaper/default.jpg"
 // spawn-at-startup "swayosd-server"
 // spawn-at-startup "swaync" "-c" "~/.config/swaync/config.json" "-s" "~/.config/swaync/style.css"
-spawn-sh-at-startup "bash -c wl-paste --watch cliphist store &"
+spawn-sh-at-startup "wl-paste --watch cliphist store &"
 spawn-at-startup "wlsunset" "-l" "20.70" "-L" "-103.34"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 // spawn-at-startup "swayidle"
@@ -551,7 +551,7 @@ binds {
     //Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Shift+C hotkey-overlay-title="Clipboard Manager" { spawn-sh "dms ipc call clipboard toggle"; }
     //Mod+Shift+B allow-when-locked=true { spawn-sh "qs -c noctalia-shell"; }
-    Mod+Shift+B allow-when-locked=true { spawn-sh "dms run"; }
+    Mod+Shift+B allow-when-locked=true { spawn-sh "dms kill && dms run"; }
     Mod+Alt+T hotkey-overlay-title="Task Manager" { spawn-sh "dms ipc call processlist toggle"; }
     Mod+Alt+P hotkey-overlay-title="Notepad" { spawn-sh "dms ipc call notepad toggle"; }
     Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
@@ -768,7 +768,7 @@ environment {
     XDG_SCREENSHOTS_DIR "$HOME/Pictures/Screenshots"
     // QT_QPA_PLATFORMTHEME "gtk3"
     // QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-    QT_QPA_PLATFORMTHEME "qt5ct"
+    // QT_QPA_PLATFORMTHEME "qt5ct"
     QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 
 
