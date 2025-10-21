@@ -3,7 +3,6 @@
 .bin/arcolinux-change-theme
 .bin/lnk_pull.sh
 .bin/lnk_push.sh
-.config/Kvantum/kvantum.kvconfig
 .config/Thunar/accels.scm
 .config/Thunar/uca.xml
 .config/doublecmd/doublecmd.xml
