@@ -3,7 +3,6 @@
 .bin/arcolinux-change-theme
 .bin/lnk_pull.sh
 .bin/lnk_push.sh
-.config/Kvantum/kvantum.kvconfig
 .config/Thunar/accels.scm
 .config/Thunar/uca.xml
 .config/doublecmd/doublecmd.xml
@@ -12,8 +11,6 @@
 .config/fastfetch/config.jsonc
 .config/fish/config.fish
 .config/fusuma/config.yml
-.config/gtk-3.0/settings.ini
-.config/gtk-4.0/settings.ini
 .config/hypr/config/animations.conf
 .config/hypr/config/autostart.conf
 .config/hypr/config/colors.conf
@@ -36,8 +33,6 @@
 .config/niriswitcher/config.toml
 .config/niriswitcher/style.css
 .config/nwg-bar
-.config/qt5ct/qt5ct.conf
-.config/qt6ct/qt6ct.conf
 .config/qtile
 .config/rofi/config.rasi
 .config/starship.toml
