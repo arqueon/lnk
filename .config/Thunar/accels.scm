@@ -2,14 +2,8 @@
 ; this file is an automated accelerator map dump
 ;
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-type" "")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/bbfbb2d2bccc17e66bcc145784290de8" "")
 ; (gtk_accel_path "<Actions>/ThunarStatusBar/toggle-last-modified" "")
 ; (gtk_accel_path "<Actions>/Thunarwindow/menu" "")
-<<<<<<< Updated upstream
-; (gtk_accel_path "<Actions>/ThunarBookmarks/0bb004accdd92793431fae80f5d31045" "")
-; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-size" "")
-=======
->>>>>>> Stashed changes
 ; (gtk_accel_path "<Actions>/ThunarActionManager/cut" "<Primary>x")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-size" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/file-menu" "")
@@ -106,7 +100,6 @@
 ; (gtk_accel_path "<Actions>/ThunarActionManager/open-in-new-tab" "<Primary><Shift>p")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-buttons" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/back-alt2" "Back")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/30196380aeddcf2f5bda237e9cd83723" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/redo" "<Primary><Shift>z")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-trash" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/trash-delete-2" "KP_Delete")
@@ -117,14 +110,12 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/back-alt1" "BackSpace")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/bd1e234baf9916304e802bec2bb83684" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/create-folder" "<Primary><Shift>n")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/71887b4b89be1830b5ad5d9f88c0cf74" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-home" "<Alt>Home")
 ; (gtk_accel_path "<Actions>/ThunarWindow/switch-focused-split-view-pane" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/show-hidden" "<Primary>h")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/set-default-app" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/empty-trash" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/preferences" "")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/4a8db0efc56d285aea5625b8a567c3cb" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/delete" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-network" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-side-pane-tree" "<Primary>e")
