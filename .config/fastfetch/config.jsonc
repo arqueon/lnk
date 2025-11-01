@@ -35,6 +35,12 @@
           "keyColor": "32", 
       },
       {
+          "type": "command",
+          "key": " ├  ",
+          "keyColor": "32",
+          "text": "echo DMS $(dms version | tail -n1)"
+      },
+      {
           "type": "wmtheme",
           "key": " ├ 󰉼 ",
           "keyColor": "32",
