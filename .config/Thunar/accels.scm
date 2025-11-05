@@ -63,8 +63,12 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-desktop" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-as-detailed-list" "<Primary>2")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/restore-show" "")
-; (gtk_accel_path "<Actions>/ThunarWindow/sendto-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarStatusBar/toggle-display-name" "")
+<<<<<<< Updated upstream
+=======
+; (gtk_accel_path "<Actions>/ThunarWindow/sendto-menu" "")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/9a084bee0e4838bb339279b35f529a81" "")
+>>>>>>> Stashed changes
 ; (gtk_accel_path "<Actions>/ThunarWindow/go-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/zoom-out" "<Primary>minus")
 ; (gtk_accel_path "<Actions>/ThunarWindow/remove-from-recent" "")
@@ -81,10 +85,16 @@
 ; (gtk_accel_path "<Actions>/ThunarActionManager/move-to-trash" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/reload-alt-1" "F5")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/delete-3" "<Shift>KP_Delete")
+<<<<<<< Updated upstream
 ; (gtk_accel_path "<Actions>/ThunarStandardView/unselect-all-files" "Escape")
 ; (gtk_accel_path "<Actions>/ThunarWindow/contents/help-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/arrange-items-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-mtime" "")
+=======
+; (gtk_accel_path "<Actions>/ThunarWindow/reload" "<Primary>r")
+; (gtk_accel_path "<Actions>/ThunarStandardView/arrange-items-menu" "")
+; (gtk_accel_path "<Actions>/ThunarStandardView/unselect-all-files" "Escape")
+>>>>>>> Stashed changes
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-computer" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/toggle-image-preview" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/toggle-side-pane" "F9")
@@ -101,6 +111,10 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/back-alt2" "Back")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/open-in-new-tab" "<Primary><Shift>p")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-buttons" "")
+<<<<<<< Updated upstream
+=======
+; (gtk_accel_path "<Actions>/ThunarStandardView/back-alt2" "Back")
+>>>>>>> Stashed changes
 ; (gtk_accel_path "<Actions>/ThunarActionManager/redo" "<Primary><Shift>z")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-trash" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/trash-delete-2" "KP_Delete")
