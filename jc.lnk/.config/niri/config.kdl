@@ -226,8 +226,8 @@ spawn-at-startup "niriswitcher"
 spawn-at-startup "ferdium"
 // spawn-at-startup "thunderbird"
 spawn-at-startup "zotero"
-spawn-sh-at-startup "rm /home/ruben/.config/Logseq/window-state.json"
-spawn-at-startup "logseq"
+spawn-sh-at-startup "rm /home/juancarlos/.config/Logseq/window-state.json"
+// spawn-at-startup "logseq"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "web"
 
 
@@ -520,7 +520,7 @@ binds {
     Mod+Return { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
     Mod+period { spawn-sh "rofi -show drun"; }
-    Mod+Shift+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
+    Mod+Shift+Return { spawn-sh "thunar"; }
     Mod+F1 { spawn "google-chrome-stable"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
@@ -658,10 +658,10 @@ binds {
 
     // Screenshots
     Print { screenshot; }
-    Mod+Alt+P { screenshot; }
+    Mod+P { screenshot; }
     Mod+Ctrl+A { screenshot-screen; }
     Alt+Print { screenshot-window; }
-    Mod+Alt+C { spawn "~/.config/niri/screenshot_swappy.sh"; }
+    Mod+Ctrl+P { spawn "~/.config/niri/screenshot_swappy.sh"; }
 
     // Multimedia and peripherals
     // XF86AudioLowerVolume { spawn "swayosd-client" "--output-volume" "lower"; }
