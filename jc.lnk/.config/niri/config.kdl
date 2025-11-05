@@ -8,7 +8,7 @@ input {
             layout "es"
             options "ctrl:nocaps" 
         }
-        repeat-delay 300 
+        repeat-delay 300
         repeat-rate 25
     }
 
