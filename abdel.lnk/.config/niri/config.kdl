@@ -195,7 +195,7 @@ overview {
 }
 
 layer-rule {
-    match namespace="^quickshell-overview$"
+    match namespace="^quickshell$"
     place-within-backdrop true
 }
 
