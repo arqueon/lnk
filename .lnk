@@ -3,6 +3,7 @@
 .bin/arcolinux-change-theme
 .bin/lnk_pull.sh
 .bin/lnk_push.sh
+.bin/pick_color.sh
 .config/Thunar/accels.scm
 .config/Thunar/uca.xml
 .config/doublecmd/doublecmd.xml
