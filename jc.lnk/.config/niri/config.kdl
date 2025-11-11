@@ -565,6 +565,7 @@ binds {
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+2 { spawn-sh "~/.bin/lnk_push.sh"; }
     Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; }
+    Mod+Alt+K { spawn-sh "~/.bin/pick_color.sh"; }
 
     // Window navigation and focus
     Mod+Left { focus-column-left; }
