@@ -380,7 +380,7 @@ window-rule {
 
 window-rule {
     match app-id="google-chrome"
-    default-column-width { proportion 0.75; }
+    default-column-width { proportion 0.5; }
     open-focused true
 }
 
