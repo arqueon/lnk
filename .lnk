@@ -48,4 +48,5 @@
 .config/variety/scripts
 .config/variety/variety.conf
 .config/xsettingsd/xsettingsd.conf
+.config/yay
 .face
