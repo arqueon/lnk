@@ -34,6 +34,7 @@
 .config/niriswitcher/config.toml
 .config/niriswitcher/style.css
 .config/nwg-bar
+.config/paru
 .config/qtile
 .config/rofi/config.rasi
 .config/starship.toml
