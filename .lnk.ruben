@@ -6,3 +6,4 @@
 .config/niri/startup.kdl
 .config/niri/user.kdl
 .config/niri/window-rules.kdl
+.config/niri/workspaces.kdl
