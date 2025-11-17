@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.29 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.30 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -726,7 +726,7 @@
           <Title>Name</Title>
           <Unique>CC022C7E-6D83-4746-A5D2-DF3E6526D77A</Unique>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>250</Width>
+          <Width>401</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
