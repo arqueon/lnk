@@ -212,11 +212,11 @@ binds {
     Mod+TouchpadScrollUp { spawn-sh "dms ipc call audio increment 3"; }
 
 
-    // Switcher binds
-    Alt+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
-    Alt+Shift+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
-    Alt+1 repeat=false { spawn "niriswitcherctl" "show" "--workspace"; }
-    Alt+Shift+1 repeat=false { spawn "niriswitcherctl" "show" "--workspace"; }
+    // Niriswitcher binds
+    // Alt+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
+    // Alt+Shift+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
+    // Alt+1 repeat=false { spawn "niriswitcherctl" "show" "--workspace"; }
+    // Alt+Shift+1 repeat=false { spawn "niriswitcherctl" "show" "--workspace"; }
 }
 
 
