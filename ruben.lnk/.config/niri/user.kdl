@@ -1,0 +1,23 @@
+window-rule {
+    match app-id="thunar"
+    open-floating true
+    default-column-width { fixed 900; }
+    default-floating-position x=130 y=200 relative-to="bottom-right"
+    min-width 900
+    min-height 700
+    opacity 0.9
+}
+
+binds {
+    Mod+Shift+Z { spawn "thunar"; }
+    Mod+Shift+Return { spawn-sh "nemo /home/ruben/Downloads/"; }
+    Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
+    Mod+M { spawn-sh "mpv /dev/video2"; }
+}
+
+environment {
+  GTK_THEME "adw-gtk3-dark"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+}
+

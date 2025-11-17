@@ -4,3 +4,4 @@
 .config/niri/layout.kdl
 .config/niri/output.kdl
 .config/niri/startup.kdl
+.config/niri/user.kdl
