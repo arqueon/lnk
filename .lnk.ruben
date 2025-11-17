@@ -5,3 +5,4 @@
 .config/niri/output.kdl
 .config/niri/startup.kdl
 .config/niri/user.kdl
+.config/niri/window-rules.kdl
