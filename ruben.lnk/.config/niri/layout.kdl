@@ -140,7 +140,7 @@ recent-windows {
 
     previews {
         max-height 480
-        max-scale 0.5
+        max-scale 0.3
     }
 
     binds {

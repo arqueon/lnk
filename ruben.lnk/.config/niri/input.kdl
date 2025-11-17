@@ -4,7 +4,7 @@ input {
         xkb {
             layout "us"
             variant "intl"
-            options "ctrl:nocaps"
+            options "ctrl:nocaps" 
         }
         repeat-delay 300
         repeat-rate 25
@@ -16,7 +16,7 @@ input {
         // dwt
         // dwtp
         // drag false
-        // drag-lock
+        drag-lock
         // natural-scroll
         accel-speed 0.2
         accel-profile "adaptive"
@@ -46,6 +46,6 @@ input {
     }
 
     // warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="40%"
+    focus-follows-mouse max-scroll-amount="30%"
     workspace-auto-back-and-forth
 }
