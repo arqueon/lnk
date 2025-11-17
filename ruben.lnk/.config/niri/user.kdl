@@ -1,15 +1,16 @@
 window-rule {
     match app-id="thunar"
     open-floating true
-    default-column-width { fixed 900; }
-    default-floating-position x=130 y=200 relative-to="bottom-right"
-    min-width 900
-    min-height 700
+    min-width 800
+    max-width 1000
+    min-height 500
+    max-height 600
+    default-floating-position x=10 y=10 relative-to="bottom-right"
     opacity 0.9
 }
-
+   
 binds {
-    Mod+Shift+Z { spawn "thunar"; }
+    Mod+Shift+k { spawn "thunar"; }
     Mod+Shift+Return { spawn-sh "nemo /home/ruben/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+M { spawn-sh "mpv /dev/video2"; }
