@@ -127,7 +127,7 @@ debug {
     honor-xdg-activation-with-invalid-serial
 }
 
-/-recent-windows {
+recent-windows {
     // off
     open-delay-ms 150
 
