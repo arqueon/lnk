@@ -29,7 +29,6 @@
 .config/hypr/scripts/screenshot_full
 .config/kitty/kitty.conf
 .config/mimeapps.list
-.config/niriswitcher/style.css
 .config/nwg-bar
 .config/paru
 .config/qtile
