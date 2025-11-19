@@ -1,0 +1,197 @@
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+    // block-out-from "screencast"
+}
+
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="Logseq"
+    open-on-workspace "notes"
+    open-maximized true
+    open-focused false
+}
+
+window-rule {
+    match title=r#"^Zotero$"#
+    open-on-workspace "ref"
+    open-maximized true
+    open-focused false
+}
+
+window-rule {
+    match app-id=r#"[Ff]erdium"#
+    match app-id=r#"^thunderbird"#
+    match title=r#"^Planify$"#
+    match title=r#"^Akregator$"#
+    match app-id=r#"^io.github.martinrotter.rssguard$"#
+    open-on-workspace "chat"
+    open-maximized true
+    open-focused true
+}
+
+window-rule {
+    match title=r#"^Newsflash$"#
+    open-on-workspace "chat"
+    default-column-width { proportion 0.6; }
+}
+
+window-rule {
+    match title=r#"^Waydroid$"#
+    open-on-workspace "web"
+    default-column-width { proportion 0.35; }
+}
+
+window-rule {
+    match title=r#"^Zettlr$"#
+    match app-id=r#"libreoffice"#
+    match app-id=r#"soffice"#
+    open-on-workspace "write"
+    open-maximized true
+    open-focused true
+}
+
+// Zotero floating
+window-rule {
+    match title=r#"^Progress$"#
+    match title="Progress"
+    open-floating true
+}
+
+window-rule {
+    match app-id="virt-manager" title="Virtual Machine Manager"
+    match app-id="virt-manager" title="Gestor de máquinas virtuales"
+    default-column-width { proportion 0.25; }
+    open-on-workspace "virt"
+}
+
+window-rule {
+    match app-id="virt-manager" title=r#"QEMU/KVM$"#
+    open-maximized true
+    open-on-workspace "virt"
+}
+
+window-rule {
+    match app-id="google-chrome"
+    default-column-width { proportion 0.5; }
+    open-focused true
+}
+
+window-rule {
+    match app-id="doublecmd" title=r#"Double Commander"#
+    match title=r#"^GitHub Desktop$"#
+    match app-id=r#"^GitHub Desktop$"#
+    default-column-width { proportion 0.6; }
+    open-on-workspace "files"
+}
+
+window-rule {
+    match app-id="doublecmd" title=r#"Copiar archivo"#
+    default-column-width { proportion 0.3333; }
+    open-on-workspace "files"
+}
+
+window-rule {
+    match app-id=r#"jdownloader"#
+    match app-id=r#"qbittorrent"#
+    match title=r#"^JDownloader 2$"#
+    default-column-width { proportion 0.3; }
+    open-on-workspace "files"
+    open-focused false
+}
+
+window-rule {
+    match app-id=r#"io.github.nozwock.Packet"#
+    open-focused false
+    open-floating true
+}
+
+window-rule {
+    match app-id="Alacritty"
+    match app-id="kitty"
+    match app-id="sublime_text"
+    match app-id="thunar"
+    match app-id="nemo"
+    default-column-width { proportion 0.5; }
+}
+
+window-rule {
+    match title=r#"Create Parent Item"#
+    open-floating true
+    min-height 250
+}
+
+window-rule {
+    match app-id="Alacritty"
+    open-floating true
+    default-column-width { fixed 1000; }
+    default-floating-position x=250 y=50 relative-to="bottom-right"
+    min-width 1000
+    opacity 0.9
+}
+
+window-rule {
+    match title=r#"^\s*$"#
+    match title=r#"^Add/Edit Citation$"#
+    match title=r#"^Zotero Settings$"#
+    match title=r#"^Zotero Item Selector$"#
+    match title=r#"^Found Duplicate Items$"#
+    match title="^(Preferences)$"
+    match title="^(Print)$"
+    match title=r#"^Save File$"#
+    match title=r#"^Satty$"#
+    match title=r#"^[Rr][Ee][Mm][Ii][Nn][Dd][Ee][Rr]$"#
+    match title="^(file_progress)$"
+    match title="^(Smile)$"
+    match title="^(confirm)$"
+    match title="^(dialog)$"
+    match title="^(download)$"
+    match title="^(notification )$"
+    match title="^(error)$"
+    match title="^(splash)$"
+    match title="^(nwg-look)$"
+    match title="^(Subtitulado instantáneo)$"
+    match title="^(confirmreset)$"
+    match title="^(Delete profile)$"
+    match title="^File Operation Progress$"
+    match title="^Confirm to replace files$"
+    match title="^KDE Connect URL handler$"
+    match title="^(Open File)(.*)$"
+    match title="^(Select a File)(.*)$"
+    match title="^(Choose wallpaper)(.*)$"
+    match title="^(Open Folder)(.*)$"
+    match title="^(Save As)(.*)$"
+    match title="^(Library)(.*)$"
+    match title="^(File Upload)(.*)$"
+    match title="^(hyprland-share-picker)$"
+    match title="^(.*)-Google$"
+    match title="^(.*)System Update$"
+    match title=r#"^Progress$"#
+    match title=r#"^(progress)$"#
+    match app-id="^xdm-app$"
+    match app-id="^com.github.hluk.copyq$"
+    open-floating true
+}
+
+window-rule {
+    match is-active=false
+    opacity 0.95
+}
+
+window-rule {
+    match app-id=r#"com.github.th_ch.youtube_music"#
+    match app-id=r#"Steam"#
+    default-column-width { proportion 0.7; }
+    open-on-workspace "media"
+}
+
