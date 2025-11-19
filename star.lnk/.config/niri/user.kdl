@@ -11,8 +11,8 @@ window-rule {
    
 binds {
     Mod+Shift+k { spawn "thunar"; }
-    Mod+Shift+Return { spawn-sh "nemo /home/ruben/Downloads/"; }
-    Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
+    Mod+Shift+Return { spawn-sh "nemo"; }
+    // Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+M { spawn-sh "mpv /dev/video2"; }
 }
 
