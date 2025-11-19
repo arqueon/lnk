@@ -1,0 +1,10 @@
+.config/niri/animations.kdl
+.config/niri/environment.kdl
+.config/niri/input.kdl
+.config/niri/keybinds.kdl
+.config/niri/layout.kdl
+.config/niri/output.kdl
+.config/niri/startup.kdl
+.config/niri/user.kdl
+.config/niri/window-rules.kdl
+.config/niri/workspaces.kdl

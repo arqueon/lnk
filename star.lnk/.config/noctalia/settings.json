@@ -19,7 +19,7 @@
     "bar": {
         "backgroundOpacity": 0.9500000000000001,
         "density": "compact",
-        "floating": true,
+        "floating": false,
         "marginHorizontal": 0.25,
         "marginVertical": 0.4,
         "monitors": [
@@ -64,6 +64,15 @@
                     "id": "ScreenRecorderIndicator"
                 },
                 {
+                    "displayMode": "onhover",
+                    "id": "Battery",
+                    "warningThreshold": 30
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Brightness"
+                },
+                {
                     "hideWhenZero": true,
                     "id": "NotificationHistory",
                     "showUnreadBadge": true
@@ -101,7 +110,8 @@
         "floatingRatio": 0,
         "monitors": [
             "HDMI-A-1",
-            "DP-2"
+            "DP-2",
+            "eDP-1"
         ]
     },
     "general": {
@@ -153,7 +163,7 @@
     "notifications": {
         "criticalUrgencyDuration": 30,
         "doNotDisturb": false,
-        "lastSeenTs": 1758734817000,
+        "lastSeenTs": 1758752190000,
         "lowUrgencyDuration": 30,
         "monitors": [
             "HDMI-A-1"
@@ -204,7 +214,7 @@
             {
                 "directory": "/home/ruben/.config/variety/Favorites/",
                 "name": "eDP-1",
-                "wallpaper": "~/.config/variety/Downloaded/wallhaven_nebula/wallhaven-0jkv2p.jpg"
+                "wallpaper": "/home/ruben/.config/variety/wallpaper/wallpaper-auto-rotated-a8c696acbafdb058d97d3e683562914c.jpg"
             }
         ],
         "randomEnabled": true,

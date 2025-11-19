@@ -34,7 +34,8 @@ installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
 tput setaf 3
 echo "We will apply these settings"
 echo
-echo "THEME='catppuccin-mocha-blue-standard+default'"
+# echo "THEME='catppuccin-mocha-blue-standard+default'"
+echo "THEME='adw-gtk3-dark'"
 echo "ICONS='Papirus-Dark'"
 echo "FONT='Noto Sans 11'"
 echo "CURSOR='Bibata-Modern-Ice'"
@@ -49,7 +50,8 @@ then
 
 
 
-THEME='catppuccin-mocha-blue-standard+default'
+#THEME='catppuccin-mocha-blue-standard+default'
+THEME='adw-gtk3-dark'
 ICONS='Papirus-Dark'
 FONT='Noto Sans 11'
 CURSOR='Bibata-Modern-Ice'

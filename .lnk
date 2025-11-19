@@ -3,8 +3,6 @@
 .bin/arcolinux-change-theme
 .bin/lnk_pull.sh
 .bin/lnk_push.sh
-.bin/pick_color.sh
-.config/Thunar/accels.scm
 .config/Thunar/uca.xml
 .config/doublecmd/doublecmd.xml
 .config/doublecmd/shortcuts.scf
@@ -34,6 +32,7 @@
 .config/niriswitcher/config.toml
 .config/niriswitcher/style.css
 .config/nwg-bar
+.config/paru
 .config/qtile
 .config/rofi/config.rasi
 .config/starship.toml
@@ -48,4 +47,5 @@
 .config/variety/scripts
 .config/variety/variety.conf
 .config/xsettingsd/xsettingsd.conf
+.config/yay
 .face
