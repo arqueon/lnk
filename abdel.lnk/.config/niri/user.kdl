@@ -1,0 +1,43 @@
+window-rule {
+    match app-id="thunar"
+    open-floating true
+    min-width 800
+    max-width 1000
+    min-height 500
+    max-height 600
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    opacity 0.9
+}
+
+window-rule {
+    match app-id="google-chrome"
+    default-column-width { proportion 0.9; }
+    open-focused true
+}
+   
+binds {
+    Mod+Shift+k { spawn "thunar"; }
+    Mod+Shift+Return { spawn-sh "nemo /home/ruben/Downloads/"; }
+    Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
+    Mod+M { spawn-sh "mpv /dev/video2"; }
+}
+
+environment {
+  GTK_THEME "adw-gtk3-dark"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+}
+
+recent-windows {
+    binds {
+        Alt+Tab         { next-window; }
+        Alt+Shift+Tab   { previous-window; }
+        Alt+z           { next-window     filter="app-id"; }
+        Alt+Shift+z     { previous-window filter="app-id"; }
+
+        Mod+Tab         { next-window; }
+        Mod+Shift+Tab   { previous-window; }
+        Mod+z           { next-window     filter="app-id"; }
+        Mod+Shift+z     { previous-window filter="app-id"; }
+    }
+}

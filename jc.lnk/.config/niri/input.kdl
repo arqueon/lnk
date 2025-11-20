@@ -1,0 +1,50 @@
+input {
+    keyboard {
+        numlock
+        xkb {
+            layout "es"
+            options "ctrl:nocaps" 
+        }
+        repeat-delay 300
+        repeat-rate 25
+    }
+
+    touchpad {
+        tap
+        // off
+        // dwt
+        // dwtp
+        // drag false
+        drag-lock
+        // natural-scroll
+        accel-speed 0.2
+        accel-profile "adaptive"
+        // scroll-factor 1.0
+        scroll-factor vertical=2.0 horizontal=0.2
+        // scroll-method "two-finger"
+        // scroll-button 273
+        // scroll-button-lock
+        // tap-button-map "left-middle-right"
+        // click-method "clickfinger"
+        // left-handed
+        // disabled-on-external-mouse
+        // middle-emulation
+    }
+
+    mouse {
+        // natural-scroll
+        accel-speed 0.2
+        accel-profile "adaptive"
+        // scroll-factor 1.0
+        scroll-factor vertical=2.0 horizontal=-3.0
+        // scroll-method "no-scroll"
+        // scroll-button 273
+        // scroll-button-lock
+        // left-handed
+        // middle-emulation
+    }
+
+    // warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="30%"
+    workspace-auto-back-and-forth
+}

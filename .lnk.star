@@ -1,6 +1,4 @@
 .config/gtk-3.0/bookmarks
-.config/kitty/colors.conf
-.config/kitty/current-theme.conf
 .config/niri/animations.kdl
 .config/niri/config.kdl
 .config/niri/environment.kdl
