@@ -8,6 +8,12 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
     opacity 0.9
 }
+
+window-rule {
+    match app-id="google-chrome"
+    default-column-width { proportion 0.9; }
+    open-focused true
+}
    
 binds {
     Mod+Shift+k { spawn "thunar"; }

@@ -8,10 +8,16 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
     opacity 0.9
 }
+
+window-rule {
+    match app-id="google-chrome"
+    default-column-width { proportion 0.9; }
+    open-focused true
+}
    
 binds {
     Mod+Shift+k { spawn "thunar"; }
-    Mod+Shift+Return { spawn-sh "nemo /home/ruben/Downloads/"; }
+    Mod+Shift+Return { spawn-sh "nemo /home/abdel/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+M { spawn-sh "mpv /dev/video2"; }
 }

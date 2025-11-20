@@ -14,8 +14,6 @@ binds {
     Mod+Shift+Return { spawn-sh "nemo /home/ruben/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+M { spawn-sh "mpv /dev/video2"; }
-
-
 }
 
 environment {
