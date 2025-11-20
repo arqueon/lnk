@@ -1,1 +1,220 @@
-../../lnk/star.lnk/.config/niri/waybar/config2.jsonc
+{
+    "layer": "top",
+    "position": "right",
+    "output": "HDMI-A-1",
+	"reload_style_on_change": true,
+	"margin": "0px 0px 0px 0px",
+    "modules-left": ["custom/launcher", "custom/notification", "wlr/taskbar"],
+    "modules-center": [],
+    "modules-right": ["privacy", "tray", "sway/scratchpad", "power-profiles-daemon", "battery", "battery#charging", "pulseaudio#in", "pulseaudio#out", "clock#date", "clock#time"],
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": "",
+			"power-saver": ""
+		}
+	},
+	"privacy": {
+		"icon-spacing": 4,
+		"icon-size": 12,
+		"transition-duration": 250,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 16 
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 16
+			}
+		],
+		"ignore-monitor": true,
+		"ignore": [
+			{
+				"type": "audio-in",
+				"name": "cava"
+			},
+			{
+				"type": "screenshare",
+				"name": "obs"
+			}
+		]
+	},
+  "sway/scratchpad": {
+      "format": "󱂬 {count}"
+    },
+  "wireplumber": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "  󰝟  ",
+    "format-icons": {
+      "headphones": " ",
+      "handsfree": "  ",
+      "headset": "  ",
+      "phone": "  ",
+      "portable": "  ",
+      "car": "  ",
+      "default": [
+        " ",
+        " "
+      ]
+    },
+    "on-click": "swayosd-client --output-volume mute-toggle",
+    "on-click-middle": "pavucontrol",
+    "tooltip": false,
+    "scroll-step": 0.5,
+    "on-scroll-up": "swayosd-client --output-volume +1",
+    "on-scroll-down": "swayosd-client --output-volume -1"
+  },
+  "pulseaudio#in": {
+    	"format": "{icon}",
+    	"format-muted": "󰖁",
+    	"format-icons": ["󰕿", "󰖀", "󰕾"],
+		"format-source": "",
+		"on-click": "swayosd-client --output-volume mute-toggle",
+		"on-click-right": "flatpak run com.saivert.pwvucontrol"
+    },
+	"pulseaudio#out": {
+    	"format": "{format_source}",
+    	"format-icons": ["", "", ""],
+		"format-source": "",
+		"format-source-muted": "",
+		"on-click": "swayosd-client --output-volume mute-toggle",
+		"on-click-right": "flatpak run com.saivert.pwvucontrol"
+    },
+    "sway/workspaces": {
+      "format": "{name}{windows}",
+      "format-window-separator": "|",
+      "window-rewrite-default": " {class} ",
+      "window-format": "<span color='#e0e0e0'>{name}</span>",
+      "window-rewrite": {
+        "class<firefox>": " 󰈹 ",
+        "class<spotify>": " 󰓇 ",
+        "class<kitty>": "  ",
+        "class<vesktop>": "  ",
+        "class<kitty> title<nvim.*>": "  ",
+        "class<kitty> title<htop.*>": "  ",
+        "class<kitty> title<yazi.*>": " 󰈔 ",
+        "class<kitty> title<cava.*>": " 󰝪 ",
+        "class<kitty> title<man.*>": "  ",
+        "class<steam>": "  ",
+        "class<.*.bottles>": " 󰡔 ",
+        "class<heroic>": " 󱢾 ",
+        "class<org.gnome.Calculator>": " 󰪚 ",
+        "class<org.gnome.Builder>": "  ",
+        "class<io.github.idevecore.Valuta>": "  ",
+        "class<io.github.fizzyizzy05.binary>": "  ",
+        "class<org.gnome.Loupe>": " 󰋩 ",
+        "class<com.saivert.pwvucontrol>": " 󰕾 ",
+        "class<org.qbittorrent.qBittorrent>": "  ",
+        "class<VSCodium>": "  ",
+        "class<libreoffice-writer>": "  ",
+        "class<libreoffice-math>": "  ",
+        "class<libreoffice-calc>": "  ",
+        "class<libreoffice-base>": "  ",
+        "class<libreoffice-impress>": "  ",
+        "class<libreoffice-draw>": "  ",
+        "class<libreoffice>": "  ",
+        "class<libreoffice-startcenter>": "  ",
+        "class<soffice>": "  ",
+        "class<vlc>": " 󰕼 "
+      }
+    },
+    "niri/workspaces": {
+      "format": "{index}"
+    },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "tooltip-format": "{title} | {app_id}",
+    "spacing": 0,
+    "all-outputs": true,
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-click-right": "fullscreen"
+  },
+  "mpris": {
+    	"format": "{status_icon} {artist} - {title}",
+    	"format-stopped": "",
+    	"status-icons": {
+    		"paused": "⏸",
+    		"playing": "󰐊"
+    	},
+    	"interval": "0.1"
+    },
+  "clock#date": {
+        "format": "{:%d\n%m}",
+        "interval": 30,
+        "tooltip-format": "{:%A %d %B %Y}"
+    },
+	"clock#time": {
+        "format": "<span weight=\"bold\">{:%H\n%m}</span>",
+        "interval": 30,
+        "tooltip-format": "{:%A %d %B %Y}"
+    },
+    "tray": {
+    	"spacing": 16
+    },
+    "gamemode": {
+        "glyph": " ",
+        "format": "{glyph}",
+        "use-icon": false,
+        "icon-spacing": 0
+    },
+    "memory": {
+        "format": " {percentage}%",
+        "interval": 1
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 1
+    },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "",
+      "none": "",
+      "dnd-notification": "<",
+      "dnd-none": "",
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+    "battery": {
+    	"format": "{icon}",
+    	"format-charging": "",
+    	"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    	"format-icons-charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰁹"],
+		"tooltip-format": "{capacity}% - {timeTo}",
+    	"interval": 1
+    },
+	"battery#charging": {
+    	"format": "",
+    	"format-charging": "{icon}",
+    	"format-icons": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰁹"],
+		"tooltip-format": "{capacity}% - {timeTo}",
+    	"interval": 1
+    },
+	"custom/launcher": {
+    "format": " <span color='#A6DA95'>   </span>",
+    "on-click": "rofi -show drun"
+    },
+  "custom/powermenu": {
+		"format": "⏻",
+		"on-click": "nwg-bar"
+	 }
+}
