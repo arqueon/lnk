@@ -20,10 +20,12 @@ binds {
     Mod+Shift+Return { spawn-sh "nemo /home/ruben/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+M { spawn-sh "mpv /dev/video2"; }
+    Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
 }
 
 environment {
-  GTK_THEME "adw-gtk3-dark"
+  //GTK_THEME "adw-gtk3-dark"
+  GTK_THEME "Matcha-dark-sea"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
 }
