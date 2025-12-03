@@ -33,6 +33,7 @@
 .config/niri/config.kdl
 .config/niri/environment.kdl
 .config/niri/keybinds.kdl
+.config/niri/layout.kdl
 .config/nwg-bar
 .config/paru
 .config/qtile
