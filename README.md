@@ -12,16 +12,29 @@
 
 
 lnk rm --host casa ~/.config/niri/animations.kdl
+
 lnk rm --host casa ~/.config/niri/config.kdl
+
 lnk rm --host casa ~/.config/niri/environment.kdl
+
 lnk rm --host casa ~/.config/niri/keybinds.kdl
+
 lnk rm --host casa ~/.config/niri/layout.kdl
+
 lnk rm --host casa ~/.config/niri/startup.kdl
+
 lnk rm --host casa ~/.config/niri/window-rules.kdl
+
 lnk add ~/.config/niri/animations.kdl
+
 lnk add ~/.config/niri/config.kdl
+
 lnk add ~/.config/niri/environment.kdl
+
 lnk add ~/.config/niri/keybinds.kdl
+
 lnk add ~/.config/niri/layout.kdl
+
 lnk add ~/.config/niri/startup.kdl
+
 lnk add ~/.config/niri/window-rules.kdl
