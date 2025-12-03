@@ -89,6 +89,7 @@ window-rule {
 
 window-rule {
     match app-id="doublecmd" title=r#"Double Commander"#
+    match app-id="org.kde.krusader" title=r#"Krusader"#
     match title=r#"^GitHub Desktop$"#
     match app-id=r#"^GitHub Desktop$"#
     default-column-width { proportion 0.6; }
