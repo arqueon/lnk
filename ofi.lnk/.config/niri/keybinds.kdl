@@ -223,7 +223,8 @@ binds {
 
 // Switch events
 switch-events {
-    lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }    
+       lid-close { spawn "systemctl" "suspend"; }
+    // lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }    
     // lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }    
     // lid-close { spawn "swaylock"; }
 }
