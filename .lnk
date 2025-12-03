@@ -30,6 +30,7 @@
 .config/kitty/kitty.conf
 .config/mimeapps.list
 .config/niri/animations.kdl
+.config/niri/config.kdl
 .config/nwg-bar
 .config/paru
 .config/qtile
