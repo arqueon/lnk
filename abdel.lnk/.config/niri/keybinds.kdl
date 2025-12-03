@@ -60,6 +60,7 @@ binds {
     Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; }
     Mod+Alt+K { spawn-sh "~/.bin/pick_color.sh"; }
     Mod+Alt+V { spawn-sh "pavucontrol"; }
+    Mod+Alt+F6 { spawn-sh "krusader"; }
 
     // Window navigation and focus
     Mod+Left { focus-column-left; }
