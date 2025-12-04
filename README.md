@@ -9,3 +9,32 @@
 `lnk add --host {HOST} ~/.config/fastfetch ~/.config/fusuma ~/.config/kdeconnect/ ~/.config/qBittorrent/  ~/.config/qt5ct/ ~/.config/qt6ct/ ~/.config/rofi ~/.config/sway ~/.config/swaylock/ ~/.config/swaync ~/.config/Thunar/ ~/.config/nwg-bar/` 
 
 `lnk add --host casa .config/qtile/config.py .config/qtile/icons/ .config/qtile/archive/ .config/qtile/rofi .config/qtile/scripts/ .config/qtile/settings/ .config/qtile/sxhkd/ .config/qtile/themes/ .config/qtile/arcobattery.py .config/qtile/colors.py`  
+
+
+lnk rm --host casa ~/.config/niri/animations.kdl
+
+lnk rm --host casa ~/.config/niri/config.kdl
+
+lnk rm --host casa ~/.config/niri/environment.kdl
+
+lnk rm --host casa ~/.config/niri/keybinds.kdl
+
+lnk rm --host casa ~/.config/niri/layout.kdl
+
+lnk rm --host casa ~/.config/niri/startup.kdl
+
+lnk rm --host casa ~/.config/niri/window-rules.kdl
+
+lnk add ~/.config/niri/animations.kdl
+
+lnk add ~/.config/niri/config.kdl
+
+lnk add ~/.config/niri/environment.kdl
+
+lnk add ~/.config/niri/keybinds.kdl
+
+lnk add ~/.config/niri/layout.kdl
+
+lnk add ~/.config/niri/startup.kdl
+
+lnk add ~/.config/niri/window-rules.kdl
