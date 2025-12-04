@@ -8,7 +8,6 @@
 .config/niri/waybar/config2.jsonc
 .config/niri/waybar/style.css
 .config/niri/waybar/style2.css
-.config/niri/window-rules.kdl
 .config/niri/workspaces.kdl
 .config/satty/config.toml
 .config/swayidle/config
