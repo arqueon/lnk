@@ -196,3 +196,8 @@ window-rule {
     open-on-workspace "media"
 }
 
+window-rule {
+    match app-id=r#"org.quickshell$"#
+    open-floating true
+}
+
