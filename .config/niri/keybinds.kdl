@@ -29,6 +29,7 @@ binds {
     Mod+F11 { spawn "github-desktop"; }
     Mod+F12 { spawn "smile"; }
     Mod+Ctrl+N { spawn "newsflash"; }
+    Mod+Ctrl+C { spawn-sh "kitty qalc"; }
 
     // System utility binds
     // Mod+L { spawn "swaylock"; }
