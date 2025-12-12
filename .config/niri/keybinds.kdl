@@ -204,6 +204,7 @@ binds {
     Mod+Ctrl+Shift+WheelScrollUp { move-column-left; }
     Mod+Ctrl+MouseLeft { close-window; }
     Mod+MouseMiddle { maximize-column; }
+    Ctrl+MouseMiddle { close-window; }
 
     // Touchpad binds
     // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
