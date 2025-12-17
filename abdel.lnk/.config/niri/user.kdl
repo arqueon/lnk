@@ -19,11 +19,12 @@ binds {
     Mod+Shift+k { spawn "thunar"; }
     Mod+Shift+Return { spawn-sh "nemo /home/abdel/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
-    Mod+M { spawn-sh "mpv /dev/video2"; }
+    Mod+Alt+Return { spawn-sh "thunar /home/abdel/Downloads/"; }
 }
 
 environment {
-  GTK_THEME "adw-gtk3-dark"
+  //GTK_THEME "adw-gtk3-dark"
+  GTK_THEME "Matcha-dark-sea"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
 }
@@ -32,12 +33,12 @@ recent-windows {
     binds {
         Alt+Tab         { next-window; }
         Alt+Shift+Tab   { previous-window; }
-        Alt+z           { next-window     filter="app-id"; }
-        Alt+Shift+z     { previous-window filter="app-id"; }
+        Alt+z       { next-window     filter="app-id"; }
+        Alt+Shift+z { previous-window filter="app-id"; }
 
         Mod+Tab         { next-window; }
         Mod+Shift+Tab   { previous-window; }
-        Mod+z           { next-window     filter="app-id"; }
-        Mod+Shift+z     { previous-window filter="app-id"; }
+        Mod+z       { next-window     filter="app-id"; }
+        Mod+Shift+z { previous-window filter="app-id"; }
     }
 }

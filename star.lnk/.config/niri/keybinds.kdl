@@ -10,7 +10,7 @@ binds {
 
     // Application launchers and binds
     // Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+Space hotkey-overlay-title="Application Launcher" { spawn-sh "dms ipc call spotlight toggle"; }
+    // Mod+Space hotkey-overlay-title="Application Launcher" { spawn-sh "dms ipc call spotlight toggle"; }
     Mod+D { spawn "anyrun"; }
     Mod+Return { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
@@ -21,32 +21,32 @@ binds {
     Mod+F3 { spawn "zotero"; }
     Mod+F4 { spawn "logseq"; }
     Mod+F5 { spawn "zettlr"; }
-    Mod+F6 { spawn "doublecmd"; }
+    Mod+F6 { spawn "krusader"; }
     Mod+F7 { spawn "virt-manager"; }
     Mod+F8 { spawn "qbittorrent"; }
     Mod+F9 { spawn "jdownloader"; }
     Mod+F10 { spawn "youtube-music"; }
     Mod+F11 { spawn "github-desktop"; }
     Mod+F12 { spawn "smile"; }
-    Mod+Shift+N { spawn "newsflash"; }
+    Mod+Ctrl+N { spawn "newsflash"; }
 
     // System utility binds
     // Mod+L { spawn "swaylock"; }
-    //Mod+L allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+    // Mod+L allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Mod+L allow-when-locked=true hotkey-overlay-title="Lock Screen" { spawn-sh "dms ipc call lock lock"; }
-    //Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+    // Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Ctrl+Alt+Escape { spawn-sh "dms ipc call lock lock"; }
-    //Mod+X { spawn "nwg-bar"; }
-    //Mod+X { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    // Mod+X { spawn "nwg-bar"; }
+    // Mod+X { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     Mod+X hotkey-overlay-title="Power Menu" { spawn-sh "dms ipc call powermenu toggle"; }
-    //Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
-    //Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
-    Mod+N hotkey-overlay-title="Notification Center" { spawn-sh "dms ipc call notifications toggle"; }
+    // Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
+    // Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    // Mod+N hotkey-overlay-title="Notification Center" { spawn-sh "dms ipc call notifications toggle"; }
     //Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Shift+C hotkey-overlay-title="Clipboard Manager" { spawn-sh "dms ipc call clipboard toggle"; }
-    //Mod+Shift+B allow-when-locked=true { spawn-sh "qs -c noctalia-shell"; }
+    // Mod+Shift+B allow-when-locked=true { spawn-sh "qs -c noctalia-shell"; }
     Mod+Shift+B allow-when-locked=true { spawn-sh "dms kill && dms run"; }
-    Mod+Alt+T hotkey-overlay-title="Task Manager" { spawn-sh "dms ipc call processlist toggle"; }
+    // Mod+Alt+T hotkey-overlay-title="Task Manager" { spawn-sh "dms ipc call processlist toggle"; }
     Mod+Alt+P hotkey-overlay-title="Notepad" { spawn-sh "dms ipc call notepad toggle"; }
     Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
     Mod+B { spawn "~/.config/niri/waybar.sh"; }
@@ -59,6 +59,8 @@ binds {
     Mod+Alt+2 { spawn-sh "~/.bin/lnk_push.sh"; }
     Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; }
     Mod+Alt+K { spawn-sh "~/.bin/pick_color.sh"; }
+    Mod+Alt+V { spawn-sh "pavucontrol"; }
+    Mod+Alt+F6 { spawn-sh "krusader"; }
 
     // Window navigation and focus
     Mod+Left { focus-column-left; }
@@ -222,7 +224,8 @@ binds {
 
 // Switch events
 switch-events {
-    lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }    
+       lid-close { spawn "systemctl" "suspend"; }
+    // lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }    
     // lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }    
     // lid-close { spawn "swaylock"; }
 }
