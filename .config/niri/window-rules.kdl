@@ -155,7 +155,7 @@ window-rule {
     match title=r#"^Zotero Settings$"#
     match title=r#"^Zotero Item Selector$"#
     match title=r#"^Found Duplicate Items$"#
-    match title=r#"^Plugins Manager$"#
+    match title=r#"^Plugins Manager"#
     match title="^(Preferences)$"
     match title="^(Print)$"
     match title=r#"^Save File$"#
