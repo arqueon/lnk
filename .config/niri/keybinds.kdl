@@ -62,6 +62,8 @@ binds {
     Mod+Alt+K { spawn-sh "~/.bin/pick_color.sh"; }
     Mod+Alt+V { spawn-sh "pavucontrol"; }
     Mod+Alt+F6 { spawn-sh "krusader"; }
+    
+    Mod+Shift+O { toggle-window-rule-opacity; }
 
     // Window navigation and focus
     Mod+Left { focus-column-left; }
