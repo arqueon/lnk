@@ -91,7 +91,7 @@ window-rule {
 
 window-rule {
     match app-id="google-chrome"
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 1.0; }
     open-focused true
 }
 
