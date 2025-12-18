@@ -27,6 +27,7 @@ binds {
     Mod+F9 { spawn "jdownloader"; }
     Mod+F10 { spawn "youtube-music"; }
     Mod+F11 { spawn "github-desktop"; }
+    Mod+Alt+F11 { spawn "antigravity"; }
     Mod+F12 { spawn "smile"; }
     Mod+Ctrl+N { spawn "newsflash"; }
     Mod+Ctrl+C { spawn-sh "kitty qalc"; }
