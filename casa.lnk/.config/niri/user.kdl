@@ -8,6 +8,11 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
     opacity 0.9
 }
+
+window-rule {
+    match app-id="google-chrome"
+    opacity 1.0
+}
    
 binds {
     Mod+Shift+k { spawn "thunar"; }
