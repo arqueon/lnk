@@ -43,6 +43,18 @@ window-rule {
 }
 
 window-rule {
+    match title=r#"^Configure — Dolphin$"#
+    open-focused true
+    open-floating true
+    
+    // Fuerza el ancho de 676 píxeles
+    default-column-width { fixed 900; }
+    
+    // Fuerza la altura de 253 píxeles
+    default-window-height { fixed 700; }
+}
+
+window-rule {
     match app-id=r#"[Ff]erdium"#
     match app-id=r#"^thunderbird"#
     match title=r#"^Planify$"#
