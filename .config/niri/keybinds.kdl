@@ -56,7 +56,7 @@ binds {
     Mod+Shift+M { spawn-sh "wl-present mirror"; }
     Mod+Escape { spawn-sh "kitty btop"; }
     Mod+Alt+F { spawn-sh "variety -f && notify-send 'Copied to favorites'"; }
-    Mod+Alt+N { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
+    Mod+Alt+W { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
     Mod+Alt+S { spawn-sh "systemctl suspend"; }
     Mod+Alt+2 { spawn-sh "~/.bin/lnk_push.sh"; }
     Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; }
