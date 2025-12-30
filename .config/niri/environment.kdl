@@ -37,4 +37,5 @@ environment {
     _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
     MANGOHUD "0"
     MANGOHUD_DLSYM "1"
+    XDG_MENU_PREFIX "plasma-" 
 }
