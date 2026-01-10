@@ -27,6 +27,7 @@ binds {
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+Ctrl+M { spawn-sh "mpv /dev/video2"; }
+    Mod+F1 { spawn-sh "google-chrome-stable & sleep 0.2 && niri msg action move-column-left"; }
 }
 
 environment {
