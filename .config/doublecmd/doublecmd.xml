@@ -158,12 +158,12 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>80</Left>
-      <Top>48</Top>
-      <Width>800</Width>
-      <Height>480</Height>
+      <Left>1935</Left>
+      <Top>49</Top>
+      <Width>1890</Width>
+      <Height>952</Height>
       <PixelsPerInch>96</PixelsPerInch>
-      <Maximized>True</Maximized>
+      <Maximized>False</Maximized>
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
