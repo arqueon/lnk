@@ -16,6 +16,11 @@ window-rule {
     open-focused true
 }
 
+window-rule {
+    match app-id="Waydroid"
+    default-column-width { fixed 1520; }
+}
+
 layout {
     // New windows decide their initial width themselves.
     default-column-width {}
