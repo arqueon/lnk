@@ -18,7 +18,7 @@ window-rule {
 
 window-rule {
     match app-id="Waydroid"
-    default-column-width { fixed 1520; }
+    default-column-width { fixed 800; }
 }
 
 layout {
