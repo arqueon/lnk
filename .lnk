@@ -32,6 +32,7 @@
 .config/niri/animations.kdl
 .config/niri/config.kdl
 .config/niri/environment.kdl
+.config/niri/gpu_recorder.sh
 .config/niri/keybinds.kdl
 .config/niri/layout.kdl
 .config/niri/startup.kdl
