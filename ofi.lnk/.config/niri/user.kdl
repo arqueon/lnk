@@ -15,18 +15,30 @@ window-rule {
     opacity 1.0
     open-focused true
 }
+
+window-rule {
+    match app-id="Waydroid"
+    default-column-width { fixed 800; }
+}
+
+layout {
+    // New windows decide their initial width themselves.
+    default-column-width {}
+}
    
 binds {
     Mod+Shift+k { spawn "thunar"; }
-    Mod+Shift+Return { spawn-sh "nemo /home/ruben/Downloads/"; }
+    Mod+Shift+Return { spawn-sh "dolphin /home/ruben/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
-    Mod+Alt+M { spawn-sh "mpv /dev/video2"; }
+    Mod+Ctrl+M { spawn-sh "mpv /dev/video2"; }
+    Mod+F1 { spawn-sh "google-chrome-stable & sleep 0.2 && niri msg action move-column-left"; }
 }
 
 environment {
   //GTK_THEME "adw-gtk3-dark"
   GTK_THEME "Matcha-dark-sea"
+  XCURSOR_THEME "oreo_teal_cursors"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
 }
