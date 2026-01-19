@@ -33,6 +33,8 @@ binds {
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+Ctrl+M { spawn-sh "mpv /dev/video2"; }
     Mod+F1 { spawn-sh "google-chrome-stable & sleep 0.2 && niri msg action move-column-left"; }
+    Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
+    Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
 }
 
 environment {
@@ -41,6 +43,7 @@ environment {
   XCURSOR_THEME "oreo_teal_cursors"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+  QS_ICON_THEME "Papirus-Dark"
 }
 
 recent-windows {

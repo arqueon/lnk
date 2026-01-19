@@ -33,6 +33,7 @@ binds {
     Mod+Ctrl+C { spawn-sh "kitty qalc"; }
 
     // System utility binds
+
     // Mod+L { spawn "swaylock"; }
     // Mod+L allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Mod+L allow-when-locked=true hotkey-overlay-title="Lock Screen" { spawn-sh "dms ipc call lock lock"; }
