@@ -48,7 +48,7 @@ binds {
     //Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Shift+C hotkey-overlay-title="Clipboard Manager" { spawn-sh "dms ipc call clipboard toggle"; }
     // Mod+Shift+B allow-when-locked=true { spawn-sh "qs -c noctalia-shell"; }
-    Mod+Shift+B allow-when-locked=true { spawn-sh "dms kill && dms run"; }
+    Mod+Shift+B allow-when-locked=true { spawn-sh "dms restart"; }
     // Mod+Alt+T hotkey-overlay-title="Task Manager" { spawn-sh "dms ipc call processlist toggle"; }
     Mod+Alt+P hotkey-overlay-title="Notepad" { spawn-sh "dms ipc call notepad toggle"; }
     Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
