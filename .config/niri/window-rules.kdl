@@ -34,12 +34,10 @@ window-rule {
     open-on-workspace "ref"
     open-focused true
     open-floating true
-    
-    // Fuerza el ancho de 676 píxeles
-    default-column-width { fixed 676; }
-    
-    // Fuerza la altura de 253 píxeles
-    default-window-height { fixed 253; }
+    // Fuerza el ancho 
+    default-column-width { fixed 576; }
+    // Fuerza la altura
+    default-window-height { fixed 150; }
 }
 
 window-rule {
