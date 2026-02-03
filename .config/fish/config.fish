@@ -553,3 +553,7 @@ if status --is-interactive && type -q fastfetch
    fastfetch
    pokemon-colorscripts -r --no-title
 end
+
+# OpenClaw Completion
+set -gx NODE_OPTIONS "--no-deprecation"
+openclaw completion --shell fish | source
