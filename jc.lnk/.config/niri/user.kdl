@@ -12,7 +12,18 @@ window-rule {
 window-rule {
     match app-id="google-chrome"
     default-column-width { proportion 1.0; }
+    opacity 1.0
     open-focused true
+}
+
+window-rule {
+    match app-id="Waydroid"
+    default-column-width { fixed 800; }
+}
+
+layout {
+    // New windows decide their initial width themselves.
+    default-column-width {}
 }
    
 binds {
@@ -21,13 +32,17 @@ binds {
     Mod+Alt+F4 { spawn-sh "rm -r /home/juancarlos/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/juancarlos/Downloads/"; }
     Mod+Alt+M { spawn-sh "mpv /dev/video2"; }
+    Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
+    Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
 }
 
 environment {
   //GTK_THEME "adw-gtk3-dark"
   GTK_THEME "Matcha-dark-sea"
+  XCURSOR_THEME "oreo_teal_cursors"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+  QS_ICON_THEME "Papirus-Dark"
 }
 
 recent-windows {
