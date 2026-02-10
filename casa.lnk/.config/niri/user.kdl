@@ -52,7 +52,6 @@ recent-windows {
         Alt+Shift+Tab   { previous-window; }
         Alt+z       { next-window     filter="app-id"; }
         Alt+Shift+z { previous-window filter="app-id"; }
-
         Mod+Tab         { next-window; }
         Mod+Shift+Tab   { previous-window; }
         Mod+z       { next-window     filter="app-id"; }

@@ -450,3 +450,4 @@ fastfetch
 #cpufetch
 #colorscript random
 #hyfetch
+export PATH="$HOME/.npm-global/bin:$PATH"
