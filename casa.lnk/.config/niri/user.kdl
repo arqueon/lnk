@@ -17,6 +17,13 @@ window-rule {
 }
 
 window-rule {
+    match app-id="firefox"
+    default-column-width { proportion 0.7; }
+    opacity 1.0
+    open-focused true
+}
+
+window-rule {
     match app-id="Waydroid"
     default-column-width { fixed 800; }
 }
@@ -35,6 +42,7 @@ binds {
     Mod+F1 { spawn-sh "google-chrome-stable & sleep 0.2 && niri msg action move-column-left"; }
     Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
+    Mod+Alt+F1 { spawn "firefox"; }
 }
 
 environment {
