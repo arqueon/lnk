@@ -24,6 +24,12 @@ window-rule {
 }
 
 window-rule {
+    match title="Extension: (Checker Plus for Gmail)";
+    open-floating true;
+    default-column-width { proportion 0.3; }
+}
+
+window-rule {
     match app-id="Waydroid"
     default-column-width { fixed 800; }
 }
