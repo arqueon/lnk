@@ -28,7 +28,7 @@ layout {
    
 binds {
     Mod+Shift+k { spawn "thunar"; }
-    Mod+Shift+Return { spawn-sh "nemo /home/juancarlos/Downloads/"; }
+    Mod+Shift+Return { spawn-sh "dolphin /home/juancarlos/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/juancarlos/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/juancarlos/Downloads/"; }
     Mod+Alt+M { spawn-sh "mpv /dev/video2"; }
