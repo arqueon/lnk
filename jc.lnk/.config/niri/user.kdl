@@ -34,6 +34,13 @@ binds {
     Mod+Alt+M { spawn-sh "mpv /dev/video2"; }
     Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
+    // Screenshots
+    Mod+ALt+P { screenshot; }
+    Mod+Ctrl+P { screenshot-screen; }
+    Mod+Alt+K { screenshot-window; }
+    Mod+Shift+P { spawn "~/.config/niri/screenshot_swappy.sh"; }
+
+
 }
 
 environment {
