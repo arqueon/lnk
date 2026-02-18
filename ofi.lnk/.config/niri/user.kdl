@@ -43,6 +43,7 @@ binds {
     Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
     Mod+Alt+F1 { spawn "firefox"; }
+    Mod+Alt+F12 { spawn "ticktick"; }
 }
 
 environment {
