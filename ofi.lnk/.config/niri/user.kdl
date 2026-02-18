@@ -39,7 +39,6 @@ binds {
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+Ctrl+M { spawn-sh "mpv /dev/video2"; }
-    Mod+F1 { spawn-sh "google-chrome-stable & sleep 0.2 && niri msg action move-column-left"; }
     Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
     Mod+Alt+F1 { spawn "firefox"; }
@@ -53,6 +52,7 @@ environment {
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   QS_ICON_THEME "Papirus-Dark"
+  BROWSER "google-chrome-stable"
 }
 
 recent-windows {
