@@ -3,7 +3,7 @@ application/epub+zip=okularApplication_epub.desktop;com.github.johnfactotum.Foli
 application/gzip=org.gnome.FileRoller.desktop;
 application/json=sublime_text.desktop;code-oss.desktop;visual-studio-code.desktop;
 application/octet-stream=sublime_text.desktop;code-oss.desktop;visual-studio-code.desktop;
-application/pdf=google-chrome.desktop;org.kde.okular.desktop;org.gnome.Papers.desktop;org.gnome.Evince.desktop;okularApplication_pdf.desktop;firefox.desktop;com.google.Chrome.desktop;onlyoffice-desktopeditors.desktop;libreoffice-draw.desktop;org.inkscape.Inkscape.desktop;masterpdfeditor4.desktop;xreader.desktop;sublime_text.desktop;
+application/pdf=org.kde.okular.desktop;google-chrome.desktop;sublime_text.desktop;org.gnome.Papers.desktop;org.gnome.Evince.desktop;okularApplication_pdf.desktop;firefox.desktop;com.google.Chrome.desktop;libreoffice-draw.desktop;org.inkscape.Inkscape.desktop;xreader.desktop;
 application/pgp-encrypted=sublime_text.desktop;code-oss.desktop;visual-studio-code.desktop;
 application/pgp-keys=sublime_text.desktop;code-oss.desktop;visual-studio-code.desktop;
 application/pgp-signature=sublime_text.desktop;code-oss.desktop;visual-studio-code.desktop;
@@ -127,7 +127,7 @@ x-scheme-handler/x-github-desktop-auth=github-desktop.desktop;GitHub Desktop.des
 [Default Applications]
 application/gzip=org.gnome.FileRoller.desktop;
 application/mathml+xml=
-application/pdf=google-chrome.desktop;
+application/pdf=org.kde.okular.desktop;
 application/rdf+xml=google-chrome.desktop
 application/rss+xml=google-chrome.desktop
 application/vnd.ms-cab-compressed=org.gnome.FileRoller.desktop;
