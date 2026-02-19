@@ -189,9 +189,9 @@ binds {
     XF86MonBrightnessUp allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "increment" "5" ""; }
     // You can override the default device for e.g. keyboards by adding the device name to the last param
     XF86MonBrightnessDown allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""; }
-    F10 { spawn-sh "dms ipc call audio mute"; }
-    F11 { spawn-sh "dms ipc call audio decrement 3"; }
-    F12 { spawn-sh "dms ipc call audio increment 3"; }
+    Alt+F10 { spawn-sh "dms ipc call audio mute"; }
+    Alt+F11 { spawn-sh "dms ipc call audio decrement 3"; }
+    Alt+F12 { spawn-sh "dms ipc call audio increment 3"; }
 
 
     // Mouse wheel binds
