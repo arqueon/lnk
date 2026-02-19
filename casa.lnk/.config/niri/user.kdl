@@ -28,6 +28,12 @@ window-rule {
     default-column-width { fixed 800; }
 }
 
+
+window-rule {
+    match title="TickTick - Google Chrome"
+    open-floating true
+}
+
 layout {
     // New windows decide their initial width themselves.
     default-column-width {}
@@ -42,6 +48,7 @@ binds {
     Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
     Mod+Alt+F1 { spawn "firefox"; }
+    Mod+Alt+F12 { spawn "ticktick"; }
 }
 
 environment {
