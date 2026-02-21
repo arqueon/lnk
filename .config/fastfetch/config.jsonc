@@ -17,11 +17,6 @@
       "keyColor": "31"
     },
     {
-      "type": "host",
-      "key": "Host",
-      "keyColor": "31"
-    },
-    {
       "type": "kernel",
       "key": "Kernel",
       "keyColor": "31"
@@ -48,6 +43,11 @@
       "keyColor": "32"
     },
     {
+      "type": "de",
+      "key": "DE",
+      "keyColor": "32"
+    },
+    {
       "type": "wmtheme",
       "key": "WM Theme",
       "keyColor": "32"
@@ -65,6 +65,11 @@
     {
       "type": "font",
       "key": "Font",
+      "keyColor": "32"
+    },
+    {
+      "type": "cursor",
+      "key": "Cursor",
       "keyColor": "32"
     },
     {
@@ -98,10 +103,20 @@
       "key": "Battery",
       "keyColor": "33"
     },
+    {
+      "type": "monitor",
+      "key": "Monitor",
+      "keyColor": "33"
+    },
     "break",
     {
       "type": "localip",
-      "key": "IP",
+      "key": "Local IP",
+      "keyColor": "34"
+    },
+    {
+      "type": "publicip",
+      "key": "Public IP",
       "keyColor": "34"
     },
     {
