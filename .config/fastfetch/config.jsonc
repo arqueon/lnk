@@ -38,14 +38,20 @@
     },
     "break",
     {
+      "type": "de",
+      "key": "DE",
+      "keyColor": "32"
+    },
+    {
       "type": "wm",
       "key": "WM",
       "keyColor": "32"
     },
     {
-      "type": "de",
-      "key": "DE",
-      "keyColor": "32"
+      "type": "command",
+      "key": "DMS",
+      "keyColor": "32",
+      "text": "dms version | tail -n1"
     },
     {
       "type": "wmtheme",
@@ -63,11 +69,6 @@
       "keyColor": "32"
     },
     {
-      "type": "font",
-      "key": "Font",
-      "keyColor": "32"
-    },
-    {
       "type": "cursor",
       "key": "Cursor",
       "keyColor": "32"
@@ -80,11 +81,13 @@
     "break",
     {
       "type": "cpu",
+      "format": "{1} ({3}) @ {7} GHz",
       "key": "CPU",
       "keyColor": "33"
     },
     {
       "type": "gpu",
+      "format": "{1} {2}",
       "key": "GPU",
       "keyColor": "33"
     },
@@ -99,11 +102,6 @@
       "keyColor": "33"
     },
     {
-      "type": "battery",
-      "key": "Battery",
-      "keyColor": "33"
-    },
-    {
       "type": "monitor",
       "key": "Monitor",
       "keyColor": "33"
@@ -111,12 +109,7 @@
     "break",
     {
       "type": "localip",
-      "key": "Local IP",
-      "keyColor": "34"
-    },
-    {
-      "type": "publicip",
-      "key": "Public IP",
+      "key": "IP",
       "keyColor": "34"
     },
     {
