@@ -1,5 +1,6 @@
 .config/gtk-3.0/bookmarks
 .config/niri-mimeapps.list
+.config/niri/dms/windowrules.kdl
 .config/niri/input.kdl
 .config/niri/output.kdl
 .config/niri/screenshot_swappy.sh
