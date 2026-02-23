@@ -1,0 +1,8 @@
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=wr_1771867449453995758 @name=Zotero
+window-rule {
+    match app-id="^Zotero$" title="^Add-on Market$"
+    open-floating true
+}
