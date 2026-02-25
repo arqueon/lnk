@@ -6,3 +6,9 @@ window-rule {
     match app-id="^Zotero$" title="^Add-on Market$"
     open-floating true
 }
+
+// @id=wr_1772038828212427152 @name=Zotero
+window-rule {
+    match app-id="^Zotero$" title="^Advanced Search$"
+    open-floating true
+}
