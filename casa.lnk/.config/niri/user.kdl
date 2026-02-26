@@ -67,3 +67,9 @@ recent-windows {
         Mod+Shift+z { previous-window filter="app-id"; }
     }
 }
+
+input {
+    // warp-mouse-to-focus
+    focus-follows-mouse  // max-scroll-amount="40%"
+    workspace-auto-back-and-forth
+}
