@@ -70,6 +70,6 @@ recent-windows {
 
 input {
     // warp-mouse-to-focus
-    focus-follows-mouse  // max-scroll-amount="40%"
+    focus-follows-mouse  max-scroll-amount="20%"
     workspace-auto-back-and-forth
 }
