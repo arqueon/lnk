@@ -46,6 +46,6 @@ input {
     }
 
     // warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="30%"
+    focus-follows-mouse max-scroll-amount="15%"
     workspace-auto-back-and-forth
 }
