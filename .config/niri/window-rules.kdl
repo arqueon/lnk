@@ -3,6 +3,22 @@ window-rule {
     default-column-width {}
 }
 
+window-rule {
+    match app-id="thunar"
+    open-floating true
+    min-width 800
+    max-width 1000
+    min-height 500
+    max-height 600
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    opacity 0.9
+}
+
+window-rule {
+    match app-id="Waydroid"
+    default-column-width { fixed 800; }
+}
+
 /-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
