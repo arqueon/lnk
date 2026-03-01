@@ -14,11 +14,6 @@ window-rule {
 }
 
 
-window-rule {
-    match title="TickTick - Google Chrome"
-    open-floating true
-}
-
 layout {
     // New windows decide their initial width themselves.
     default-column-width {}
