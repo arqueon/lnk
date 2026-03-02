@@ -12,3 +12,9 @@ window-rule {
     match app-id="^Zotero$" title="^Advanced Search$"
     open-floating true
 }
+
+// @id=wr_1772420149968419301 @name=Zotero
+window-rule {
+    match app-id="^Zotero$" title="^Plugins Manager$"
+    open-floating true
+}
