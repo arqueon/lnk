@@ -62,9 +62,9 @@ environment {
   GTK_THEME "Matcha-dark-sea"
   XCURSOR_THEME "oreo_teal_cursors"
   QT_QPA_PLATFORMTHEME "gtk3"
-  QT_QPA_PLATFORMTHEME_QU6 "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   QS_ICON_THEME "Papirus-Dark"
-  BROWSER "google-chrome-stable"
+  BROWSER "google-chrome-canary"
 }
 
 
