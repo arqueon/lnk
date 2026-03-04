@@ -18,3 +18,11 @@ window-rule {
     match app-id="^Zotero$" title="^Plugins Manager$"
     open-floating true
 }
+
+// @id=wr_1772488017843494104 @name=chrome-hkhggnncdpfibdhinjiegagmopldibha-Default
+window-rule {
+    match app-id="^chrome-hkhggnncdpfibdhinjiegagmopldibha-Default$"
+    open-floating true
+    default-column-width { fixed 800; }
+    default-window-height { fixed 600; }
+}
