@@ -26,3 +26,17 @@ window-rule {
     default-column-width { fixed 800; }
     default-window-height { fixed 600; }
 }
+
+// @id=wr_1772687743827152583 @name=google-chrome-canary
+window-rule {
+    match app-id="^google-chrome-canary$" title="^TickTick - Google Chrome$"
+    open-floating true
+}
+
+// @id=wr_1772743336626015926 @name=google-chrome
+window-rule {
+    match app-id="^google-chrome.*" title="^TickTick - Google Chrome"
+    open-floating true
+    default-column-width { fixed 800; }
+    default-window-height { fixed 600; }
+}
