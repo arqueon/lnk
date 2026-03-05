@@ -36,6 +36,7 @@
 .config/niri/gpu_recorder.sh
 .config/niri/keybinds.kdl
 .config/niri/layout.kdl
+.config/niri/run_chrome.sh
 .config/niri/startup.kdl
 .config/niri/window-rules.kdl
 .config/nwg-bar
