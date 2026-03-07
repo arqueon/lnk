@@ -1,12 +1,11 @@
 #!/bin/bash
 
-# Lista de binarios en orden de prioridad descendente
+# Lista de binarios en orden de prioridad (primera instalada gana)
 versiones=(
-    "google-chrome-stable" 
-    "google-chrome-beta" 
-    "google-chrome-dev" 
-    "google-chrome-unstable" 
     "google-chrome-canary"
+    "google-chrome-beta"
+    "google-chrome-dev"
+    "google-chrome-stable"
 )
 
 # Buscar y ejecutar la primera opción disponible en el PATH
