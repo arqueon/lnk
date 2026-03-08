@@ -205,3 +205,5 @@ x-scheme-handler/webcal=google-chrome.desktop
 x-scheme-handler/webcals=google-chrome.desktop
 x-scheme-handler/x-github-client=github-desktop.desktop
 x-scheme-handler/x-github-desktop-auth=github-desktop.desktop
+application/x-bittorrent=qbittorrent-nox.desktop
+x-scheme-handler/magnet=qbittorrent-nox.desktop

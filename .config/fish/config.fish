@@ -555,5 +555,4 @@ if status --is-interactive && type -q fastfetch
 end
 
 # OpenClaw Completion
-#set -gx NODE_OPTIONS "--no-deprecation"
-#openclaw completion --shell fish | source
+source "/home/ruben/.openclaw/completions/openclaw.fish"
