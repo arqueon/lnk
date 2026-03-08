@@ -37,6 +37,7 @@
 .config/niri/keybinds.kdl
 .config/niri/layout.kdl
 .config/niri/run_chrome.sh
+.config/niri/run_stream.sh
 .config/niri/startup.kdl
 .config/niri/window-rules.kdl
 .config/nwg-bar
