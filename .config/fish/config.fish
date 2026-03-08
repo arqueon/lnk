@@ -554,5 +554,3 @@ if status --is-interactive && type -q fastfetch
    pokemon-colorscripts -r --no-title
 end
 
-# OpenClaw Completion
-source "/home/ruben/.openclaw/completions/openclaw.fish"

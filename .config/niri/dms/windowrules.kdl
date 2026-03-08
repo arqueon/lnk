@@ -40,3 +40,9 @@ window-rule {
     default-column-width { fixed 800; }
     default-window-height { fixed 600; }
 }
+
+// @id=wr_1773009704748556140 @name=chrome-videostream.arqueonautis.org__stream.html-Profile_7
+window-rule {
+    match app-id="^chrome-videostream.arqueonautis.org__stream.html-Profile_7$"
+    open-maximized true
+}
