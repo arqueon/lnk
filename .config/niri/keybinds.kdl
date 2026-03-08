@@ -31,6 +31,7 @@ binds {
     Mod+F12 { spawn "smile"; }
     Mod+Ctrl+N { spawn "newsflash"; }
     Mod+Ctrl+C { spawn-sh "kitty qalc"; }
+    Mod+Ctrl+M { spawn-sh "~/.config/niri/run_stream.sh"; }
 
     // System utility binds
 
