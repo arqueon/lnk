@@ -28,7 +28,7 @@ environment {
     // QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
     // QT_QPA_PLATFORMTHEME "kde"
     // QT_QPA_PLATFORMTHEME_QT6 "kde"
-
+    DMS_RUN_GREETER "1"
 
     TERM "kitty"
     TERMINAL "/usr/bin/kitty"
