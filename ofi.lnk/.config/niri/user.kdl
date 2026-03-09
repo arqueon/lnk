@@ -1,4 +1,3 @@
-
 window-rule {
     match app-id="google-chrome"
     default-column-width { proportion 1.0; }
@@ -23,9 +22,38 @@ binds {
     Mod+Shift+Return { spawn-sh "dolphin /home/ruben/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
-    Mod+Ctrl+M { spawn-sh "mpv /dev/video2"; }
     Mod+Alt+F1 { spawn "firefox"; }
     Mod+Alt+F12 { spawn "ticktick"; }
+    Mod+F1 { spawn "google-chrome-canary"; }
+    Mod+Escape { spawn-sh "kitty btop"; }
+
+    // === Revertir Lanzadores y Overview ===
+    Mod+D { spawn "anyrun"; }
+    Mod+E { toggle-overview; }
+    Mod+Tab { focus-workspace-previous; }
+
+    // === Revertir Navegacion (Flechas con cambio de workspace) ===
+    Mod+Down { focus-window-or-workspace-down; }
+    Mod+Up { focus-window-or-workspace-up; }
+    
+    // === Revertir Movimiento (Ctrl para mover, Shift para monitores) ===
+    Mod+Ctrl+Left  { move-column-left; }
+    Mod+Ctrl+Down  { move-window-down; }
+    Mod+Ctrl+Up    { move-window-up; }
+    Mod+Ctrl+Right { move-column-right; }
+
+    Mod+Shift+Left  { focus-monitor-left; }
+    Mod+Shift+Down  { focus-monitor-down; }
+    Mod+Shift+Up    { focus-monitor-up; }
+    Mod+Shift+Right { focus-monitor-right; }
+
+    // === Revertir Teclas de Utilidad ===
+    Mod+L allow-when-locked=true { spawn-sh "dms ipc call lock lock"; }
+    Mod+T { toggle-window-floating; }
+    Mod+I { consume-window-into-column; }
+    Mod+O { expel-window-from-column; }
+    Mod+Shift+W { expand-column-to-available-width; }
+    Mod+Shift+K { spawn "thunar"; }
 }
 
 environment {
@@ -38,3 +66,9 @@ environment {
   BROWSER "google-chrome-stable"
 }
 
+
+input {
+    // warp-mouse-to-focus
+    focus-follows-mouse  max-scroll-amount="20%"
+    workspace-auto-back-and-forth
+}
