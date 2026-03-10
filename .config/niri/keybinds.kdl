@@ -16,7 +16,7 @@ binds {
     Mod+Shift+Z { spawn "nemo"; }
     Mod+period { spawn-sh "rofi -show drun"; }
     Mod+Shift+Return { spawn-sh "thunar"; }
-    Mod+F1 { spawn "~/.config/niri/run_chrome.sh"; }
+    Mod+F1 { spawn-sh "~/.config/niri/run_chrome.sh"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
     Mod+F4 { spawn "logseq"; }
