@@ -5,6 +5,13 @@ window-rule {
     open-focused true
 }
 
+window-rule {
+    match app-id="firefox"
+    default-column-width { proportion 0.7; }
+    opacity 1.0
+    open-focused true
+}
+
 
 layout {
     // New windows decide their initial width themselves.
@@ -15,7 +22,6 @@ binds {
     Mod+Shift+Return { spawn-sh "dolphin /home/ruben/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
-    Mod+Ctrl+M { spawn-sh "mpv /dev/video2"; }
     Mod+Alt+F1 { spawn "firefox"; }
     Mod+Alt+F12 { spawn "ticktick"; }
     Mod+F1 { spawn "google-chrome-canary"; }
