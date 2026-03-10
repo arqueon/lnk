@@ -39,7 +39,8 @@ WP=$1
 cp "$WP" ~/wallpaper/default.jpg
 cp "$WP" /usr/share/sddm/themes/arcolinux-simplicity/images/background.jpg
 cp "$WP" /usr/share/sddm/themes/simplicity/images/background.jpg
-dms ipc call wallpaper set "$WP"
+dms ipc wallpaper set "$WP"
+chmod 644 "$WP"
 # Enlightenment
 # Needs Modules/System/DBus Extension loaded to work
 if [[ "$DESKTOP" == *"Enlightenment"* ]] || [[ "$DESKTOP" == *"Moksha"* ]]; then
@@ -253,7 +254,8 @@ if [[ -n $PID || $XDG_CURRENT_DESKTOP == "Hyprland" ]]; then
 if [[ -n $PID || $XDG_CURRENT_DESKTOP == "niri" ]]; then
 #    swww img "$WP"
     #qs -c noctalia-shell ipc call wallpaper set "$WP" "all"
-    dms ipc call wallpaper set "$WP"
+    dms ipc wallpaper set "$WP"
+chmod 644 "$WP"
     fi
 
 if [ "$XDG_CURRENT_DESKTOP" == "wayfire" ]; then
