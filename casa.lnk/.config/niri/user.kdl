@@ -62,7 +62,9 @@ environment {
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   QS_ICON_THEME "Papirus-Dark"
-  BROWSER "google-chrome-canary"
+  BROWSER "google-chrome-stable"
+ _JAVA_AWT_WM_NONREPARENTING "1"
+ _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
 }
 
 
