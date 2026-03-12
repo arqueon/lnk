@@ -47,3 +47,9 @@ window-rule {
     open-fullscreen true
     open-on-output "HDMI-A-1"
 }
+
+// @id=wr_1773290882485764013 @name=libreoffice-writer
+window-rule {
+    match app-id="^libreoffice-writer$"
+    open-maximized-to-edges true
+}
