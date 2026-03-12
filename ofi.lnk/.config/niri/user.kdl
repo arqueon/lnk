@@ -24,7 +24,6 @@ binds {
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
     Mod+Alt+F12 { spawn "ticktick"; }
-    Mod+F1 { spawn "google-chrome-canary"; }
     Mod+Escape { spawn-sh "kitty btop"; }
 
     // === Revertir Lanzadores y Overview ===
