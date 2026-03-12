@@ -53,3 +53,15 @@ window-rule {
     match app-id="^libreoffice-writer$"
     open-maximized-to-edges true
 }
+
+// @id=wr_1773343715548440944 @name=libreoffice-calc
+window-rule {
+    match app-id="^libreoffice-"
+    open-maximized-to-edges true
+}
+
+// @id=wr_1773348725944478145 @name=libreoffice-startcenter
+window-rule {
+    match app-id="^libreoffice-startcenter$"
+    open-floating true
+}
