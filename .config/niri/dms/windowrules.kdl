@@ -65,3 +65,9 @@ window-rule {
     match app-id="^libreoffice-startcenter$"
     open-floating true
 }
+
+// @id=wr_1773521530972997402 @name=Waydroid
+window-rule {
+    match app-id="^Waydroid$" title="^Waydroid$"
+    default-column-width { fixed 1200; }
+}
