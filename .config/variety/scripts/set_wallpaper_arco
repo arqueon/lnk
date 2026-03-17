@@ -2,8 +2,9 @@
 
 WP=$1
 cp "$WP" ~/wallpaper/default.jpg
-dms ipc call wallpaper set "$WP"
-chmod 644 "$WP"
+chmod 644 ~/wallpaper/default.jpg
+dms ipc wallpaper set "$WP"
+dms ipc settings set greeterWallpaperPath /home/ruben/wallpaper/default.jpg
 sleep 1
 gsettings set org.gnome.desktop.interface gtk-theme 'Matcha-dark-sea'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
