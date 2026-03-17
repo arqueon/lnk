@@ -24,7 +24,6 @@ binds {
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
     Mod+Alt+F12 { spawn "ticktick"; }
-    Mod+F1 { spawn "google-chrome-canary"; }
     Mod+Escape { spawn-sh "kitty btop"; }
 
     // === Revertir Lanzadores y Overview ===
@@ -64,6 +63,8 @@ environment {
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   QS_ICON_THEME "Papirus-Dark"
   BROWSER "google-chrome-stable"
+ _JAVA_AWT_WM_NONREPARENTING "1"
+ _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
 }
 
 

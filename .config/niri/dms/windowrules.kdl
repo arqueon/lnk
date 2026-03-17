@@ -47,3 +47,27 @@ window-rule {
     open-fullscreen true
     open-on-output "HDMI-A-1"
 }
+
+// @id=wr_1773290882485764013 @name=libreoffice-writer
+window-rule {
+    match app-id="^libreoffice-writer$"
+    open-maximized-to-edges true
+}
+
+// @id=wr_1773343715548440944 @name=libreoffice-calc
+window-rule {
+    match app-id="^libreoffice-"
+    open-maximized-to-edges true
+}
+
+// @id=wr_1773348725944478145 @name=libreoffice-startcenter
+window-rule {
+    match app-id="^libreoffice-startcenter$"
+    open-floating true
+}
+
+// @id=wr_1773521530972997402 @name=Waydroid
+window-rule {
+    match app-id="^Waydroid$" title="^Waydroid$"
+    default-column-width { fixed 1200; }
+}

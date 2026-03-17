@@ -74,6 +74,17 @@
       "keyColor": "32"
     },
     {
+      "type": "font",
+      "key": "Font",
+      "keyColor": "32"
+    },
+    {
+      "type": "command",
+      "key": "Mono Font",
+      "keyColor": "32",
+      "text": "gsettings get org.gnome.desktop.interface monospace-font-name | tr -d \"'\""
+    },
+    {
       "type": "terminal",
       "key": "Terminal",
       "keyColor": "32"

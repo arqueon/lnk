@@ -35,6 +35,7 @@
 .config/niri/environment.kdl
 .config/niri/gpu_recorder.sh
 .config/niri/keybinds.kdl
+.config/niri/launch-expandrive.sh
 .config/niri/layout.kdl
 .config/niri/run_chrome.sh
 .config/niri/run_stream.sh
