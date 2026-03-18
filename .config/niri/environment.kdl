@@ -32,7 +32,7 @@ environment {
 
     TERM "kitty"
     TERMINAL "/usr/bin/kitty"
-    BROWSER "google-chrome-stable"
+    BROWSER "google-chrome"
     CHROME_EXECUTABLE "google-chrome-stable"
     EDITOR "subl"
     //_JAVA_AWT_WM_NONREPARENTING "1"
