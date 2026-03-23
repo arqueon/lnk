@@ -85,3 +85,9 @@ window-rule {
     match app-id="^Zettlr$" title="^Preferences$"
     open-floating true
 }
+
+// @id=wr_1774288769933739496 @name=Zettlr
+window-rule {
+    match app-id="^Zettlr$" title="^Export failed$"
+    open-floating true
+}
