@@ -91,3 +91,10 @@ window-rule {
     match app-id="^Zettlr$" title="^Export failed$"
     open-floating true
 }
+
+// @id=wr_1774407737028284705 @name=obsidian
+window-rule {
+    match app-id="^obsidian$"
+    open-maximized true
+    open-on-workspace "notes"
+}

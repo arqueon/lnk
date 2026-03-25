@@ -8,16 +8,23 @@ chmod 644 ~/wallpaper/default.jpg
 # BLOQUE ESPECÍFICO POR ENTORNO
 # =============================================================================
 if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
+    # Generar colores en modo dark de forma SÍNCRONA antes de que DMS
+    # dispare su propio matugen async al hacer wallpaper set.
+    # Así cuando wallpaper set termine, los colores ya están en dark.
+    dms matugen generate --value "$WP" --mode dark
     dms ipc wallpaper set "$WP"
     dms ipc settings set greeterWallpaperPath /home/ruben/wallpaper/default.jpg
-    dms ipc theme dark
 elif [ "$XDG_CURRENT_DESKTOP" == "qtile" ] || [ "$DESKTOP_SESSION" == "qtile" ]; then
     matugen image "$WP" -t scheme-kde > ~/.local/share/color-schemes/DankMatugen.colors
     qtile cmd-obj -o cmd -f reload_config
 fi
 
 sleep 1
-gsettings set org.gnome.desktop.interface gtk-theme 'Matcha-dark-sea'
+# Reforzar tema dark al final, después de que cualquier proceso async de DMS haya terminado
+if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
+    dms ipc theme dark
+fi
+gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface cursor-theme 'oreo_teal_cursors'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
