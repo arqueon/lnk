@@ -2,16 +2,34 @@
 
 WP=$1
 cp "$WP" ~/wallpaper/default.jpg
-dms ipc call wallpaper set "$WP"
-chmod 644 "$WP"
+chmod 644 ~/wallpaper/default.jpg
+
+# =============================================================================
+# BLOQUE ESPECÍFICO POR ENTORNO
+# =============================================================================
+if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
+    # Generar colores en modo dark de forma SÍNCRONA antes de que DMS
+    # dispare su propio matugen async al hacer wallpaper set.
+    # Así cuando wallpaper set termine, los colores ya están en dark.
+    dms matugen generate --value "$WP" --mode dark
+    dms ipc wallpaper set "$WP"
+    dms ipc settings set greeterWallpaperPath /home/ruben/wallpaper/default.jpg
+elif [ "$XDG_CURRENT_DESKTOP" == "qtile" ] || [ "$DESKTOP_SESSION" == "qtile" ]; then
+    matugen image "$WP" -t scheme-kde > ~/.local/share/color-schemes/DankMatugen.colors
+    qtile cmd-obj -o cmd -f reload_config
+fi
+
 sleep 1
-gsettings set org.gnome.desktop.interface gtk-theme 'Matcha-dark-sea'
+# Reforzar tema dark al final, después de que cualquier proceso async de DMS haya terminado
+if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
+    dms ipc theme dark
+fi
+gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface cursor-theme 'oreo_teal_cursors'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 gsettings set org.gnome.desktop.interface font-name 'Fira Sans 11'
 gsettings set org.gnome.desktop.interface monospace-font-name 'FiraCode Nerd Font Mono Regular 12'
-dms ipc theme dark
 kwriteconfig6 --file kdeglobals --group General --key ColorScheme 'DankMatugenDark'
 kwriteconfig6 --file kdeglobals --group General --key font 'Fira Sans,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1'
 kwriteconfig6 --file kdeglobals --group General --key fixed 'FiraCode Nerd Font Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1'
