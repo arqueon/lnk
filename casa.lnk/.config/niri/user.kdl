@@ -74,3 +74,4 @@ input {
     focus-follows-mouse  max-scroll-amount="20%"
     workspace-auto-back-and-forth
 }
+spawn-sh-at-startup "dms ipc call audio mute"
