@@ -98,3 +98,9 @@ window-rule {
     open-maximized true
     open-on-workspace "notes"
 }
+
+// @id=wr_1774635042678692564 @name=chrome-ekhagklcjbdpajgpjgmbionohlpdbjgc-Default
+window-rule {
+    match title="^Zotero Item Selector$"
+    open-floating true
+}
