@@ -55,6 +55,7 @@
 .config/variety/banned.txt
 .config/variety/scripts
 .config/variety/variety.conf
+.config/xdg-desktop-portal/portals.conf
 .config/xsettingsd/xsettingsd.conf
 .config/yay
 .face
