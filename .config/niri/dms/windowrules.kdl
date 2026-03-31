@@ -72,17 +72,17 @@ window-rule {
     default-column-width { fixed 1200; }
 }
 
-// @id=wr_1774028248525339020 @name=zoom
+// @id=wr_1773894090317609621 @name=system-config-printer
 window-rule {
-    match app-id="^zoom$" title="^Settings$"
+    match app-id="^system-config-printer$" title="^New Printer$"
     open-floating true
     default-column-width { fixed 800; }
-    default-window-height { fixed 900; }
+    default-window-height { fixed 700; }
 }
 
-// @id=wr_1774287800043015217 @name=Zettlr
+// @id=wr_1774072198114469460 @name=org.gnome.Nautilus
 window-rule {
-    match app-id="^Zettlr$" title="^Preferences$"
+    match app-id="^org.gnome.Nautilus$"
     open-floating true
 }
 
@@ -97,4 +97,10 @@ window-rule {
     match app-id="^obsidian$"
     open-maximized true
     open-on-workspace "notes"
+}
+
+// @id=wr_1774635042678692564 @name=chrome-ekhagklcjbdpajgpjgmbionohlpdbjgc-Default
+window-rule {
+    match title="^Zotero Item Selector$"
+    open-floating true
 }
