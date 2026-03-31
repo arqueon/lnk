@@ -11,7 +11,8 @@ if [ -n "$APP_PATH" ] && [ -f "$APP_PATH" ]; then
     echo "Lanzando Anytype desde: $APP_PATH"
     
     # 1. Matar procesos anteriores para evitar conflictos
-    pkill -f "anytype" || true
+    # Usamos -x para buscar el nombre exacto del proceso y evitar que el script se mate a sí mismo
+    pkill -x "anytype" || true
     sleep 1
 
     # 2. Entrar al directorio de la aplicación
