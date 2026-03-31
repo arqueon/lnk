@@ -104,3 +104,11 @@ window-rule {
     match title="^Zotero Item Selector$"
     open-floating true
 }
+
+// @id=wr_1774973405464973961 @name=anytype
+window-rule {
+    match app-id="^anytype$"
+    open-maximized true
+    open-focused true
+    open-on-workspace "chat"
+}
