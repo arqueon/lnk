@@ -1,4 +1,4 @@
-spawn-at-startup "/usr/lib/pam_kwallet_init"
+// spawn-at-startup "/usr/lib/pam_kwallet_init"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 // spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "blueman-applet"
