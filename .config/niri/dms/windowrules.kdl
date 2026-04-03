@@ -112,3 +112,10 @@ window-rule {
     open-focused true
     open-on-workspace "chat"
 }
+
+// @id=wr_1775179034580149688 @name=marktext
+window-rule {
+    match app-id="^marktext$" title="^marktext$"
+    open-focused true
+    default-column-width { proportion 0.55; }
+}

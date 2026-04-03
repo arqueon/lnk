@@ -209,3 +209,4 @@ x-scheme-handler/webcals=google-chrome.desktop
 x-scheme-handler/x-github-client=github-desktop.desktop
 x-scheme-handler/x-github-desktop-auth=github-desktop.desktop
 x-scheme-handler/anytype=anytype.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
