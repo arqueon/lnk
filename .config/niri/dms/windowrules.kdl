@@ -119,3 +119,10 @@ window-rule {
     open-focused true
     default-column-width { proportion 0.55; }
 }
+
+// @id=wr_1775502377014919279 @name=org.gnome.Nautilus
+window-rule {
+    match app-id="^org.gnome.Nautilus$"
+    default-column-width { proportion 0.55; }
+    open-floating false
+}
