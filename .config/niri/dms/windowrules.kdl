@@ -98,3 +98,31 @@ window-rule {
     open-maximized true
     open-on-workspace "notes"
 }
+
+// @id=wr_1774635042678692564 @name=chrome-ekhagklcjbdpajgpjgmbionohlpdbjgc-Default
+window-rule {
+    match title="^Zotero Item Selector$"
+    open-floating true
+}
+
+// @id=wr_1774973405464973961 @name=anytype
+window-rule {
+    match app-id="^anytype$"
+    open-maximized true
+    open-focused true
+    open-on-workspace "chat"
+}
+
+// @id=wr_1775179034580149688 @name=marktext
+window-rule {
+    match app-id="^marktext$" title="^marktext$"
+    open-focused true
+    default-column-width { proportion 0.55; }
+}
+
+// @id=wr_1775502377014919279 @name=org.gnome.Nautilus
+window-rule {
+    match app-id="^org.gnome.Nautilus$"
+    default-column-width { proportion 0.55; }
+    open-floating false
+}

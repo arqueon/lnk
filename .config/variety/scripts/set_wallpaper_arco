@@ -12,7 +12,13 @@ if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
     # dispare su propio matugen async al hacer wallpaper set.
     # Así cuando wallpaper set termine, los colores ya están en dark.
     dms matugen generate --value "$WP" --mode dark
-    dms ipc wallpaper set "$WP"
+    
+    # En lugar de usar dms ipc wallpaper set "$WP" que puede fallar en DP-2,
+    # lo hacemos por cada monitor por separado.
+    for output in $(dms ipc outputs current | jq -r '.[]'); do
+        dms ipc wallpaper setFor "$output" "$WP"
+    done
+
     dms ipc settings set greeterWallpaperPath /home/ruben/wallpaper/default.jpg
 elif [ "$XDG_CURRENT_DESKTOP" == "qtile" ] || [ "$DESKTOP_SESSION" == "qtile" ]; then
     matugen image "$WP" -t scheme-kde > ~/.local/share/color-schemes/DankMatugen.colors
@@ -24,7 +30,7 @@ sleep 1
 if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
     dms ipc theme dark
 fi
-gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Matcha-dark-sea'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface cursor-theme 'oreo_teal_cursors'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
