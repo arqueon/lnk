@@ -63,10 +63,8 @@ binds {
     Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; }
     Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
-    Mod+Alt+K { spawn-sh "~/.bin/pick_color.sh"; }
     Mod+Alt+V { spawn-sh "pavucontrol"; }
-    Mod+Alt+F6 { spawn-sh "krusader"; }
-    
+
     Mod+Shift+O { toggle-window-rule-opacity; }
 
     // Window navigation and focus
