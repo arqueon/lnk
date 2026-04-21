@@ -23,7 +23,7 @@ binds {
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
-    Mod+Alt+F2 { spawn-sh "kitty pkill -f ferdium"; }
+    Mod+Alt+F2 { spawn "/home/ruben/.config/niri/restart-ferdium.sh"; }
     Mod+Escape { spawn-sh "kitty btop"; }
 
     // === Revertir Lanzadores y Overview ===
