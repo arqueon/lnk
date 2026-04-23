@@ -19,7 +19,7 @@ binds {
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
     Mod+F4 { spawn "logseq"; }
-    Mod+F5 { spawn "/home/ruben/.config/niri/launch-zettlr.sh"; }
+    Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "krusader"; }
     Mod+F7 { spawn "virt-manager"; }
     Mod+F8 { spawn "qbittorrent"; }
