@@ -35,7 +35,6 @@
 .config/niri/keybinds.kdl
 .config/niri/launch-anytype.sh
 .config/niri/launch-expandrive.sh
-.config/niri/launch-zettlr.sh
 .config/niri/layout.kdl
 .config/niri/restart-ferdium.sh
 .config/niri/run_chrome.sh
