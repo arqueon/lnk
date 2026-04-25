@@ -131,3 +131,11 @@ window-rule {
     match app-id="^org.gnome.Nautilus$" title="^Open File$"
     open-floating true
 }
+
+// @id=wr_1777154268565002168 @name=Zotero
+window-rule {
+    match app-id="^Zotero$" title="^Export…$"
+    open-floating true
+    default-column-width { fixed 420; }
+    default-window-height { fixed 360; }
+}
