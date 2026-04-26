@@ -236,3 +236,16 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id="Alacritty"
+    match app-id="kitty"
+    match app-id="sublime_text"
+    match app-id="ferdium"
+    match app-id="anytype"
+    match app-id="logseq"
+    match app-id="zotero"
+
+    background-effect {
+        blur true
+    }
+}
