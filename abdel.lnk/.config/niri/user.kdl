@@ -23,7 +23,6 @@ binds {
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
-    Mod+Alt+F12 { spawn "ticktick"; }
     Mod+Escape { spawn-sh "kitty btop"; }
 
     // === Revertir Lanzadores y Overview ===
@@ -56,8 +55,13 @@ binds {
 }
 
 environment {
+<<<<<<< HEAD
   GTK_THEME "adw-gtk3-dark"
   //GTK_THEME "Matcha-dark-sea"
+=======
+  // GTK_THEME "adw-gtk3-dark"
+  GTK_THEME "Matcha-dark-sea"
+>>>>>>> 3b055c0464e65188382bdb00ee65586f36373fb3
   XCURSOR_THEME "oreo_teal_cursors"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
