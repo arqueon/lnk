@@ -55,13 +55,9 @@ binds {
 }
 
 environment {
-<<<<<<< HEAD
   GTK_THEME "adw-gtk3-dark"
-  //GTK_THEME "Matcha-dark-sea"
-=======
   // GTK_THEME "adw-gtk3-dark"
   GTK_THEME "Matcha-dark-sea"
->>>>>>> 3b055c0464e65188382bdb00ee65586f36373fb3
   XCURSOR_THEME "oreo_teal_cursors"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
