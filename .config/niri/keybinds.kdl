@@ -25,6 +25,7 @@ binds {
     Mod+F8 { spawn "qbittorrent"; }
     Mod+F9 { spawn "jdownloader"; }
     Mod+F10 { spawn "~/.config/niri/launch-anytype.sh"; }
+    Mod+Alt+F10 { spawn "claude-desktop"; }
     Mod+F11 { spawn "github-desktop"; }
     Mod+Alt+F11 { spawn "antigravity"; }
     Mod+F12 { spawn "smile"; }

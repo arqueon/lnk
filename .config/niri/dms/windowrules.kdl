@@ -115,8 +115,7 @@ window-rule {
 
 // @id=wr_1775179034580149688 @name=marktext
 window-rule {
-    match app-id="^marktext$" title="^marktext$"
-    open-focused true
+    match app-id="^marktext$"
     default-column-width { proportion 0.55; }
 }
 
@@ -138,4 +137,21 @@ window-rule {
     open-floating true
     default-column-width { fixed 420; }
     default-window-height { fixed 360; }
+}
+
+// @id=wr_1777339002063557475 @name=Zotero
+window-rule {
+    match app-id="^Zotero$" title="Found Duplicate Items"
+    open-floating true
+    default-column-width { fixed 900; }
+    default-window-height { fixed 320; }
+}
+
+// @id=wr_1777389288412333678 @name=Alacritty
+window-rule {
+    match app-id="^Alacritty$"
+    open-floating true
+    open-on-output "HDMI-A-1"
+    default-column-width { fixed 1440; }
+    default-window-height { fixed 600; }
 }
