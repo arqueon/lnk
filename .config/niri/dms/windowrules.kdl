@@ -48,18 +48,6 @@ window-rule {
     open-on-output "HDMI-A-1"
 }
 
-// @id=wr_1773290882485764013 @name=libreoffice-writer
-window-rule {
-    match app-id="^libreoffice-writer$"
-    open-maximized-to-edges true
-}
-
-// @id=wr_1773343715548440944 @name=libreoffice-calc
-window-rule {
-    match app-id="^libreoffice-"
-    open-maximized-to-edges true
-}
-
 // @id=wr_1773348725944478145 @name=libreoffice-startcenter
 window-rule {
     match app-id="^libreoffice-startcenter$"
@@ -125,6 +113,7 @@ window-rule {
     default-column-width { proportion 0.55; }
 }
 
+<<<<<<< Updated upstream
 // @id=wr_1776704106678402141 @name=org.gnome.Nautilus
 window-rule {
     match app-id="^org.gnome.Nautilus$" title="^Open File$"
@@ -154,4 +143,16 @@ window-rule {
     open-on-output "HDMI-A-1"
     default-column-width { fixed 1440; }
     default-window-height { fixed 600; }
+=======
+// @id=wr_1776786458624936478 @name=libreoffice-writer
+window-rule {
+    match app-id="^libreoffice-writer$"
+    open-maximized-to-edges true
+}
+
+// @id=wr_1776881080856809899 @name=antigravity
+window-rule {
+    match app-id="^antigravity$"
+    open-maximized-to-edges true
+>>>>>>> Stashed changes
 }
