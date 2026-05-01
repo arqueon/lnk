@@ -155,3 +155,10 @@ window-rule {
     default-column-width { fixed 1440; }
     default-window-height { fixed 600; }
 }
+
+// @id=wr_1777510167576539465 @name=com.mitchellh.ghostty
+window-rule {
+    match app-id="^com.mitchellh.ghostty$"
+    opacity 0.98
+    default-column-width { proportion 0.5; }
+}
