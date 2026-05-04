@@ -65,6 +65,8 @@ binds {
     Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
     Mod+Alt+V { spawn-sh "pavucontrol"; }
+    // Cerrar la ventana activa con Mod + Clic Central
+    Mod+MouseMiddle { close-window; }
 
     Mod+Shift+O { toggle-window-rule-opacity; }
 
@@ -209,7 +211,7 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp { move-column-left; }
     Mod+Ctrl+MouseLeft { close-window; }
-    Mod+MouseMiddle { maximize-column; }
+    Mod+Ctrl+MouseMiddle { maximize-column; }
     Ctrl+MouseMiddle { close-window; }
 
     // Touchpad binds
