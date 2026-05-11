@@ -15,7 +15,7 @@ input {
         // off
         // dwt
         // dwtp
-        // drag false
+        // drag true
         // drag-lock
         // natural-scroll
         accel-speed 0.2
