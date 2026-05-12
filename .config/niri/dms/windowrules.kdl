@@ -52,12 +52,14 @@ window-rule {
 window-rule {
     match app-id="^libreoffice-writer$"
     open-maximized-to-edges true
+    tiled-state true
 }
 
 // @id=wr_1773343715548440944 @name=libreoffice-calc
 window-rule {
     match app-id="^libreoffice-"
     open-maximized-to-edges true
+    tiled-state true
 }
 
 // @id=wr_1773348725944478145 @name=libreoffice-startcenter
@@ -117,6 +119,7 @@ window-rule {
 window-rule {
     match app-id="^marktext$"
     default-column-width { proportion 0.55; }
+    tiled-state true
 }
 
 // @id=wr_1775502377014919279 @name=org.gnome.Nautilus
