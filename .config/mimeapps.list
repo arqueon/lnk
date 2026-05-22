@@ -211,4 +211,5 @@ x-scheme-handler/x-github-desktop-auth=github-desktop.desktop
 x-scheme-handler/anytype=anytype.desktop
 x-scheme-handler/claude=claude.desktop
 x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+x-scheme-handler/antigravity=antigravity.desktop
 

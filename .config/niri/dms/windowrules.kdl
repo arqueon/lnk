@@ -165,3 +165,9 @@ window-rule {
     opacity 0.98
     default-column-width { proportion 0.5; }
 }
+
+// @id=wr_1779472696104695201 @name=evolution-alarm-notify
+window-rule {
+    match app-id="^evolution-alarm-notify$"
+    open-floating true
+}
