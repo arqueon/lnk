@@ -23,7 +23,7 @@ binds {
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
-    Mod+Alt+F12 { spawn "ticktick"; }
+    Mod+Alt+F2 { spawn "/home/ruben/.config/niri/restart-ferdium.sh"; }
     Mod+Escape { spawn-sh "kitty btop"; }
 
     // === Revertir Lanzadores y Overview ===
@@ -62,7 +62,8 @@ environment {
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   QS_ICON_THEME "Papirus-Dark"
-  BROWSER "google-chrome-stable"
+  BROWSER "google-chrome-canary"
+  CHROME_EXECUTABLE "google-chrome-canary"
  _JAVA_AWT_WM_NONREPARENTING "1"
  _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
 }
@@ -70,6 +71,6 @@ environment {
 
 input {
     // warp-mouse-to-focus
-    focus-follows-mouse  max-scroll-amount="20%"
+    focus-follows-mouse  max-scroll-amount="70%"
     workspace-auto-back-and-forth
 }
