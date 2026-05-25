@@ -71,6 +71,6 @@ environment {
 
 input {
     // warp-mouse-to-focus
-    focus-follows-mouse  max-scroll-amount="70%"
+    focus-follows-mouse  max-scroll-amount="90%"
     workspace-auto-back-and-forth
 }
