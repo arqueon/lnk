@@ -554,3 +554,7 @@ if status --is-interactive && type -q fastfetch
    pokemon-colorscripts -r --no-title
 end
 
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/ruben/.local/bin" $PATH

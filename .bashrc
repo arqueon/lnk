@@ -451,3 +451,7 @@ fastfetch
 #colorscript random
 #hyfetch
 export PATH="$HOME/.npm-global/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/ruben/.local/bin:$PATH"
