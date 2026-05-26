@@ -171,3 +171,9 @@ window-rule {
     match app-id="^evolution-alarm-notify$"
     open-floating true
 }
+
+// @id=wr_1779750090740973433 @name=Zotero
+window-rule {
+    match app-id="^Zotero$"
+    open-floating true
+}
