@@ -31,7 +31,7 @@ environment {
     DMS_RUN_GREETER "1"
 
     TERM "kitty"
-    TERMINAL "/usr/bin/kitty"
+    TERMINAL "kitty"
     BROWSER "google-chrome"
     CHROME_EXECUTABLE "google-chrome-stable"
     EDITOR "subl"
