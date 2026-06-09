@@ -41,13 +41,6 @@ window-rule {
     default-window-height { fixed 600; }
 }
 
-// @id=wr_1773009887034701325 @name=chrome-videostream.arqueonautis.org__stream.html-Default
-window-rule {
-    match app-id="^chrome-videostream.arqueonautis.org__stream.html-Default$"
-    open-fullscreen true
-    open-on-output "HDMI-A-1"
-}
-
 // @id=wr_1773290882485764013 @name=libreoffice-writer
 window-rule {
     match app-id="^libreoffice-writer$"
@@ -170,4 +163,10 @@ window-rule {
 window-rule {
     match app-id="^evolution-alarm-notify$"
     open-floating true
+}
+
+// @id=wr_1781028909050951701 @name=chrome-videostream.arqueonautis.org__stream.html-Default
+window-rule {
+    match app-id="^chrome-videostream.arqueonautis.org__stream.html-Default$" title="^webcam - go2rtc$"
+    tiled-state true
 }
