@@ -168,5 +168,6 @@ window-rule {
 // @id=wr_1781028909050951701 @name=chrome-videostream.arqueonautis.org__stream.html-Default
 window-rule {
     match app-id="^chrome-videostream.arqueonautis.org__stream.html-Default$" title="^webcam - go2rtc$"
+    default-column-width { proportion 0.7; }
     tiled-state true
 }
