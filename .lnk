@@ -23,7 +23,6 @@
 .config/niri/window-rules.kdl
 .config/paru
 .config/starship.toml
-.config/stasis/stasis.rune
 .config/sway
 .config/swaylock/config
 .config/swaync/config.json
