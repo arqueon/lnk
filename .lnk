@@ -6,7 +6,6 @@
 .config/fastfetch/config.jsonc
 .config/fish/config.fish
 .config/fusuma/config.yml
-.config/hypr/config/animations.conf
 .config/hypr/config/autostart.conf
 .config/hypr/config/colors.conf
 .config/hypr/config/decorations.conf
