@@ -22,7 +22,6 @@
 .config/niri/startup.kdl
 .config/niri/window-rules.kdl
 .config/paru
-.config/qtile
 .config/rofi/config.rasi
 .config/starship.toml
 .config/stasis/stasis.rune
