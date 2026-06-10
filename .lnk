@@ -23,7 +23,6 @@
 .config/niri/window-rules.kdl
 .config/paru
 .config/starship.toml
-.config/swaync/config.json
 .config/swaync/style.css
 .config/user-dirs.locale
 .config/variety/banned.txt
