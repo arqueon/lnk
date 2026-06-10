@@ -26,7 +26,6 @@
 .config/hypr/scripts/screenshot_area
 .config/hypr/scripts/screenshot_full
 .config/kitty/kitty.conf
-.config/mimeapps.list
 .config/niri/animations.kdl
 .config/niri/config.kdl
 .config/niri/dms/windowrules.kdl
