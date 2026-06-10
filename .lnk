@@ -21,7 +21,6 @@
 .config/niri/run_stream.sh
 .config/niri/startup.kdl
 .config/niri/window-rules.kdl
-.config/nwg-bar
 .config/paru
 .config/qtile
 .config/rofi/config.rasi
