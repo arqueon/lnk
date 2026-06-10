@@ -6,7 +6,6 @@
 .config/fastfetch/config.jsonc
 .config/fish/config.fish
 .config/fusuma/config.yml
-.config/hypr/scripts/screenshot_area
 .config/hypr/scripts/screenshot_full
 .config/kitty/kitty.conf
 .config/niri/animations.kdl
