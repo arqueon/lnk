@@ -6,7 +6,6 @@
 .config/fastfetch/config.jsonc
 .config/fish/config.fish
 .config/fusuma/config.yml
-.config/hypr/hyprland.conf
 .config/hypr/pyprland.toml
 .config/hypr/scripts/screenshot
 .config/hypr/scripts/screenshot_area
