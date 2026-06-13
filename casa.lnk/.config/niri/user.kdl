@@ -58,6 +58,9 @@ binds {
     Mod+O { expel-window-from-column; }
     Mod+Shift+W { expand-column-to-available-width; }
     Mod+Shift+K { spawn "thunar"; }
+
+    // Presionando Mod + Shift + B se lanzarán ambos programas al mismo tiempo
+    Mod+Alt+V { spawn "sh" "-c" "blueman-manager & pwvucontrol"; }
 }
 
 environment {
@@ -79,3 +82,4 @@ input {
     focus-follows-mouse  max-scroll-amount="40%"
     workspace-auto-back-and-forth
 }
+
