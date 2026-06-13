@@ -4,7 +4,7 @@
 .config/niri/environment.kdl
 .config/niri/input.kdl
 .config/niri/output.kdl
-.config/niri/screenshot_swappy.sh
+.config/niri/scripts/screenshot_swappy.sh
 .config/niri/startup.kdl
 .config/niri/user.kdl
 .config/niri/workspaces.kdl

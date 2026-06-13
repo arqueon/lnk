@@ -1,4 +1,4 @@
-// spawn-at-startup "~/.config/niri/waybar.sh"
+// spawn-at-startup "~/.config/niri/scripts/waybar.sh"
 // spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-sh-at-startup "dms run"
 // spawn-at-startup "xwayland-satellite"
