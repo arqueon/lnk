@@ -1,7 +1,4 @@
 .config/gtk-3.0/bookmarks
-.config/niri/animations.kdl
-.config/niri/config.kdl
-.config/niri/environment.kdl
 .config/niri/input.kdl
 .config/niri/output.kdl
 .config/niri/scripts/screenshot_swappy.sh
