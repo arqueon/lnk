@@ -13,11 +13,10 @@ if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
     # Así cuando wallpaper set termine, los colores ya están en dark.
     dms matugen generate --value "$WP" --mode dark
     
-    # En lugar de usar dms ipc wallpaper set "$WP" que puede fallar en DP-2,
-    # lo hacemos por cada monitor por separado.
-    for output in $(dms ipc outputs current | jq -r '.[]'); do
-        dms ipc wallpaper setFor "$output" "$WP"
-    done
+    # En DMS 1.5 podemos usar el comando global para establecer el wallpaper,
+    # lo que soluciona el problema de que al apagarse un monitor y volver a encenderse
+    # se quede sin fondo, ya que 'set' define el wallpaper por defecto para todas las pantallas presentes y futuras.
+    dms ipc wallpaper set "$WP"
 
     dms ipc settings set greeterWallpaperPath /home/ruben/wallpaper/default.jpg
 elif [ "$XDG_CURRENT_DESKTOP" == "qtile" ] || [ "$DESKTOP_SESSION" == "qtile" ]; then

@@ -41,11 +41,18 @@ window-rule {
     default-window-height { fixed 600; }
 }
 
-// @id=wr_1773009887034701325 @name=chrome-videostream.arqueonautis.org__stream.html-Default
+// @id=wr_1773290882485764013 @name=libreoffice-writer
 window-rule {
-    match app-id="^chrome-videostream.arqueonautis.org__stream.html-Default$"
-    open-fullscreen true
-    open-on-output "HDMI-A-1"
+    match app-id="^libreoffice-writer$"
+    open-maximized-to-edges true
+    tiled-state true
+}
+
+// @id=wr_1773343715548440944 @name=libreoffice-calc
+window-rule {
+    match app-id="^libreoffice-"
+    open-maximized-to-edges true
+    tiled-state true
 }
 
 // @id=wr_1773348725944478145 @name=libreoffice-startcenter
@@ -105,6 +112,7 @@ window-rule {
 window-rule {
     match app-id="^marktext$"
     default-column-width { proportion 0.55; }
+    tiled-state true
 }
 
 // @id=wr_1775502377014919279 @name=org.gnome.Nautilus
@@ -144,14 +152,22 @@ window-rule {
     default-window-height { fixed 600; }
 }
 
-// @id=wr_1776786458624936478 @name=libreoffice-writer
+// @id=wr_1777510167576539465 @name=com.mitchellh.ghostty
 window-rule {
-    match app-id="^libreoffice-writer$"
-    open-maximized-to-edges true
+    match app-id="^com.mitchellh.ghostty$"
+    opacity 0.98
+    default-column-width { proportion 0.5; }
 }
 
-// @id=wr_1776881080856809899 @name=antigravity
+// @id=wr_1779472696104695201 @name=evolution-alarm-notify
 window-rule {
-    match app-id="^antigravity$"
-    open-maximized-to-edges true
+    match app-id="^evolution-alarm-notify$"
+    open-floating true
+}
+
+// @id=wr_1781028909050951701 @name=chrome-videostream.arqueonautis.org__stream.html-Default
+window-rule {
+    match app-id="^chrome-videostream.arqueonautis.org__stream.html-Default$" title="^webcam - go2rtc$"
+    default-column-width { proportion 0.7; }
+    tiled-state true
 }

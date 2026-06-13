@@ -27,7 +27,7 @@ binds {
     Mod+F10 { spawn "~/.config/niri/launch-anytype.sh"; }
     Mod+Alt+F10 { spawn "claude-desktop"; }
     Mod+F11 { spawn "github-desktop"; }
-    Mod+Alt+F11 { spawn "antigravity"; }
+    Mod+Alt+F11 { spawn "antigravity-ide"; }
     Mod+F12 { spawn "smile"; }
     Mod+Ctrl+N { spawn "newsflash"; }
     Mod+Ctrl+M { spawn-sh "~/.config/niri/run_stream.sh"; }
@@ -65,6 +65,8 @@ binds {
     Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
     Mod+Alt+V { spawn-sh "pavucontrol"; }
+    // Cerrar la ventana activa con Mod + Clic Central
+    Mod+MouseMiddle { close-window; }
 
     Mod+Shift+O { toggle-window-rule-opacity; }
 
@@ -209,7 +211,7 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp { move-column-left; }
     Mod+Ctrl+MouseLeft { close-window; }
-    Mod+MouseMiddle { maximize-column; }
+    Mod+Ctrl+MouseMiddle { maximize-column; }
     Ctrl+MouseMiddle { close-window; }
 
     // Touchpad binds
