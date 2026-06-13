@@ -7,7 +7,7 @@ window-rule {
 
 window-rule {
     match app-id="firefox"
-    default-column-width { proportion 0.7; }
+    default-column-width { proportion 0.55; }
     opacity 1.0
     open-focused true
 }
