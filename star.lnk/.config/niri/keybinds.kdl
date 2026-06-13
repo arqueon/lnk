@@ -49,7 +49,7 @@ binds {
     // Mod+Alt+T hotkey-overlay-title="Task Manager" { spawn-sh "dms ipc call processlist toggle"; }
     Mod+Alt+P hotkey-overlay-title="Notepad" { spawn-sh "dms ipc call notepad toggle"; }
     Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
-    Mod+B { spawn "~/.config/niri/waybar.sh"; }
+    Mod+B { spawn "~/.config/niri/scripts/waybar.sh"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn-sh "wl-present mirror"; }
     Mod+Escape { spawn-sh "kitty btop"; }
@@ -156,7 +156,7 @@ binds {
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
-    Mod+Print { spawn "~/.config/niri/screenshot_swappy.sh"; }
+    Mod+Print { spawn "~/.config/niri/scripts/screenshot_swappy.sh"; }
 
     // Multimedia and peripherals
     // XF86AudioLowerVolume { spawn "swayosd-client" "--output-volume" "lower"; }

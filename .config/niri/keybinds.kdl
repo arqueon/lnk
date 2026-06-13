@@ -9,7 +9,7 @@ binds {
     Mod+Ctrl+Shift+S { toggle-keyboard-shortcuts-inhibit; }
 
     // Application launchers and binds
-    Mod+D { spawn "anyrun"; }
+        Mod+D { spawn "anyrun"; }
     Mod+Return { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
     Mod+Shift+Return { spawn-sh "thunar"; }
@@ -32,7 +32,6 @@ binds {
     Mod+Ctrl+M { spawn-sh "~/.config/niri/scripts/run_stream.sh"; }
 
     // System utility binds
-
     Mod+L allow-when-locked=true hotkey-overlay-title="Lock Screen" { spawn-sh "dms ipc call lock lock"; }
     Ctrl+Alt+Escape { spawn-sh "dms ipc call lock lock"; }
     Mod+X hotkey-overlay-title="Power Menu" { spawn-sh "dms ipc call powermenu toggle"; }
@@ -180,8 +179,6 @@ binds {
     Mod+TouchpadScrollUp { spawn-sh "dms ipc call audio increment 3"; }
 
 }
-
-
 
 // Switch events
 switch-events {
