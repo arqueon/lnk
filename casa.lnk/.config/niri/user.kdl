@@ -23,11 +23,6 @@ window-rule {
     default-column-display "tabbed"
 }
 
-layout {
-    // New windows decide their initial width themselves.
-    default-column-width {}
-}
-   
 binds {
     Mod+Shift+Return { spawn-sh "dolphin /home/ruben/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
