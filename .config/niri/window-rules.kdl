@@ -149,15 +149,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id="Alacritty"
-    open-floating true
-    default-column-width { fixed 1000; }
-    default-floating-position x=250 y=50 relative-to="bottom-right"
-    min-width 1000
-    opacity 0.9
-}
-
-window-rule {
     match title=r#"^\s*$"#
     match title=r#"^Add/Edit Citation$"#
     match title=r#"^Zotero Settings$"#
