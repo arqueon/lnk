@@ -303,8 +303,8 @@ alias update-fc="sudo fc-cache -fv"
 alias bupskel="cp -Rf /etc/skel ~/.skel-backup-(date +%Y.%m.%d-%H.%M.%S)"
 
 #copy shell configs
-alias cb="cp /etc/skel/.bashrc ~/.bashrc && echo "Copied.""
-alias cz="cp /etc/skel/.zshrc ~/.zshrc && echo "Copied.""
+alias cb="cp /etc/skel/.bashrc ~/.bashrc && echo 'Copied.'"
+alias cz="cp /etc/skel/.zshrc ~/.zshrc && echo 'Copied.'"
 alias cf="cp /etc/skel/.config/fish/config.fish ~/.config/fish/config.fish && exec fish"
 
 #switch between bash, zsh and fish
@@ -478,7 +478,7 @@ alias fix-pacman-keyserver="/usr/local/bin/edu-fix-pacman-gpg-conf"
 alias fix-archlinux-mirrors="/usr/local/bin/edu-fix-archlinux-servers"
 
 #maintenance
-alias big="expac -H M "%m\t%n" | sort -h | nl"
+alias big="expac -H M '%m\t%n' | sort -h | nl"
 
 #hblock (stop tracking with hblock)
 #use unhblock to stop using hblock
