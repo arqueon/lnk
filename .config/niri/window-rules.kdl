@@ -19,13 +19,6 @@ window-rule {
     default-column-width { fixed 800; }
 }
 
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-    block-out-from "screen-capture"
-    // block-out-from "screencast"
-}
-
 window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
@@ -230,7 +223,6 @@ window-rule {
     match app-id=r#"org.quickshell$"#
     open-floating true
 }
-
 
 // Regla que aplica ÚNICAMENTE a ventanas que pierden el foco
 window-rule {
