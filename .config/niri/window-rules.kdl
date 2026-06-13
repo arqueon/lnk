@@ -220,11 +220,6 @@ window-rule {
 }
 
 window-rule {
-    match is-active=false
-    opacity 0.95
-}
-
-window-rule {
     match app-id=r#"com.github.th_ch.youtube_music"#
     match app-id=r#"Steam"#
     default-column-width { proportion 0.7; }
@@ -236,16 +231,25 @@ window-rule {
     open-floating true
 }
 
-window-rule {
-    match app-id="Alacritty"
-    match app-id="kitty"
-    match app-id="sublime_text"
-    match app-id="ferdium"
-    match app-id="anytype"
-    match app-id="logseq"
-    match app-id="zotero"
 
+// Regla que aplica ÚNICAMENTE a ventanas que pierden el foco
+window-rule {
+    // Detecta cuando la ventana NO es la activa
+    match is-active=false
+
+    // Aplica transparencia e indica que respete las esquinas redondeadas
+    opacity 0.85
+    clip-to-geometry true
+    geometry-corner-radius 12
+
+    // Activa el blur de fondo
     background-effect {
         blur true
+        xray true
     }
+}
+
+layout {
+    // New windows decide their initial width themselves.
+    default-column-width {}
 }

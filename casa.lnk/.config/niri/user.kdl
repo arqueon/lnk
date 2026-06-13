@@ -1,17 +1,27 @@
 window-rule {
     match app-id="google-chrome"
     default-column-width { proportion 0.55; }
-    opacity 1.0
     open-focused true
 }
 
 window-rule {
     match app-id="firefox"
     default-column-width { proportion 0.55; }
-    opacity 1.0
     open-focused true
 }
 
+// Regla para Blueman
+window-rule {
+    match app-id="blueman-manager"
+    default-column-display "tabbed"
+
+}
+
+// Regla para pwvucontrol
+window-rule {
+    match app-id="com.saivert.pwvucontrol"
+    default-column-display "tabbed"
+}
 
 layout {
     // New windows decide their initial width themselves.
