@@ -91,7 +91,7 @@ window-rule {
     match app-id=r#"libreoffice"#
     match app-id=r#"soffice"#
     open-on-workspace "write"
-    open-maximized true
+    default-column-width { proportion 0.85; }
     open-focused true
 }
 
