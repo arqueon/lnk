@@ -10,13 +10,14 @@
 .config/kitty/kitty.conf
 .config/niri/animations.kdl
 .config/niri/config.kdl
+.config/niri/dms/binds.kdl
 .config/niri/dms/windowrules.kdl
 .config/niri/environment.kdl
-.config/niri/scripts/gpu_recorder.sh
 .config/niri/keybinds.kdl
+.config/niri/layout.kdl
+.config/niri/scripts/gpu_recorder.sh
 .config/niri/scripts/launch-anytype.sh
 .config/niri/scripts/launch-expandrive.sh
-.config/niri/layout.kdl
 .config/niri/scripts/restart-ferdium.sh
 .config/niri/scripts/run_chrome.sh
 .config/niri/scripts/run_stream.sh
