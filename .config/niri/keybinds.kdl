@@ -9,13 +9,12 @@ binds {
     Mod+Ctrl+Shift+S { toggle-keyboard-shortcuts-inhibit; }
 
     // Application launchers and binds
-    // Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    // Mod+Space hotkey-overlay-title="Application Launcher" { spawn-sh "dms ipc call spotlight toggle"; }
-    Mod+D { spawn "anyrun"; }
+        Mod+D { spawn "anyrun"; }
     Mod+Return { spawn "kitty"; }
     Mod+Shift+Z { spawn "nemo"; }
     Mod+Shift+Return { spawn-sh "thunar"; }
-    Mod+F1 { spawn-sh "~/.config/niri/run_chrome.sh"; }
+    Mod+F1 { spawn-sh "~/.config/niri/scripts/run_chrome.sh"; }
+    Mod+Alt+F1 { spawn-sh "firefox"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
     Mod+F4 { spawn "logseq"; }
@@ -24,35 +23,23 @@ binds {
     Mod+F7 { spawn "virt-manager"; }
     Mod+F8 { spawn "qbittorrent"; }
     Mod+F9 { spawn "jdownloader"; }
-    Mod+F10 { spawn "~/.config/niri/launch-anytype.sh"; }
+    Mod+F10 { spawn "~/.config/niri/scripts/launch-anytype.sh"; }
+    Mod+Alt+F10 { spawn "claude-desktop"; }
     Mod+F11 { spawn "github-desktop"; }
-    Mod+Alt+F11 { spawn "antigravity"; }
+    Mod+Alt+F11 { spawn "antigravity-ide"; }
     Mod+F12 { spawn "smile"; }
     Mod+Ctrl+N { spawn "newsflash"; }
-    Mod+Ctrl+M { spawn-sh "~/.config/niri/run_stream.sh"; }
+    Mod+Ctrl+M { spawn-sh "~/.config/niri/scripts/run_stream.sh"; }
 
     // System utility binds
-
-    // Mod+L { spawn "swaylock"; }
-    // Mod+L allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Mod+L allow-when-locked=true hotkey-overlay-title="Lock Screen" { spawn-sh "dms ipc call lock lock"; }
-    // Ctrl+Alt+Escape { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
     Ctrl+Alt+Escape { spawn-sh "dms ipc call lock lock"; }
-    // Mod+X { spawn "nwg-bar"; }
-    // Mod+X { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     Mod+X hotkey-overlay-title="Power Menu" { spawn-sh "dms ipc call powermenu toggle"; }
     Mod+Shift+K { spawn "thunar"; }
-    // Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher calculator"; }
-    // Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
-    // Mod+N hotkey-overlay-title="Notification Center" { spawn-sh "dms ipc call notifications toggle"; }
-    //Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Shift+C hotkey-overlay-title="Clipboard Manager" { spawn-sh "dms ipc call clipboard toggle"; }
-    // Mod+Shift+B allow-when-locked=true { spawn-sh "qs -c noctalia-shell"; }
     Mod+Shift+B allow-when-locked=true { spawn-sh "dms restart"; }
-    // Mod+Alt+T hotkey-overlay-title="Task Manager" { spawn-sh "dms ipc call processlist toggle"; }
     Mod+Alt+P hotkey-overlay-title="Notepad" { spawn-sh "dms ipc call notepad toggle"; }
     Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
-    Mod+B { spawn "~/.config/niri/waybar.sh"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
     Mod+Shift+M { spawn-sh "wl-present mirror"; }
     Mod+Escape { spawn-sh "kitty btop"; }
@@ -61,12 +48,12 @@ binds {
     Mod+Alt+S { spawn-sh "systemctl suspend"; }
     Mod+Alt+2 { spawn-sh "~/.bin/lnk_push.sh"; }
     Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; }
-    Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/gpu_recorder.sh"; }
+    Mod+Ctrl+R { spawn-sh "bash ~/.config/niri/scripts/gpu_recorder.sh"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
-    Mod+Alt+K { spawn-sh "~/.bin/pick_color.sh"; }
     Mod+Alt+V { spawn-sh "pavucontrol"; }
-    Mod+Alt+F6 { spawn-sh "krusader"; }
-    
+    // Cerrar la ventana activa con Mod + Clic Central
+    Mod+MouseMiddle { close-window; }
+
     Mod+Shift+O { toggle-window-rule-opacity; }
 
     // Window navigation and focus
@@ -119,9 +106,6 @@ binds {
     Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
     Mod+Alt+Ctrl+Left { move-workspace-to-monitor-left; }
     Mod+Alt+Ctrl+Right { move-workspace-to-monitor-right; }
-    // Mod+Shift+Ctrl+Left { move-window-to-monitor-left; }
-    // Mod+Ctrl+Alt+Left { spawn "niri" "msg" "action" "move-workspace-to-monitor" "DP-2"; }
-    // Mod+Ctrl+Alt+Right { spawn "niri" "msg" "action" "move-workspace-to-monitor" "HDMI-A-1"; }
 
     // Workspace navigation
     Mod+Page_Down { focus-workspace-down; }
@@ -132,11 +116,6 @@ binds {
     Mod+Ctrl+I { move-column-to-workspace-up; }
     Mod+Shift+Page_Down { move-workspace-down; }
     Mod+Shift+Page_Up { move-workspace-up; }
-    // Mod+U { focus-workspace-down; }
-    // Mod+I { focus-workspace-up; }
-    // Mod+Shift+U { move-workspace-down; }
-    // Mod+Shift+I { move-workspace-up; }
-    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
 
     // Workspace by index
     Mod+1 { focus-workspace 1; }
@@ -157,32 +136,14 @@ binds {
     Mod+Shift+7 { move-column-to-workspace 7; }
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
-    // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
     // Screenshots
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
-    Mod+Print { spawn "~/.config/niri/screenshot_swappy.sh"; }
+    Mod+Print { spawn "~/.config/niri/scripts/screenshot_swappy.sh"; }
 
     // Multimedia and peripherals
-    // XF86AudioLowerVolume { spawn "swayosd-client" "--output-volume" "lower"; }
-    // XF86AudioMute { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
-    // XF86AudioRaiseVolume { spawn "swayosd-client" "--output-volume" "raise"; }
-    // XF86MonBrightnessDown { spawn "swayosd-client" "--brightness" "lower"; }
-    // XF86MonBrightnessUp { spawn "swayosd-client" "--brightness" "raise"; }
-    // F10 { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
-    // F11 { spawn "swayosd-client" "--output-volume" "lower"; }
-    // F12 { spawn "swayosd-client" "--output-volume" "raise"; }
-
-    // XF86AudioMute { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    // XF86AudioLowerVolume { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    // XF86AudioRaiseVolume { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-    // XF86MonBrightnessDown { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
-    // XF86MonBrightnessUp { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
-    // F10 { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    // F11 { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    // F12 { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "dms ipc call audio increment 3"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "dms ipc call audio decrement 3"; }
@@ -210,44 +171,17 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp { move-column-left; }
     Mod+Ctrl+MouseLeft { close-window; }
-    Mod+MouseMiddle { maximize-column; }
+    Mod+Ctrl+MouseMiddle { maximize-column; }
     Ctrl+MouseMiddle { close-window; }
 
     // Touchpad binds
-    // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
-    // Mod+TouchpadScrollUp { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
-    // Mod+TouchpadScrollDown { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    // Mod+TouchpadScrollUp { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
     Mod+TouchpadScrollDown { spawn-sh "dms ipc call audio decrement 3"; }
     Mod+TouchpadScrollUp { spawn-sh "dms ipc call audio increment 3"; }
 
-
-    // Niriswitcher binds
-    // Alt+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
-    // Alt+Shift+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
-    // Alt+1 repeat=false { spawn "niriswitcherctl" "show" "--workspace"; }
-    // Alt+Shift+1 repeat=false { spawn "niriswitcherctl" "show" "--workspace"; }
 }
-
-
 
 // Switch events
 switch-events {
        lid-close { spawn "systemctl" "suspend"; }
-    // lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }    
-    // lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }    
-    // lid-close { spawn "swaylock"; }
 }
 
-recent-windows {
-    binds {
-        Alt+Tab         { next-window; }
-        Alt+Shift+Tab   { previous-window; }
-        Alt+z       { next-window     filter="app-id"; }
-        Alt+Shift+z { previous-window filter="app-id"; }
-        Mod+Tab         { next-window; }
-        Mod+Shift+Tab   { previous-window; }
-        Mod+z       { next-window     filter="app-id"; }
-        Mod+Shift+z { previous-window filter="app-id"; }
-    }
-}
