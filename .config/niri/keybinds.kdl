@@ -53,6 +53,8 @@ binds {
     Alt+F10 { spawn-sh "dms ipc call audio mute"; }
     Alt+F11 { spawn-sh "dms ipc call audio decrement 3"; }
     Alt+F12 { spawn-sh "dms ipc call audio increment 3"; }
+    Mod+Alt+P { spawn-sh "~/.config/niri/scripts/conectar_audio.sh poseidon"; }
+    Mod+Alt+E { spawn-sh "~/.config/niri/scripts/conectar_audio.sh earfun"; }
 
     // Mouse and Touchpad binds custom
     Mod+Ctrl+MouseLeft { close-window; }
