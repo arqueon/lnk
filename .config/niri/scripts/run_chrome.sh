@@ -2,6 +2,7 @@
 
 # Lista de binarios en orden de prioridad (primera instalada gana)
 versiones=(
+    "firefox"
     "google-chrome-canary"
     "google-chrome-beta"
     "google-chrome-dev"
