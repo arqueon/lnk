@@ -1,3 +1,3 @@
 #!/bin/bash
 
-firefox "https://videostream.arqueonautis.org/stream.html?src=webcam" &
+~/.config/niri/run_chrome.sh --app="https://videostream.arqueonautis.org/stream.html?src=webcam"&
