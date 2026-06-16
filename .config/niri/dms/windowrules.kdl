@@ -150,11 +150,3 @@ window-rule {
     match app-id="^Zotero$" title="^Import$"
     open-floating true
 }
-
-// @id=wr_1781569006642255268 @name=chrome-videostream.arqueonautis.org__stream.html-Default
-window-rule {
-    match app-id="^chrome-videostream.arqueonautis.org__stream.html-Default$" title="^webcam - go2rtc$"
-    open-maximized true
-    open-on-output "HDMI-A-1"
-    tiled-state true
-}
