@@ -12,18 +12,34 @@ window-rule {
     open-focused true
 }
 
-
-layout {
-    // New windows decide their initial width themselves.
-    default-column-width {}
+// Regla para Blueman
+window-rule {
+    match app-id="blueman-manager"
+    default-column-display "tabbed"
 }
-   
+
+// Regla para pwvucontrol
+window-rule {
+    match app-id="com.saivert.pwvucontrol"
+    default-column-display "tabbed"
+}
+
+window-rule {
+    // Puedes usar app-id, title, o ambos para asegurarte de que solo afecte a esa ventana
+    match app-id="chrome-videostream.arqueonautis.org__stream.html-Default"
+    // Lo abre en el monitor especificado
+    open-on-workspace "chat"
+    // open-on-output "HDMI-A-1"
+    // Lo abre maximizado (en Niri, esto significa que la columna ocupará el 100% de la pantalla sin ser pantalla completa)
+    open-maximized true
+}
+
 binds {
     Mod+Shift+Return { spawn-sh "dolphin /home/ruben/Downloads/"; }
     Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
     Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
-    Mod+Alt+F12 { spawn "ticktick"; }
+    Mod+Alt+F2 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
     Mod+Escape { spawn-sh "kitty btop"; }
 
     // === Revertir Lanzadores y Overview ===
@@ -53,6 +69,9 @@ binds {
     Mod+O { expel-window-from-column; }
     Mod+Shift+W { expand-column-to-available-width; }
     Mod+Shift+K { spawn "thunar"; }
+
+    // Presionando Mod + Shift + B se lanzarán ambos programas al mismo tiempo
+    Mod+Alt+V { spawn "sh" "-c" "blueman-manager & pwvucontrol"; }
 }
 
 environment {
@@ -62,12 +81,14 @@ environment {
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   QS_ICON_THEME "Papirus-Dark"
-  BROWSER "google-chrome-stable"
+  BROWSER "google-chrome-beta"
+  CHROME_EXECUTABLE "google-chrome-beta"
+ _JAVA_AWT_WM_NONREPARENTING "1"
+ _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
 }
-
 
 input {
     // warp-mouse-to-focus
-    focus-follows-mouse  max-scroll-amount="20%"
+    focus-follows-mouse  max-scroll-amount="70%"
     workspace-auto-back-and-forth
 }
