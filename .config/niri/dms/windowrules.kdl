@@ -150,3 +150,9 @@ window-rule {
     match app-id="^Zotero$" title="^Import$"
     open-floating true
 }
+
+// @id=wr_1781737214489559291 @name=org.kde.dolphin
+window-rule {
+    match app-id="^org.kde.dolphin$"
+    default-column-width { proportion 0.5; }
+}

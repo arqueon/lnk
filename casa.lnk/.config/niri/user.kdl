@@ -1,12 +1,12 @@
 window-rule {
     match app-id="google-chrome"
-    default-column-width { proportion 0.55; }
+    default-column-width { proportion 0.5; }
     open-focused true
 }
 
 window-rule {
     match app-id="firefox"
-    default-column-width { proportion 0.55; }
+    default-column-width { proportion 0.5; }
     open-focused true
 }
 
