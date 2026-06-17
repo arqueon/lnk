@@ -62,6 +62,10 @@ binds {
     Ctrl+MouseMiddle { close-window; }
     Mod+TouchpadScrollDown { spawn-sh "dms ipc call audio decrement 3"; }
     Mod+TouchpadScrollUp { spawn-sh "dms ipc call audio increment 3"; }
+
+    // Custom Workspace Movement
+    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
 }
 
 // Switch events
