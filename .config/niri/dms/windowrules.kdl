@@ -156,3 +156,9 @@ window-rule {
     match app-id="^org.kde.dolphin$"
     default-column-width { proportion 0.5; }
 }
+
+// @id=wr_1781740365569722770 @name=chrome-music.youtube.com__-Default
+window-rule {
+    match app-id="^chrome-music.youtube.com__-Default$"
+    default-column-width { proportion 0.5; }
+}
