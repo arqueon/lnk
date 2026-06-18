@@ -35,3 +35,4 @@
 .config/xdg-desktop-portal/portals.conf
 .config/yay
 .face
+.local/share/applications/google-chrome-beta.desktop
