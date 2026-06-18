@@ -24,7 +24,7 @@ binds {
     Mod+F12 { spawn "smile"; }
     Mod+Ctrl+N { spawn "newsflash"; }
     Mod+Ctrl+M { spawn-sh "~/.config/niri/scripts/run_stream.sh"; }
-    Mod+Alt+M { spawn "~/.config/niri/scripts/run_chrome.sh" "--app=https://music.youtube.com"; }
+    Mod+Alt+M { spawn "~/.config/niri/scripts/ejecutar_ytmusic.sh"; }
 
     // System utility binds
     Mod+Shift+K { spawn "thunar"; }
