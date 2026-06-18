@@ -162,3 +162,9 @@ window-rule {
     match app-id="^chrome-music.youtube.com__-Default$"
     default-column-width { proportion 0.5; }
 }
+
+// @id=wr_1781748240333403671 @name=GitHub Desktop
+window-rule {
+    match app-id="^GitHub Desktop$"
+    default-column-width { proportion 0.5; }
+}
