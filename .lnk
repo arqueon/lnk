@@ -15,6 +15,7 @@
 .config/niri/environment.kdl
 .config/niri/keybinds.kdl
 .config/niri/layout.kdl
+.config/niri/scripts/ejecutar_ytmusic.sh
 .config/niri/scripts/gpu_recorder.sh
 .config/niri/scripts/launch-anytype.sh
 .config/niri/scripts/launch-expandrive.sh
