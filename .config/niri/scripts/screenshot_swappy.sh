@@ -1,0 +1,1 @@
+../../lnk/casa.lnk/.config/niri/scripts/screenshot_swappy.sh
