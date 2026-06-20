@@ -67,7 +67,7 @@ binds {
     Mod+T { toggle-window-floating; }
     Mod+I { consume-window-into-column; }
     Mod+O { expel-window-from-column; }
-    Mod+Shift+W { expand-column-to-available-width; }
+    // Mod+Shift+W { expand-column-to-available-width; } // Comentado por conflicto
     Mod+Shift+K { spawn "thunar"; }
 
     // Presionando Mod + Shift + B se lanzarán ambos programas al mismo tiempo
