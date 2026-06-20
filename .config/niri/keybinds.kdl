@@ -25,6 +25,7 @@ binds {
     Mod+Ctrl+N { spawn "newsflash"; }
     Mod+Ctrl+M { spawn-sh "~/.config/niri/scripts/run_stream.sh"; }
     Mod+Alt+M { spawn "~/.config/niri/scripts/ejecutar_ytmusic.sh"; }
+    Mod+W { spawn "dms" "ipc" "whisper" "toggle"; }
 
     // System utility binds
     Mod+Shift+K { spawn "thunar"; }
