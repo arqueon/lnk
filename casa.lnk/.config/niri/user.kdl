@@ -91,3 +91,12 @@ input {
     focus-follows-mouse  max-scroll-amount="70%"
     workspace-auto-back-and-forth
 }
+
+layout {
+    focus-ring {
+        inactive-color "#413737"
+    }
+    border {
+        inactive-color "#413737"
+    }
+}
