@@ -1,0 +1,410 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+API_URL="https://ws.audioscrobbler.com/2.0/"
+AUTH_URL="https://www.last.fm/api/auth/"
+DEFAULT_CONFIG_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/niri/scripts/lastfm-love.env"
+CONFIG_FILE="${LASTFM_LOVE_CONFIG:-$DEFAULT_CONFIG_FILE}"
+ARTWORK_CACHE_DIR="${LASTFM_LOVE_ARTWORK_CACHE:-/tmp/lastfm-love-artwork}"
+
+usage() {
+  cat <<'EOF'
+Usage:
+  lastfm-love-now setup       Configure API credentials and session key
+  lastfm-love-now love        Love the track currently scrobbling
+  lastfm-love-now now         Print the currently scrobbling track
+  lastfm-love-now auth-url    Create a Last.fm auth token and print the approval URL
+  lastfm-love-now session TOKEN
+                              Exchange an approved token and save the session key
+
+Config:
+  Default config path:
+    ~/.config/niri/scripts/lastfm-love.env
+
+  Required values:
+    LASTFM_USER="your_username"
+    LASTFM_API_KEY="..."
+    LASTFM_API_SECRET="..."
+    LASTFM_SESSION_KEY="..."
+
+  Optional:
+    LASTFM_LOVE_NOTIFY=0      # disable desktop notifications
+EOF
+}
+
+die() {
+  printf 'Error: %s\n' "$*" >&2
+  exit 1
+}
+
+need_cmd() {
+  command -v "$1" >/dev/null 2>&1 || die "missing dependency: $1"
+}
+
+shell_quote() {
+  printf "'%s'" "$(printf '%s' "$1" | sed "s/'/'\\\\''/g")"
+}
+
+write_config_value() {
+  local key="$1"
+  local value="$2"
+  local tmp quoted
+
+  mkdir -p "$(dirname "$CONFIG_FILE")"
+  touch "$CONFIG_FILE"
+  chmod 600 "$CONFIG_FILE"
+
+  quoted="$(shell_quote "$value")"
+  tmp="$(mktemp)"
+  awk -v key="$key" -v quoted="$quoted" '
+    BEGIN { done = 0 }
+    $0 ~ "^" key "=" {
+      print key "=" quoted
+      done = 1
+      next
+    }
+    { print }
+    END {
+      if (!done) {
+        print key "=" quoted
+      }
+    }
+  ' "$CONFIG_FILE" >"$tmp"
+  cat "$tmp" >"$CONFIG_FILE"
+  rm -f "$tmp"
+  chmod 600 "$CONFIG_FILE"
+}
+
+prompt_config_value() {
+  local key="$1"
+  local label="$2"
+  local secret="${3:-0}"
+  local current="${!key:-}"
+  local prompt="$label"
+  local value
+
+  if [[ -n "$current" ]]; then
+    prompt="$prompt [keep existing]"
+  fi
+  prompt="$prompt: "
+
+  if [[ "$secret" == "1" ]]; then
+    read -r -s -p "$prompt" value
+    printf '\n'
+  else
+    read -r -p "$prompt" value
+  fi
+
+  if [[ -z "$value" && -n "$current" ]]; then
+    value="$current"
+  fi
+
+  [[ -n "$value" ]] || die "$key cannot be empty"
+  write_config_value "$key" "$value"
+}
+
+load_config() {
+  if [[ -f "$CONFIG_FILE" ]]; then
+    # shellcheck disable=SC1090
+    source "$CONFIG_FILE"
+  fi
+
+  : "${LASTFM_USER:=}"
+  : "${LASTFM_API_KEY:=}"
+  : "${LASTFM_API_SECRET:=}"
+  : "${LASTFM_SESSION_KEY:=}"
+  : "${LASTFM_LOVE_NOTIFY:=1}"
+}
+
+require_read_config() {
+  [[ -n "$LASTFM_USER" ]] || die "LASTFM_USER is missing in $CONFIG_FILE"
+  [[ -n "$LASTFM_API_KEY" ]] || die "LASTFM_API_KEY is missing in $CONFIG_FILE"
+}
+
+require_write_config() {
+  require_read_config
+  [[ -n "$LASTFM_API_SECRET" ]] || die "LASTFM_API_SECRET is missing in $CONFIG_FILE"
+  [[ -n "$LASTFM_SESSION_KEY" ]] || die "LASTFM_SESSION_KEY is missing in $CONFIG_FILE. Run: $0 setup"
+}
+
+md5_hex() {
+  printf '%s' "$1" | md5sum | awk '{print $1}'
+}
+
+api_get() {
+  curl -sS --get "$API_URL" "$@"
+}
+
+api_post() {
+  curl -sS -X POST "$API_URL" "$@"
+}
+
+json_error_check() {
+  local response="$1"
+  local error
+  error="$(jq -r 'select(.error != null) | "\(.error): \(.message)"' <<<"$response")"
+  [[ -z "$error" ]] || die "Last.fm API returned $error"
+}
+
+current_track_json() {
+  require_read_config
+
+  api_get \
+    --data-urlencode "method=user.getRecentTracks" \
+    --data-urlencode "user=$LASTFM_USER" \
+    --data-urlencode "api_key=$LASTFM_API_KEY" \
+    --data-urlencode "limit=1" \
+    --data-urlencode "extended=1" \
+    --data-urlencode "format=json"
+}
+
+extract_now_playing() {
+  jq -er '
+    def textvalue:
+      if type == "object" then (.["#text"] // .name // "")
+      else (. // "")
+      end;
+
+    def artwork:
+      (.image // [])
+      | map(select(.["#text"] != null and .["#text"] != ""))
+      | (map(select(.size == "extralarge"))[0]
+         // map(select(.size == "large"))[0]
+         // map(select(.size == "medium"))[0]
+         // .[-1]
+         // {})
+      | .["#text"] // "";
+
+    (.recenttracks.track // []) as $tracks
+    | (if ($tracks | type) == "array" then $tracks[0] else $tracks end) as $t
+    | select($t != null)
+    | select($t["@attr"].nowplaying == "true")
+    | {
+        artist: ($t.artist | textvalue),
+        track: ($t.name // ""),
+        album: ($t.album | textvalue),
+        loved: ($t.loved // "0"),
+        url: ($t.url // ""),
+        artwork: ($t | artwork)
+      }
+  '
+}
+
+notify_loved_track() {
+  [[ "$LASTFM_LOVE_NOTIFY" != "0" ]] || return 0
+  command -v notify-send >/dev/null 2>&1 || return 0
+
+  local artist="$1"
+  local track="$2"
+  local album="$3"
+  local artwork_url="$4"
+  local state="${5:-Loved track}"
+  local icon_args=()
+  local icon_file body artwork_hash
+
+  if [[ -n "$artwork_url" ]]; then
+    mkdir -p "$ARTWORK_CACHE_DIR"
+    artwork_hash="$(md5_hex "$artwork_url")"
+    icon_file="$ARTWORK_CACHE_DIR/$artwork_hash.jpg"
+    if [[ ! -s "$icon_file" ]]; then
+      curl -fsSL --max-time 10 "$artwork_url" -o "$icon_file" >/dev/null 2>&1 || icon_file=""
+    fi
+    [[ -n "${icon_file:-}" && -s "$icon_file" ]] && icon_args=(-i "$icon_file")
+  fi
+
+  body="Artist: $artist"
+  [[ -n "$album" ]] && body="$body"$'\n'"Album: $album"
+
+  notify-send \
+    --app-name="Last.fm" \
+    --urgency=low \
+    "${icon_args[@]}" \
+    "❤️ $state" \
+    "$track"$'\n'"$body" \
+    >/dev/null 2>&1 || true
+}
+
+cmd_now() {
+  local response now
+  response="$(current_track_json)"
+  json_error_check "$response"
+
+  if ! now="$(extract_now_playing <<<"$response")"; then
+    printf 'No track is marked as now playing in Last.fm for %s.\n' "$LASTFM_USER"
+    return 1
+  fi
+
+  jq -r '
+    "Now playing: \(.artist) - \(.track)"
+    + (if .album != "" then " [" + .album + "]" else "" end)
+    + (if .loved == "1" then " (already loved)" else "" end)
+  ' <<<"$now"
+}
+
+cmd_love() {
+  require_write_config
+
+  local response now artist track album artwork loved sig love_response status
+  response="$(current_track_json)"
+  json_error_check "$response"
+
+  if ! now="$(extract_now_playing <<<"$response")"; then
+    printf 'No track is marked as now playing in Last.fm for %s.\n' "$LASTFM_USER"
+    return 1
+  fi
+
+  artist="$(jq -r '.artist' <<<"$now")"
+  track="$(jq -r '.track' <<<"$now")"
+  album="$(jq -r '.album' <<<"$now")"
+  artwork="$(jq -r '.artwork' <<<"$now")"
+  loved="$(jq -r '.loved' <<<"$now")"
+
+  [[ -n "$artist" ]] || die "Last.fm did not return an artist for the current track"
+  [[ -n "$track" ]] || die "Last.fm did not return a track name for the current track"
+
+  if [[ "$loved" == "1" ]]; then
+    printf 'Already loved: %s - %s\n' "$artist" "$track"
+    notify_loved_track "$artist" "$track" "$album" "$artwork" "Already loved"
+    return 0
+  fi
+
+  sig="$(md5_hex "api_key${LASTFM_API_KEY}artist${artist}methodtrack.lovesk${LASTFM_SESSION_KEY}track${track}${LASTFM_API_SECRET}")"
+
+  love_response="$(api_post \
+    --data-urlencode "method=track.love" \
+    --data-urlencode "artist=$artist" \
+    --data-urlencode "track=$track" \
+    --data-urlencode "api_key=$LASTFM_API_KEY" \
+    --data-urlencode "sk=$LASTFM_SESSION_KEY" \
+    --data-urlencode "api_sig=$sig" \
+    --data-urlencode "format=json")"
+
+  json_error_check "$love_response"
+  status="$(jq -r '.lfm.status // empty' <<<"$love_response")"
+  [[ "$status" == "ok" || -z "$status" ]] || die "unexpected Last.fm response: $love_response"
+
+  printf 'Loved: %s - %s\n' "$artist" "$track"
+  notify_loved_track "$artist" "$track" "$album" "$artwork" "Loved track"
+}
+
+cmd_auth_url() {
+  require_read_config
+  [[ -n "$LASTFM_API_SECRET" ]] || die "LASTFM_API_SECRET is missing in $CONFIG_FILE"
+
+  local sig response token
+  sig="$(md5_hex "api_key${LASTFM_API_KEY}methodauth.getToken${LASTFM_API_SECRET}")"
+  response="$(api_post \
+    --data-urlencode "method=auth.getToken" \
+    --data-urlencode "api_key=$LASTFM_API_KEY" \
+    --data-urlencode "api_sig=$sig" \
+    --data-urlencode "format=json")"
+
+  json_error_check "$response"
+  token="$(jq -r '.token // empty' <<<"$response")"
+  [[ -n "$token" ]] || die "Last.fm did not return an auth token"
+
+  printf 'Open and approve this URL:\n%s?api_key=%s&token=%s\n\n' "$AUTH_URL" "$LASTFM_API_KEY" "$token"
+  printf 'Then run:\n%s session %s\n' "$0" "$token"
+}
+
+save_session_key() {
+  local token="$1"
+  local sig response sk
+  sig="$(md5_hex "api_key${LASTFM_API_KEY}methodauth.getSessiontoken${token}${LASTFM_API_SECRET}")"
+  response="$(api_post \
+    --data-urlencode "method=auth.getSession" \
+    --data-urlencode "api_key=$LASTFM_API_KEY" \
+    --data-urlencode "token=$token" \
+    --data-urlencode "api_sig=$sig" \
+    --data-urlencode "format=json")"
+
+  json_error_check "$response"
+  sk="$(jq -r '.session.key // empty' <<<"$response")"
+  [[ -n "$sk" ]] || die "Last.fm did not return a session key"
+
+  write_config_value "LASTFM_SESSION_KEY" "$sk"
+}
+
+cmd_session() {
+  require_read_config
+  [[ -n "$LASTFM_API_SECRET" ]] || die "LASTFM_API_SECRET is missing in $CONFIG_FILE"
+  [[ $# -eq 1 ]] || die "session requires the approved TOKEN"
+
+  save_session_key "$1"
+  printf 'Session key saved in %s.\n' "$CONFIG_FILE"
+}
+
+cmd_setup() {
+  prompt_config_value "LASTFM_USER" "Last.fm username"
+  prompt_config_value "LASTFM_API_KEY" "Last.fm API key"
+  prompt_config_value "LASTFM_API_SECRET" "Last.fm API secret" 1
+
+  load_config
+  require_read_config
+  [[ -n "$LASTFM_API_SECRET" ]] || die "LASTFM_API_SECRET is missing in $CONFIG_FILE"
+
+  local sig response token approve_url
+  sig="$(md5_hex "api_key${LASTFM_API_KEY}methodauth.getToken${LASTFM_API_SECRET}")"
+  response="$(api_post \
+    --data-urlencode "method=auth.getToken" \
+    --data-urlencode "api_key=$LASTFM_API_KEY" \
+    --data-urlencode "api_sig=$sig" \
+    --data-urlencode "format=json")"
+  json_error_check "$response"
+  token="$(jq -r '.token // empty' <<<"$response")"
+  [[ -n "$token" ]] || die "Last.fm did not return an auth token"
+
+  approve_url="${AUTH_URL}?api_key=${LASTFM_API_KEY}&token=${token}"
+  printf '\nApprove this Last.fm URL:\n%s\n\n' "$approve_url"
+  if command -v xdg-open >/dev/null 2>&1; then
+    xdg-open "$approve_url" >/dev/null 2>&1 || true
+  fi
+
+  read -r -p "Press Enter after approving the app in Last.fm..."
+  save_session_key "$token"
+  printf 'Configured %s.\n' "$CONFIG_FILE"
+}
+
+main() {
+  need_cmd curl
+  need_cmd jq
+  need_cmd md5sum
+  need_cmd awk
+  load_config
+
+  case "${1:-love}" in
+    setup)
+      shift || true
+      [[ $# -eq 0 ]] || die "setup does not take arguments"
+      cmd_setup
+      ;;
+    love)
+      shift || true
+      [[ $# -eq 0 ]] || die "love does not take arguments"
+      cmd_love
+      ;;
+    now)
+      shift || true
+      [[ $# -eq 0 ]] || die "now does not take arguments"
+      cmd_now
+      ;;
+    auth-url)
+      shift || true
+      [[ $# -eq 0 ]] || die "auth-url does not take arguments"
+      cmd_auth_url
+      ;;
+    session)
+      shift || true
+      cmd_session "$@"
+      ;;
+    -h|--help|help)
+      usage
+      ;;
+    *)
+      usage >&2
+      exit 2
+      ;;
+  esac
+}
+
+main "$@"
