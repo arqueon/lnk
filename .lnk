@@ -18,7 +18,6 @@
 .config/niri/scripts/conectar_audio.sh
 .config/niri/scripts/ejecutar_ytmusic.sh
 .config/niri/scripts/gpu_recorder.sh
-.config/niri/scripts/lastfm-love.env
 .config/niri/scripts/launch-anytype.sh
 .config/niri/scripts/launch-expandrive.sh
 .config/niri/scripts/restart-ferdium.sh
