@@ -23,6 +23,16 @@ window-rule {
     default-column-display "tabbed"
 }
 
+window-rule {
+    // Puedes usar app-id, title, o ambos para asegurarte de que solo afecte a esa ventana
+    match app-id="chrome-videostream.arqueonautis.org__stream.html-Default"
+    // Lo abre en el monitor especificado
+    open-on-workspace "chat"
+    // open-on-output "HDMI-A-1"
+    // Lo abre maximizado (en Niri, esto significa que la columna ocupará el 100% de la pantalla sin ser pantalla completa)
+    open-maximized true
+}
+
 binds {
     Mod+Shift+Return { spawn-sh "thunar /home/abdel/Downloads/"; }
     Mod+Alt+Return { spawn-sh "nemo /home/abdel/Downloads/"; }
@@ -78,4 +88,13 @@ input {
     // warp-mouse-to-focus
     focus-follows-mouse  max-scroll-amount="70%"
     workspace-auto-back-and-forth
+}
+
+layout {
+    focus-ring {
+        inactive-color "#413737"
+    }
+    border {
+        inactive-color "#413737"
+    }
 }

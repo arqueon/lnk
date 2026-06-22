@@ -60,6 +60,7 @@ binds {
 
     // Presionando Mod + Shift + B se lanzarán ambos programas al mismo tiempo
     Mod+Alt+V { spawn "sh" "-c" "blueman-manager & pwvucontrol"; }
+    Mod+Ctrl+G { spawn "~/.config/niri/scripts/lastfm-love-now"; }
 }
 
 environment {
@@ -78,4 +79,13 @@ input {
     // warp-mouse-to-focus
     focus-follows-mouse  max-scroll-amount="70%"
     workspace-auto-back-and-forth
+}
+
+layout {
+    focus-ring {
+        inactive-color "#413737"
+    }
+    border {
+        inactive-color "#413737"
+    }
 }
