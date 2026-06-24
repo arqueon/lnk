@@ -34,7 +34,7 @@ window-rule {
 }
 
 binds {
-    Mod+Shift+Return { spawn-sh "thunar /home/abdel/Downloads/"; }
+    Mod+Shift+Return { spawn-sh "dolphin /home/abdel/Downloads/"; }
     Mod+Alt+Return { spawn-sh "nemo /home/abdel/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
     Mod+Alt+F2 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
@@ -70,6 +70,7 @@ binds {
 
     // Presionando Mod + Shift + B se lanzarán ambos programas al mismo tiempo
     Mod+Alt+V { spawn "sh" "-c" "blueman-manager & pwvucontrol"; }
+    Mod+Ctrl+G { spawn "~/.config/niri/scripts/lastfm-love-now"; }
 }
 
 environment {
@@ -79,7 +80,7 @@ environment {
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   QS_ICON_THEME "Papirus-Dark"
-  BROWSER "google-chrome-stable"
+  // BROWSER "google-chrome-stable"
  _JAVA_AWT_WM_NONREPARENTING "1"
  _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
 }
