@@ -168,3 +168,11 @@ window-rule {
     match app-id="^GitHub Desktop$"
     default-column-width { proportion 0.5; }
 }
+
+// @id=wr_1782266849440665575 @name=com.danklinux.dankcalendar
+window-rule {
+    match app-id="^com.danklinux.dankcalendar$"
+    open-on-output "HDMI-A-1"
+    open-on-workspace "chat"
+    default-column-width { proportion 0.65; }
+}
