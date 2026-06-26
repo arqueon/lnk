@@ -40,6 +40,7 @@ binds {
     Mod+Alt+F2 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
     Mod+Escape { spawn-sh "kitty btop"; }
 
+
     // === Revertir Lanzadores y Overview ===
     Mod+D { spawn "anyrun"; }
     Mod+E { toggle-overview; }
