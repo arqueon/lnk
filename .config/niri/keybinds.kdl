@@ -17,7 +17,8 @@ binds {
     Mod+F5 { spawn "zettlr"; }
     Mod+F6 { spawn "krusader"; }
     Mod+F7 { spawn "virt-manager"; }
-    Mod+F8 { spawn-sh "GTK_THEME=Adwaita:dark luakit http://localhost:8080"; }
+    Mod+F8 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=http://localhost:8080"; }
+    Mod+Alt+F8 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=https://qbittorrent.arqueonautis.org"; }
     Mod+F9 { spawn "jdownloader"; }
     Mod+F10 { spawn "~/.config/niri/scripts/launch-anytype.sh"; }
     Mod+Alt+F10 { spawn "claude-desktop"; }
