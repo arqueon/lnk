@@ -6,3 +6,4 @@
 .config/niri/user.kdl
 .config/niri/workspaces.kdl
 .config/satty/config.toml
+AGENTS.md
