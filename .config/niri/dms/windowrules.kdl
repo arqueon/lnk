@@ -176,3 +176,9 @@ window-rule {
     open-on-workspace "chat"
     default-column-width { proportion 0.65; }
 }
+
+// @id=wr_1782537333524992110 @name=org.kde.krusader
+window-rule {
+    match app-id="^org.kde.krusader$" title="Moving"
+    default-column-width { fixed 800; }
+}
