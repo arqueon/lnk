@@ -332,7 +332,8 @@ alias kpi="killall picom"
 alias hw="hwinfo --short"
 
 # fastfetch --short
-alias ff="fastfetch"
+alias fastfetch="fastfetch-format"
+alias ff="fastfetch-format"
 alias neo="neofetch"
 
 # audio check pulseaudio or pipewire

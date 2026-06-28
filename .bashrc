@@ -165,7 +165,8 @@ alias kpi='killall picom'
 alias hw="hwinfo --short"
 
 # fastfetch --short
-alias ff="fastfetch"
+alias fastfetch="fastfetch-format"
+alias ff="fastfetch-format"
 
 # audio check pulseaudio or pipewire
 alias audio="pactl info | grep 'Server Name'"

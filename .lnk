@@ -36,4 +36,5 @@
 .config/xdg-desktop-portal/portals.conf
 .config/yay
 .face
+.local/bin/fastfetch-format
 .local/share/applications/google-chrome-beta.desktop

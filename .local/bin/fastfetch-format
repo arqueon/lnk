@@ -1,0 +1,202 @@
+#!/usr/bin/env python3
+import sys
+import subprocess
+import re
+import os
+
+# Expresión regular para remover secuencias ANSI de control (colores, etc.)
+ansi_escape = re.compile(r"\x1b(?:[@-Z\\-_]|\[[0-9;?]*[a-zA-Z])")
+
+# CONFIGURACIÓN DE COLOR DE LA CAJA (Bordes y uniones):
+BORDER_COLOR_CODE = "36"  # Usamos Cian por defecto
+
+R = f"\x1b[{BORDER_COLOR_CODE}m"
+N = "\x1b[0m"
+
+# Caracteres de la caja coloreados dinámicamente
+C_UL = R + "┌" + N
+C_UR = R + "┐" + N
+C_ML = R + "├" + N
+C_MR = R + "┤" + N
+C_DL = R + "└" + N
+C_DR = R + "┘" + N
+C_LINE = R + "─" + N
+C_BAR = R + "│" + N
+C_TOP_MID = R + "┬" + N
+C_MID_MID = R + "┼" + N
+C_BOT_MID = R + "┴" + N
+
+def get_key_color(key_clean):
+    k = key_clean.lower()
+    if any(x in k for x in ["uptime", "kernel", "distro", "ip"]):
+        return "\x1b[31m"  # Rojo
+    elif any(x in k for x in ["shell", "term", "packages", "disk"]):
+        return "\x1b[36m"  # Cian
+    elif any(x in k for x in ["desktop", "wm"]):
+        return "\x1b[32m"  # Verde
+    elif any(x in k for x in ["theme", "icons", "curs", "style", "colors"]):
+        return "\x1b[35m"  # Magenta
+    elif "font" in k:
+        return "\x1b[34m"  # Azul
+    elif any(x in k for x in ["cpu", "gpu", "memory", "swap", "display"]):
+        return "\x1b[33m"  # Amarillo
+    return ""
+
+def get_real_shell():
+    # Obtener el shell real del usuario
+    shell_path = os.environ.get("SHELL", "/bin/bash")
+    shell_name = os.path.basename(shell_path)
+    
+    if shell_name == "fish":
+        try:
+            ver = subprocess.check_output(["fish", "--version"], text=True).strip()
+            m = re.search(r"version\s+(\S+)", ver)
+            if m:
+                return f"fish {m.group(1)}"
+        except:
+            pass
+        return "fish"
+    elif shell_name == "bash":
+        try:
+            ver = subprocess.check_output(["bash", "--version"], text=True).splitlines()[0]
+            m = re.search(r"version\s+(\S+)", ver)
+            if m:
+                v = m.group(1).split("-")[0]
+                return f"bash {v}"
+        except:
+            pass
+        return "bash"
+    elif shell_name == "zsh":
+        try:
+            ver = subprocess.check_output(["zsh", "--version"], text=True).strip()
+            m = re.search(r"zsh\s+(\S+)", ver)
+            if m:
+                return f"zsh {m.group(1)}"
+        except:
+            pass
+        return "zsh"
+    return shell_name
+
+# Ejecutar el binario original de fastfetch con color forzado
+args = ["fastfetch", "--pipe", "false"] + sys.argv[1:]
+proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+info_start_col = None
+
+for line in proc.stdout:
+    line_stripped = line.rstrip("\r\n")
+    clean_line = ansi_escape.sub("", line_stripped)
+    
+    # Determinar la columna absoluta de la caja en base a la cabecera
+    if info_start_col is None:
+        if "┌" in clean_line:
+            info_start_col = clean_line.find("┌")
+        else:
+            match = re.search(r"[│├└]", clean_line)
+            if match:
+                info_start_col = match.start()
+                
+    if info_start_col is not None and len(clean_line) > info_start_col:
+        # Dividir la línea original en la parte del logo (izquierda) y la parte de la caja (derecha)
+        idx_ansi = 0
+        visible_chars = 0
+        while idx_ansi < len(line_stripped):
+            if line_stripped[idx_ansi:].startswith("\x1b"):
+                m = re.match(r"^\x1b(?:[@-Z\\-_]|\[[0-9;?]*[a-zA-Z])", line_stripped[idx_ansi:])
+                if m:
+                    idx_ansi += len(m.group(0))
+                    continue
+            if visible_chars == info_start_col:
+                break
+            visible_chars += 1
+            idx_ansi += 1
+            
+        logo_part = line_stripped[:idx_ansi]
+        box_part_ansi = line_stripped[idx_ansi:]
+        box_part_clean = clean_line[info_start_col:]
+        
+        # 1. Cabecera (┌)
+        if "┌" in box_part_clean:
+            title_match = re.search(r"┐\s*(.*)", box_part_clean)
+            title = title_match.group(1) if title_match else ""
+            new_box = C_UL + (C_LINE * 14) + C_TOP_MID + (C_LINE * 60) + C_UR
+            if title:
+                idx_corner = box_part_ansi.find("┐")
+                if idx_corner != -1:
+                    new_box += box_part_ansi[idx_corner + 1:]
+            print(logo_part + new_box)
+            
+        # 2. Divisoria intermedia (├)
+        elif "├" in box_part_clean:
+            new_box = C_ML + (C_LINE * 14) + C_MID_MID + (C_LINE * 60) + C_MR
+            print(logo_part + new_box)
+            
+        # 3. Línea inferior (└)
+        elif "└" in box_part_clean:
+            new_box = C_DL + (C_LINE * 14) + C_BOT_MID + (C_LINE * 60) + C_DR
+            print(logo_part + new_box)
+            
+        # 4. Líneas de información (que contienen el separador central │)
+        elif "│" in box_part_clean:
+            sep_idx_box_clean = box_part_clean.find("│")
+            if sep_idx_box_clean != -1:
+                # Encontrar el separador central en la línea original con ANSI
+                idx_sep = 0
+                visible_count = 0
+                while idx_sep < len(box_part_ansi):
+                    if box_part_ansi[idx_sep:].startswith("\x1b"):
+                        m = re.match(r"^\x1b(?:[@-Z\\-_]|\[[0-9;?]*[a-zA-Z])", box_part_ansi[idx_sep:])
+                        if m:
+                            idx_sep += len(m.group(0))
+                            continue
+                    if visible_count == sep_idx_box_clean:
+                        break
+                    visible_count += 1
+                    idx_sep += 1
+                
+                key_ansi = box_part_ansi[:idx_sep]
+                val_ansi = box_part_ansi[idx_sep + 1:]
+                
+                key_clean = box_part_clean[:sep_idx_box_clean]
+                val_clean = box_part_clean[sep_idx_box_clean + 1:]
+                
+                key_clean_stripped = key_clean.strip()
+                visible_k_len = len(key_clean_stripped)
+                spaces_k_right = 14 - (visible_k_len + 1)
+                if spaces_k_right < 0:
+                    spaces_k_right = 0
+                
+                color = get_key_color(key_clean_stripped)
+                formatted_key = " " + color + key_clean_stripped + N + (" " * spaces_k_right)
+                
+                val_clean_stripped = val_clean.strip()
+                val_ansi_stripped = val_ansi.strip()
+                
+                # INTERCEPTAR Y CORREGIR EL MÓDULO SHELL:
+                # Si es la línea de shell, forzar la detección del shell real en lugar del proceso Python
+                if "shell" in key_clean_stripped.lower():
+                    real_shell = get_real_shell()
+                    val_clean_stripped = real_shell
+                    val_ansi_stripped = real_shell
+                
+                visible_v_len = len(val_clean_stripped)
+                spaces_v_right = 60 - (visible_v_len + 1)
+                if spaces_v_right < 0:
+                    spaces_v_right = 0
+                formatted_val = " " + val_ansi_stripped + (" " * spaces_v_right)
+                
+                new_box = C_BAR + formatted_key + C_BAR + formatted_val + C_BAR
+                print(logo_part + new_box)
+            else:
+                print(line_stripped)
+        else:
+            print(line_stripped)
+    else:
+        print(line_stripped)
+
+# Imprimir posibles errores de stderr de fastfetch
+stderr = proc.stderr.read()
+if stderr:
+    print(stderr, file=sys.stderr)
+proc.wait()
+sys.exit(proc.returncode)
