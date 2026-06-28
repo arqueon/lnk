@@ -26,7 +26,6 @@
 .config/niri/startup.kdl
 .config/niri/window-rules.kdl
 .config/paru
-.config/starship.toml
 .config/user-dirs.locale
 .config/variety/banned.txt
 .config/variety/scripts
