@@ -3,10 +3,16 @@
 .bin/lnk_pull.sh
 .bin/lnk_push.sh
 .bin/pick_color.sh
+.config/alacritty/alacritty.toml
+.config/alacritty/dank-theme.toml
 .config/fastfetch/config.jsonc
+.config/fastfetch/logo_cachy.png
 .config/fish/config.fish
 .config/fusuma/config.yml
 .config/kando/menus.json
+.config/kitty/dank-tabs.conf
+.config/kitty/dank-theme.conf
+.config/kitty/kitty.conf
 .config/niri/animations.kdl
 .config/niri/config.kdl
 .config/niri/dms/binds.kdl
