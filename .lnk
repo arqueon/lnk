@@ -10,7 +10,6 @@
 .config/fusuma/config.yml
 .config/kando/menus.json
 .config/kitty/dank-tabs.conf
-.config/kitty/dank-theme.conf
 .config/kitty/kitty.conf
 .config/niri/animations.kdl
 .config/niri/config.kdl
