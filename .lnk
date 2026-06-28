@@ -8,6 +8,7 @@
 .config/fastfetch/logo_cachy.png
 .config/fish/config.fish
 .config/fusuma/config.yml
+.config/ghostty/config
 .config/kando/menus.json
 .config/kitty/kitty.conf
 .config/niri/animations.kdl
