@@ -173,3 +173,9 @@ window-rule {
     match app-id="^org.kde.krusader$" title="Moving"
     default-column-width { fixed 800; }
 }
+
+// @id=wr_1782679683879423240 @name=chrome-localhost__-Default
+window-rule {
+    match app-id="^chrome-localhost__-Default$"
+    open-on-workspace "files"
+}
