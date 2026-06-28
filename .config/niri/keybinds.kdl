@@ -29,7 +29,8 @@ binds {
     Mod+Ctrl+M { spawn-sh "~/.config/niri/scripts/run_stream.sh"; }
     Mod+Alt+M { spawn "~/.config/niri/scripts/ejecutar_ytmusic.sh"; }
     Mod+Ctrl+W { spawn "dms" "ipc" "whisper" "toggle"; }
-    Mod+Alt+G { spawn-sh "dms ipc call lastfmScrobbler toggleLove"; }
+    Mod+Alt+G { spawn-sh "dms ipc call lastfmScrobbler love"; }
+    Mod+Alt+Shift+G { spawn-sh "notify-send -a 'Last.fm' 'Status' \"$(dms ipc call lastfmScrobbler status)\""; }
 
 
     // System utility binds

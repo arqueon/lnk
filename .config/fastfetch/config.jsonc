@@ -1,134 +1,88 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
+    "type": "file",
     "padding": {
-      "top": 2
-    }
+      "top": 1,
+      "right": 2
+    },
+    "source": "~/.config/fastfetch/kiro-color-24.txt"
   },
-  "display": {
-    "separator": " ➜  "
+//  "display": {
+    "separator": ">  ",
+    "color": {
+      "separator": "red"
+    },
+    "constants": [
+      "═══════════════════════════════════════════════════════════════════════════",
+      "║\u001b[75C║\u001b[75D"
+    ]
   },
   "modules": [
-    "title",
-    "separator",
     {
-      "type": "os",
-      "key": "OS",
-      "keyColor": "31"
+      "format": "{#1}{#keys}╔{$1}╗\u001b[76D {user-name-colored}{at-symbol-colored}{host-name-colored} 💻 ",
+//      "type": "title"
     },
     {
-      "type": "kernel",
-      "key": "Kernel",
-      "keyColor": "31"
+      "key": "{$2}{#31} kernel   ",
+//      "type": "kernel"
     },
     {
-      "type": "uptime",
-      "key": "Uptime",
-      "keyColor": "31"
+      "key": "{$2}{#32}󰅐 uptime   ",
+//      "type": "uptime"
     },
     {
-      "type": "packages",
-      "key": "Packages",
-      "keyColor": "31"
+      "key": "{$2}{#33}{icon} distro   ",
+//      "type": "os"
     },
     {
-      "type": "shell",
-      "key": "Shell",
-      "keyColor": "31"
-    },
-    "break",
-    {
-      "type": "de",
-      "key": "DE",
-      "keyColor": "32"
+      "key": "{$2}{#34}󰇄 desktop  ",
+//      "type": "de"
     },
     {
-      "type": "wm",
-      "key": "WM",
-      "keyColor": "32"
+      "key": "{$2}{#35} term     ",
+//      "type": "terminal"
     },
     {
-      "type": "command",
-      "key": "DMS",
-      "keyColor": "32",
-      "text": "dms version | tail -n1"
+      "key": "{$2}{#36} shell    ",
+//      "type": "shell"
     },
     {
-      "type": "wmtheme",
-      "key": "WM Theme",
-      "keyColor": "32"
+      "key": "{$2}{#35}󰍛 cpu      ",
+//      "type": "cpu",
+      "showPeCoreCount": true,
+      "temp": true
     },
     {
-      "type": "theme",
-      "key": "Theme",
-      "keyColor": "32"
+      "key": "{$2}{#34}󰍛 gpu      ",
+//      "type": "gpu"
     },
     {
-      "type": "icons",
-      "key": "Icons",
-      "keyColor": "32"
+      "key": "{$2}{#33}󰉉 disk     ",
+//      "type": "disk",
+      "folders": "/"
     },
     {
-      "type": "cursor",
-      "key": "Cursor",
-      "keyColor": "32"
+      "key": "{$2}{#32} memory   ",
+//      "type": "memory"
     },
     {
-      "type": "font",
-      "key": "Font",
-      "keyColor": "32"
+      "key": "{$2}{#31}󰩟 network  ",
+//      "type": "localip",
+      "format": "{ipv4} ({ifname})"
     },
     {
-      "type": "command",
-      "key": "Mono Font",
-      "keyColor": "32",
-      "text": "gsettings get org.gnome.desktop.interface monospace-font-name | tr -d \"'\""
+      "format": "{#1}{#keys}╠{$1}╣",
+      "type": "custom"
     },
     {
-      "type": "terminal",
-      "key": "Terminal",
-      "keyColor": "32"
-    },
-    "break",
-    {
-      "type": "cpu",
-      "format": "{1} ({3}) @ {7} GHz",
-      "key": "CPU",
-      "keyColor": "33"
+      "key": "{$2}{#39} colors   ",
+//      "type": "colors",
+      "symbol": "circle"
     },
     {
-      "type": "gpu",
-      "format": "{1} {2}",
-      "key": "GPU",
-      "keyColor": "33"
-    },
-    {
-      "type": "memory",
-      "key": "Memory",
-      "keyColor": "33"
-    },
-    {
-      "type": "disk",
-      "key": "Disk",
-      "keyColor": "33"
-    },
-    {
-      "type": "monitor",
-      "key": "Monitor",
-      "keyColor": "33"
-    },
-    "break",
-    {
-      "type": "localip",
-      "key": "IP",
-      "keyColor": "34"
-    },
-    {
-      "type": "locale",
-      "key": "Locale",
-      "keyColor": "34"
-    },
-    "break",
-    "colors"
+      "format": "{#1}{#keys}╚{$1}╝",
+      "type": "custom"
+    }
   ]
 }

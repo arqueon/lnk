@@ -548,7 +548,7 @@ set fish_pager_color_progress brwhite --background=cyan
 set fish_color_search_match --background="#60AEFF"
 
 # reporting tools - leave this in for ATT
-#fastfetch
+fastfetch | lolcat
 if status --is-interactive && type -q fastfetch
    fastfetch
    pokemon-colorscripts -r --no-title

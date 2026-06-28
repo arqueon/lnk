@@ -123,15 +123,6 @@ window-rule {
     default-window-height { fixed 320; }
 }
 
-// @id=wr_1777389288412333678 @name=Alacritty
-window-rule {
-    match app-id="^Alacritty$"
-    open-floating true
-    open-on-output "HDMI-A-1"
-    default-column-width { fixed 1440; }
-    default-window-height { fixed 600; }
-}
-
 // @id=wr_1777510167576539465 @name=com.mitchellh.ghostty
 window-rule {
     match app-id="^com.mitchellh.ghostty$"
