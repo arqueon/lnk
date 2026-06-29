@@ -42,6 +42,7 @@ binds {
     Mod+Alt+B { spawn-sh "kitty btop"; } // Antes Mod+Escape
     Mod+Alt+F { spawn-sh "variety -f && notify-send 'Copied to favorites'"; }
     Mod+Alt+W { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
+    Mod+Alt+T hotkey-overlay-title="Sync Theme (DMS)" { spawn "dms" "ipc" "call" "dmsThemeSync" "configure"; }
     Mod+Alt+S { spawn-sh "systemctl suspend"; }
     Mod+Alt+2 { spawn-sh "~/.bin/lnk_push.sh"; }
     Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; }
