@@ -1,0 +1,121 @@
+#!/bin/bash
+
+WP=$1
+cp "$WP" ~/wallpaper/default.jpg
+chmod 644 ~/wallpaper/default.jpg
+
+# =============================================================================
+# BLOQUE ESPECÍFICO POR ENTORNO
+# =============================================================================
+if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
+    # Generar colores en modo dark de forma SÍNCRONA antes de que DMS
+    # dispare su propio matugen async al hacer wallpaper set.
+    # Así cuando wallpaper set termine, los colores ya están en dark.
+    dms matugen generate --value "$WP" --mode dark
+    
+    # En DMS 1.5 podemos usar el comando global para establecer el wallpaper,
+    # lo que soluciona el problema de que al apagarse un monitor y volver a encenderse
+    # se quede sin fondo, ya que 'set' define el wallpaper por defecto para todas las pantallas presentes y futuras.
+    dms ipc wallpaper set "$WP"
+
+    dms ipc settings set greeterWallpaperPath /home/ruben/wallpaper/default.jpg
+elif [ "$XDG_CURRENT_DESKTOP" == "qtile" ] || [ "$DESKTOP_SESSION" == "qtile" ]; then
+    matugen image "$WP" -t scheme-kde > ~/.local/share/color-schemes/DankMatugen.colors
+    qtile cmd-obj -o cmd -f reload_config
+fi
+
+sleep 1
+# Reforzar tema dark al final, después de que cualquier proceso async de DMS haya terminado
+if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
+    dms ipc theme dark
+fi
+# Obtener fuentes, iconos y cursor desde DMS settings.json de forma dinámica
+DMS_SETTINGS="$HOME/.config/DankMaterialShell/settings.json"
+if [ -f "$DMS_SETTINGS" ] && command -v jq >/dev/null 2>&1; then
+    MONO_FONT=$(jq -r '.monoFontFamily // empty' "$DMS_SETTINGS")
+    PROP_FONT=$(jq -r '.fontFamily // empty' "$DMS_SETTINGS")
+    ICON_THEME=$(jq -r '.iconTheme // empty' "$DMS_SETTINGS")
+    CURSOR_THEME=$(jq -r '.cursorSettings.theme // empty' "$DMS_SETTINGS")
+fi
+
+MONO_FONT=${MONO_FONT:-"FantasqueSansM Nerd Font Mono"}
+PROP_FONT=${PROP_FONT:-"Fira Sans"}
+ICON_THEME=${ICON_THEME:-"Papirus-Dark"}
+CURSOR_THEME=${CURSOR_THEME:-"oreo_teal_cursors"}
+
+# Generar/actualizar fonts.conf de fontconfig dinámicamente
+cat <<EOF > "$HOME/.config/fontconfig/fonts.conf"
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'urn:fontconfig:fonts.dtd'>
+<fontconfig>
+  <!-- Artificial oblique for fonts without an italic or oblique version -->
+  <match target="font">
+    <test name="slant"><const>roman</const></test>
+    <test compare="not_eq" name="slant" target="pattern"><const>roman</const></test>
+    <edit mode="assign" name="matrix">
+      <times>
+        <name>matrix</name>
+        <matrix>
+          <double>1</double><double>0.2</double>
+          <double>0</double><double>1</double>
+        </matrix>
+      </times>
+    </edit>
+    <edit mode="assign" name="slant"><const>oblique</const></edit>
+    <edit mode="assign" name="embeddedbitmap"><bool>false</bool></edit>
+  </match>
+  <!-- Synthetic emboldening for fonts that do not have bold face available -->
+  <match target="font">
+    <test compare="less_eq" name="weight"><const>medium</const></test>
+    <test compare="more_eq" name="weight" target="pattern"><const>bold</const></test>
+    <edit mode="assign" name="embolden"><bool>true</bool></edit>
+    <edit mode="assign" name="weight"><const>bold</const></edit>
+  </match>
+  <match target="font">
+    <edit mode="assign" name="hinting"><bool>true</bool></edit>
+  </match>
+  <match target="font">
+    <edit mode="assign" name="hintstyle"><const>hintslight</const></edit>
+  </match>
+  <match target="font">
+    <edit mode="assign" name="antialias"><bool>true</bool></edit>
+  </match>
+
+  <!-- DMS Font overrides -->
+  <alias>
+    <family>monospace</family>
+    <prefer>
+      <family>${MONO_FONT}</family>
+    </prefer>
+  </alias>
+  <alias>
+    <family>sans-serif</family>
+    <prefer>
+      <family>${PROP_FONT}</family>
+    </prefer>
+  </alias>
+</fontconfig>
+EOF
+fc-cache -f >/dev/null 2>&1
+
+gsettings set org.gnome.desktop.interface gtk-theme 'Matcha-dark-sea'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR_THEME"
+gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
+gsettings set org.gnome.desktop.interface font-name "$PROP_FONT 11"
+gsettings set org.gnome.desktop.interface monospace-font-name "$MONO_FONT 12"
+kwriteconfig6 --file kdeglobals --group General --key ColorScheme 'DankMatugenDark'
+kwriteconfig6 --file kdeglobals --group General --key font "$PROP_FONT,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+kwriteconfig6 --file kdeglobals --group General --key fixed "$MONO_FONT,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+kwriteconfig6 --file kdeglobals --group General --key menuFont "$PROP_FONT,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+kwriteconfig6 --file kdeglobals --group General --key toolBarFont "$PROP_FONT,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+kwriteconfig6 --file kdeglobals --group Icons --key Theme "$ICON_THEME"
+sed -i "s|^color_scheme_path=.*|color_scheme_path=/home/ruben/.local/share/color-schemes/DankMatugen.colors|" ~/.config/qt5ct/qt5ct.conf
+sed -i "s|^icon_theme=.*|icon_theme=$ICON_THEME|" ~/.config/qt5ct/qt5ct.conf
+sed -i "s|^fixed=.*|fixed=\"$MONO_FONT,12,-1,5,50,0,0,0,0,0\"|" ~/.config/qt5ct/qt5ct.conf
+sed -i "s|^general=.*|general=\"$PROP_FONT,11,-1,5,50,0,0,0,0,0\"|" ~/.config/qt5ct/qt5ct.conf
+sed -i "s|^color_scheme_path=.*|color_scheme_path=/home/ruben/.local/share/color-schemes/DankMatugen.colors|" ~/.config/qt6ct/qt6ct.conf
+sed -i "s|^icon_theme=.*|icon_theme=$ICON_THEME|" ~/.config/qt6ct/qt6ct.conf
+sed -i "s|^fixed=.*|fixed=\"$MONO_FONT,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1\"|" ~/.config/qt6ct/qt6ct.conf
+sed -i "s|^general=.*|general=\"$PROP_FONT,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1\"|" ~/.config/qt6ct/qt6ct.conf
+
