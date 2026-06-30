@@ -561,3 +561,8 @@ end
 
 # Added by Antigravity CLI installer
 set -gx PATH "/home/ruben/.local/bin" $PATH
+
+# >>> fish-tweak-tool managed block >>>
+# Managed by Fish Tweak Tool — edits inside this block are overwritten.
+type -q starship; and starship init fish | source
+# <<< fish-tweak-tool managed block <<<

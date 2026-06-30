@@ -27,7 +27,7 @@ fi
 sleep 1
 # Reforzar tema dark al final, después de que cualquier proceso async de DMS haya terminado
 if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
-    dms ipc theme dark
+    # dms ipc theme dark
     # Propagar el tema a las aplicaciones (GTK/Qt/KDE/fontconfig/XSettings) mediante
     # el plugin dmsThemeSync, que es ahora la fuente única de sincronización de tema.
     dms ipc call dmsThemeSync apply
