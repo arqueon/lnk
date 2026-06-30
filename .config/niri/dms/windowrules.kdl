@@ -179,3 +179,10 @@ window-rule {
     match app-id="^chrome-localhost__-Default$"
     open-on-workspace "files"
 }
+
+// @id=wr_1782849734565559021 @name=com.danklinux.dankcalendar
+window-rule {
+    match app-id="^com.danklinux.dankcalendar$"
+    default-column-width { fixed 1060; }
+    default-window-height { fixed 940; }
+}
