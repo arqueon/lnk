@@ -182,7 +182,13 @@ window-rule {
 
 // @id=wr_1782849734565559021 @name=com.danklinux.dankcalendar
 window-rule {
-    match app-id="^com.danklinux.dankcalendar$"
+    match app-id="^com.danklinux.dankcalendar$" title="^Event — Dank Calendar$"
     default-column-width { fixed 1060; }
     default-window-height { fixed 940; }
+}
+
+// @id=wr_1782939562991647973 @name=chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default
+window-rule {
+    match app-id="^chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default$" title="^YouTube Music$"
+    open-on-workspace "media"
 }
