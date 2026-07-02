@@ -121,6 +121,7 @@ window-rule {
 window-rule {
     match app-id=r#"jdownloader"#
     match app-id=r#"qbittorrent"#
+    match app-id=r#"sabnzbd"#
     match title=r#"^JDownloader 2$"#
     default-column-width { proportion 0.3; }
     open-on-workspace "files"
