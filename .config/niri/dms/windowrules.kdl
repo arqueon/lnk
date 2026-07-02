@@ -192,3 +192,9 @@ window-rule {
     match app-id="^chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default$" title="^YouTube Music$"
     open-on-workspace "media"
 }
+
+// @id=wr_1782956237948831767 @name=org.kde.dolphin
+window-rule {
+    match app-id="^org.kde.dolphin$" title="^Progress Dialog — Dolphin$"
+    default-column-width { fixed 350; }
+}
