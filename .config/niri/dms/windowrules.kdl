@@ -198,3 +198,9 @@ window-rule {
     match app-id="^org.kde.dolphin$" title="^Progress Dialog — Dolphin$"
     default-column-width { fixed 350; }
 }
+
+// @id=wr_1783017359726740902 @name=Tine
+window-rule {
+    match app-id="^Tine$"
+    open-on-workspace "notes"
+}
