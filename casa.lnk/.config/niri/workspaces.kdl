@@ -22,3 +22,9 @@ workspace "virt" {
 workspace "media" {
     open-on-output "DP-2"
 }
+workspace "agents" {
+    open-on-output "HDMI-A-1"
+}
+workspace "misc" {
+    open-on-output "DP-2"
+}

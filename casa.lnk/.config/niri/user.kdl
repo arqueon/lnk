@@ -40,7 +40,6 @@ binds {
     Mod+Alt+F2 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
     Mod+Escape { spawn-sh "kitty btop"; }
 
-
     // === Revertir Lanzadores y Overview ===
     Mod+D { spawn "anyrun"; }
     Mod+E { toggle-overview; }
@@ -75,7 +74,6 @@ binds {
 }
 
 environment {
-  CHROME_EXECUTABLE "google-chrome-beta"
  _JAVA_AWT_WM_NONREPARENTING "1"
  _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
 }

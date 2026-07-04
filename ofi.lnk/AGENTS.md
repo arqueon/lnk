@@ -11,11 +11,10 @@ si hay conflicto, **gana Logseq**.
 
 - **Grafo:** `/home/ruben/Nextcloud/Projects/arq-graph` (en otra máquina: buscar un dir con `pages/`, `journals/`, `logseq/`).
 - **Convención de páginas:** cabecera `type:: · area:: · status:: · tags:: · updated::` antes del primer `#`;
-  organizar mediante `area::`, etiquetas y hubs con queries `{{query (property area [[...]])}}`.
-- **Enlaces de página:** usar siempre el nombre real, por ejemplo `[[Jellyfin remoto para padres]]`; no incluir `pages/`, rutas de directorio ni el área como prefijo salvo que formen parte real del título.
+  namespaces como carpetas `pages/<Area>/<Tema>.md`; hub por área con queries `{{query (property area [[...]])}}`.
 - **Leer al iniciar:** abrir la página-hub del área y sus páginas `type:: [[situación]]`/`[[contexto]]`.
 - **Escribir al terminar:** actualizar/crear la página de contexto, enlazar con `[[ ]]`, subir `updated::` (fecha absoluta);
-  al crear una página, añadir también un enlace `[[Nombre de página]]` en el journal del día `journals/YYYY_MM_DD.md`.
+  al crear una página, añadir también un enlace `[[Area/Página]]` en el journal del día `journals/YYYY_MM_DD.md`.
 - **Nunca** escribir secretos en el grafo (está en git + sync); referenciar dónde viven y cómo regenerarlos.
 
 Norma completa: página `[[AI Memory Protocol]]` dentro del grafo.
