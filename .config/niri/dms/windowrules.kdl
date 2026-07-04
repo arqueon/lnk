@@ -204,3 +204,21 @@ window-rule {
     match app-id="^Tine$"
     open-on-workspace "notes"
 }
+
+// @id=wr_1783185082670020499 @name=org.kde.dolphin
+window-rule {
+    match app-id="^org.kde.dolphin$"
+    open-on-workspace "files"
+}
+
+// @id=wr_1783185256560730602 @name=claude-desktop
+window-rule {
+    match app-id="^claude-desktop$"
+    open-on-workspace "agents"
+}
+
+// @id=wr_1783185274171212210 @name=antigravity-ide
+window-rule {
+    match app-id="^antigravity-ide$"
+    open-on-workspace "agents"
+}

@@ -25,6 +25,6 @@ workspace "media" {
 workspace "agents" {
     open-on-output "HDMI-A-1"
 }
-workspace "misc" {
+workspace "terminals" {
     open-on-output "DP-2"
 }
