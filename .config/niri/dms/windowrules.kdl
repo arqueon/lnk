@@ -177,8 +177,8 @@ window-rule {
 // @id=wr_1783017359726740902 @name=Tine
 window-rule {
     match app-id="^Tine$"
-    open-on-workspace "notes"
     open-maximized true
+    open-on-workspace "notes"
 }
 
 // @id=wr_1783185082670020499 @name=org.kde.dolphin
@@ -196,5 +196,17 @@ window-rule {
 // @id=wr_1783185274171212210 @name=antigravity-ide
 window-rule {
     match app-id="^antigravity-ide$"
+    open-on-workspace "agents"
+}
+
+// @id=wr_1783270148861981275 @name=antigravity-ide
+window-rule {
+    match app-id="^antigravity-ide$"
+    open-on-workspace "agents"
+}
+
+// @id=wr_1783270160044072826 @name=claude-desktop
+window-rule {
+    match app-id="^claude-desktop$"
     open-on-workspace "agents"
 }

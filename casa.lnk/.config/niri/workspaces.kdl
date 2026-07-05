@@ -16,7 +16,7 @@ workspace "virt" {
 workspace "media" {
     open-on-output "DP-2"
 }
-workspace "terminals" {
+workspace "agents2" {
     open-on-output "DP-2"
 }
 
