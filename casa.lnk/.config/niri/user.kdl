@@ -41,7 +41,7 @@ binds {
     Mod+Escape { spawn-sh "kitty btop"; }
 
     // === Revertir Lanzadores y Overview ===
-    Mod+D { spawn "anyrun"; }
+    Mod+D { spawn "dmail" "show"; }
     Mod+E { toggle-overview; }
     Mod+Tab { focus-workspace-previous; }
 

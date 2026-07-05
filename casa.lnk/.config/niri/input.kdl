@@ -45,7 +45,7 @@ input {
         // middle-emulation
     }
 
-    warp-mouse-to-focus
+    // warp-mouse-to-focus  // desactivado 2026-07-04: el salto del cursor al cambiar foco molestaba
     focus-follows-mouse max-scroll-amount="30%"
     workspace-auto-back-and-forth
 }

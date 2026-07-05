@@ -1,7 +1,6 @@
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "blueman-applet"
 spawn-sh-at-startup "sleep 15 && insync"
-spawn-at-startup "~/.config/niri/scripts/launch-expandrive.sh"
 spawn-at-startup "~/.config/niri/scripts/launch-anytype.sh"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "kdeconnectd"
