@@ -21,7 +21,6 @@
 .config/niri/scripts/ejecutar_ytmusic.sh
 .config/niri/scripts/gpu_recorder.sh
 .config/niri/scripts/launch-anytype.sh
-.config/niri/scripts/launch-expandrive.sh
 .config/niri/scripts/restart-ferdium.sh
 .config/niri/scripts/run_chrome.sh
 .config/niri/scripts/run_stream.sh
