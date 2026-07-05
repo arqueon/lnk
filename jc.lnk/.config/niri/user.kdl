@@ -1,3 +1,7 @@
+// ═══ user.kdl (POR-HOST: jc) ═══
+// Solo lo específico de jc; lo compartido vive en user-common.kdl.
+// Nota: Mod+D (antes anyrun) quedó libre; overview = Mod+E.
+
 window-rule {
     match app-id="google-chrome"
     default-column-width { proportion 1.0; }
@@ -10,82 +14,11 @@ window-rule {
     open-focused true
 }
 
-// Regla para Blueman
-window-rule {
-    match app-id="blueman-manager"
-    default-column-display "tabbed"
-}
-
-// Regla para pwvucontrol
-window-rule {
-    match app-id="com.saivert.pwvucontrol"
-    default-column-display "tabbed"
-}
-
-binds {
-    Mod+Shift+Return { spawn-sh "dolphin /home/juancarlos/Downloads/"; }
-    Mod+Alt+F4 { spawn-sh "rm -r /home/ruben/.config/Logseq/window-state.json"; }
-    Mod+Alt+Return { spawn-sh "thunar /home/ruben/Downloads/"; }
-    Mod+Alt+F1 { spawn "firefox"; }
-    Mod+Alt+F2 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
-    Mod+Escape { spawn-sh "kitty btop"; }
-
-    // === Revertir Lanzadores y Overview ===
-    Mod+D { spawn "anyrun"; }
-    Mod+E { toggle-overview; }
-    Mod+Tab { focus-workspace-previous; }
-
-    // === Revertir Navegacion (Flechas con cambio de workspace) ===
-    Mod+Down { focus-window-or-workspace-down; }
-    Mod+Up { focus-window-or-workspace-up; }
-    
-    // === Revertir Movimiento (Ctrl para mover, Shift para monitores) ===
-    Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Down  { move-window-down; }
-    Mod+Ctrl+Up    { move-window-up; }
-    Mod+Ctrl+Right { move-column-right; }
-
-    Mod+Shift+Left  { focus-monitor-left; }
-    Mod+Shift+Down  { focus-monitor-down; }
-    Mod+Shift+Up    { focus-monitor-up; }
-    Mod+Shift+Right { focus-monitor-right; }
-
-    // === Revertir Teclas de Utilidad ===
-    Mod+L allow-when-locked=true { spawn-sh "dms ipc call lock lock"; }
-    Mod+T { toggle-window-floating; }
-    Mod+I { consume-window-into-column; }
-    Mod+O { expel-window-from-column; }
-    // Mod+Shift+W { expand-column-to-available-width; } // Comentado por conflicto
-    Mod+Shift+K { spawn "thunar"; }
-
-    // Presionando Mod + Shift + B se lanzarán ambos programas al mismo tiempo
-    Mod+Alt+V { spawn "sh" "-c" "blueman-manager & pwvucontrol"; }
-    Mod+Ctrl+G { spawn "~/.config/niri/scripts/lastfm-love-now"; }
-}
-
+// Tema fijado a mano (este host no usa dmsThemeSync)
 environment {
-  // GTK_THEME "adw-gtk3-dark"
-  GTK_THEME "Matcha-dark-sea"
-  XCURSOR_THEME "oreo_teal_cursors"
-  QT_QPA_PLATFORMTHEME "gtk3"
-  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-  QS_ICON_THEME "Papirus-Dark"
-  // BROWSER "google-chrome-stable"
- _JAVA_AWT_WM_NONREPARENTING "1"
- _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
-}
-
-input {
-    // warp-mouse-to-focus
-    focus-follows-mouse  max-scroll-amount="70%"
-    workspace-auto-back-and-forth
-}
-
-layout {
-    focus-ring {
-        inactive-color "#413737"
-    }
-    border {
-        inactive-color "#413737"
-    }
+    GTK_THEME "Matcha-dark-sea"
+    XCURSOR_THEME "oreo_teal_cursors"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+    QS_ICON_THEME "Papirus-Dark"
 }

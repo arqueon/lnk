@@ -1,13 +1,12 @@
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
+// ═══ window-rules.kdl (COMÚN a todos los hosts) ═══
+// Reglas de ventana compartidas. Las reglas creadas desde la UI de DMS
+// viven en dms/windowrules.kdl (con marcadores @id); las específicas de
+// un host, en su user.kdl. Los workspaces nombrados ("chat", "files"...)
+// se definen por host en <host>.lnk/workspaces.kdl.
 
-window-rule {
-    match app-id="Waydroid"
-    default-column-width { fixed 800; }
-}
-
+// ── Base ──
+// Nota: dms/layout.kdl (incluido después) impone geometry-corner-radius 5
+// a todas las ventanas, así que este 0 solo aplica si DMS deja de hacerlo.
 window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
@@ -53,9 +52,6 @@ window-rule {
 window-rule {
     match app-id=r#"[Ff]erdium"#
     match app-id=r#"^thunderbird"#
-    match title=r#"^Planify$"#
-    match title=r#"^Akregator$"#
-    match app-id=r#"^io.github.martinrotter.rssguard$"#
     open-on-workspace "chat"
     open-maximized true
     open-focused true
@@ -104,17 +100,10 @@ window-rule {
 }
 
 window-rule {
-    match app-id="doublecmd" title=r#"Double Commander"#
     match app-id="org.kde.krusader" title=r#"Krusader"#
     match title=r#"^GitHub Desktop$"#
     match app-id=r#"^GitHub Desktop$"#
     // default-column-width { proportion 0.6; }
-    open-on-workspace "files"
-}
-
-window-rule {
-    match app-id="doublecmd" title=r#"Copiar archivo"#
-    default-column-width { proportion 0.3333; }
     open-on-workspace "files"
 }
 
@@ -169,7 +158,6 @@ window-rule {
     match title="^(notification )$"
     match title="^(error)$"
     match title="^(splash)$"
-    match title="^(nwg-look)$"
     match title="^(Subtitulado instantáneo)$"
     match title="^(confirmreset)$"
     match title="^(Delete profile)$"
@@ -188,8 +176,6 @@ window-rule {
     match title="^(.*)System Update$"
     match title=r#"^Progress$"#
     match title=r#"^(progress)$"#
-    match app-id="^xdm-app$"
-    match app-id="^com.github.hluk.copyq$"
     open-floating true
 }
 
@@ -205,30 +191,17 @@ window-rule {
     open-floating true
 }
 
-// Regla que aplica ÚNICAMENTE a ventanas que pierden el foco
+// ── Apariencia: ventanas sin foco semitransparentes con blur ──
+// (ver criterio general de transparencias en el grafo Logseq, página DMS)
 window-rule {
-    // Detecta cuando la ventana NO es la activa
     match is-active=false
-
-    // Aplica transparencia e indica que respete las esquinas redondeadas
     opacity 0.85
     clip-to-geometry true
     geometry-corner-radius 12
-
-    // Activa el blur de fondo
     background-effect {
         blur true
         xray true
     }
-}
-
-window-rule {
-    match title="Kando Menu"
-    open-floating true
-    focus-ring { off; }
-    border { off; }
-    shadow { off; }
-    default-floating-position x=0 y=0
 }
 
 layout {

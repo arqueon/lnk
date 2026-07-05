@@ -1,6 +1,9 @@
-// Animations configuration
+// ═══ animations.kdl (COMÚN a todos los hosts) ═══
+// Animaciones de niri. window-open/close usan shaders GLSL custom
+// (efecto de rejilla de celdas); los bloques /-window-open y /-window-close
+// de arriba de cada shader son la variante simple, desactivada.
+
 animations {
-    // off
     slowdown 0.7
     workspace-switch {
         spring damping-ratio=1.0 stiffness=3000 epsilon=0.0001

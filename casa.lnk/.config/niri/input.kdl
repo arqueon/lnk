@@ -1,10 +1,15 @@
+// ═══ input.kdl (POR-HOST: casa) ═══
+// Teclado, touchpad, mouse y comportamiento de foco de este equipo.
+// Único lugar donde se configura input{}: no duplicar el bloque en
+// user.kdl (niri fusiona secciones repetidas y confunde la lectura).
+
 input {
     keyboard {
         numlock
         xkb {
             layout "us"
             variant "intl"
-            options "ctrl:nocaps" 
+            options "ctrl:nocaps"
         }
         repeat-delay 300
         repeat-rate 25
@@ -12,40 +17,19 @@ input {
 
     touchpad {
         tap
-        // off
-        // dwt
-        // dwtp
-        // drag true
-        // drag-lock
-        // natural-scroll
         accel-speed 0.2
         accel-profile "adaptive"
-        // scroll-factor 1.0
         scroll-factor vertical=2.0 horizontal=0.2
-        // scroll-method "two-finger"
-        // scroll-button 273
-        // scroll-button-lock
-        // tap-button-map "left-middle-right"
-        // click-method "clickfinger"
-        // left-handed
-        // disabled-on-external-mouse
-        // middle-emulation
     }
 
     mouse {
-        // natural-scroll
         accel-speed 0.2
         accel-profile "adaptive"
-        // scroll-factor 1.0
+        // horizontal negativo: invierte el scroll lateral de la rueda
         scroll-factor vertical=2.0 horizontal=-3.0
-        // scroll-method "no-scroll"
-        // scroll-button 273
-        // scroll-button-lock
-        // left-handed
-        // middle-emulation
     }
 
-    // warp-mouse-to-focus  // desactivado 2026-07-04: el salto del cursor al cambiar foco molestaba
-    focus-follows-mouse max-scroll-amount="30%"
+    // warp-mouse-to-focus desactivado (2026-07-04): el salto de cursor molestaba
+    focus-follows-mouse max-scroll-amount="70%"
     workspace-auto-back-and-forth
 }

@@ -8,7 +8,6 @@
 .config/fish/config.fish
 .config/fusuma/config.yml
 .config/ghostty/config
-.config/kando/menus.json
 .config/kitty/kitty.conf
 .config/niri/animations.kdl
 .config/niri/config.kdl
@@ -25,6 +24,7 @@
 .config/niri/scripts/run_chrome.sh
 .config/niri/scripts/run_stream.sh
 .config/niri/startup.kdl
+.config/niri/user-common.kdl
 .config/niri/window-rules.kdl
 .config/paru
 .config/user-dirs.locale

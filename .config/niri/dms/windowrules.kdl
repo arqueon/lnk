@@ -27,12 +27,6 @@ window-rule {
     default-window-height { fixed 600; }
 }
 
-// @id=wr_1772687743827152583 @name=google-chrome-canary
-window-rule {
-    match app-id="^google-chrome-canary$" title="^TickTick - Google Chrome$"
-    open-floating true
-}
-
 // @id=wr_1772743336626015926 @name=google-chrome
 window-rule {
     match app-id="^google-chrome.*" title="^TickTick - Google Chrome"
@@ -65,13 +59,6 @@ window-rule {
 window-rule {
     match app-id="^Zettlr$" title="^Export failed$"
     open-floating true
-}
-
-// @id=wr_1774407737028284705 @name=obsidian
-window-rule {
-    match app-id="^obsidian$"
-    open-maximized true
-    open-on-workspace "notes"
 }
 
 // @id=wr_1774635042678692564 @name=chrome-ekhagklcjbdpajgpjgmbionohlpdbjgc-Default
@@ -128,12 +115,6 @@ window-rule {
     match app-id="^com.mitchellh.ghostty$"
     opacity 0.98
     default-column-width { proportion 0.5; }
-}
-
-// @id=wr_1779472696104695201 @name=evolution-alarm-notify
-window-rule {
-    match app-id="^evolution-alarm-notify$"
-    open-floating true
 }
 
 // @id=wr_1781288322983390332 @name=Zotero

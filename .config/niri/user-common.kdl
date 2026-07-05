@@ -1,0 +1,78 @@
+// ═══ user-common.kdl (COMÚN a todos los hosts) ═══
+// Overrides compartidos sobre keybinds.kdl y dms/binds.kdl.
+// Se incluye justo ANTES de user.kdl (por-host), que tiene la última palabra.
+// dms/binds.kdl se mantiene idéntico a la plantilla oficial de DMS:
+// toda personalización de binds va aquí o en el user.kdl del host.
+// Configuración dominante adoptada: la de casa (decisión 2026-07-05).
+
+// ── Window rules compartidas ──
+window-rule {
+    match app-id="blueman-manager"
+    default-column-display "tabbed"
+}
+
+window-rule {
+    match app-id="com.saivert.pwvucontrol"
+    default-column-display "tabbed"
+}
+
+window-rule {
+    match app-id="chrome-videostream.arqueonautis.org__stream.html-Default"
+    open-on-workspace "chat"
+    open-maximized true
+}
+
+// ── Binds compartidos ──
+binds {
+    // Lanzadores
+    Mod+Shift+Return { spawn-sh "dolphin ~/Downloads/"; }
+    Mod+Alt+Return { spawn-sh "thunar ~/Downloads/"; }
+    Mod+Alt+F1 { spawn "firefox"; }
+    Mod+Alt+F2 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
+    Mod+Alt+F4 { spawn-sh "rm -r ~/.config/Logseq/window-state.json"; } // reset ventana Logseq
+    Mod+Escape { spawn-sh "kitty btop"; }
+
+    // Overview y workspaces
+    Mod+E { toggle-overview; }
+    Mod+Tab { focus-workspace-previous; }
+
+    // Navegación: flechas cambian de ventana o workspace
+    Mod+Down { focus-window-or-workspace-down; }
+    Mod+Up { focus-window-or-workspace-up; }
+
+    // Movimiento: Ctrl mueve; Shift cambia de monitor
+    Mod+Ctrl+Left  { move-column-left; }
+    Mod+Ctrl+Down  { move-window-down; }
+    Mod+Ctrl+Up    { move-window-up; }
+    Mod+Ctrl+Right { move-column-right; }
+    Mod+Shift+Left  { focus-monitor-left; }
+    Mod+Shift+Down  { focus-monitor-down; }
+    Mod+Shift+Up    { focus-monitor-up; }
+    Mod+Shift+Right { focus-monitor-right; }
+
+    // Utilidades (pisan a dms/binds a propósito)
+    Mod+L allow-when-locked=true { spawn-sh "dms ipc call lock lock"; }
+    Mod+T { toggle-window-floating; }
+    Mod+I { consume-window-into-column; }
+    Mod+O { expel-window-from-column; } // pisa el overview Mod+O de la plantilla DMS; overview = Mod+E
+    Mod+Shift+K { spawn "thunar"; } // recupera el bind pisado por dms/binds (move-window-up)
+    Mod+Alt+V { spawn "sh" "-c" "blueman-manager & pwvucontrol"; }
+    Mod+Ctrl+G { spawn "~/.config/niri/scripts/lastfm-love-now"; } // script local con secretos, fuera de lnk
+}
+
+// ── Fixes para apps Java (JDownloader, etc.) ──
+environment {
+    _JAVA_AWT_WM_NONREPARENTING "1"
+    _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
+}
+
+// ── Bordes inactivos más oscuros que los del tema DMS ──
+// dms/colors.kdl se autogenera; este override es la vía correcta.
+layout {
+    focus-ring {
+        inactive-color "#413737"
+    }
+    border {
+        inactive-color "#413737"
+    }
+}

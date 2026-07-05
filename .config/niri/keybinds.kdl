@@ -1,13 +1,24 @@
+// ═══ keybinds.kdl (COMÚN a todos los hosts) ═══
+// Binds compartidos. Los overrides por equipo van en <host>.lnk/user.kdl
+// (último include: un bind repetido allí sustituye al de aquí).
+// Los binds del shell DMS (launcher, screenshots, etc.) están en
+// dms/binds.kdl. Capturas de pantalla: plugin quickCapture de DMS.
+
 binds {
-    // General actions and system commands
+    // ── Sistema / niri ──
     Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
     Mod+Ctrl+Shift+S { toggle-keyboard-shortcuts-inhibit; }
+    Mod+MouseMiddle { close-window; }
+    Mod+Shift+O { toggle-window-rule-opacity; }
 
-    // Application launchers and binds
+    // ── Lanzadores: terminal y archivos ──
     Mod+Return { spawn "kitty"; }
-    Mod+Shift+Z { spawn "nemo"; }
-    Mod+Z { spawn "kando" "--trigger" "kando-niri-menu"; }
     Mod+Shift+Return { spawn-sh "thunar"; }
+    Mod+Shift+Z { spawn "nemo"; }
+    Mod+Shift+K { spawn "thunar"; }
+    Mod+F6 { spawn "krusader"; }
+
+    // ── Lanzadores: teclas de función (F1-F12 = apps principales) ──
     Mod+F1 { spawn-sh "~/.config/niri/scripts/run_chrome.sh"; }
     Mod+Alt+F1 { spawn-sh "firefox"; }
     Mod+F2 { spawn "ferdium"; }
@@ -15,9 +26,8 @@ binds {
     Mod+Alt+F3 { spawn "dcal"; }
     Mod+F4 { spawn "logseq"; }
     Mod+F5 { spawn "zettlr"; }
-    Mod+F6 { spawn "krusader"; }
     Mod+F7 { spawn "virt-manager"; }
-    Mod+F8 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=http://localhost:8080"; }
+    Mod+F8 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=http://localhost:8080"; }        // qBittorrent local
     Mod+Alt+F8 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=https://qbittorrent.arqueonautis.org"; }
     Mod+F9 { spawn "jdownloader"; }
     Mod+Alt+F9 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=https://sabnzbd.arqueonautis.org"; }
@@ -25,60 +35,60 @@ binds {
     Mod+Alt+F10 { spawn "claude-desktop"; }
     Mod+F11 { spawn "github-desktop"; }
     Mod+Alt+F11 { spawn "antigravity-ide"; }
-    Mod+F12 { spawn "smile"; }
+    Mod+F12 { spawn "smile"; } // selector de emojis
+
+    // ── Otras apps ──
     Mod+Ctrl+N { spawn "newsflash"; }
     Mod+Ctrl+M { spawn-sh "~/.config/niri/scripts/run_stream.sh"; }
     Mod+Alt+M { spawn "~/.config/niri/scripts/ejecutar_ytmusic.sh"; }
-    Mod+Ctrl+W { spawn "dms" "ipc" "whisper" "toggle"; }
+    Ctrl+Alt+P { spawn "pamac-manager"; }
+
+    // ── DMS: shell, tema y utilidades ──
+    Mod+Shift+B allow-when-locked=true { spawn-sh "dms restart"; }
+    Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
+    Mod+Alt+T hotkey-overlay-title="Sync Theme (DMS)" { spawn "dms" "ipc" "call" "dmsThemeSync" "configure"; }
+    Mod+Ctrl+W { spawn "dms" "ipc" "whisper" "toggle"; } // dictado por voz
+    Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; } // hoja de atajos
+    // Captura de región vía plugin quickCapture (sustituye al antiguo script de swappy)
+    Mod+Print { spawn-sh "dms ipc call quickCapture screenshot region"; }
+
+    // ── Last.fm (plugin lastfmScrobbler) ──
     Mod+Alt+G { spawn-sh "dms ipc call lastfmScrobbler love"; }
     Mod+Alt+Shift+G { spawn-sh "notify-send -a 'Last.fm' 'Status' \"$(dms ipc call lastfmScrobbler status)\""; }
 
-
-    // System utility binds
-    Mod+Shift+K { spawn "thunar"; }
-    Mod+Shift+B allow-when-locked=true { spawn-sh "dms restart"; }
-    Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
-    Ctrl+Alt+P { spawn "pamac-manager"; }
-    Mod+Shift+M { spawn-sh "wl-present mirror"; }
-    Mod+Alt+B { spawn-sh "kitty btop"; } // Antes Mod+Escape
+    // ── Wallpapers (Variety) ──
     Mod+Alt+F { spawn-sh "variety -f && notify-send 'Copied to favorites'"; }
     Mod+Alt+W { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
-    Mod+Alt+T hotkey-overlay-title="Sync Theme (DMS)" { spawn "dms" "ipc" "call" "dmsThemeSync" "configure"; }
+
+    // ── Utilidades de sistema ──
+    Mod+Shift+M { spawn-sh "wl-present mirror"; } // espejo de pantalla
+    Mod+Alt+B { spawn-sh "kitty btop"; }
     Mod+Alt+S { spawn-sh "systemctl suspend"; }
-    Mod+Alt+2 { spawn-sh "~/.bin/lnk_push.sh"; }
-    Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; }
-    Mod+Alt+R { spawn-sh "bash ~/.config/niri/scripts/gpu_recorder.sh"; } // Antes Mod+Ctrl+R
-    Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
+    Mod+Alt+R { spawn-sh "bash ~/.config/niri/scripts/gpu_recorder.sh"; } // grabación con GPU
+    Mod+Alt+2 { spawn-sh "~/.bin/lnk_push.sh"; } // dotfiles: push
+    Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; } // dotfiles: pull
     Mod+Alt+V { spawn-sh "pavucontrol"; }
-    
-    // Cerrar la ventana activa con Mod + Clic Central
-    Mod+MouseMiddle { close-window; }
 
-    Mod+Shift+O { toggle-window-rule-opacity; }
-
-    // Screenshots custom
-    Mod+Print { spawn "~/.config/niri/scripts/screenshot_swappy.sh"; }
-
-    // Multimedia and peripherals custom
+    // ── Audio (DMS) y periféricos ──
     Alt+F10 { spawn-sh "dms ipc call audio mute"; }
     Alt+F11 { spawn-sh "dms ipc call audio decrement 3"; }
     Alt+F12 { spawn-sh "dms ipc call audio increment 3"; }
-    Mod+Alt+P { spawn-sh "~/.config/niri/scripts/conectar_audio.sh poseidon"; }
-    Mod+Alt+E { spawn-sh "~/.config/niri/scripts/conectar_audio.sh earfun"; }
+    Mod+Alt+P { spawn-sh "~/.config/niri/scripts/conectar_audio.sh poseidon"; } // auriculares BT
+    Mod+Alt+E { spawn-sh "~/.config/niri/scripts/conectar_audio.sh earfun"; }   // auriculares BT
 
-    // Mouse and Touchpad binds custom
+    // ── Mouse y touchpad ──
     Mod+Ctrl+MouseLeft { close-window; }
     Mod+Ctrl+MouseMiddle { maximize-column; }
     Ctrl+MouseMiddle { close-window; }
     Mod+TouchpadScrollDown { spawn-sh "dms ipc call audio decrement 3"; }
     Mod+TouchpadScrollUp { spawn-sh "dms ipc call audio increment 3"; }
 
-    // Custom Workspace Movement
+    // ── Workspaces ──
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
 }
 
-// Switch events
+// ── Eventos de hardware (laptops: suspender al cerrar la tapa) ──
 switch-events {
-       lid-close { spawn "systemctl" "suspend"; }
+    lid-close { spawn "systemctl" "suspend"; }
 }

@@ -1,17 +1,29 @@
+// ═══ startup.kdl (COMÚN a todos los hosts) ═══
+// Procesos lanzados al iniciar sesión. Ojo: esto corre en TODOS los
+// equipos gestionados por lnk; lo específico de un host va en su user.kdl.
+// DMS (barras/shell) NO se lanza aquí: corre como servicio systemd
+// de usuario (dms.service).
+
+// ── Agentes de sistema y bandeja ──
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "blueman-applet"
-spawn-sh-at-startup "sleep 15 && insync"
-spawn-at-startup "~/.config/niri/scripts/launch-anytype.sh"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "kdeconnectd"
 spawn-at-startup "kdeconnect-indicator"
+
+// ── Aplicaciones de sesión ──
+spawn-sh-at-startup "sleep 15 && insync"
+spawn-at-startup "~/.config/niri/scripts/launch-anytype.sh"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 spawn-sh-at-startup "sleep 15 && variety"
+// Logseq guarda mal el estado de ventana en Wayland; se borra antes de abrir
 spawn-sh-at-startup "rm ~/.config/Logseq/window-state.json"
 spawn-sh-at-startup "logseq"
+
+// ── Ajustes de escritorio (gsettings / xdg) ──
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface gtk-enable-primary-paste true"
+// dms-open.desktop enruta los enlaces al navegador que gestiona DMS
 spawn-sh-at-startup "xdg-settings set default-web-browser dms-open.desktop"
 spawn-sh-at-startup "xdg-mime default dms-open.desktop x-scheme-handler/http"
 spawn-sh-at-startup "xdg-mime default dms-open.desktop x-scheme-handler/https"
-spawn-at-startup "kando"

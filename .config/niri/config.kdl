@@ -1,3 +1,26 @@
+// ═══════════════════════════════════════════════════════════════════
+//  NIRI — archivo de entrada (común a todos los hosts vía lnk)
+// ═══════════════════════════════════════════════════════════════════
+// Arquitectura (para humanos y agentes):
+//   1. Archivos COMUNES (repo lnk, .config/niri/): startup, layout,
+//      animations, window-rules, environment, keybinds, scripts/.
+//      Un cambio aquí afecta a TODOS los equipos.
+//   2. Archivos POR-HOST (repo lnk, <host>.lnk/.config/niri/):
+//      input, output, workspaces, user. Cambios solo para ese equipo.
+//   3. AUTOGENERADOS por DMS (dms/*.kdl): colors, layout, wpblur, alttab,
+//      outputs y cursor se REGENERAN solos (no editar, no sincronizar).
+//      dms/binds.kdl: copia fiel de la plantilla oficial de DMS, compartida
+//      vía lnk; NO se edita a mano (los overrides van en user-common.kdl /
+//      user.kdl). Actualizarla comparando con la plantilla embebida en el
+//      binario dms tras actualizar el paquete.
+//      dms/windowrules.kdl: el ÚNICO de dms/ editable (reglas creadas desde
+//      la UI de DMS; conservar los marcadores @id).
+//   4. dms-theme-sync.kdl (incluido desde environment.kdl) también es
+//      autogenerado (plugin dmsThemeSync) y local a cada host.
+// Precedencia: los include se aplican en orden; user-common.kdl (overrides
+// compartidos, dominante=casa) pisa a lo común y a DMS, y user.kdl
+// (por-host) tiene la última palabra.
+
 include "input.kdl"
 include "output.kdl"
 include "startup.kdl"
@@ -15,4 +38,5 @@ include "dms/binds.kdl"
 include "dms/outputs.kdl"
 include "dms/cursor.kdl"
 include "dms/windowrules.kdl"
+include "user-common.kdl"
 include "user.kdl"

@@ -1,10 +1,14 @@
-// Layout configuration
+// ═══ layout.kdl (COMÚN a todos los hosts) ═══
+// Layout base de niri. OJO para agentes: dms/layout.kdl (autogenerado)
+// se incluye DESPUÉS en config.kdl, así que DMS puede pisar valores de
+// aquí (gaps, colores de focus-ring/border según el tema). Los overrides
+// manuales de colores van en <host>.lnk/user.kdl, no aquí.
+
 layout {
     gaps 10
     center-focused-column "never"
     default-column-display "tabbed"
     tab-indicator {
-        // off
         hide-when-single-tab
         place-within-column
         gap 4
@@ -16,9 +20,6 @@ layout {
         active-color "#89b4fa"
         inactive-color "gray"
         urgent-color "red"
-        // active-gradient from="#80c8ff" to="#bbddff" angle=45
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
-        // urgent-gradient from="#800" to="#a33" angle=45
     }
     preset-column-widths {
         proportion 0.25
@@ -26,17 +27,15 @@ layout {
         proportion 0.5
         proportion 0.66667
         proportion 0.75
-        // fixed 1920
     }
+    // transparente para que se vea el wallpaper/backdrop entre gaps
     background-color "transparent"
     insert-hint {
-        // off
         color "#ffc87f80"
         gradient from="#6b8c61" to="#a6da95" angle=45 relative-to="workspace-view"
     }
     default-column-width { proportion 0.5; }
     focus-ring {
-        // off
         width 3
         active-color "#89b4fa"
         inactive-color "#3A3A3E"
@@ -49,28 +48,23 @@ layout {
         offset x=0 y=5
         color "#0007"
     }
+    // border desactivado (/-): solo se usa focus-ring
     /-border {
-        // off
         width 1
         active-color "#a6da95"
         inactive-color "#505050"
     }
     struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
     }
 }
 
 
-// Overview configuration
+// ── Overview ──
 overview {
     zoom 0.3
     backdrop-color "#262626"
 
     workspace-shadow {
-        // off
         softness 40
         spread 10
         offset x=0 y=10
@@ -79,56 +73,50 @@ overview {
 }
 
 
-// Layer rules
-/-layer-rule {
-    match namespace="^swww-daemon$"
-    place-within-backdrop true
-}
-
+// ── Layer rules ──
+// El wallpaper de DMS/quickshell se dibuja dentro del backdrop del overview
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
 }
 
 
-// Screenshot configuration
+// ── Capturas de pantalla (las de niri; las de DMS usan quickCapture) ──
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-// screenshot-path null
 
 
-// xwayland
+// ── XWayland vía xwayland-satellite ──
 xwayland-satellite {
-    // off
     path "xwayland-satellite"
 }
 
 
-// Client-side decorations
+// Sin decoraciones del lado del cliente
 prefer-no-csd
 
 
-// Cursor configuration
+// ── Cursor ──
+// El tema/tamaño real lo gestiona dmsThemeSync vía variables de entorno;
+// esto es el fallback de niri.
 cursor {
     xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 24
     hide-when-typing
-    // hide-after-inactive-ms 1000
 }
 
 
-// Hotkey overlay configuration
 hotkey-overlay {
     skip-at-startup
 }
 
 
-// Debug options
 debug {
     honor-xdg-activation-with-invalid-serial
 }
 
+
+// ── Alt-Tab de ventanas recientes ──
 recent-windows {
-    // off
     open-delay-ms 150
 
     highlight {
