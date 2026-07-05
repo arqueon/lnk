@@ -17,8 +17,6 @@ spawn-at-startup "~/.config/niri/scripts/launch-anytype.sh"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 spawn-sh-at-startup "sleep 15 && variety"
-// Logseq guarda mal el estado de ventana en Wayland; se borra antes de abrir
-spawn-sh-at-startup "rm ~/.config/Logseq/window-state.json"
 spawn-sh-at-startup "logseq"
 // Tine (AppImage de Shelly en ~/.local/bin; glob para sobrevivir a updates).
 // Regla de workspace "notes" en dms/windowrules.kdl.
