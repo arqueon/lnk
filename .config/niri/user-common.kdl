@@ -29,7 +29,6 @@ binds {
     Mod+Alt+Return { spawn-sh "thunar ~/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
     Mod+Alt+F2 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
-    Mod+Alt+F4 { spawn-sh "rm -r ~/.config/Logseq/window-state.json"; } // reset ventana Logseq
     Mod+Escape { spawn-sh "kitty btop"; }
 
     // Overview y workspaces

@@ -25,6 +25,7 @@ binds {
     Mod+F3 { spawn "zotero"; }
     Mod+Alt+F3 { spawn "dcal"; }
     Mod+F4 { spawn "logseq"; }
+    Mod+Alt+F4 { spawn-sh "exec ~/.local/bin/Tine_*.AppImage"; } // Tine: familia de notas junto a Logseq
     Mod+F5 { spawn "zettlr"; }
     Mod+F7 { spawn "virt-manager"; }
     Mod+F8 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=http://localhost:8080"; }        // qBittorrent local
