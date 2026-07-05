@@ -13,8 +13,7 @@ si hay conflicto, **gana Logseq**.
 - **Convención de páginas:** cabecera `type:: · area:: · status:: · tags:: · updated::` antes del primer `#`;
   namespaces como carpetas `pages/<Area>/<Tema>.md`; hub por área con queries `{{query (property area [[...]])}}`.
 - **Leer al iniciar:** abrir la página-hub del área y sus páginas `type:: [[situación]]`/`[[contexto]]`.
-- **Escribir al terminar:** actualizar/crear la página de contexto, enlazar con `[[ ]]`, subir `updated::` (fecha absoluta);
-  al crear una página, añadir también un enlace `[[Area/Página]]` en el journal del día `journals/YYYY_MM_DD.md`.
+- **Escribir al terminar:** actualizar/crear la página de contexto, enlazar con `[[ ]]`, subir `updated::` (fecha absoluta); registrar siempre un breve log en el journal del día (`journals/YYYY_MM_DD.md`) apuntando a dicha página (`[[Nombre de página]]`) detallando de forma concisa qué se modificó o creó.
 - **Nunca** escribir secretos en el grafo (está en git + sync); referenciar dónde viven y cómo regenerarlos.
 
 Norma completa: página `[[AI Memory Protocol]]` dentro del grafo.

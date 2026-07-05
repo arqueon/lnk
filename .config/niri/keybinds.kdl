@@ -31,7 +31,7 @@ binds {
     Mod+F8 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=http://localhost:8080"; }        // qBittorrent local
     Mod+Alt+F8 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=https://qbittorrent.arqueonautis.org"; }
     Mod+F9 { spawn "jdownloader"; }
-    Mod+Alt+F9 { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=https://sabnzbd.arqueonautis.org"; }
+    Mod+Alt+F9 hotkey-overlay-title="Media download apps" { spawn "~/.config/niri/scripts/launch-media-apps.sh"; }
     Mod+F10 { spawn "~/.config/niri/scripts/launch-anytype.sh"; }
     Mod+Alt+F10 { spawn "claude-desktop"; }
     Mod+F11 { spawn "github-desktop"; }

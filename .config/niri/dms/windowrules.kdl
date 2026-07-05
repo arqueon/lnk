@@ -152,7 +152,7 @@ window-rule {
 // @id=wr_1782679683879423240 @name=chrome-localhost__-Default
 window-rule {
     match app-id="^chrome-localhost__-Default$"
-    open-on-workspace "files"
+    open-on-workspace "media"
 }
 
 // @id=wr_1782849734565559021 @name=com.danklinux.dankcalendar
@@ -208,5 +208,11 @@ window-rule {
 // @id=wr_1783270160044072826 @name=claude-desktop
 window-rule {
     match app-id="^claude-desktop$"
-    open-on-workspace "agents"
+    open-on-workspace "agents2"
+}
+
+// @id=wr_1783272403140217784 @name=marktext
+window-rule {
+    match app-id="^marktext$"
+    default-column-width { proportion 0.4; }
 }

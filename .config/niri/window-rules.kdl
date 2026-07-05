@@ -109,8 +109,6 @@ window-rule {
 
 window-rule {
     match app-id=r#"jdownloader"#
-    match app-id=r#"qbittorrent"#
-    match app-id=r#"sabnzbd"#
     match title=r#"^JDownloader 2$"#
     default-column-width { proportion 0.3; }
     open-on-workspace "files"
@@ -182,7 +180,15 @@ window-rule {
 window-rule {
     match app-id=r#"com.github.th_ch.youtube_music"#
     match app-id=r#"Steam"#
-    default-column-width { proportion 0.7; }
+    match app-id=r#"Aonsoku"#
+    match app-id=r#"sinope\.tailf70cf8\.ts\.net"#
+    match app-id=r#"aurral\.arqueonautis\.org"#
+    match app-id=r#"musicseerr\.arqueonautis\.org"#
+    match app-id=r#"sabnzbd\.arqueonautis\.org"#
+    match app-id=r#"lidarr\.arqueonautis\.org"#
+    match app-id=r#"chrome-localhost__-Default"#
+    match app-id=r#"qbittorrent\.arqueonautis\.org"#
+    default-column-width { proportion 0.5; }
     open-on-workspace "media"
 }
 

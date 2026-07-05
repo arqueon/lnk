@@ -14,8 +14,7 @@ si hay conflicto, **gana Logseq**.
   organizar mediante `area::`, etiquetas y hubs con queries `{{query (property area [[...]])}}`.
 - **Enlaces de página:** usar siempre el nombre real, por ejemplo `[[Jellyfin remoto para padres]]`; no incluir `pages/`, rutas de directorio ni el área como prefijo salvo que formen parte real del título.
 - **Leer al iniciar:** abrir la página-hub del área y sus páginas `type:: [[situación]]`/`[[contexto]]`.
-- **Escribir al terminar:** actualizar/crear la página de contexto, enlazar con `[[ ]]`, subir `updated::` (fecha absoluta);
-  al crear una página, añadir también un enlace `[[Nombre de página]]` en el journal del día `journals/YYYY_MM_DD.md`.
+- **Escribir al terminar:** actualizar/crear la página de contexto, enlazar con `[[ ]]`, subir `updated::` (fecha absoluta); registrar siempre un breve log en el journal del día (`journals/YYYY_MM_DD.md`) apuntando a dicha página (`[[Nombre de página]]`) detallando de forma concisa qué se modificó o creó.
 - **Nunca** escribir secretos en el grafo (está en git + sync); referenciar dónde viven y cómo regenerarlos.
 
 Norma completa: página `[[AI Memory Protocol]]` dentro del grafo.
