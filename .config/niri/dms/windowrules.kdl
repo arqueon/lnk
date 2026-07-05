@@ -178,6 +178,7 @@ window-rule {
 window-rule {
     match app-id="^Tine$"
     open-on-workspace "notes"
+    open-maximized true
 }
 
 // @id=wr_1783185082670020499 @name=org.kde.dolphin
