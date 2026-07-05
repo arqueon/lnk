@@ -1,9 +1,7 @@
 // ═══ environment.kdl (COMÚN a todos los hosts) ═══
-// Variables de entorno de la sesión Wayland. Al final se incluye
-// dms-theme-sync.kdl (AUTOGENERADO por el plugin dmsThemeSync, local a
-// cada host): define XCURSOR_THEME y el platform theme de Qt según el
-// tema activo, y puede pisar valores de aquí. No fijar cursor ni
-// QT_QPA_PLATFORMTHEME definitivos en este archivo.
+// Variables de entorno de la sesión Wayland. El cursor y el platform
+// theme de Qt definitivos los pone dms-theme-sync.kdl (autogenerado,
+// incluido en config.kdl DESPUÉS de dms/): no fijarlos aquí.
 
 environment {
     // ── Sesión Wayland ──
@@ -49,7 +47,3 @@ environment {
     MANGOHUD "0"
     MANGOHUD_DLSYM "1"
 }
-
-// AUTOGENERADO (plugin dmsThemeSync) — local a cada host, no está en lnk.
-// En un host nuevo, ejecutar `dms ipc call dmsThemeSync configure` para crearlo.
-include "dms-theme-sync.kdl"
