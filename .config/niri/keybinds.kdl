@@ -48,8 +48,8 @@ binds {
     Mod+Shift+B allow-when-locked=true { spawn-sh "dms restart"; }
     Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
     Mod+Alt+T hotkey-overlay-title="Sync Theme (DMS)" { spawn "dms" "ipc" "call" "dmsThemeSync" "configure"; }
-    Mod+Ctrl+W hotkey-overlay-title="Dictado por voz (Whisper)" { spawn "dms" "ipc" "call" "whisper" "toggle"; }
-    Mod+Ctrl+G hotkey-overlay-title="Dictado con IA (Whisper)" { spawn "dms" "ipc" "call" "whisper" "toggleAi"; }
+    Mod+Ctrl+W hotkey-overlay-title="Dictado por voz (Whisperer)" { spawn "dms" "ipc" "call" "whisperer" "toggle"; }
+    Mod+Ctrl+G hotkey-overlay-title="Dictado con IA (Whisperer)" { spawn "dms" "ipc" "call" "whisperer" "toggleAi"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; } // hoja de atajos
     // Captura de región vía plugin quickCapture (sustituye al antiguo script de swappy)
     Mod+Print { spawn-sh "dms ipc call quickCapture screenshot region"; }
