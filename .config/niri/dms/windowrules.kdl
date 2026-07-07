@@ -220,5 +220,6 @@ window-rule {
 // @id=wr_1783444389922880994 @name=perplexity
 window-rule {
     match app-id="^perplexity$" title="^Perplexity$"
+    open-on-workspace "agents2"
     default-column-width { proportion 0.6; }
 }
