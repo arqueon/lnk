@@ -216,3 +216,9 @@ window-rule {
     match app-id="^marktext$"
     default-column-width { proportion 0.4; }
 }
+
+// @id=wr_1783444389922880994 @name=perplexity
+window-rule {
+    match app-id="^perplexity$" title="^Perplexity$"
+    default-column-width { proportion 0.6; }
+}

@@ -69,7 +69,7 @@ window-rule {
     match app-id=r#"libreoffice"#
     match app-id=r#"soffice"#
     open-on-workspace "write"
-    default-column-width { proportion 0.85; }
+    default-column-width { proportion 0.65; }
     open-focused true
 }
 
