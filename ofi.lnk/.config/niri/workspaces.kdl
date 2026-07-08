@@ -1,8 +1,31 @@
+// ═══ workspaces.kdl (POR-HOST: casa) ═══
+// Workspaces con nombre, repartidos por monitor. Las window-rules
+// (comunes y de dms/windowrules.kdl) referencian estos nombres:
+// si se renombra uno aquí, actualizar también las reglas.
+
+// ── DP-2 (ultrawide principal): trabajo activo ──
+workspace "web" {
+    open-on-output "DP-2"
+}
+workspace "agents" {
+    open-on-output "DP-2"
+}
+workspace "files" {
+    open-on-output "DP-2"
+}
+workspace "write" {
+    open-on-output "DP-2"
+}
+workspace "virt" {
+    open-on-output "DP-2"
+}
+
+// ── HDMI-A-1 (secundario): comunicación y referencia ──
 workspace "chat" {
     open-on-output "HDMI-A-1"
 }
-workspace "web" {
-    open-on-output "DP-2"
+workspace "agents2" {
+    open-on-output "HDMI-A-1"
 }
 workspace "ref" {
     open-on-output "HDMI-A-1"
@@ -10,15 +33,6 @@ workspace "ref" {
 workspace "notes" {
     open-on-output "HDMI-A-1"
 }
-workspace "write" {
-    open-on-output "HDMI-A-1"
-}
-workspace "files" {
-    open-on-output "DP-2"
-}
-workspace "virt" {
-    open-on-output "DP-2"
-}
 workspace "media" {
-    open-on-output "DP-2"
+    open-on-output "HDMI-A-1"
 }
