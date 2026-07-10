@@ -223,3 +223,17 @@ window-rule {
     open-on-workspace "agents2"
     default-column-width { proportion 0.6; }
 }
+
+// @id=wr_1783494801148678419 @name=mpv
+window-rule {
+    match app-id="^mpv$"
+    open-focused true
+    open-on-workspace "media"
+    default-column-width { proportion 0.7; }
+}
+
+// @id=wr_1783648825724534484 @name=org.arqueon.dankmail
+window-rule {
+    match app-id="^org.arqueon.dankmail$"
+    open-on-workspace "chat"
+}
