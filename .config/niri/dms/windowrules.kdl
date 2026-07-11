@@ -237,3 +237,16 @@ window-rule {
     match app-id="^org.arqueon.dankmail$"
     open-on-workspace "chat"
 }
+
+// @id=wr_1783736816287518280 @name=thunar
+window-rule {
+    match app-id="^thunar$"
+    open-on-workspace "files"
+}
+
+// @id=wr_1783736878791257181 @name=org.gnome.Nautilus
+window-rule {
+    match app-id="^org.gnome.Nautilus$"
+    open-on-workspace "files"
+    tiled-state true
+}

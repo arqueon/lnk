@@ -5,7 +5,7 @@
 // de usuario (dms.service).
 
 // ── Agentes de sistema y bandeja ──
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+# spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "kdeconnectd"
@@ -16,7 +16,7 @@ spawn-sh-at-startup "sleep 15 && insync"
 spawn-at-startup "~/.config/niri/scripts/launch-anytype.sh"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
-spawn-sh-at-startup "sleep 15 && variety"
+spawn-sh-at-startup "sleep 10 && variety"
 spawn-sh-at-startup "logseq"
 // Tine (AppImage de Shelly en ~/.local/bin; glob para sobrevivir a updates).
 // Regla de workspace "notes" en dms/windowrules.kdl.
