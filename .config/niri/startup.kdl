@@ -5,7 +5,7 @@
 // de usuario (dms.service).
 
 // ── Agentes de sistema y bandeja ──
-# spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+// spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "kdeconnectd"
