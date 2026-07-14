@@ -183,7 +183,7 @@ window-rule {
     match app-id=r#"Aonsoku"#
     match app-id=r#"sinope\.tailf70cf8\.ts\.net"#
     match app-id=r#"aurral\.arqueonautis\.org"#
-    match app-id=r#"musicseerr\.arqueonautis\.org"#
+    match app-id=r#"droppedneedle\.arqueonautis\.org"#
     match app-id=r#"sabnzbd\.arqueonautis\.org"#
     match app-id=r#"lidarr\.arqueonautis\.org"#
     match app-id=r#"chrome-localhost__-Default"#

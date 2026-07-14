@@ -4,7 +4,7 @@
 # Se lanzan con una pausa corta para que una primera instancia de Chrome pueda
 # adquirir el perfil antes de que las siguientes se conecten a ella.
 urls=(
-    "https://droppedneedle.arqueonautis.org"
+    "https://droppedneedle.arqueonautis.org/"
     "https://aurral.arqueonautis.org"
     "https://sabnzbd.arqueonautis.org"
     "https://lidarr.arqueonautis.org"
