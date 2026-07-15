@@ -53,7 +53,7 @@ binds {
     Mod+Ctrl+G hotkey-overlay-title="Dictado con IA (Whisperer)" { spawn "dms" "ipc" "call" "whisperer" "toggleAi"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; } // hoja de atajos
     // Captura de región vía plugin quickCapture (sustituye al antiguo script de swappy)
-    Mod+Print { spawn-sh "dms ipc call quickCapture screenshot region"; }
+    Mod+Print { spawn-sh "dms ipc call quickCapture screenshot region edit"; }
 
     // ── Last.fm (plugin lastfmScrobbler) ──
     Mod+Alt+G { spawn-sh "dms ipc call lastfmScrobbler love"; }

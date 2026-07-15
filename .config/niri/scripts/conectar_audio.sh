@@ -46,16 +46,17 @@ require_command() {
 }
 
 bt_connected() {
-    bluetoothctl info "$MAC" 2>/dev/null | grep -q "Connected: yes"
+    echo -e "select 8C:68:8B:40:F7:53\ninfo $MAC" | bluetoothctl 2>/dev/null | grep -q "Connected: yes"
 }
 
 connect_bt() {
-    timeout "$BT_CONNECT_TIMEOUT" bluetoothctl connect "$MAC"
+    echo -e "select 8C:68:8B:40:F7:53\nconnect $MAC" | timeout "$BT_CONNECT_TIMEOUT" bluetoothctl
 }
 
 disconnect_bt() {
-    bluetoothctl disconnect "$MAC" >/dev/null 2>&1
+    echo -e "select 8C:68:8B:40:F7:53\ndisconnect $MAC" | bluetoothctl >/dev/null 2>&1
 }
+
 
 find_sink() {
     pactl list sinks short 2>/dev/null |
@@ -162,11 +163,7 @@ require_command systemctl
 require_command timeout
 
 echo "Encendiendo Bluetooth, apagando escaneo y confiando en $NAME..."
-bluetoothctl power on >/dev/null
-bluetoothctl scan off >/dev/null 2>&1
-bluetoothctl agent on >/dev/null 2>&1
-bluetoothctl default-agent >/dev/null 2>&1
-bluetoothctl trust "$MAC" >/dev/null
+echo -e "select 8C:68:8B:40:F7:53\npower on\nscan off\nagent on\ndefault-agent\ntrust $MAC" | bluetoothctl >/dev/null 2>&1
 
 echo "Intentando conectar a $NAME ($MAC)..."
 CONNECTED=false

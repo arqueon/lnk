@@ -250,3 +250,9 @@ window-rule {
     open-on-workspace "files"
     tiled-state true
 }
+
+// @id=wr_1784083205685890401 @name=org.kde.dolphin
+window-rule {
+    match app-id="^org.kde.dolphin$" title="^Moving"
+    default-column-width { fixed 8000; }
+}
