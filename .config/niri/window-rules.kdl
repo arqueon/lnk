@@ -59,7 +59,7 @@ window-rule {
 
 window-rule {
     match title=r#"^Newsflash$"#
-    open-on-workspace "chat"
+    open-on-workspace "media"
     default-column-width { proportion 0.6; }
 }
 
