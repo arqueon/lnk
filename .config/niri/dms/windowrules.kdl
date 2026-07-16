@@ -262,3 +262,21 @@ window-rule {
     match app-id="^org.kde.krusader$" title="^Moving — Krusader$"
     default-column-width { fixed 800; }
 }
+
+// @id=wr_1784169652509514922 @name=org.kde.dolphin
+window-rule {
+    match app-id="^org.kde.dolphin$" title="^Copying"
+    default-column-width { fixed 800; }
+}
+
+// @id=wr_1784175247912231790 @name=org-jdownloader-update-launcher-JDLauncher
+window-rule {
+    match app-id="^org-jdownloader-update-launcher-JDLauncher$"
+    open-on-workspace "media"
+}
+
+// @id=wr_1784175563602187342 @name=org.kde.krusader
+window-rule {
+    match app-id="^org.kde.krusader$" title="^Warning — Krusader$"
+    default-column-width { fixed 800; }
+}
