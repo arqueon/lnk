@@ -15,6 +15,14 @@ window-rule {
     open-focused true
 }
 
+window-rule {
+    match app-id=r#"^(firefox|org\.mozilla\.firefox)(-.*)?$"#
+    match app-id=r#"^google-chrome(-.*)?$"#
+    match app-id=r#"^com\.google\.Chrome(-.*)?$"#
+    open-on-workspace "web"
+}
+
+
 // ── Binds propios ──
 binds {
     Mod+D { spawn "dmail" "show"; } // notificador de correo dankmail (solo casa)
