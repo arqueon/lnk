@@ -280,3 +280,21 @@ window-rule {
     match app-id="^org.kde.krusader$" title="^Warning — Krusader$"
     default-column-width { fixed 800; }
 }
+
+// @id=wr_1784264579882330639 @name=org.kde.okular
+window-rule {
+    match app-id="^org.kde.okular$"
+    default-column-width { proportion 0.5; }
+}
+
+// @id=wr_1784265651566717529 @name=Bitwarden
+window-rule {
+    match app-id="^Bitwarden$"
+    open-on-workspace "chat"
+}
+
+// @id=wr_1784394460181946902 @name=Zotero
+window-rule {
+    match app-id="^Zotero$"
+    open-floating true
+}
