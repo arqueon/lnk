@@ -24,6 +24,7 @@ binds {
     Mod+F2 { spawn "ferdium"; }
     Mod+F3 { spawn "zotero"; }
     Mod+Alt+F3 { spawn "dcal"; }
+    Mod+Shift+F3 { spawn "curl" "-s" "http://127.0.0.1:23119/tagnavigator/open"; }
     Mod+F4 { spawn "logseq"; }
     Mod+Alt+F4 { spawn-sh "exec ~/.local/bin/Tine_*.AppImage"; } // Tine: familia de notas junto a Logseq
     Mod+F5 { spawn "zettlr"; }

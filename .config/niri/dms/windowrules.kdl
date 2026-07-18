@@ -292,9 +292,3 @@ window-rule {
     match app-id="^Bitwarden$"
     open-on-workspace "chat"
 }
-
-// @id=wr_1784394460181946902 @name=Zotero
-window-rule {
-    match app-id="^Zotero$"
-    open-floating true
-}
