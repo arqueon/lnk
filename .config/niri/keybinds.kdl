@@ -22,8 +22,8 @@ binds {
     Mod+F1 { spawn-sh "~/.config/niri/scripts/run_chrome.sh"; }
     Mod+Alt+F1 { spawn-sh "firefox"; }
     Mod+F2 { spawn "ferdium"; }
+    Mod+Alt+F2 { spawn "dcal"; }
     Mod+F3 { spawn "zotero"; }
-    Mod+Alt+F3 { spawn "dcal"; }
     Mod+Shift+F3 { spawn "curl" "-s" "http://127.0.0.1:23119/tagnavigator/open"; }
     Mod+F4 { spawn "logseq"; }
     Mod+Alt+F4 { spawn-sh "exec ~/.local/bin/Tine_*.AppImage"; } // Tine: familia de notas junto a Logseq
@@ -38,6 +38,7 @@ binds {
     Mod+F11 { spawn "github-desktop"; }
     Mod+Alt+F11 { spawn "antigravity-ide"; }
     Mod+F12 { spawn "smile"; } // selector de emojis
+    Mod+D { spawn "dmail" "show"; } // notificador de correo dankmail (solo casa)
 
     // ── Otras apps ──
     Mod+Ctrl+N { spawn "newsflash"; }
@@ -49,8 +50,8 @@ binds {
     Mod+Shift+B allow-when-locked=true { spawn-sh "dms restart"; }
     Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
     Mod+Alt+T hotkey-overlay-title="Sync Theme (DMS)" { spawn "dms" "ipc" "call" "dmsThemeSync" "configure"; }
-    Mod+Ctrl+W hotkey-overlay-title="Dictado por voz (Whisperer)" { spawn "dms" "ipc" "call" "whisperer" "toggle"; }
-    Mod+Ctrl+Alt+W repeat=false hotkey-overlay-title="Dictado por voz (Voxtype)" { spawn "voxtype" "record" "toggle"; }
+    Mod+Ctrl+Alt+W hotkey-overlay-title="Dictado por voz (Whisperer)" { spawn "dms" "ipc" "call" "whisperer" "toggle"; }
+    Mod+Ctrl+W repeat=false hotkey-overlay-title="Dictado por voz (Voxtype)" { spawn "voxtype" "record" "toggle"; }
     Mod+Ctrl+G hotkey-overlay-title="Dictado con IA (Whisperer)" { spawn "dms" "ipc" "call" "whisperer" "toggleAi"; }
     Mod+Ctrl+Slash { spawn-sh "dms ipc call keybinds toggle niri"; } // hoja de atajos
     // Captura de región vía plugin quickCapture (sustituye al antiguo script de swappy)

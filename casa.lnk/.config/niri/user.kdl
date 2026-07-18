@@ -25,5 +25,5 @@ window-rule {
 
 // ── Binds propios ──
 binds {
-    Mod+D { spawn "dmail" "show"; } // notificador de correo dankmail (solo casa)
+
 }

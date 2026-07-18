@@ -28,7 +28,7 @@ binds {
     Mod+Shift+Return { spawn-sh "dolphin ~/Downloads/"; }
     Mod+Alt+Return { spawn-sh "thunar ~/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
-    Mod+Alt+F2 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
+    Mod+Alt+F3 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
     Mod+Escape { spawn-sh "kitty btop"; }
 
     // Overview y workspaces
