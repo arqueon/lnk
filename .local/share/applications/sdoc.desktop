@@ -2,7 +2,7 @@
 Type=Application
 Name=SmallDocs
 Comment=Open Markdown files with SmallDocs
-Exec=/home/ruben/.sdocs/bin/sdoc bridge %f
+Exec=/home/ruben/.config/niri/scripts/sdoc-open.sh %f
 Icon=text-markdown
 Terminal=false
 MimeType=text/markdown;text/x-markdown;text/plain;
