@@ -25,6 +25,7 @@
 .config/niri/scripts/restart-ferdium.sh
 .config/niri/scripts/run_chrome.sh
 .config/niri/scripts/run_stream.sh
+.config/niri/scripts/sdoc-open.sh
 .config/niri/startup.kdl
 .config/niri/user-common.kdl
 .config/niri/window-rules.kdl
