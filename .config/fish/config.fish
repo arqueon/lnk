@@ -567,3 +567,6 @@ set -gx PATH "/home/ruben/.local/bin" $PATH
 type -q starship; and starship init fish | source
 type -q tinty; and tinty init
 # <<< fish-tweak-tool managed block <<<
+
+# added by the sdoc installer
+set -gx PATH $HOME/.sdocs/bin $PATH

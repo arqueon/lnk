@@ -14,6 +14,7 @@ spawn-at-startup "kdeconnect-indicator"
 // ── Aplicaciones de sesión ──
 spawn-sh-at-startup "sleep 15 && insync"
 spawn-at-startup "~/.config/niri/scripts/launch-anytype.sh"
+spawn-at-startup "~/.config/niri/scripts/launch-sdoc-library.sh"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 spawn-sh-at-startup "sleep 10 && variety"
