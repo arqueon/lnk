@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
 Name=SmallDocs
-Comment=Open Markdown files with SmallDocs
-Exec=/home/ruben/.config/niri/scripts/sdoc-open.sh %f
+Comment=Open Markdown with SmallDocs (editable bridge)
+Exec=/home/ruben/.local/bin/sdoc-open %f
 Icon=text-markdown
 Terminal=false
-MimeType=text/markdown;text/x-markdown;text/plain;
+MimeType=text/markdown;text/x-markdown;
 Categories=Utility;TextTools;
 NoDisplay=true

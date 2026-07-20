@@ -1,0 +1,43 @@
+#!/bin/bash
+# sdoc-open — SmallDocs desktop wrapper (sdoc-desktop kit).
+#
+#   sdoc-open            → headless library agent (launched by systemd/autostart)
+#   sdoc-open <file.md>  → open the file in an editable bridge (.desktop / file manager)
+#
+# Headless = no browser window: masks xdg-open and $BROWSER.
+
+if [ -f "$HOME/.sdocs/bin/sdoc" ]; then
+    SDOC_BIN="$HOME/.sdocs/bin/sdoc"
+elif [ -f "$HOME/.local/bin/sdoc" ]; then
+    SDOC_BIN="$HOME/.local/bin/sdoc"
+else
+    SDOC_BIN="sdoc"
+fi
+
+LIBRARY_PORT=47843
+
+library_alive() {
+    curl -sf --max-time 1 "http://127.0.0.1:${LIBRARY_PORT}/api/library/health" > /dev/null 2>&1
+}
+
+noop_dir="${XDG_RUNTIME_DIR:-/tmp}/sdoc-noop"
+mkdir -p "$noop_dir"
+ln -sf /bin/true "$noop_dir/xdg-open"
+
+# ── No arguments: headless library agent ──
+if [ -z "$1" ]; then
+    PATH="$noop_dir:$PATH" BROWSER=true exec "$SDOC_BIN" library > /dev/null 2>&1
+fi
+
+# ── With a file: editable bridge (ensuring the agent first) ──
+FILE="$1"
+if ! library_alive; then
+    PATH="$noop_dir:$PATH" BROWSER=true "$SDOC_BIN" library > /dev/null 2>&1 &
+    disown
+    for _ in $(seq 1 10); do
+        library_alive && break
+        sleep 0.3
+    done
+fi
+
+exec "$SDOC_BIN" bridge "$FILE"

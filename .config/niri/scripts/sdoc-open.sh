@@ -33,7 +33,8 @@ start_library_headless() {
     local dummy_dir="/tmp/sdoc-noop"
     mkdir -p "$dummy_dir"
     ln -sf /bin/true "$dummy_dir/xdg-open"
-    PATH="$dummy_dir:$PATH" exec "$SDOC_BIN" library > /dev/null 2>&1
+    # BROWSER=true por si sdoc lo consulta antes que xdg-open
+    PATH="$dummy_dir:$PATH" BROWSER=true exec "$SDOC_BIN" library > /dev/null 2>&1
 }
 
 # ── Sin argumentos: modo startup (levantar library agent) ──
@@ -52,7 +53,7 @@ if ! library_alive; then
     local_dummy="/tmp/sdoc-noop"
     mkdir -p "$local_dummy"
     ln -sf /bin/true "$local_dummy/xdg-open"
-    PATH="$local_dummy:$PATH" "$SDOC_BIN" library > /dev/null 2>&1 &
+    PATH="$local_dummy:$PATH" BROWSER=true "$SDOC_BIN" library > /dev/null 2>&1 &
     disown
     # Esperar brevemente a que el agente arranque
     for i in $(seq 1 10); do

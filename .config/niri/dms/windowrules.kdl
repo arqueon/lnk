@@ -49,11 +49,6 @@ window-rule {
     default-window-height { fixed 700; }
 }
 
-// @id=wr_1774072198114469460 @name=org.gnome.Nautilus
-window-rule {
-    match app-id="^org.gnome.Nautilus$"
-    open-floating true
-}
 
 // @id=wr_1774288769933739496 @name=Zettlr
 window-rule {

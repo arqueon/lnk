@@ -1,0 +1,12 @@
+[Unit]
+Description=SmallDocs library agent (loopback index, port 47843)
+# Installed by the sdoc-desktop kit. Runs the headless wrapper (masks
+# xdg-open and $BROWSER); the browser connects when opening smalldocs.org/library.
+
+[Service]
+ExecStart=%h/.local/bin/sdoc-open
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

@@ -14,7 +14,9 @@ spawn-at-startup "kdeconnect-indicator"
 // ── Aplicaciones de sesión ──
 spawn-sh-at-startup "sleep 15 && insync"
 spawn-at-startup "~/.config/niri/scripts/launch-anytype.sh"
-spawn-at-startup "~/.config/niri/scripts/launch-sdoc-library.sh"
+// sdoc library: movido a systemd (sdoc-library.service, en lnk) para tener
+// Restart=on-failure. En un host nuevo: systemctl --user enable --now sdoc-library
+// spawn-at-startup "~/.config/niri/scripts/sdoc-open.sh"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 spawn-sh-at-startup "sleep 10 && variety"

@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""sdoc-embed-images — embed a markdown file's local images as data URIs.
+
+SmallDocs renders at smalldocs.org and cannot read paths on your disk:
+it only loads `data:` URIs and https URLs. This script rewrites the
+![alt](local-path) references in a markdown file, embedding each image
+as base64 so the document becomes self-contained.
+
+Usage:
+    sdoc-embed-images.py file.md             # rewrite in place (.bak backup)
+    sdoc-embed-images.py file.md --compress  # also recompress to WebP (max 1400px)
+    sdoc-embed-images.py file.md -o out.md   # write elsewhere, original untouched
+
+Notes:
+  - Only local paths are touched; http(s): and data: references are left alone.
+  - Relative paths resolve against the markdown file's directory.
+  - --compress requires ImageMagick (`magick`); worthwhile above ~200 KB.
+  - With a bridge open, saving the file pushes the change to the open tab.
+"""
+
+import argparse
+import base64
+import mimetypes
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+IMG_RE = re.compile(r"!\[([^\]]*)\]\(([^)\s]+)(\s+\"[^\"]*\")?\)")
+SKIP_PREFIXES = ("http://", "https://", "data:")
+COMPRESS_THRESHOLD = 200 * 1024  # warn above this size when not compressing
+
+
+def to_data_uri(path: Path, compress: bool) -> tuple[str, int]:
+    data = path.read_bytes()
+    mime = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
+    if compress and shutil.which("magick") and mime.startswith("image/") and mime != "image/svg+xml":
+        with tempfile.NamedTemporaryFile(suffix=".webp", delete=False) as tmp:
+            tmp_path = Path(tmp.name)
+        try:
+            subprocess.run(
+                ["magick", str(path), "-resize", "1400x1400>", "-quality", "82", str(tmp_path)],
+                check=True, capture_output=True,
+            )
+            webp = tmp_path.read_bytes()
+            if len(webp) < len(data):
+                data, mime = webp, "image/webp"
+        except subprocess.CalledProcessError as e:
+            print(f"  warning: magick failed on {path.name}, embedding uncompressed ({e.stderr.decode(errors='replace').strip()})", file=sys.stderr)
+        finally:
+            tmp_path.unlink(missing_ok=True)
+    b64 = base64.b64encode(data).decode("ascii")
+    return f"data:{mime};base64,{b64}", len(data)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("file", type=Path, help="markdown file to process")
+    ap.add_argument("--compress", action="store_true", help="recompress to WebP (max 1400px) with ImageMagick")
+    ap.add_argument("-o", "--output", type=Path, help="write here instead of in place")
+    args = ap.parse_args()
+
+    md_file = args.file.resolve()
+    if not md_file.is_file():
+        print(f"error: {md_file} does not exist", file=sys.stderr)
+        return 1
+
+    text = md_file.read_text(encoding="utf-8")
+    base_dir = md_file.parent
+    embedded, missing = [], []
+
+    def repl(m: re.Match) -> str:
+        alt, src, title = m.group(1), m.group(2), m.group(3) or ""
+        if src.startswith(SKIP_PREFIXES):
+            return m.group(0)
+        img_path = Path(src.removeprefix("file://")).expanduser()
+        if not img_path.is_absolute():
+            img_path = (base_dir / img_path).resolve()
+        if not img_path.is_file():
+            missing.append(src)
+            return m.group(0)
+        uri, size = to_data_uri(img_path, args.compress)
+        if size > COMPRESS_THRESHOLD and not args.compress:
+            print(f"  warning: {img_path.name} is {size // 1024} KB; consider --compress", file=sys.stderr)
+        embedded.append(f"{img_path.name} ({size // 1024} KB)")
+        return f"![{alt}]({uri}{title})"
+
+    new_text = IMG_RE.sub(repl, text)
+
+    if not embedded and not missing:
+        print("nothing to embed: no local image references")
+        return 0
+
+    if args.output:
+        args.output.write_text(new_text, encoding="utf-8")
+        dest = args.output
+    else:
+        shutil.copy2(md_file, md_file.with_suffix(md_file.suffix + ".bak"))
+        md_file.write_text(new_text, encoding="utf-8")
+        dest = md_file
+
+    for name in embedded:
+        print(f"  embedded: {name}")
+    for src in missing:
+        print(f"  NOT FOUND (left as is): {src}", file=sys.stderr)
+    print(f"done → {dest}" + ("" if args.output else f" (backup at {md_file.name}.bak)"))
+    return 0 if not missing else 2
+
+
+if __name__ == "__main__":
+    sys.exit(main())
