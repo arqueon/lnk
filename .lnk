@@ -17,7 +17,7 @@
 .config/niri/keybinds.kdl
 .config/niri/layout.kdl
 .config/niri/scripts/conectar_audio.sh
-.config/niri/scripts/ejecutar_ytmusic.sh
+.config/niri/scripts/ejecutar_music.sh
 .config/niri/scripts/gpu_recorder.sh
 .config/niri/scripts/launch-anytype.sh
 .config/niri/scripts/launch-media-apps.sh

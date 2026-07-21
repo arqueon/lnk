@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# 0. Lanzar aplicaciones multimedia adicionales (DroppedNeedle y Aonsoku)
+~/.config/niri/scripts/run_chrome.sh --app="https://droppedneedle.arqueonautis.org/" &
+sleep 0.2
+/opt/Aonsoku/aonsoku &
+
 # 1. Define el App ID que quieres buscar
 APP_ID="cinhimbnkkaeohfgghhklpknlkffjgod"
 
