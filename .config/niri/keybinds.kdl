@@ -45,6 +45,7 @@ binds {
     Mod+Ctrl+M { spawn-sh "~/.config/niri/scripts/run_stream.sh"; }
     Mod+Alt+M { spawn "~/.config/niri/scripts/ejecutar_music.sh"; }
     Ctrl+Alt+P { spawn "pamac-manager"; }
+    Mod+B { spawn "bitwarden-desktop"; }
 
     // ── DMS: shell, tema y utilidades ──
     Mod+Shift+B allow-when-locked=true { spawn-sh "dms restart"; }

@@ -15,7 +15,7 @@ window-rule {
     open-focused true
 }
 
-window-rule {
+/- window-rule {
     match app-id=r#"^(firefox|org\.mozilla\.firefox)(-.*)?$"#
     match app-id=r#"^google-chrome(-.*)?$"#
     match app-id=r#"^com\.google\.Chrome(-.*)?$"#
