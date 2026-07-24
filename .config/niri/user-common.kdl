@@ -56,7 +56,7 @@ binds {
     Mod+O { expel-window-from-column; } // pisa el overview Mod+O de la plantilla DMS; overview = Mod+E
     Mod+Shift+K { spawn "thunar"; } // recupera el bind pisado por dms/binds (move-window-up)
     Mod+Alt+V { spawn "sh" "-c" "blueman-manager & pwvucontrol"; }
-    Mod+Ctrl+Shift+G { spawn "~/.config/niri/scripts/lastfm-love-now"; } // script local con secretos, fuera de lnk (movido de Mod+Ctrl+G, ahora dictado IA)
+    Mod+Ctrl+Shift+G { spawn-sh "LASTFM_LOVE_DMS=required exec ~/.config/niri/scripts/lastfm-love-now"; } // DMS manda; no amar una pista remota retrasada
 }
 
 // ── Fixes para apps Java (JDownloader, etc.) ──
