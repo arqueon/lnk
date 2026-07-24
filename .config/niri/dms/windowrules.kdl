@@ -49,7 +49,6 @@ window-rule {
     default-window-height { fixed 700; }
 }
 
-
 // @id=wr_1774288769933739496 @name=Zettlr
 window-rule {
     match app-id="^Zettlr$" title="^Export failed$"
@@ -286,4 +285,10 @@ window-rule {
 window-rule {
     match app-id="^Bitwarden$"
     open-on-workspace "chat"
+}
+
+// @id=wr_1784744730515316892 @name=com.anthropic.Claude
+window-rule {
+    match app-id="^com.anthropic.Claude$" title="^Claude$"
+    open-on-workspace "agents2"
 }
