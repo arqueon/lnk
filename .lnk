@@ -38,5 +38,6 @@
 .config/yay
 .face
 .local/bin/fastfetch-format
+.local/bin/mindwtr
 .local/share/applications/google-chrome-beta.desktop
 .local/share/applications/sdoc.desktop
