@@ -1,8 +1,8 @@
 workspace "chat" {
     open-on-output "HDMI-A-1"
 }
-workspace "web" {
-    open-on-output "DP-2"
+workspace "agents2" {
+    open-on-output "HDMI-A-1"
 }
 workspace "ref" {
     open-on-output "HDMI-A-1"
@@ -13,12 +13,18 @@ workspace "notes" {
 workspace "write" {
     open-on-output "HDMI-A-1"
 }
+workspace "web" {
+    open-on-output "DP-3"
+}
+workspace "agents" {
+    open-on-output "DP-3"
+}
 workspace "files" {
-    open-on-output "DP-2"
+    open-on-output "DP-3"
 }
 workspace "virt" {
-    open-on-output "DP-2"
+    open-on-output "DP-3"
 }
 workspace "media" {
-    open-on-output "DP-2"
+    open-on-output "DP-3"
 }
