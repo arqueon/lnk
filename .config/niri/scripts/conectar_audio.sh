@@ -19,6 +19,10 @@ else
     exit 1
 fi
 
+# MAC del controlador Bluetooth local; vacío = adaptador por defecto del host.
+# Solo hace falta fijarlo (o exportarlo) en equipos con más de un adaptador.
+BT_ADAPTER="${BT_ADAPTER:-}"
+
 BT_ID="${MAC//:/_}"
 CARD_NAME="bluez_card.$BT_ID"
 MAX_BT_RETRIES=4
@@ -45,16 +49,24 @@ require_command() {
     fi
 }
 
+bt_cmds() {
+    if [ -n "$BT_ADAPTER" ]; then
+        echo -e "select $BT_ADAPTER\n$1"
+    else
+        echo -e "$1"
+    fi
+}
+
 bt_connected() {
-    echo -e "select 8C:68:8B:40:F7:53\ninfo $MAC" | bluetoothctl 2>/dev/null | grep -q "Connected: yes"
+    bt_cmds "info $MAC" | bluetoothctl 2>/dev/null | grep -q "Connected: yes"
 }
 
 connect_bt() {
-    echo -e "select 8C:68:8B:40:F7:53\nconnect $MAC" | timeout "$BT_CONNECT_TIMEOUT" bluetoothctl
+    bt_cmds "connect $MAC" | timeout "$BT_CONNECT_TIMEOUT" bluetoothctl
 }
 
 disconnect_bt() {
-    echo -e "select 8C:68:8B:40:F7:53\ndisconnect $MAC" | bluetoothctl >/dev/null 2>&1
+    bt_cmds "disconnect $MAC" | bluetoothctl >/dev/null 2>&1
 }
 
 
@@ -105,28 +117,18 @@ prefer_a2dp_profile() {
         return 1
     fi
 
-    # PipeWire/WirePlumber exposes different A2DP profile names depending on codecs.
-    local profiles=(
-        "a2dp-sink"
-        "a2dp-sink-sbc_xq"
-        "a2dp-sink-sbc"
-        "a2dp-sink-aac"
-        "a2dp-sink-ldac"
-    )
-
-    for profile in "${profiles[@]}"; do
-        if pactl set-card-profile "$card" "$profile" >/dev/null 2>&1; then
-            echo "Perfil de audio activo: $profile"
-            return 0
-        fi
-    done
+    # En PipeWire el perfil A2DP es único ("a2dp-sink"); el códec se negocia aparte.
+    if pactl set-card-profile "$card" "a2dp-sink" >/dev/null 2>&1; then
+        echo "Perfil de audio activo: a2dp-sink"
+        return 0
+    fi
 
     return 1
 }
 
 restart_audio_stack() {
-    echo "Reiniciando WirePlumber y pipewire-pulse para forzar nueva enumeración..."
-    systemctl --user restart wireplumber pipewire-pulse >/dev/null 2>&1
+    echo "Reiniciando el stack de audio (pipewire, pipewire-pulse, wireplumber)..."
+    systemctl --user restart pipewire pipewire-pulse wireplumber >/dev/null 2>&1
     sleep 3
 }
 
@@ -152,9 +154,9 @@ configure_sink() {
     local sink=$1
 
     echo "Estableciendo $NAME como salida predeterminada ($sink)..."
+    # No fijamos volumen: WirePlumber restaura el último nivel por dispositivo.
     pactl set-default-sink "$sink" &&
-        pactl set-sink-mute "$sink" 0 &&
-        pactl set-sink-volume "$sink" 50%
+        pactl set-sink-mute "$sink" 0
 }
 
 require_command bluetoothctl
@@ -163,7 +165,7 @@ require_command systemctl
 require_command timeout
 
 echo "Encendiendo Bluetooth, apagando escaneo y confiando en $NAME..."
-echo -e "select 8C:68:8B:40:F7:53\npower on\nscan off\nagent on\ndefault-agent\ntrust $MAC" | bluetoothctl >/dev/null 2>&1
+bt_cmds "power on\nscan off\nagent on\ndefault-agent\ntrust $MAC" | bluetoothctl >/dev/null 2>&1
 
 echo "Intentando conectar a $NAME ($MAC)..."
 CONNECTED=false
