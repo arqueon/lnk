@@ -23,7 +23,10 @@ window-rule {
 }
 
 
+// ── Arranque de triple instancia de Logseq (específico de casa) ──
+spawn-at-startup "logseq-multi-launch"
+
 // ── Binds propios ──
 binds {
-
+    Mod+F4 { spawn "logseq-multi-launch"; }
 }

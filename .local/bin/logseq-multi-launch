@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Script para lanzar 3 instancias de Logseq con perfiles separados y configuración compartida
+# Gestionado de forma general en lnk: ~/.config/lnk/.local/bin/logseq-multi-launch
+
+CONFIG_DIR="$HOME/.config"
+BASE_LOGSEQ="$HOME/.logseq"
+
+for i in 1 2 3; do
+    profile_dir="$CONFIG_DIR/logseq-g$i"
+    mkdir -p "$profile_dir"
+    
+    # Compartir plugins si existe el directorio base
+    if [ -d "$BASE_LOGSEQ/plugins" ] && [ ! -e "$profile_dir/plugins" ]; then
+        ln -s "$BASE_LOGSEQ/plugins" "$profile_dir/plugins"
+    fi
+    
+    # Compartir preferencias si existe el archivo base
+    if [ -f "$BASE_LOGSEQ/preferences.json" ] && [ ! -e "$profile_dir/preferences.json" ]; then
+        ln -s "$BASE_LOGSEQ/preferences.json" "$profile_dir/preferences.json"
+    fi
+done
+
+# Ejecutar las 3 instancias de Logseq
+logseq --user-data-dir="$CONFIG_DIR/logseq-g1" &
+logseq --user-data-dir="$CONFIG_DIR/logseq-g2" &
+logseq --user-data-dir="$CONFIG_DIR/logseq-g3" &

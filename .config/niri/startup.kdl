@@ -20,7 +20,7 @@ spawn-at-startup "~/.config/niri/scripts/launch-anytype.sh"
 spawn-at-startup "ferdium"
 spawn-at-startup "zotero"
 spawn-sh-at-startup "sleep 10 && variety"
-spawn-sh-at-startup "logseq"
+// spawn-sh-at-startup "logseq"
 // Tine (AppImage de Shelly en ~/.local/bin; glob para sobrevivir a updates).
 // Regla de workspace "notes" en dms/windowrules.kdl.
 spawn-sh-at-startup "exec ~/.local/bin/Tine_*.AppImage"
