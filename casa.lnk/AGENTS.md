@@ -26,8 +26,13 @@ ajustes o dar VoBo** debe presentarse en SmallDocs, no quedar dispersa únicamen
 La respuesta conversacional puede resumir el resultado, pero el expediente legible y la
 decisión persistida viven en el `.md`.
 
-- Crear el documento dentro del proyecto, normalmente bajo `.sdocs/`, y abrirlo editable con
-  `sdoc bridge <archivo.md>`.
+- Crear el documento dentro del proyecto, normalmente bajo `.sdocs/`, y abrirlo editable en
+  segundo plano con `md <archivo.md>`; este atajo ejecuta `sdoc bridge`.
+- Si contiene imágenes locales, ejecutar **antes de abrirlo**
+  `sdoc-embed-images <archivo.md> --compress`. El helper incrusta WebP de máximo 1000 px y
+  calidad 72 para evitar bloqueos HTTPS y reducir el fragmento de URL.
+- Si el documento es masivo o su URL supera aproximadamente 120 KB, generar el enlace corto
+  con `sdoc share <archivo.md> --short` y abrir ese enlace en lugar de forzar la URL local.
 - Al cerrar, clasificar el SmallDoc: si aporta memoria duradera —decisión confirmada,
   arquitectura, procedimiento, QA o contexto reutilizable— convertirlo en una página real
   bajo `/home/ruben/Nextcloud/Projects/arq-graph/pages/`, con cabecera Logseq y nombre
@@ -35,9 +40,9 @@ decisión persistida viven en el `.md`.
   la página de contexto y el journal. Muestras efímeras, formularios descartados y entregas
   coyunturales permanecen fuera; no usar un directorio oculto como destino final ni migrar
   todos los SmallDocs indiscriminadamente.
-- Si existe una decisión estructurable, incorporar un bloque `form` y usar
-  `sdoc feedback <archivo.md>` en primer plano o mediante una tarea cuyo término pueda
-  observarse. Preferir un solo botón final.
+- Si existe una decisión estructurable, incorporar un bloque `form`. Abrir primero la revisión
+  con `md <archivo.md>` y, al solicitar la respuesta, usar `sdoc feedback <archivo.md>` en
+  primer plano o mediante una tarea cuyo término pueda observarse. Preferir un solo botón final.
 - El formulario debe registrar: decisión, alcance, condiciones o ajustes, observaciones
   opcionales y, cuando aplique, autorización de publicación o despliegue.
 - Las opciones deben ser concretas y mutuamente distinguibles. La primera puede ser la
@@ -59,3 +64,31 @@ decisión persistida viven en el `.md`.
 
 Esto no aplica a respuestas breves o preguntas simples que no generen artefacto, decisión,
 comparación ni autorización.
+
+## Producción y revisión de contenidos educativos → diseño instruccional agéntico
+
+Para crear, revisar o adaptar cursos, módulos, unidades, secuencias didácticas,
+microcredenciales, guiones, rúbricas, evaluaciones, materiales o contenidos que verá una
+población estudiantil, usar siempre la skill:
+`/home/ruben/Projects/ia/diseno-instruccional-agentico/SKILL.md`.
+
+- Material para estudiantes reales se trabaja por defecto en modo **copiloto**. El modo
+  autónomo solo produce prototipos no desplegables.
+- El estado vive en un **Pasaporte del curso** dentro del proyecto, basado en
+  `assets/pasaporte-curso.yaml`; no se reconstruye desde la conversación.
+- Orden obligatorio: población y contexto → resultados → evidencias y evaluación → compuerta
+  de alineación → columna de tareas → narrativa → materiales.
+- No producir ni reescribir materiales antes de cerrar A1–A5 de la compuerta de alineación.
+  Las verificaciones A6–A8 pueden quedar abiertas únicamente con justificación registrada.
+- Diseñar tareas completas con complejidad creciente y andamiaje decreciente. Para públicos
+  heterogéneos, separar núcleo, puente y profundización con la misma evidencia.
+- Medir carga real y dificultad del texto; si el nivel no se midió, declararlo como
+  **no verificado**.
+- Separar generación y evaluación. El evaluador cita evidencia y no reescribe; el optimizador
+  atiende solo los hallazgos y no se autoaprueba. Ejecutar dos rondas antes de cualquier
+  despliegue.
+- Pilotar con perfiles simulados para detectar términos no definidos, referentes ambiguos,
+  instrucciones sin criterio, saltos de ritmo y prerrequisitos silenciosos. Esto no sustituye
+  la validación humana final.
+- Registrar compuertas, patrones de error, decisiones y validación humana en el pasaporte y en
+  la página Logseq `[[Protocolo de diseño instruccional agéntico para UDGPlus]]`.

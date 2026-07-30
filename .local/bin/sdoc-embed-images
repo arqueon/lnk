@@ -8,7 +8,7 @@ as base64 so the document becomes self-contained.
 
 Usage:
     sdoc-embed-images.py file.md             # rewrite in place (.bak backup)
-    sdoc-embed-images.py file.md --compress  # also recompress to WebP (max 1400px)
+    sdoc-embed-images.py file.md --compress  # also recompress to WebP (max 1000px, quality 72)
     sdoc-embed-images.py file.md -o out.md   # write elsewhere, original untouched
 
 Notes:
@@ -58,7 +58,7 @@ def to_data_uri(path: Path, compress: bool) -> tuple[str, int]:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("file", type=Path, help="markdown file to process")
-    ap.add_argument("--compress", action="store_true", help="recompress to WebP (max 1400px) with ImageMagick")
+    ap.add_argument("--compress", action="store_true", help="recompress to WebP (max 1000px, quality 72) with ImageMagick")
     ap.add_argument("-o", "--output", type=Path, help="write here instead of in place")
     args = ap.parse_args()
 
