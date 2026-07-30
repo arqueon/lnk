@@ -39,9 +39,13 @@ pages/
 journals/
 **/journals/
 
-# Excluir dependencias y builds
+# Excluir dependencias, assets masivos y repos auxiliares
 node_modules/
 **/node_modules/
+assets/
+**/assets/
+graphify/
+**/graphify/
 **/.git/
 **/vendor/
 **/target/
