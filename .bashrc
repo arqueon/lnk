@@ -455,4 +455,7 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 
 
 # Added by Antigravity CLI installer
-export PATH="/home/ruben/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# SmallDocs alias
+alias md="sdoc bridge"

@@ -560,7 +560,10 @@ end
 
 
 # Added by Antigravity CLI installer
-set -gx PATH "/home/ruben/.local/bin" $PATH
+set -gx PATH "$HOME/.local/bin" $PATH
+
+# SmallDocs alias
+alias md="sdoc bridge"
 
 # >>> fish-tweak-tool managed block >>>
 # Managed by Fish Tweak Tool — edits inside this block are overwritten.
