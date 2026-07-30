@@ -26,6 +26,9 @@ ln -sf /bin/true "$noop_dir/xdg-open"
 
 # ── No arguments: headless library agent ──
 if [ -z "$1" ]; then
+    if library_alive; then
+        exit 0
+    fi
     PATH="$noop_dir:$PATH" BROWSER=true exec "$SDOC_BIN" library > /dev/null 2>&1
 fi
 
