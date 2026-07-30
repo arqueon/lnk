@@ -20,3 +20,19 @@ node_modules/
 **/venv/
 **/.venv/
 **/__pycache__/
+
+# Excluir grafos de Logseq
+logseq/
+**/logseq/
+arq-graph/
+**/arq-graph/
+arq-personal/
+**/arq-personal/
+arq-academico/
+**/arq-academico/
+pages/
+**/pages/
+journals/
+**/journals/
+Nextcloud-Online/
+**/Nextcloud-Online/
