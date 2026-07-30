@@ -31,3 +31,5 @@ spawn-sh-at-startup "gsettings set org.gnome.desktop.interface gtk-enable-primar
 spawn-sh-at-startup "xdg-settings set default-web-browser dms-open.desktop"
 spawn-sh-at-startup "xdg-mime default dms-open.desktop x-scheme-handler/http"
 spawn-sh-at-startup "xdg-mime default dms-open.desktop x-scheme-handler/https"
+// SmallDocs como visor/editor predeterminado de Markdown (.md)
+spawn-sh-at-startup "xdg-mime default sdoc.desktop text/markdown text/x-markdown"
