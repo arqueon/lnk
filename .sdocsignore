@@ -1,0 +1,22 @@
+# .sdocsignore - Exclude heavy directories from SmallDocs library scan
+.cache/
+.cargo/
+.npm/
+.gemini/
+.claude/
+.local/share/
+.local/state/
+.var/
+.rustup/
+.nvm/
+.deno/
+node_modules/
+**/node_modules/
+**/.git/
+**/vendor/
+**/target/
+**/dist/
+**/build/
+**/venv/
+**/.venv/
+**/__pycache__/
