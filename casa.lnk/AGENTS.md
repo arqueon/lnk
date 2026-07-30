@@ -28,6 +28,13 @@ decisión persistida viven en el `.md`.
 
 - Crear el documento dentro del proyecto, normalmente bajo `.sdocs/`, y abrirlo editable con
   `sdoc bridge <archivo.md>`.
+- Al cerrar, clasificar el SmallDoc: si aporta memoria duradera —decisión confirmada,
+  arquitectura, procedimiento, QA o contexto reutilizable— convertirlo en una página real
+  bajo `/home/ruben/Nextcloud/Projects/arq-graph/pages/`, con cabecera Logseq y nombre
+  enlazable, conservando el front matter/bloques necesarios para SmallDocs. Enlazarlo desde
+  la página de contexto y el journal. Muestras efímeras, formularios descartados y entregas
+  coyunturales permanecen fuera; no usar un directorio oculto como destino final ni migrar
+  todos los SmallDocs indiscriminadamente.
 - Si existe una decisión estructurable, incorporar un bloque `form` y usar
   `sdoc feedback <archivo.md>` en primer plano o mediante una tarea cuyo término pueda
   observarse. Preferir un solo botón final.

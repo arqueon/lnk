@@ -22,14 +22,23 @@ window-rule {
     open-maximized true
 }
 
+window-rule {
+    match app-id="kitty-quad"
+    open-maximized true
+}
+
+
 // ── Binds compartidos ──
 binds {
     // Lanzadores
+    Mod+Ctrl+T { spawn "~/.config/niri/scripts/launch-quad-kitty.sh"; }
+    Mod+Ctrl+Shift+T { spawn "~/.config/niri/scripts/launch-quad-niri.sh"; }
     Mod+Shift+Return { spawn-sh "dolphin ~/Downloads/"; }
     Mod+Alt+Return { spawn-sh "thunar ~/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
     Mod+Alt+F3 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
     Mod+Escape { spawn-sh "kitty btop"; }
+
 
     // Overview y workspaces
     Mod+E { toggle-overview; }
@@ -62,7 +71,7 @@ binds {
 // ── Fixes para apps Java (JDownloader, etc.) ──
 environment {
     _JAVA_AWT_WM_NONREPARENTING "1"
-    _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=gasp"
+    _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
 }
 
 // ── Bordes inactivos más oscuros que los del tema DMS ──
