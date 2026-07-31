@@ -7,7 +7,7 @@
 layout {
     gaps 10
     center-focused-column "never"
-    default-column-display "tabbed"
+    default-column-display "normal"
     tab-indicator {
         hide-when-single-tab
         place-within-column
