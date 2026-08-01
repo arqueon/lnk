@@ -68,11 +68,12 @@ comparación ni autorización.
 ## Producción y revisión de contenidos educativos → diseño instruccional agéntico
 
 Para crear, revisar o adaptar cursos, módulos, unidades, secuencias didácticas,
-microcredenciales, guiones, rúbricas, evaluaciones, materiales o contenidos que verá una
-población estudiantil, usar siempre la skill:
+microcredenciales, guías para estudiantes o docentes, documentos de orientación educativa,
+guiones, rúbricas, evaluaciones, sitios formativos, recursos visuales o materiales que verá una
+audiencia real, usar siempre la skill:
 `/home/ruben/Projects/ia/diseno-instruccional-agentico/SKILL.md`.
 
-- Material para estudiantes reales se trabaja por defecto en modo **copiloto**. El modo
+- Material para audiencias reales se trabaja por defecto en modo **copiloto**. El modo
   autónomo solo produce prototipos no desplegables.
 - El estado vive en un **Pasaporte del curso** dentro del proyecto, basado en
   `assets/pasaporte-curso.yaml`; no se reconstruye desde la conversación.
@@ -82,13 +83,22 @@ población estudiantil, usar siempre la skill:
   Las verificaciones A6–A8 pueden quedar abiertas únicamente con justificación registrada.
 - Diseñar tareas completas con complejidad creciente y andamiaje decreciente. Para públicos
   heterogéneos, separar núcleo, puente y profundización con la misma evidencia.
+- Separar siempre la **arquitectura interna** del **artefacto público**. Códigos de resultados,
+  tareas, módulos, fases y compuertas permanecen en el pasaporte o el expediente; no se copian
+  a guías, cursos, orientaciones, sitios o SVG.
+- El artefacto público debe ser didáctico, divulgativo, ilustrativo, accesible y reiterativo.
+  Desarrollar cada idea en prosa mediante una situación reconocible, explicación, relaciones,
+  ejemplo, contraste, uso y recapitulación antes de resumirla en tablas, listas o figuras.
+- Cerrar la compuerta de comprensibilidad con un lector en frío que reciba solo el artefacto y
+  pueda explicar de qué trata, por qué importa, qué ejemplo muestra la idea y cómo continuar.
+  Una puntuación automática de claridad no basta.
 - Medir carga real y dificultad del texto; si el nivel no se midió, declararlo como
   **no verificado**.
 - Separar generación y evaluación. El evaluador cita evidencia y no reescribe; el optimizador
   atiende solo los hallazgos y no se autoaprueba. Ejecutar dos rondas antes de cualquier
   despliegue.
-- Pilotar con perfiles simulados para detectar términos no definidos, referentes ambiguos,
-  instrucciones sin criterio, saltos de ritmo y prerrequisitos silenciosos. Esto no sustituye
-  la validación humana final.
+- Pilotar con perfiles simulados para detectar términos no definidos, relaciones no explicadas,
+  referentes ambiguos, instrucciones sin criterio, tablas o visuales sin mediación, saltos de
+  ritmo y prerrequisitos silenciosos. Esto no sustituye la validación humana final.
 - Registrar compuertas, patrones de error, decisiones y validación humana en el pasaporte y en
   la página Logseq `[[Protocolo de diseño instruccional agéntico para UDGPlus]]`.

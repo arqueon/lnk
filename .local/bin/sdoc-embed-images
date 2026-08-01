@@ -41,7 +41,7 @@ def to_data_uri(path: Path, compress: bool) -> tuple[str, int]:
             tmp_path = Path(tmp.name)
         try:
             subprocess.run(
-                ["magick", str(path), "-resize", "1000x1000>", "-quality", "72", str(tmp_path)],
+                ["magick", str(path), "-resize", "1400x1400>", "-quality", "82", str(tmp_path)],
                 check=True, capture_output=True,
             )
             webp = tmp_path.read_bytes()

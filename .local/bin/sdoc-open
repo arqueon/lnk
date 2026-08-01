@@ -26,14 +26,23 @@ ln -sf /bin/true "$noop_dir/xdg-open"
 
 # ── No arguments: headless library agent ──
 if [ -z "$1" ]; then
-    if library_alive; then
-        exit 0
-    fi
     PATH="$noop_dir:$PATH" BROWSER=true exec "$SDOC_BIN" library > /dev/null 2>&1
 fi
 
 # ── With a file: editable bridge (ensuring the agent first) ──
 FILE="$1"
+
+# Check if file is markdown; if not, fall back to Sublime Text
+case "$FILE" in
+    *.md|*.markdown|*.mdown|*.mkd)
+        ;;
+    *)
+        if [ -x /usr/bin/subl ]; then
+            exec /usr/bin/subl "$FILE"
+        fi
+        ;;
+esac
+
 if ! library_alive; then
     PATH="$noop_dir:$PATH" BROWSER=true "$SDOC_BIN" library > /dev/null 2>&1 &
     disown
