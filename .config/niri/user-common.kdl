@@ -28,10 +28,18 @@ window-rule {
 }
 
 window-rule {
+    match app-id="kitty-quad-niri"
+    open-on-workspace "agents2"
+    default-column-width { proportion 0.5; }
+}
+
+window-rule {
     match app-id="kitty-hex"
     open-on-workspace "agents"
     default-column-width { proportion 0.333333; }
 }
+
+
 
 
 
@@ -40,6 +48,8 @@ binds {
     // Lanzadores
     Mod+Ctrl+T { spawn "~/.config/niri/scripts/launch-quad-kitty.sh"; }
     Mod+Ctrl+Shift+T { spawn "~/.config/niri/scripts/launch-quad-niri.sh"; }
+    Mod+Ctrl+Alt+T { spawn "~/.config/niri/scripts/launch-quad-agents2.sh"; }
+
     Mod+Shift+Return { spawn-sh "dolphin ~/Downloads/"; }
     Mod+Alt+Return { spawn-sh "thunar ~/Downloads/"; }
     Mod+Alt+F1 { spawn "firefox"; }
