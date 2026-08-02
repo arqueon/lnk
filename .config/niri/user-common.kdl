@@ -27,6 +27,13 @@ window-rule {
     open-maximized true
 }
 
+window-rule {
+    match app-id="kitty-hex"
+    open-on-workspace "agents"
+    default-column-width { proportion 0.333333; }
+}
+
+
 
 // ── Binds compartidos ──
 binds {
