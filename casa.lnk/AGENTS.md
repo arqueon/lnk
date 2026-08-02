@@ -40,9 +40,7 @@ decisión persistida viven en el `.md`.
   la página de contexto y el journal. Muestras efímeras, formularios descartados y entregas
   coyunturales permanecen fuera; no usar un directorio oculto como destino final ni migrar
   todos los SmallDocs indiscriminadamente.
-- Si existe una decisión estructurable, incorporar un bloque `form`. Abrir primero la revisión
-  con `md <archivo.md>` y, al solicitar la respuesta, usar `sdoc feedback <archivo.md>` en
-  primer plano o mediante una tarea cuyo término pueda observarse. Preferir un solo botón final.
+- Si existe una decisión estructurable, incorporar un bloque `form`. **NO usar únicamente `md <archivo.md>` (`sdoc bridge`)**, ya que no mantiene un escuchador activo en el agente y causa que la interfaz se atore en `Sending...` al expirar la sesión. Para solicitar y recibir respuestas, ejecutar **`sdoc feedback <archivo.md>`** en primer plano o mediante una tarea cuyo término/stdout sea observado. Configurar `final: true` en el botón del formulario (o un solo botón final) para que el bridge registre la respuesta y finalice limpiamente con código 0.
 - El formulario debe registrar: decisión, alcance, condiciones o ajustes, observaciones
   opcionales y, cuando aplique, autorización de publicación o despliegue.
 - Las opciones deben ser concretas y mutuamente distinguibles. La primera puede ser la
