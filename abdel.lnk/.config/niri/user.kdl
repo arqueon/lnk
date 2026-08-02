@@ -2,6 +2,9 @@
 // Solo lo específico de abdel; lo compartido vive en user-common.kdl.
 // Nota: Mod+D (antes anyrun) quedó libre; overview = Mod+E.
 
+// ── Arranque de Logseq ──
+spawn-at-startup "logseq"
+
 window-rule {
     match app-id="google-chrome"
     default-column-width { proportion 0.9; }
