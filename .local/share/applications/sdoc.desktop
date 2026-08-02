@@ -2,7 +2,7 @@
 Type=Application
 Name=SmallDocs
 Comment=Open Markdown with SmallDocs (editable bridge)
-Exec=sdoc-open %f
+Exec=sh -c 'exec "$HOME/.local/bin/sdoc-open" "$@"' -- %f
 Icon=text-markdown
 Terminal=false
 MimeType=text/markdown;text/x-markdown;text/plain;
