@@ -24,23 +24,21 @@ multiplier = 3
 [colors]
 draw_bold_text_with_bright_colors = true
 
+# Font family and size are supplied by the DMS-synced import (see [general] below).
+# In Alacritty the importing file wins, so no family/size is set here or the
+# import would be overridden.
 [font]
-size = 12
 
 [font.normal]
-family = "monospace"
 style = "Regular"
 
 [font.bold]
-family = "monospace"
 style = "Bold"
 
 [font.italic]
-family = "monospace"
 style = "Italic"
 
 [font.bold_italic]
-family = "monospace"
 style = "Bold Italic"
 
 [selection]
@@ -138,4 +136,4 @@ action = "ResetFontSize"
 [general]
 live_config_reload = true
 working_directory = "None"
-import = ["dank-theme.toml"]
+import = ["dank-theme.toml", "~/.config/dms-theme-sync/alacritty.toml"]

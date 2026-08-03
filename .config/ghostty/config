@@ -1,2 +1,5 @@
 theme = dankcolors
 background-opacity = 1.0
+
+# Monospace font synced from DMS (dmsThemeSync plugin).
+config-file = ~/.config/dms-theme-sync/ghostty.conf

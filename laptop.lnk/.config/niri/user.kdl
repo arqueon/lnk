@@ -2,9 +2,6 @@
 // Solo lo específico de laptop; lo compartido vive en user-common.kdl.
 // Nota: Mod+D (antes anyrun) quedó libre; overview = Mod+E.
 
-// ── Arranque de Logseq ──
-spawn-at-startup "logseq"
-
 window-rule {
     match app-id="google-chrome"
     default-column-width { proportion 1.0; }
@@ -19,6 +16,18 @@ window-rule {
     open-focused true
 }
 
-environment {
-    CHROME_EXECUTABLE "google-chrome-beta" // en laptop se usa Chrome Beta
+/- window-rule {
+    match app-id=r#"^(firefox|org\.mozilla\.firefox)(-.*)?$"#
+    match app-id=r#"^google-chrome(-.*)?$"#
+    match app-id=r#"^com\.google\.Chrome(-.*)?$"#
+    open-on-workspace "web"
+}
+
+
+// ── Arranque de triple instancia de Logseq (específico de casa) ──
+spawn-at-startup "logseq-multi-launch"
+
+// ── Binds propios ──
+binds {
+    Mod+F4 { spawn "logseq-multi-launch"; }
 }

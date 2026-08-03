@@ -2,7 +2,6 @@
 // Solo lo específico de casa; lo compartido vive en user-common.kdl.
 // Último include de config.kdl: gana a todo.
 
-// ── Window rules propias (anchos para el ultrawide DP-2) ──
 window-rule {
     match app-id="google-chrome"
     default-column-width { proportion 0.5; }
