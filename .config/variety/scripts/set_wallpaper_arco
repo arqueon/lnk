@@ -21,6 +21,16 @@ if [[ "${XDG_CURRENT_DESKTOP,,}" == *niri* ]]; then
     dms ipc call wallpaper set "$WP"
 
     dms ipc call settings set greeterWallpaperPath "$GREETER_WALLPAPER"
+
+    # DMS puede reemplazar settings.json de forma atómica. Mantener el grupo
+    # del greeter evita que el siguiente logout deje la pantalla sin iniciar.
+    DMS_SETTINGS="$HOME/.config/DankMaterialShell/settings.json"
+    case " $(id -nG) " in
+        *" greeter "*)
+            chgrp greeter "$DMS_SETTINGS" 2>/dev/null || true
+            chmod g+r "$DMS_SETTINGS" 2>/dev/null || true
+            ;;
+    esac
 elif [ "$XDG_CURRENT_DESKTOP" == "qtile" ] || [ "$DESKTOP_SESSION" == "qtile" ]; then
     matugen image "$WP" -t scheme-kde > ~/.local/share/color-schemes/DankMatugen.colors
     qtile cmd-obj -o cmd -f reload_config
