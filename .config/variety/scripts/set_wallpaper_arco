@@ -7,7 +7,7 @@ chmod 644 ~/wallpaper/default.jpg
 # =============================================================================
 # BLOQUE ESPECÍFICO POR ENTORNO
 # =============================================================================
-if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
+if [[ "${XDG_CURRENT_DESKTOP,,}" == *niri* ]]; then
     # Generar colores en modo dark de forma SÍNCRONA antes de que DMS
     # dispare su propio matugen async al hacer wallpaper set.
     # Así cuando wallpaper set termine, los colores ya están en dark.
@@ -26,7 +26,7 @@ fi
 
 sleep 1
 # Reforzar tema dark al final, después de que cualquier proceso async de DMS haya terminado
-if [ "$XDG_CURRENT_DESKTOP" == "Niri" ]; then
+if [[ "${XDG_CURRENT_DESKTOP,,}" == *niri* ]]; then
     # dms ipc theme dark
     # Propagar el tema a las aplicaciones (GTK/Qt/KDE/fontconfig/XSettings) mediante
     # el plugin dmsThemeSync, que es ahora la fuente única de sincronización de tema.
