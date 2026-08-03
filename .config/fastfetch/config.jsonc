@@ -164,7 +164,8 @@
     },
     {
       "key": "\u001b[31m󰩟 public ip\u001b[0m",
-      "type": "publicip"
+      "type": "publicip",
+      "timeout": 1000
     },
     
     // --- SECCIÓN: COLORS & CAJA INFERIOR ---
