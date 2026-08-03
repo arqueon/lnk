@@ -6,3 +6,4 @@
 .config/satty/config.toml
 .config/qtile/config.py
 .config/qtile/scripts/autostart.sh
+.config/autostart/variety.desktop

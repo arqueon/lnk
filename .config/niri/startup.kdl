@@ -3,8 +3,8 @@
 // equipos gestionados por lnk; lo específico de un host va en su user.kdl.
 // DMS (barras/shell) NO se lanza aquí: corre como servicio systemd
 // de usuario (dms.service).
-// abdel-lite usa el perfil ligero aprobado para star: solo Logseq se inicia
-// desde user.kdl; estos procesos comunes continúan sin cambios en los demás hosts.
+// abdel-lite usa el perfil ligero aprobado para star: Logseq y Variety se
+// inician; el resto de procesos pesados continúa omitido solo en ese host.
 
 // ── Agentes de sistema y bandeja ──
 // spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
@@ -21,7 +21,7 @@ spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite ] || exec ~/.config/niri/scrip
 // spawn-at-startup "~/.config/niri/scripts/sdoc-open.sh"
 spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite ] || exec ferdium"
 spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite ] || exec zotero"
-spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite ] || { sleep 10 && exec variety; }"
+spawn-sh-at-startup "sleep 10 && exec variety"
 // spawn-sh-at-startup "logseq"
 // Tine (AppImage de Shelly en ~/.local/bin; glob para sobrevivir a updates).
 // Regla de workspace "notes" en dms/windowrules.kdl.
