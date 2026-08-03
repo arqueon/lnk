@@ -2,4 +2,5 @@
 .config/niri/output.kdl
 .config/niri/user.kdl
 .config/niri/workspaces.kdl
+.config/autostart/picom.desktop
 .config/satty/config.toml
