@@ -29,8 +29,7 @@ decisión persistida viven en el `.md`.
 - Crear el documento dentro del proyecto, normalmente bajo `.sdocs/`, y abrirlo editable en
   segundo plano con `md <archivo.md>`; este atajo ejecuta `sdoc bridge`.
 - Si contiene imágenes locales, ejecutar **antes de abrirlo**
-  `sdoc-embed-images <archivo.md> --compress`. El helper incrusta WebP de máximo 1000 px y
-  calidad 72 para evitar bloqueos HTTPS y reducir el fragmento de URL.
+  `sdoc-embed-images <archivo.md> --compress`. El helper incrusta WebP de alta nitidez (máximo 1920 px y calidad 88) para preservar el texto y detalles de capturas/gráficos sin bloquear HTTPS. Si se requieren detalles extremadamente finos, puede usarse `--max-dim 2048 --quality 92`.
 - Si el documento es masivo o su URL supera aproximadamente 120 KB, generar el enlace corto
   con `sdoc share <archivo.md> --short` y abrir ese enlace en lugar de forzar la URL local.
 - Al cerrar, clasificar el SmallDoc: si aporta memoria duradera —decisión confirmada,
