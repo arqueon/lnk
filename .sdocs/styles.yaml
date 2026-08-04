@@ -1,0 +1,37 @@
+fontFamily: Lora
+baseFontSize: 17
+background: "#f7f2e8"
+color: "#1d2a42"
+lineHeight: 1.8
+headers: { color: "#202d49", marginBottom: 0.5 }
+h1: { fontSize: 2.35, fontWeight: 700, color: "#a8202a" }
+h2: { fontSize: 1.55, fontWeight: 700, color: "#202d49" }
+h3: { fontSize: 1.15, fontWeight: 700, color: "#6e792d" }
+p: { lineHeight: 1.85, marginBottom: 1.15 }
+link: { color: "#a8202a" }
+code: { background: "#eee6d7" }
+blockquote: { borderColor: "#b5212b", background: "#efe7d7", color: "#374258" }
+blocks: { background: "#efe7d7", color: "#27324a" }
+table:
+  color: "#1d2a42"
+  headerBackground: "#e7dcc8"
+  oddBackground: "#f9f5ed"
+  evenBackground: "#f1eadc"
+  border: "#c9baa2"
+dark:
+  background: "#171b24"
+  color: "#ece7dc"
+  h1: { color: "#ef7d78" }
+  h2: { color: "#e8e2d8" }
+  h3: { color: "#c8d27c" }
+  h4: { color: "#e8e2d8" }
+  link: { color: "#ef928d" }
+  blocks: { background: "#252b38", color: "#eee8dc" }
+  blockquote: { background: "#252b38", color: "#eee8dc", borderColor: "#ef7d78" }
+  code: { background: "#252b38", color: "#b7c0d4" }
+  table:
+    color: "#eee8dc"
+    headerBackground: "#303746"
+    oddBackground: "#1d222d"
+    evenBackground: "#252b38"
+    border: "#495164"

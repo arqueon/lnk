@@ -8,8 +8,7 @@ as base64 so the document becomes self-contained.
 
 Usage:
     sdoc-embed-images.py file.md             # rewrite in place (.bak backup)
-    sdoc-embed-images.py file.md --compress  # recompress to WebP (default max 1920px, quality 88)
-    sdoc-embed-images.py file.md --compress --max-dim 2048 --quality 92  # ultra high res
+    sdoc-embed-images.py file.md --compress  # also recompress to WebP (max 1000px, quality 72)
     sdoc-embed-images.py file.md -o out.md   # write elsewhere, original untouched
 
 Notes:
@@ -34,16 +33,15 @@ SKIP_PREFIXES = ("http://", "https://", "data:")
 COMPRESS_THRESHOLD = 200 * 1024  # warn above this size when not compressing
 
 
-def to_data_uri(path: Path, compress: bool, max_dim: int = 1920, quality: int = 88) -> tuple[str, int]:
+def to_data_uri(path: Path, compress: bool) -> tuple[str, int]:
     data = path.read_bytes()
     mime = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
     if compress and shutil.which("magick") and mime.startswith("image/") and mime != "image/svg+xml":
         with tempfile.NamedTemporaryFile(suffix=".webp", delete=False) as tmp:
             tmp_path = Path(tmp.name)
         try:
-            resize_arg = f"{max_dim}x{max_dim}>"
             subprocess.run(
-                ["magick", str(path), "-resize", resize_arg, "-quality", str(quality), "-define", "webp:method=6", str(tmp_path)],
+                ["magick", str(path), "-resize", "1400x1400>", "-quality", "82", str(tmp_path)],
                 check=True, capture_output=True,
             )
             webp = tmp_path.read_bytes()
@@ -60,9 +58,7 @@ def to_data_uri(path: Path, compress: bool, max_dim: int = 1920, quality: int = 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("file", type=Path, help="markdown file to process")
-    ap.add_argument("--compress", action="store_true", help="recompress to WebP with ImageMagick (default max 1920px, quality 88)")
-    ap.add_argument("--max-dim", type=int, default=1920, help="max width/height for compressed images (default 1920)")
-    ap.add_argument("--quality", type=int, default=88, help="WebP compression quality 1-100 (default 88)")
+    ap.add_argument("--compress", action="store_true", help="recompress to WebP (max 1000px, quality 72) with ImageMagick")
     ap.add_argument("-o", "--output", type=Path, help="write here instead of in place")
     args = ap.parse_args()
 
@@ -85,7 +81,7 @@ def main() -> int:
         if not img_path.is_file():
             missing.append(src)
             return m.group(0)
-        uri, size = to_data_uri(img_path, args.compress, args.max_dim, args.quality)
+        uri, size = to_data_uri(img_path, args.compress)
         if size > COMPRESS_THRESHOLD and not args.compress:
             print(f"  warning: {img_path.name} is {size // 1024} KB; consider --compress", file=sys.stderr)
         embedded.append(f"{img_path.name} ({size // 1024} KB)")
