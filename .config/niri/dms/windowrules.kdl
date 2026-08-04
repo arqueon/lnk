@@ -292,3 +292,9 @@ window-rule {
     match app-id="^com.anthropic.Claude$" title="^Claude$"
     open-on-workspace "agents2"
 }
+
+// @id=wr_1785886523411981996 @name=mindwtr
+window-rule {
+    match app-id="^mindwtr$" title="^Mindwtr$"
+    open-on-workspace "chat"
+}
