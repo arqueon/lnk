@@ -573,3 +573,6 @@ type -q tinty; and tinty init
 
 # added by the sdoc installer
 set -gx PATH $HOME/.sdocs/bin $PATH
+
+# opencode
+fish_add_path /home/ruben/.opencode/bin
