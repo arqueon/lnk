@@ -22,6 +22,7 @@
 .config/niri/scripts/launch-anytype.sh
 .config/niri/scripts/launch-media-apps.sh
 .config/niri/scripts/launch-quad-agents2.sh
+.config/niri/scripts/launch-quad-niri.sh
 .config/niri/scripts/launch-sdoc-library.sh
 .config/niri/scripts/restart-ferdium.sh
 .config/niri/scripts/run_chrome.sh
