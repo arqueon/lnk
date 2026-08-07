@@ -62,40 +62,29 @@ decisión persistida viven en el `.md`.
 Esto no aplica a respuestas breves o preguntas simples que no generen artefacto, decisión,
 comparación ni autorización.
 
-## Producción y revisión de contenidos educativos → diseño instruccional agéntico
+## Producción y revisión de contenidos educativos → escritura pública comprensible
 
-Para crear, revisar o adaptar cursos, módulos, unidades, secuencias didácticas,
-microcredenciales, guías para estudiantes o docentes, documentos de orientación educativa,
-guiones, rúbricas, evaluaciones, sitios formativos, recursos visuales o materiales que verá una
-audiencia real, usar siempre la skill:
-`/home/ruben/Projects/ia/diseno-instruccional-agentico/SKILL.md`.
+La skill de diseño instruccional agéntico queda **retirada** y no debe usarse. Tampoco se exige
+su pasaporte, sus compuertas ni su proceso. Para crear, revisar o adaptar materiales destinados
+a estudiantes, docentes o públicos no especializados, aplicar únicamente el criterio duradero
+de la página Logseq `[[Redacción pública comprensible]]`.
 
-- Material para audiencias reales se trabaja por defecto en modo **copiloto**. El modo
-  autónomo solo produce prototipos no desplegables.
-- El estado vive en un **Pasaporte del curso** dentro del proyecto, basado en
-  `assets/pasaporte-curso.yaml`; no se reconstruye desde la conversación.
-- Orden obligatorio: población y contexto → resultados → evidencias y evaluación → compuerta
-  de alineación → columna de tareas → narrativa → materiales.
-- No producir ni reescribir materiales antes de cerrar A1–A5 de la compuerta de alineación.
-  Las verificaciones A6–A8 pueden quedar abiertas únicamente con justificación registrada.
-- Diseñar tareas completas con complejidad creciente y andamiaje decreciente. Para públicos
-  heterogéneos, separar núcleo, puente y profundización con la misma evidencia.
-- Separar siempre la **arquitectura interna** del **artefacto público**. Códigos de resultados,
-  tareas, módulos, fases y compuertas permanecen en el pasaporte o el expediente; no se copian
-  a guías, cursos, orientaciones, sitios o SVG.
-- El artefacto público debe ser didáctico, divulgativo, ilustrativo, accesible y reiterativo.
-  Desarrollar cada idea en prosa mediante una situación reconocible, explicación, relaciones,
-  ejemplo, contraste, uso y recapitulación antes de resumirla en tablas, listas o figuras.
-- Cerrar la compuerta de comprensibilidad con un lector en frío que reciba solo el artefacto y
-  pueda explicar de qué trata, por qué importa, qué ejemplo muestra la idea y cómo continuar.
-  Una puntuación automática de claridad no basta.
-- Medir carga real y dificultad del texto; si el nivel no se midió, declararlo como
-  **no verificado**.
-- Separar generación y evaluación. El evaluador cita evidencia y no reescribe; el optimizador
-  atiende solo los hallazgos y no se autoaprueba. Ejecutar dos rondas antes de cualquier
-  despliegue.
-- Pilotar con perfiles simulados para detectar términos no definidos, relaciones no explicadas,
-  referentes ambiguos, instrucciones sin criterio, tablas o visuales sin mediación, saltos de
-  ritmo y prerrequisitos silenciosos. Esto no sustituye la validación humana final.
-- Registrar compuertas, patrones de error, decisiones y validación humana en el pasaporte y en
-  la página Logseq `[[Protocolo de diseño instruccional agéntico para UDGPlus]]`.
+- La arquitectura interna puede ser técnica; el producto público debe ser **didáctico,
+  divulgativo, ilustrativo, accesible y reiterativo**.
+- Claridad no significa pérdida de rigor: explicar primero el fenómeno en lenguaje común,
+  introducir después el concepto necesario, conservar sus distinciones, identificar qué aporta
+  cada fuente y separar teoría, hallazgo empírico, revisión y recomendación práctica.
+- Toda idea central se desarrolla mediante situación reconocible, explicación cotidiana,
+  concepto, relaciones, ejemplo trabajado, contraste o límite, uso y recapitulación.
+- Definir términos en el punto de uso y explicar cómo y bajo qué condiciones se relacionan los
+  fenómenos. El glosario y la bibliografía apoyan la explicación; no la sustituyen.
+- La prosa explicativa precede a tablas, listas, tarjetas, diapositivas y diagramas. Cada visual
+  responde una pregunta, muestra una dirección de lectura, explica su conclusión y ofrece una
+  alternativa textual equivalente.
+- Las actividades declaran situación, propósito, secuencia, apoyos, producto, criterio de
+  avance, ejemplo no copiable y vía de entrada para quien no comprende el punto de partida.
+- Códigos, compuertas, estados, pendientes, nombres de fases e instrucciones de agentes
+  permanecen en documentos internos. No aparecen en el producto público salvo que sean objeto
+  explícito de aprendizaje.
+- Revisar el render real desde teléfono y sin contexto interno. La validación automática no
+  sustituye mirar, leer y comprobar que una persona externa pueda comprender el material.

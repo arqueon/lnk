@@ -4,13 +4,13 @@
 
 window-rule {
     match app-id="google-chrome"
-    default-column-width { proportion 0.9; }
+    default-column-width { proportion 0.6; }
     open-focused true
 }
 
 window-rule {
     match app-id="firefox"
-    default-column-width { proportion 0.7; }
+    default-column-width { proportion 0.6; }
     open-focused true
 }
 
