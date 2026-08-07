@@ -459,3 +459,4 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # SmallDocs alias
 alias md="sdoc bridge"
+export DUA_STAY_ON_FILESYSTEM=true
