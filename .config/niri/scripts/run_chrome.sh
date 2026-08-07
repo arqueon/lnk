@@ -11,7 +11,7 @@ versiones=(
 # Buscar y ejecutar la primera opción disponible en el PATH
 for cromo in "${versiones[@]}"; do
     if command -v "$cromo" >/dev/null 2>&1; then
-        exec "$cromo" "$@"
+        exec "$cromo" --no-default-browser-check --new-window "$@"
     fi
 done
 
