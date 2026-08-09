@@ -1,2 +1,4 @@
-#!/bin/sh
-exec flatpak run tech.dongdongbh.mindwtr "$@"
+#!/bin/bash
+exec "$HOME/.config/niri/scripts/launch-mindwtr.sh" "$@"
+
+
