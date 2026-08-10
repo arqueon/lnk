@@ -36,14 +36,10 @@ elif [ "$XDG_CURRENT_DESKTOP" == "qtile" ] || [ "$DESKTOP_SESSION" == "qtile" ];
     qtile cmd-obj -o cmd -f reload_config
 fi
 
-sleep 1
-# Reforzar tema dark al final, después de que cualquier proceso async de DMS haya terminado
-if [[ "${XDG_CURRENT_DESKTOP,,}" == *niri* ]]; then
-    # dms ipc theme dark
-    # Propagar el tema a las aplicaciones (GTK/Qt/KDE/fontconfig/XSettings) mediante
-    # el plugin dmsThemeSync, que es ahora la fuente única de sincronización de tema.
-    dms ipc call dmsThemeSync apply
-fi
+# dms-theme-sync ya observa la firma de colores/ajustes de DMS con autoSync y
+# agrupa los cambios antes de aplicar. No forzar aquí una segunda pasada: con
+# varias ventanas de Chrome abiertas, dos recargas GTK consecutivas podían dejar
+# el indicador de pestaña activa desactualizado en unas ventanas y no en otras.
 
 # =============================================================================
 # BLOQUE DE TEMA DESACTIVADO — ahora lo gestiona el plugin dmsThemeSync.

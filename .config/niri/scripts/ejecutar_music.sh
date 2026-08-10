@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 0. Lanzar aplicaciones multimedia adicionales (DroppedNeedle y Aonsoku)
-~/.config/niri/scripts/run_chrome.sh --app="https://droppedneedle.arqueonautis.org/" &
+~/.config/niri/scripts/run_chrome.sh --app="https://aurral.arqueonautis.org/" &
 sleep 0.2
 /opt/Aonsoku/aonsoku &
 
