@@ -26,6 +26,10 @@ spawn-sh-at-startup "sleep 10 && exec variety"
 // Tine (AppImage de Shelly en ~/.local/bin; glob para sobrevivir a updates).
 // Regla de workspace "notes" en dms/windowrules.kdl.
 spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite ] || exec ~/.local/bin/Tine_*.AppImage"
+// Mindwtr (script en niri/scripts/launch-mindwtr.sh que detecta AppImage dinámico o Flatpak)
+spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite ] || exec ~/.config/niri/scripts/launch-mindwtr.sh"
+
+
 
 // ── Ajustes de escritorio (gsettings / xdg) ──
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface gtk-enable-primary-paste true"
