@@ -1,5 +1,6 @@
 .bashrc
 .bin/lnk_pull.sh
+.bin/lnk_pull_force.sh
 .bin/lnk_push.sh
 .bin/pick_color.sh
 .config/alacritty/alacritty.toml
