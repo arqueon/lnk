@@ -460,3 +460,16 @@ export PATH="$HOME/.local/bin:$PATH"
 # SmallDocs alias
 alias md="sdoc bridge"
 export DUA_STAY_ON_FILESYSTEM=true
+
+# Force remote changes to prevail on 'lnk pull'
+lnk() {
+    if [[ "$1" == "pull" ]]; then
+        local repo="${LNK_HOME:-$HOME/.config/lnk}"
+        git -C "$repo" fetch origin 2>/dev/null
+        git -C "$repo" reset --hard origin/main 2>/dev/null
+        shift
+        command lnk pull "$@"
+    else
+        command lnk "$@"
+    fi
+}

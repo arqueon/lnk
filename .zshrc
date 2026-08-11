@@ -19,3 +19,16 @@ export PATH="$HOME/.sdocs/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Force remote changes to prevail on 'lnk pull'
+lnk() {
+    if [[ "$1" == "pull" ]]; then
+        local repo="${LNK_HOME:-$HOME/.config/lnk}"
+        git -C "$repo" fetch origin 2>/dev/null
+        git -C "$repo" reset --hard origin/main 2>/dev/null
+        shift
+        command lnk pull "$@"
+    else
+        command lnk "$@"
+    fi
+}
