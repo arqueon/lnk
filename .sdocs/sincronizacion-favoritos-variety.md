@@ -70,6 +70,10 @@ flowchart LR
     L -. solo configuración y bootstrap .-> D
 ```
 
+### Autorización adicional para compartir la biblioteca
+
+El 11 de agosto de 2026 a las 09:22:43 (UTC-06:00), Rubén autorizó explícitamente compartir `Shared/Wallpapers/Variety` de la cuenta `arqueon` con `abdeluck`, con permisos de lectura, creación y actualización, sin borrado ni re-compartición, y continuar el despliegue únicamente en `abdel-home`. Esta autorización se añadió después de que la compuerta de seguridad detuviera el primer intento; antes de ella no se creó ningún share.
+
 ## 2. Evidencia del estado actual
 
 | Evidencia comprobada el 10 de agosto de 2026 | Resultado | Consecuencia |
@@ -263,7 +267,7 @@ variety-favorites-bootstrap rollback
 
 ## 8. Cómo se incorporarán los otros equipos sin configuración manual
 
-`lnk` contiene, todavía sin commit ni push, dos helpers comunes:
+`lnk` publica dos helpers comunes; la mejora de deduplicación quedó en `main` con el commit `9ab8834`:
 
 - `variety-favorites-bootstrap`: detecta `hostname + usuario`, comprueba que exista una raíz Nextcloud realmente sincronizada, copia sin sobrescribir, verifica por checksum, crea el enlace y conserva rollback.
 - `variety-favorite-shared`: incorpora un favorito de forma atómica, detecta por contenido si ya existe y evita duplicar imágenes recibidas de otra máquina.
@@ -273,7 +277,7 @@ La relación prevista entre nodos y perfiles es:
 | Nodo Tailscale | Perfil `lnk` | Carpeta que se calcula automáticamente | Estado |
 |---|---|---|---|
 | `casa-cachyos` | `casa` | `casa-cachyos-<usuario-local>` | Piloto verificado como `casa-cachyos-ruben`. |
-| `abdel-home` | `abdel` | `abdel-home-<usuario-local>` | Pendiente de segunda autorización. |
+| `abdel-home` | `abdel` | `abdel-home-<usuario-local>` | Desplegado y verificado como `abdel-home-abdel`. |
 | `abdel-lite` | `star` | `abdel-lite-<usuario-local>` | Pendiente de segunda autorización. |
 | `cachyos-jc` | `jc` | `cachyos-jc-<usuario-local>` | Pendiente de segunda autorización. |
 | `cachyos-ofi` | `ofi` | `cachyos-ofi-<usuario-local>` | Pendiente de segunda autorización. |
@@ -285,7 +289,7 @@ Tras un VoBo separado para la flota, el agente hará por Tailscale/SSH: comproba
 
 Crear solamente un directorio vacío `~/Nextcloud` no lo convierte en una raíz válida: el helper exige también la base de sincronización del cliente y aborta sin modificar `Favorites` si no la encuentra. La única intervención manual inevitable sería autenticar Nextcloud una vez en un equipo que todavía no tenga cuenta configurada.
 
-Los cambios de `lnk` permanecen locales y sin publicar, conforme al límite aprobado. Ninguno de los otros cinco nodos fue contactado o modificado.
+Los cambios comunes de `lnk` fueron publicados después del VoBo específico para `abdel-home`. Ninguno de los otros cuatro nodos pendientes fue contactado o modificado.
 
 ## 9. Preflight remoto de `abdel-home`
 
@@ -379,3 +383,21 @@ submissions:
         - Detenerse si Nextcloud presenta conflicto, error de cuenta o sincronización incompleta
       observaciones_abdel_home: Autorizado en chat; implementar en abdel-home y sincronizar lnk.
 ```
+
+## 10. Despliegue verificado en `abdel-home`
+
+El despliegue autorizado terminó sin extenderse a otro host:
+
+| Control | Resultado |
+|---|---|
+| Share de Nextcloud | `Shared/Wallpapers/Variety`, de `arqueon` a `abdeluck`, con lectura, creación y actualización; sin borrado ni re-compartición. |
+| Raíz compatible | `~/Nextcloud` enlaza a `/media/hrdisk/Nextcloud`. |
+| Favoritos de Variety | `~/.config/variety/Favorites` enlaza a `by-contributor/abdel-home-abdel`. |
+| Respaldo reversible | `~/.local/state/variety-favorites-sync/Favorites-before-shared-20260811-093008`. |
+| Configuración de fuentes | La fuente nativa `favorites` está desactivada y la carpeta recursiva común `by-contributor` está activada. |
+| Proceso | Nextcloud y Variety están ejecutándose en la sesión de `abdel`. |
+| Aportes propios | 2 archivos en `abdel-home-abdel`; los 609 favoritos originales quedaron representados por contenido en la biblioteca compartida. |
+| Convergencia final | Biblioteca local de `abdel-home` y WebDAV del propietario: 673 archivos y 2,690,346,323 bytes en ambos lados. |
+| `lnk` | Helpers deduplicados publicados en `main` (`9ab8834`); el cambio ajeno en `windowrules.kdl` se conservó fuera del despliegue. |
+
+Los nodos `abdel-lite`, `cachyos-jc`, `cachyos-ofi` y `ruben-laptop` permanecen pendientes de una autorización separada.
