@@ -9,11 +9,14 @@ readonly CONTRIBUTORS_ROOT="$LIBRARY_ROOT/by-contributor"
 readonly ACTIVE_FAVORITES="$BASE_HOME/.config/variety/Favorites"
 readonly STATE_ROOT="$BASE_HOME/.local/state/variety-favorites-sync"
 readonly STATE_FILE="$STATE_ROOT/current-backup"
+readonly PROCESS_CHECK_ENABLED="${VARIETY_PROCESS_CHECK_ENABLED:-true}"
 
 host_name="$(hostnamectl --static 2>/dev/null || hostname)"
 contributor_id="$(printf '%s-%s' "$host_name" "$USER" | tr '[:upper:] _/' '[:lower:]---')"
 readonly CONTRIBUTOR_ID="$contributor_id"
 readonly CONTRIBUTOR_DIR="$CONTRIBUTORS_ROOT/$CONTRIBUTOR_ID"
+
+declare -A SHARED_HASH_PATH=()
 
 die() {
     printf 'error: %s\n' "$*" >&2
@@ -39,15 +42,120 @@ require_nextcloud_root() {
         die "no Nextcloud sync database was found under $NEXTCLOUD_ROOT"
 }
 
-trees_match() {
+require_variety_stopped() {
+    [[ "$PROCESS_CHECK_ENABLED" == true || "$PROCESS_CHECK_ENABLED" == false ]] ||
+        die "VARIETY_PROCESS_CHECK_ENABLED must be true or false"
+    if [[ "$PROCESS_CHECK_ENABLED" == true ]] && pgrep -u "$UID" -x variety >/dev/null; then
+        die "Variety is running; stop it with: variety --quit"
+    fi
+}
+
+hash_file() {
+    sha256sum -- "$1" | awk '{print $1}'
+}
+
+index_shared_library() {
+    SHARED_HASH_PATH=()
+    local file hash
+    while IFS= read -r -d '' file; do
+        hash="$(hash_file "$file")"
+        SHARED_HASH_PATH["$hash"]="$file"
+    done < <(find "$CONTRIBUTORS_ROOT" -type f ! -name '*.metadata.json' -print0)
+}
+
+verify_source_content() {
+    local source="$1"
+    local file hash
+    local total=0 missing=0
+
+    index_shared_library
+    while IFS= read -r -d '' file; do
+        ((total += 1))
+        hash="$(hash_file "$file")"
+        if [[ -z "${SHARED_HASH_PATH[$hash]+present}" ]]; then
+            printf 'missing_shared_content=%s\n' "$file" >&2
+            ((missing += 1))
+        fi
+    done < <(find "$source" -type f ! -name '*.metadata.json' -print0)
+
+    printf 'source_content files=%s missing=%s\n' "$total" "$missing"
+    ((missing == 0))
+}
+
+hashed_name() {
+    local name="$1"
+    local hash="$2"
+    local suffix="$3"
+    if [[ "$name" == *.* ]]; then
+        printf '%s--%s.%s\n' "${name%.*}" "${hash:0:$suffix}" "${name##*.}"
+    else
+        printf '%s--%s\n' "$name" "${hash:0:$suffix}"
+    fi
+}
+
+copy_without_overwrite() {
     local source="$1"
     local destination="$2"
-    local changes
-    changes="$(rsync -rnic --delete --omit-dir-times -- "$source/" "$destination/")"
-    [[ -z "$changes" ]] || {
-        printf '%s\n' "$changes" >&2
+    local tmp_file
+
+    tmp_file="$(mktemp --tmpdir="$CONTRIBUTOR_DIR" .variety-import.XXXXXX)"
+    if ! cp --reflink=auto --preserve=mode,timestamps -- "$source" "$tmp_file"; then
+        unlink -- "$tmp_file"
         return 1
-    }
+    fi
+    mv -n -- "$tmp_file" "$destination"
+    if [[ -e "$tmp_file" ]]; then
+        if cmp -s -- "$source" "$destination"; then
+            unlink -- "$tmp_file"
+        else
+            unlink -- "$tmp_file"
+            die "destination appeared during import: $destination"
+        fi
+    fi
+}
+
+import_source_content() {
+    local source="$1"
+    local file hash name destination metadata
+    local total=0 existing=0 copied=0
+
+    index_shared_library
+    while IFS= read -r -d '' file; do
+        ((total += 1))
+        hash="$(hash_file "$file")"
+        if [[ -n "${SHARED_HASH_PATH[$hash]+present}" ]]; then
+            ((existing += 1))
+            continue
+        fi
+
+        name="${file##*/}"
+        destination="$CONTRIBUTOR_DIR/$name"
+        if [[ -e "$destination" ]]; then
+            destination="$CONTRIBUTOR_DIR/$(hashed_name "$name" "$hash" 12)"
+        fi
+        if [[ -e "$destination" ]] && ! cmp -s -- "$file" "$destination"; then
+            destination="$CONTRIBUTOR_DIR/$(hashed_name "$name" "$hash" 64)"
+        fi
+        if [[ -e "$destination" ]] && ! cmp -s -- "$file" "$destination"; then
+            die "content-addressed destination collision: $destination"
+        fi
+
+        copy_without_overwrite "$file" "$destination"
+        metadata="$file.metadata.json"
+        if [[ -f "$metadata" ]]; then
+            [[ ! -e "$destination.metadata.json" ]] ||
+                cmp -s -- "$metadata" "$destination.metadata.json" ||
+                die "metadata destination collision: $destination.metadata.json"
+            if [[ ! -e "$destination.metadata.json" ]]; then
+                copy_without_overwrite "$metadata" "$destination.metadata.json"
+            fi
+        fi
+        SHARED_HASH_PATH["$hash"]="$destination"
+        ((copied += 1))
+    done < <(find "$source" -type f ! -name '*.metadata.json' -print0)
+
+    printf 'import files=%s already_shared=%s copied=%s contributor=%s\n' \
+        "$total" "$existing" "$copied" "$CONTRIBUTOR_ID"
 }
 
 status() {
@@ -70,7 +178,13 @@ verify() {
     [[ "$(readlink -f -- "$ACTIVE_FAVORITES")" == "$(readlink -f -- "$CONTRIBUTOR_DIR")" ]] ||
         die "Favorites points somewhere else"
 
-    local files bytes
+    local files bytes backup
+    if [[ -f "$STATE_FILE" ]]; then
+        backup="$(<"$STATE_FILE")"
+        [[ -d "$backup" ]] || die "recorded backup is missing: $backup"
+        verify_source_content "$backup" || die "original Favorites content is missing from the shared library"
+    fi
+
     files="$(find "$CONTRIBUTOR_DIR" -maxdepth 1 -type f ! -name '*.metadata.json' -printf '.' | wc -c)"
     bytes="$(du -sb -- "$CONTRIBUTOR_DIR" | awk '{print $1}')"
     printf 'verify=ok files=%s bytes=%s contributor=%s\n' "$files" "$bytes" "$CONTRIBUTOR_ID"
@@ -78,8 +192,7 @@ verify() {
 
 apply() {
     require_nextcloud_root
-    pgrep -u "$UID" -x variety >/dev/null &&
-        die "Variety is running; stop it with: variety --quit"
+    require_variety_stopped
     mkdir -p -- "$CONTRIBUTORS_ROOT" "$STATE_ROOT"
 
     if [[ -L "$ACTIVE_FAVORITES" ]]; then
@@ -89,8 +202,8 @@ apply() {
     [[ -d "$ACTIVE_FAVORITES" ]] || die "Favorites is not a directory: $ACTIVE_FAVORITES"
 
     mkdir -p -- "$CONTRIBUTOR_DIR"
-    rsync -a --delay-updates --ignore-existing -- "$ACTIVE_FAVORITES/" "$CONTRIBUTOR_DIR/"
-    trees_match "$ACTIVE_FAVORITES" "$CONTRIBUTOR_DIR" ||
+    import_source_content "$ACTIVE_FAVORITES"
+    verify_source_content "$ACTIVE_FAVORITES" ||
         die "seed verification failed; Favorites was left untouched"
 
     local stamp backup
@@ -107,9 +220,23 @@ apply() {
     verify
 }
 
+repair() {
+    require_nextcloud_root
+    require_variety_stopped
+    [[ -f "$STATE_FILE" ]] || die "no rollback state is recorded"
+    local backup
+    backup="$(<"$STATE_FILE")"
+    [[ -d "$backup" ]] || die "recorded backup is missing: $backup"
+    mkdir -p -- "$CONTRIBUTORS_ROOT" "$CONTRIBUTOR_DIR"
+
+    import_source_content "$backup"
+    verify_source_content "$backup" ||
+        die "repair verification failed; the backup was left untouched"
+    printf 'repair=ok backup=%s contributor=%s\n' "$backup" "$CONTRIBUTOR_ID"
+}
+
 rollback() {
-    pgrep -u "$UID" -x variety >/dev/null &&
-        die "Variety is running; stop it with: variety --quit"
+    require_variety_stopped
     [[ -f "$STATE_FILE" ]] || die "no rollback state is recorded"
     local backup
     backup="$(<"$STATE_FILE")"
@@ -130,6 +257,9 @@ case "${1:-status}" in
     apply)
         apply
         ;;
+    repair)
+        repair
+        ;;
     rollback)
         rollback
         ;;
@@ -140,7 +270,7 @@ case "${1:-status}" in
         verify
         ;;
     *)
-        printf 'usage: %s {status|apply|verify|rollback}\n' "${0##*/}" >&2
+        printf 'usage: %s {status|apply|verify|repair|rollback}\n' "${0##*/}" >&2
         exit 2
         ;;
 esac

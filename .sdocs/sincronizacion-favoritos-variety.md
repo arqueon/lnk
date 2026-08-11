@@ -356,4 +356,26 @@ buttons:
   - name: enviar_autorizacion_abdel_home
     label: Enviar decisión para abdel-home
     final: true
+answers:
+  decision_abdel_home: Preparar y desplegar Variety solo en abdel-home (recomendado)
+  publicacion_lnk: Autorizar commit y push de la configuración y helpers de Variety
+  limites_abdel_home:
+    - Preservar los 609 favoritos originales y mantener rollback
+    - No tocar el cambio remoto de windowrules.kdl
+    - No desplegar ningún otro host
+    - Detenerse si Nextcloud presenta conflicto, error de cuenta o sincronización incompleta
+  observaciones_abdel_home: Autorizado en chat; implementar en abdel-home y sincronizar lnk.
+submissions:
+  - by: chat_authorization_after_wrong_form_submission
+    at: "2026-08-11T09:00:27-06:00"
+    scope: [decision_abdel_home, publicacion_lnk, limites_abdel_home, observaciones_abdel_home]
+    values:
+      decision_abdel_home: Preparar y desplegar Variety solo en abdel-home (recomendado)
+      publicacion_lnk: Autorizar commit y push de la configuración y helpers de Variety
+      limites_abdel_home:
+        - Preservar los 609 favoritos originales y mantener rollback
+        - No tocar el cambio remoto de windowrules.kdl
+        - No desplegar ningún otro host
+        - Detenerse si Nextcloud presenta conflicto, error de cuenta o sincronización incompleta
+      observaciones_abdel_home: Autorizado en chat; implementar en abdel-home y sincronizar lnk.
 ```
