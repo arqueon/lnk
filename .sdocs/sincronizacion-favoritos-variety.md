@@ -266,6 +266,10 @@ La relación prevista entre nodos y perfiles es:
 | `cachyos-ofi` | `ofi` | `cachyos-ofi-<usuario-local>` | Pendiente de segunda autorización. |
 | `ruben-laptop` | `laptop` | `ruben-laptop-<usuario-local>` | Pendiente de segunda autorización. |
 
-Tras un VoBo separado para la flota, el agente hará por Tailscale/SSH: comprobar usuario y Nextcloud, ejecutar `lnk pull --host <perfil>`, cerrar Variety, correr `variety-favorites-bootstrap apply`, reiniciar y verificar WebDAV. El helper aborta sin modificar nada si falta `~/Nextcloud` o su base de sincronización. La única intervención manual inevitable sería autenticar Nextcloud una vez en un equipo que todavía no tenga cliente configurado.
+Todos los nodos previstos usan Arch Linux o CachyOS. Por tanto, el preflight puede comprobar e instalar de manera uniforme el paquete `nextcloud-client` con `pacman`; no hace falta mantener ramas distintas por distribución.
+
+Tras un VoBo separado para la flota, el agente hará por Tailscale/SSH: comprobar usuario, espacio y Nextcloud; ejecutar `lnk pull --host <perfil>`; cerrar Variety; correr `variety-favorites-bootstrap apply`; reiniciar y verificar WebDAV. En equipos todavía no configurados se usará `~/Nextcloud` como ruta convencional. Antes de sincronizar se comprobará la capacidad: si la partición raíz no tiene margen suficiente, el cliente se configurará directamente sobre una partición con espacio y `~/Nextcloud` será un enlace local hacia esa ruta real. No se descargará primero la biblioteca en una partición saturada para moverla después.
+
+Crear solamente un directorio vacío `~/Nextcloud` no lo convierte en una raíz válida: el helper exige también la base de sincronización del cliente y aborta sin modificar `Favorites` si no la encuentra. La única intervención manual inevitable sería autenticar Nextcloud una vez en un equipo que todavía no tenga cuenta configurada.
 
 Los cambios de `lnk` permanecen locales y sin publicar, conforme al límite aprobado. Ninguno de los otros cinco nodos fue contactado o modificado.
