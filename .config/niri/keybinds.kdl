@@ -67,7 +67,7 @@ binds {
     Mod+Alt+Shift+G { spawn-sh "notify-send -a 'Last.fm' 'Status' \"$(dms ipc call lastfmScrobbler status)\""; }
 
     // ── Wallpapers (Variety) ──
-    Mod+Alt+F { spawn-sh "variety -f && notify-send 'Copied to favorites'"; }
+    Mod+Alt+F { spawn-sh "variety-favorite-shared"; }
     Mod+Alt+W { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
 
     // ── Utilidades de sistema ──

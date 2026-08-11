@@ -1,0 +1,146 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+readonly BASE_HOME="${VARIETY_HOME_ROOT:-$HOME}"
+readonly NEXTCLOUD_ROOT="${NEXTCLOUD_ROOT:-$BASE_HOME/Nextcloud}"
+readonly LIBRARY_ROOT="${VARIETY_LIBRARY_ROOT:-$NEXTCLOUD_ROOT/Shared/Wallpapers/Variety}"
+readonly CONTRIBUTORS_ROOT="$LIBRARY_ROOT/by-contributor"
+readonly ACTIVE_FAVORITES="$BASE_HOME/.config/variety/Favorites"
+readonly STATE_ROOT="$BASE_HOME/.local/state/variety-favorites-sync"
+readonly STATE_FILE="$STATE_ROOT/current-backup"
+
+host_name="$(hostnamectl --static 2>/dev/null || hostname)"
+contributor_id="$(printf '%s-%s' "$host_name" "$USER" | tr '[:upper:] _/' '[:lower:]---')"
+readonly CONTRIBUTOR_ID="$contributor_id"
+readonly CONTRIBUTOR_DIR="$CONTRIBUTORS_ROOT/$CONTRIBUTOR_ID"
+
+die() {
+    printf 'error: %s\n' "$*" >&2
+    exit 1
+}
+
+path_kind() {
+    local path="$1"
+    if [[ -L "$path" ]]; then
+        printf 'symlink -> %s\n' "$(readlink -f -- "$path")"
+    elif [[ -d "$path" ]]; then
+        printf 'directory\n'
+    elif [[ -e "$path" ]]; then
+        printf 'other\n'
+    else
+        printf 'missing\n'
+    fi
+}
+
+require_nextcloud_root() {
+    [[ -d "$NEXTCLOUD_ROOT" ]] || die "Nextcloud root is missing: $NEXTCLOUD_ROOT"
+    compgen -G "$NEXTCLOUD_ROOT/.sync_*.db" >/dev/null ||
+        die "no Nextcloud sync database was found under $NEXTCLOUD_ROOT"
+}
+
+trees_match() {
+    local source="$1"
+    local destination="$2"
+    local changes
+    changes="$(rsync -rnic --delete --omit-dir-times -- "$source/" "$destination/")"
+    [[ -z "$changes" ]] || {
+        printf '%s\n' "$changes" >&2
+        return 1
+    }
+}
+
+status() {
+    printf 'contributor=%s\n' "$CONTRIBUTOR_ID"
+    printf 'nextcloud_root=%s\n' "$NEXTCLOUD_ROOT"
+    printf 'library_root=%s\n' "$LIBRARY_ROOT"
+    printf 'contributor_dir=%s\n' "$CONTRIBUTOR_DIR"
+    printf 'active_favorites=%s (%s)\n' "$ACTIVE_FAVORITES" "$(path_kind "$ACTIVE_FAVORITES")"
+    if [[ -f "$STATE_FILE" ]]; then
+        printf 'backup=%s\n' "$(<"$STATE_FILE")"
+    else
+        printf 'backup=none\n'
+    fi
+}
+
+verify() {
+    require_nextcloud_root
+    [[ -d "$CONTRIBUTOR_DIR" ]] || die "contributor directory is missing"
+    [[ -L "$ACTIVE_FAVORITES" ]] || die "Favorites is not a symlink"
+    [[ "$(readlink -f -- "$ACTIVE_FAVORITES")" == "$(readlink -f -- "$CONTRIBUTOR_DIR")" ]] ||
+        die "Favorites points somewhere else"
+
+    local files bytes
+    files="$(find "$CONTRIBUTOR_DIR" -maxdepth 1 -type f ! -name '*.metadata.json' -printf '.' | wc -c)"
+    bytes="$(du -sb -- "$CONTRIBUTOR_DIR" | awk '{print $1}')"
+    printf 'verify=ok files=%s bytes=%s contributor=%s\n' "$files" "$bytes" "$CONTRIBUTOR_ID"
+}
+
+apply() {
+    require_nextcloud_root
+    pgrep -u "$UID" -x variety >/dev/null &&
+        die "Variety is running; stop it with: variety --quit"
+    mkdir -p -- "$CONTRIBUTORS_ROOT" "$STATE_ROOT"
+
+    if [[ -L "$ACTIVE_FAVORITES" ]]; then
+        verify
+        return 0
+    fi
+    [[ -d "$ACTIVE_FAVORITES" ]] || die "Favorites is not a directory: $ACTIVE_FAVORITES"
+
+    mkdir -p -- "$CONTRIBUTOR_DIR"
+    rsync -a --delay-updates --ignore-existing -- "$ACTIVE_FAVORITES/" "$CONTRIBUTOR_DIR/"
+    trees_match "$ACTIVE_FAVORITES" "$CONTRIBUTOR_DIR" ||
+        die "seed verification failed; Favorites was left untouched"
+
+    local stamp backup
+    stamp="$(date +%Y%m%d-%H%M%S)"
+    backup="$STATE_ROOT/Favorites-before-shared-$stamp"
+    [[ ! -e "$backup" ]] || die "backup target already exists: $backup"
+
+    mv -- "$ACTIVE_FAVORITES" "$backup"
+    if ! ln -s -- "$CONTRIBUTOR_DIR" "$ACTIVE_FAVORITES"; then
+        mv -- "$backup" "$ACTIVE_FAVORITES"
+        die "could not create symlink; original Favorites was restored"
+    fi
+    printf '%s\n' "$backup" >"$STATE_FILE"
+    verify
+}
+
+rollback() {
+    pgrep -u "$UID" -x variety >/dev/null &&
+        die "Variety is running; stop it with: variety --quit"
+    [[ -f "$STATE_FILE" ]] || die "no rollback state is recorded"
+    local backup
+    backup="$(<"$STATE_FILE")"
+    [[ -d "$backup" ]] || die "recorded backup is missing: $backup"
+    [[ -L "$ACTIVE_FAVORITES" ]] || die "Favorites is not the managed symlink"
+    [[ "$(readlink -f -- "$ACTIVE_FAVORITES")" == "$(readlink -f -- "$CONTRIBUTOR_DIR")" ]] ||
+        die "Favorites points somewhere else"
+
+    rsync -a --ignore-existing -- "$CONTRIBUTOR_DIR/" "$backup/"
+    unlink -- "$ACTIVE_FAVORITES"
+    mv -- "$backup" "$ACTIVE_FAVORITES"
+    printf '%s\n' "$CONTRIBUTOR_DIR" >"$STATE_ROOT/last-shared-directory"
+    unlink -- "$STATE_FILE"
+    printf 'rollback=ok restored=%s shared_copy_retained=%s\n' "$ACTIVE_FAVORITES" "$CONTRIBUTOR_DIR"
+}
+
+case "${1:-status}" in
+    apply)
+        apply
+        ;;
+    rollback)
+        rollback
+        ;;
+    status)
+        status
+        ;;
+    verify)
+        verify
+        ;;
+    *)
+        printf 'usage: %s {status|apply|verify|rollback}\n' "${0##*/}" >&2
+        exit 2
+        ;;
+esac

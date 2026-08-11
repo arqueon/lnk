@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+readonly BASE_HOME="${VARIETY_HOME_ROOT:-$HOME}"
+readonly LIBRARY_ROOT="${VARIETY_LIBRARY_ROOT:-$BASE_HOME/Nextcloud/Shared/Wallpapers/Variety/by-contributor}"
+readonly FAVORITES_DIR="${VARIETY_FAVORITES_DIR:-$BASE_HOME/.config/variety/Favorites}"
+readonly NOTIFICATIONS_ENABLED="${VARIETY_NOTIFICATIONS_ENABLED:-true}"
+
+notify() {
+    if [[ "$NOTIFICATIONS_ENABLED" == true ]]; then
+        notify-send 'Variety favorites' "$1"
+    else
+        printf '%s\n' "$1"
+    fi
+}
+
+current="${VARIETY_CURRENT_FILE:-}"
+if [[ -z "$current" ]]; then
+    current="$(variety --get | tail -n 1)"
+fi
+[[ -n "$current" && -f "$current" ]] || {
+    notify 'No current wallpaper was found'
+    exit 1
+}
+[[ -d "$FAVORITES_DIR" ]] || {
+    notify "Favorites folder is missing: $FAVORITES_DIR"
+    exit 1
+}
+
+if [[ -d "$LIBRARY_ROOT" ]]; then
+    current_real="$(readlink -f -- "$current")"
+    library_real="$(readlink -f -- "$LIBRARY_ROOT")"
+    if [[ "$current_real" == "$library_real/"* ]]; then
+        notify 'Already in the shared collection'
+        exit 0
+    fi
+fi
+
+search_root="$FAVORITES_DIR"
+if [[ -d "$LIBRARY_ROOT" ]]; then
+    search_root="$LIBRARY_ROOT"
+fi
+current_size="$(stat -c '%s' -- "$current")"
+while IFS= read -r -d '' existing; do
+    if cmp -s -- "$current" "$existing"; then
+        notify 'Already in the shared collection'
+        exit 0
+    fi
+done < <(find "$search_root" -type f ! -name '*.metadata.json' -size "${current_size}c" -print0)
+
+name="${current##*/}"
+destination="$FAVORITES_DIR/$name"
+if [[ -e "$destination" ]]; then
+    hash="$(sha256sum -- "$current" | awk '{print $1}')"
+    if [[ "$name" == *.* ]]; then
+        destination="$FAVORITES_DIR/${name%.*}--${hash:0:12}.${name##*.}"
+    else
+        destination="$FAVORITES_DIR/${name}--${hash:0:12}"
+    fi
+fi
+
+tmp_file="$(mktemp --tmpdir="$FAVORITES_DIR" .variety-favorite.XXXXXX)"
+trap '[[ -e "${tmp_file:-}" ]] && unlink -- "$tmp_file"' EXIT
+cp --reflink=auto --preserve=mode,timestamps -- "$current" "$tmp_file"
+mv -- "$tmp_file" "$destination"
+tmp_file=''
+
+if [[ -f "$current.metadata.json" ]]; then
+    metadata_tmp="$(mktemp --tmpdir="$FAVORITES_DIR" .variety-metadata.XXXXXX)"
+    cp --reflink=auto --preserve=mode,timestamps -- "$current.metadata.json" "$metadata_tmp"
+    mv -- "$metadata_tmp" "$destination.metadata.json"
+fi
+notify 'Copied to the shared collection'

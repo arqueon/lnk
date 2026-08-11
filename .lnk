@@ -44,6 +44,8 @@
 .face
 .local/bin/fastfetch-format
 .local/bin/mindwtr
+.local/bin/variety-favorite-shared
+.local/bin/variety-favorites-bootstrap
 .local/share/applications/google-chrome-beta.desktop
 .local/share/applications/sdoc.desktop
 .zshrc
