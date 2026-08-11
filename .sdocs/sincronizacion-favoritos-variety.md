@@ -221,6 +221,19 @@ submissions:
         cachyos-ofi y ruben-laptop; todos pertenecen a la misma tailnet.
       destino_arqueon_conf: Eliminar por completo el repositorio remoto después de verificar la biblioteca compartida
       limites: [No borrar ni reescribir favoritos existentes, No retirar arqueon-conf antes de verificar la biblioteca nueva, No hacer commit ni push en lnk, No desplegar a otras máquinas sin una segunda autorización]
+  - by: enviar_decision
+    at: "2026-08-11T14:58:19.087Z"
+    scope: [decision, siguiente_paso, condiciones, destino_arqueon_conf, limites]
+    values:
+      decision: Adoptar Nextcloud con subcarpetas por máquina y usuario (recomendado)
+      siguiente_paso: Preparar un piloto reversible solo en casa-cachyos
+      condiciones: |
+        ¿Cómo se configurarían los demás equipos sin que sea eso demasiado manual?
+        
+        Equipos previstos: casa-cachyos, abdel-home, abdel-lite, cachyos-jc,
+        cachyos-ofi y ruben-laptop; todos pertenecen a la misma tailnet.
+      destino_arqueon_conf: Eliminar por completo el repositorio remoto después de verificar la biblioteca compartida
+      limites: [No borrar ni reescribir favoritos existentes, No retirar arqueon-conf antes de verificar la biblioteca nueva, No hacer commit ni push en lnk, No desplegar a otras máquinas sin una segunda autorización]
 ```
 
 ## 7. Resultado aplicado y verificado
@@ -273,3 +286,74 @@ Tras un VoBo separado para la flota, el agente hará por Tailscale/SSH: comproba
 Crear solamente un directorio vacío `~/Nextcloud` no lo convierte en una raíz válida: el helper exige también la base de sincronización del cliente y aborta sin modificar `Favorites` si no la encuentra. La única intervención manual inevitable sería autenticar Nextcloud una vez en un equipo que todavía no tenga cuenta configurada.
 
 Los cambios de `lnk` permanecen locales y sin publicar, conforme al límite aprobado. Ninguno de los otros cinco nodos fue contactado o modificado.
+
+## 9. Preflight remoto de `abdel-home`
+
+El 11 de agosto de 2026 `abdel-home` reapareció en Tailscale y se auditó por SSH como `abdel`, sin modificarlo.
+
+| Control | Resultado |
+|---|---|
+| Sistema | Arch Linux; `nextcloud-client` 34.0.1 y Variety 0.9.0 instalados. |
+| Nextcloud real | Configurado y con base de sincronización en `/media/hrdisk/Nextcloud/`. |
+| Compatibilidad `~/Nextcloud` | Existe como directorio vacío; todavía no es un enlace a la raíz real. |
+| Almacenamiento | 380 GB libres en `/media/hrdisk`; 347 GB libres en `/home`. |
+| Biblioteca compartida | Aún no está descargada en la raíz real; el cliente Nextcloud no estaba ejecutándose durante el preflight. |
+| Favoritos locales | 609 archivos; 2,330,962,198 bytes. |
+| `lnk` remoto | Tiene un cambio local ajeno en `.config/niri/dms/windowrules.kdl`; debe preservarse. |
+
+### Secuencia propuesta
+
+1. Fortalecer localmente `variety-favorites-bootstrap` para importar solo contenidos que no existan ya en toda la biblioteca y verificar cada favorito original por contenido.
+2. Probar apply, verificación y rollback con colecciones solapadas y colisiones de nombre.
+3. Conservar como respaldo el directorio vacío `~/Nextcloud` y crear el enlace `~/Nextcloud → /media/hrdisk/Nextcloud`.
+4. Arrancar Nextcloud en la sesión de `abdel`, esperar la biblioteca compartida y verificar su convergencia antes de tocar Variety.
+5. Hacer commit/push de los cambios comunes de `lnk`, preservando tanto los cambios locales de esta máquina como el cambio remoto de `windowrules.kdl`.
+6. Ejecutar `lnk pull --host abdel`, detener Variety, aplicar el bootstrap deduplicado y verificar respaldo, enlace, biblioteca y WebDAV.
+7. Reiniciar Variety en su sesión gráfica. No pasar a otro host en esta compuerta.
+
+```form
+id: decision-despliegue-variety-abdel-home
+fields:
+  - name: decision_abdel_home
+    type: radio
+    label: Alcance autorizado para abdel-home
+    required: true
+    default: Preparar y desplegar Variety solo en abdel-home (recomendado)
+    options:
+      - Preparar y desplegar Variety solo en abdel-home (recomendado)
+      - Preparar únicamente Nextcloud y detenerse antes de lnk y Variety
+      - Conservar solo el preflight sin aplicar cambios
+
+  - name: publicacion_lnk
+    type: radio
+    label: Publicación inicial de lnk
+    required: true
+    default: Autorizar commit y push de la configuración y helpers de Variety
+    options:
+      - Autorizar commit y push de la configuración y helpers de Variety
+      - Mantener lnk sin publicar y detener el despliegue
+
+  - name: limites_abdel_home
+    type: checkbox
+    label: Límites de la intervención
+    options:
+      - Preservar los 609 favoritos originales y mantener rollback
+      - No tocar el cambio remoto de windowrules.kdl
+      - No desplegar ningún otro host
+      - Detenerse si Nextcloud presenta conflicto, error de cuenta o sincronización incompleta
+    default:
+      - Preservar los 609 favoritos originales y mantener rollback
+      - No tocar el cambio remoto de windowrules.kdl
+      - No desplegar ningún otro host
+      - Detenerse si Nextcloud presenta conflicto, error de cuenta o sincronización incompleta
+
+  - name: observaciones_abdel_home
+    type: textarea
+    label: Condiciones u observaciones opcionales
+    rows: 3
+
+buttons:
+  - name: enviar_autorizacion_abdel_home
+    label: Enviar decisión para abdel-home
+    final: true
+```
