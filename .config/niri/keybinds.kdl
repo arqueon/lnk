@@ -77,6 +77,7 @@ binds {
     Mod+Alt+R { spawn-sh "bash ~/.config/niri/scripts/gpu_recorder.sh"; } // grabación con GPU
     Mod+Alt+2 { spawn-sh "~/.bin/lnk_push.sh"; } // dotfiles: push
     Mod+Alt+1 { spawn-sh "~/.bin/lnk_pull.sh"; } // dotfiles: pull
+    Mod+Alt+3 { spawn-sh "~/.bin/lnk_pull_force.sh"; } // dotfiles: pull (force remote)
     Mod+Alt+V { spawn-sh "pavucontrol"; }
 
     // ── Audio (DMS) y periféricos ──
