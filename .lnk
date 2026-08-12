@@ -50,3 +50,8 @@
 .local/share/applications/google-chrome-beta.desktop
 .local/share/applications/sdoc.desktop
 .zshrc
+.local/bin/sdoc-open
+.local/bin/md
+.local/bin/sdoc-embed-images
+.config/systemd/user/sdoc-library.service
+.sdocs/styles.yaml
