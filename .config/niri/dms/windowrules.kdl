@@ -310,3 +310,9 @@ window-rule {
     match app-id="^com.danklinux.dms$"
     open-floating true
 }
+
+// @id=wr_1786514386925764430 @name=Hermes
+window-rule {
+    match app-id="^Hermes$" title="^Hermes$"
+    open-on-workspace "agents"
+}
