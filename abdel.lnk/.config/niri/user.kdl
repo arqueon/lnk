@@ -20,4 +20,6 @@ window-rule {
 
 binds {
     Mod+Alt+Return { spawn-sh "nemo ~/Downloads/"; } // abdel usa nemo, no thunar
+    Mod+Shift+F10 hotkey-overlay-title="Hermes Agent" { spawn "~/.config/niri/scripts/launch-hermes.sh" "http://192.168.100.12:8788/"; }
 }
+
