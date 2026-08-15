@@ -21,6 +21,7 @@
 .config/niri/scripts/ejecutar_music.sh
 .config/niri/scripts/gpu_recorder.sh
 .config/niri/scripts/launch-anytype.sh
+.config/niri/scripts/launch-hermes.sh
 .config/niri/scripts/launch-media-apps.sh
 .config/niri/scripts/launch-mindwtr.sh
 .config/niri/scripts/launch-niri-matrix.sh
@@ -36,6 +37,7 @@
 .config/niri/user-common.kdl
 .config/niri/window-rules.kdl
 .config/paru
+.config/systemd/user/sdoc-library.service
 .config/user-dirs.locale
 .config/variety/banned.txt
 .config/variety/scripts
@@ -44,14 +46,13 @@
 .config/yay
 .face
 .local/bin/fastfetch-format
+.local/bin/md
 .local/bin/mindwtr
+.local/bin/sdoc-embed-images
+.local/bin/sdoc-open
 .local/bin/variety-favorite-shared
 .local/bin/variety-favorites-bootstrap
 .local/share/applications/google-chrome-beta.desktop
 .local/share/applications/sdoc.desktop
-.zshrc
-.local/bin/sdoc-open
-.local/bin/md
-.local/bin/sdoc-embed-images
-.config/systemd/user/sdoc-library.service
 .sdocs/styles.yaml
+.zshrc
