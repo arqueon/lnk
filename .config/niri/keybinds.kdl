@@ -35,6 +35,7 @@ binds {
     Mod+Alt+F9 hotkey-overlay-title="Media download apps" { spawn "~/.config/niri/scripts/launch-media-apps.sh"; }
     Mod+F10 { spawn "~/.config/niri/scripts/launch-anytype.sh"; }
     Mod+Alt+F10 { spawn "claude-desktop"; }
+    Mod+Shift+F10 hotkey-overlay-title="Hermes Agent" { spawn "~/.config/niri/scripts/launch-hermes.sh"; }
     Mod+F11 { spawn "github-desktop"; }
     Mod+Alt+F11 { spawn "antigravity-ide"; }
     Mod+F12 { spawn "~/.config/niri/scripts/launch-mindwtr.sh"; }
