@@ -16,7 +16,7 @@ workspace "files" {
 workspace "write" {
     open-on-output "DP-2"
 }
-workspace "virt" {
+workspace "media" {
     open-on-output "DP-2"
 }
 
@@ -33,6 +33,6 @@ workspace "ref" {
 workspace "notes" {
     open-on-output "HDMI-A-1"
 }
-workspace "media" {
+workspace "virt" {
     open-on-output "HDMI-A-1"
 }
