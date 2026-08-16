@@ -28,4 +28,5 @@ spawn-at-startup "logseq-multi-launch"
 // ── Binds propios ──
 binds {
     Mod+F4 { spawn "logseq-multi-launch"; }
+    Mod+F7 { spawn "env" "GDK_BACKEND=x11" "virt-manager" "--connect" "qemu:///system" "--show-domain-console" "win11"; }
 }
