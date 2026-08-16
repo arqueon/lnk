@@ -7,7 +7,7 @@
 binds {
     // ── Sistema / niri ──
     Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
-    Mod+Ctrl+Shift+S { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Ctrl+Shift+S allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+MouseMiddle { close-window; }
     Mod+Shift+O { toggle-window-rule-opacity; }
 
