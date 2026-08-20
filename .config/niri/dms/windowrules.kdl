@@ -316,3 +316,9 @@ window-rule {
     match app-id="^Hermes$" title="^Hermes$"
     open-on-workspace "agents"
 }
+
+// @id=wr_1786905374335068802 @name=Virt-manager
+window-rule {
+    match app-id="^Virt-manager$" title="^win11 on QEMU/KVM$"
+    open-on-workspace "virt"
+}
