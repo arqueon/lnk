@@ -58,6 +58,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"ha\.arqueonautis\.org"#
+    open-on-workspace "chat"
+    open-focused true
+}
+
+window-rule {
     match title=r#"^Newsflash$"#
     open-on-workspace "media"
     default-column-width { proportion 0.6; }
