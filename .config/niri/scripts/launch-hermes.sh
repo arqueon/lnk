@@ -22,6 +22,27 @@ open_url() {
   exec xdg-open "$1"
 }
 
+show_status() {
+  local status_rc
+
+  set +e
+  "${hermes_cli}" "${profile}" status
+  status_rc=$?
+  set -e
+
+  printf '\n'
+  if [[ -t 0 ]]; then
+    read -r -n 1 -s -p "Pulsa cualquier tecla para cerrar…" || true
+    printf '\n'
+  fi
+  return "${status_rc}"
+}
+
+if [[ "${1:-}" == "--show-status" ]]; then
+  show_status
+  exit $?
+fi
+
 if [[ "${1:-}" =~ ^https?:// ]]; then
   open_url "$1"
 fi
@@ -73,12 +94,19 @@ if [[ -z "${terminal}" ]]; then
 fi
 
 case "${action}" in
-  tui|gate|status)
+  tui|gate)
     if [[ -z "${terminal}" ]]; then
       notify-send -u critical "Hermes remoto" "No se encontró una terminal compatible."
       exit 1
     fi
     exec "${terminal}" -e "${hermes_cli}" "${profile}" "${action}"
+    ;;
+  status)
+    if [[ -z "${terminal}" ]]; then
+      notify-send -u critical "Hermes remoto" "No se encontró una terminal compatible."
+      exit 1
+    fi
+    exec "${terminal}" -e "${script_dir}/launch-hermes.sh" --show-status
     ;;
   desktop)
     exec "${hermes_cli}" "${profile}" desktop
