@@ -57,6 +57,11 @@ select_choice() {
 action="$(select_choice)"
 [[ -n "${action}" ]] || exit 0
 
+if [[ "${action}" == open-webui ]]; then
+  notify-send -t 15000 "Hermes remoto" \
+    "Iniciando Open WebUI; el primer arranque puede tardar cerca de un minuto."
+fi
+
 terminal="${TERMINAL:-}"
 if [[ -z "${terminal}" ]]; then
   for candidate in kitty foot alacritty wezterm; do
