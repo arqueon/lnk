@@ -16,6 +16,9 @@ hermes-sinope hermina tui
 
 La TUI se conserva como subcomando para uso deliberado desde terminal, pero no
 aparece en el selector gráfico porque su latencia sobre SSH la hace poco cómoda.
+Los atajos inequívocos son `hermes-tui` para `hermes@sinope` y `hermina-tui`
+para `hermes-abdel@sinope`. `hermes tui` no es equivalente: ejecuta el Hermes
+local y falla si esa instalación local no tiene proveedor configurado.
 
 Para el perfil `hermes`, la opción **WebUI comunitaria** abre directamente
 `https://hermes.arqueonautis.org/`. Así reutiliza el origen y la sesión del sitio
@@ -43,3 +46,10 @@ si faltan. Gate crea o amplía su configuración local al iniciarse, sin guardar
 claves ni tokens en `lnk`. Antes de abrir TUI o Gate, el cliente comprueba que
 Sinope conozca el tipo de terminal local —por ejemplo, `xterm-kitty`— y copia
 solo esa definición pública si hace falta.
+
+Desktop usa ahora su modo oficial **Connect via SSH** en lugar de inyectar
+`HERMES_DESKTOP_REMOTE_URL` y un token. Cada identidad guarda su configuración
+en `~/.config/hermes-desktop-sinope/<perfil>/`, separada del Desktop local y con
+modo `0600`. El token del túnel permanece efímero cuando la sesión gráfica no
+tiene GNOME Keyring/KWallet; el script no activa almacenamiento básico ni
+guarda credenciales en texto plano.

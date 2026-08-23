@@ -35,7 +35,6 @@ case "${profile}" in
     workspace_port=13300
     pwa_port=19120
     open_webui_port=18080
-    desktop_local_port=19119
     tui_session="hermes-tui"
     published_webui_url="https://hermes.arqueonautis.org/"
     ;;
@@ -48,7 +47,6 @@ case "${profile}" in
     workspace_port=13301
     pwa_port=19121
     open_webui_port=18081
-    desktop_local_port=19118
     tui_session="hermina-tui"
     published_webui_url=""
     ;;
@@ -177,41 +175,82 @@ desktop() {
     exit 3
   fi
 
-  remote "systemctl --user start hermes-dashboard-lab.service"
-  local runtime_root="${XDG_RUNTIME_DIR:-/tmp}"
-  local session_token exit_code
-  desktop_runtime_dir="$(mktemp -d -p "${runtime_root}" hermes-desktop-sinope.XXXXXX)"
-  desktop_control_socket="${desktop_runtime_dir}/ssh-control"
-  cleanup_desktop() {
-    ssh -S "${desktop_control_socket}" -O exit "${target}" >/dev/null 2>&1 || true
-    rmdir "${desktop_runtime_dir}" >/dev/null 2>&1 || true
-  }
-  trap cleanup_desktop EXIT INT TERM
+  # Use Desktop's native "Connect via SSH" lifecycle.  Keep its user-data
+  # directory separate per Unix identity so this launcher never replaces a
+  # person's normal local-Desktop connection or another Sinope account.
+  local desktop_config_root="${HOME}/.config/hermes-desktop-sinope/${profile}"
+  local desktop_user_data="${desktop_config_root}/Hermes"
+  local connection_file="${desktop_user_data}/connection.json"
+  local registry_file="${desktop_user_data}/connections.json"
+  local connection_id="sinope-${profile}"
+  local key_path=""
+  local temp_file
 
-  ssh "${ssh_options[@]}" -M -S "${desktop_control_socket}" -fN \
-    -o ExitOnForwardFailure=yes \
-    -L "127.0.0.1:${desktop_local_port}:127.0.0.1:${dashboard_port}" \
-    "${target}"
-  session_token="$(curl -fsS "http://127.0.0.1:${desktop_local_port}/" \
-    | perl -ne 'if (/window\.__HERMES_SESSION_TOKEN__\s*=\s*("(?:\\.|[^"\\])*")/) { print $1; exit }' \
-    | jq -r '.')"
-  if [[ -z "${session_token}" || "${session_token}" == null ]]; then
-    printf 'No se pudo obtener el token efímero del Dashboard de %s.\n' "${display_name}" >&2
-    exit 1
+  if [[ "${profile}" == "hermes-abdel" && -r "${abdel_key}" ]]; then
+    key_path="${abdel_key}"
   fi
+
+  mkdir -p "${desktop_user_data}"
+
+  temp_file="$(mktemp "${desktop_user_data}/connection.json.XXXXXX")"
+  if [[ -s "${connection_file}" ]] && jq -e 'type == "object"' "${connection_file}" >/dev/null 2>&1; then
+    jq --arg host "${sinope_host}" --arg user "${remote_user}" \
+      --arg key "${key_path}" --arg hermes "${remote_home}/.local/bin/hermes" '
+        . as $old
+        | {
+            mode: "ssh",
+            remote: (
+              {mode: "ssh", host: $host, user: $user, remoteHermesPath: $hermes}
+              + (if $key != "" then {keyPath: $key} else {} end)
+              + (if ($old.remote.token | type) == "object" then {token: $old.remote.token} else {} end)
+            ),
+            profiles: ($old.profiles // {})
+          }
+      ' "${connection_file}" >"${temp_file}"
+  else
+    jq -n --arg host "${sinope_host}" --arg user "${remote_user}" \
+      --arg key "${key_path}" --arg hermes "${remote_home}/.local/bin/hermes" '
+        {
+          mode: "ssh",
+          remote: (
+            {mode: "ssh", host: $host, user: $user, remoteHermesPath: $hermes}
+            + (if $key != "" then {keyPath: $key} else {} end)
+          ),
+          profiles: {}
+        }
+      ' >"${temp_file}"
+  fi
+  chmod 600 "${temp_file}"
+  mv "${temp_file}" "${connection_file}"
+
+  # Remove the short-lived registry entry created by the first implementation.
+  # The current Desktop build otherwise opens the same SSH source twice: once
+  # as its primary v1 connection and again while enumerating the v2 registry.
+  # Connection mode still appears correctly as "Connect via SSH" in Settings.
+  if [[ -s "${registry_file}" ]] && jq -e 'type == "object"' "${registry_file}" >/dev/null 2>&1; then
+    temp_file="$(mktemp "${desktop_user_data}/connections.json.XXXXXX")"
+    jq --arg id "${connection_id}" '
+      .connections = (
+        [(.connections // [])[] | select(.id != $id)]
+        | if any(.[]; .kind == "local")
+          then .
+          else [{id: "local", kind: "local", label: "This device"}] + .
+          end
+      )
+      | if .primary == $id then .primary = "local" else . end
+      | if .lastUsed == $id then .lastUsed = (.primary // "local") else . end
+    ' "${registry_file}" >"${temp_file}"
+    chmod 600 "${temp_file}"
+    mv "${temp_file}" "${registry_file}"
+  fi
+
   if [[ "${HERMES_DESKTOP_DRY_RUN:-0}" == 1 ]]; then
-    printf '%s: túnel y autenticación de Desktop verificados.\n' "${display_name}"
-    cleanup_desktop
-    trap - EXIT INT TERM
+    printf '%s: conexión SSH nativa de Desktop preparada.\n' "${display_name}"
     return 0
   fi
-  exit_code=0
-  HERMES_DESKTOP_REMOTE_URL="http://127.0.0.1:${desktop_local_port}" \
-    HERMES_DESKTOP_REMOTE_TOKEN="${session_token}" \
-    "${desktop_binary}" --disable-setuid-sandbox "$@" || exit_code=$?
-  cleanup_desktop
-  trap - EXIT INT TERM
-  return "${exit_code}"
+
+  XDG_CONFIG_HOME="${desktop_config_root}" \
+    exec "${desktop_binary}" --disable-setuid-sandbox "$@"
 }
 
 prepare_gate_config() {
