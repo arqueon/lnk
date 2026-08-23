@@ -184,6 +184,7 @@ desktop() {
   local registry_file="${desktop_user_data}/connections.json"
   local connection_id="sinope-${profile}"
   local key_path=""
+  local registry_source="/dev/null"
   local temp_file
 
   if [[ "${profile}" == "hermes-abdel" && -r "${abdel_key}" ]]; then
@@ -228,11 +229,15 @@ desktop() {
   # connects to Sinope and then starts a second, local `hermes serve`; the UI
   # consequently lands on the local backend instead of the remote agent.
   if [[ -s "${registry_file}" ]] && jq -e 'type == "object"' "${registry_file}" >/dev/null 2>&1; then
-    temp_file="$(mktemp "${desktop_user_data}/connections.json.XXXXXX")"
-    jq --arg id "${connection_id}" --arg label "Sinope · ${display_name}" \
-      --arg host "${sinope_host}" --arg user "${remote_user}" \
-      --arg key "${key_path}" --arg hermes "${remote_home}/.local/bin/hermes" '
-      .connections = (
+    registry_source="${registry_file}"
+  fi
+  temp_file="$(mktemp "${desktop_user_data}/connections.json.XXXXXX")"
+  jq -n --slurpfile current "${registry_source}" \
+    --arg id "${connection_id}" --arg label "Sinope · ${display_name}" \
+    --arg host "${sinope_host}" --arg user "${remote_user}" \
+    --arg key "${key_path}" --arg hermes "${remote_home}/.local/bin/hermes" '
+      ($current[0] // {})
+      | .connections = (
         [(.connections // [])[]
           | select(.id != $id)
           | select(.kind != "ssh" or .host != $host or (.user // "") != $user)]
@@ -256,10 +261,9 @@ desktop() {
       | .primary = $id
       | .lastUsed = $id
       | .launchMode = "primary"
-    ' "${registry_file}" >"${temp_file}"
-    chmod 600 "${temp_file}"
-    mv "${temp_file}" "${registry_file}"
-  fi
+    ' >"${temp_file}"
+  chmod 600 "${temp_file}"
+  mv "${temp_file}" "${registry_file}"
 
   if [[ "${HERMES_DESKTOP_DRY_RUN:-0}" == 1 ]]; then
     printf '%s: conexión SSH nativa de Desktop preparada.\n' "${display_name}"
