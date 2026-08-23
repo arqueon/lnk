@@ -331,7 +331,7 @@ case "${command}" in
   tui)
     session_name="${1:-${tui_session}}"
     ensure_remote_terminfo
-    exec ssh "${ssh_options[@]}" -t "${target}" "${remote_home}/.local/bin/hermes-remote-tui '${session_name}'"
+    exec ssh "${ssh_options[@]}" -t "${target}" "env LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 ${remote_home}/.local/bin/hermes-remote-tui '${session_name}'"
     ;;
   gate)
     gate_binary="${HOME}/Projects/hermes-gate/.venv/bin/gate"
