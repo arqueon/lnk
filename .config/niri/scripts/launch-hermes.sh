@@ -47,12 +47,18 @@ if [[ "${1:-}" =~ ^https?:// ]]; then
   open_url "$1"
 fi
 
-choices=$'WebUI comunitaria\twebui\nDashboard oficial\tdashboard\nDesktop oficial\tdesktop\nTUI oficial persistente (tmux)\ttui\nHermes Gate (sesiones tmux)\tgate\nHermes Workspace\tworkspace\nHermes UI PWA\tpwa\nOpen WebUI (pesada)\topen-webui\nEstado de interfaces\tstatus\nPreparar tmux remoto (UTF-8 + portapapeles)\ttmux-setup\nDetener laboratorios y túneles\tstop-labs'
+choices=$'WebUI comunitaria\twebui\nDashboard oficial\tdashboard\nDesktop oficial\tdesktop'
+if [[ -x "${script_dir}/launch-hermes-one.sh" ]] \
+  && "${script_dir}/launch-hermes-one.sh" --available; then
+  choices+=$'\nHermes One (comunitaria)\thermes-one'
+fi
+choices+=$'\nTUI oficial persistente (tmux)\ttui\nHermes Gate (sesiones tmux)\tgate\nHermes Workspace\tworkspace\nHermes UI PWA\tpwa\nOpen WebUI (pesada)\topen-webui\nEstado de interfaces\tstatus\nPreparar tmux remoto (UTF-8 + portapapeles)\ttmux-setup\nDetener laboratorios y túneles\tstop-labs'
 
 select_choice() {
-  local selected=""
+  local selected="" menu_lines
+  menu_lines="$(printf '%s\n' "${choices}" | wc -l)"
   if command -v fuzzel >/dev/null 2>&1; then
-    selected="$(printf '%s\n' "${choices}" | cut -f1 | fuzzel --dmenu --prompt="${identity} › " --lines=11 --width=56 2>/dev/null || true)"
+    selected="$(printf '%s\n' "${choices}" | cut -f1 | fuzzel --dmenu --prompt="${identity} › " --lines="${menu_lines}" --width=56 2>/dev/null || true)"
   elif command -v rofi >/dev/null 2>&1; then
     selected="$(printf '%s\n' "${choices}" | cut -f1 | rofi -dmenu -i -p "${identity}" 2>/dev/null || true)"
   elif command -v zenity >/dev/null 2>&1; then
@@ -110,6 +116,9 @@ case "${action}" in
     ;;
   desktop)
     exec "${hermes_cli}" "${profile}" desktop
+    ;;
+  hermes-one)
+    exec "${script_dir}/launch-hermes-one.sh"
     ;;
   *)
     if output="$("${hermes_cli}" "${profile}" "${action}" 2>&1)"; then

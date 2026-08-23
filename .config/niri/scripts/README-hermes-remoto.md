@@ -66,3 +66,16 @@ en `~/.config/hermes-desktop-sinope/<perfil>/`, separada del Desktop local y con
 modo `0600`. El token del túnel permanece efímero cuando la sesión gráfica no
 tiene GNOME Keyring/KWallet; el script no activa almacenamiento básico ni
 guarda credenciales en texto plano.
+
+Hermes One se muestra como **Hermes One (comunitaria)** únicamente cuando la
+AppImage `Hermes One (Sinope)` está instalada para el usuario mediante Shelly.
+El lanzador resuelve el nombre registrado por Shelly y no depende de una
+versión concreta del archivo. La aplicación usa un perfil aislado en
+`~/Projects/hermes-one-pilot/profile` y detecta la identidad local:
+
+- `ruben`: `hermes@sinope`, API remota 8642 y túnel local 18652.
+- `abdel`: `hermes-abdel@sinope`, API remota 8643 y túnel local 18653.
+
+Al cerrarse, el envoltorio compara los dashboards remotos anteriores y
+posteriores a la sesión. Solo detiene los dashboards efímeros creados por esa
+ejecución y conserva los servicios estables de WebUI y Dashboard.
