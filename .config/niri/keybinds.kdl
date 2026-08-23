@@ -35,7 +35,7 @@ binds {
     Mod+Alt+F9 hotkey-overlay-title="Media download apps" { spawn "~/.config/niri/scripts/launch-media-apps.sh"; }
     Mod+F10 { spawn "~/.config/niri/scripts/launch-anytype.sh"; }
     Mod+Alt+F10 { spawn "claude-desktop"; }
-    Mod+Shift+F10 hotkey-overlay-title="Hermes Agent" { spawn "~/.config/niri/scripts/launch-hermes.sh"; }
+    Mod+Shift+F10 hotkey-overlay-title="Interfaces remotas de Hermes" { spawn "~/.config/niri/scripts/launch-hermes.sh"; }
     Mod+F11 hotkey-overlay-title="Home Assistant" { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=https://ha.arqueonautis.org/casa-vistosa/principal"; }
     Mod+Alt+F11 { spawn "antigravity-ide"; }
     Mod+F12 { spawn "~/.config/niri/scripts/launch-mindwtr.sh"; }
