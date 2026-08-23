@@ -12,6 +12,8 @@ También puede seleccionarse explícitamente desde una terminal:
 hermes-sinope hermes status
 hermes-sinope hermes-abdel dashboard
 hermes-sinope hermina tui
+hermes-sinope hermes tmux-setup
+hermes-sinope hermes-abdel tmux-setup
 ```
 
 La TUI oficial persistente vuelve a aparecer en el selector gráfico después de
@@ -48,6 +50,15 @@ si faltan. Gate crea o amplía su configuración local al iniciarse, sin guardar
 claves ni tokens en `lnk`. Antes de abrir TUI o Gate, el cliente comprueba que
 Sinope conozca el tipo de terminal local —por ejemplo, `xterm-kitty`— y copia
 solo esa definición pública si hace falta.
+
+La configuración necesaria para que las TUI remotas conserven UTF-8, color y
+portapapeles OSC 52 vive en `hermes-remote-tmux.conf`, no en la configuración
+personal de Kitty de cada estación. `tmux-setup` valida esa plantilla con la
+versión remota de tmux, respalda un `~/.tmux.conf` distinto, instala la copia
+canónica en la cuenta seleccionada y recarga los servidores tmux existentes sin
+cerrar sus sesiones. También aparece como **Preparar tmux remoto (UTF-8 +
+portapapeles)** en el menú. No guarda sesiones, historiales, llaves ni tokens en
+`lnk`.
 
 Desktop usa ahora su modo oficial **Connect via SSH** en lugar de inyectar
 `HERMES_DESKTOP_REMOTE_URL` y un token. Cada identidad guarda su configuración

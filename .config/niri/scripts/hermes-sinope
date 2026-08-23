@@ -79,6 +79,7 @@ Interfaces:
 Administración:
   profile     Muestra la identidad detectada
   gate-setup  Prepara el perfil actual en Hermes Gate
+  tmux-setup  Instala UTF-8/OSC 52 en el tmux remoto de este perfil
   status      Estado remoto y de los túneles locales
   stop-labs   Detiene laboratorios y túneles; conserva Gateway y WebUI
 EOF
@@ -103,6 +104,33 @@ ensure_remote_terminfo() {
   if ! infocmp -x "${client_term}" | ssh "${ssh_options[@]}" "${target}" 'mkdir -p ~/.terminfo && tic -x -o ~/.terminfo -'; then
     printf 'Aviso: falló la instalación remota de terminfo para %s.\n' "${client_term}" >&2
   fi
+}
+
+configure_remote_tmux() {
+  local tmux_config="${script_dir}/hermes-remote-tmux.conf"
+  local remote_incoming="${remote_home}/.tmux.conf.lnk-new"
+
+  if [[ ! -r "${tmux_config}" ]]; then
+    printf 'No se encontró la plantilla tmux administrada: %s\n' "${tmux_config}" >&2
+    return 1
+  fi
+
+  scp "${ssh_options[@]}" -q "${tmux_config}" "${target}:${remote_incoming}"
+  remote "bash -lc 'set -euo pipefail
+    incoming=\"${remote_incoming}\"
+    target_file=\"${remote_home}/.tmux.conf\"
+    check_socket=\"hermes-lnk-tmux-check-\$\$\"
+    trap '\''rm -f \"\$incoming\"; tmux -L \"\$check_socket\" kill-server >/dev/null 2>&1 || true'\'' EXIT
+    tmux -f \"\$incoming\" -L \"\$check_socket\" start-server
+    if [[ -e \"\$target_file\" ]] && ! cmp -s \"\$incoming\" \"\$target_file\"; then
+      backup=\"\${target_file}.before-lnk-\$(date +%Y%m%d-%H%M%S)\"
+      cp -p \"\$target_file\" \"\$backup\"
+      printf '\''Respaldo: %s\\n'\'' \"\$backup\"
+    fi
+    install -m 0644 \"\$incoming\" \"\$target_file\"
+    tmux source-file \"\$target_file\" >/dev/null 2>&1 || true
+    printf '\''Configuración tmux aplicada: %s\\n'\'' \"\$target_file\"
+  '"
 }
 
 tunnel_unit_name() {
@@ -369,6 +397,10 @@ case "${command}" in
     ensure_remote_terminfo
     prepare_gate_config
     printf '%s preparado en Hermes Gate.\n' "${display_name}"
+    ;;
+  tmux-setup)
+    configure_remote_tmux
+    printf '%s: UTF-8 y portapapeles OSC 52 preparados en tmux.\n' "${display_name}"
     ;;
   status)
     printf '%s (%s)\n\n' "${display_name}" "${target}"
