@@ -37,6 +37,7 @@ case "${profile}" in
     open_webui_port=18080
     desktop_local_port=19119
     tui_session="hermes-tui"
+    published_webui_url="https://hermes.arqueonautis.org/"
     ;;
   hermes-abdel)
     display_name="Hermina · Abdel"
@@ -49,6 +50,7 @@ case "${profile}" in
     open_webui_port=18081
     desktop_local_port=19118
     tui_session="hermina-tui"
+    published_webui_url=""
     ;;
 esac
 
@@ -264,7 +266,13 @@ case "${command}" in
     printf '%s (%s@sinope)\n' "${display_name}" "${remote_user}"
     ;;
   webui)
-    web_interface webui 'WebUI actual' hermes-webui.service "${webui_port}" active
+    if [[ -n "${HERMES_SINOPE_WEBUI_URL:-${published_webui_url}}" ]]; then
+      webui_url="${HERMES_SINOPE_WEBUI_URL:-${published_webui_url}}"
+      open_browser "${webui_url}"
+      printf '%s · WebUI comunitaria lista en %s\n' "${display_name}" "${webui_url}"
+    else
+      web_interface webui 'WebUI comunitaria' hermes-webui.service "${webui_port}" active
+    fi
     ;;
   dashboard)
     web_interface dashboard 'Dashboard oficial' hermes-dashboard-lab.service "${dashboard_port}" start

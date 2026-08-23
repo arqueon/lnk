@@ -14,6 +14,16 @@ hermes-sinope hermes-abdel dashboard
 hermes-sinope hermina tui
 ```
 
+La TUI se conserva como subcomando para uso deliberado desde terminal, pero no
+aparece en el selector gráfico porque su latencia sobre SSH la hace poco cómoda.
+
+Para el perfil `hermes`, la opción **WebUI comunitaria** abre directamente
+`https://hermes.arqueonautis.org/`. Así reutiliza el origen y la sesión del sitio
+publicado; abrir el mismo servicio como `http://127.0.0.1:8787/` crea un origen
+de navegador distinto y, por tanto, no comparte sus cookies. `hermes-abdel`
+continúa usando el túnel privado al puerto `8788`, salvo que se defina
+`HERMES_SINOPE_WEBUI_URL` con una URL publicada para ese perfil.
+
 Las interfaces web se publican localmente mediante túneles SSH transitorios de
 `systemd --user`. `stop-labs` detiene esos túneles y los cuatro laboratorios,
 pero conserva el Gateway y el WebUI principal.
