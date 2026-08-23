@@ -26,7 +26,7 @@ if [[ "${1:-}" =~ ^https?:// ]]; then
   open_url "$1"
 fi
 
-choices=$'WebUI comunitaria\twebui\nDashboard oficial\tdashboard\nDesktop oficial\tdesktop\nHermes Gate (sesiones tmux)\tgate\nHermes Workspace\tworkspace\nHermes UI PWA\tpwa\nOpen WebUI (pesada)\topen-webui\nEstado de interfaces\tstatus\nDetener laboratorios y túneles\tstop-labs'
+choices=$'WebUI comunitaria\twebui\nDashboard oficial\tdashboard\nDesktop oficial\tdesktop\nTUI oficial persistente (tmux)\ttui\nHermes Gate (sesiones tmux)\tgate\nHermes Workspace\tworkspace\nHermes UI PWA\tpwa\nOpen WebUI (pesada)\topen-webui\nEstado de interfaces\tstatus\nDetener laboratorios y túneles\tstop-labs'
 
 select_choice() {
   local selected=""
@@ -73,7 +73,7 @@ if [[ -z "${terminal}" ]]; then
 fi
 
 case "${action}" in
-  gate|status)
+  tui|gate|status)
     if [[ -z "${terminal}" ]]; then
       notify-send -u critical "Hermes remoto" "No se encontró una terminal compatible."
       exit 1

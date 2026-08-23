@@ -14,11 +14,13 @@ hermes-sinope hermes-abdel dashboard
 hermes-sinope hermina tui
 ```
 
-La TUI se conserva como subcomando para uso deliberado desde terminal, pero no
-aparece en el selector gráfico porque su latencia sobre SSH la hace poco cómoda.
-Los atajos inequívocos son `hermes-tui` para `hermes@sinope` y `hermina-tui`
-para `hermes-abdel@sinope`. `hermes tui` no es equivalente: ejecuta el Hermes
-local y falla si esa instalación local no tiene proveedor configurado.
+La TUI oficial persistente vuelve a aparecer en el selector gráfico después de
+que la prueba real del 23 de agosto de 2026 confirmara que responde
+correctamente dentro de `tmux`. También se conserva como subcomando para uso
+deliberado desde terminal. Los atajos inequívocos son `hermes-tui` para
+`hermes@sinope` y `hermina-tui` para `hermes-abdel@sinope`. `hermes tui` no es
+equivalente: ejecuta el Hermes local y falla si esa instalación local no tiene
+proveedor configurado.
 
 Para el perfil `hermes`, la opción **WebUI comunitaria** abre directamente
 `https://hermes.arqueonautis.org/`. Así reutiliza el origen y la sesión del sitio
