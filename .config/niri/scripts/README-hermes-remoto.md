@@ -20,7 +20,8 @@ pero conserva el Gateway y el WebUI principal.
 
 ## Requisitos del cliente
 
-- `bash`, OpenSSH, `systemd-run`, `curl`, `jq` y `perl`.
+- `bash`, OpenSSH, `systemd-run`, `curl`, `jq`, `perl` y las utilidades
+  terminfo de ncurses (`infocmp`/`tic`).
 - Chrome o `xdg-open` para las interfaces web.
 - Uno de `fuzzel`, `rofi`, `zenity` o `kdialog` para el menú.
 - Una terminal compatible; `kitty` es la primera opción conocida.
@@ -29,4 +30,6 @@ pero conserva el Gateway y el WebUI principal.
 
 Desktop y Hermes Gate son opcionales por máquina. El script informa claramente
 si faltan. Gate crea o amplía su configuración local al iniciarse, sin guardar
-claves ni tokens en `lnk`.
+claves ni tokens en `lnk`. Antes de abrir TUI o Gate, el cliente comprueba que
+Sinope conozca el tipo de terminal local —por ejemplo, `xterm-kitty`— y copia
+solo esa definición pública si hace falta.
