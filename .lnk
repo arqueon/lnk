@@ -20,6 +20,7 @@
 .config/niri/scripts/conectar_audio.sh
 .config/niri/scripts/ejecutar_music.sh
 .config/niri/scripts/gpu_recorder.sh
+.config/niri/scripts/hermes-sinope
 .config/niri/scripts/launch-anytype.sh
 .config/niri/scripts/launch-hermes.sh
 .config/niri/scripts/launch-media-apps.sh

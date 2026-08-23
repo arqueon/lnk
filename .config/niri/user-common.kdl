@@ -88,8 +88,8 @@ binds {
 
 // ── Fixes para apps Java (JDownloader, etc.) ──
 environment {
-    _JAVA_AWT_WM_NONREPARENTING "1"
-    _JAVA_OPTIONS "-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
+    "_JAVA_AWT_WM_NONREPARENTING" "1"
+    "_JAVA_OPTIONS" "-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
 }
 
 // ── Bordes inactivos más oscuros que los del tema DMS ──
