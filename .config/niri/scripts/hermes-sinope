@@ -223,22 +223,39 @@ desktop() {
   chmod 600 "${temp_file}"
   mv "${temp_file}" "${connection_file}"
 
-  # Remove the short-lived registry entry created by the first implementation.
-  # The current Desktop build otherwise opens the same SSH source twice: once
-  # as its primary v1 connection and again while enumerating the v2 registry.
-  # Connection mode still appears correctly as "Connect via SSH" in Settings.
+  # Keep Desktop's v2 registry aligned with the v1 SSH connection above.  If
+  # the registry falls back to its mandatory local entry as primary, Desktop
+  # connects to Sinope and then starts a second, local `hermes serve`; the UI
+  # consequently lands on the local backend instead of the remote agent.
   if [[ -s "${registry_file}" ]] && jq -e 'type == "object"' "${registry_file}" >/dev/null 2>&1; then
     temp_file="$(mktemp "${desktop_user_data}/connections.json.XXXXXX")"
-    jq --arg id "${connection_id}" '
+    jq --arg id "${connection_id}" --arg label "Sinope · ${display_name}" \
+      --arg host "${sinope_host}" --arg user "${remote_user}" \
+      --arg key "${key_path}" --arg hermes "${remote_home}/.local/bin/hermes" '
       .connections = (
-        [(.connections // [])[] | select(.id != $id)]
+        [(.connections // [])[]
+          | select(.id != $id)
+          | select(.kind != "ssh" or .host != $host or (.user // "") != $user)]
         | if any(.[]; .kind == "local")
           then .
           else [{id: "local", kind: "local", label: "This device"}] + .
           end
+        | . + [
+            ({
+              id: $id,
+              kind: "ssh",
+              label: $label,
+              host: $host,
+              user: $user,
+              port: 22,
+              remoteHermesPath: $hermes
+            } + (if $key != "" then {keyPath: $key} else {} end))
+          ]
       )
-      | if .primary == $id then .primary = "local" else . end
-      | if .lastUsed == $id then .lastUsed = (.primary // "local") else . end
+      | .version = 2
+      | .primary = $id
+      | .lastUsed = $id
+      | .launchMode = "primary"
     ' "${registry_file}" >"${temp_file}"
     chmod 600 "${temp_file}"
     mv "${temp_file}" "${registry_file}"
