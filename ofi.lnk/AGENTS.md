@@ -61,30 +61,3 @@ decisión persistida viven en el `.md`.
 
 Esto no aplica a respuestas breves o preguntas simples que no generen artefacto, decisión,
 comparación ni autorización.
-
-## Producción y revisión de contenidos educativos → escritura pública comprensible
-
-La skill de diseño instruccional agéntico queda **retirada** y no debe usarse. Tampoco se exige
-su pasaporte, sus compuertas ni su proceso. Para crear, revisar o adaptar materiales destinados
-a estudiantes, docentes o públicos no especializados, aplicar únicamente el criterio duradero
-de la página Logseq `[[Redacción pública comprensible]]`.
-
-- La arquitectura interna puede ser técnica; el producto público debe ser **didáctico,
-  divulgativo, ilustrativo, accesible y reiterativo**.
-- Claridad no significa pérdida de rigor: explicar primero el fenómeno en lenguaje común,
-  introducir después el concepto necesario, conservar sus distinciones, identificar qué aporta
-  cada fuente y separar teoría, hallazgo empírico, revisión y recomendación práctica.
-- Toda idea central se desarrolla mediante situación reconocible, explicación cotidiana,
-  concepto, relaciones, ejemplo trabajado, contraste o límite, uso y recapitulación.
-- Definir términos en el punto de uso y explicar cómo y bajo qué condiciones se relacionan los
-  fenómenos. El glosario y la bibliografía apoyan la explicación; no la sustituyen.
-- La prosa explicativa precede a tablas, listas, tarjetas, diapositivas y diagramas. Cada visual
-  responde una pregunta, muestra una dirección de lectura, explica su conclusión y ofrece una
-  alternativa textual equivalente.
-- Las actividades declaran situación, propósito, secuencia, apoyos, producto, criterio de
-  avance, ejemplo no copiable y vía de entrada para quien no comprende el punto de partida.
-- Códigos, compuertas, estados, pendientes, nombres de fases e instrucciones de agentes
-  permanecen en documentos internos. No aparecen en el producto público salvo que sean objeto
-  explícito de aprendizaje.
-- Revisar el render real desde teléfono y sin contexto interno. La validación automática no
-  sustituye mirar, leer y comprobar que una persona externa pueda comprender el material.
