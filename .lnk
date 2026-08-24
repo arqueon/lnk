@@ -15,6 +15,9 @@
 .config/matugen/templates/fuzzel-colors.ini
 .config/niri/animations.kdl
 .config/niri/config.kdl
+.config/niri/data/homelab-services.json
+.config/niri/data/nas-btb-services.tsv
+.config/niri/data/sinope-services.tsv
 .config/niri/dms/binds.kdl
 .config/niri/dms/windowrules.kdl
 .config/niri/environment.kdl
@@ -28,10 +31,11 @@
 .config/niri/scripts/launch-anytype.sh
 .config/niri/scripts/launch-hermes-one.sh
 .config/niri/scripts/launch-hermes.sh
-.config/niri/scripts/launch-opendesign-hermes.sh
+.config/niri/scripts/launch-homelab-menu.sh
 .config/niri/scripts/launch-media-apps.sh
 .config/niri/scripts/launch-mindwtr.sh
 .config/niri/scripts/launch-niri-matrix.sh
+.config/niri/scripts/launch-opendesign-hermes.sh
 .config/niri/scripts/launch-quad-agents2.sh
 .config/niri/scripts/launch-quad-kitty.sh
 .config/niri/scripts/launch-quad-niri.sh
@@ -40,6 +44,7 @@
 .config/niri/scripts/run_chrome.sh
 .config/niri/scripts/run_stream.sh
 .config/niri/scripts/sdoc-open.sh
+.config/niri/scripts/sync-homelab-services.py
 .config/niri/startup.kdl
 .config/niri/user-common.kdl
 .config/niri/window-rules.kdl
