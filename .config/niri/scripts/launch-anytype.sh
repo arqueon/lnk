@@ -1,30 +1,43 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-# Directorio de aplicaciones
-APP_DIR="$HOME/Applications"
+find_shelly_appimage() {
+  command -v shelly >/dev/null 2>&1 || return 1
+  command -v jq >/dev/null 2>&1 || return 1
 
-# Buscar el ejecutable de Anytype más reciente
-# El glob anytype_* captura el nombre específico encontrado
-APP_PATH=$(ls -t "$APP_DIR"/anytype_* 2>/dev/null | head -n 1)
+  shelly list appimage --json 2>/dev/null \
+    | jq -r '
+        map(select((.DesktopName // "") == "Anytype"))
+        | last
+        | .Path // empty
+      '
+}
 
-if [ -n "$APP_PATH" ] && [ -f "$APP_PATH" ]; then
-    echo "Lanzando Anytype desde: $APP_PATH"
-    
-    # 1. Matar procesos anteriores para evitar conflictos
-    # Usamos -x para buscar el nombre exacto del proceso y evitar que el script se mate a sí mismo
-    pkill -x "anytype" || true
-    sleep 1
+app_path="$(find_shelly_appimage || true)"
 
-    # 2. Entrar al directorio de la aplicación
-    cd "$APP_DIR"
-
-    # 3. Ejecutar la aplicación
-    # Redirigimos la salida a /dev/null para que no ensucie los logs
-    "$APP_PATH" > /dev/null 2>&1 &
-    
-    # Desvincular el proceso para que siga vivo tras cerrar el script
-    disown
-else
-    echo "Error: No se encontró Anytype en $APP_DIR"
-    exit 1
+# Compatibility fallback for stations not migrated to Shelly yet.
+if [[ -z "${app_path}" || ! -x "${app_path}" ]]; then
+  app_path="$(find "${HOME}/Applications" -maxdepth 1 -type f -name 'anytype_*' -printf '%T@ %p\n' 2>/dev/null \
+    | sort -nr \
+    | head -n 1 \
+    | cut -d' ' -f2- || true)"
 fi
+
+if [[ -z "${app_path}" || ! -x "${app_path}" ]]; then
+  notify-send -u critical "Anytype" \
+    "No se encontró una AppImage de Anytype administrada por Shelly."
+  exit 1
+fi
+
+# Restart the single-instance app so Mod+F10 always brings up a fresh window.
+pkill -x anytype >/dev/null 2>&1 || true
+sleep 1
+
+args=()
+host_name="$(hostnamectl --static 2>/dev/null || hostname 2>/dev/null || true)"
+if [[ "${host_name}" == abdel* ]]; then
+  args+=(--ozone-platform=x11)
+fi
+
+cd -- "$(dirname -- "${app_path}")"
+exec "${app_path}" "${args[@]}" >/dev/null 2>&1
