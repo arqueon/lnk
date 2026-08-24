@@ -43,6 +43,10 @@ binds {
     Mod+Alt+F12 { spawn "smile"; } // selector de emojis
     Mod+D { spawn "dmail" "show"; } // notificador de correo dankmail (solo casa)
 
+    // ── Servicios Homelab (Sinope y NAS-BTB) ──
+    Mod+Ctrl+S hotkey-overlay-title="Servicios Sinope" { spawn "~/.config/niri/scripts/launch-homelab-menu.sh" "sinope"; }
+    Mod+Ctrl+B hotkey-overlay-title="Servicios NAS BTB" { spawn "~/.config/niri/scripts/launch-homelab-menu.sh" "nas-btb"; }
+
     // ── Otras apps ──
     Mod+Ctrl+N { spawn "newsflash"; }
     Mod+Ctrl+M { spawn-sh "~/.config/niri/scripts/run_stream.sh"; }

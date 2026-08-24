@@ -1,0 +1,709 @@
+{
+  "updated": "2026-08-24",
+  "sinope": [
+    {
+      "name": "Nextcloud",
+      "url": "https://nextcloud.arqueonautis.org",
+      "category": "Productividad",
+      "desc": "Archivos, sincronización y oficina",
+      "icon": "󰒋",
+      "order": 10,
+      "server": "sinope"
+    },
+    {
+      "name": "Digipad",
+      "url": "https://muros.arqueonautis.org",
+      "category": "Docencia",
+      "desc": "Muros y pizarras colaborativas",
+      "icon": "󰽉",
+      "order": 12,
+      "server": "sinope"
+    },
+    {
+      "name": "Vikunja Tasks",
+      "url": "https://tasks.arqueonautis.org",
+      "category": "Productividad",
+      "desc": "Gestión de tareas y proyectos",
+      "icon": "󰊢",
+      "order": 15,
+      "server": "sinope"
+    },
+    {
+      "name": "Mealie",
+      "url": "https://mealie.arqueonautis.org",
+      "category": "Hogar",
+      "desc": "Gestión de recetas y planificador de menú",
+      "icon": "󰄛",
+      "order": 20,
+      "server": "sinope"
+    },
+    {
+      "name": "Cal.com",
+      "url": "https://cal.arqueonautis.org",
+      "category": "Productividad",
+      "desc": "Agendamiento de citas y calendario",
+      "icon": "󰊓",
+      "order": 22,
+      "server": "sinope"
+    },
+    {
+      "name": "Linkwarden",
+      "url": "https://linkwarden.arqueonautis.org",
+      "category": "Productividad",
+      "desc": "Archivo y guardado de enlaces web",
+      "icon": "󰌹",
+      "order": 25,
+      "server": "sinope"
+    },
+    {
+      "name": "LinkBreeze",
+      "url": "https://links.arqueonautis.org",
+      "category": "Productividad",
+      "desc": "Páginas públicas de enlaces",
+      "icon": "󰛄",
+      "order": 26,
+      "server": "sinope"
+    },
+    {
+      "name": "Wallabag",
+      "url": "https://wallabag.arqueonautis.org",
+      "category": "Productividad",
+      "desc": "Lectura diferida (read-it-later)",
+      "icon": "󰈙",
+      "order": 28,
+      "server": "sinope"
+    },
+    {
+      "name": "Miniflux",
+      "url": "https://miniflux.arqueonautis.org",
+      "category": "Productividad",
+      "desc": "Lector RSS minimalista",
+      "icon": "󰑈",
+      "order": 30,
+      "server": "sinope"
+    },
+    {
+      "name": "BentoPDF",
+      "url": "https://pdf.arqueonautis.org",
+      "category": "Utilidades",
+      "desc": "Herramientas de manipulación de PDF",
+      "icon": "󰈦",
+      "order": 32,
+      "server": "sinope"
+    },
+    {
+      "name": "LimeSurvey",
+      "url": "https://survey.arqueonautis.org",
+      "category": "Docencia",
+      "desc": "Encuestas y recolección de datos",
+      "icon": "󰕥",
+      "order": 34,
+      "server": "sinope"
+    },
+    {
+      "name": "Particify",
+      "url": "https://particify.arqueonautis.org",
+      "category": "Docencia",
+      "desc": "Participación interactiva en clases",
+      "icon": "󰙴",
+      "order": 36,
+      "server": "sinope"
+    },
+    {
+      "name": "Claper",
+      "url": "https://claper.arqueonautis.org",
+      "category": "Docencia",
+      "desc": "Presentaciones interactivas",
+      "icon": "󰍡",
+      "order": 38,
+      "server": "sinope"
+    },
+    {
+      "name": "Moodle Dev",
+      "url": "https://moodle-dev.arqueonautis.org",
+      "category": "Docencia",
+      "desc": "Entorno de desarrollo de microcursos",
+      "icon": "󰏤",
+      "order": 40,
+      "server": "sinope"
+    },
+    {
+      "name": "Actual Budget",
+      "url": "https://actual.arqueonautis.org",
+      "category": "Finanzas",
+      "desc": "Presupuesto personal basado en sobres",
+      "icon": "󰄲",
+      "order": 42,
+      "server": "sinope"
+    },
+    {
+      "name": "Home Assistant",
+      "url": "https://ha.arqueonautis.org",
+      "category": "Hogar",
+      "desc": "Automatización y control del hogar",
+      "icon": "󰟀",
+      "order": 45,
+      "server": "sinope"
+    },
+    {
+      "name": "Jellyfin",
+      "url": "https://jellyfin.arqueonautis.org",
+      "category": "Media",
+      "desc": "Servidor de cine y series",
+      "icon": "󰕼",
+      "order": 50,
+      "server": "sinope"
+    },
+    {
+      "name": "Immich",
+      "url": "https://immich.arqueonautis.org",
+      "category": "Media",
+      "desc": "Gestor y galería fotográfica",
+      "icon": "󰵂",
+      "order": 52,
+      "server": "sinope"
+    },
+    {
+      "name": "Navidrome",
+      "url": "https://navidrome.arqueonautis.org",
+      "category": "Media",
+      "desc": "Servidor de streaming de música",
+      "icon": "󰋋",
+      "order": 54,
+      "server": "sinope"
+    },
+    {
+      "name": "Seerr (Overseerr)",
+      "url": "https://seerr.arqueonautis.org",
+      "category": "Media",
+      "desc": "Solicitudes y descubrimiento multimedia",
+      "icon": "󰄛",
+      "order": 56,
+      "server": "sinope"
+    },
+    {
+      "name": "Foreseerr",
+      "url": "https://foreseerr.arqueonautis.org",
+      "category": "Media",
+      "desc": "Descubrimiento multimedia alternativo",
+      "icon": "󰄛",
+      "order": 57,
+      "server": "sinope"
+    },
+    {
+      "name": "Sonarr",
+      "url": "https://sonarr.arqueonautis.org",
+      "category": "Media Arr",
+      "desc": "Gestión automática de series",
+      "icon": "󰚗",
+      "order": 60,
+      "server": "sinope"
+    },
+    {
+      "name": "Radarr",
+      "url": "https://radarr.arqueonautis.org",
+      "category": "Media Arr",
+      "desc": "Gestión automática de películas",
+      "icon": "󰚗",
+      "order": 62,
+      "server": "sinope"
+    },
+    {
+      "name": "Lidarr",
+      "url": "https://lidarr.arqueonautis.org",
+      "category": "Media Arr",
+      "desc": "Gestión automática de música",
+      "icon": "󰚗",
+      "order": 64,
+      "server": "sinope"
+    },
+    {
+      "name": "Bazarr",
+      "url": "https://bazarr.arqueonautis.org",
+      "category": "Media Arr",
+      "desc": "Gestión de subtítulos",
+      "icon": "󰚗",
+      "order": 66,
+      "server": "sinope"
+    },
+    {
+      "name": "Profilarr",
+      "url": "https://profilarr.arqueonautis.org",
+      "category": "Media Arr",
+      "desc": "Sincronización de perfiles TRaSH",
+      "icon": "󰚗",
+      "order": 68,
+      "server": "sinope"
+    },
+    {
+      "name": "Tautulli",
+      "url": "https://tautulli.arqueonautis.org",
+      "category": "Media",
+      "desc": "Estadísticas y monitoreo Plex/Jellyfin",
+      "icon": "󰄛",
+      "order": 70,
+      "server": "sinope"
+    },
+    {
+      "name": "Aurral",
+      "url": "https://aurral.arqueonautis.org",
+      "category": "Media",
+      "desc": "Recomendaciones musicales Last.fm para Lidarr",
+      "icon": "󰋋",
+      "order": 72,
+      "server": "sinope"
+    },
+    {
+      "name": "qBittorrent Sinope",
+      "url": "https://qbittorrent.arqueonautis.org",
+      "category": "Descargas",
+      "desc": "Cliente BitTorrent en Sinope",
+      "icon": "󰒍",
+      "order": 75,
+      "server": "sinope"
+    },
+    {
+      "name": "SABnzbd",
+      "url": "https://sabnzbd.arqueonautis.org",
+      "category": "Descargas",
+      "desc": "Cliente de descargas Usenet",
+      "icon": "󰇚",
+      "order": 77,
+      "server": "sinope"
+    },
+    {
+      "name": "slskd (Soulseek)",
+      "url": "https://slskd.arqueonautis.org",
+      "category": "Descargas",
+      "desc": "Cliente Soulseek P2P vía VPS",
+      "icon": "󰇚",
+      "order": 79,
+      "server": "sinope"
+    },
+    {
+      "name": "Uptime Kuma",
+      "url": "https://kuma.arqueonautis.org",
+      "category": "Monitoreo",
+      "desc": "Disponibilidad sintética del Homelab",
+      "icon": "󱓞",
+      "order": 80,
+      "server": "sinope"
+    },
+    {
+      "name": "Coolify",
+      "url": "https://coolify.arqueonautis.org",
+      "category": "Infraestructura",
+      "desc": "Panel de aplicaciones y despliegues",
+      "icon": "󰒋",
+      "order": 82,
+      "server": "sinope"
+    },
+    {
+      "name": "AdGuard Home",
+      "url": "https://adguard.arqueonautis.org",
+      "category": "Infraestructura",
+      "desc": "DNS filtrante y control de red",
+      "icon": "󰒋",
+      "order": 84,
+      "server": "sinope"
+    },
+    {
+      "name": "Vaultwarden (Arqueonautis)",
+      "url": "https://vault.arqueonautis.org",
+      "category": "Seguridad",
+      "desc": "Gestor de contraseñas personal",
+      "icon": "󰌋",
+      "order": 86,
+      "server": "sinope"
+    },
+    {
+      "name": "n8n Sinope",
+      "url": "https://automation.arqueonautis.org",
+      "category": "Automatización",
+      "desc": "Flujos y automatizaciones del servidor",
+      "icon": "󰦨",
+      "order": 88,
+      "server": "sinope"
+    },
+    {
+      "name": "Anytype",
+      "url": "https://anytype.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en anytype.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Btb",
+      "url": "https://btb.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en btb.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Cleanuparr",
+      "url": "https://cleanuparr.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en cleanuparr.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Cursos-ia",
+      "url": "https://cursos-ia.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en cursos-ia.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "ntfy Sinope",
+      "url": "https://notify.arqueonautis.org",
+      "category": "Monitoreo",
+      "desc": "Servidor de notificaciones push",
+      "icon": "󰂚",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Plane",
+      "url": "https://plane.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en plane.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Sonobar",
+      "url": "https://sonobar.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en sonobar.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Sonobarr",
+      "url": "https://sonobarr.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en sonobarr.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "changedetection.io",
+      "url": "https://changes.arqueonautis.org",
+      "category": "Monitoreo",
+      "desc": "Vigilancia de cambios en páginas web",
+      "icon": "󰛐",
+      "order": 92,
+      "server": "sinope"
+    },
+    {
+      "name": "Nextcloud AIO Panel",
+      "url": "https://aio.arqueonautis.org",
+      "category": "Infraestructura",
+      "desc": "Panel de administración Nextcloud AIO",
+      "icon": "󰒋",
+      "order": 94,
+      "server": "sinope"
+    },
+    {
+      "name": "Mission Control",
+      "url": "https://mc.arqueonautis.org",
+      "category": "Agentes",
+      "desc": "Panel de control y despacho de Hermes",
+      "icon": "󰚩",
+      "order": 96,
+      "server": "sinope"
+    },
+    {
+      "name": "Hermes Web",
+      "url": "https://hermes.arqueonautis.org",
+      "category": "Agentes",
+      "desc": "Interfaz web de Hermes Agent",
+      "icon": "󰚩",
+      "order": 98,
+      "server": "sinope"
+    },
+    {
+      "name": "Tablero Sustancias",
+      "url": "https://tablero.analisissustanciaspsicoactivas.org",
+      "category": "Docencia",
+      "desc": "Tablero Shiny de análisis de sustancias",
+      "icon": "󰆼",
+      "order": 99,
+      "server": "sinope"
+    },
+    {
+      "name": "Actual MCP",
+      "url": "https://actual-mcp.arqueonautis.org/",
+      "category": "General",
+      "desc": "Actual MCP",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "sinope"
+    },
+    {
+      "name": "Arqueonautis.org",
+      "url": "https://arqueonautis.org",
+      "category": "General",
+      "desc": "Arqueonautis.org",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "sinope"
+    },
+    {
+      "name": "LanguageTool",
+      "url": "https://lt.arqueonautis.org/v2/languages",
+      "category": "General",
+      "desc": "LanguageTool",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "sinope"
+    },
+    {
+      "name": "Videostream",
+      "url": "https://videostream.arqueonautis.org",
+      "category": "General",
+      "desc": "Videostream",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "sinope"
+    }
+  ],
+  "nas_btb": [
+    {
+      "name": "Barbies Testeadoras Web",
+      "url": "https://barbiestesteadoras.org/",
+      "category": "Público",
+      "desc": "Sitio web principal BTB",
+      "icon": "󰖟",
+      "order": 10,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Barbie Hacker",
+      "url": "https://hacker.barbiestesteadoras.org/",
+      "category": "Público",
+      "desc": "Portal de divulgación y guías BTB",
+      "icon": "󰖟",
+      "order": 12,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Grist BTB",
+      "url": "https://grist.barbiestesteadoras.org/",
+      "category": "Productividad",
+      "desc": "Bases de datos colaborativas y tablas",
+      "icon": "󰆼",
+      "order": 15,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Nextcloud BTB",
+      "url": "https://nextcloud.barbiestesteadoras.org/",
+      "category": "Productividad",
+      "desc": "Archivos compartidos y trabajo en equipo",
+      "icon": "󰒋",
+      "order": 20,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Collabora Online BTB",
+      "url": "https://collabora.barbiestesteadoras.org/",
+      "category": "Productividad",
+      "desc": "Edición ofimática en navegador",
+      "icon": "󰈙",
+      "order": 22,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Moodle BTB",
+      "url": "https://cursos.barbiestesteadoras.org/login/index.php",
+      "category": "Docencia",
+      "desc": "Plataforma de cursos y talleres",
+      "icon": "󰏤",
+      "order": 25,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Particify BTB",
+      "url": "https://vivo.barbiestesteadoras.org/",
+      "category": "Docencia",
+      "desc": "Participación interactiva en vivo",
+      "icon": "󰙴",
+      "order": 28,
+      "server": "nas-btb"
+    },
+    {
+      "name": "BentoPDF BTB",
+      "url": "https://pdf.barbiestesteadoras.org/",
+      "category": "Utilidades",
+      "desc": "Herramientas de documentos PDF",
+      "icon": "󰈦",
+      "order": 30,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Vaultwarden BTB",
+      "url": "https://vault.barbiestesteadoras.org/",
+      "category": "Seguridad",
+      "desc": "Gestor de contraseñas de organización",
+      "icon": "󰌋",
+      "order": 35,
+      "server": "nas-btb"
+    },
+    {
+      "name": "n8n BTB",
+      "url": "https://automatizaciones.barbiestesteadoras.org/",
+      "category": "Automatización",
+      "desc": "Automatizaciones e integraciones BTB",
+      "icon": "󰦨",
+      "order": 40,
+      "server": "nas-btb"
+    },
+    {
+      "name": "ntfy BTB",
+      "url": "https://notify.barbiestesteadoras.org/",
+      "category": "Monitoreo",
+      "desc": "Notificaciones centinela de NAS-BTB",
+      "icon": "󰂚",
+      "order": 42,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Jellyfin BTB",
+      "url": "https://media.barbiestesteadoras.org/",
+      "category": "Media",
+      "desc": "Videoteca de medios de BTB",
+      "icon": "󰕼",
+      "order": 50,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Immich BTB",
+      "url": "https://fotos.barbiestesteadoras.org/",
+      "category": "Media",
+      "desc": "Galería y respaldo de fotos BTB",
+      "icon": "󰵂",
+      "order": 52,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Formularios BTB",
+      "url": "https://formularios.barbiestesteadoras.org/",
+      "category": "Público",
+      "desc": "Formularios de registro e ingreso",
+      "icon": "󰕥",
+      "order": 60,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Portal Financiero BTB",
+      "url": "https://finanzas.barbiestesteadoras.org/",
+      "category": "Finanzas",
+      "desc": "Gestión financiera institucional",
+      "icon": "󰄲",
+      "order": 65,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Transparencia BTB",
+      "url": "https://transparencia.barbiestesteadoras.org/",
+      "category": "Público",
+      "desc": "Información pública y rendición de cuentas",
+      "icon": "󰖟",
+      "order": 70,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Documentación BTB",
+      "url": "https://docs.barbiestesteadoras.org/",
+      "category": "Documentación",
+      "desc": "Guías y base de conocimiento",
+      "icon": "󰈙",
+      "order": 72,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Ficha BTB",
+      "url": "https://ficha.barbiestesteadoras.org/",
+      "category": "Público",
+      "desc": "Fichas técnicas y registro",
+      "icon": "󰈙",
+      "order": 74,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Informes BTB",
+      "url": "https://informes.barbiestesteadoras.org/",
+      "category": "Documentación",
+      "desc": "Informes de actividades y resultados",
+      "icon": "󰈙",
+      "order": 76,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Muestreo BTB",
+      "url": "https://muestreo.barbiestesteadoras.org/",
+      "category": "Docencia",
+      "desc": "Registro de muestras y análisis",
+      "icon": "󰆼",
+      "order": 78,
+      "server": "nas-btb"
+    },
+    {
+      "name": "TrueNAS SCALE UI",
+      "url": "https://100.95.27.14/",
+      "category": "Infraestructura",
+      "desc": "Panel de administración TrueNAS (Tailscale)",
+      "icon": "󰒋",
+      "order": 80,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Grist origen",
+      "url": "http://100.95.27.14:30084/status",
+      "category": "General",
+      "desc": "NAS BTB · Grist origen",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Kuma testigo",
+      "url": "http://100.95.27.14:31050/",
+      "category": "General",
+      "desc": "NAS BTB · Kuma testigo",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Ruta www",
+      "url": "https://www.barbiestesteadoras.org/",
+      "category": "General",
+      "desc": "NAS BTB · Ruta www",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "nas-btb"
+    },
+    {
+      "name": "TURN videollamadas",
+      "url": "http://turn.barbiestesteadoras.org:3478",
+      "category": "General",
+      "desc": "NAS BTB · TURN videollamadas",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "nas-btb"
+    }
+  ]
+}
