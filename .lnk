@@ -8,8 +8,12 @@
 .config/fastfetch/logo_cachy.png
 .config/fish/config.fish
 .config/fusuma/config.yml
+.config/fuzzel/colors.ini
+.config/fuzzel/fuzzel.ini
 .config/ghostty/config
 .config/kitty/kitty.conf
+.config/matugen/config.toml
+.config/matugen/templates/fuzzel-colors.ini
 .config/niri/animations.kdl
 .config/niri/config.kdl
 .config/niri/dms/binds.kdl
@@ -20,11 +24,11 @@
 .config/niri/scripts/conectar_audio.sh
 .config/niri/scripts/ejecutar_music.sh
 .config/niri/scripts/gpu_recorder.sh
-.config/niri/scripts/hermes-sinope
 .config/niri/scripts/hermes-remote-tmux.conf
+.config/niri/scripts/hermes-sinope
 .config/niri/scripts/launch-anytype.sh
-.config/niri/scripts/launch-hermes.sh
 .config/niri/scripts/launch-hermes-one.sh
+.config/niri/scripts/launch-hermes.sh
 .config/niri/scripts/launch-media-apps.sh
 .config/niri/scripts/launch-mindwtr.sh
 .config/niri/scripts/launch-niri-matrix.sh
