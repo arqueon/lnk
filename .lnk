@@ -8,7 +8,6 @@
 .config/fastfetch/logo_cachy.png
 .config/fish/config.fish
 .config/fusuma/config.yml
-.config/fuzzel/colors.ini
 .config/fuzzel/fuzzel.ini
 .config/ghostty/config
 .config/kitty/kitty.conf
