@@ -9,7 +9,7 @@ input {
         xkb {
             layout "us"
             variant "intl"
-            options "caps:return,altwin:menu_win"
+            options "ctrl:nocaps,altwin:menu_win"
         }
         repeat-delay 300
         repeat-rate 25

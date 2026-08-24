@@ -39,7 +39,7 @@ decisión persistida viven en el `.md`.
 - Si contiene imágenes locales, ejecutar **antes de abrirlo**
   `sdoc-embed-images <archivo.md> --compress`. El helper incrusta WebP de alta nitidez (máximo 1920 px y calidad 88) para preservar el texto y detalles de capturas/gráficos sin bloquear HTTPS. Si se requieren detalles extremadamente finos, puede usarse `--max-dim 2048 --quality 92`.
 - Si el documento es masivo o su URL supera aproximadamente 120 KB, generar el enlace corto
-  con `sdoc share <archivo.md> --short` y abrir ese enlace en lugar de forzar la URL local.
+  con `sdoc share <archivo.md> --short` y abrir ese enlace en lugar de forzar la URL local; o en modo editable abrir vía `sdoc bridge` omitiendo el parámetro `&md=` para que el contenido viaje directamente por el socket local (127.0.0.1) sin topar con el límite `E2BIG` (128 KB) del sistema operativo.
 - Al cerrar, clasificar el SmallDoc: si aporta memoria duradera —decisión confirmada,
   arquitectura, procedimiento, QA o contexto reutilizable— convertirlo en una página real
   bajo `/home/ruben/Nextcloud/Projects/arq-graph/pages/`, con cabecera Logseq y nombre
