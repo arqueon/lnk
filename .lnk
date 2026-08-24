@@ -60,7 +60,6 @@
 .local/bin/sdoc-open
 .local/bin/variety-favorite-shared
 .local/bin/variety-favorites-bootstrap
-.local/share/applications/google-chrome-beta.desktop
 .local/share/applications/sdoc.desktop
 .sdocs/styles.yaml
 .zshrc
