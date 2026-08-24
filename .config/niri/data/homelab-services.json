@@ -353,15 +353,6 @@
       "server": "sinope"
     },
     {
-      "name": "Cursos-ia",
-      "url": "https://cursos-ia.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en cursos-ia.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
       "name": "ntfy Sinope",
       "url": "https://notify.arqueonautis.org",
       "category": "Monitoreo",
@@ -384,15 +375,6 @@
       "url": "https://sonobar.arqueonautis.org",
       "category": "Servicios",
       "desc": "Servicio en sonobar.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
-      "name": "Sonobarr",
-      "url": "https://sonobarr.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en sonobarr.arqueonautis.org",
       "icon": "󰒋",
       "order": 90,
       "server": "sinope"
@@ -461,10 +443,28 @@
       "server": "sinope"
     },
     {
+      "name": "Cursos IA",
+      "url": "https://cursos-ia.arqueonautis.org",
+      "category": "General",
+      "desc": "Cursos IA",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "sinope"
+    },
+    {
       "name": "LanguageTool",
       "url": "https://lt.arqueonautis.org/v2/languages",
       "category": "General",
       "desc": "LanguageTool",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "sinope"
+    },
+    {
+      "name": "Sonobarr",
+      "url": "https://sonobarr.arqueonautis.org",
+      "category": "General",
+      "desc": "Sonobarr",
       "icon": "󰒋",
       "order": 100,
       "server": "sinope"
@@ -683,6 +683,15 @@
       "url": "http://100.95.27.14:31050/",
       "category": "General",
       "desc": "NAS BTB · Kuma testigo",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "nas-btb"
+    },
+    {
+      "name": "LinkBreeze",
+      "url": "https://links.barbiestesteadoras.org",
+      "category": "General",
+      "desc": "NAS BTB · LinkBreeze",
       "icon": "󰒋",
       "order": 100,
       "server": "nas-btb"

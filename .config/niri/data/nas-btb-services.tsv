@@ -21,5 +21,6 @@
 󰒋 TrueNAS SCALE UI	https://100.95.27.14/	Infraestructura	Panel de administración TrueNAS (Tailscale)
 󰒋 Grist origen	http://100.95.27.14:30084/status	General	NAS BTB · Grist origen
 󰒋 Kuma testigo	http://100.95.27.14:31050/	General	NAS BTB · Kuma testigo
+󰒋 LinkBreeze	https://links.barbiestesteadoras.org	General	NAS BTB · LinkBreeze
 󰒋 Ruta www	https://www.barbiestesteadoras.org/	General	NAS BTB · Ruta www
 󰒋 TURN videollamadas	http://turn.barbiestesteadoras.org:3478	General	NAS BTB · TURN videollamadas
