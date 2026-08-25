@@ -331,9 +331,8 @@ alias kpi="killall picom"
 # hardware info --short
 alias hw="hwinfo --short"
 
-# fastfetch --short
-alias fastfetch="fastfetch-format"
-alias ff="fastfetch-format"
+# Fastfetch nativo; sin wrapper de ancho fijo
+alias ff="fastfetch"
 alias neo="neofetch"
 
 # audio check pulseaudio or pipewire
@@ -550,10 +549,6 @@ set fish_color_search_match --background="#60AEFF"
 
 # reporting tools - leave this in for ATT
 if status --is-interactive && type -q fastfetch
-    if type -q pokemon-colorscripts
-        pokemon-colorscripts -r --no-title
-        echo ""
-    end
     fastfetch
 end
 

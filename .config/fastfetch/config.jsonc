@@ -4,182 +4,75 @@
     "type": "none"
   },
   "display": {
-    "separator": " │  ",
-    "color": {
-      "separator": "red"
-    },
-    "constants": [
-      "───────────────────────────────────────────────────────────────────────────"
-    ]
+    "separator": ": "
   },
   "modules": [
-    // --- CAJA SUPERIOR Y TÍTULO ---
     {
-      "format": "{#1}{#keys}┌{$1}┐\u001b[76D {user-name-colored}{at-symbol-colored}{host-name-colored} 💻 ",
-      "type": "title"
+      "type": "title",
+      "format": "{user-name-colored}{at-symbol-colored}{host-name-colored}"
     },
-    
-    // --- SECCIÓN: SYSTEM ---
-    {
-      "key": "\u001b[31m󰅐 uptime\u001b[0m",
-      "type": "uptime"
-    },
-    {
-      "key": "\u001b[31m kernel\u001b[0m",
-      "type": "kernel"
-    },
-    {
-      "key": "\u001b[31m distro\u001b[0m",
-      "type": "os"
-    },
-    {
-      "key": "\u001b[36m shell\u001b[0m",
-      "type": "shell"
-    },
-    {
-      "key": "\u001b[36m term\u001b[0m",
-      "type": "terminal"
-    },
-    {
-      "key": "\u001b[36m󰏖 packages\u001b[0m",
-      "type": "packages"
-    },
-    
-    // --- SECCIÓN: DESKTOP & THEMES ---
-    {
-      "format": "{#1}{#keys}├{$1}┤",
-      "type": "custom"
-    },
-    {
-      "key": "\u001b[32m󰇄 desktop\u001b[0m",
-      "type": "de"
-    },
-    {
-      "key": "\u001b[32m󰭎 wm\u001b[0m",
-      "type": "wm"
-    },
-    {
-      "key": "\u001b[32m󰭎 wm theme\u001b[0m",
-      "type": "wmtheme"
-    },
-    {
-      "key": "\u001b[35m󰓗 gtk theme\u001b[0m",
-      "type": "theme"
-    },
-    {
-      "key": "\u001b[35m󰏘 gtk icons\u001b[0m",
-      "type": "icons"
-    },
-    {
-      "key": "\u001b[35m󰳽 gtk curs\u001b[0m",
-      "type": "cursor"
-    },
+    "break",
+
+    { "type": "custom", "format": "{#red}SISTEMA{#}" },
+    { "type": "uptime", "key": "Actividad", "keyColor": "red" },
+    { "type": "kernel", "key": "Kernel", "keyColor": "red" },
+    { "type": "os", "key": "Sistema", "keyColor": "red" },
+    { "type": "shell", "key": "Shell", "keyColor": "cyan" },
+    { "type": "terminal", "key": "Terminal", "keyColor": "cyan" },
+    { "type": "packages", "key": "Paquetes", "keyColor": "cyan" },
+    "break",
+
+    { "type": "custom", "format": "{#green}ESCRITORIO Y TEMAS{#}" },
+    { "type": "de", "key": "Escritorio", "keyColor": "green" },
+    { "type": "wm", "key": "Compositor", "keyColor": "green" },
+    { "type": "wmtheme", "key": "Tema WM", "keyColor": "green" },
+    { "type": "theme", "key": "Tema GTK", "keyColor": "magenta" },
+    { "type": "icons", "key": "Iconos GTK", "keyColor": "magenta" },
+    { "type": "cursor", "key": "Cursor GTK", "keyColor": "magenta" },
     {
       "type": "command",
-      "key": "\u001b[35m󰓗 qt5 style\u001b[0m",
+      "key": "Estilo Qt5",
+      "keyColor": "magenta",
       "text": "if [ -f ~/.config/qt5ct/qt5ct.conf ]; then out=\"$(grep '^style=' ~/.config/qt5ct/qt5ct.conf | cut -d'=' -f2) ($(grep '^color_scheme_path=' ~/.config/qt5ct/qt5ct.conf | xargs basename | cut -d'.' -f1))\"; else out=\"Matcha-dark-sea (via GTK3 integration)\"; fi; echo \"$out\""
     },
     {
       "type": "command",
-      "key": "\u001b[35m󰓗 qt6 style\u001b[0m",
+      "key": "Estilo Qt6",
+      "keyColor": "magenta",
       "text": "if [ -f ~/.config/qt6ct/qt6ct.conf ]; then out=\"$(grep '^style=' ~/.config/qt6ct/qt6ct.conf | cut -d'=' -f2) ($(grep '^color_scheme_path=' ~/.config/qt6ct/qt6ct.conf | xargs basename | cut -d'.' -f1))\"; else out=\"Matcha-dark-sea (via GTK3 integration)\"; fi; echo \"$out\""
     },
-    
-    // --- SECCIÓN: FONTS ---
-    {
-      "format": "{#1}{#keys}├{$1}┤",
-      "type": "custom"
-    },
-    {
-      "key": "\u001b[34m󰛖 gtk font\u001b[0m",
-      "type": "font"
-    },
+    "break",
+
+    { "type": "custom", "format": "{#blue}FUENTES{#}" },
+    { "type": "font", "key": "Fuente GTK", "keyColor": "blue" },
     {
       "type": "command",
-      "key": "\u001b[34m󰛖 qt fonts\u001b[0m",
+      "key": "Fuentes Qt",
+      "keyColor": "blue",
       "text": "if [ -f ~/.config/qt5ct/qt5ct.conf ]; then out=\"$(grep '^general=' ~/.config/qt5ct/qt5ct.conf | cut -d'\"' -f2 | cut -d',' -f1) (Gen) / $(grep '^fixed=' ~/.config/qt5ct/qt5ct.conf | cut -d'\"' -f2 | cut -d',' -f1) (Mono)\"; else out=\"Fira Sans (11pt)\"; fi; echo \"$out\""
     },
-    {
-      "key": "\u001b[34m󰛖 term font\u001b[0m",
-      "type": "terminalfont"
-    },
-    
-    // --- SECCIÓN: HARDWARE ---
-    {
-      "format": "{#1}{#keys}├{$1}┤",
-      "type": "custom"
-    },
-    {
-      "key": "\u001b[33m󰍛 cpu\u001b[0m",
-      "type": "cpu",
-      "showPeCoreCount": true,
-      "temp": true
-    },
-    {
-      "key": "\u001b[33m󰍛 gpu\u001b[0m",
-      "type": "gpu"
-    },
-    {
-      "key": "\u001b[33m memory\u001b[0m",
-      "type": "memory"
-    },
-    {
-      "key": "\u001b[33m󰓡 swap\u001b[0m",
-      "type": "swap"
-    },
-    {
-      "key": "\u001b[33m󰍹 display\u001b[0m",
-      "type": "display"
-    },
-    
-    // --- SECCIÓN: STORAGE ---
-    {
-      "format": "{#1}{#keys}├{$1}┤",
-      "type": "custom"
-    },
-    {
-      "key": "\u001b[36m󰉉 disk (/)\u001b[0m",
-      "type": "disk",
-      "folders": "/"
-    },
-    {
-      "key": "\u001b[36m󰉉 disk (home)\u001b[0m",
-      "type": "disk",
-      "folders": "/home"
-    },
-    {
-      "key": "\u001b[36m󰉉 disk (sync)\u001b[0m",
-      "type": "disk",
-      "folders": "/media/insync"
-    },
-    
-    // --- SECCIÓN: NETWORK ---
-    {
-      "format": "{#1}{#keys}├{$1}┤",
-      "type": "custom"
-    },
-    {
-      "key": "\u001b[31m󰩟 local ip\u001b[0m",
-      "type": "localip"
-    },
-    {
-      "key": "\u001b[31m󰩟 public ip\u001b[0m",
-      "type": "publicip",
-      "timeout": 1000
-    },
-    
-    // --- SECCIÓN: COLORS & CAJA INFERIOR ---
-    {
-      "format": "{#1}{#keys}├{$1}┤",
-      "type": "custom"
-    },
-    {
-      "type": "custom",
-      "format": "{#35}󰏘 colors{#} │  \u001b[31m● \u001b[32m● \u001b[33m● \u001b[34m● \u001b[35m● \u001b[36m● \u001b[37m● \u001b[38m●"
-    },
-    {
-      "format": "{#1}{#keys}└{$1}┘",
-      "type": "custom"
-    }
+    { "type": "terminalfont", "key": "Fuente term.", "keyColor": "blue" },
+    "break",
+
+    { "type": "custom", "format": "{#yellow}HARDWARE{#}" },
+    { "type": "cpu", "key": "CPU", "keyColor": "yellow", "showPeCoreCount": true, "temp": true },
+    { "type": "gpu", "key": "GPU", "keyColor": "yellow" },
+    { "type": "memory", "key": "Memoria", "keyColor": "yellow" },
+    { "type": "swap", "key": "Swap", "keyColor": "yellow" },
+    { "type": "display", "key": "Pantalla", "keyColor": "yellow" },
+    "break",
+
+    { "type": "custom", "format": "{#cyan}ALMACENAMIENTO{#}" },
+    { "type": "disk", "key": "Raíz", "keyColor": "cyan", "folders": "/" },
+    { "type": "disk", "key": "Home", "keyColor": "cyan", "folders": "/home" },
+    { "type": "disk", "key": "Sync", "keyColor": "cyan", "folders": "/media/insync" },
+    "break",
+
+    { "type": "custom", "format": "{#red}RED{#}" },
+    { "type": "localip", "key": "IP local", "keyColor": "red" },
+    { "type": "publicip", "key": "IP pública", "keyColor": "red", "timeout": 1000 },
+    "break",
+
+    { "type": "colors", "key": "Colores", "keyColor": "magenta", "symbol": "circle" }
   ]
 }

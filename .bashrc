@@ -164,9 +164,8 @@ alias kpi='killall picom'
 # hardware info --short
 alias hw="hwinfo --short"
 
-# fastfetch --short
-alias fastfetch="fastfetch-format"
-alias ff="fastfetch-format"
+# Fastfetch nativo; sin wrapper de ancho fijo
+alias ff="fastfetch"
 
 # audio check pulseaudio or pipewire
 alias audio="pactl info | grep 'Server Name'"
@@ -434,7 +433,6 @@ alias personal='cp -Rf /personal/* ~'
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 # reporting tools - install when not installed
-pokemon-colorscripts -r --no-title
 fastfetch
 #neofetch
 #screenfetch
