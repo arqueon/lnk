@@ -11,6 +11,15 @@
 .config/fuzzel/fuzzel.ini
 .config/ghostty/config
 .config/kitty/kitty.conf
+.config/mango/data/nas-btb-services.tsv
+.config/mango/data/sinope-services.tsv
+.config/mango/scripts/hermes-remote-tmux.conf
+.config/mango/scripts/hermes-sinope
+.config/mango/scripts/launch-hermes-one.sh
+.config/mango/scripts/launch-hermes.sh
+.config/mango/scripts/launch-homelab-menu.sh
+.config/mango/scripts/launch-opendesign-hermes.sh
+.config/mango/scripts/run_chrome.sh
 .config/matugen/config.toml
 .config/matugen/templates/fuzzel-colors.ini
 .config/niri/animations.kdl

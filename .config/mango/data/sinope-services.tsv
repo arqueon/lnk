@@ -1,0 +1,53 @@
+󰒋	Nextcloud	https://nextcloud.arqueonautis.org	Productividad	Archivos, sincronización y oficina
+󰽉	Digipad	https://muros.arqueonautis.org	Docencia	Muros y pizarras colaborativas
+󰊢	Vikunja Tasks	https://tasks.arqueonautis.org	Productividad	Gestión de tareas y proyectos
+󰄛	Mealie	https://mealie.arqueonautis.org	Hogar	Gestión de recetas y planificador de menú
+󰊓	Cal.com	https://cal.arqueonautis.org	Productividad	Agendamiento de citas y calendario
+󰌹	Linkwarden	https://linkwarden.arqueonautis.org	Productividad	Archivo y guardado de enlaces web
+󰛄	LinkBreeze	https://links.arqueonautis.org	Productividad	Páginas públicas de enlaces
+󰈙	Wallabag	https://wallabag.arqueonautis.org	Productividad	Lectura diferida (read-it-later)
+󰑈	Miniflux	https://miniflux.arqueonautis.org	Productividad	Lector RSS minimalista
+󰈦	BentoPDF	https://pdf.arqueonautis.org	Utilidades	Herramientas de manipulación de PDF
+󰕥	LimeSurvey	https://survey.arqueonautis.org	Docencia	Encuestas y recolección de datos
+󰙴	Particify	https://particify.arqueonautis.org	Docencia	Participación interactiva en clases
+󰍡	Claper	https://claper.arqueonautis.org	Docencia	Presentaciones interactivas
+󰏤	Moodle Dev	https://moodle-dev.arqueonautis.org	Docencia	Entorno de desarrollo de microcursos
+󰄲	Actual Budget	https://actual.arqueonautis.org	Finanzas	Presupuesto personal basado en sobres
+󰟀	Home Assistant	https://ha.arqueonautis.org	Hogar	Automatización y control del hogar
+󰕼	Jellyfin	https://jellyfin.arqueonautis.org	Media	Servidor de cine y series
+󰵂	Immich	https://immich.arqueonautis.org	Media	Gestor y galería fotográfica
+󰋋	Navidrome	https://navidrome.arqueonautis.org	Media	Servidor de streaming de música
+󰄛	Seerr (Overseerr)	https://seerr.arqueonautis.org	Media	Solicitudes y descubrimiento multimedia
+󰄛	Foreseerr	https://foreseerr.arqueonautis.org	Media	Descubrimiento multimedia alternativo
+󰚗	Sonarr	https://sonarr.arqueonautis.org	Media Arr	Gestión automática de series
+󰚗	Radarr	https://radarr.arqueonautis.org	Media Arr	Gestión automática de películas
+󰚗	Lidarr	https://lidarr.arqueonautis.org	Media Arr	Gestión automática de música
+󰚗	Bazarr	https://bazarr.arqueonautis.org	Media Arr	Gestión de subtítulos
+󰚗	Profilarr	https://profilarr.arqueonautis.org	Media Arr	Sincronización de perfiles TRaSH
+󰄛	Tautulli	https://tautulli.arqueonautis.org	Media	Estadísticas y monitoreo Plex/Jellyfin
+󰋋	Aurral	https://aurral.arqueonautis.org	Media	Recomendaciones musicales Last.fm para Lidarr
+󰒍	qBittorrent Sinope	https://qbittorrent.arqueonautis.org	Descargas	Cliente BitTorrent en Sinope
+󰇚	SABnzbd	https://sabnzbd.arqueonautis.org	Descargas	Cliente de descargas Usenet
+󰇚	slskd (Soulseek)	https://slskd.arqueonautis.org	Descargas	Cliente Soulseek P2P vía VPS
+󱓞	Uptime Kuma	https://kuma.arqueonautis.org	Monitoreo	Disponibilidad sintética del Homelab
+󰒋	Coolify	https://coolify.arqueonautis.org	Infraestructura	Panel de aplicaciones y despliegues
+󰒋	AdGuard Home	https://adguard.arqueonautis.org	Infraestructura	DNS filtrante y control de red
+󰌋	Vaultwarden (Arqueonautis)	https://vault.arqueonautis.org	Seguridad	Gestor de contraseñas personal
+󰦨	n8n Sinope	https://automation.arqueonautis.org	Automatización	Flujos y automatizaciones del servidor
+󰒋	Anytype	https://anytype.arqueonautis.org	Servicios	Servicio en anytype.arqueonautis.org
+󰒋	Btb	https://btb.arqueonautis.org	Servicios	Servicio en btb.arqueonautis.org
+󰒋	Cleanuparr	https://cleanuparr.arqueonautis.org	Servicios	Servicio en cleanuparr.arqueonautis.org
+󰂚	ntfy Sinope	https://notify.arqueonautis.org	Monitoreo	Servidor de notificaciones push
+󰒋	Plane	https://plane.arqueonautis.org	Servicios	Servicio en plane.arqueonautis.org
+󰒋	Sonobar	https://sonobar.arqueonautis.org	Servicios	Servicio en sonobar.arqueonautis.org
+󰛐	changedetection.io	https://changes.arqueonautis.org	Monitoreo	Vigilancia de cambios en páginas web
+󰒋	Nextcloud AIO Panel	https://aio.arqueonautis.org	Infraestructura	Panel de administración Nextcloud AIO
+󰚩	Mission Control	https://mc.arqueonautis.org	Agentes	Panel de control y despacho de Hermes
+󰚩	Hermes Web	https://hermes.arqueonautis.org	Agentes	Interfaz web de Hermes Agent
+󰆼	Tablero Sustancias	https://tablero.analisissustanciaspsicoactivas.org	Docencia	Tablero Shiny de análisis de sustancias
+󰒋	Actual MCP	https://actual-mcp.arqueonautis.org/	General	Actual MCP
+󰒋	Arqueonautis.org	https://arqueonautis.org	General	Arqueonautis.org
+󰒋	Cursos IA	https://cursos-ia.arqueonautis.org	General	Cursos IA
+󰒋	LanguageTool	https://lt.arqueonautis.org/v2/languages	General	LanguageTool
+󰒋	Sonobarr	https://sonobarr.arqueonautis.org	General	Sonobarr
+󰒋	Videostream	https://videostream.arqueonautis.org	General	Videostream

@@ -1,0 +1,26 @@
+󰖟	Barbies Testeadoras Web	https://barbiestesteadoras.org/	Público	Sitio web principal BTB
+󰖟	Barbie Hacker	https://hacker.barbiestesteadoras.org/	Público	Portal de divulgación y guías BTB
+󰆼	Grist BTB	https://grist.barbiestesteadoras.org/	Productividad	Bases de datos colaborativas y tablas
+󰒋	Nextcloud BTB	https://nextcloud.barbiestesteadoras.org/	Productividad	Archivos compartidos y trabajo en equipo
+󰈙	Collabora Online BTB	https://collabora.barbiestesteadoras.org/	Productividad	Edición ofimática en navegador
+󰏤	Moodle BTB	https://cursos.barbiestesteadoras.org/login/index.php	Docencia	Plataforma de cursos y talleres
+󰙴	Particify BTB	https://vivo.barbiestesteadoras.org/	Docencia	Participación interactiva en vivo
+󰈦	BentoPDF BTB	https://pdf.barbiestesteadoras.org/	Utilidades	Herramientas de documentos PDF
+󰌋	Vaultwarden BTB	https://vault.barbiestesteadoras.org/	Seguridad	Gestor de contraseñas de organización
+󰦨	n8n BTB	https://automatizaciones.barbiestesteadoras.org/	Automatización	Automatizaciones e integraciones BTB
+󰂚	ntfy BTB	https://notify.barbiestesteadoras.org/	Monitoreo	Notificaciones centinela de NAS-BTB
+󰕼	Jellyfin BTB	https://media.barbiestesteadoras.org/	Media	Videoteca de medios de BTB
+󰵂	Immich BTB	https://fotos.barbiestesteadoras.org/	Media	Galería y respaldo de fotos BTB
+󰕥	Formularios BTB	https://formularios.barbiestesteadoras.org/	Público	Formularios de registro e ingreso
+󰄲	Portal Financiero BTB	https://finanzas.barbiestesteadoras.org/	Finanzas	Gestión financiera institucional
+󰖟	Transparencia BTB	https://transparencia.barbiestesteadoras.org/	Público	Información pública y rendición de cuentas
+󰈙	Documentación BTB	https://docs.barbiestesteadoras.org/	Documentación	Guías y base de conocimiento
+󰈙	Ficha BTB	https://ficha.barbiestesteadoras.org/	Público	Fichas técnicas y registro
+󰈙	Informes BTB	https://informes.barbiestesteadoras.org/	Documentación	Informes de actividades y resultados
+󰆼	Muestreo BTB	https://muestreo.barbiestesteadoras.org/	Docencia	Registro de muestras y análisis
+󰒋	TrueNAS SCALE UI	https://100.95.27.14/	Infraestructura	Panel de administración TrueNAS (Tailscale)
+󰒋	Grist origen	http://100.95.27.14:30084/status	General	NAS BTB · Grist origen
+󰒋	Kuma testigo	http://100.95.27.14:31050/	General	NAS BTB · Kuma testigo
+󰒋	LinkBreeze	https://links.barbiestesteadoras.org	General	NAS BTB · LinkBreeze
+󰒋	Ruta www	https://www.barbiestesteadoras.org/	General	NAS BTB · Ruta www
+󰒋	TURN videollamadas	http://turn.barbiestesteadoras.org:3478	General	NAS BTB · TURN videollamadas

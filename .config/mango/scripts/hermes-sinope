@@ -1,0 +1,429 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+sinope_host="${HERMES_SINOPE_HOST:-100.107.89.3}"
+host_name="$(hostnamectl --static 2>/dev/null || hostname 2>/dev/null || true)"
+local_user="${USER:-$(id -un)}"
+script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
+default_profile="hermes"
+if [[ "${host_name}" == abdel* || "${local_user}" == "abdel" ]]; then
+  default_profile="hermes-abdel"
+fi
+
+normalize_profile() {
+  case "$1" in
+    hermes|ruben|rubén) printf 'hermes\n' ;;
+    hermes-abdel|abdel|hermina) printf 'hermes-abdel\n' ;;
+    *) return 1 ;;
+  esac
+}
+
+profile="${default_profile}"
+if [[ $# -gt 0 ]] && normalized="$(normalize_profile "$1" 2>/dev/null)"; then
+  profile="${normalized}"
+  shift
+fi
+
+case "${profile}" in
+  hermes)
+    display_name="Hermes · Rubén"
+    remote_user="hermes"
+    remote_home="/home/hermes"
+    webui_port=8787
+    dashboard_port=9119
+    workspace_port=13300
+    pwa_port=19120
+    open_webui_port=18080
+    tui_session="hermes-tui"
+    published_webui_url="https://hermes.arqueonautis.org/"
+    ;;
+  hermes-abdel)
+    display_name="Hermina · Abdel"
+    remote_user="hermes-abdel"
+    remote_home="/home/hermes-abdel"
+    webui_port=8788
+    dashboard_port=9120
+    workspace_port=13301
+    pwa_port=19121
+    open_webui_port=18081
+    tui_session="hermina-tui"
+    published_webui_url=""
+    ;;
+esac
+
+target="${remote_user}@${sinope_host}"
+ssh_options=(-F /dev/null -o BatchMode=yes -o ConnectTimeout=10 -o ServerAliveInterval=30 -o ServerAliveCountMax=3)
+abdel_key="${HOME}/.ssh/id_ed25519_hermes_abdel_sinope"
+if [[ "${profile}" == "hermes-abdel" && -r "${abdel_key}" ]]; then
+  ssh_options+=(-o IdentitiesOnly=yes -i "${abdel_key}")
+fi
+
+usage() {
+  cat <<EOF
+Uso: hermes-sinope [PERFIL] COMANDO
+
+Perfil detectado: ${display_name} (${remote_user}@sinope)
+Perfiles: hermes | hermes-abdel (alias: ruben | abdel | hermina)
+
+Interfaces:
+  webui       WebUI existente
+  dashboard   Dashboard oficial
+  desktop     Cliente Desktop oficial
+  tui         TUI oficial persistente en tmux
+  gate        Hermes Gate para sesiones tmux
+  workspace   Hermes Workspace
+  pwa         Hermes UI PWA
+  open-webui  Open WebUI
+
+Administración:
+  profile     Muestra la identidad detectada
+  gate-setup  Prepara el perfil actual en Hermes Gate
+  tmux-setup  Instala UTF-8/OSC 52 en el tmux remoto de este perfil
+  status      Estado remoto y de los túneles locales
+  stop-labs   Detiene laboratorios y túneles; conserva Gateway y WebUI
+EOF
+}
+
+remote() {
+  ssh "${ssh_options[@]}" "${target}" "$@"
+}
+
+ensure_remote_terminfo() {
+  local client_term="${TERM:-}"
+  [[ -n "${client_term}" ]] || return 0
+  [[ "${client_term}" =~ ^[A-Za-z0-9._+-]+$ ]] || return 0
+
+  if remote "infocmp -x '${client_term}' >/dev/null 2>&1"; then
+    return 0
+  fi
+  if ! command -v infocmp >/dev/null 2>&1 || ! remote 'command -v tic >/dev/null 2>&1'; then
+    printf 'Aviso: no se pudo instalar terminfo para %s; se usará compatibilidad básica cuando sea posible.\n' "${client_term}" >&2
+    return 0
+  fi
+  if ! infocmp -x "${client_term}" | ssh "${ssh_options[@]}" "${target}" 'mkdir -p ~/.terminfo && tic -x -o ~/.terminfo -'; then
+    printf 'Aviso: falló la instalación remota de terminfo para %s.\n' "${client_term}" >&2
+  fi
+}
+
+configure_remote_tmux() {
+  local tmux_config="${script_dir}/hermes-remote-tmux.conf"
+  local remote_incoming="${remote_home}/.tmux.conf.lnk-new"
+
+  if [[ ! -r "${tmux_config}" ]]; then
+    printf 'No se encontró la plantilla tmux administrada: %s\n' "${tmux_config}" >&2
+    return 1
+  fi
+
+  scp "${ssh_options[@]}" -q "${tmux_config}" "${target}:${remote_incoming}"
+  remote "bash -lc 'set -euo pipefail
+    incoming=\"${remote_incoming}\"
+    target_file=\"${remote_home}/.tmux.conf\"
+    check_socket=\"hermes-lnk-tmux-check-\$\$\"
+    trap '\''rm -f \"\$incoming\"; tmux -L \"\$check_socket\" kill-server >/dev/null 2>&1 || true'\'' EXIT
+    tmux -f \"\$incoming\" -L \"\$check_socket\" start-server
+    if [[ -e \"\$target_file\" ]] && ! cmp -s \"\$incoming\" \"\$target_file\"; then
+      backup=\"\${target_file}.before-lnk-\$(date +%Y%m%d-%H%M%S)\"
+      cp -p \"\$target_file\" \"\$backup\"
+      printf '\''Respaldo: %s\\n'\'' \"\$backup\"
+    fi
+    install -m 0644 \"\$incoming\" \"\$target_file\"
+    tmux source-file \"\$target_file\" >/dev/null 2>&1 || true
+    printf '\''Configuración tmux aplicada: %s\\n'\'' \"\$target_file\"
+  '"
+}
+
+tunnel_unit_name() {
+  printf 'hermes-sinope-%s-%s-tunnel.service\n' "${profile}" "$1"
+}
+
+ensure_tunnel() {
+  local action="$1"
+  local local_port="$2"
+  local remote_port="$3"
+  local unit
+  unit="$(tunnel_unit_name "${action}")"
+
+  if ! systemctl --user is-active --quiet "${unit}"; then
+    systemctl --user reset-failed "${unit}" >/dev/null 2>&1 || true
+    systemd-run --user --quiet --collect --unit="${unit%.service}" \
+      --property=Restart=on-failure --property=RestartSec=5 \
+      /usr/bin/ssh "${ssh_options[@]}" -N -o ExitOnForwardFailure=yes \
+      -L "127.0.0.1:${local_port}:127.0.0.1:${remote_port}" "${target}"
+  fi
+
+  # Open WebUI can take close to a minute on its first cold start.
+  for _ in $(seq 1 1200); do
+    if curl -fsS --max-time 1 "http://127.0.0.1:${local_port}/" >/dev/null 2>&1; then
+      return 0
+    fi
+    sleep 0.1
+  done
+  printf 'El túnel %s no respondió en el puerto local %s.\n' "${unit}" "${local_port}" >&2
+  systemctl --user status "${unit}" --no-pager >&2 || true
+  return 1
+}
+
+open_browser() {
+  local url="$1"
+  if [[ "${HERMES_NO_OPEN:-0}" == 1 ]]; then
+    return 0
+  fi
+  if [[ -x "${script_dir}/run_chrome.sh" ]]; then
+    "${script_dir}/run_chrome.sh" --app="${url}" >/dev/null 2>&1 &
+  else
+    xdg-open "${url}" >/dev/null 2>&1 &
+  fi
+}
+
+web_interface() {
+  local action="$1"
+  local label="$2"
+  local remote_unit="$3"
+  local port="$4"
+  local start_mode="$5"
+
+  if [[ "${start_mode}" == start ]]; then
+    remote "systemctl --user start '${remote_unit}'"
+  else
+    remote "systemctl --user is-active --quiet '${remote_unit}'"
+  fi
+  ensure_tunnel "${action}" "${port}" "${port}"
+  open_browser "http://127.0.0.1:${port}/"
+  printf '%s · %s lista en http://127.0.0.1:%s/\n' "${display_name}" "${label}" "${port}"
+}
+
+desktop() {
+  local desktop_binary="${HOME}/.hermes/hermes-agent/apps/desktop/release/linux-unpacked/Hermes"
+  if [[ ! -x "${desktop_binary}" ]]; then
+    desktop_binary="${HOME}/.local/share/hermes-desktop-sinope/linux-unpacked/Hermes"
+  fi
+  if [[ ! -x "${desktop_binary}" ]]; then
+    printf 'Desktop oficial no está instalado en esta computadora.\n' >&2
+    exit 3
+  fi
+
+  # Use Desktop's native "Connect via SSH" lifecycle.  Keep its user-data
+  # directory separate per Unix identity so this launcher never replaces a
+  # person's normal local-Desktop connection or another Sinope account.
+  local desktop_config_root="${HOME}/.config/hermes-desktop-sinope/${profile}"
+  local desktop_user_data="${desktop_config_root}/Hermes"
+  local connection_file="${desktop_user_data}/connection.json"
+  local registry_file="${desktop_user_data}/connections.json"
+  local connection_id="sinope-${profile}"
+  local key_path=""
+  local registry_source="/dev/null"
+  local temp_file
+
+  if [[ "${profile}" == "hermes-abdel" && -r "${abdel_key}" ]]; then
+    key_path="${abdel_key}"
+  fi
+
+  mkdir -p "${desktop_user_data}"
+
+  temp_file="$(mktemp "${desktop_user_data}/connection.json.XXXXXX")"
+  if [[ -s "${connection_file}" ]] && jq -e 'type == "object"' "${connection_file}" >/dev/null 2>&1; then
+    jq --arg host "${sinope_host}" --arg user "${remote_user}" \
+      --arg key "${key_path}" --arg hermes "${remote_home}/.local/bin/hermes" '
+        . as $old
+        | {
+            mode: "ssh",
+            remote: (
+              {mode: "ssh", host: $host, user: $user, remoteHermesPath: $hermes}
+              + (if $key != "" then {keyPath: $key} else {} end)
+              + (if ($old.remote.token | type) == "object" then {token: $old.remote.token} else {} end)
+            ),
+            profiles: ($old.profiles // {})
+          }
+      ' "${connection_file}" >"${temp_file}"
+  else
+    jq -n --arg host "${sinope_host}" --arg user "${remote_user}" \
+      --arg key "${key_path}" --arg hermes "${remote_home}/.local/bin/hermes" '
+        {
+          mode: "ssh",
+          remote: (
+            {mode: "ssh", host: $host, user: $user, remoteHermesPath: $hermes}
+            + (if $key != "" then {keyPath: $key} else {} end)
+          ),
+          profiles: {}
+        }
+      ' >"${temp_file}"
+  fi
+  chmod 600 "${temp_file}"
+  mv "${temp_file}" "${connection_file}"
+
+  # Keep Desktop's v2 registry aligned with the v1 SSH connection above.  If
+  # the registry falls back to its mandatory local entry as primary, Desktop
+  # connects to Sinope and then starts a second, local `hermes serve`; the UI
+  # consequently lands on the local backend instead of the remote agent.
+  if [[ -s "${registry_file}" ]] && jq -e 'type == "object"' "${registry_file}" >/dev/null 2>&1; then
+    registry_source="${registry_file}"
+  fi
+  temp_file="$(mktemp "${desktop_user_data}/connections.json.XXXXXX")"
+  jq -n --slurpfile current "${registry_source}" \
+    --arg id "${connection_id}" --arg label "Sinope · ${display_name}" \
+    --arg host "${sinope_host}" --arg user "${remote_user}" \
+    --arg key "${key_path}" --arg hermes "${remote_home}/.local/bin/hermes" '
+      ($current[0] // {})
+      | .connections = (
+        [(.connections // [])[]
+          | select(.id != $id)
+          | select(.kind != "ssh" or .host != $host or (.user // "") != $user)]
+        | if any(.[]; .kind == "local")
+          then .
+          else [{id: "local", kind: "local", label: "This device"}] + .
+          end
+        | . + [
+            ({
+              id: $id,
+              kind: "ssh",
+              label: $label,
+              host: $host,
+              user: $user,
+              port: 22,
+              remoteHermesPath: $hermes
+            } + (if $key != "" then {keyPath: $key} else {} end))
+          ]
+      )
+      | .version = 2
+      | .primary = $id
+      | .lastUsed = $id
+      | .launchMode = "primary"
+    ' >"${temp_file}"
+  chmod 600 "${temp_file}"
+  mv "${temp_file}" "${registry_file}"
+
+  if [[ "${HERMES_DESKTOP_DRY_RUN:-0}" == 1 ]]; then
+    printf '%s: conexión SSH nativa de Desktop preparada.\n' "${display_name}"
+    return 0
+  fi
+
+  XDG_CONFIG_HOME="${desktop_config_root}" \
+    exec "${desktop_binary}" --disable-setuid-sandbox "$@"
+}
+
+prepare_gate_config() {
+  local gate_dir="${HOME}/.hermes-gate"
+  local client_dir="${HOME}/.config/hermes-sinope"
+  local ssh_config="${client_dir}/ssh-config"
+  local servers_file="${gate_dir}/servers.json"
+  local ssh_alias="hermes-sinope"
+  local temp_file
+  [[ "${profile}" == "hermes-abdel" ]] && ssh_alias="hermina-sinope"
+
+  mkdir -p "${gate_dir}" "${client_dir}"
+  touch "${ssh_config}"
+  if ! grep -Fqx "Host ${ssh_alias}" "${ssh_config}"; then
+    {
+      printf '\nHost %s\n' "${ssh_alias}"
+      printf '    HostName %s\n' "${sinope_host}"
+      printf '    User %s\n' "${remote_user}"
+      printf '    Port 22\n'
+      printf '    BatchMode yes\n'
+      printf '    ConnectTimeout 10\n'
+      printf '    ServerAliveInterval 30\n'
+      printf '    ServerAliveCountMax 3\n'
+      if [[ "${profile}" == "hermes-abdel" && -r "${abdel_key}" ]]; then
+        printf '    IdentitiesOnly yes\n'
+        printf '    IdentityFile %s\n' "${abdel_key}"
+      fi
+    } >>"${ssh_config}"
+  fi
+
+  if [[ ! -s "${servers_file}" ]] || ! jq -e 'type == "array"' "${servers_file}" >/dev/null 2>&1; then
+    printf '[]\n' >"${servers_file}"
+  fi
+  temp_file="$(mktemp "${gate_dir}/servers.json.XXXXXX")"
+  jq --arg user "${remote_user}" --arg host "${sinope_host}" --arg alias "${ssh_alias}" '
+    if any(.[]; .user == $user and .host == $host and (.port // "22") == "22")
+    then map(if .user == $user and .host == $host and (.port // "22") == "22"
+             then . + {port: "22", ssh_alias: $alias} else . end)
+    else . + [{user: $user, host: $host, port: "22", ssh_alias: $alias}]
+    end
+  ' "${servers_file}" >"${temp_file}"
+  mv "${temp_file}" "${servers_file}"
+  chmod 600 "${ssh_config}" "${servers_file}"
+  export HERMES_GATE_SSH_CONFIG="${ssh_config}"
+}
+
+command="${1:-help}"
+[[ $# -eq 0 ]] || shift
+
+case "${command}" in
+  profile)
+    printf '%s (%s@sinope)\n' "${display_name}" "${remote_user}"
+    ;;
+  webui)
+    if [[ -n "${HERMES_SINOPE_WEBUI_URL:-${published_webui_url}}" ]]; then
+      webui_url="${HERMES_SINOPE_WEBUI_URL:-${published_webui_url}}"
+      open_browser "${webui_url}"
+      printf '%s · WebUI comunitaria lista en %s\n' "${display_name}" "${webui_url}"
+    else
+      web_interface webui 'WebUI comunitaria' hermes-webui.service "${webui_port}" active
+    fi
+    ;;
+  dashboard)
+    web_interface dashboard 'Dashboard oficial' hermes-dashboard-lab.service "${dashboard_port}" start
+    ;;
+  workspace)
+    web_interface workspace 'Workspace' hermes-workspace-lab.service "${workspace_port}" start
+    ;;
+  pwa)
+    web_interface pwa 'Hermes UI PWA' hermes-ui-pwa-lab.service "${pwa_port}" start
+    ;;
+  open-webui)
+    web_interface open-webui 'Open WebUI' open-webui-hermes-lab.service "${open_webui_port}" start
+    ;;
+  desktop)
+    desktop "$@"
+    ;;
+  tui)
+    session_name="${1:-${tui_session}}"
+    ensure_remote_terminfo
+    exec ssh "${ssh_options[@]}" -t "${target}" "env LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 ${remote_home}/.local/bin/hermes-remote-tui '${session_name}'"
+    ;;
+  gate)
+    gate_binary="${HOME}/Projects/hermes-gate/.venv/bin/gate"
+    if [[ ! -x "${gate_binary}" ]]; then
+      printf 'Hermes Gate no está instalado en esta computadora: %s\n' "${gate_binary}" >&2
+      exit 3
+    fi
+    ensure_remote_terminfo
+    prepare_gate_config
+    cd "${HOME}/Projects/hermes-gate"
+    exec "${gate_binary}"
+    ;;
+  gate-setup)
+    ensure_remote_terminfo
+    prepare_gate_config
+    printf '%s preparado en Hermes Gate.\n' "${display_name}"
+    ;;
+  tmux-setup)
+    configure_remote_tmux
+    printf '%s: UTF-8 y portapapeles OSC 52 preparados en tmux.\n' "${display_name}"
+    ;;
+  status)
+    printf '%s (%s)\n\n' "${display_name}" "${target}"
+    remote 'for unit in hermes-gateway.service hermes-webui.service hermes-dashboard-lab.service hermes-workspace-lab.service hermes-ui-pwa-lab.service open-webui-hermes-lab.service; do printf "%-38s " "$unit"; systemctl --user is-active "$unit" || true; done'
+    printf '\nTúneles locales:\n'
+    for action in webui dashboard workspace pwa open-webui; do
+      unit="$(tunnel_unit_name "${action}")"
+      printf '%-55s %s\n' "${unit}" "$(systemctl --user is-active "${unit}" 2>/dev/null || true)"
+    done
+    ;;
+  stop-labs)
+    remote 'systemctl --user stop hermes-dashboard-lab.service hermes-workspace-lab.service hermes-ui-pwa-lab.service open-webui-hermes-lab.service'
+    for action in webui dashboard workspace pwa open-webui; do
+      systemctl --user stop "$(tunnel_unit_name "${action}")" >/dev/null 2>&1 || true
+    done
+    printf '%s: laboratorios y túneles detenidos; Gateway y WebUI continúan activos.\n' "${display_name}"
+    ;;
+  -h|--help|help|'')
+    usage
+    ;;
+  *)
+    printf 'Comando desconocido: %s\n\n' "${command}" >&2
+    usage >&2
+    exit 2
+    ;;
+esac
