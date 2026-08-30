@@ -17,6 +17,9 @@ find_appimage() {
 }
 
 appimage="$(find_appimage || true)"
+if [[ -z "${appimage}" ]]; then
+  appimage="${HOME}/.local/bin/Open Design-hermes-pilot.AppImage"
+fi
 
 if [[ "${1:-}" == "--available" ]]; then
   [[ -n "${appimage}" && -x "${appimage}" ]]
@@ -25,7 +28,7 @@ fi
 
 if [[ -z "${appimage}" || ! -x "${appimage}" ]]; then
   notify-send -u critical "OpenDesign + Hermes" \
-    "El piloto no está instalado con Shelly en este equipo."
+    "No se encontró el AppImage del piloto en este equipo."
   exit 1
 fi
 
