@@ -328,3 +328,9 @@ window-rule {
     match app-id="^org.kde.krusader$" title="^Copying — Krusader$"
     default-column-width { fixed 600; }
 }
+
+// @id=wr_1787947997165237211 @name=org.kde.dolphin
+window-rule {
+    match app-id="^org.kde.dolphin$" title="^Moving"
+    default-column-width { fixed 600; }
+}
