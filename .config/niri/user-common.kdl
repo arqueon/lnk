@@ -83,7 +83,6 @@ binds {
     Mod+O { expel-window-from-column; } // pisa el overview Mod+O de la plantilla DMS; overview = Mod+E
     Mod+Shift+K { spawn "thunar"; } // recupera el bind pisado por dms/binds (move-window-up)
     Mod+Alt+V { spawn "sh" "-c" "blueman-manager & pwvucontrol"; }
-    Mod+Alt+H hotkey-overlay-title="Reset Web Browser (DMS Chooser)" { spawn "~/.config/niri/scripts/reset-browser-chooser.sh"; }
     Mod+Ctrl+Shift+G { spawn-sh "LASTFM_LOVE_DMS=required exec ~/.config/niri/scripts/lastfm-love-now"; } // DMS manda; no amar una pista remota retrasada
 }
 

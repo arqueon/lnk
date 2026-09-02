@@ -58,6 +58,7 @@ binds {
     Mod+Shift+B allow-when-locked=true { spawn-sh "dms restart"; }
     Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
     Mod+Alt+T hotkey-overlay-title="Sync Theme (DMS)" { spawn "dms" "ipc" "call" "dmsThemeSync" "configure"; }
+    Mod+Alt+H hotkey-overlay-title="Reset Web Browser (DMS Chooser)" { spawn "~/.config/niri/scripts/reset-browser-chooser.sh"; }
     Mod+Ctrl+W hotkey-overlay-title="Dictado por voz (Whisperer)" { spawn "dms" "ipc" "call" "whisperer" "toggle"; }
     Mod+Ctrl+Alt+W repeat=false hotkey-overlay-title="Dictado por voz (Voxtype)" { spawn "voxtype" "record" "toggle"; }
     Mod+Ctrl+G hotkey-overlay-title="Dictado con IA (Whisperer)" { spawn "dms" "ipc" "call" "whisperer" "toggleAi"; }
