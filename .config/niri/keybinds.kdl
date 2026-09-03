@@ -90,8 +90,9 @@ binds {
     Alt+F10 { spawn-sh "dms ipc call audio mute"; }
     Alt+F11 { spawn-sh "dms ipc call audio decrement 3"; }
     Alt+F12 { spawn-sh "dms ipc call audio increment 3"; }
-    Mod+Alt+P { spawn-sh "~/.config/niri/scripts/conectar_audio.sh poseidon"; } // auriculares BT
-    Mod+Alt+E { spawn-sh "~/.config/niri/scripts/conectar_audio.sh earfun"; }   // auriculares BT
+    Mod+Alt+P { spawn-sh "~/.config/niri/scripts/conectar_audio.sh poseidon"; } // Poseidon D80
+    Mod+Alt+E { spawn-sh "~/.config/niri/scripts/conectar_audio.sh earfun"; }   // EarFun Air Pro 4
+    Mod+Alt+L { spawn-sh "~/.config/niri/scripts/conectar_audio.sh local"; }    // Bocinas locales USB
 
     // ── Mouse y touchpad ──
     Mod+Ctrl+MouseLeft { close-window; }

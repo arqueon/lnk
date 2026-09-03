@@ -1,34 +1,23 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 POSEIDON_MAC="CC:BF:0C:04:22:34"
 POSEIDON_NAME="Poseidon D80"
+POSEIDON_VOL="45%"
 
 EARFUN_MAC="70:5A:6F:6B:6F:87"
 EARFUN_NAME="EarFun Air Pro 4"
+EARFUN_VOL="35%"
 
-if [ "${1:-}" = "poseidon" ]; then
-    MAC=$POSEIDON_MAC
-    NAME=$POSEIDON_NAME
-elif [ "${1:-}" = "earfun" ]; then
-    MAC=$EARFUN_MAC
-    NAME=$EARFUN_NAME
-else
-    echo "Uso: $0 [poseidon|earfun]"
-    echo ""
-    echo "Ejemplo: $0 poseidon"
-    exit 1
-fi
+LOCAL_SINK="alsa_output.usb-Generic_USB_Audio-00.HiFi__Speaker__sink"
+LOCAL_NAME="Bocinas locales"
+LOCAL_VOL="40%"
 
-# MAC del controlador Bluetooth local; vacío = adaptador por defecto del host.
-# Solo hace falta fijarlo (o exportarlo) en equipos con más de un adaptador.
-BT_ADAPTER="${BT_ADAPTER:-}"
+TARGET="${1:-}"
 
-BT_ID="${MAC//:/_}"
-CARD_NAME="bluez_card.$BT_ID"
-MAX_BT_RETRIES=4
+MAX_BT_RETRIES=3
 BT_RETRY_DELAY=3
-BT_CONNECT_TIMEOUT=15
-PIPEWIRE_WAIT_SECONDS=30
+BT_CONNECT_TIMEOUT=12
 
 notify() {
     local title=$1
@@ -36,56 +25,48 @@ notify() {
     local urgency=${3:-normal}
     local icon=${4:-audio-speakers}
 
-    if command -v notify-send >/dev/null; then
+    if command -v notify-send >/dev/null 2>&1; then
         notify-send "$title" "$body" -u "$urgency" -i "$icon"
     fi
 }
 
-require_command() {
-    if ! command -v "$1" >/dev/null; then
-        echo "Error: falta el comando requerido: $1"
-        notify "Audio Bluetooth" "Falta el comando requerido: $1" critical dialog-error
-        exit 1
+move_streams_to_sink() {
+    local sink=$1
+    local inputs
+    inputs=$(pactl list sink-inputs short 2>/dev/null | awk '{print $1}')
+    for id in $inputs; do
+        pactl move-sink-input "$id" "$sink" >/dev/null 2>&1 || true
+    done
+}
+
+cleanup_parasitic_clock() {
+    # Evita que whisperer-aec o módulos de cancelación de eco colapsen el reloj Bluetooth
+    if pgrep -f "whisperer-aec-holder" >/dev/null 2>&1 || pw-link -l 2>/dev/null | grep -q "echo-cancel-sink"; then
+        pkill -9 -f "whisperer-aec-holder" >/dev/null 2>&1 || true
+        pkill -9 -f "pw-cli <&8" >/dev/null 2>&1 || true
+        sleep 0.5
     fi
 }
-
-bt_cmds() {
-    if [ -n "$BT_ADAPTER" ]; then
-        echo -e "select $BT_ADAPTER\n$1"
-    else
-        echo -e "$1"
-    fi
-}
-
-bt_connected() {
-    bt_cmds "info $MAC" | bluetoothctl 2>/dev/null | grep -q "Connected: yes"
-}
-
-connect_bt() {
-    bt_cmds "connect $MAC" | timeout "$BT_CONNECT_TIMEOUT" bluetoothctl
-}
-
-disconnect_bt() {
-    bt_cmds "disconnect $MAC" | bluetoothctl >/dev/null 2>&1
-}
-
 
 find_sink() {
+    local bt_id=$1
     pactl list sinks short 2>/dev/null |
-        awk -v bt_id="$BT_ID" '$2 ~ ("^bluez_output\\." bt_id) { print $2; exit }'
+        awk -v bt_id="$bt_id" '$2 ~ ("^bluez_output\\." bt_id) { print $2; exit }'
 }
 
 find_card() {
+    local card_name=$1
     pactl list cards short 2>/dev/null |
-        awk -v card="$CARD_NAME" '$2 == card { print $2; exit }'
+        awk -v card="$card_name" '$2 == card { print $2; exit }'
 }
 
 wait_for_sink() {
-    local seconds=${1:-$PIPEWIRE_WAIT_SECONDS}
+    local bt_id=$1
+    local seconds=${2:-12}
     local sink=""
 
     for ((i = 1; i <= seconds; i++)); do
-        sink=$(find_sink)
+        sink=$(find_sink "$bt_id")
         if [ -n "$sink" ]; then
             printf '%s\n' "$sink"
             return 0
@@ -97,10 +78,11 @@ wait_for_sink() {
 }
 
 wait_for_card() {
-    local seconds=${1:-10}
+    local card_name=$1
+    local seconds=${2:-6}
 
     for ((i = 1; i <= seconds; i++)); do
-        if [ -n "$(find_card)" ]; then
+        if [ -n "$(find_card "$card_name")" ]; then
             return 0
         fi
         sleep 1
@@ -109,132 +91,113 @@ wait_for_card() {
     return 1
 }
 
-prefer_a2dp_profile() {
-    local card
-    card=$(find_card)
-
-    if [ -z "$card" ]; then
-        return 1
-    fi
-
-    # En PipeWire el perfil A2DP es único ("a2dp-sink"); el códec se negocia aparte.
-    if pactl set-card-profile "$card" "a2dp-sink" >/dev/null 2>&1; then
-        echo "Perfil de audio activo: a2dp-sink"
-        return 0
-    fi
-
-    return 1
-}
-
-restart_audio_stack() {
-    echo "Reiniciando el stack de audio (pipewire, pipewire-pulse, wireplumber)..."
-    systemctl --user restart pipewire pipewire-pulse wireplumber >/dev/null 2>&1
-    sleep 3
-}
-
-reconnect_bt() {
-    echo "Forzando nuevo evento Bluetooth para $NAME..."
-
-    for ((i = 1; i <= MAX_BT_RETRIES; i++)); do
-        echo "Reintento de reconexión $i de $MAX_BT_RETRIES..."
-        disconnect_bt
-        sleep 2
-        connect_bt
-        sleep "$BT_RETRY_DELAY"
-
-        if bt_connected; then
-            return 0
-        fi
-    done
-
-    return 1
-}
-
-configure_sink() {
+apply_sink_config() {
     local sink=$1
+    local name=$2
+    local target_vol=$3
 
-    echo "Estableciendo $NAME como salida predeterminada ($sink)..."
-    # No fijamos volumen: WirePlumber restaura el último nivel por dispositivo.
-    pactl set-default-sink "$sink" &&
-        pactl set-sink-mute "$sink" 0
+    echo "Configurando $name ($sink) como salida activa..."
+    pactl set-default-sink "$sink"
+    pactl set-sink-mute "$sink" 0
+    pactl set-sink-volume "$sink" "$target_vol"
+    move_streams_to_sink "$sink"
+
+    notify "$name" "Conectado y listo (Volumen: $target_vol)"
+    echo "Listo. Audio reproduciéndose en $name."
 }
 
-require_command bluetoothctl
-require_command pactl
-require_command systemctl
-require_command timeout
-
-echo "Encendiendo Bluetooth, apagando escaneo y confiando en $NAME..."
-bt_cmds "power on\nscan off\nagent on\ndefault-agent\ntrust $MAC" | bluetoothctl >/dev/null 2>&1
-
-echo "Intentando conectar a $NAME ($MAC)..."
-CONNECTED=false
-
-for ((i = 1; i <= MAX_BT_RETRIES; i++)); do
-    echo "Intento de conexión $i de $MAX_BT_RETRIES..."
-    disconnect_bt
-    sleep 2
-    connect_bt
-    sleep "$BT_RETRY_DELAY"
-
-    if bt_connected; then
-        CONNECTED=true
-        break
+# ── Modo salida local / bocinas de escritorio ──
+if [ "$TARGET" = "local" ] || [ "$TARGET" = "bocinas" ]; then
+    cleanup_parasitic_clock
+    if ! pactl list sinks short 2>/dev/null | grep -q "$LOCAL_SINK"; then
+        echo "Error: no se encontró el sink local $LOCAL_SINK"
+        notify "Audio" "No se encontraron las bocinas locales" critical dialog-error
+        exit 1
     fi
-done
+    apply_sink_config "$LOCAL_SINK" "$LOCAL_NAME" "$LOCAL_VOL"
+    exit 0
+fi
 
-if [ "$CONNECTED" = false ]; then
-    echo "Error: No se pudo conectar a $NAME ($MAC)."
-    notify "Bluetooth" "Error al conectar a $NAME" critical dialog-error
+# ── Modos Bluetooth (Poseidon / EarFun) ──
+if [ "$TARGET" = "poseidon" ]; then
+    MAC=$POSEIDON_MAC
+    NAME=$POSEIDON_NAME
+    TARGET_VOL=$POSEIDON_VOL
+elif [ "$TARGET" = "earfun" ]; then
+    MAC=$EARFUN_MAC
+    NAME=$EARFUN_NAME
+    TARGET_VOL=$EARFUN_VOL
+else
+    echo "Uso: $0 [poseidon|earfun|local]"
+    echo ""
+    echo "Ejemplos:"
+    echo "  $0 poseidon   # Conectar a barra Ultimea Poseidon D80"
+    echo "  $0 earfun     # Conectar a audífonos EarFun Air Pro 4"
+    echo "  $0 local      # Cambiar a bocinas locales de escritorio"
     exit 1
 fi
 
-echo "Conectado por Bluetooth. Esperando sink de PipeWire/PulseAudio..."
-SINK_NAME=$(wait_for_sink 12)
+BT_ID="${MAC//:/_}"
+CARD_NAME="bluez_card.$BT_ID"
 
-if [ -z "$SINK_NAME" ]; then
-    echo "No apareció sink todavía; buscando card $CARD_NAME y forzando perfil A2DP..."
-    if wait_for_card 8; then
-        prefer_a2dp_profile
-        SINK_NAME=$(wait_for_sink 12)
-    fi
+# 1. FAST PATH: ¿Ya está disponible el sink de audio?
+EXISTING_SINK=$(find_sink "$BT_ID")
+if [ -n "$EXISTING_SINK" ]; then
+    echo "$NAME ya tiene sink activo ($EXISTING_SINK). Enrutando audio..."
+    cleanup_parasitic_clock
+    apply_sink_config "$EXISTING_SINK" "$NAME" "$TARGET_VOL"
+    exit 0
 fi
 
-if [ -z "$SINK_NAME" ]; then
-    restart_audio_stack
+# 2. Si no está el sink, verificar y preparar conexión Bluetooth
+cleanup_parasitic_clock
 
-    if ! reconnect_bt; then
-        echo "Error: $NAME no respondió al reconectar Bluetooth después de reiniciar PipeWire."
-        notify "Bluetooth" "$NAME no respondió al reconectar" critical dialog-error
-        exit 1
-    fi
+echo "Asegurando Bluetooth activo..."
+bluetoothctl power on >/dev/null 2>&1 || true
+bluetoothctl trust "$MAC" >/dev/null 2>&1 || true
 
-    if wait_for_card 10; then
-        prefer_a2dp_profile
-    fi
-
-    SINK_NAME=$(wait_for_sink "$PIPEWIRE_WAIT_SECONDS")
+# Si está en estado fantasma (Connected: yes pero sin audio), forzar desconexión limpia primero
+if bluetoothctl info "$MAC" 2>/dev/null | grep -q "Connected: yes"; then
+    echo "Desconectando sesión previa incompleta de $NAME..."
+    bluetoothctl disconnect "$MAC" >/dev/null 2>&1 || true
+    sleep 3
 fi
 
-if [ -z "$SINK_NAME" ]; then
-    if bt_connected; then
-        echo "Advertencia: $NAME está conectado por Bluetooth, pero PipeWire no creó un sink $BT_ID."
-    else
-        echo "Advertencia: $NAME no quedó conectado por Bluetooth y PipeWire no creó un sink $BT_ID."
+# Ráfaga rápida de escaneo para despertar dispositivos en reposo / bajo consumo
+echo "Comprobando presencia de $NAME..."
+timeout 2 bluetoothctl scan on >/dev/null 2>&1 || true
+
+CONNECTED=false
+SINK_NAME=""
+
+for ((attempt = 1; attempt <= MAX_BT_RETRIES; attempt++)); do
+    echo "Intento de conexión $attempt de $MAX_BT_RETRIES a $NAME ($MAC)..."
+    
+    # Intentar conexión directa
+    if timeout "$BT_CONNECT_TIMEOUT" bluetoothctl connect "$MAC" >/dev/null 2>&1; then
+        # Esperar a que PipeWire cree la tarjeta o sink
+        if wait_for_card "$CARD_NAME" 6; then
+            pactl set-card-profile "$CARD_NAME" "a2dp-sink" >/dev/null 2>&1 || true
+        fi
+        
+        SINK_NAME=$(wait_for_sink "$BT_ID" 8 || true)
+        if [ -n "$SINK_NAME" ]; then
+            CONNECTED=true
+            break
+        fi
     fi
-    echo "Diagnóstico sugerido:"
-    echo "  pactl list cards short | grep $BT_ID"
-    echo "  pactl list sinks short | grep $BT_ID"
-    echo "  journalctl --user -u wireplumber -u pipewire-pulse -n 80 --no-pager"
-    notify "Audio" "$NAME conectado, pero PipeWire no creó salida de audio" normal dialog-warning
-    exit 2
+
+    echo "Reintento necesario; esperando ${BT_RETRY_DELAY}s para que el dispositivo libere el bus..."
+    bluetoothctl disconnect "$MAC" >/dev/null 2>&1 || true
+    sleep "$BT_RETRY_DELAY"
+done
+
+if [ "$CONNECTED" = false ] || [ -z "${SINK_NAME:-}" ]; then
+    echo "Error: No se pudo establecer la salida de audio para $NAME."
+    echo "Verifica que el dispositivo esté encendido, en modo Bluetooth y no esté conectado a otro teléfono/equipo."
+    notify "$NAME" "No se pudo conectar. Verifica que esté en modo BT y encendido." critical dialog-error
+    exit 1
 fi
 
-if ! configure_sink "$SINK_NAME"; then
-    echo "Error: PipeWire encontró $SINK_NAME, pero no pude configurarlo como salida."
-    notify "Audio" "$NAME conectado, pero no se pudo configurar la salida" critical dialog-error
-    exit 3
-fi
-
-echo "Listo. El audio ahora debería sonar por $NAME."
-notify "Audio" "$NAME conectado y configurado como salida predeterminada"
+cleanup_parasitic_clock
+apply_sink_config "$SINK_NAME" "$NAME" "$TARGET_VOL"
