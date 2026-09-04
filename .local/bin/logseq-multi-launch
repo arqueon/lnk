@@ -4,6 +4,12 @@
 
 CONFIG_DIR="$HOME/.config"
 BASE_LOGSEQ="$HOME/.logseq"
+LOGSEQ_BIN="${LOGSEQ_BIN:-$HOME/.local/bin/logseq}"
+
+if [ ! -x "$LOGSEQ_BIN" ]; then
+    printf 'logseq-multi-launch: no se encontró un ejecutable en %s\n' "$LOGSEQ_BIN" >&2
+    exit 127
+fi
 
 for i in 1 2 3; do
     profile_dir="$CONFIG_DIR/logseq-g$i"
@@ -21,6 +27,6 @@ for i in 1 2 3; do
 done
 
 # Ejecutar las 3 instancias de Logseq
-logseq --user-data-dir="$CONFIG_DIR/logseq-g1" &
-logseq --user-data-dir="$CONFIG_DIR/logseq-g2" &
-logseq --user-data-dir="$CONFIG_DIR/logseq-g3" &
+"$LOGSEQ_BIN" --user-data-dir="$CONFIG_DIR/logseq-g1" &
+"$LOGSEQ_BIN" --user-data-dir="$CONFIG_DIR/logseq-g2" &
+"$LOGSEQ_BIN" --user-data-dir="$CONFIG_DIR/logseq-g3" &

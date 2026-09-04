@@ -23,9 +23,9 @@ window-rule {
 
 
 // ── Arranque de triple instancia de Logseq (casa, ofi, laptop) ──
-spawn-at-startup "logseq-multi-launch"
+spawn-sh-at-startup "exec ~/.local/bin/logseq-multi-launch"
 
 // ── Binds propios ──
 binds {
-    Mod+F4 { spawn "logseq-multi-launch"; }
+    Mod+F4 { spawn-sh "exec ~/.local/bin/logseq-multi-launch"; }
 }
