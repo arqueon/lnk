@@ -99,6 +99,39 @@ if (( _zsh_has_tty )) && [[ -o zle ]]; then
     bindkey '^[OA' history-substring-search-up
     bindkey '^[OB' history-substring-search-down
   fi
+
+  # Tecla Supr (Delete): elimina hacia adelante en lugar de escribir '~'
+  bindkey '^[[3~' delete-char
+  bindkey '^[[3;5~' kill-word
+  [[ -n "${terminfo[kdch1]}" ]] && bindkey -- "${terminfo[kdch1]}" delete-char
+
+  # Tecla Inicio (Home)
+  bindkey '^[[H' beginning-of-line
+  bindkey '^[OH' beginning-of-line
+  bindkey '^[[1~' beginning-of-line
+  bindkey '^[[7~' beginning-of-line
+  [[ -n "${terminfo[khome]}" ]] && bindkey -- "${terminfo[khome]}" beginning-of-line
+
+  # Tecla Fin (End): autocompleta la sugerencia fantasma (estilo Fish) o va al final
+  end-or-autosuggest() {
+    if (( $+widgets[autosuggest-accept] )) && [[ -n "$POSTDISPLAY" ]]; then
+      CURSOR=$#BUFFER
+      zle autosuggest-accept
+    else
+      zle end-of-line
+    fi
+  }
+  zle -N end-or-autosuggest
+
+  bindkey '^[[F' end-or-autosuggest
+  bindkey '^[OF' end-or-autosuggest
+  bindkey '^[[4~' end-or-autosuggest
+  bindkey '^[[8~' end-or-autosuggest
+  [[ -n "${terminfo[kend]}" ]] && bindkey -- "${terminfo[kend]}" end-or-autosuggest
+
+  # Ctrl+Izquierda / Ctrl+Derecha para saltar palabras
+  bindkey '^[[1;5D' backward-word
+  bindkey '^[[1;5C' forward-word
 fi
 
 # Integraciones opcionales.
