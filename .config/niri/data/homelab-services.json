@@ -236,6 +236,15 @@
       "server": "sinope"
     },
     {
+      "name": "Decypharr",
+      "url": "https://sinope.tailf70cf8.ts.net:8282/",
+      "category": "Media Arr",
+      "desc": "Gestor de colas y puente Debrid para *arr",
+      "icon": "󰚗",
+      "order": 69,
+      "server": "sinope"
+    },
+    {
       "name": "Tautulli",
       "url": "https://tautulli.arqueonautis.org",
       "category": "Media",
@@ -362,15 +371,6 @@
       "server": "sinope"
     },
     {
-      "name": "Plane",
-      "url": "https://plane.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en plane.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
       "name": "Sonobar",
       "url": "https://sonobar.arqueonautis.org",
       "category": "Servicios",
@@ -456,15 +456,6 @@
       "url": "https://lt.arqueonautis.org/v2/languages",
       "category": "General",
       "desc": "LanguageTool",
-      "icon": "󰒋",
-      "order": 100,
-      "server": "sinope"
-    },
-    {
-      "name": "Sonobarr",
-      "url": "https://sonobarr.arqueonautis.org",
-      "category": "General",
-      "desc": "Sonobarr",
       "icon": "󰒋",
       "order": 100,
       "server": "sinope"

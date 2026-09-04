@@ -24,6 +24,7 @@
 󰚗	Lidarr	https://lidarr.arqueonautis.org	Media Arr	Gestión automática de música
 󰚗	Bazarr	https://bazarr.arqueonautis.org	Media Arr	Gestión de subtítulos
 󰚗	Profilarr	https://profilarr.arqueonautis.org	Media Arr	Sincronización de perfiles TRaSH
+󰚗	Decypharr	https://sinope.tailf70cf8.ts.net:8282/	Media Arr	Gestor de colas y puente Debrid para *arr
 󰄛	Tautulli	https://tautulli.arqueonautis.org	Media	Estadísticas y monitoreo Plex/Jellyfin
 󰋋	Aurral	https://aurral.arqueonautis.org	Media	Recomendaciones musicales Last.fm para Lidarr
 󰒍	qBittorrent Sinope	https://qbittorrent.arqueonautis.org	Descargas	Cliente BitTorrent en Sinope
@@ -38,7 +39,6 @@
 󰒋	Btb	https://btb.arqueonautis.org	Servicios	Servicio en btb.arqueonautis.org
 󰒋	Cleanuparr	https://cleanuparr.arqueonautis.org	Servicios	Servicio en cleanuparr.arqueonautis.org
 󰂚	ntfy Sinope	https://notify.arqueonautis.org	Monitoreo	Servidor de notificaciones push
-󰒋	Plane	https://plane.arqueonautis.org	Servicios	Servicio en plane.arqueonautis.org
 󰒋	Sonobar	https://sonobar.arqueonautis.org	Servicios	Servicio en sonobar.arqueonautis.org
 󰛐	changedetection.io	https://changes.arqueonautis.org	Monitoreo	Vigilancia de cambios en páginas web
 󰒋	Nextcloud AIO Panel	https://aio.arqueonautis.org	Infraestructura	Panel de administración Nextcloud AIO
@@ -49,5 +49,4 @@
 󰒋	Arqueonautis.org	https://arqueonautis.org	General	Arqueonautis.org
 󰒋	Cursos IA	https://cursos-ia.arqueonautis.org	General	Cursos IA
 󰒋	LanguageTool	https://lt.arqueonautis.org/v2/languages	General	LanguageTool
-󰒋	Sonobarr	https://sonobarr.arqueonautis.org	General	Sonobarr
 󰒋	Videostream	https://videostream.arqueonautis.org	General	Videostream

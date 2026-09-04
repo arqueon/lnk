@@ -235,6 +235,15 @@ SERVICE_METADATA = {
         "server": "sinope",
         "order": 68
     },
+    "sinope.tailf70cf8.ts.net:8282": {
+        "name": "Decypharr",
+        "url": "https://sinope.tailf70cf8.ts.net:8282/",
+        "category": "Media Arr",
+        "desc": "Gestor de colas y puente Debrid para *arr",
+        "icon": "󰚗",
+        "server": "sinope",
+        "order": 69
+    },
     "tautulli.arqueonautis.org": {
         "name": "Tautulli",
         "category": "Media",
@@ -691,7 +700,7 @@ def build_catalogs():
         server = meta["server"]
         target_dict = sinope_services if server == "sinope" else nasbtb_services
         if host not in target_dict:
-            url = f"https://{host}" if not host.startswith("100.") else f"https://{host}/"
+            url = meta.get("url") or (f"https://{host}/" if (":" in host or host.startswith("100.")) else f"https://{host}")
             target_dict[host] = {
                 "name": meta["name"],
                 "url": url,
