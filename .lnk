@@ -44,7 +44,6 @@
 .config/niri/scripts/launch-media-apps.sh
 .config/niri/scripts/launch-mindwtr.sh
 .config/niri/scripts/launch-niri-matrix.sh
-.config/niri/scripts/launch-opendesign-hermes.sh
 .config/niri/scripts/launch-quad-agents2.sh
 .config/niri/scripts/launch-quad-kitty.sh
 .config/niri/scripts/launch-quad-niri.sh
