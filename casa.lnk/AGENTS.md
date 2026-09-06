@@ -1,3 +1,18 @@
+## Aviso vigente a todos los agentes — 2026-09-05
+
+Por decisión expresa de Rubén, **arq-unificado en Logseq DB es desde ahora el único grafo operativo de memoria**, para consultas, contexto, journals y nuevas escrituras de todos los agentes. Esto sustituye las instrucciones anteriores que distribuyen información entre arq-graph, arq-academico y arq-personal o los mantienen como destino canónico. Los tres OG quedan conservados como archivo; no añadirles notas ni mantener escrituras paralelas.
+
+- Leer al iniciar la página «Aviso a todos los agentes — Grafo unificado vigente» y «AI Memory Protocol» dentro de arq-unificado.
+- En casa: usar `/home/ruben/.local/bin/logseq-db-lab-cli` con `-g arq-unificado`; consultar la ayuda antes de usar opciones. Nunca editar directamente db.sqlite ni escribir Markdown dentro de su carpeta.
+- En Sinope: usar el MCP `logseq_db_lab` de Hermes o el MCP privado `http://sinope.tailf70cf8.ts.net:12327/mcp`. Las credenciales viven en la configuración privada del cliente/servicio; nunca copiarlas al grafo ni al chat. Hermes carga el cambio en una sesión nueva; `/reload-mcp` renueva sus herramientas.
+- El acceso autorizado comprende el grafo completo, incluido contenido personal, con lectura y escritura. Buscar antes de crear, conservar estructura de bloques y enlazar el contexto con el journal de la fecha correspondiente.
+- Si DB/MCP no está disponible, informar el bloqueo y conservar el trabajo pendiente en el proyecto; no usar los OG como destino alternativo ni declarar que algo se registró sin verificarlo.
+- Los SmallDocs duraderos se incorporan al grafo DB mediante CLI/MCP, con etiquetas y enlaces; no se archivan como nuevas páginas Markdown en los grafos OG.
+
+Las referencias operativas a los grafos OG que aparezcan más abajo son históricas y quedan sustituidas por este aviso. No cambia las demás reglas del proyecto.
+
+---
+
 # AGENTS.md — plantilla canónica (memoria duradera → Logseq)
 
 > Copia o symlinkea este archivo a la raíz de cada proyecto (Antigravity y otros agentes lo leen

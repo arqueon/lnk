@@ -1,7 +1,4 @@
 󰒋	Nextcloud	https://nextcloud.arqueonautis.org	Productividad	Archivos, sincronización y oficina
-󰒋	Logseq DB · API	http://sinope.tailf70cf8.ts.net:12327/	Memoria	Documentación del API; escritura con token privado
-󰚩	Logseq DB · MCP	https://kuma.arqueonautis.org/dashboard/118	Memoria	Estado MCP para agentes; endpoint Sinope :12327/mcp
-󰑓	Logseq DB · Sync	http://sinope.tailf70cf8.ts.net:18787/health	Memoria	Sync privado del grafo unificado; estado del servidor
 󰽉	Digipad	https://muros.arqueonautis.org	Docencia	Muros y pizarras colaborativas
 󰊢	Vikunja Tasks	https://tasks.arqueonautis.org	Productividad	Gestión de tareas y proyectos
 󰄛	Mealie	https://mealie.arqueonautis.org	Hogar	Gestión de recetas y planificador de menú
@@ -20,7 +17,6 @@
 󰕼	Jellyfin	https://jellyfin.arqueonautis.org	Media	Servidor de cine y series
 󰵂	Immich	https://immich.arqueonautis.org	Media	Gestor y galería fotográfica
 󰋋	Navidrome	https://navidrome.arqueonautis.org	Media	Servidor de streaming de música
-󰋼	Calibre-Web	https://libros.arqueonautis.org	Media	Biblioteca de libros de Gerardo (Calibre)
 󰄛	Seerr (Overseerr)	https://seerr.arqueonautis.org	Media	Solicitudes y descubrimiento multimedia
 󰄛	Foreseerr	https://foreseerr.arqueonautis.org	Media	Descubrimiento multimedia alternativo
 󰚗	Sonarr	https://sonarr.arqueonautis.org	Media Arr	Gestión automática de series

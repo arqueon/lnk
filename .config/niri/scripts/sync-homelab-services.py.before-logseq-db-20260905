@@ -24,10 +24,6 @@ LNK_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 # Mapeo de metadatos conocidos, alias, categorías e iconos
 SERVICE_METADATA = {
-    # Logseq DB unificado, servicios privados de Sinope.
-    '100.107.89.3:18787': {'name': 'Logseq DB · Sync', 'category': 'Memoria', 'desc': 'Sync privado del grafo unificado; estado del servidor', 'icon': '\U000f0453', 'server': 'sinope', 'order': 11, 'url': 'http://sinope.tailf70cf8.ts.net:18787/health'},
-    '100.107.89.3:12327': {'name': 'Logseq DB · API', 'category': 'Memoria', 'desc': 'Documentación del API; escritura con token privado', 'icon': '\U000f048b', 'server': 'sinope', 'order': 11, 'url': 'http://sinope.tailf70cf8.ts.net:12327/'},
-    'logseq-db-mcp': {'name': 'Logseq DB · MCP', 'category': 'Memoria', 'desc': 'Estado MCP para agentes; endpoint Sinope :12327/mcp', 'icon': '\U000f06a9', 'server': 'sinope', 'order': 11, 'url': 'https://kuma.arqueonautis.org/dashboard/118'},
     # Sinope - Productividad & Colaboración
     "nextcloud.arqueonautis.org": {
         "name": "Nextcloud",
@@ -174,14 +170,6 @@ SERVICE_METADATA = {
         "icon": "󰵂",
         "server": "sinope",
         "order": 52
-    },
-    "libros.arqueonautis.org": {
-        "name": "Calibre-Web",
-        "category": "Media",
-        "desc": "Biblioteca de libros de Gerardo (Calibre)",
-        "icon": "󰋼",
-        "server": "sinope",
-        "order": 55
     },
     "navidrome.arqueonautis.org": {
         "name": "Navidrome",
@@ -669,7 +657,7 @@ def build_catalogs():
 
         entry = {
             "name": clean_name,
-            "url": meta.get("url", user_url),
+            "url": user_url,
             "category": meta.get("category", "General"),
             "desc": meta.get("desc", m["name"]),
             "icon": meta.get("icon", "󰒋"),

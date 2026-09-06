@@ -334,3 +334,10 @@ window-rule {
     match app-id="^org.kde.dolphin$" title="^Moving"
     default-column-width { fixed 600; }
 }
+
+// @id=wr_1788631056348601990 @name=logseq
+window-rule {
+    match app-id="^logseq$"
+    open-maximized true
+    open-on-workspace "notes"
+}

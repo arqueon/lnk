@@ -11,33 +11,6 @@
       "server": "sinope"
     },
     {
-      "name": "Logseq DB · API",
-      "url": "http://sinope.tailf70cf8.ts.net:12327/",
-      "category": "Memoria",
-      "desc": "Documentación del API; escritura con token privado",
-      "icon": "󰒋",
-      "order": 11,
-      "server": "sinope"
-    },
-    {
-      "name": "Logseq DB · MCP",
-      "url": "https://kuma.arqueonautis.org/dashboard/118",
-      "category": "Memoria",
-      "desc": "Estado MCP para agentes; endpoint Sinope :12327/mcp",
-      "icon": "󰚩",
-      "order": 11,
-      "server": "sinope"
-    },
-    {
-      "name": "Logseq DB · Sync",
-      "url": "http://sinope.tailf70cf8.ts.net:18787/health",
-      "category": "Memoria",
-      "desc": "Sync privado del grafo unificado; estado del servidor",
-      "icon": "󰑓",
-      "order": 11,
-      "server": "sinope"
-    },
-    {
       "name": "Digipad",
       "url": "https://muros.arqueonautis.org",
       "category": "Docencia",
@@ -197,15 +170,6 @@
       "desc": "Servidor de streaming de música",
       "icon": "󰋋",
       "order": 54,
-      "server": "sinope"
-    },
-    {
-      "name": "Calibre-Web",
-      "url": "https://libros.arqueonautis.org",
-      "category": "Media",
-      "desc": "Biblioteca de libros de Gerardo (Calibre)",
-      "icon": "󰋼",
-      "order": 55,
       "server": "sinope"
     },
     {
