@@ -1,0 +1,24 @@
+// ═══ user.kdl (POR-HOST: star-lite) ═══
+// Compartido por los usuarios de star-lite; lo común vive en user-common.kdl.
+// Nota: Mod+D (antes anyrun) quedó libre; overview = Mod+E.
+
+// ── Arranque de Logseq ──
+spawn-at-startup "logseq"
+
+window-rule {
+    match app-id="google-chrome"
+    default-column-width { proportion 1.0; }
+    opacity 1.0
+    open-focused true
+}
+
+window-rule {
+    match app-id="firefox"
+    default-column-width { proportion 0.7; }
+    opacity 1.0
+    open-focused true
+}
+
+binds {
+    Mod+Alt+Return { spawn-sh "nemo ~/Downloads/ || thunar ~/Downloads/"; }
+}
