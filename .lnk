@@ -67,6 +67,10 @@
 .config/yay
 .face
 .local/bin/fastfetch-format
+.local/bin/hermes-sinope
+.local/bin/hermes-tui
+.local/bin/hermina-tui
+.local/bin/logseq-multi-launch
 .local/bin/md
 .local/bin/mindwtr
 .local/bin/sdoc-embed-images

@@ -1,4 +1,1 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-exec "${HOME}/.config/niri/scripts/hermes-sinope" hermes-abdel tui "$@"
+/home/ruben/.config/lnk/.local/bin/hermina-tui
