@@ -2,8 +2,8 @@
 // Compartido por los usuarios de star-lite; lo común vive en user-common.kdl.
 // Nota: Mod+D (antes anyrun) quedó libre; overview = Mod+E.
 
-// ── Arranque de Logseq ──
-spawn-at-startup "logseq"
+// ── Arranque de Logseq DB canónico (arq-unificado) ──
+spawn-sh-at-startup "exec ~/.local/bin/logseqdb"
 
 window-rule {
     match app-id="google-chrome"
@@ -20,5 +20,6 @@ window-rule {
 }
 
 binds {
+    Mod+F4 { spawn-sh "exec ~/.local/bin/logseqdb"; }
     Mod+Alt+Return { spawn-sh "nemo ~/Downloads/ || thunar ~/Downloads/"; }
 }
