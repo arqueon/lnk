@@ -7,11 +7,19 @@
 typeset -gi _zsh_has_tty=0
 [[ -t 0 && -t 1 ]] && _zsh_has_tty=1
 
+# Fastfetch se muestra una sola vez al abrir una terminal interactiva.
+[[ -t 1 ]] && (( $+commands[fastfetch] )) && fastfetch
+
+# Powerlevel10k instant prompt (debe ejecutarse lo mas arriba posible).
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Configuracion privada opcional. Mantenerla fuera de lnk.
 [[ -r "$HOME/.config/zsh/private.zsh" ]] && source "$HOME/.config/zsh/private.zsh"
 
 # Rutas de usuario, sin duplicados.
-typeset -U path PATH
+typeset -U path PATH fpath
 path=(
   "$HOME/.bin"
   "$HOME/.local/bin"
@@ -21,6 +29,18 @@ path=(
   $path
 )
 export PATH
+
+# Directorio de funciones y completados de usuario
+fpath=(
+  "$HOME/.local/share/zsh/site-functions"
+  $fpath
+)
+
+# Generar autocompletado de lnk si no existe y lnk esta disponible
+if (( $+commands[lnk] )) && [[ ! -f "$HOME/.local/share/zsh/site-functions/_lnk" ]]; then
+  mkdir -p "$HOME/.local/share/zsh/site-functions"
+  lnk completion zsh > "$HOME/.local/share/zsh/site-functions/_lnk" 2>/dev/null
+fi
 
 export EDITOR=nano
 export VISUAL=nano
@@ -55,17 +75,29 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 
-# Completar sin distinguir mayusculas, con menu legible.
+# Completar sin distinguir mayusculas, con menu visual navegable.
+zmodload -i zsh/complist
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/completion"
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:*:*:*:descriptions' format '%F{blue}-- %d --%f'
+zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':completion:*' verbose yes
+
 _zsh_cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 _zcompdump="$_zsh_cache_dir/zcompdump"
 mkdir -p -- "$_zsh_cache_dir"
 autoload -Uz compinit
-if [[ -s "$_zcompdump" ]]; then
+setopt LOCAL_OPTIONS EXTENDED_GLOB
+if [[ -n "$_zcompdump"(#qN.mh+20) ]]; then
+  compinit -d "$_zcompdump"
+  { zcompile "$_zcompdump" } &! 2>/dev/null
+elif [[ -s "$_zcompdump" ]]; then
   compinit -C -d "$_zcompdump"
 elif command mkdir -- "$_zcompdump.lock" 2>/dev/null; then
   compinit -d "$_zcompdump"
@@ -79,6 +111,7 @@ unset _zsh_cache_dir _zcompdump
 # Edicion de linea, busqueda por prefijo y fzf.
 if (( _zsh_has_tty )) && [[ -o zle ]]; then
   bindkey -e
+  bindkey -M menuselect '^[[Z' reverse-menu-complete
   [[ -r /usr/share/fzf/completion.zsh ]] && source /usr/share/fzf/completion.zsh
   [[ -r /usr/share/fzf/key-bindings.zsh ]] && source /usr/share/fzf/key-bindings.zsh
   if (( $+widgets[fzf-cd-widget] )); then
@@ -437,11 +470,11 @@ alias md='sdoc bridge'
 
 # No se migran cb/cz/cf: sobrescribirian archivos que ahora gestiona lnk.
 
-# Fastfetch se muestra una sola vez al abrir una terminal, igual que en Fish.
-[[ -t 1 ]] && (( $+commands[fastfetch] )) && fastfetch
-
-# Starship es el prompt activo de Fish y Zsh.
-if (( _zsh_has_tty )) && [[ -o zle ]] && (( $+commands[starship] )); then
+# Prompt del shell: Powerlevel10k (con fallback a Starship si estuviera disponible).
+if [[ -r /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]; then
+  source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+  [[ -r "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
+elif (( $+commands[starship] )); then
   eval "$(starship init zsh)"
 fi
 
