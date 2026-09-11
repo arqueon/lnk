@@ -96,7 +96,7 @@ autoload -Uz compinit
 setopt LOCAL_OPTIONS EXTENDED_GLOB
 if [[ -n "$_zcompdump"(#qN.mh+20) ]]; then
   compinit -d "$_zcompdump"
-  { zcompile "$_zcompdump" } &! 2>/dev/null
+  { zcompile "$_zcompdump" 2>/dev/null } &!
 elif [[ -s "$_zcompdump" ]]; then
   compinit -C -d "$_zcompdump"
 elif command mkdir -- "$_zcompdump.lock" 2>/dev/null; then
@@ -165,6 +165,22 @@ if (( _zsh_has_tty )) && [[ -o zle ]]; then
   # Ctrl+Izquierda / Ctrl+Derecha para saltar palabras
   bindkey '^[[1;5D' backward-word
   bindkey '^[[1;5C' forward-word
+
+  # Forma del cursor: barra vertical (beam) parpadeante en edición (estilo Fish)
+  _zsh_set_cursor() {
+    if [[ $KEYMAP == vicmd ]]; then
+      print -n '\e[2 q'
+    else
+      print -n '\e[5 q'
+    fi
+  }
+  zle -N zle-keymap-select _zsh_set_cursor
+  zle -N zle-line-init _zsh_set_cursor
+
+  # Restaurar cursor barra en cada nuevo prompt
+  print -n '\e[5 q'
+  precmd_functions+=(_zsh_precmd_cursor)
+  _zsh_precmd_cursor() { print -n '\e[5 q'; }
 fi
 
 # Integraciones opcionales.
