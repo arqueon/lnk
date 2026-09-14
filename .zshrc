@@ -289,6 +289,11 @@ alias listt='sudo pacman -Qqet'
 alias listaur='sudo pacman -Qqem'
 alias big="expac -H M '%m\\t%n' | sort -h | nl"
 
+# VPN Fortinet UdG (openfortivpn lee /etc/openfortivpn/config; página [[VPN Fortinet UdG]] en Logseq).
+alias vpn-udg='sudo systemd-run --unit=vpn-udg --collect openfortivpn'
+alias vpn-udg-off='sudo systemctl stop vpn-udg'
+alias vpn-udg-status='systemctl status vpn-udg --no-pager; ip -brief addr show ppp0 2>/dev/null || echo "sin ppp0"'
+
 # Salida legible y diagnostico.
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'

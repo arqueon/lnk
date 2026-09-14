@@ -52,10 +52,6 @@ if [[ -x "${script_dir}/launch-hermes-one.sh" ]] \
   && "${script_dir}/launch-hermes-one.sh" --available; then
   choices+=$'\nHermes One (comunitaria)\thermes-one'
 fi
-if [[ -x "${script_dir}/launch-opendesign-hermes.sh" ]] \
-  && "${script_dir}/launch-opendesign-hermes.sh" --available; then
-  choices+=$'\nOpenDesign + Hermes (diseño local · piloto)\topendesign-hermes'
-fi
 choices+=$'\nTUI oficial persistente (tmux)\ttui\nHermes Gate (sesiones tmux)\tgate\nHermes Workspace\tworkspace\nHermes UI PWA\tpwa\nOpen WebUI (pesada)\topen-webui\nEstado de interfaces\tstatus\nPreparar tmux remoto (UTF-8 + portapapeles)\ttmux-setup\nDetener laboratorios y túneles\tstop-labs'
 
 select_choice() {
@@ -109,7 +105,11 @@ case "${action}" in
       notify-send -u critical "Hermes remoto" "No se encontró una terminal compatible."
       exit 1
     fi
-    exec "${terminal}" -e "${hermes_cli}" "${profile}" "${action}"
+    # Keep the window open on failure so the error is readable instead of a
+    # terminal that flashes and closes.
+    exec "${terminal}" -e bash -c \
+      '"$0" "$1" "$2" || { rc=$?; printf "\n[salida %s] Pulsa una tecla para cerrar…" "$rc"; read -r -n 1 -s; exit "$rc"; }' \
+      "${hermes_cli}" "${profile}" "${action}"
     ;;
   status)
     if [[ -z "${terminal}" ]]; then
@@ -122,10 +122,7 @@ case "${action}" in
     exec "${hermes_cli}" "${profile}" desktop
     ;;
   hermes-one)
-    exec "${script_dir}/launch-hermes-one.sh"
-    ;;
-  opendesign-hermes)
-    exec "${script_dir}/launch-opendesign-hermes.sh"
+    exec "${hermes_cli}" "${profile}" hermes-one
     ;;
   *)
     if output="$("${hermes_cli}" "${profile}" "${action}" 2>&1)"; then

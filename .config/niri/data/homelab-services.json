@@ -155,6 +155,15 @@
       "server": "sinope"
     },
     {
+      "name": "Atlas de contenidos",
+      "url": "http://100.107.89.3:8132/?status=publicada&view=table&row=section&col=categories&sort=title",
+      "category": "Docencia",
+      "desc": "Inventario editorial y relaciones de IA y Aprendizaje",
+      "icon": "󰊫",
+      "order": 41,
+      "server": "sinope"
+    },
+    {
       "name": "Actual Budget",
       "url": "https://actual.arqueonautis.org",
       "category": "Finanzas",
@@ -398,6 +407,15 @@
       "server": "sinope"
     },
     {
+      "name": "Logseq-sync",
+      "url": "https://logseq-sync.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en logseq-sync.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
       "name": "ntfy Sinope",
       "url": "https://notify.arqueonautis.org",
       "category": "Monitoreo",
@@ -607,6 +625,24 @@
       "server": "nas-btb"
     },
     {
+      "name": "Claper (Abdel)",
+      "url": "https://claper.abdelvidrio.org",
+      "category": "Docencia",
+      "desc": "Presentaciones interactivas de Abdel; migrado a nas-btb 12-sep-2026",
+      "icon": "󰍡",
+      "order": 45,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Digipad (Abdel)",
+      "url": "https://digipad.abdelvidrio.org",
+      "category": "Docencia",
+      "desc": "Muros y pizarras colaborativas de Abdel; migrado a nas-btb 12-sep-2026",
+      "icon": "󰽉",
+      "order": 46,
+      "server": "nas-btb"
+    },
+    {
       "name": "Jellyfin BTB",
       "url": "https://media.barbiestesteadoras.org/",
       "category": "Media",
@@ -697,6 +733,15 @@
       "server": "nas-btb"
     },
     {
+      "name": "TURN videollamadas",
+      "url": "http://turn.barbiestesteadoras.org:3478",
+      "category": "General",
+      "desc": "TURN de Nextcloud Talk (coturn en anytype-vps)",
+      "icon": "󰒋",
+      "order": 82,
+      "server": "nas-btb"
+    },
+    {
       "name": "Grist origen",
       "url": "http://100.95.27.14:30084/status",
       "category": "General",
@@ -728,15 +773,6 @@
       "url": "https://www.barbiestesteadoras.org/",
       "category": "General",
       "desc": "NAS BTB · Ruta www",
-      "icon": "󰒋",
-      "order": 100,
-      "server": "nas-btb"
-    },
-    {
-      "name": "TURN videollamadas",
-      "url": "http://turn.barbiestesteadoras.org:3478",
-      "category": "General",
-      "desc": "NAS BTB · TURN videollamadas",
       "icon": "󰒋",
       "order": 100,
       "server": "nas-btb"

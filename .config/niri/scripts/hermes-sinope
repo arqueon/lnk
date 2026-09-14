@@ -70,6 +70,7 @@ Interfaces:
   webui       WebUI existente
   dashboard   Dashboard oficial
   desktop     Cliente Desktop oficial
+  hermes-one  Hermes One (Desktop comunitario, perfil aislado)
   tui         TUI oficial persistente en tmux
   gate        Hermes Gate para sesiones tmux
   workspace   Hermes Workspace
@@ -184,7 +185,7 @@ web_interface() {
   local start_mode="$5"
 
   if [[ "${start_mode}" == start ]]; then
-    remote "systemctl --user start '${remote_unit}'"
+    remote "systemctl --user start ${remote_unit}"
   else
     remote "systemctl --user is-active --quiet '${remote_unit}'"
   fi
@@ -193,21 +194,10 @@ web_interface() {
   printf '%s · %s lista en http://127.0.0.1:%s/\n' "${display_name}" "${label}" "${port}"
 }
 
-desktop() {
-  local desktop_binary="${HOME}/.hermes/hermes-agent/apps/desktop/release/linux-unpacked/Hermes"
-  if [[ ! -x "${desktop_binary}" ]]; then
-    desktop_binary="${HOME}/.local/share/hermes-desktop-sinope/linux-unpacked/Hermes"
-  fi
-  if [[ ! -x "${desktop_binary}" ]]; then
-    printf 'Desktop oficial no está instalado en esta computadora.\n' >&2
-    exit 3
-  fi
-
-  # Use Desktop's native "Connect via SSH" lifecycle.  Keep its user-data
-  # directory separate per Unix identity so this launcher never replaces a
-  # person's normal local-Desktop connection or another Sinope account.
-  local desktop_config_root="${HOME}/.config/hermes-desktop-sinope/${profile}"
-  local desktop_user_data="${desktop_config_root}/Hermes"
+prepare_desktop_connection() {
+  # Write Desktop's native "Connect via SSH" files (v1 connection + v2
+  # registry) into the given user-data directory.
+  local desktop_user_data="$1"
   local connection_file="${desktop_user_data}/connection.json"
   local registry_file="${desktop_user_data}/connections.json"
   local connection_id="sinope-${profile}"
@@ -292,6 +282,22 @@ desktop() {
     ' >"${temp_file}"
   chmod 600 "${temp_file}"
   mv "${temp_file}" "${registry_file}"
+}
+
+desktop() {
+  local desktop_binary="${HOME}/.hermes/hermes-agent/apps/desktop/release/linux-unpacked/Hermes"
+  if [[ ! -x "${desktop_binary}" ]]; then
+    desktop_binary="${HOME}/.local/share/hermes-desktop-sinope/linux-unpacked/Hermes"
+  fi
+  if [[ ! -x "${desktop_binary}" ]]; then
+    printf 'Desktop oficial no está instalado en esta computadora.\n' >&2
+    exit 3
+  fi
+
+  # Keep Desktop's user-data separate per Unix identity so this launcher never
+  # replaces a person's normal local-Desktop connection or another Sinope account.
+  local desktop_config_root="${HOME}/.config/hermes-desktop-sinope/${profile}"
+  prepare_desktop_connection "${desktop_config_root}/Hermes"
 
   if [[ "${HERMES_DESKTOP_DRY_RUN:-0}" == 1 ]]; then
     printf '%s: conexión SSH nativa de Desktop preparada.\n' "${display_name}"
@@ -300,6 +306,80 @@ desktop() {
 
   XDG_CONFIG_HOME="${desktop_config_root}" \
     exec "${desktop_binary}" --disable-setuid-sandbox "$@"
+}
+
+hermes_one_pilot_root() {
+  printf '%s\n' "${HERMES_ONE_PILOT_ROOT:-${HOME}/Projects/hermes-one-pilot}"
+}
+
+hermes_one() {
+  local launcher="${script_dir}/launch-hermes-one.sh"
+  local hermes_home settings settings_source key_path local_port temp_file
+  if [[ ! -x "${launcher}" ]] || ! "${launcher}" --available; then
+    printf 'Hermes One no está instalado en esta computadora.\n' >&2
+    exit 3
+  fi
+
+  # Hermes One (community Desktop) reads its connection from
+  # ${HERMES_HOME}/desktop.json, and its AppRun points HERMES_HOME at
+  # <pilot>/profile/hermes-home.  In SSH mode the app opens its own tunnel to
+  # the remote API server (:8642) with the key given here, so that key must
+  # work non-interactively (BatchMode).  Without this file it starts a local
+  # backend and never reaches Sinope.
+  hermes_home="$(hermes_one_pilot_root)/profile/hermes-home"
+  settings="${hermes_home}/desktop.json"
+  key_path="${HOME}/.ssh/id_ed25519_casa"
+  local_port=18642
+  if [[ "${profile}" == "hermes-abdel" ]]; then
+    key_path="${abdel_key}"
+    local_port=18643
+  fi
+  if [[ ! -r "${key_path}" ]]; then
+    printf 'Hermes One necesita la clave SSH %s para %s.\n' "${key_path}" "${target}" >&2
+    exit 3
+  fi
+
+  mkdir -p "${hermes_home}"
+  settings_source=/dev/null
+  if [[ -s "${settings}" ]] && jq -e 'type == "object"' "${settings}" >/dev/null 2>&1; then
+    settings_source="${settings}"
+  fi
+  temp_file="$(mktemp "${hermes_home}/desktop.json.XXXXXX")"
+  jq -n --slurpfile current "${settings_source}" \
+    --arg host "${sinope_host}" --arg user "${remote_user}" --arg key "${key_path}" \
+    --argjson local_port "${local_port}" '
+      ($current[0] // {})
+      | .connectionMode = "ssh"
+      | .remoteUrl = (.remoteUrl // ("http://" + $host + ":8642"))
+      | .remoteApiKey = (.remoteApiKey // "")
+      | .sshConfig = ((.sshConfig // {}) + {
+          host: $host, port: 22, username: $user, keyPath: $key,
+          remotePort: 8642, localPort: $local_port
+        })
+    ' >"${temp_file}"
+  chmod 600 "${temp_file}"
+  mv "${temp_file}" "${settings}"
+
+  if [[ "${HERMES_DESKTOP_DRY_RUN:-0}" == 1 ]]; then
+    printf '%s: conexión SSH de Hermes One preparada.\n' "${display_name}"
+    return 0
+  fi
+  exec "${launcher}" "$@"
+}
+
+find_gate_dir() {
+  local candidate
+  if [[ -n "${HERMES_GATE_DIR:-}" ]]; then
+    printf '%s\n' "${HERMES_GATE_DIR}"
+    return 0
+  fi
+  for candidate in "${HOME}/Projects/utils/hermes-gate" "${HOME}/Projects/hermes-gate"; do
+    if [[ -x "${candidate}/.venv/bin/gate" ]]; then
+      printf '%s\n' "${candidate}"
+      return 0
+    fi
+  done
+  return 1
 }
 
 prepare_gate_config() {
@@ -366,7 +446,8 @@ case "${command}" in
     web_interface dashboard 'Dashboard oficial' hermes-dashboard-lab.service "${dashboard_port}" start
     ;;
   workspace)
-    web_interface workspace 'Workspace' hermes-workspace-lab.service "${workspace_port}" start
+    # Workspace fetches its dashboard token from :9119; start both units.
+    web_interface workspace 'Workspace' 'hermes-dashboard-lab.service hermes-workspace-lab.service' "${workspace_port}" start
     ;;
   pwa)
     web_interface pwa 'Hermes UI PWA' hermes-ui-pwa-lab.service "${pwa_port}" start
@@ -377,21 +458,23 @@ case "${command}" in
   desktop)
     desktop "$@"
     ;;
+  hermes-one)
+    hermes_one "$@"
+    ;;
   tui)
     session_name="${1:-${tui_session}}"
     ensure_remote_terminfo
     exec ssh "${ssh_options[@]}" -t "${target}" "env LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 ${remote_home}/.local/bin/hermes-remote-tui '${session_name}'"
     ;;
   gate)
-    gate_binary="${HOME}/Projects/hermes-gate/.venv/bin/gate"
-    if [[ ! -x "${gate_binary}" ]]; then
-      printf 'Hermes Gate no está instalado en esta computadora: %s\n' "${gate_binary}" >&2
+    if ! gate_dir="$(find_gate_dir)"; then
+      printf 'Hermes Gate no está instalado en esta computadora (se busca .venv/bin/gate en ~/Projects/utils/hermes-gate).\n' >&2
       exit 3
     fi
     ensure_remote_terminfo
     prepare_gate_config
-    cd "${HOME}/Projects/hermes-gate"
-    exec "${gate_binary}"
+    cd "${gate_dir}"
+    exec "${gate_dir}/.venv/bin/gate"
     ;;
   gate-setup)
     ensure_remote_terminfo
@@ -410,6 +493,22 @@ case "${command}" in
       unit="$(tunnel_unit_name "${action}")"
       printf '%-55s %s\n' "${unit}" "$(systemctl --user is-active "${unit}" 2>/dev/null || true)"
     done
+    printf '\nClientes locales:\n'
+    if [[ -x "${HOME}/.hermes/hermes-agent/apps/desktop/release/linux-unpacked/Hermes" || -x "${HOME}/.local/share/hermes-desktop-sinope/linux-unpacked/Hermes" ]]; then
+      printf '%-38s %s\n' "Desktop oficial" instalado
+    else
+      printf '%-38s %s\n' "Desktop oficial" "no instalado"
+    fi
+    if [[ -x "${script_dir}/launch-hermes-one.sh" ]] && "${script_dir}/launch-hermes-one.sh" --available; then
+      printf '%-38s %s\n' "Hermes One" "instalado ($(hermes_one_pilot_root))"
+    else
+      printf '%-38s %s\n' "Hermes One" "no instalado"
+    fi
+    if gate_dir="$(find_gate_dir)"; then
+      printf '%-38s %s\n' "Hermes Gate" "instalado (${gate_dir})"
+    else
+      printf '%-38s %s\n' "Hermes Gate" "no instalado"
+    fi
     ;;
   stop-labs)
     remote 'systemctl --user stop hermes-dashboard-lab.service hermes-workspace-lab.service hermes-ui-pwa-lab.service open-webui-hermes-lab.service'

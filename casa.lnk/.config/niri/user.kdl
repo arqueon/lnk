@@ -22,11 +22,13 @@ window-rule {
 }
 
 
-// ── Arranque de triple instancia de Logseq (casa, ofi, laptop) ──
-spawn-sh-at-startup "exec ~/.local/bin/logseq-db-lab"
+// ── Arranque de Logseq DB canónico (ruben) ──
+spawn-sh-at-startup "exec ~/.local/bin/logseqdb"
 
 // ── Binds propios ──
 binds {
-    Mod+F4 { spawn-sh "exec ~/.local/bin/logseq-db-lab"; }
+    Mod+F1 { spawn "firefox"; }
+    Mod+Alt+F1 { spawn-sh "~/.config/niri/scripts/run_chrome.sh"; }
+    Mod+F4 { spawn-sh "exec ~/.local/bin/logseqdb"; }
     Mod+F7 { spawn "env" "GDK_BACKEND=x11" "virt-manager" "--connect" "qemu:///system" "--show-domain-console" "win11"; }
 }

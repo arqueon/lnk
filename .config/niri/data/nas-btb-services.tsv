@@ -9,6 +9,8 @@
 󰌋	Vaultwarden BTB	https://vault.barbiestesteadoras.org/	Seguridad	Gestor de contraseñas de organización
 󰦨	n8n BTB	https://automatizaciones.barbiestesteadoras.org/	Automatización	Automatizaciones e integraciones BTB
 󰂚	ntfy BTB	https://notify.barbiestesteadoras.org/	Monitoreo	Notificaciones centinela de NAS-BTB
+󰍡	Claper (Abdel)	https://claper.abdelvidrio.org	Docencia	Presentaciones interactivas de Abdel; migrado a nas-btb 12-sep-2026
+󰽉	Digipad (Abdel)	https://digipad.abdelvidrio.org	Docencia	Muros y pizarras colaborativas de Abdel; migrado a nas-btb 12-sep-2026
 󰕼	Jellyfin BTB	https://media.barbiestesteadoras.org/	Media	Videoteca de medios de BTB
 󰵂	Immich BTB	https://fotos.barbiestesteadoras.org/	Media	Galería y respaldo de fotos BTB
 󰕥	Formularios BTB	https://formularios.barbiestesteadoras.org/	Público	Formularios de registro e ingreso
@@ -19,8 +21,8 @@
 󰈙	Informes BTB	https://informes.barbiestesteadoras.org/	Documentación	Informes de actividades y resultados
 󰆼	Muestreo BTB	https://muestreo.barbiestesteadoras.org/	Docencia	Registro de muestras y análisis
 󰒋	TrueNAS SCALE UI	https://100.95.27.14/	Infraestructura	Panel de administración TrueNAS (Tailscale)
+󰒋	TURN videollamadas	http://turn.barbiestesteadoras.org:3478	General	TURN de Nextcloud Talk (coturn en anytype-vps)
 󰒋	Grist origen	http://100.95.27.14:30084/status	General	NAS BTB · Grist origen
 󰒋	Kuma testigo	http://100.95.27.14:31050/	General	NAS BTB · Kuma testigo
 󰒋	LinkBreeze	https://links.barbiestesteadoras.org	General	NAS BTB · LinkBreeze
 󰒋	Ruta www	https://www.barbiestesteadoras.org/	General	NAS BTB · Ruta www
-󰒋	TURN videollamadas	http://turn.barbiestesteadoras.org:3478	General	NAS BTB · TURN videollamadas

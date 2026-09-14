@@ -141,6 +141,15 @@ SERVICE_METADATA = {
         "server": "sinope",
         "order": 40
     },
+    "100.107.89.3:8132": {
+        "name": "Atlas de contenidos",
+        "category": "Docencia",
+        "desc": "Inventario editorial y relaciones de IA y Aprendizaje",
+        "icon": "󰊫",
+        "server": "sinope",
+        "order": 41,
+        "url": "http://100.107.89.3:8132/?status=publicada&view=table&row=section&col=categories&sort=title"
+    },
     "actual.arqueonautis.org": {
         "name": "Actual Budget",
         "category": "Finanzas",
@@ -555,6 +564,31 @@ SERVICE_METADATA = {
         "icon": "󰒋",
         "server": "nas-btb",
         "order": 80
+    },
+    "turn.barbiestesteadoras.org:3478": {
+        "name": "TURN videollamadas",
+        "url": "http://turn.barbiestesteadoras.org:3478",
+        "category": "General",
+        "desc": "TURN de Nextcloud Talk (coturn en anytype-vps)",
+        "icon": "󰒋",
+        "server": "nas-btb",
+        "order": 82
+    },
+    "claper.abdelvidrio.org": {
+        "name": "Claper (Abdel)",
+        "category": "Docencia",
+        "desc": "Presentaciones interactivas de Abdel; migrado a nas-btb 12-sep-2026",
+        "icon": "󰍡",
+        "server": "nas-btb",
+        "order": 45
+    },
+    "digipad.abdelvidrio.org": {
+        "name": "Digipad (Abdel)",
+        "category": "Docencia",
+        "desc": "Muros y pizarras colaborativas de Abdel; migrado a nas-btb 12-sep-2026",
+        "icon": "󰽉",
+        "server": "nas-btb",
+        "order": 46
     }
 }
 
