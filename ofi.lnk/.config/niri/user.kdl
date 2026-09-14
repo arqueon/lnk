@@ -27,5 +27,7 @@ spawn-sh-at-startup "exec ~/.local/bin/logseqdb"
 
 // ── Binds propios ──
 binds {
+    Mod+F1 { spawn "firefox"; }
+    Mod+Alt+F1 { spawn-sh "~/.config/niri/scripts/run_chrome.sh"; }
     Mod+F4 { spawn-sh "exec ~/.local/bin/logseqdb"; }
 }
