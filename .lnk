@@ -66,6 +66,10 @@
 .config/yay
 .face
 .local/bin/fastfetch-format
+.local/bin/hermes-sinope
+.local/bin/hermes-tui
+.local/bin/hermina-tui
+.local/bin/logseq-multi-launch
 .local/bin/md
 .local/bin/mindwtr
 .local/bin/sdoc-embed-images
@@ -73,5 +77,6 @@
 .local/bin/variety-favorite-shared
 .local/bin/variety-favorites-bootstrap
 .local/share/applications/sdoc.desktop
+.p10k.zsh
 .sdocs/styles.yaml
 .zshrc

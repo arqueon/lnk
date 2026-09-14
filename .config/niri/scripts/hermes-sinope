@@ -185,6 +185,12 @@ web_interface() {
   local start_mode="$5"
 
   if [[ "${start_mode}" == start ]]; then
+    # A long-lived dashboard process can remain "active" while its HTTP
+    # listener is wedged.  Heal that stale state before reusing its tunnel.
+    if remote "systemctl --user is-active --quiet '${remote_unit}'" \
+      && ! remote "curl -fsS --max-time 3 'http://127.0.0.1:${port}/' >/dev/null"; then
+      remote "systemctl --user restart '${remote_unit}'"
+    fi
     remote "systemctl --user start ${remote_unit}"
   else
     remote "systemctl --user is-active --quiet '${remote_unit}'"
@@ -374,7 +380,7 @@ find_gate_dir() {
     return 0
   fi
   for candidate in "${HOME}/Projects/utils/hermes-gate" "${HOME}/Projects/hermes-gate"; do
-    if [[ -x "${candidate}/.venv/bin/gate" ]]; then
+    if [[ -x "${candidate}/.venv/bin/gate" || (-f "${candidate}/pyproject.toml" && -d "${candidate}/hermes_gate") ]]; then
       printf '%s\n' "${candidate}"
       return 0
     fi
@@ -468,13 +474,19 @@ case "${command}" in
     ;;
   gate)
     if ! gate_dir="$(find_gate_dir)"; then
-      printf 'Hermes Gate no está instalado en esta computadora (se busca .venv/bin/gate en ~/Projects/utils/hermes-gate).\n' >&2
+      printf 'No se encontró el proyecto Hermes Gate en ~/Projects/utils/hermes-gate ni en ~/Projects/hermes-gate.\n' >&2
       exit 3
+    fi
+    gate_binary="${gate_dir}/.venv/bin/gate"
+    if [[ ! -x "${gate_binary}" ]]; then
+      printf 'Preparando Hermes Gate por primera vez en %s…\n' "${gate_dir}"
+      python3 -m venv "${gate_dir}/.venv"
+      "${gate_dir}/.venv/bin/python" -m pip install --disable-pip-version-check -e "${gate_dir}"
     fi
     ensure_remote_terminfo
     prepare_gate_config
     cd "${gate_dir}"
-    exec "${gate_dir}/.venv/bin/gate"
+    exec "${gate_binary}"
     ;;
   gate-setup)
     ensure_remote_terminfo

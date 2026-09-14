@@ -22,10 +22,10 @@ window-rule {
 }
 
 
-// ── Arranque de triple instancia de Logseq (casa, ofi, laptop) ──
-spawn-sh-at-startup "exec ~/.local/bin/logseq-multi-launch"
+// ── Arranque de Logseq DB canónico (arq-unificado); los OG quedan como archivo ──
+spawn-sh-at-startup "exec ~/.local/bin/logseqdb"
 
 // ── Binds propios ──
 binds {
-    Mod+F4 { spawn-sh "exec ~/.local/bin/logseq-multi-launch"; }
+    Mod+F4 { spawn-sh "exec ~/.local/bin/logseqdb"; }
 }

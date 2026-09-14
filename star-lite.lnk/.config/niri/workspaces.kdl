@@ -1,0 +1,8 @@
+workspace "chat"
+workspace "web"
+workspace "ref"
+workspace "notes"
+workspace "write"
+workspace "files"
+workspace "virt"
+workspace "media"
