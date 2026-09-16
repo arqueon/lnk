@@ -24,6 +24,7 @@
 .config/matugen/templates/fuzzel-colors.ini
 .config/niri/animations.kdl
 .config/niri/config.kdl
+.config/niri/data/ai-apps.tsv
 .config/niri/data/homelab-services.json
 .config/niri/data/nas-btb-services.tsv
 .config/niri/data/sinope-services.tsv
@@ -37,7 +38,9 @@
 .config/niri/scripts/gpu_recorder.sh
 .config/niri/scripts/hermes-remote-tmux.conf
 .config/niri/scripts/hermes-sinope
+.config/niri/scripts/launch-ai-menu.sh
 .config/niri/scripts/launch-anytype.sh
+.config/niri/scripts/launch-deepseek-harness.sh
 .config/niri/scripts/launch-hermes-one.sh
 .config/niri/scripts/launch-hermes.sh
 .config/niri/scripts/launch-homelab-menu.sh
@@ -48,6 +51,7 @@
 .config/niri/scripts/launch-quad-kitty.sh
 .config/niri/scripts/launch-quad-niri.sh
 .config/niri/scripts/launch-sdoc-library.sh
+.config/niri/scripts/reset-browser-chooser.sh
 .config/niri/scripts/restart-ferdium.sh
 .config/niri/scripts/run_chrome.sh
 .config/niri/scripts/run_stream.sh
