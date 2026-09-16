@@ -1,0 +1,86 @@
+󱚣	Claude	https://claude.ai	Agentes	Anthropic · Razonamiento, análisis profundo, código y artefactos
+󰚩	ChatGPT	https://chatgpt.com	Agentes	OpenAI · GPT-4o, o1, o3, canvas, voz y visión
+󰊭	Google Gemini	https://gemini.google.com	Agentes	Google · Gemini 2.5/Flash, ventana de contexto masiva
+󰘑	DeepSeek Chat	https://chat.deepseek.com	Agentes	DeepSeek · V3 y R1 con razonamiento abierto y código
+󱙺	Qwen Chat	https://chat.qwen.ai	Agentes	Alibaba Cloud · Modelos Tongyi Qianwen y Qwen 2.5
+󰍉	Perplexity	https://www.perplexity.ai	Agentes	Motor de respuestas y búsqueda con fuentes citadas
+󰫢	Grok	https://grok.com	Agentes	xAI · Grok 2 y 3 con acceso a tiempo real y visión
+󰘐	Mistral Le Chat	https://chat.mistral.ai	Agentes	Mistral AI · Modelos europeos abiertos y búsqueda web
+󰚩	Poe	https://poe.com	Agentes	Quora · Agregador multimodelo y bots personalizados
+󰘑	Microsoft Copilot	https://copilot.microsoft.com	Agentes	Microsoft · Asistente IA web integrado con Bing
+󰅩	Phind	https://www.phind.com	Agentes	Buscador técnico y agente para programadores
+󰘑	Kimi	https://kimi.moonshot.cn	Agentes	Moonshot AI · Análisis de documentos y contexto ultra largo
+󰚩	Doubao	https://www.doubao.com	Agentes	ByteDance · Asistente conversacional de alta adopción
+󰚩	OpenRouter	https://openrouter.ai	Routers/APIs	Router universal multimodelo, balanceo y métricas
+󱐋	Groq Console	https://console.groq.com	Routers/APIs	Inferencia LPU ultra veloz para Llama, Gemma y Mistral
+󰢹	Together AI	https://api.together.ai	Routers/APIs	Inferencia en la nube, fine-tuning y endpoints abiertos
+󰛄	Fireworks AI	https://fireworks.ai	Routers/APIs	Inferencia acelerada para modelos de lenguaje y visión
+󰓅	Cerebras Cloud	https://cloud.cerebras.ai	Routers/APIs	Inferencia wafer-scale a cientos de tokens por segundo
+󱁤	DeepInfra	https://deepinfra.com	Routers/APIs	Inferencia serverless de modelos open-source por token
+󰘐	Mistral Platform	https://console.mistral.ai	Routers/APIs	Consola de API de Mistral, fine-tuning y endpoints
+󰚩	OpenAI Platform	https://platform.openai.com	Routers/APIs	Consola de API de OpenAI, playground y assistants
+󱚣	Anthropic Console	https://console.anthropic.com	Routers/APIs	Consola de API de Anthropic, prompt generator y workbench
+󰘑	Nebius AI Studio	https://studio.nebius.ai	Routers/APIs	Plataforma GPU cloud e inferencia de alto rendimiento
+󰢹	Hyperbolic	https://app.hyperbolic.xyz	Routers/APIs	Red abierta de GPUs y APIs de inferencia descentralizada
+󰌠	Hugging Face	https://huggingface.co	Model Hubs	Hogar central de modelos abiertos, datasets y Spaces
+󰆧	Civitai	https://civitai.com	Model Hubs	Catálogo comunitario de checkpoints, LoRAs y difusión
+󰘑	Ollama Library	https://ollama.com/library	Model Hubs	Catálogo oficial de modelos optimizados para Ollama
+󱙺	ModelScope	https://modelscope.cn	Model Hubs	Comunidad de modelos abiertos impulsada por Alibaba
+󰑓	Replicate	https://replicate.com	Model Hubs	Ejecución y despliegue de modelos generativos vía API
+󱁤	Fal.ai	https://fal.ai/models	Model Hubs	Hub de inferencia ultrarrápida para modelos generativos
+󰆦	Smithery MCP	https://smithery.ai	MCP & Dev	Registro y directorio para descubrir e instalar servidores MCP
+󰚩	Glama MCP	https://glama.ai/mcp	MCP & Dev	Directorio y explorador de herramientas Model Context Protocol
+󱐋	PulseMCP	https://pulsemcp.com	MCP & Dev	Directorio curado, noticias y ranking de servidores MCP
+󰈙	MCP Docs	https://modelcontextprotocol.io	MCP & Dev	Especificación y documentación del estándar MCP
+󰡄	v0 by Vercel	https://v0.dev	MCP & Dev	Generador de interfaces completas en Next.js y React
+󱐋	Bolt.new	https://bolt.new	MCP & Dev	Desarrollo fullstack en el navegador con WebContainers
+󰄛	Lovable	https://lovable.dev	MCP & Dev	Creación de software fullstack guiado por conversación
+󰅩	Replit Agent	https://replit.com	MCP & Dev	Entorno en la nube con agente de programación autónomo
+󰘐	Cursor	https://www.cursor.com	MCP & Dev	IDE para programar en simbiosis con modelos avanzados
+󰙴	Langfuse	https://cloud.langfuse.com	MCP & Dev	Observabilidad, métricas y tracing para aplicaciones LLM
+󰈚	LangSmith	https://smith.langchain.com	MCP & Dev	Plataforma de pruebas, depuración y evals de agentes
+󰑈	Helicone	https://www.helicone.ai	MCP & Dev	Monitoreo de latencia, costos y caching para llamadas LLM
+󱎏	HeyGen	https://app.heygen.com	Video/Avatares	Avatares hiperrealistas, video corporativo y doblaje con IA
+󱎏	Synthesia	https://www.synthesia.io	Video/Avatares	Video con avatares para formación empresarial y cursos
+󰕧	RunwayML	https://runwayml.com	Video/Avatares	Gen-2 y Gen-3 Alpha, video cinemático y edición por IA
+󰕼	Luma Dream Machine	https://lumalabs.ai/dream-machine	Video/Avatares	Video generativo hiperrealista con dinámica de cámara 3D
+󰕧	Kling AI	https://klingai.com	Video/Avatares	Generador cinemático realista y gran consistencia física
+󰕼	Hailuo AI / MiniMax	https://hailuoai.video	Video/Avatares	Generación de video cinemático fluido y de alta fidelidad
+󰕧	Pika Labs	https://pika.art	Video/Avatares	Generación de clips, control de movimiento y efectos
+󰚩	OpenAI Sora	https://sora.com	Video/Avatares	Generación de video de alta resolución y escenas complejas
+󰕼	Haiper AI	https://haiper.ai	Video/Avatares	Generación y animación de video para creadores visuales
+󰕧	Vidu AI	https://vidu.studio	Video/Avatares	Motor de video generativo con rendering de alta resolución
+󱎏	Hedra	https://hedra.com	Video/Avatares	Personajes expresivos y avatares hablantes controlados
+󰽉	Midjourney	https://www.midjourney.com	Imagen & Arte	Generación artística y fotorrealista de máxima calidad
+󰙴	Ideogram	https://ideogram.ai	Imagen & Arte	Renderizado tipográfico de alta precisión y cartelería
+󱁤	FLUX Playground	https://fal.ai/models/flux-pro	Imagen & Arte	Modelo FLUX.1 de Black Forest Labs con máxima fidelidad
+󰈦	Recraft	https://recraft.ai	Imagen & Arte	Vectores SVG, iconos, ilustraciones 3D y brand assets
+󰽉	Leonardo.ai	https://leonardo.ai	Imagen & Arte	Suite creativa de arte digital, estilos y assets visuales
+󱁤	Krea AI	https://krea.ai	Imagen & Arte	Generación en tiempo real, upscaling fotográfico y video
+󰈦	Freepik AI	https://www.freepik.com/ai	Imagen & Arte	Freepik Mystic y Pikaso para generación comercial y stock
+󰵂	Magnific AI	https://magnific.ai	Imagen & Arte	Upscaler y potenciador de resolución con reinvención de detalle
+󰽉	Playground AI	https://playground.com	Imagen & Arte	Editor de imagen con lienzo infinito y modelos generativos
+󰆧	Tensor.Art	https://tensor.art	Imagen & Arte	Generador online gratuito con modelos de la comunidad
+󰎆	Suno	https://suno.com	Audio & Voz	Composición musical completa con voces y arreglos pro
+󰎆	Udio	https://udio.com	Audio & Voz	Generación de música con calidad de estudio y matices
+󰔖	ElevenLabs	https://elevenlabs.io	Audio & Voz	Síntesis de voz hiperrealista, clonación y efectos
+󰓅	Cartesia	https://cartesia.ai	Audio & Voz	Modelos de voz de ultra baja latencia para streaming
+󰔖	Fish Audio	https://fish.audio	Audio & Voz	Clonación de voz ligera y síntesis multilingüe abierta
+󰔖	PlayHT	https://play.ht	Audio & Voz	Generador de voz y clonación para audiolibros y podcasts
+󰑈	Mindsmith	https://www.mindsmith.ai	Educación/DI	Autoría de cursos interactivos, microlearning y SCORM con IA
+󰑓	MagicSchool AI	https://www.magicschool.ai	Educación/DI	Suite con 80+ herramientas pedagógicas y diseño de lecciones
+󰈙	Eduaide.ai	https://www.eduaide.ai	Educación/DI	Espacio para planificación curricular, rúbricas y scaffolding
+󰡄	Diffit	https://web.diffit.me	Educación/DI	Adaptación de textos a distintos niveles y actividades guiadas
+󰍡	Curipod	https://curipod.com	Educación/DI	Lecciones interactivas con sondeos, nubes de ideas y dibujo
+󱐋	Brisk Teaching	https://www.briskteaching.com	Educación/DI	Asistente pedagógico para currículo, nivelación y feedback
+󰏤	Teachermatic	https://teachermatic.com	Educación/DI	Generador de recursos pedagógicos, rúbricas y planes docentes
+󰚩	Khanmigo	https://www.khanacademy.org/khanmigo	Educación/DI	Tutor socrático y asistente instruccional de Khan Academy
+󰍡	Gamma	https://gamma.app	Educación/DI	Presentaciones, guías didácticas y páginas interactivas con IA
+󰙴	Quizizz AI	https://quizizz.com/ai	Educación/DI	Cuestionarios interactivos, micro-evaluaciones y práctica guiada
+󰈙	NotebookLM	https://notebooklm.google.com	Investigación	Cuaderno de análisis de fuentes con Audio Overview de Google
+󰍉	Consensus	https://consensus.app	Investigación	Búsqueda con evidencia científica y consenso de la literatura
+󰍉	Elicit	https://elicit.com	Investigación	Extracción sistemática y síntesis de papers científicos
+󰈚	Scite.ai	https://scite.ai	Investigación	Clasificación de citas por contraste, respaldo o mención
+󰊫	Connected Papers	https://www.connectedpapers.com	Investigación	Gráficos de similitud visual y redes de co-citación
+󰈙	SciSpace	https://typeset.io	Investigación	Lectura interactiva de papers con preguntas y comparaciones
+󰊫	Litmaps	https://www.litmaps.com	Investigación	Mapas bibliográficos visuales y seguimiento de citaciones
