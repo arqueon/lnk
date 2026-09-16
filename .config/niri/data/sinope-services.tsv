@@ -3,6 +3,7 @@
 󰚩	Logseq DB · MCP	https://kuma.arqueonautis.org/dashboard/118	Memoria	Estado MCP para agentes; endpoint Sinope :12327/mcp
 󰑓	Logseq DB · Sync	http://sinope.tailf70cf8.ts.net:18787/health	Memoria	Sync privado del grafo unificado; estado del servidor
 󰽉	Digipad	https://muros.arqueonautis.org	Docencia	Muros y pizarras colaborativas
+󰚩	LibreChat	https://librechat.arqueonautis.org/	IA	Agentes personales y modelos gratuitos
 󰊢	Vikunja Tasks	https://tasks.arqueonautis.org	Productividad	Gestión de tareas y proyectos
 󰄛	Mealie	https://mealie.arqueonautis.org	Hogar	Gestión de recetas y planificador de menú
 󰊓	Cal.com	https://cal.arqueonautis.org	Productividad	Agendamiento de citas y calendario
@@ -36,6 +37,7 @@
 󰇚	SABnzbd	https://sabnzbd.arqueonautis.org	Descargas	Cliente de descargas Usenet
 󰇚	slskd (Soulseek)	https://slskd.arqueonautis.org	Descargas	Cliente Soulseek P2P vía VPS
 󱓞	Uptime Kuma	https://kuma.arqueonautis.org	Monitoreo	Disponibilidad sintética del Homelab
+󰄨	Umami	https://umami.arqueonautis.org/	Monitoreo	Visitas y descargas de los sitios web
 󰒋	Coolify	https://coolify.arqueonautis.org	Infraestructura	Panel de aplicaciones y despliegues
 󰒋	AdGuard Home	https://adguard.arqueonautis.org	Infraestructura	DNS filtrante y control de red
 󰌋	Vaultwarden (Arqueonautis)	https://vault.arqueonautis.org	Seguridad	Gestor de contraseñas personal
@@ -54,5 +56,6 @@
 󰒋	Actual MCP	https://actual-mcp.arqueonautis.org/	General	Actual MCP
 󰒋	Arqueonautis.org	https://arqueonautis.org	General	Arqueonautis.org
 󰒋	Cursos IA	https://cursos-ia.arqueonautis.org	General	Cursos IA
+󰒋	IA Educación UDGplus	https://iaeducacion.udgplus.udg.mx/	General	IA Educación UDGplus
 󰒋	LanguageTool	https://lt.arqueonautis.org/v2/languages	General	LanguageTool
 󰒋	Videostream	https://videostream.arqueonautis.org	General	Videostream

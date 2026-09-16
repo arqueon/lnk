@@ -24,6 +24,7 @@ LNK_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 # Mapeo de metadatos conocidos, alias, categorías e iconos
 SERVICE_METADATA = {
+    "librechat.arqueonautis.org": {"name": "LibreChat", "category": "IA", "desc": "Agentes personales y modelos gratuitos", "icon": "󰚩", "server": "sinope", "order": 13},
     # Logseq DB unificado, servicios privados de Sinope.
     '100.107.89.3:18787': {'name': 'Logseq DB · Sync', 'category': 'Memoria', 'desc': 'Sync privado del grafo unificado; estado del servidor', 'icon': '\U000f0453', 'server': 'sinope', 'order': 11, 'url': 'http://sinope.tailf70cf8.ts.net:18787/health'},
     '100.107.89.3:12327': {'name': 'Logseq DB · API', 'category': 'Memoria', 'desc': 'Documentación del API; escritura con token privado', 'icon': '\U000f048b', 'server': 'sinope', 'order': 11, 'url': 'http://sinope.tailf70cf8.ts.net:12327/'},
@@ -315,6 +316,15 @@ SERVICE_METADATA = {
         "server": "sinope",
         "order": 80
     },
+    "umami.arqueonautis.org": {
+        "name": "Umami",
+        "url": "https://umami.arqueonautis.org/",
+        "category": "Monitoreo",
+        "desc": "Visitas y descargas de los sitios web",
+        "icon": "󰄨",
+        "server": "sinope",
+        "order": 81
+    },
     "coolify.arqueonautis.org": {
         "name": "Coolify",
         "category": "Infraestructura",
@@ -436,6 +446,14 @@ SERVICE_METADATA = {
         "icon": "󰈙",
         "server": "nas-btb",
         "order": 22
+    },
+    "easyappointments.arqueonautis.org": {
+        "name": "Easy!Appointments",
+        "category": "Productividad",
+        "desc": "Gestión de citas y reservas en nas-btb",
+        "icon": "󰊓",
+        "server": "nas-btb",
+        "order": 24
     },
     "cursos.barbiestesteadoras.org": {
         "name": "Moodle BTB",
@@ -688,6 +706,8 @@ def build_catalogs():
         server = "nas-btb" if is_btb else "sinope"
 
         meta = SERVICE_METADATA.get(clean_host, {})
+        # El menú elegido en los metadatos prevalece sobre el grupo de Kuma.
+        server = meta.get("server", server)
         
         # Limpieza de nombre si viene de Kuma (ej. "NAS BTB · Fotos Immich" -> "Immich")
         clean_name = meta.get("name")

@@ -47,6 +47,15 @@
       "server": "sinope"
     },
     {
+      "name": "LibreChat",
+      "url": "https://librechat.arqueonautis.org/",
+      "category": "IA",
+      "desc": "Agentes personales y modelos gratuitos",
+      "icon": "󰚩",
+      "order": 13,
+      "server": "sinope"
+    },
+    {
       "name": "Vikunja Tasks",
       "url": "https://tasks.arqueonautis.org",
       "category": "Productividad",
@@ -344,6 +353,15 @@
       "server": "sinope"
     },
     {
+      "name": "Umami",
+      "url": "https://umami.arqueonautis.org/",
+      "category": "Monitoreo",
+      "desc": "Visitas y descargas de los sitios web",
+      "icon": "󰄨",
+      "order": 81,
+      "server": "sinope"
+    },
+    {
       "name": "Coolify",
       "url": "https://coolify.arqueonautis.org",
       "category": "Infraestructura",
@@ -506,6 +524,15 @@
       "server": "sinope"
     },
     {
+      "name": "IA Educación UDGplus",
+      "url": "https://iaeducacion.udgplus.udg.mx/",
+      "category": "General",
+      "desc": "IA Educación UDGplus",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "sinope"
+    },
+    {
       "name": "LanguageTool",
       "url": "https://lt.arqueonautis.org/v2/languages",
       "category": "General",
@@ -568,6 +595,15 @@
       "desc": "Edición ofimática en navegador",
       "icon": "󰈙",
       "order": 22,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Easy!Appointments",
+      "url": "https://easyappointments.arqueonautis.org",
+      "category": "Productividad",
+      "desc": "Gestión de citas y reservas en nas-btb",
+      "icon": "󰊓",
+      "order": 24,
       "server": "nas-btb"
     },
     {
