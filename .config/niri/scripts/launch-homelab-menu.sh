@@ -83,7 +83,7 @@ SELECTED=$(echo "$MENU_ITEMS" | fuzzel \
     --dmenu \
     --prompt="$PROMPT" \
     --placeholder="$PLACEHOLDER" \
-    --width=70 \
+    --width=120 \
     --lines=14 \
     --line-height=26 \
     --horizontal-pad=20 \
