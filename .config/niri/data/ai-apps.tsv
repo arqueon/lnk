@@ -77,6 +77,18 @@
 󰚩	Khanmigo	https://www.khanacademy.org/khanmigo	Educación/DI	Tutor socrático y asistente instruccional de Khan Academy
 󰍡	Gamma	https://gamma.app	Educación/DI	Presentaciones, guías didácticas y páginas interactivas con IA
 󰙴	Quizizz AI	https://quizizz.com/ai	Educación/DI	Cuestionarios interactivos, micro-evaluaciones y práctica guiada
+󰡄	Articulate 360 / Rise	https://rise.articulate.com	Educación/DI	Suite líder de autoría eLearning, Storyline y Rise con IA
+	Course Generator	https://github.com/raphaelmansuy/course_generator	DI/GitHub	QuantaLogic Flow para cursos en Markdown, PDF, DOCX y EPUB
+	ACCG Course Gen	https://github.com/pramodkoujalagi/Automated-Course-Content-Generator	DI/GitHub	App Streamlit con LLMs para temarios, contenido y quizzes
+	LearnHouse AI	https://github.com/learnhouse/learnhouse	DI/GitHub	LMS open-source con simulaciones y módulos interactivos con IA
+	AI Course Generator	https://github.com/Explore13/ai-course-generator	DI/GitHub	Generador de cursos Next.js integrando Gemini y recursos video
+	Plot-Ark xAPI	https://github.com/Schlaflied/Plot-Ark	DI/GitHub	Generación curricular agéntica y analítica de aprendizaje xAPI
+	Claw-ED CLI	https://github.com/SirhanMacx/Claw-ED	DI/GitHub	Agente CLI pedagógico para diseño de clases y materiales
+	Moodle CourseGen	https://github.com/industria-elearning/moodle-local_coursegen	DI/GitHub	Plugin de Moodle para generar cursos basados en modelos de DI
+	Instructional Agents	https://github.com/DaRL-GenAI/instructional_agents	DI/GitHub	Sistema multiagente con marco ADDIE para diseño curricular
+	EduAdapt AI	https://github.com/mwasifanwar/eduadapt-ai	DI/GitHub	Sistema adaptativo de rutas de aprendizaje según desempeño
+	GitHub Topics: DI	https://github.com/topics/instructional-design	DI/GitHub	Explorador de repositorios de diseño instruccional y xAPI
+	GitHub Topics: Cursos	https://github.com/topics/ai-course-generator	DI/GitHub	Explorador de herramientas de generación de cursos con IA
 󰈙	NotebookLM	https://notebooklm.google.com	Investigación	Cuaderno de análisis de fuentes con Audio Overview de Google
 󰍉	Consensus	https://consensus.app	Investigación	Búsqueda con evidencia científica y consenso de la literatura
 󰍉	Elicit	https://elicit.com	Investigación	Extracción sistemática y síntesis de papers científicos
