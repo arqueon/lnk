@@ -76,6 +76,7 @@
 .local/bin/logseq-multi-launch
 .local/bin/md
 .local/bin/mindwtr
+.local/bin/nas-btb-unlock
 .local/bin/sdoc-embed-images
 .local/bin/sdoc-open
 .local/bin/variety-favorite-shared

@@ -1,0 +1,175 @@
+#!/usr/bin/env python3
+"""Desbloqueo manual de tank por LAN, con la frase de la bóveda del usuario."""
+
+import argparse
+import json
+import shlex
+import shutil
+import subprocess
+import sys
+
+
+ENTRY_NAME = "ZFS tank — nas-btb"
+SSH = [
+    "ssh", "-T",
+    "-o", "HostName=192.168.100.240",
+    # La misma identidad del NAS aunque Tailscale todavía no haya arrancado.
+    "-o", "HostKeyAlias=100.95.27.14",
+    "-o", "StrictHostKeyChecking=yes",
+    "-o", "BatchMode=yes",
+    "-o", "ConnectTimeout=8",
+    "-o", "ServerAliveInterval=15",
+    "-o", "ServerAliveCountMax=3",
+    "nas-btb",
+]
+
+# Viaja como código por SSH. La frase viaja aparte, por stdin, nunca por argv.
+REMOTE = r'''
+import json
+import subprocess
+import sys
+from truenas_api_client import Client
+
+def mounted(name):
+    return subprocess.check_output(
+        ["zfs", "get", "-H", "-o", "value", "mounted", name], text=True
+    ).strip() == "yes"
+
+try:
+    with Client(call_timeout=30) as client:
+        hostname = client.call("system.info")["hostname"].split(".")[0]
+        if hostname != "nas-btb":
+            raise RuntimeError("unexpected-host")
+        dataset = client.call("pool.dataset.get_instance", "tank")
+        action = sys.argv[1]
+        changed = False
+        if action == "unlock" and dataset["locked"]:
+            payload = json.load(sys.stdin)
+            result = client.call(
+                "pool.dataset.unlock", "tank",
+                {
+                    "recursive": True,
+                    "toggle_attachments": True,
+                    "datasets": [{
+                        "name": "tank",
+                        "passphrase": payload["passphrase"],
+                        "recursive": True,
+                    }],
+                },
+                job=True,
+            )
+            if result["failed"]:
+                print(json.dumps({"error": "unlock-failed"}))
+                sys.exit(1)
+            changed = bool(result["unlocked"])
+            dataset = client.call("pool.dataset.get_instance", "tank")
+        apps = client.call("app.query")
+        print(json.dumps({
+            "locked": dataset["locked"],
+            "key_loaded": dataset["key_loaded"],
+            "mounted": mounted("tank"),
+            "apps_mounted": mounted("tank/ix-apps"),
+            "docker": client.call("docker.status")["status"],
+            "running": sum(app["state"] == "RUNNING" for app in apps),
+            "total": len(apps),
+            "changed": changed,
+        }))
+except Exception:
+    # Los errores del middleware pueden incluir parámetros de la petición.
+    print(json.dumps({"error": "api-failed"}))
+    sys.exit(1)
+'''
+
+
+def remote_call(action, passphrase=None):
+    command = "sudo -n python3 -u -c " + shlex.quote(REMOTE) + " " + action
+    payload = json.dumps({"passphrase": passphrase}) if passphrase is not None else ""
+    result = subprocess.run(
+        SSH + [command], input=payload, text=True, capture_output=True,
+        timeout=600 if action == "unlock" else 60,
+    )
+    if result.returncode:
+        raise RuntimeError(
+            "No se pudo completar la consulta o el desbloqueo. Revisa la conexión LAN, "
+            "el acceso SSH nas-btb y las alertas en https://192.168.100.240/ui/. "
+            "No se fuerza ningún montaje."
+        )
+    return json.loads(result.stdout)
+
+
+def vault_passphrase():
+    if not shutil.which("rbw"):
+        raise RuntimeError("Falta rbw: instala y configura tu propia bóveda antes de desbloquear.")
+    if subprocess.run(["rbw", "unlocked"], capture_output=True).returncode:
+        if not sys.stdin.isatty():
+            raise RuntimeError("La bóveda está bloqueada. Ejecuta rbw unlock en una terminal y repite.")
+        print("Desbloquea tu bóveda cuando lo solicite rbw.", flush=True)
+        if subprocess.run(["rbw", "unlock"]).returncode:
+            raise RuntimeError("No se pudo desbloquear la bóveda.")
+    entries = subprocess.run(
+        ["rbw", "list", "--fields", "id,name"], text=True, capture_output=True, check=True
+    ).stdout
+    matches = []
+    for line in entries.splitlines():
+        entry_id, separator, name = line.partition("\t")
+        if separator and name.strip() == ENTRY_NAME:
+            matches.append(entry_id)
+    if len(matches) != 1:
+        raise RuntimeError(
+            f"Debe haber una sola entrada «{ENTRY_NAME}» en tu bóveda; encontradas: {len(matches)}."
+        )
+    result = subprocess.run(
+        ["rbw", "get", matches[0]], text=True, capture_output=True, check=True
+    )
+    passphrase = result.stdout.removesuffix("\n")
+    if not passphrase:
+        raise RuntimeError("La entrada de cifrado no contiene una frase.")
+    return passphrase
+
+
+def show_status(state):
+    print("tank: " + ("bloqueado" if state["locked"] else "desbloqueado"))
+    print("Datos montados: " + ("sí" if state["mounted"] else "no"))
+    print("Datos de aplicaciones montados: " + ("sí" if state["apps_mounted"] else "no"))
+    print(f"Docker: {state['docker']} · Aplicaciones RUNNING: {state['running']}/{state['total']}")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--status", action="store_true", help="Consultar estado sin leer rbw ni desbloquear")
+    args = parser.parse_args()
+    print("Consultando NAS-BTB por la red local…", flush=True)
+    state = remote_call("status")
+    if args.status or not state["locked"]:
+        show_status(state)
+        if not args.status:
+            print("tank ya está desbloqueado; no se hizo ningún cambio ni se leyó la bóveda.")
+        return 0
+    print("tank está bloqueado. Buscando su frase en tu bóveda…", flush=True)
+    passphrase = vault_passphrase()
+    print("Desbloqueando tank mediante TrueNAS…", flush=True)
+    state = remote_call("unlock", passphrase)
+    del passphrase
+    show_status(state)
+    if state["locked"] or not state["key_loaded"] or not state["mounted"]:
+        raise RuntimeError("El montaje no quedó confirmado. Revisa las alertas del panel de TrueNAS.")
+    print("Desbloqueo confirmado. Las aplicaciones pueden tardar varios minutos en arrancar.")
+    print("Para revisar su avance: nas-btb-unlock --status")
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        sys.exit(main())
+    except KeyboardInterrupt:
+        print("\nInterrumpido. Consulta el estado antes de volver a intentarlo.", file=sys.stderr)
+        sys.exit(130)
+    except (RuntimeError, OSError, ValueError, subprocess.SubprocessError) as error:
+        if isinstance(error, RuntimeError):
+            message = str(error)
+        elif isinstance(error, subprocess.TimeoutExpired):
+            message = "La consulta agotó el tiempo de espera; el trabajo remoto puede continuar. Revisa --status."
+        else:
+            message = "No se pudo completar la operación. Comprueba SSH, rbw y el panel local de TrueNAS."
+        print("Error: " + message, file=sys.stderr)
+        sys.exit(1)
