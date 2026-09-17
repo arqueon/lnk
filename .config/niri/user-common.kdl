@@ -49,6 +49,9 @@ binds {
     Mod+Ctrl+T { spawn "~/.config/niri/scripts/launch-quad-kitty.sh"; }
     Mod+Ctrl+Shift+T { spawn "~/.config/niri/scripts/launch-quad-niri.sh"; }
     Mod+Ctrl+Alt+T { spawn "~/.config/niri/scripts/launch-quad-agents2.sh"; }
+    Mod+Ctrl+Shift+U hotkey-overlay-title="Desbloquear datos de NAS-BTB" {
+        spawn "kitty" "--class" "nas-btb-unlock" "--title" "Desbloquear NAS-BTB" "--hold" "sh" "-c" "exec ~/.local/bin/nas-btb-unlock";
+    }
 
     Mod+Shift+Return { spawn-sh "dolphin ~/Downloads/"; }
     Mod+Alt+Return { spawn-sh "thunar ~/Downloads/"; }
