@@ -290,6 +290,7 @@ window-rule {
 // @id=wr_1784744730515316892 @name=com.anthropic.Claude
 window-rule {
     match app-id="^com.anthropic.Claude$" title="^Claude$"
+    open-maximized true
     open-on-workspace "agents2"
 }
 
@@ -340,4 +341,17 @@ window-rule {
     match app-id="^logseq$"
     open-maximized true
     open-on-workspace "notes"
+}
+
+// @id=wr_1789755023753021391 @name=orca
+window-rule {
+    match app-id="^orca$"
+    open-maximized true
+    open-on-workspace "agents2"
+}
+
+// @id=wr_1789932880197562729 @name=aonsoku
+window-rule {
+    match app-id="^aonsoku$"
+    open-on-workspace "media"
 }
