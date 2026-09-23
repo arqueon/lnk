@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
+umask 077
 
 script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 port=3080
 base_url="http://127.0.0.1:${port}"
-log_file="/tmp/dsh-web.log"
+state_dir="${XDG_STATE_HOME:-${HOME}/.local/state}/niri"
+mkdir -p -- "$state_dir"
+log_file="${state_dir}/dsh-web.log"
 
 # Cargar DEEPSEEK_API_KEY desde environment.d si no está exportada
 if [[ -z "${DEEPSEEK_API_KEY:-}" && -f "${HOME}/.config/environment.d/deepseek.conf" ]]; then
@@ -33,8 +36,8 @@ if ! is_running; then
   notify-send -t 3000 "DeepSeek Harness" "Iniciando servidor web dsh..."
   nohup "${dsh_bin}" web --no-open >"${log_file}" 2>&1 &
 
-  # Esperar hasta 6 segundos a que el servidor comience a escuchar
-  for _ in {1..30}; do
+  # El primer arranque puede tardar mientras prepara el perfil web.
+  for _ in {1..100}; do
     if is_running; then
       break
     fi
@@ -46,12 +49,13 @@ if ! is_running; then
     exit 1
   fi
 
-  # Si se emitió una URL con token de inicio, usarla para la sesión del navegador
-  if [[ -f "${log_file}" ]]; then
-    token_url="$(grep -o "http://127\.0\.0\.1:${port}/?token=[^ ]*" "${log_file}" | tail -n 1 || true)"
-    if [[ -n "${token_url}" ]]; then
-      target_url="${token_url}"
-    fi
+fi
+
+# Reutilizar la URL autenticada también cuando el servidor ya estaba activo.
+if [[ -f "${log_file}" ]]; then
+  token_url="$(grep -o "http://127\.0\.0\.1:${port}/?token=[^ ]*" "${log_file}" | tail -n 1 || true)"
+  if [[ -n "${token_url}" ]]; then
+    target_url="${token_url}"
   fi
 fi
 

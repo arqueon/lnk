@@ -2,6 +2,7 @@
 󰚩	ChatGPT	https://chatgpt.com	Agentes	OpenAI · GPT-4o, o1, o3, canvas, voz y visión
 󰊭	Google Gemini	https://gemini.google.com	Agentes	Google · Gemini 2.5/Flash, ventana de contexto masiva
 󰘑	DeepSeek Chat	https://chat.deepseek.com	Agentes	DeepSeek · V3 y R1 con razonamiento abierto y código
+󰘑	DeepSeek Harness	local:deepseek-harness	Agentes	Agente local con interfaz web; inicia el servidor dsh
 󱙺	Qwen Chat	https://chat.qwen.ai	Agentes	Alibaba Cloud · Modelos Tongyi Qianwen y Qwen 2.5
 󰍉	Perplexity	https://www.perplexity.ai	Agentes	Motor de respuestas y búsqueda con fuentes citadas
 󰫢	Grok	https://grok.com	Agentes	xAI · Grok 2 y 3 con acceso a tiempo real y visión

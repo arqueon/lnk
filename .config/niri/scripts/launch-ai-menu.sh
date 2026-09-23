@@ -55,6 +55,10 @@ fi
 
 TARGET_URL="${URL_MAP[$SELECTED]:-}"
 
+if [[ "$TARGET_URL" == 'local:deepseek-harness' ]]; then
+    exec "$SCRIPT_DIR/launch-deepseek-harness.sh"
+fi
+
 # Soporte si el usuario escribe una URL directa en el prompt
 if [[ -z "$TARGET_URL" && "$SELECTED" =~ ^https?:// ]]; then
     TARGET_URL="$SELECTED"
