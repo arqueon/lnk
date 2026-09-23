@@ -29,5 +29,6 @@ spawn-sh-at-startup "exec ~/.local/bin/logseqdb"
 binds {
     Mod+F1 { spawn "firefox"; }
     Mod+Alt+F1 { spawn-sh "~/.config/niri/scripts/run_chrome.sh"; }
+    Mod+Shift+F2 repeat=false hotkey-overlay-title="Apps de Google por cuenta" { spawn "~/.config/niri/scripts/launch-google-apps-menu.sh"; }
     Mod+F4 { spawn-sh "exec ~/.local/bin/logseqdb"; }
 }
