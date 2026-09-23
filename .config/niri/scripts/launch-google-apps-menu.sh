@@ -9,14 +9,14 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 accounts=(
     'UdeG|ruben.garcia.sanchez@udg.mx'
     'Personal|arqueonautis@gmail.com'
-    'Académicos|ruben.gsanchez@academicos.udg.mx'
+    'Academicos|ruben.gsanchez@academicos.udg.mx'
 )
 apps=(
-    'Drive|📁|https://drive.google.com/'
-    'Gmail|✉|https://mail.google.com/mail/'
-    'Calendar|📅|https://calendar.google.com/'
-    'Classroom|🎓|https://classroom.google.com/'
-    'Cloud Console|☁|https://console.cloud.google.com/'
+    'Drive|󰉋|https://drive.google.com/'
+    'Gmail|󰇮|https://mail.google.com/mail/'
+    'Calendar|󰃭|https://calendar.google.com/'
+    'Classroom|󰑴|https://classroom.google.com/'
+    'Cloud Console|󰅟|https://console.cloud.google.com/'
 )
 
 declare -A urls
@@ -25,7 +25,7 @@ for account in "${accounts[@]}"; do
     IFS='|' read -r account_name email <<< "$account"
     for app in "${apps[@]}"; do
         IFS='|' read -r app_name icon base_url <<< "$app"
-        item="$icon  $app_name │ $account_name │ $email"
+        item="$(printf '%s   %-18.18s │ %-12.12s │ %s' "$icon" "$app_name" "$account_name" "$email")"
         items+=("$item")
         urls["$item"]="${base_url}?authuser=${email//@/%40}"
     done
@@ -33,9 +33,10 @@ done
 
 selected="$(printf '%s\n' "${items[@]}" | fuzzel \
     --dmenu \
+    --font='Cascadia Code NF:size=11' \
     --prompt='󰊭 Google ❯ ' \
     --placeholder='Buscar app o cuenta de Google...' \
-    --width=110 \
+    --width=120 \
     --lines=15 \
     --line-height=26 \
     --horizontal-pad=20 \
