@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Menú de apps de Google por cuenta para Niri (ofi).
+# Menú de apps de Google por cuenta para Niri.
 
 set -euo pipefail
 
