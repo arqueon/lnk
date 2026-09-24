@@ -23,6 +23,7 @@ binds {
     Mod+Alt+F1 { spawn-sh "firefox"; }
     Mod+F2 { spawn "ferdium"; }
     Mod+Alt+F2 { spawn "dcal"; }
+    Mod+Ctrl+F2 hotkey-overlay-title="Ferdium: Modo Local / Nube" { spawn "~/.config/niri/scripts/launch-ferdium-menu.sh"; }
     Mod+F3 { spawn "zotero"; }
     Mod+Shift+F3 { spawn "curl" "-s" "http://127.0.0.1:23119/tagnavigator/open"; }
     Mod+F4 { spawn "logseq"; }
