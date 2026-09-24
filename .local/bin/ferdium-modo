@@ -1,0 +1,114 @@
+#!/usr/bin/env bash
+# ferdium-modo: Conmutador de modo para Ferdium (Nube NAS vs Local Autónomo)
+set -e
+
+CONFIG_FILE="$HOME/.config/Ferdium/config/settings.json"
+REMOTE_URL="https://ferdium.arqueonautis.org"
+LOCAL_SERVER_STR="You are using Ferdium without a server"
+
+uso() {
+    echo "Uso: ferdium-modo [status | local [-r] | cloud [-r] | restart]"
+    echo ""
+    echo "Comandos:"
+    echo "  status         Muestra el modo actual y la salud del servidor en nas-btb"
+    echo "  local [-r]     Cambia a modo Local Autónomo (sin servidor, 100% offline)"
+    echo "  cloud [-r]     Cambia a modo Nube (sincronizado con nas-btb vía Cloudflare)"
+    echo "  restart        Reinicia Ferdium"
+    echo "  -r, --restart  Aplica reinicio automático sin preguntar (ideal para scripts/fuzzel)"
+    exit 1
+}
+
+modo_actual() {
+    if [ ! -f "$CONFIG_FILE" ]; then
+        echo "desconocido"
+        return
+    fi
+    current=$(jq -r '.server // empty' "$CONFIG_FILE" 2>/dev/null)
+    if [ "$current" = "$LOCAL_SERVER_STR" ]; then
+        echo "local"
+    elif [ "$current" = "$REMOTE_URL" ]; then
+        echo "cloud"
+    else
+        echo "$current"
+    fi
+}
+
+check_health() {
+    if curl -s --max-time 3 "$REMOTE_URL/health" 2>/dev/null | grep -q '"api":"success"'; then
+        echo "ONLINE (OK)"
+    else
+        echo "OFFLINE (No disponible)"
+    fi
+}
+
+reiniciar_ferdium() {
+    systemctl --user reset-failed ferdium-app.service 2>/dev/null || true
+    systemctl --user stop ferdium-app.service 2>/dev/null || true
+    pkill -f "/opt/ferdium-bin/" 2>/dev/null || true
+    sleep 1
+    systemd-run --user --unit=ferdium-app /usr/bin/ferdium >/dev/null 2>&1
+    echo "✓ Ferdium reiniciado."
+}
+
+AUTO_RESTART=false
+if [ "${2:-}" = "-r" ] || [ "${2:-}" = "--restart" ]; then
+    AUTO_RESTART=true
+fi
+
+case "$1" in
+    status|"")
+        m=$(modo_actual)
+        h=$(check_health)
+        echo "=========================================="
+        echo "  Estado de Ferdium:"
+        echo "  - Modo configurado: $m"
+        echo "  - Servidor nas-btb ($REMOTE_URL): $h"
+        echo "=========================================="
+        if [ "$m" = "local" ]; then
+            echo "Estás usando Ferdium en modo autónomo local."
+            echo "Todas tus pestañas y servicios operan directo desde server.sqlite sin tocar la red."
+        else
+            echo "Estás usando Ferdium en modo Nube sincronizado con nas-btb."
+            echo "Si nas-btb se cae o no tienes red, ejecuta 'ferdium-modo local' para no bloquearte."
+        fi
+        ;;
+    local)
+        if [ ! -f "$CONFIG_FILE" ]; then
+            echo "Error: no se encontró $CONFIG_FILE"
+            exit 1
+        fi
+        python3 -c "import json; p='$CONFIG_FILE'; d=json.load(open(p)); d['server']='$LOCAL_SERVER_STR'; json.dump(d, open(p, 'w'), indent=2)"
+        echo "✓ Modo cambiado a: LOCAL AUTÓNOMO (Sin servidor)"
+        echo "Ferdium ahora cargará tus 22 servicios directo desde server.sqlite sin depender de la red ni de nas-btb."
+        if [ "$AUTO_RESTART" = true ]; then
+            reiniciar_ferdium
+        elif [ -t 0 ] && pgrep -f "/opt/ferdium-bin/" >/dev/null; then
+            read -p "¿Deseas reiniciar Ferdium ahora para aplicar el cambio? (s/N) " resp
+            if [[ "$resp" =~ ^[sS]$ ]]; then
+                reiniciar_ferdium
+            fi
+        fi
+        ;;
+    cloud)
+        if [ ! -f "$CONFIG_FILE" ]; then
+            echo "Error: no se encontró $CONFIG_FILE"
+            exit 1
+        fi
+        python3 -c "import json; p='$CONFIG_FILE'; d=json.load(open(p)); d['server']='$REMOTE_URL'; json.dump(d, open(p, 'w'), indent=2)"
+        echo "✓ Modo cambiado a: NUBE (nas-btb vía Cloudflare Tunnel: $REMOTE_URL)"
+        if [ "$AUTO_RESTART" = true ]; then
+            reiniciar_ferdium
+        elif [ -t 0 ] && pgrep -f "/opt/ferdium-bin/" >/dev/null; then
+            read -p "¿Deseas reiniciar Ferdium ahora para aplicar el cambio? (s/N) " resp
+            if [[ "$resp" =~ ^[sS]$ ]]; then
+                reiniciar_ferdium
+            fi
+        fi
+        ;;
+    restart)
+        reiniciar_ferdium
+        ;;
+    *)
+        uso
+        ;;
+esac
