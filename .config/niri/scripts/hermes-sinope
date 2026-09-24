@@ -292,7 +292,11 @@ prepare_desktop_connection() {
 
 desktop() {
   local desktop_binary="${HOME}/.hermes/hermes-agent/apps/desktop/release/linux-unpacked/Hermes"
-  if [[ ! -x "${desktop_binary}" ]]; then
+  # Verify the official package resources: the same command name is also used
+  # by an unrelated speech-to-text application.
+  if [[ -x /usr/bin/hermes-desktop && -f /usr/lib/hermes-agent-desktop/app.asar ]]; then
+    desktop_binary="/usr/bin/hermes-desktop"
+  elif [[ ! -x "${desktop_binary}" ]]; then
     desktop_binary="${HOME}/.local/share/hermes-desktop-sinope/linux-unpacked/Hermes"
   fi
   if [[ ! -x "${desktop_binary}" ]]; then
@@ -311,6 +315,7 @@ desktop() {
   fi
 
   XDG_CONFIG_HOME="${desktop_config_root}" \
+    HERMES_DESKTOP_USER_DATA_DIR="${desktop_config_root}/Hermes" \
     exec "${desktop_binary}" --disable-setuid-sandbox "$@"
 }
 

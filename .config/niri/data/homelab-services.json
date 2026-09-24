@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24",
+  "updated": "2026-09-24",
   "sinope": [
     {
       "name": "Nextcloud",
@@ -398,6 +398,15 @@
       "server": "sinope"
     },
     {
+      "name": "Antidotum",
+      "url": "https://antidotum.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en antidotum.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
       "name": "Anytype",
       "url": "https://anytype.arqueonautis.org",
       "category": "Servicios",
@@ -425,10 +434,37 @@
       "server": "sinope"
     },
     {
+      "name": "Consola-microcredenciales",
+      "url": "https://consola-microcredenciales.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en consola-microcredenciales.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Id-microcredenciales",
+      "url": "https://id-microcredenciales.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en id-microcredenciales.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
       "name": "Logseq-sync",
       "url": "https://logseq-sync.arqueonautis.org",
       "category": "Servicios",
       "desc": "Servicio en logseq-sync.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Microcredenciales",
+      "url": "https://microcredenciales.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en microcredenciales.arqueonautis.org",
       "icon": "󰒋",
       "order": 90,
       "server": "sinope"
@@ -439,6 +475,15 @@
       "category": "Monitoreo",
       "desc": "Servidor de notificaciones push",
       "icon": "󰂚",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Produccion",
+      "url": "https://produccion.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en produccion.arqueonautis.org",
+      "icon": "󰒋",
       "order": 90,
       "server": "sinope"
     },
@@ -595,6 +640,15 @@
       "desc": "Edición ofimática en navegador",
       "icon": "󰈙",
       "order": 22,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Ferdium Server",
+      "url": "https://ferdium.arqueonautis.org/user/login",
+      "category": "Mensajería",
+      "desc": "Servidor de sincronización y panel de Ferdium en nas-btb",
+      "icon": "󰒱",
+      "order": 23,
       "server": "nas-btb"
     },
     {

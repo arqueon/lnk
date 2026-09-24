@@ -447,6 +447,15 @@ SERVICE_METADATA = {
         "server": "nas-btb",
         "order": 22
     },
+    "ferdium.arqueonautis.org": {
+        "name": "Ferdium Server",
+        "url": "https://ferdium.arqueonautis.org/user/login",
+        "category": "Mensajería",
+        "desc": "Servidor de sincronización y panel de Ferdium en nas-btb",
+        "icon": "󰒱",
+        "server": "nas-btb",
+        "order": 23
+    },
     "easyappointments.arqueonautis.org": {
         "name": "Easy!Appointments",
         "category": "Productividad",
@@ -787,7 +796,7 @@ def build_catalogs():
 def write_outputs(sinope_list, nasbtb_list):
     # Escribir JSON global
     homelab_data = {
-        "updated": "2026-08-24",
+        "updated": "2026-09-24",
         "sinope": sinope_list,
         "nas_btb": nasbtb_list
     }

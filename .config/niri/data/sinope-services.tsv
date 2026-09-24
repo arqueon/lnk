@@ -42,11 +42,16 @@
 󰒋	AdGuard Home	https://adguard.arqueonautis.org	Infraestructura	DNS filtrante y control de red
 󰌋	Vaultwarden (Arqueonautis)	https://vault.arqueonautis.org	Seguridad	Gestor de contraseñas personal
 󰦨	n8n Sinope	https://automation.arqueonautis.org	Automatización	Flujos y automatizaciones del servidor
+󰒋	Antidotum	https://antidotum.arqueonautis.org	Servicios	Servicio en antidotum.arqueonautis.org
 󰒋	Anytype	https://anytype.arqueonautis.org	Servicios	Servicio en anytype.arqueonautis.org
 󰒋	Btb	https://btb.arqueonautis.org	Servicios	Servicio en btb.arqueonautis.org
 󰒋	Cleanuparr	https://cleanuparr.arqueonautis.org	Servicios	Servicio en cleanuparr.arqueonautis.org
+󰒋	Consola-microcredenciales	https://consola-microcredenciales.arqueonautis.org	Servicios	Servicio en consola-microcredenciales.arqueonautis.org
+󰒋	Id-microcredenciales	https://id-microcredenciales.arqueonautis.org	Servicios	Servicio en id-microcredenciales.arqueonautis.org
 󰒋	Logseq-sync	https://logseq-sync.arqueonautis.org	Servicios	Servicio en logseq-sync.arqueonautis.org
+󰒋	Microcredenciales	https://microcredenciales.arqueonautis.org	Servicios	Servicio en microcredenciales.arqueonautis.org
 󰂚	ntfy Sinope	https://notify.arqueonautis.org	Monitoreo	Servidor de notificaciones push
+󰒋	Produccion	https://produccion.arqueonautis.org	Servicios	Servicio en produccion.arqueonautis.org
 󰒋	Sonobar	https://sonobar.arqueonautis.org	Servicios	Servicio en sonobar.arqueonautis.org
 󰛐	changedetection.io	https://changes.arqueonautis.org	Monitoreo	Vigilancia de cambios en páginas web
 󰒋	Nextcloud AIO Panel	https://aio.arqueonautis.org	Infraestructura	Panel de administración Nextcloud AIO
