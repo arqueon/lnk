@@ -74,15 +74,6 @@
       "server": "sinope"
     },
     {
-      "name": "Cal.com",
-      "url": "https://cal.arqueonautis.org",
-      "category": "Productividad",
-      "desc": "Agendamiento de citas y calendario",
-      "icon": "󰊓",
-      "order": 22,
-      "server": "sinope"
-    },
-    {
       "name": "Linkwarden",
       "url": "https://linkwarden.arqueonautis.org",
       "category": "Productividad",
@@ -299,15 +290,6 @@
       "server": "sinope"
     },
     {
-      "name": "Tautulli",
-      "url": "https://tautulli.arqueonautis.org",
-      "category": "Media",
-      "desc": "Estadísticas y monitoreo Plex/Jellyfin",
-      "icon": "󰄛",
-      "order": 70,
-      "server": "sinope"
-    },
-    {
       "name": "Aurral",
       "url": "https://aurral.arqueonautis.org",
       "category": "Media",
@@ -407,15 +389,6 @@
       "server": "sinope"
     },
     {
-      "name": "Anytype",
-      "url": "https://anytype.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en anytype.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
       "name": "Btb",
       "url": "https://btb.arqueonautis.org",
       "category": "Servicios",
@@ -483,15 +456,6 @@
       "url": "https://produccion.arqueonautis.org",
       "category": "Servicios",
       "desc": "Servicio en produccion.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
-      "name": "Sonobar",
-      "url": "https://sonobar.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en sonobar.arqueonautis.org",
       "icon": "󰒋",
       "order": 90,
       "server": "sinope"

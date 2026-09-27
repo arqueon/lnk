@@ -6,7 +6,6 @@
 󰚩	LibreChat	https://librechat.arqueonautis.org/	IA	Agentes personales y modelos gratuitos
 󰊢	Vikunja Tasks	https://tasks.arqueonautis.org	Productividad	Gestión de tareas y proyectos
 󰄛	Mealie	https://mealie.arqueonautis.org	Hogar	Gestión de recetas y planificador de menú
-󰊓	Cal.com	https://cal.arqueonautis.org	Productividad	Agendamiento de citas y calendario
 󰌹	Linkwarden	https://linkwarden.arqueonautis.org	Productividad	Archivo y guardado de enlaces web
 󰛄	LinkBreeze	https://links.arqueonautis.org	Productividad	Páginas públicas de enlaces
 󰈙	Wallabag	https://wallabag.arqueonautis.org	Productividad	Lectura diferida (read-it-later)
@@ -31,7 +30,6 @@
 󰚗	Bazarr	https://bazarr.arqueonautis.org	Media Arr	Gestión de subtítulos
 󰚗	Profilarr	https://profilarr.arqueonautis.org	Media Arr	Sincronización de perfiles TRaSH
 󰚗	Decypharr	https://sinope.tailf70cf8.ts.net:8282/	Media Arr	Gestor de colas y puente Debrid para *arr
-󰄛	Tautulli	https://tautulli.arqueonautis.org	Media	Estadísticas y monitoreo Plex/Jellyfin
 󰋋	Aurral	https://aurral.arqueonautis.org	Media	Recomendaciones musicales Last.fm para Lidarr
 󰒍	qBittorrent Sinope	https://qbittorrent.arqueonautis.org	Descargas	Cliente BitTorrent en Sinope
 󰇚	SABnzbd	https://sabnzbd.arqueonautis.org	Descargas	Cliente de descargas Usenet
@@ -43,7 +41,6 @@
 󰌋	Vaultwarden (Arqueonautis)	https://vault.arqueonautis.org	Seguridad	Gestor de contraseñas personal
 󰦨	n8n Sinope	https://automation.arqueonautis.org	Automatización	Flujos y automatizaciones del servidor
 󰒋	Antidotum	https://antidotum.arqueonautis.org	Servicios	Servicio en antidotum.arqueonautis.org
-󰒋	Anytype	https://anytype.arqueonautis.org	Servicios	Servicio en anytype.arqueonautis.org
 󰒋	Btb	https://btb.arqueonautis.org	Servicios	Servicio en btb.arqueonautis.org
 󰒋	Cleanuparr	https://cleanuparr.arqueonautis.org	Servicios	Servicio en cleanuparr.arqueonautis.org
 󰒋	Consola-microcredenciales	https://consola-microcredenciales.arqueonautis.org	Servicios	Servicio en consola-microcredenciales.arqueonautis.org
@@ -52,7 +49,6 @@
 󰒋	Microcredenciales	https://microcredenciales.arqueonautis.org	Servicios	Servicio en microcredenciales.arqueonautis.org
 󰂚	ntfy Sinope	https://notify.arqueonautis.org	Monitoreo	Servidor de notificaciones push
 󰒋	Produccion	https://produccion.arqueonautis.org	Servicios	Servicio en produccion.arqueonautis.org
-󰒋	Sonobar	https://sonobar.arqueonautis.org	Servicios	Servicio en sonobar.arqueonautis.org
 󰛐	changedetection.io	https://changes.arqueonautis.org	Monitoreo	Vigilancia de cambios en páginas web
 󰒋	Nextcloud AIO Panel	https://aio.arqueonautis.org	Infraestructura	Panel de administración Nextcloud AIO
 󰚩	Mission Control	https://mc.arqueonautis.org	Agentes	Panel de control y despacho de Hermes

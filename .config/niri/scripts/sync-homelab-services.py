@@ -62,14 +62,6 @@ SERVICE_METADATA = {
         "server": "sinope",
         "order": 20
     },
-    "cal.arqueonautis.org": {
-        "name": "Cal.com",
-        "category": "Productividad",
-        "desc": "Agendamiento de citas y calendario",
-        "icon": "󰊓",
-        "server": "sinope",
-        "order": 22
-    },
     "linkwarden.arqueonautis.org": {
         "name": "Linkwarden",
         "category": "Productividad",
@@ -265,14 +257,6 @@ SERVICE_METADATA = {
         "icon": "󰚗",
         "server": "sinope",
         "order": 69
-    },
-    "tautulli.arqueonautis.org": {
-        "name": "Tautulli",
-        "category": "Media",
-        "desc": "Estadísticas y monitoreo Plex/Jellyfin",
-        "icon": "󰄛",
-        "server": "sinope",
-        "order": 70
     },
     "aurral.arqueonautis.org": {
         "name": "Aurral",
