@@ -81,6 +81,7 @@ binds {
     Mod+Alt+W { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
 
     // ── Utilidades de sistema ──
+    Mod+Ctrl+P allow-when-locked=true hotkey-overlay-title="Activar monitores (DPMS)" { spawn "~/.config/niri/scripts/wake-monitors.sh"; }
     Mod+Shift+M { spawn-sh "wl-present mirror"; } // espejo de pantalla
     Mod+Alt+B { spawn-sh "kitty btop"; }
     Mod+Alt+S { spawn-sh "systemctl suspend"; }
