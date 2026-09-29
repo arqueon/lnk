@@ -361,3 +361,9 @@ window-rule {
     match app-id="^chrome-calendar.google.com__-Default$"
     default-column-width { proportion 0.7; }
 }
+
+// @id=wr_1790707961889347302 @name=chrome-mail.google.com__mail_-Default
+window-rule {
+    match app-id="^chrome-mail.google.com__mail_-Default$"
+    default-column-width { proportion 0.7; }
+}
