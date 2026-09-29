@@ -397,6 +397,7 @@ alias listaur="sudo pacman -Qqem"
 #clear
 alias clean="clear; seq 1 (tput cols) | sort -R | sparklines | lolcat"
 alias cls="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
+alias c="clear"
 
 #search content with ripgrep
 alias rg="rg --sort path"

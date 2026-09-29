@@ -487,6 +487,7 @@ alias grh='git reset --hard'
 alias undopush='git push -f origin HEAD^:master'
 alias rg='rg --sort path'
 alias cls='clean'
+alias c='clear'
 alias md='sdoc bridge'
 
 # No se migran cb/cz/cf: sobrescribirian archivos que ahora gestiona lnk.
