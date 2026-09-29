@@ -367,3 +367,21 @@ window-rule {
     match app-id="^chrome-mail.google.com__mail_-Default$"
     default-column-width { proportion 0.7; }
 }
+
+// @id=wr_1790708730471324912 @name=chrome-drive.google.com__-Default
+window-rule {
+    match app-id="^chrome-drive.google.com__-Default$"
+    default-column-width { proportion 0.7; }
+}
+
+// @id=wr_1790724288545080905 @name=com.danklinux.dms
+window-rule {
+    match app-id="^com.danklinux.dms$"
+    default-column-width { proportion 0.7; }
+}
+
+// @id=wr_1790724377889658955 @name=org.arqueon.dankmail
+window-rule {
+    match app-id="^org.arqueon.dankmail$"
+    default-column-width { proportion 0.7; }
+}
