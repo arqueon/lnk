@@ -374,12 +374,6 @@ window-rule {
     default-column-width { proportion 0.7; }
 }
 
-// @id=wr_1790724288545080905 @name=com.danklinux.dms
-window-rule {
-    match app-id="^com.danklinux.dms$"
-    default-column-width { proportion 0.7; }
-}
-
 // @id=wr_1790724377889658955 @name=org.arqueon.dankmail
 window-rule {
     match app-id="^org.arqueon.dankmail$"
