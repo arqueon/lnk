@@ -398,6 +398,15 @@
       "server": "sinope"
     },
     {
+      "name": "Cartografias-antifascistas",
+      "url": "https://cartografias-antifascistas.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en cartografias-antifascistas.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
       "name": "Cleanuparr",
       "url": "https://cleanuparr.arqueonautis.org",
       "category": "Servicios",
@@ -476,15 +485,6 @@
       "desc": "Panel de administración Nextcloud AIO",
       "icon": "󰒋",
       "order": 94,
-      "server": "sinope"
-    },
-    {
-      "name": "Mission Control",
-      "url": "https://mc.arqueonautis.org",
-      "category": "Agentes",
-      "desc": "Panel de control y despacho de Hermes",
-      "icon": "󰚩",
-      "order": 96,
       "server": "sinope"
     },
     {

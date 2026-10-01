@@ -365,14 +365,6 @@ SERVICE_METADATA = {
         "server": "sinope",
         "order": 94
     },
-    "mc.arqueonautis.org": {
-        "name": "Mission Control",
-        "category": "Agentes",
-        "desc": "Panel de control y despacho de Hermes",
-        "icon": "󰚩",
-        "server": "sinope",
-        "order": 96
-    },
     "hermes.arqueonautis.org": {
         "name": "Hermes Web",
         "category": "Agentes",
