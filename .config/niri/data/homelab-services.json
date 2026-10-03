@@ -47,15 +47,6 @@
       "server": "sinope"
     },
     {
-      "name": "LibreChat",
-      "url": "https://librechat.arqueonautis.org/",
-      "category": "IA",
-      "desc": "Agentes personales y modelos gratuitos",
-      "icon": "󰚩",
-      "order": 13,
-      "server": "sinope"
-    },
-    {
       "name": "Vikunja Tasks",
       "url": "https://tasks.arqueonautis.org",
       "category": "Productividad",

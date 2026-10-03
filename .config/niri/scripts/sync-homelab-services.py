@@ -24,7 +24,6 @@ LNK_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 # Mapeo de metadatos conocidos, alias, categorías e iconos
 SERVICE_METADATA = {
-    "librechat.arqueonautis.org": {"name": "LibreChat", "category": "IA", "desc": "Agentes personales y modelos gratuitos", "icon": "󰚩", "server": "sinope", "order": 13},
     # Logseq DB unificado, servicios privados de Sinope.
     '100.107.89.3:18787': {'name': 'Logseq DB · Sync', 'category': 'Memoria', 'desc': 'Sync privado del grafo unificado; estado del servidor', 'icon': '\U000f0453', 'server': 'sinope', 'order': 11, 'url': 'http://sinope.tailf70cf8.ts.net:18787/health'},
     '100.107.89.3:12327': {'name': 'Logseq DB · API', 'category': 'Memoria', 'desc': 'Documentación del API; escritura con token privado', 'icon': '\U000f048b', 'server': 'sinope', 'order': 11, 'url': 'http://sinope.tailf70cf8.ts.net:12327/'},
