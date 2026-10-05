@@ -19,7 +19,16 @@ window-rule {
     open-focused true
 }
 
+window-rule {
+    match app-id="hermes-broker-unlock"
+    open-floating true
+    default-column-width { fixed 680; }
+    default-window-height { fixed 260; }
+    open-focused true
+}
+
 binds {
     Mod+F4 { spawn-sh "exec ~/.local/bin/logseqdb"; }
     Mod+Alt+Return { spawn-sh "nemo ~/Downloads/ || thunar ~/Downloads/"; }
+    Mod+Ctrl+Shift+F10 hotkey-overlay-title="Desbloquear Broker Moodle de Hermes" { spawn "~/.config/niri/scripts/hermes-bw-moodle-unlock.sh"; }
 }

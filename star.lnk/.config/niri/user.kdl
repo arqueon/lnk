@@ -27,3 +27,15 @@ environment {
     QT_QPA_PLATFORMTHEME_QT6 "gtk3"
     QS_ICON_THEME "Papirus-Dark"
 }
+
+window-rule {
+    match app-id="hermes-broker-unlock"
+    open-floating true
+    default-column-width { fixed 680; }
+    default-window-height { fixed 260; }
+    open-focused true
+}
+
+binds {
+    Mod+Ctrl+Shift+F10 hotkey-overlay-title="Desbloquear Broker Moodle de Hermes" { spawn "~/.config/niri/scripts/hermes-bw-moodle-unlock.sh"; }
+}

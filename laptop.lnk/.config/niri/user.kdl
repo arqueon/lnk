@@ -24,6 +24,14 @@ window-rule {
 }
 
 
+window-rule {
+    match app-id="hermes-broker-unlock"
+    open-floating true
+    default-column-width { fixed 680; }
+    default-window-height { fixed 260; }
+    open-focused true
+}
+
 // ── Arranque de Logseq DB canónico (arq-unificado); los OG quedan como archivo ──
 spawn-sh-at-startup "exec ~/.local/bin/logseqdb"
 
@@ -34,4 +42,5 @@ binds {
     Mod+Shift+F2 repeat=false hotkey-overlay-title="Apps de Google por cuenta" { spawn "~/.config/niri/scripts/launch-google-apps-menu.sh"; }
     Mod+F4 { spawn-sh "exec ~/.local/bin/logseqdb"; }
     Mod+F7 { spawn "env" "GDK_BACKEND=x11" "virt-manager" "--connect" "qemu:///system" "--show-domain-console" "win11"; }
+    Mod+Ctrl+Shift+F10 hotkey-overlay-title="Desbloquear Broker Moodle de Hermes" { spawn "~/.config/niri/scripts/hermes-bw-moodle-unlock.sh"; }
 }
