@@ -30,15 +30,22 @@ window-rule {
     open-focused true
 }
 
-// ── Arranque de Logseq DB canónico (arq-unificado); los OG quedan como archivo ──
-spawn-sh-at-startup "exec ~/.local/bin/logseqdb"
+window-rule {
+    match app-id=r#"^[Tt]rilium.*$"#
+    open-on-workspace "notes"
+    default-column-width { proportion 1.0; }
+    open-maximized true
+}
+
+// ── Arranque de notas: Trilium Notes (sustituye a Logseq DB) ──
+spawn-sh-at-startup "exec ~/.config/niri/scripts/launch-trilium.sh"
 
 // ── Binds propios ──
 binds {
     Mod+F1 { spawn "firefox"; }
     Mod+Alt+F1 { spawn-sh "~/.config/niri/scripts/run_chrome.sh"; }
     Mod+Shift+F2 repeat=false hotkey-overlay-title="Apps de Google por cuenta" { spawn "~/.config/niri/scripts/launch-google-apps-menu.sh"; }
-    Mod+F4 { spawn-sh "exec ~/.local/bin/logseqdb"; }
+    Mod+F4 hotkey-overlay-title="Trilium Notes" { spawn "~/.config/niri/scripts/launch-trilium.sh"; }
     Mod+Shift+F5 hotkey-overlay-title="Sincronizar Palestina (Zettlr / Git)" { spawn "~/.config/niri/scripts/sync-palestina.sh"; }
     Mod+Ctrl+Shift+F10 hotkey-overlay-title="Desbloquear Broker Moodle de Hermes" { spawn "~/.config/niri/scripts/hermes-bw-moodle-unlock.sh"; }
 }
