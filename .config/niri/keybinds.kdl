@@ -58,7 +58,7 @@ binds {
     Mod+B { spawn "bitwarden-desktop"; }
 
     // ── DMS: shell, tema y utilidades ──
-    Mod+Shift+B allow-when-locked=true { spawn-sh "dms restart"; }
+    Mod+Shift+B allow-when-locked=true { spawn-sh "systemctl --user restart dms.service"; }
     Mod+Alt+C hotkey-overlay-title="Control Center" { spawn-sh "dms ipc call control-center toggle"; }
     Mod+Shift+C hotkey-overlay-title="DankChat" { spawn "dms" "ipc" "call" "dankChat" "open"; }
     Mod+Alt+T hotkey-overlay-title="Sync Theme (DMS)" { spawn "dms" "ipc" "call" "dmsThemeSync" "configure"; }

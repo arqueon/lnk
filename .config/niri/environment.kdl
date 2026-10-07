@@ -33,7 +33,8 @@ environment {
     XDG_MENU_PREFIX "plasma-"
 
     // ── DMS ──
-    DMS_RUN_GREETER "1"
+    // NO poner DMS_RUN_GREETER aquí: si niri lanza DMS (p. ej. `dms restart`)
+    // lo hereda y arranca en modo greeter dentro de la sesión (incidente 2026-10-04).
 
     // ── Aplicaciones por defecto ──
     TERM "kitty"
