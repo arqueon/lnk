@@ -2,6 +2,24 @@
   "updated": "2026-09-24",
   "sinope": [
     {
+      "name": "Hindsight · API/MCP",
+      "url": "http://100.107.89.3:18888/docs",
+      "category": "Memoria",
+      "desc": "API y MCP por banco (/mcp/<banco>/, con clave de tenant)",
+      "icon": "󰒋",
+      "order": 10,
+      "server": "sinope"
+    },
+    {
+      "name": "Hindsight · UI",
+      "url": "http://100.107.89.3:19999/",
+      "category": "Memoria",
+      "desc": "Memoria de agentes: búsqueda y bancos arq-infra, arq-udgplus, arq-agentes",
+      "icon": "󰑓",
+      "order": 10,
+      "server": "sinope"
+    },
+    {
       "name": "Nextcloud",
       "url": "https://nextcloud.arqueonautis.org",
       "category": "Productividad",
@@ -44,6 +62,15 @@
       "desc": "Muros y pizarras colaborativas",
       "icon": "󰽉",
       "order": 12,
+      "server": "sinope"
+    },
+    {
+      "name": "Trilium",
+      "url": "https://trilium.arqueonautis.org",
+      "category": "Productividad",
+      "desc": "Notas personales y académicas (Access; nativos por Tailscale :37840)",
+      "icon": "󰧻",
+      "order": 13,
       "server": "sinope"
     },
     {
@@ -389,10 +416,28 @@
       "server": "sinope"
     },
     {
+      "name": "Cartera-microcredenciales",
+      "url": "https://cartera-microcredenciales.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en cartera-microcredenciales.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
       "name": "Cartografias-antifascistas",
       "url": "https://cartografias-antifascistas.arqueonautis.org",
       "category": "Servicios",
       "desc": "Servicio en cartografias-antifascistas.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Catalogo-microcredenciales",
+      "url": "https://catalogo-microcredenciales.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en catalogo-microcredenciales.arqueonautis.org",
       "icon": "󰒋",
       "order": 90,
       "server": "sinope"

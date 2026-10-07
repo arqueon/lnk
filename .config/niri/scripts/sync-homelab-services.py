@@ -28,6 +28,11 @@ SERVICE_METADATA = {
     '100.107.89.3:18787': {'name': 'Logseq DB · Sync', 'category': 'Memoria', 'desc': 'Sync privado del grafo unificado; estado del servidor', 'icon': '\U000f0453', 'server': 'sinope', 'order': 11, 'url': 'http://sinope.tailf70cf8.ts.net:18787/health'},
     '100.107.89.3:12327': {'name': 'Logseq DB · API', 'category': 'Memoria', 'desc': 'Documentación del API; escritura con token privado', 'icon': '\U000f048b', 'server': 'sinope', 'order': 11, 'url': 'http://sinope.tailf70cf8.ts.net:12327/'},
     'logseq-db-mcp': {'name': 'Logseq DB · MCP', 'category': 'Memoria', 'desc': 'Estado MCP para agentes; endpoint Sinope :12327/mcp', 'icon': '\U000f06a9', 'server': 'sinope', 'order': 11, 'url': 'https://kuma.arqueonautis.org/dashboard/118'},
+    # Hindsight (memoria de agentes en Sinope, solo tailnet): la UI es la entrada principal; la API/MCP lleva los 3 bancos.
+    '100.107.89.3:19999': {'name': 'Hindsight · UI', 'category': 'Memoria', 'desc': 'Memoria de agentes: búsqueda y bancos arq-infra, arq-udgplus, arq-agentes', 'icon': '\U000f0453', 'server': 'sinope', 'order': 10, 'url': 'http://100.107.89.3:19999/'},
+    '100.107.89.3:18888': {'name': 'Hindsight · API/MCP', 'category': 'Memoria', 'desc': 'API y MCP por banco (/mcp/<banco>/, con clave de tenant)', 'icon': '\U000f048b', 'server': 'sinope', 'order': 10, 'url': 'http://100.107.89.3:18888/docs'},
+    # Trilium Next (notas personales y académicas), tras Cloudflare Access; los clientes nativos sincronizan por Tailscale (:37840).
+    'trilium.arqueonautis.org': {'name': 'Trilium', 'category': 'Productividad', 'desc': 'Notas personales y académicas (Access; nativos por Tailscale :37840)', 'icon': '\U000f09fb', 'server': 'sinope', 'order': 13},
     # Sinope - Productividad & Colaboración
     "nextcloud.arqueonautis.org": {
         "name": "Nextcloud",

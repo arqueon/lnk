@@ -1,8 +1,11 @@
+󰒋	Hindsight · API/MCP	http://100.107.89.3:18888/docs	Memoria	API y MCP por banco (/mcp/<banco>/, con clave de tenant)
+󰑓	Hindsight · UI	http://100.107.89.3:19999/	Memoria	Memoria de agentes: búsqueda y bancos arq-infra, arq-udgplus, arq-agentes
 󰒋	Nextcloud	https://nextcloud.arqueonautis.org	Productividad	Archivos, sincronización y oficina
 󰒋	Logseq DB · API	http://sinope.tailf70cf8.ts.net:12327/	Memoria	Documentación del API; escritura con token privado
 󰚩	Logseq DB · MCP	https://kuma.arqueonautis.org/dashboard/118	Memoria	Estado MCP para agentes; endpoint Sinope :12327/mcp
 󰑓	Logseq DB · Sync	http://sinope.tailf70cf8.ts.net:18787/health	Memoria	Sync privado del grafo unificado; estado del servidor
 󰽉	Digipad	https://muros.arqueonautis.org	Docencia	Muros y pizarras colaborativas
+󰧻	Trilium	https://trilium.arqueonautis.org	Productividad	Notas personales y académicas (Access; nativos por Tailscale :37840)
 󰊢	Vikunja Tasks	https://tasks.arqueonautis.org	Productividad	Gestión de tareas y proyectos
 󰄛	Mealie	https://mealie.arqueonautis.org	Hogar	Gestión de recetas y planificador de menú
 󰌹	Linkwarden	https://linkwarden.arqueonautis.org	Productividad	Archivo y guardado de enlaces web
@@ -41,7 +44,9 @@
 󰦨	n8n Sinope	https://automation.arqueonautis.org	Automatización	Flujos y automatizaciones del servidor
 󰒋	Antidotum	https://antidotum.arqueonautis.org	Servicios	Servicio en antidotum.arqueonautis.org
 󰒋	Btb	https://btb.arqueonautis.org	Servicios	Servicio en btb.arqueonautis.org
+󰒋	Cartera-microcredenciales	https://cartera-microcredenciales.arqueonautis.org	Servicios	Servicio en cartera-microcredenciales.arqueonautis.org
 󰒋	Cartografias-antifascistas	https://cartografias-antifascistas.arqueonautis.org	Servicios	Servicio en cartografias-antifascistas.arqueonautis.org
+󰒋	Catalogo-microcredenciales	https://catalogo-microcredenciales.arqueonautis.org	Servicios	Servicio en catalogo-microcredenciales.arqueonautis.org
 󰒋	Cleanuparr	https://cleanuparr.arqueonautis.org	Servicios	Servicio en cleanuparr.arqueonautis.org
 󰒋	Consola-microcredenciales	https://consola-microcredenciales.arqueonautis.org	Servicios	Servicio en consola-microcredenciales.arqueonautis.org
 󰒋	Id-microcredenciales	https://id-microcredenciales.arqueonautis.org	Servicios	Servicio en id-microcredenciales.arqueonautis.org
