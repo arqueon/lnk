@@ -43,6 +43,10 @@ if git remote | grep -q "^casa$"; then
     REMOTES_TO_SYNC+=("casa")
 fi
 
+if git remote | grep -q "^ofi$"; then
+    REMOTES_TO_SYNC+=("ofi")
+fi
+
 # Si origin apunta a una máquina de la red (p. ej. casa-cachyos desde abdel-home)
 if git remote | grep -q "^origin$" && git remote get-url origin | grep -qE "casa-cachyos|abdel-home"; then
     REMOTES_TO_SYNC+=("origin")
