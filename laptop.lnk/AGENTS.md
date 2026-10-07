@@ -1,13 +1,25 @@
-## Aviso vigente a todos los agentes — 2026-09-05
+## Aviso vigente a todos los agentes — 2026-10-07 (Hindsight)
 
-Por decisión expresa de Rubén, **arq-unificado en Logseq DB es desde ahora el único grafo operativo de memoria**, para consultas, contexto, journals y nuevas escrituras de todos los agentes. Esto sustituye las instrucciones anteriores que distribuyen información entre arq-graph, arq-academico y arq-personal o los mantienen como destino canónico. Los tres OG quedan conservados como archivo; no añadirles notas ni mantener escrituras paralelas.
+Por decisión expresa de Rubén, **la memoria de agentes vive ahora en Hindsight** (sinope), no en Logseq. Esto sustituye al aviso del 2026-09-05 en lo que toca a memoria operativa: infraestructura, proyectos, docencia UDGPlus y registro de trabajo de los agentes. Logseq DB (arq-unificado) queda para **notas personales, académicas y de referencia** (en transición a Trilium: no escribir en Trilium salvo petición de Rubén).
+
+- **Tres bancos aislados, un MCP por banco** (`hindsight-infra`, `hindsight-udgplus`, `hindsight-agentes`): `arq-infra` (homelab, sinope, NAS, Docker, redes, Cloudflare, Home Assistant, escritorio, respaldos), `arq-udgplus` (docencia UDGPlus/UdeG, Moodle/Open edX, PG2026B, microcredenciales, clases propias), `arq-agentes` (protocolos, convenciones, proyectos en curso, registro de lo hecho). URL `http://100.107.89.3:18888/mcp/<banco>/` (en sinope también `http://127.0.0.1:18888`), cabecera `Authorization: Bearer <clave>`. La clave vive solo en la configuración privada del cliente (y en `~/.config/hindsight/token` en las máquinas de Rubén); nunca en el grafo, el chat ni un repositorio. Si la pregunta cruza ámbitos, consulta los tres.
+- **Al iniciar:** `recall` en el banco del área antes de actuar (hay modelos mentales ya redactados: estado de infraestructura, pendientes UDGPlus, flota de agentes…; se leen con `reflect` o desde la interfaz). **Al terminar:** `retain` de decisiones con su motivo, estado actual, trampas y pendientes, con fechas absolutas y contexto; esto sustituye al log en el journal de Logseq.
+- **No retener** secretos, tokens ni datos personales sensibles: Memory Defense no está activado, la responsabilidad es de quien escribe.
+- **Humanos y terminal:** `hs <infra|udgplus|agentes|todos> "pregunta" [--reflect]`; interfaz `http://100.107.89.3:19999`. Estado y trampas: `~/Projects/utils/hindsight-sinope/RELEVO.md`.
+- **Si Hindsight no responde:** informar el bloqueo y dejar el pendiente en el proyecto; no declarar que algo se registró sin verificarlo con un `recall`.
+- Las instancias de Hermes de Abdel, Gerardo y Ximena **no** se conectan a estos bancos (contienen contexto privado de Rubén y la clave de tenant es única).
+
+### Logseq DB (arq-unificado) — solo notas personales, académicas y de referencia
+
+Las reglas de operación siguientes siguen vigentes para ese uso.
 
 - En casa, cachyos-ofi, star-lite y ruben-laptop (cuenta ruben): usar `/home/ruben/.local/bin/logseqdb-cli` con `-g arq-unificado` (`logseq-db-lab-cli` es alias); consultar la ayuda antes de usar opciones. La app se abre con `logseqdb`; grafo en `~/logseq/graphs/arq-unificado`, perfil y credenciales en `~/.config/logseqdb`, API/MCP local en `http://127.0.0.1:12325`. Ejecutar el CLI en la sesión real con acceso de red; en Codex usar escalación autorizada, pues el aislamiento puede invalidar el lock del worker. Nunca editar directamente db.sqlite ni escribir Markdown dentro de su carpeta.
+- Protección local 2026-09-23: `logseqdb-cli` rechaza entornos con procesos o usuarios aislados; ejecutar desde el host (en Codex: `require_escalated`). Nunca borrar `db-worker.lock` ni invocar directamente el runtime para saltar el wrapper. El lanzador abre arq-unificado y espera al worker de su propia instancia antes de iniciar sync. Con la app abierta, la CLI devuelve 75 si el worker Electron no está listo; esperar y no saltar el wrapper. Procedimiento: «Logseq DB — Prevención de bloqueos por host» en arq-unificado.
 - El acceso autorizado comprende el grafo completo, incluido contenido personal, con lectura y escritura. Buscar antes de crear, conservar estructura de bloques y enlazar el contexto con el journal de la fecha correspondiente.
 - Si DB/MCP no está disponible, informar el bloqueo y conservar el trabajo pendiente en el proyecto; no usar los OG como destino alternativo ni declarar que algo se registró sin verificarlo.
-- Los SmallDocs duraderos se incorporan al grafo DB mediante CLI/MCP, con etiquetas y enlaces; no se archivan como nuevas páginas Markdown en los grafos OG.
+- SmallDocs duraderos: decisiones, arquitectura, procedimientos y QA de proyectos → `retain` en Hindsight (banco del área, con etiquetas); solo los de contenido personal o académico se incorporan al grafo DB mediante CLI/MCP.
 
-Las referencias operativas a los grafos OG que aparezcan más abajo son históricas y quedan sustituidas por este aviso. No cambia las demás reglas del proyecto.
+Las referencias operativas a los grafos OG y las secciones siguientes sobre «Memoria duradera → Logseq» o logs de agentes en el journal quedan sustituidas por este aviso para proyectos, infraestructura, docencia UDGPlus y agentes (ahora en Hindsight). No cambia las demás reglas del proyecto.
 
 ---
 
