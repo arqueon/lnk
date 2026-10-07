@@ -29,6 +29,7 @@ window-rule {
 
 binds {
     Mod+F4 { spawn-sh "exec ~/.local/bin/logseqdb"; }
+    Mod+Shift+F5 hotkey-overlay-title="Sincronizar Palestina (Zettlr / Git)" { spawn "~/.config/niri/scripts/sync-palestina.sh"; }
     Mod+Alt+Return { spawn-sh "nemo ~/Downloads/ || thunar ~/Downloads/"; }
     Mod+Ctrl+Shift+F10 hotkey-overlay-title="Desbloquear Broker Moodle de Hermes" { spawn "~/.config/niri/scripts/hermes-bw-moodle-unlock.sh"; }
 }

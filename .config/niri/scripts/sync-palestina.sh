@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -uo pipefail
 
-# 1. Ubicar el repositorio
+# 1. Ubicar el repositorio de trabajo
 if [ -d "$HOME/Projects/zettlr/palestina-lo-intolerable" ]; then
     REPO_DIR="$HOME/Projects/zettlr/palestina-lo-intolerable"
 elif [ -d "$HOME/Nextcloud/Projects/zettlr/palestina-lo-intolerable" ]; then
@@ -9,7 +9,7 @@ elif [ -d "$HOME/Nextcloud/Projects/zettlr/palestina-lo-intolerable" ]; then
 elif [ -d "/media/hrdisk/Nextcloud/Projects/zettlr/palestina-lo-intolerable" ]; then
     REPO_DIR="/media/hrdisk/Nextcloud/Projects/zettlr/palestina-lo-intolerable"
 else
-    notify-send -u critical -a "Palestina" -i dialog-error "Error de sincronización" "No se encontró el repositorio de Palestina."
+    notify-send -u critical -a "Palestina" -i dialog-error "Error de sincronización" "No se encontró el repositorio de Palestina en este equipo."
     exit 1
 fi
 
@@ -25,62 +25,85 @@ if [ -n "$(git status --porcelain)" ]; then
     LOCAL_COMMITTED=1
 fi
 
-# 3. Detectar entorno y configurar peer
+# 3. Detectar y sincronizar remotes
 PULLED=0
 PUSHED=0
 CONFLICT=0
-PEER_UNREACHABLE=0
+SYNCED_PEERS=()
+FAILED_PEERS=()
+
+# Remotes de pares directos (Tailscale SSH)
+REMOTES_TO_SYNC=()
 
 if git remote | grep -q "^abdel$"; then
-    REMOTE_PEER="abdel"
-    PEER_NAME="abdel-home"
-elif git remote | grep -q "^origin$" && git remote get-url origin | grep -q "casa-cachyos"; then
-    REMOTE_PEER="origin"
-    PEER_NAME="casa-cachyos"
-else
-    REMOTE_PEER="origin"
-    PEER_NAME="remoto"
+    REMOTES_TO_SYNC+=("abdel")
 fi
 
-# Sincronización con el peer directo (Tailscale SSH)
-if git fetch "$REMOTE_PEER" main 2>/dev/null; then
-    BEHIND=$(git rev-list --count HEAD.."${REMOTE_PEER}"/main)
-    if [ "$BEHIND" -gt 0 ]; then
-        if git pull --rebase "$REMOTE_PEER" main; then
-            PULLED=$BEHIND
-        else
-            CONFLICT=1
-        fi
-    fi
-
-    AHEAD=$(git rev-list --count "${REMOTE_PEER}"/main..HEAD)
-    if [ "$AHEAD" -gt 0 ] && [ "$CONFLICT" -eq 0 ]; then
-        if git push "$REMOTE_PEER" main; then
-            PUSHED=$AHEAD
-        fi
-    fi
-else
-    PEER_UNREACHABLE=1
+if git remote | grep -q "^casa$"; then
+    REMOTES_TO_SYNC+=("casa")
 fi
 
-# Respaldo secundario hacia GitHub si está configurado
+# Si origin apunta a una máquina de la red (p. ej. casa-cachyos desde abdel-home)
+if git remote | grep -q "^origin$" && git remote get-url origin | grep -qE "casa-cachyos|abdel-home"; then
+    REMOTES_TO_SYNC+=("origin")
+fi
+
+# Remote de GitHub
 if git remote | grep -q "^github$"; then
-    git push github main 2>/dev/null || true
+    GITHUB_REMOTE="github"
 elif git remote | grep -q "^origin$" && git remote get-url origin | grep -q "github\.com"; then
-    git push origin main 2>/dev/null || true
+    GITHUB_REMOTE="origin"
+else
+    GITHUB_REMOTE=""
 fi
 
-# 4. Notificaciones
+# Si no hay pares directos pero existe GitHub, sincronizar GitHub como objetivo principal
+if [ ${#REMOTES_TO_SYNC[@]} -eq 0 ] && [ -n "${GITHUB_REMOTE}" ]; then
+    REMOTES_TO_SYNC+=("${GITHUB_REMOTE}")
+fi
+
+for r in "${REMOTES_TO_SYNC[@]}"; do
+    if git fetch --timeout=5 "$r" main 2>/dev/null; then
+        BEHIND=$(git rev-list --count HEAD.."${r}"/main 2>/dev/null || echo 0)
+        if [ "$BEHIND" -gt 0 ]; then
+            if git pull --rebase "$r" main; then
+                PULLED=$((PULLED + BEHIND))
+            else
+                CONFLICT=1
+                break
+            fi
+        fi
+
+        AHEAD=$(git rev-list --count "${r}"/main..HEAD 2>/dev/null || echo 0)
+        if [ "$AHEAD" -gt 0 ] && [ "$CONFLICT" -eq 0 ]; then
+            if git push "$r" main; then
+                PUSHED=$((PUSHED + AHEAD))
+            fi
+        fi
+        SYNCED_PEERS+=("$r")
+    else
+        FAILED_PEERS+=("$r")
+    fi
+done
+
+# Respaldo secundario hacia GitHub si hay cambios y no fue el único remoto sincronizado
+if [ "$CONFLICT" -eq 0 ] && [ -n "$GITHUB_REMOTE" ]; then
+    git push "$GITHUB_REMOTE" main 2>/dev/null || true
+fi
+
+# 4. Notificaciones de estado
 if [ "$CONFLICT" -eq 1 ]; then
     notify-send -u critical -a "Palestina" -i dialog-warning "⚠️ Conflicto en Git" "Hay cambios simultáneos en las mismas líneas. Revisa el archivo en Zettlr o terminal."
 elif [ "$PULLED" -gt 0 ] || [ "$PUSHED" -gt 0 ] || [ "$LOCAL_COMMITTED" -eq 1 ]; then
-    MSG="Sincronizado con $PEER_NAME."
+    PEER_LABEL="${SYNCED_PEERS[*]:-remoto}"
+    MSG="Sincronizado con [$PEER_LABEL]."
     [ "$LOCAL_COMMITTED" -eq 1 ] && MSG="$MSG Guardado local."
     [ "$PULLED" -gt 0 ] && MSG="$MSG Recibidos $PULLED cambios."
     [ "$PUSHED" -gt 0 ] && MSG="$MSG Enviados $PUSHED cambios."
     notify-send -a "Palestina" -i emblem-default -t 3500 "✅ Palestina sincronizado" "$MSG"
-elif [ "$PEER_UNREACHABLE" -eq 1 ]; then
-    notify-send -u normal -a "Palestina" -i network-offline -t 3500 "⚠️ Guardado local" "Sin conexión directa con $PEER_NAME. Los avances se guardaron localmente."
+elif [ ${#SYNCED_PEERS[@]} -eq 0 ] && [ ${#FAILED_PEERS[@]} -gt 0 ]; then
+    notify-send -u normal -a "Palestina" -i network-offline -t 3500 "⚠️ Guardado local" "Sin conexión directa con [${FAILED_PEERS[*]}]. Los avances se guardaron localmente."
 else
-    notify-send -a "Palestina" -i emblem-default -t 2000 "✅ Palestina al día" "Todo sincronizado con $PEER_NAME. Sin cambios pendientes."
+    PEER_LABEL="${SYNCED_PEERS[*]:-remoto}"
+    notify-send -a "Palestina" -i emblem-default -t 2000 "✅ Palestina al día" "Todo sincronizado con [$PEER_LABEL]. Sin cambios pendientes."
 fi
