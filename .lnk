@@ -47,7 +47,6 @@
 .config/niri/scripts/launch-hermes.sh
 .config/niri/scripts/launch-homelab-menu.sh
 .config/niri/scripts/launch-media-apps.sh
-.config/niri/scripts/launch-mindwtr.sh
 .config/niri/scripts/launch-niri-matrix.sh
 .config/niri/scripts/launch-quad-agents2.sh
 .config/niri/scripts/launch-quad-kitty.sh
@@ -80,7 +79,6 @@
 .local/bin/hermes-tui
 .local/bin/hermina-tui
 .local/bin/md
-.local/bin/mindwtr
 .local/bin/nas-btb-unlock
 .local/bin/sdoc-embed-images
 .local/bin/sdoc-open
