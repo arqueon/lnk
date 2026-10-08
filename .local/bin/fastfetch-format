@@ -4,18 +4,28 @@ import subprocess
 import re
 import os
 
-# Expresión regular para remover secuencias ANSI de control
-ansi_escape = re.compile(r"\x1b(?:[@-Z\\-_]|\[[0-9;?]*[a-zA-Z])")
+try:
+    import wcwidth
+    def get_str_width(s):
+        w = wcwidth.wcswidth(s)
+        return w if w >= 0 else len(s)
+except ImportError:
+    def get_str_width(s):
+        return len(s)
 
-# Ancho visual de las columnas de la caja
-KEY_WIDTH = 16
-VAL_WIDTH = 70
+# Regex to strip ANSI sequences (CSI, OSC, APC/Kitty, and simple 2-byte escapes)
+ansi_strip = re.compile(r"\x1b(?:\[[0-9;?]*[ -/]*[@-~]|\][^\x07\x1b]*(?:\x07|\x1b\\)|_[^\x1b]*(?:\x1b\\|\x07)|[@-Z\\-_])")
+cursor_moves = re.compile(r"\x1b\[[0-9]+[A-Za-z]")
+
+# Column visual widths for the table
+KEY_WIDTH = 14
+VAL_WIDTH = 58
 BORDER_COLOR_CODE = "36"  # Cian
 
 R = f"\x1b[{BORDER_COLOR_CODE}m"
 N = "\x1b[0m"
 
-# Caracteres de la caja coloreados dinámicamente
+# Box characters
 C_UL = R + "┌" + N
 C_UR = R + "┐" + N
 C_ML = R + "├" + N
@@ -50,17 +60,31 @@ def get_real_shell():
     if shell_name == "zsh":
         try:
             ver = subprocess.check_output(["zsh", "--version"], text=True).strip()
-            m = re.search(r"version\s+(\S+)", ver)
-            if m: return f"zsh {m.group(1)}"
-        except: pass
+            m = re.search(r"zsh\s+(\S+)", ver)
+            if m:
+                return f"zsh {m.group(1)}"
+        except Exception:
+            pass
         return "zsh"
     elif shell_name == "bash":
         try:
             ver = subprocess.check_output(["bash", "--version"], text=True).splitlines()[0]
             m = re.search(r"version\s+(\S+)", ver)
-            if m: return f"bash {v}"
-        except: pass
+            if m:
+                v = m.group(1).split("(")[0].strip()
+                return f"bash {v}"
+        except Exception:
+            pass
         return "bash"
+    elif shell_name == "fish":
+        try:
+            ver = subprocess.check_output(["fish", "--version"], text=True).strip()
+            m = re.search(r"version\s+(\S+)", ver)
+            if m:
+                return f"fish {m.group(1)}"
+        except Exception:
+            pass
+        return "fish"
     return shell_name
 
 args = ["fastfetch", "--pipe", "false"] + sys.argv[1:]
@@ -68,106 +92,112 @@ proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, te
 
 info_start_col = None
 
-for line in proc.stdout:
-    line_stripped = line.rstrip("\r\n")
-    clean_line = ansi_escape.sub("", line_stripped)
-    
-    # Determinar la columna absoluta donde inicia la caja de información
-    if info_start_col is None:
-        if "┌" in clean_line:
-            info_start_col = clean_line.find("┌")
-        else:
-            match = re.search(r"[│├└]", clean_line)
-            if match:
-                info_start_col = match.start()
-                
-    if info_start_col is not None and len(clean_line) > info_start_col:
-        # Separar la parte del logo (izquierda) y la parte de la caja (derecha)
+for raw_line in proc.stdout:
+    line_stripped = raw_line.rstrip("\r\n")
+    clean_line = ansi_strip.sub("", line_stripped)
+
+    # Detect the absolute column where the module block starts (marked by ┌ on title line)
+    if info_start_col is None and "┌" in clean_line:
+        info_start_col = clean_line.find("┌")
+
+    if info_start_col is not None and len(clean_line) >= info_start_col:
+        # Split line_stripped into logo_part and box_ansi at info_start_col
         idx_ansi = 0
-        visible_chars = 0
+        vis_count = 0
         while idx_ansi < len(line_stripped):
             if line_stripped[idx_ansi:].startswith("\x1b"):
-                m = re.match(r"^\x1b(?:[@-Z\\-_]|\[[0-9;?]*[a-zA-Z])", line_stripped[idx_ansi:])
+                m = ansi_strip.match(line_stripped[idx_ansi:])
                 if m:
                     idx_ansi += len(m.group(0))
                     continue
-            if visible_chars == info_start_col:
+            if vis_count == info_start_col:
                 break
-            visible_chars += 1
+            vis_count += get_str_width(line_stripped[idx_ansi])
             idx_ansi += 1
-            
+
         logo_part = line_stripped[:idx_ansi]
-        box_part_ansi = line_stripped[idx_ansi:]
-        box_part_clean = clean_line[info_start_col:]
-        
-        # 1. Cabecera superior (┌)
-        if "┌" in box_part_clean:
-            title_match = re.search(r"┐\s*(.*)", box_part_clean)
-            title = title_match.group(1) if title_match else ""
-            new_box = C_UL + (C_LINE * KEY_WIDTH) + C_TOP_MID + (C_LINE * VAL_WIDTH) + C_UR
-            if title:
-                idx_corner = box_part_ansi.find("┐")
-                if idx_corner != -1:
-                    new_box += box_part_ansi[idx_corner + 1:]
+        box_ansi = line_stripped[idx_ansi:]
+        box_clean = clean_line[info_start_col:]
+
+        # Pad logo_part if shorter than info_start_col
+        if vis_count < info_start_col:
+            logo_part += " " * (info_start_col - vis_count)
+
+        # 1. Header with title (┌)
+        if "┌" in box_clean:
+            title_match = re.search(r"┐\s*(.*)", box_clean)
+            title_raw = title_match.group(1).strip() if title_match else ""
+            title_clean = ansi_strip.sub("", title_raw).strip()
+
+            idx_corner = box_ansi.find("┐")
+            if idx_corner != -1:
+                title_ansi = cursor_moves.sub("", box_ansi[idx_corner + 1:]).strip()
+            else:
+                title_ansi = title_clean
+
+            if title_clean:
+                title_len = get_str_width(title_clean)
+                pad_left = 2
+                pad_right = max(0, VAL_WIDTH - (pad_left + 1 + title_len + 1))
+                header_val = (C_LINE * pad_left) + f" {title_ansi} " + (C_LINE * pad_right)
+            else:
+                header_val = C_LINE * VAL_WIDTH
+
+            new_box = C_UL + (C_LINE * KEY_WIDTH) + C_TOP_MID + header_val + C_UR
             print(logo_part + new_box)
-            
-        # 2. Divisoria intermedia (├)
-        elif "├" in box_part_clean:
+
+        # 2. Section divider (├)
+        elif "├" in box_clean:
             new_box = C_ML + (C_LINE * KEY_WIDTH) + C_MID_MID + (C_LINE * VAL_WIDTH) + C_MR
             print(logo_part + new_box)
-            
-        # 3. Línea inferior de cierre (└)
-        elif "└" in box_part_clean:
+
+        # 3. Bottom border (└)
+        elif "└" in box_clean:
             new_box = C_DL + (C_LINE * KEY_WIDTH) + C_BOT_MID + (C_LINE * VAL_WIDTH) + C_DR
             print(logo_part + new_box)
-            
-        # 4. Líneas de información (con separador │)
-        elif "│" in box_part_clean:
-            sep_idx_box_clean = box_part_clean.find("│")
-            if sep_idx_box_clean != -1:
-                idx_sep = 0
-                visible_count = 0
-                while idx_sep < len(box_part_ansi):
-                    if box_part_ansi[idx_sep:].startswith("\x1b"):
-                        m = re.match(r"^\x1b(?:[@-Z\\-_]|\[[0-9;?]*[a-zA-Z])", box_part_ansi[idx_sep:])
-                        if m:
-                            idx_sep += len(m.group(0))
-                            continue
-                    if visible_count == sep_idx_box_clean:
-                        break
-                    visible_count += 1
-                    idx_sep += 1
-                
-                key_ansi = box_part_ansi[:idx_sep]
-                val_ansi = box_part_ansi[idx_sep + 1:]
-                
-                key_clean = box_part_clean[:sep_idx_box_clean]
-                val_clean = box_part_clean[sep_idx_box_clean + 1:]
-                
-                key_clean_stripped = key_clean.strip()
-                val_clean_stripped = val_clean.strip()
-                val_ansi_stripped = val_ansi.strip()
-                
-                if "shell" in key_clean_stripped.lower() and "dms" not in key_clean_stripped.lower():
-                    real_shell = get_real_shell()
-                    val_clean_stripped = real_shell
-                    val_ansi_stripped = real_shell
-                
-                # Ancho visual formateado para la clave
-                k_vis = len(key_clean_stripped)
-                spaces_k = max(0, KEY_WIDTH - (k_vis + 1))
-                color = get_key_color(key_clean_stripped)
-                formatted_key = " " + color + key_clean_stripped + N + (" " * spaces_k)
-                
-                # Ancho visual formateado para el valor
-                v_vis = len(val_clean_stripped)
-                spaces_v = max(0, VAL_WIDTH - (v_vis + 1))
-                formatted_val = " " + val_ansi_stripped + (" " * spaces_v)
-                
-                new_box = C_BAR + formatted_key + C_BAR + formatted_val + C_BAR
-                print(logo_part + new_box)
-            else:
-                print(line_stripped)
+
+        # 4. Data rows with separator (│)
+        elif "│" in box_clean:
+            sep_idx = box_clean.find("│")
+            idx_sep = 0
+            vis_c = 0
+            while idx_sep < len(box_ansi):
+                if box_ansi[idx_sep:].startswith("\x1b"):
+                    m = ansi_strip.match(box_ansi[idx_sep:])
+                    if m:
+                        idx_sep += len(m.group(0))
+                        continue
+                if vis_c == sep_idx:
+                    break
+                vis_c += get_str_width(box_ansi[idx_sep])
+                idx_sep += 1
+
+            key_clean = box_clean[:sep_idx].strip()
+            val_clean = box_clean[sep_idx + 1:].strip()
+            val_ansi = box_ansi[idx_sep + 1:].strip()
+
+            if "shell" in key_clean.lower() and "dms" not in key_clean.lower():
+                real_shell = get_real_shell()
+                val_clean = real_shell
+                val_ansi = real_shell
+
+            color = get_key_color(key_clean)
+            k_vis = get_str_width(key_clean)
+            spaces_k = max(0, KEY_WIDTH - (k_vis + 1))
+            formatted_key = " " + color + key_clean + N + (" " * spaces_k)
+
+            # Prevent line wrap by truncating values that exceed VAL_WIDTH - 2
+            max_v = VAL_WIDTH - 2
+            if get_str_width(val_clean) > max_v:
+                val_clean = val_clean[:max_v - 1] + "…"
+                val_ansi = val_clean
+
+            v_vis = get_str_width(val_clean)
+            spaces_v = max(0, VAL_WIDTH - (v_vis + 1))
+            formatted_val = " " + val_ansi + (" " * spaces_v)
+
+            new_box = C_BAR + formatted_key + C_BAR + formatted_val + C_BAR
+            print(logo_part + new_box)
         else:
             print(line_stripped)
     else:

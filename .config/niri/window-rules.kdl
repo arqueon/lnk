@@ -53,7 +53,7 @@ window-rule {
     match app-id="fastfetch-popup"
     open-focused true
     open-floating true
-    default-column-width { fixed 1360; }
+    default-column-width { fixed 1560; }
     default-window-height { fixed 960; }
 }
 

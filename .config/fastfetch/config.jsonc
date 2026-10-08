@@ -21,7 +21,7 @@
   "modules": [
     // --- CAJA SUPERIOR Y TÍTULO ---
     {
-      "format": "{#1}{#keys}┌{$1}┐\u001b[76D {user-name-colored}{at-symbol-colored}{host-name-colored} 💻 ",
+      "format": "{#1}{#keys}┌{$1}┐ {user-name-colored}{at-symbol-colored}{host-name-colored} 💻",
       "type": "title"
     },
     
