@@ -29,17 +29,30 @@ if [[ -z "${app_path}" || ! -x "${app_path}" ]]; then
     | tail -n 1 || true)"
 fi
 
+# Ejecuta (o, con TRILIUM_LAUNCHER_DRYRUN=1, solo muestra) el comando elegido.
+run() {
+  if [[ -n "${TRILIUM_LAUNCHER_DRYRUN:-}" ]]; then
+    printf '%s\n' "$*"
+    exit 0
+  fi
+  exec "$@"
+}
+
 if [[ -n "${app_path}" && -x "${app_path}" ]]; then
-  exec "${app_path}" "$@"
+  run "${app_path}" "$@"
 fi
 
-# Fallback a binarios del sistema
-if command -v triliumnext >/dev/null 2>&1; then
-  exec triliumnext "$@"
-elif command -v trilium >/dev/null 2>&1 && [[ "$(command -v trilium)" != "$0" ]]; then
-  exec trilium "$@"
-fi
+# Fallback a binarios del sistema (paquete AUR triliumnext-bin: /usr/bin/triliumnext).
+# Rutas ABSOLUTAS a propósito: ~/.local/bin/trilium es un wrapper que vuelve a llamar a
+# este script, y resolver "trilium" por PATH producía un bucle infinito de exec cuando no
+# había AppImage ni paquete (584 re-ejecuciones en 2 s, sin llegar al aviso de error).
+IFS=: read -r -a system_bins <<< "${TRILIUM_SYSTEM_BINS:-/usr/bin/triliumnext:/usr/bin/trilium:/opt/trilium/trilium:/opt/triliumnext/trilium}"
+for bin in "${system_bins[@]}"; do
+  if [[ -x "${bin}" ]]; then
+    run "${bin}" "$@"
+  fi
+done
 
 notify-send -u critical "Trilium Notes" \
-  "No se encontró la AppImage de Trilium administrada por Shelly ni ejecutable en el sistema."
+  "No se encontró la AppImage de Trilium administrada por Shelly ni el paquete triliumnext-bin."
 exit 1
