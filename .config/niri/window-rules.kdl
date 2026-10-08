@@ -50,6 +50,14 @@ window-rule {
 }
 
 window-rule {
+    match app-id="fastfetch-popup"
+    open-focused true
+    open-floating true
+    default-column-width { fixed 1360; }
+    default-window-height { fixed 960; }
+}
+
+window-rule {
     match app-id=r#"[Ff]erdium"#
     match app-id=r#"^thunderbird"#
     open-on-workspace "chat"

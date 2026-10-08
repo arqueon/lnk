@@ -7,8 +7,8 @@
 typeset -gi _zsh_has_tty=0
 [[ -t 0 && -t 1 ]] && _zsh_has_tty=1
 
-# Fastfetch se muestra una sola vez al abrir una terminal interactiva.
-[[ -t 1 ]] && (( $+commands[fastfetch] )) && fastfetch
+# Fastfetch se muestra vía popup dedicado con Mod+Ctrl+Return (o alias ff).
+# [[ -t 1 ]] && (( $+commands[fastfetch] )) && fastfetch
 
 # Powerlevel10k instant prompt (debe ejecutarse lo mas arriba posible).
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then

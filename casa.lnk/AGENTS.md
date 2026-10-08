@@ -1,6 +1,6 @@
 ## Aviso vigente a todos los agentes — 2026-10-07 (Hindsight)
 
-Por decisión expresa de Rubén, **la memoria de agentes vive ahora en Hindsight** (sinope), no en Logseq. Esto sustituye al aviso del 2026-09-05 en lo que toca a memoria operativa: infraestructura, proyectos, docencia UDGPlus y registro de trabajo de los agentes. Logseq DB (arq-unificado) queda para **notas personales, académicas y de referencia** (en transición a Trilium: no escribir en Trilium salvo petición de Rubén).
+Por decisión expresa de Rubén, **la memoria de agentes vive ahora en Hindsight** (sinope), no en Logseq. Esto sustituye al aviso del 2026-09-05 en lo que toca a memoria operativa: infraestructura, proyectos, docencia UDGPlus y registro de trabajo de los agentes. Las notas personales, académicas y de referencia viven en **Trilium** (Logseq se retiró el 2026-10-08; ver sección más abajo; no escribir en Trilium salvo petición de Rubén).
 
 - **Tres bancos aislados, un MCP por banco** (`hindsight-infra`, `hindsight-udgplus`, `hindsight-agentes`): `arq-infra` (homelab, sinope, NAS, Docker, redes, Cloudflare, Home Assistant, escritorio, respaldos), `arq-udgplus` (docencia UDGPlus/UdeG, Moodle/Open edX, PG2026B, microcredenciales, clases propias), `arq-agentes` (protocolos, convenciones, proyectos en curso, registro de lo hecho). URL `http://100.107.89.3:18888/mcp/<banco>/` (en sinope también `http://127.0.0.1:18888`), cabecera `Authorization: Bearer <clave>`. La clave vive solo en la configuración privada del cliente (y en `~/.config/hindsight/token` en las máquinas de Rubén); nunca en el grafo, el chat ni un repositorio. Si la pregunta cruza ámbitos, consulta los tres.
 - **Al iniciar:** `recall` en el banco del área antes de actuar (hay modelos mentales ya redactados: estado de infraestructura, pendientes UDGPlus, flota de agentes…; se leen con `reflect` o desde la interfaz). **Al terminar:** `retain` de decisiones con su motivo, estado actual, trampas y pendientes, con fechas absolutas y contexto; esto sustituye al log en el journal de Logseq.
@@ -9,19 +9,16 @@ Por decisión expresa de Rubén, **la memoria de agentes vive ahora en Hindsight
 - **Si Hindsight no responde:** informar el bloqueo y dejar el pendiente en el proyecto; no declarar que algo se registró sin verificarlo con un `recall`. Si el MCP de tu sesión no conectó (por ejemplo, se abrió mientras el servidor estaba saturado), reconecta con `/mcp` o reinicia con `claude --continue`, y mientras tanto guarda con `hs retener <banco> "texto"` (usa la API, sin MCP).
 - Las instancias de Hermes de Abdel, Gerardo y Ximena **no** se conectan a estos bancos (contienen contexto privado de Rubén y la clave de tenant es única).
 
-### Logseq DB (arq-unificado) — solo notas personales, académicas y de referencia
+### Logseq retirado (2026-10-08) — notas personales, académicas y de referencia → Trilium
 
-Las reglas de operación siguientes siguen vigentes para ese uso.
+Logseq DB (arq-unificado) **se desinstaló** de casa y se dio de baja el sync de sinope (contenedores, túnel, DNS, monitores de Kuma). No escribir ni consultar Logseq; `logseqdb-cli` y el MCP `logseq_db_lab` ya no existen. Las notas personales y académicas viven en **Trilium** (`https://trilium.arqueonautis.org`, clientes nativos por Tailscale); no escribir en Trilium salvo petición de Rubén.
 
-- Para esas notas, consultar «AI Memory Protocol» dentro de arq-unificado si hace falta; la memoria operativa de agentes se lee de Hindsight.
-- En casa, cachyos-ofi, star-lite y ruben-laptop (cuenta ruben): usar `/home/ruben/.local/bin/logseqdb-cli` con `-g arq-unificado` (`logseq-db-lab-cli` es alias); consultar la ayuda antes de usar opciones. La app se abre con `logseqdb`; grafo en `~/logseq/graphs/arq-unificado`, perfil y credenciales en `~/.config/logseqdb`, API/MCP local en `http://127.0.0.1:12325`. Ejecutar el CLI en la sesión real con acceso de red; en Codex usar escalación autorizada, pues el aislamiento puede invalidar el lock del worker. Nunca editar directamente db.sqlite ni escribir Markdown dentro de su carpeta.
-- En Sinope: usar el MCP `logseq_db_lab` de Hermes o el MCP privado `http://sinope.tailf70cf8.ts.net:12327/mcp`. Las credenciales viven en la configuración privada del cliente/servicio; nunca copiarlas al grafo ni al chat. Hermes carga el cambio en una sesión nueva; `/reload-mcp` renueva sus herramientas.
-- Protección local de casa (2026-09-23): `logseqdb-cli` rechaza procesos o usuarios aislados con código 77; ejecutar desde el host (en Codex: `require_escalated`). Si la app está abierta y su worker Electron no está listo, devuelve 75; esperar, sin saltar el wrapper ni borrar `db-worker.lock`. Los alias `logseq-db-lab-cli` y `logseq-db-lab` delegan en los lanzadores canónicos. Se conserva el arranque corregido del 19 de septiembre, sin CLI de sync concurrente. Referencia: «Logseq DB — Prevención de bloqueos por host» en arq-unificado.
-- El acceso autorizado comprende el grafo completo, incluido contenido personal, con lectura y escritura. Buscar antes de crear, conservar estructura de bloques y enlazar el contexto con el journal de la fecha correspondiente.
-- Si DB/MCP no está disponible, informar el bloqueo y conservar el trabajo pendiente en el proyecto; no usar los OG como destino alternativo ni declarar que algo se registró sin verificarlo.
-- SmallDocs duraderos: decisiones, arquitectura, procedimientos y QA de proyectos → `retain` en Hindsight (banco del área, con etiquetas); solo los de contenido personal o académico se incorporan al grafo DB mediante CLI/MCP.
+- **Archivo para consulta puntual:** repo restic cifrado en el NAS `/mnt/nas-backups/logseq-retiro` (fuera de Nextcloud; replicado a Google Drive `Backups/sinope/logseq-retiro` por `sinope-offsite.timer`). Clave en sinope `/home/sinope/backups/.logseq-restic-pass` (y en el gestor de Rubén). Contiene Markdown de 9.199 páginas y 1.141 journals, exportación EDN completa, la base SQLite, los assets y el estado del servidor de sync. Se restaura solo lo necesario con `restic restore latest --include <ruta>` en sinope.
+- Los tres grafos OG (arq-graph, arq-academico, arq-personal) siguen como archivo de solo lectura.
+- La llave de firma del APK de Android del fork está en `~/.local/share/android-signing-logseq-fork` (casa).
+- Memoria operativa de agentes: Hindsight (ver arriba). SmallDocs duraderos de proyectos → `retain` en Hindsight.
 
-Las referencias operativas a los grafos OG y las secciones siguientes sobre «Memoria duradera → Logseq» o logs de agentes en el journal quedan sustituidas por este aviso para proyectos, infraestructura, docencia UDGPlus y agentes (ahora en Hindsight). No cambia las demás reglas del proyecto.
+Las secciones siguientes sobre «Memoria duradera → Logseq» y los logs en el journal quedan sustituidas por este aviso y el de Hindsight. No cambia las demás reglas del proyecto.
 
 ---
 
