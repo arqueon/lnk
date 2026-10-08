@@ -6,7 +6,7 @@ Por decisión expresa de Rubén, **la memoria de agentes vive ahora en Hindsight
 - **Al iniciar:** `recall` en el banco del área antes de actuar (hay modelos mentales ya redactados: estado de infraestructura, pendientes UDGPlus, flota de agentes…; se leen con `reflect` o desde la interfaz). **Al terminar:** `retain` de decisiones con su motivo, estado actual, trampas y pendientes, con fechas absolutas y contexto; esto sustituye al log en el journal de Logseq.
 - **No retener** secretos, tokens ni datos personales sensibles: Memory Defense no está activado, la responsabilidad es de quien escribe.
 - **Humanos y terminal:** `hs <infra|udgplus|agentes|todos> "pregunta" [--reflect]`; interfaz `http://100.107.89.3:19999`. Estado y trampas: `~/Projects/utils/hindsight-sinope/RELEVO.md`.
-- **Si Hindsight no responde:** informar el bloqueo y dejar el pendiente en el proyecto; no declarar que algo se registró sin verificarlo con un `recall`.
+- **Si Hindsight no responde:** informar el bloqueo y dejar el pendiente en el proyecto; no declarar que algo se registró sin verificarlo con un `recall`. Si el MCP de tu sesión no conectó (por ejemplo, se abrió mientras el servidor estaba saturado), reconecta con `/mcp` o reinicia con `claude --continue`, y mientras tanto guarda con `hs retener <banco> "texto"` (usa la API, sin MCP).
 - Las instancias de Hermes de Abdel, Gerardo y Ximena **no** se conectan a estos bancos (contienen contexto privado de Rubén y la clave de tenant es única).
 
 ### Logseq DB (arq-unificado) — solo notas personales, académicas y de referencia
