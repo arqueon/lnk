@@ -46,6 +46,7 @@ binds {
     Mod+Alt+F1 { spawn-sh "~/.config/niri/scripts/run_chrome.sh"; }
     Mod+Shift+F2 repeat=false hotkey-overlay-title="Apps de Google por cuenta" { spawn "~/.config/niri/scripts/launch-google-apps-menu.sh"; }
     Mod+F4 hotkey-overlay-title="Trilium Notes" { spawn "~/.config/niri/scripts/launch-trilium.sh"; }
+    Mod+Ctrl+X hotkey-overlay-title="Conexiones SSH (casa/oficina/laptop)" { spawn "~/.config/niri/scripts/launch-ssh-menu.sh"; }
     Mod+Shift+F5 hotkey-overlay-title="Sincronizar Palestina (Zettlr / Git)" { spawn "~/.config/niri/scripts/sync-palestina.sh"; }
     Mod+Ctrl+Shift+F10 hotkey-overlay-title="Desbloquear Broker Moodle de Hermes" { spawn "~/.config/niri/scripts/hermes-bw-moodle-unlock.sh"; }
 }
