@@ -26,7 +26,6 @@ binds {
     Mod+Ctrl+F2 hotkey-overlay-title="Ferdium: Modo Local / Nube" { spawn "~/.config/niri/scripts/launch-ferdium-menu.sh"; }
     Mod+F3 { spawn "zotero"; }
     Mod+Shift+F3 { spawn "curl" "-s" "http://127.0.0.1:23119/tagnavigator/open"; }
-    Mod+F4 { spawn "logseq"; }
     Mod+Alt+F4 { spawn-sh "exec ~/.local/bin/Tine_*.AppImage"; } // Tine: familia de notas junto a Logseq
     Mod+F5 { spawn "zettlr"; }
     Mod+F7 { spawn "virt-manager"; }

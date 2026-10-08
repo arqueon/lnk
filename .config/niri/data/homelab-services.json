@@ -29,33 +29,6 @@
       "server": "sinope"
     },
     {
-      "name": "Logseq DB · API",
-      "url": "http://sinope.tailf70cf8.ts.net:12327/",
-      "category": "Memoria",
-      "desc": "Documentación del API; escritura con token privado",
-      "icon": "󰒋",
-      "order": 11,
-      "server": "sinope"
-    },
-    {
-      "name": "Logseq DB · MCP",
-      "url": "https://kuma.arqueonautis.org/dashboard/118",
-      "category": "Memoria",
-      "desc": "Estado MCP para agentes; endpoint Sinope :12327/mcp",
-      "icon": "󰚩",
-      "order": 11,
-      "server": "sinope"
-    },
-    {
-      "name": "Logseq DB · Sync",
-      "url": "http://sinope.tailf70cf8.ts.net:18787/health",
-      "category": "Memoria",
-      "desc": "Sync privado del grafo unificado; estado del servidor",
-      "icon": "󰑓",
-      "order": 11,
-      "server": "sinope"
-    },
-    {
       "name": "Digipad",
       "url": "https://muros.arqueonautis.org",
       "category": "Docencia",
@@ -98,15 +71,6 @@
       "desc": "Archivo y guardado de enlaces web",
       "icon": "󰌹",
       "order": 25,
-      "server": "sinope"
-    },
-    {
-      "name": "LinkBreeze",
-      "url": "https://links.arqueonautis.org",
-      "category": "Productividad",
-      "desc": "Páginas públicas de enlaces",
-      "icon": "󰛄",
-      "order": 26,
       "server": "sinope"
     },
     {
@@ -465,15 +429,6 @@
       "url": "https://id-microcredenciales.arqueonautis.org",
       "category": "Servicios",
       "desc": "Servicio en id-microcredenciales.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
-      "name": "Logseq-sync",
-      "url": "https://logseq-sync.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en logseq-sync.arqueonautis.org",
       "icon": "󰒋",
       "order": 90,
       "server": "sinope"

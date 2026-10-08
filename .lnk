@@ -52,6 +52,8 @@
 .config/niri/scripts/launch-quad-agents2.sh
 .config/niri/scripts/launch-quad-kitty.sh
 .config/niri/scripts/launch-ssh-menu.sh
+.config/niri/scripts/fastfetch-view.sh
+.config/niri/scripts/launch-fastfetch-popup.sh
 .config/niri/scripts/launch-quad-niri.sh
 .config/niri/scripts/launch-sdoc-library.sh
 .config/niri/scripts/reset-browser-chooser.sh
@@ -77,7 +79,6 @@
 .local/bin/hermes-sinope
 .local/bin/hermes-tui
 .local/bin/hermina-tui
-.local/bin/logseq-multi-launch
 .local/bin/md
 .local/bin/mindwtr
 .local/bin/nas-btb-unlock
