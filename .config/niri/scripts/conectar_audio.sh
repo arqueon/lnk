@@ -91,6 +91,22 @@ wait_for_card() {
     return 1
 }
 
+ensure_bluetooth_ready() {
+    if ! bluetoothctl show 2>/dev/null | grep -q "Powered: yes"; then
+        echo "Asegurando Bluetooth activo..."
+        bluetoothctl power on >/dev/null 2>&1 || true
+        sleep 1
+    fi
+    if ! bluetoothctl show 2>/dev/null | grep -q "Powered: yes"; then
+        echo "Reintentando activación mediante rfkill..."
+        rfkill block bluetooth >/dev/null 2>&1 || true
+        sleep 0.5
+        rfkill unblock bluetooth >/dev/null 2>&1 || true
+        sleep 0.5
+        bluetoothctl power on >/dev/null 2>&1 || true
+    fi
+}
+
 apply_sink_config() {
     local sink=$1
     local name=$2
@@ -151,27 +167,23 @@ fi
 
 # 2. Si no está el sink, verificar y preparar conexión Bluetooth
 cleanup_parasitic_clock
+ensure_bluetooth_ready
 
-echo "Asegurando Bluetooth activo..."
-bluetoothctl power on >/dev/null 2>&1 || true
 bluetoothctl trust "$MAC" >/dev/null 2>&1 || true
 
 # Si está en estado fantasma (Connected: yes pero sin audio), forzar desconexión limpia primero
 if bluetoothctl info "$MAC" 2>/dev/null | grep -q "Connected: yes"; then
     echo "Desconectando sesión previa incompleta de $NAME..."
     bluetoothctl disconnect "$MAC" >/dev/null 2>&1 || true
-    sleep 3
+    sleep 2
 fi
-
-# Ráfaga rápida de escaneo para despertar dispositivos en reposo / bajo consumo
-echo "Comprobando presencia de $NAME..."
-timeout 2 bluetoothctl scan on >/dev/null 2>&1 || true
 
 CONNECTED=false
 SINK_NAME=""
 
 for ((attempt = 1; attempt <= MAX_BT_RETRIES; attempt++)); do
     echo "Intento de conexión $attempt de $MAX_BT_RETRIES a $NAME ($MAC)..."
+    ensure_bluetooth_ready
     
     # Intentar conexión directa
     if timeout "$BT_CONNECT_TIMEOUT" bluetoothctl connect "$MAC" >/dev/null 2>&1; then

@@ -80,7 +80,7 @@ binds {
     Mod+Alt+W { spawn-sh "variety -n && notify-send 'Next wallpaper'"; }
 
     // ── Utilidades de sistema ──
-    Mod+Ctrl+P allow-when-locked=true hotkey-overlay-title="Activar monitores (DPMS)" { spawn "~/.config/niri/scripts/wake-monitors.sh"; }
+    Mod+Ctrl+Shift+P allow-when-locked=true hotkey-overlay-title="Activar monitores (DPMS)" { spawn "~/.config/niri/scripts/wake-monitors.sh"; }
     Mod+Shift+M { spawn-sh "wl-present mirror"; } // espejo de pantalla
     Mod+Alt+B { spawn-sh "kitty btop"; }
     Mod+Alt+S { spawn-sh "systemctl suspend"; }
@@ -94,7 +94,8 @@ binds {
     Alt+F10 { spawn-sh "dms ipc call audio mute"; }
     Alt+F11 { spawn-sh "dms ipc call audio decrement 3"; }
     Alt+F12 { spawn-sh "dms ipc call audio increment 3"; }
-    Mod+Alt+P { spawn-sh "~/.config/niri/scripts/conectar_audio.sh poseidon"; } // Poseidon D80
+    Mod+Ctrl+P hotkey-overlay-title="Audio: Poseidon D80" { spawn-sh "~/.config/niri/scripts/conectar_audio.sh poseidon"; }
+    Mod+Alt+P hotkey-overlay-title="Audio: Poseidon D80" { spawn-sh "~/.config/niri/scripts/conectar_audio.sh poseidon"; } // Poseidon D80
     Mod+Alt+E { spawn-sh "~/.config/niri/scripts/conectar_audio.sh earfun"; }   // EarFun Air Pro 4
     Mod+Alt+L { spawn-sh "~/.config/niri/scripts/conectar_audio.sh local"; }    // Bocinas locales USB
 
