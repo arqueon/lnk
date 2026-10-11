@@ -58,6 +58,14 @@ window-rule {
 }
 
 window-rule {
+    match app-id="herdr-atajos"
+    open-focused true
+    open-floating true
+    default-column-width { fixed 1100; }
+    default-window-height { fixed 980; }
+}
+
+window-rule {
     match app-id=r#"[Ff]erdium"#
     match app-id=r#"^thunderbird"#
     open-on-workspace "chat"
