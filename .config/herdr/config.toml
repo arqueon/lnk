@@ -72,6 +72,7 @@ close_workspace = "prefix+shift+d"
 key = "alt+shift+g"
 type = "popup"
 command = "lazygit"
+description = "Lazygit flotante"
 width = "85%"
 height = "85%"
 
@@ -79,5 +80,37 @@ height = "85%"
 key = "alt+slash"
 type = "popup"
 command = "herdr-atajos --esperar"
+description = "Esta hoja de atajos"
 width = "70%"
 height = "85%"
+
+# Plugins (instalados 2026-10-10)
+[[keys.command]]
+key = "alt+space"
+type = "plugin_action"
+command = "herdr-navigator.open"
+description = "Buscador: spaces, agentes, máquinas, proyectos"
+
+[[keys.command]]
+key = "alt+e"
+type = "plugin_action"
+command = "herdr-file-viewer.open-file-viewer"
+description = "Explorar archivos (visor git, solo lectura)"
+
+[[keys.command]]
+key = "alt+u"
+type = "plugin_action"
+command = "usagebar.open-limits"
+description = "Uso: contexto y cuotas de los agentes"
+
+[[keys.command]]
+key = "prefix+shift+l"
+type = "plugin_action"
+command = "herdr-spreader.apply"
+description = "Aplicar plantilla de space (YAML)"
+
+[[keys.command]]
+key = "prefix+shift+m"
+type = "plugin_action"
+command = "ray.plugin-manager.open"
+description = "Gestor de plugins"

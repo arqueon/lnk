@@ -122,9 +122,10 @@ def main() -> None:
         print()
     comandos = [c for c in cfg.get("keys", {}).get("command", []) if c.get("key")]
     if comandos:
-        print(f"  {A}{B}Comandos propios{R}")
+        print(f"  {A}{B}Comandos y plugins{R}")
         for c in comandos:
-            print(f"    {c.get('command', '')[:34]:<34} {bonito(c['key'], prefijo)}")
+            nombre = c.get("description") or c.get("command", "")
+            print(f"    {nombre[:46]:<46} {bonito(c['key'], prefijo)}")
         print()
     print(f"  {D}Ratón: clic en spaces, pestañas, paneles y agentes; arrastrar bordes; clic derecho = menú.{R}")
     print(f"  {D}Fuente: {config_path()}{R}\n")
