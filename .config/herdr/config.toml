@@ -1,0 +1,83 @@
+onboarding = false
+
+[ui.toast]
+delivery = "system"
+
+[theme]
+name = "gruvbox"
+auto_switch = false
+
+[ui]
+prompt_new_tab_name = false             # pestañas sin preguntar nombre (las nombra herdr-automatic-rename)
+agent_panel_sort = "priority"            # cola de atención: lo bloqueado primero
+status_indicators = "symbols"            # glifos distintos por estado, no solo color
+show_agent_labels_on_pane_borders = true # ver qué agente hay en cada split
+tab_bar_right = [
+  { type = "zoom" },
+  { type = "hostname" },
+  { type = "datetime", format = "%H:%M" },
+]
+tab_bar_right_separator = " · "
+
+[ui.sidebar.agents.rows_by_agent]        # en Claude, mostrar en qué está trabajando
+claude = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
+
+[keys]
+# Prefijo: ctrl+space (antes ctrl+b). Lo poco frecuente sigue tras el prefijo;
+# lo diario va directo con Alt (Super es de niri).
+prefix = "ctrl+space"
+
+# General
+help = "prefix+?"
+settings = "prefix+s"
+detach = "prefix+q"
+reload_config = "prefix+r"
+resize_mode = "prefix+comma"
+toggle_sidebar = "prefix+b"
+edit_scrollback = "prefix+e"
+
+# Saltar (lo más usado)
+workspace_picker = ["prefix+w", "alt+w"]
+goto = ["prefix+g", "alt+g"]
+next_agent = ["prefix+a", "alt+a"]
+previous_agent = ["prefix+shift+a", "alt+shift+a"]
+focus_agent = "ctrl+alt+1..9"
+switch_tab = "alt+1..9"
+previous_tab = ["prefix+p", "ctrl+alt+left"]
+next_tab = ["prefix+n", "ctrl+alt+right"]
+previous_workspace = "ctrl+alt+up"
+next_workspace = "ctrl+alt+down"
+focus_pane_left = ["prefix+h", "alt+left"]
+focus_pane_down = ["prefix+j", "alt+down"]
+focus_pane_up = ["prefix+k", "alt+up"]
+focus_pane_right = ["prefix+l", "alt+right"]
+
+# Crear y organizar
+new_tab = ["prefix+c", "alt+n"]
+new_workspace = ["prefix+shift+n", "alt+shift+n"]
+new_worktree = "prefix+shift+g"
+split_vertical = ["prefix+v", "alt+v"]
+split_horizontal = ["prefix+minus", "alt+h"]
+zoom = ["prefix+z", "alt+z"]
+rename_tab = "prefix+shift+t"
+rename_workspace = "prefix+shift+w"
+rename_pane = "prefix+shift+p"
+
+# Cerrar (destructivo: solo tras el prefijo)
+close_pane = "prefix+x"
+close_tab = "prefix+shift+x"
+close_workspace = "prefix+shift+d"
+
+[[keys.command]]                         # lazygit flotante en el directorio del pane
+key = "alt+shift+g"
+type = "popup"
+command = "lazygit"
+width = "85%"
+height = "85%"
+
+[[keys.command]]                         # hoja de atajos de herdr
+key = "alt+slash"
+type = "popup"
+command = "herdr-atajos --esperar"
+width = "70%"
+height = "85%"

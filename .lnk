@@ -10,6 +10,7 @@
 .config/fusuma/config.yml
 .config/fuzzel/fuzzel.ini
 .config/ghostty/config
+.config/herdr/config.toml
 .config/kitty/kitty.conf
 .config/mango/data/nas-btb-services.tsv
 .config/mango/data/sinope-services.tsv
@@ -35,12 +36,14 @@
 .config/niri/layout.kdl
 .config/niri/scripts/conectar_audio.sh
 .config/niri/scripts/ejecutar_music.sh
+.config/niri/scripts/fastfetch-view.sh
 .config/niri/scripts/gpu_recorder.sh
 .config/niri/scripts/hermes-remote-tmux.conf
 .config/niri/scripts/hermes-sinope
 .config/niri/scripts/launch-ai-menu.sh
 .config/niri/scripts/launch-anytype.sh
 .config/niri/scripts/launch-deepseek-harness.sh
+.config/niri/scripts/launch-fastfetch-popup.sh
 .config/niri/scripts/launch-ferdium-menu.sh
 .config/niri/scripts/launch-google-apps-menu.sh
 .config/niri/scripts/launch-hermes-one.sh
@@ -50,11 +53,9 @@
 .config/niri/scripts/launch-niri-matrix.sh
 .config/niri/scripts/launch-quad-agents2.sh
 .config/niri/scripts/launch-quad-kitty.sh
-.config/niri/scripts/launch-ssh-menu.sh
-.config/niri/scripts/fastfetch-view.sh
-.config/niri/scripts/launch-fastfetch-popup.sh
 .config/niri/scripts/launch-quad-niri.sh
 .config/niri/scripts/launch-sdoc-library.sh
+.config/niri/scripts/launch-ssh-menu.sh
 .config/niri/scripts/reset-browser-chooser.sh
 .config/niri/scripts/restart-ferdium.sh
 .config/niri/scripts/run_chrome.sh
@@ -75,6 +76,7 @@
 .face
 .local/bin/fastfetch-format
 .local/bin/ferdium-modo
+.local/bin/herdr-atajos
 .local/bin/hermes-sinope
 .local/bin/hermes-tui
 .local/bin/hermina-tui

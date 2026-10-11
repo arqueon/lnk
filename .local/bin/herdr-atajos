@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+"""Hoja de atajos de herdr, generada desde la configuración real.
+
+Lee ~/.config/herdr/config.toml (o $XDG_CONFIG_HOME/herdr/config.toml) y completa
+lo que no esté definido con los valores por defecto de `herdr --default-config`.
+Uso: herdr-atajos [--esperar]   (--esperar: espera una tecla antes de salir; para popups)
+"""
+import os
+import re
+import subprocess
+import sys
+import tomllib
+from pathlib import Path
+
+GRUPOS = [
+    ("Saltar", [
+        ("workspace_picker", "Elegir space (workspace)"),
+        ("goto", "Ir a… (búsqueda)"),
+        ("next_agent", "Siguiente agente"),
+        ("previous_agent", "Agente anterior"),
+        ("focus_agent", "Ir al agente N"),
+        ("switch_tab", "Ir a la pestaña N"),
+        ("previous_tab", "Pestaña anterior"),
+        ("next_tab", "Pestaña siguiente"),
+        ("previous_workspace", "Space anterior"),
+        ("next_workspace", "Space siguiente"),
+        ("focus_pane_left", "Panel a la izquierda"),
+        ("focus_pane_down", "Panel abajo"),
+        ("focus_pane_up", "Panel arriba"),
+        ("focus_pane_right", "Panel a la derecha"),
+        ("open_notification_target", "Abrir lo que pide atención"),
+    ]),
+    ("Crear y organizar", [
+        ("new_tab", "Nueva pestaña"),
+        ("new_workspace", "Nuevo space"),
+        ("new_worktree", "Nuevo worktree (rama aparte)"),
+        ("split_vertical", "Dividir: lado a lado"),
+        ("split_horizontal", "Dividir: arriba/abajo"),
+        ("zoom", "Maximizar / restaurar panel"),
+        ("resize_mode", "Modo redimensionar"),
+        ("rename_tab", "Renombrar pestaña"),
+        ("rename_workspace", "Renombrar space"),
+        ("rename_pane", "Renombrar panel"),
+        ("toggle_sidebar", "Mostrar / ocultar barra lateral"),
+        ("edit_scrollback", "Abrir historial en el editor"),
+    ]),
+    ("Cerrar", [
+        ("close_pane", "Cerrar panel"),
+        ("close_tab", "Cerrar pestaña"),
+        ("close_workspace", "Cerrar space"),
+    ]),
+    ("General", [
+        ("help", "Ayuda de herdr"),
+        ("settings", "Ajustes"),
+        ("reload_config", "Recargar configuración"),
+        ("detach", "Salir dejando todo corriendo"),
+    ]),
+]
+
+TECLAS = {"ctrl": "Ctrl", "alt": "Alt", "shift": "Shift", "super": "Super", "cmd": "Cmd",
+          "space": "Espacio", "minus": "-", "comma": ",", "slash": "/", "tab": "Tab",
+          "left": "←", "right": "→", "up": "↑", "down": "↓", "enter": "Enter", "esc": "Esc"}
+
+
+def config_path() -> Path:
+    base = os.environ.get("XDG_CONFIG_HOME") or str(Path.home() / ".config")
+    return Path(base) / "herdr" / "config.toml"
+
+
+def defaults() -> dict:
+    """Valores por defecto de [keys] desde las líneas comentadas de --default-config."""
+    try:
+        out = subprocess.run(["herdr", "--default-config"], capture_output=True, text=True, timeout=10).stdout
+    except (OSError, subprocess.SubprocessError):
+        return {}
+    res, en_keys = {}, False
+    for linea in out.splitlines():
+        if re.match(r"^\[keys\]", linea):
+            en_keys = True
+            continue
+        if en_keys and re.match(r"^\[(?!keys)", linea):
+            break
+        m = re.match(r'^#\s*([a-z_]+)\s*=\s*"([^"]*)"', linea)
+        if en_keys and m:
+            res[m.group(1)] = m.group(2)
+    return res
+
+
+def bonito(tecla: str, prefijo: str) -> str:
+    def parte(t):
+        if t.startswith("prefix+"):
+            return f"{parte(prefijo)} ▸ {parte(t[len('prefix+'):])}"
+        trozos = []
+        for p in t.split("+"):
+            if ".." in p:
+                trozos.append(p.replace("..", "…"))
+            else:
+                trozos.append(TECLAS.get(p, p.upper() if len(p) == 1 else p))
+        return "+".join(trozos)
+    return parte(tecla)
+
+
+def main() -> None:
+    try:
+        cfg = tomllib.loads(config_path().read_text())
+    except (OSError, tomllib.TOMLDecodeError):
+        cfg = {}
+    keys = {**defaults(), **cfg.get("keys", {})}
+    prefijo = keys.get("prefix", "ctrl+b")
+    B, D, A, R = "\033[1m", "\033[2m", "\033[38;5;173m", "\033[0m"
+
+    print(f"\n  {B}herdr · atajos{R}   {D}prefijo:{R} {A}{bonito(prefijo, prefijo)}{R}  {D}(pulsa y suelta, luego la tecla){R}\n")
+    for titulo, acciones in GRUPOS:
+        print(f"  {A}{B}{titulo}{R}")
+        for accion, desc in acciones:
+            valor = keys.get(accion)
+            if not valor:
+                continue
+            valores = valor if isinstance(valor, list) else [valor]
+            atajos = f"  {D}o{R}  ".join(bonito(v, prefijo) for v in valores)
+            print(f"    {desc:<34} {atajos}")
+        print()
+    comandos = [c for c in cfg.get("keys", {}).get("command", []) if c.get("key")]
+    if comandos:
+        print(f"  {A}{B}Comandos propios{R}")
+        for c in comandos:
+            print(f"    {c.get('command', '')[:34]:<34} {bonito(c['key'], prefijo)}")
+        print()
+    print(f"  {D}Ratón: clic en spaces, pestañas, paneles y agentes; arrastrar bordes; clic derecho = menú.{R}")
+    print(f"  {D}Fuente: {config_path()}{R}\n")
+    if "--esperar" in sys.argv:
+        try:
+            input(f"  {D}Enter para cerrar…{R}")
+        except (EOFError, KeyboardInterrupt):
+            pass
+
+
+if __name__ == "__main__":
+    main()
