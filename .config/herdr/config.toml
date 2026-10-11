@@ -114,3 +114,9 @@ key = "prefix+shift+m"
 type = "plugin_action"
 command = "ray.plugin-manager.open"
 description = "Gestor de plugins"
+
+[[keys.command]]
+key = "alt+r"
+type = "plugin_action"
+command = "persiyanov.reviewr.toggle"
+description = "Revisar el diff del agente (reviewr)"
