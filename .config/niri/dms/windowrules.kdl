@@ -373,3 +373,10 @@ window-rule {
     match app-id="^org.arqueon.dankmail$"
     default-column-width { proportion 0.7; }
 }
+
+// @id=wr_1791489296289878949 @name=chrome-tasks.arqueonautis.org__-Default
+window-rule {
+    match app-id="^chrome-tasks.arqueonautis.org__-Default$"
+    open-on-workspace "chat"
+    default-column-width { proportion 0.65; }
+}
