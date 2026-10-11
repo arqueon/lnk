@@ -46,6 +46,7 @@
 .config/niri/scripts/launch-fastfetch-popup.sh
 .config/niri/scripts/launch-ferdium-menu.sh
 .config/niri/scripts/launch-google-apps-menu.sh
+.config/niri/scripts/launch-herdr-atajos.sh
 .config/niri/scripts/launch-hermes-one.sh
 .config/niri/scripts/launch-hermes.sh
 .config/niri/scripts/launch-homelab-menu.sh
