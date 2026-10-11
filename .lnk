@@ -1,6 +1,6 @@
 .bashrc
-.bin/lnk_pull.sh
 .bin/lnk_pull_force.sh
+.bin/lnk_pull.sh
 .bin/lnk_push.sh
 .bin/pick_color.sh
 .config/alacritty/alacritty.toml
@@ -34,6 +34,7 @@
 .config/niri/environment.kdl
 .config/niri/keybinds.kdl
 .config/niri/layout.kdl
+.config/niri/scripts/alt-space.sh
 .config/niri/scripts/conectar_audio.sh
 .config/niri/scripts/ejecutar_music.sh
 .config/niri/scripts/fastfetch-view.sh
@@ -85,8 +86,8 @@
 .local/bin/nas-btb-unlock
 .local/bin/sdoc-embed-images
 .local/bin/sdoc-open
-.local/bin/variety-favorite-shared
 .local/bin/variety-favorites-bootstrap
+.local/bin/variety-favorite-shared
 .local/share/applications/sdoc.desktop
 .p10k.zsh
 .sdocs/styles.yaml

@@ -57,6 +57,10 @@ binds {
     Mod+Alt+Return { spawn-sh "thunar ~/Downloads/"; }
     Mod+Ctrl+Return hotkey-overlay-title="System Fetch (Fastfetch)" { spawn "~/.config/niri/scripts/launch-fastfetch-popup.sh"; }
     Mod+Alt+Slash hotkey-overlay-title="Atajos de herdr" { spawn "~/.config/niri/scripts/launch-herdr-atajos.sh"; }
+    // Alt+Space: override de dms/binds.kdl (aguanta que DMS lo regenere). En herdr abre su
+    // buscador; en otras ventanas, Spotlight Bar. Spotlight Bar fijo en Mod+Alt+Space.
+    Alt+Space hotkey-overlay-title="herdr: buscador / Spotlight Bar" { spawn "~/.config/niri/scripts/alt-space.sh"; }
+    Mod+Alt+Space hotkey-overlay-title="Spotlight Bar" { spawn "dms" "ipc" "call" "spotlight-bar" "toggle"; }
     Mod+Alt+F1 { spawn "firefox"; }
     Mod+Alt+F3 { spawn "~/.config/niri/scripts/restart-ferdium.sh"; }
     Mod+Alt+F5 { spawn-sh "sdoc library"; }
