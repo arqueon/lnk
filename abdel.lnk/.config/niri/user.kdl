@@ -20,6 +20,6 @@ window-rule {
 
 binds {
     Mod+Alt+Return { spawn-sh "nemo ~/Downloads/"; } // abdel usa nemo, no thunar
-    Mod+Shift+F2 repeat=false hotkey-overlay-title="Apps de Google por cuenta" { spawn "~/.config/niri/scripts/launch-google-apps-menu.sh"; }
+    Mod+Shift+F2 repeat=false hotkey-overlay-title="Apps de Google por cuenta" { spawn "~/.config/lnk/abdel.lnk/.config/niri/scripts/launch-google-apps-menu.sh"; }
     Mod+Shift+F5 hotkey-overlay-title="Sincronizar Palestina (Zettlr / Git)" { spawn "~/.config/niri/scripts/sync-palestina.sh"; }
 }
