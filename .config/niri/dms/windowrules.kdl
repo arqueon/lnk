@@ -380,3 +380,10 @@ window-rule {
     open-on-workspace "chat"
     default-column-width { proportion 0.65; }
 }
+
+// @id=wr_1791825964265340138 @name=chrome-mail.google.com__mail_-Default
+window-rule {
+    match app-id="^chrome-mail.google.com__mail_-Default$" title="^Inbox - arqueonautis@gmail.com - Gmail$"
+    open-on-workspace "chat"
+    default-column-width { proportion 0.65; }
+}
