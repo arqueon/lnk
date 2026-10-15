@@ -10,7 +10,6 @@
 󰑈	Miniflux	https://miniflux.arqueonautis.org	Productividad	Lector RSS minimalista
 󰈦	BentoPDF	https://pdf.arqueonautis.org	Utilidades	Herramientas de manipulación de PDF
 󰕥	LimeSurvey	https://survey.arqueonautis.org	Docencia	Encuestas y recolección de datos
-󰙴	Particify	https://particify.arqueonautis.org	Docencia	Participación interactiva en clases
 󰍡	Claper	https://claper.arqueonautis.org	Docencia	Presentaciones interactivas
 󰏤	Moodle Dev	https://moodle-dev.arqueonautis.org	Docencia	Entorno de desarrollo de microcursos
 󰊫	Atlas de contenidos	http://100.107.89.3:8132/?status=publicada&view=table&row=section&col=categories&sort=title	Docencia	Inventario editorial y relaciones de IA y Aprendizaje
@@ -45,6 +44,7 @@
 󰒋	Catalogo-microcredenciales	https://catalogo-microcredenciales.arqueonautis.org	Servicios	Servicio en catalogo-microcredenciales.arqueonautis.org
 󰒋	Cleanuparr	https://cleanuparr.arqueonautis.org	Servicios	Servicio en cleanuparr.arqueonautis.org
 󰒋	Consola-microcredenciales	https://consola-microcredenciales.arqueonautis.org	Servicios	Servicio en consola-microcredenciales.arqueonautis.org
+󰒋	Hermes-jc	https://hermes-jc.arqueonautis.org	Servicios	Servicio en hermes-jc.arqueonautis.org
 󰒋	Id-microcredenciales	https://id-microcredenciales.arqueonautis.org	Servicios	Servicio en id-microcredenciales.arqueonautis.org
 󰒋	Microcredenciales	https://microcredenciales.arqueonautis.org	Servicios	Servicio en microcredenciales.arqueonautis.org
 󰂚	ntfy Sinope	https://notify.arqueonautis.org	Monitoreo	Servidor de notificaciones push

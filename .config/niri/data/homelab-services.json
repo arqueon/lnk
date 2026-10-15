@@ -110,15 +110,6 @@
       "server": "sinope"
     },
     {
-      "name": "Particify",
-      "url": "https://particify.arqueonautis.org",
-      "category": "Docencia",
-      "desc": "Participación interactiva en clases",
-      "icon": "󰙴",
-      "order": 36,
-      "server": "sinope"
-    },
-    {
       "name": "Claper",
       "url": "https://claper.arqueonautis.org",
       "category": "Docencia",
@@ -425,6 +416,15 @@
       "server": "sinope"
     },
     {
+      "name": "Hermes-jc",
+      "url": "https://hermes-jc.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en hermes-jc.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
       "name": "Id-microcredenciales",
       "url": "https://id-microcredenciales.arqueonautis.org",
       "category": "Servicios",
@@ -625,10 +625,19 @@
       "server": "nas-btb"
     },
     {
+      "name": "Particify (arqueonautis)",
+      "url": "https://particify.arqueonautis.org/",
+      "category": "Docencia",
+      "desc": "Participación en clases; misma instancia que vivo.barbiestesteadoras.org",
+      "icon": "󰙴",
+      "order": 27,
+      "server": "nas-btb"
+    },
+    {
       "name": "Particify BTB",
       "url": "https://vivo.barbiestesteadoras.org/",
       "category": "Docencia",
-      "desc": "Participación interactiva en vivo",
+      "desc": "Participación interactiva en vivo; misma instancia que particify.arqueonautis.org",
       "icon": "󰙴",
       "order": 28,
       "server": "nas-btb"

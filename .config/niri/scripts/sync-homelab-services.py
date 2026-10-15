@@ -102,13 +102,15 @@ SERVICE_METADATA = {
         "server": "sinope",
         "order": 34
     },
+    # Particify: desde 2026-10-14 una sola instancia en nas-btb que responde con los dos dominios.
     "particify.arqueonautis.org": {
-        "name": "Particify",
+        "name": "Particify (arqueonautis)",
         "category": "Docencia",
-        "desc": "Participación interactiva en clases",
+        "desc": "Participación en clases; misma instancia que vivo.barbiestesteadoras.org",
         "icon": "󰙴",
-        "server": "sinope",
-        "order": 36
+        "server": "nas-btb",
+        "order": 27,
+        "url": "https://particify.arqueonautis.org/"
     },
     "claper.arqueonautis.org": {
         "name": "Claper",
@@ -443,10 +445,11 @@ SERVICE_METADATA = {
     "vivo.barbiestesteadoras.org": {
         "name": "Particify BTB",
         "category": "Docencia",
-        "desc": "Participación interactiva en vivo",
+        "desc": "Participación interactiva en vivo; misma instancia que particify.arqueonautis.org",
         "icon": "󰙴",
         "server": "nas-btb",
-        "order": 28
+        "order": 28,
+        "url": "https://vivo.barbiestesteadoras.org/"
     },
     "pdf.barbiestesteadoras.org": {
         "name": "BentoPDF BTB",
