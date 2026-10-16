@@ -94,14 +94,6 @@ SERVICE_METADATA = {
         "server": "sinope",
         "order": 32
     },
-    "survey.arqueonautis.org": {
-        "name": "LimeSurvey",
-        "category": "Docencia",
-        "desc": "Encuestas y recolección de datos",
-        "icon": "󰕥",
-        "server": "sinope",
-        "order": 34
-    },
     # Particify: desde 2026-10-14 una sola instancia en nas-btb que responde con los dos dominios.
     "particify.arqueonautis.org": {
         "name": "Particify (arqueonautis)",
@@ -302,14 +294,6 @@ SERVICE_METADATA = {
         "icon": "󰄨",
         "server": "sinope",
         "order": 81
-    },
-    "coolify.arqueonautis.org": {
-        "name": "Coolify",
-        "category": "Infraestructura",
-        "desc": "Panel de aplicaciones y despliegues",
-        "icon": "󰒋",
-        "server": "sinope",
-        "order": 82
     },
     "adguard.arqueonautis.org": {
         "name": "AdGuard Home",

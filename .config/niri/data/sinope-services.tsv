@@ -9,7 +9,6 @@
 󰈙	Wallabag	https://wallabag.arqueonautis.org	Productividad	Lectura diferida (read-it-later)
 󰑈	Miniflux	https://miniflux.arqueonautis.org	Productividad	Lector RSS minimalista
 󰈦	BentoPDF	https://pdf.arqueonautis.org	Utilidades	Herramientas de manipulación de PDF
-󰕥	LimeSurvey	https://survey.arqueonautis.org	Docencia	Encuestas y recolección de datos
 󰍡	Claper	https://claper.arqueonautis.org	Docencia	Presentaciones interactivas
 󰏤	Moodle Dev	https://moodle-dev.arqueonautis.org	Docencia	Entorno de desarrollo de microcursos
 󰊫	Atlas de contenidos	http://100.107.89.3:8132/?status=publicada&view=table&row=section&col=categories&sort=title	Docencia	Inventario editorial y relaciones de IA y Aprendizaje
@@ -33,11 +32,9 @@
 󰇚	slskd (Soulseek)	https://slskd.arqueonautis.org	Descargas	Cliente Soulseek P2P vía VPS
 󱓞	Uptime Kuma	https://kuma.arqueonautis.org	Monitoreo	Disponibilidad sintética del Homelab
 󰄨	Umami	https://umami.arqueonautis.org/	Monitoreo	Visitas y descargas de los sitios web
-󰒋	Coolify	https://coolify.arqueonautis.org	Infraestructura	Panel de aplicaciones y despliegues
 󰒋	AdGuard Home	https://adguard.arqueonautis.org	Infraestructura	DNS filtrante y control de red
 󰌋	Vaultwarden (Arqueonautis)	https://vault.arqueonautis.org	Seguridad	Gestor de contraseñas personal
 󰦨	n8n Sinope	https://automation.arqueonautis.org	Automatización	Flujos y automatizaciones del servidor
-󰒋	Antidotum	https://antidotum.arqueonautis.org	Servicios	Servicio en antidotum.arqueonautis.org
 󰒋	Btb	https://btb.arqueonautis.org	Servicios	Servicio en btb.arqueonautis.org
 󰒋	Cartera-microcredenciales	https://cartera-microcredenciales.arqueonautis.org	Servicios	Servicio en cartera-microcredenciales.arqueonautis.org
 󰒋	Cartografias-antifascistas	https://cartografias-antifascistas.arqueonautis.org	Servicios	Servicio en cartografias-antifascistas.arqueonautis.org

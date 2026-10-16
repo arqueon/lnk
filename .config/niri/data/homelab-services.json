@@ -101,15 +101,6 @@
       "server": "sinope"
     },
     {
-      "name": "LimeSurvey",
-      "url": "https://survey.arqueonautis.org",
-      "category": "Docencia",
-      "desc": "Encuestas y recolección de datos",
-      "icon": "󰕥",
-      "order": 34,
-      "server": "sinope"
-    },
-    {
       "name": "Claper",
       "url": "https://claper.arqueonautis.org",
       "category": "Docencia",
@@ -317,15 +308,6 @@
       "server": "sinope"
     },
     {
-      "name": "Coolify",
-      "url": "https://coolify.arqueonautis.org",
-      "category": "Infraestructura",
-      "desc": "Panel de aplicaciones y despliegues",
-      "icon": "󰒋",
-      "order": 82,
-      "server": "sinope"
-    },
-    {
       "name": "AdGuard Home",
       "url": "https://adguard.arqueonautis.org",
       "category": "Infraestructura",
@@ -350,15 +332,6 @@
       "desc": "Flujos y automatizaciones del servidor",
       "icon": "󰦨",
       "order": 88,
-      "server": "sinope"
-    },
-    {
-      "name": "Antidotum",
-      "url": "https://antidotum.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en antidotum.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
       "server": "sinope"
     },
     {
