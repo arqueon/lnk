@@ -151,3 +151,9 @@ key = "prefix+shift+r"
 type = "plugin_action"
 command = "tab-smart-rename.rename-now"
 description = "Renombrar esta pestaña con IA"
+
+[[keys.command]]
+key = "alt+b"
+type = "plugin_action"
+command = "zenbu-labs.terminal-browser.open-split"
+description = "Navegador en un panel a la derecha (terminal-browser)"
