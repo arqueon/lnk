@@ -120,3 +120,34 @@ key = "alt+r"
 type = "plugin_action"
 command = "persiyanov.reviewr.toggle"
 description = "Revisar el diff del agente (reviewr)"
+
+# Plugins (añadidos 2026-10-17)
+[[keys.command]]
+key = "alt+d"
+type = "plugin_action"
+command = "herdr-agent-grid.open"
+description = "Tablero de agentes: estado, subagentes y costo"
+
+[[keys.command]]
+key = "alt+l"
+type = "plugin_action"
+command = "herdr-grid.open"
+description = "Editor visual de layout de panes"
+
+[[keys.command]]
+key = "alt+p"
+type = "plugin_action"
+command = "cloudmanic.herdr-plus.projects"
+description = "Proyectos (herdr-plus)"
+
+[[keys.command]]
+key = "alt+q"
+type = "plugin_action"
+command = "cloudmanic.herdr-plus.quick-actions"
+description = "Acciones rápidas (herdr-plus)"
+
+[[keys.command]]
+key = "prefix+shift+r"
+type = "plugin_action"
+command = "tab-smart-rename.rename-now"
+description = "Renombrar esta pestaña con IA"
