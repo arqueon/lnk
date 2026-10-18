@@ -155,7 +155,7 @@ description = "Renombrar esta pestaña con IA"
 [[keys.command]]
 key = "alt+b"
 type = "plugin_action"
-command = "zenbu-labs.terminal-browser.open-split"
+command = "ruben.acciones.terminal-browser"
 description = "Navegador en un panel a la derecha (terminal-browser)"
 
 [[keys.command]]
@@ -165,3 +165,6 @@ command = "ssh -t sinope@sinope ~/.local/bin/collie pair; printf '\\nEnter para 
 description = "QR para vincular un teléfono a Collie (sinope)"
 width = "70%"
 height = "90%"
+
+[experimental]
+kitty_graphics = true
