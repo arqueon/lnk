@@ -157,3 +157,11 @@ key = "alt+b"
 type = "plugin_action"
 command = "zenbu-labs.terminal-browser.open-split"
 description = "Navegador en un panel a la derecha (terminal-browser)"
+
+[[keys.command]]
+key = "prefix+shift+c"
+type = "popup"
+command = "ssh -t sinope@sinope ~/.local/bin/collie pair; printf '\\nEnter para cerrar'; read _"
+description = "QR para vincular un teléfono a Collie (sinope)"
+width = "70%"
+height = "90%"
