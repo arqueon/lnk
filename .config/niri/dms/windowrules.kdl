@@ -226,12 +226,6 @@ window-rule {
     default-column-width { proportion 0.7; }
 }
 
-// @id=wr_1783648825724534484 @name=org.arqueon.dankmail
-window-rule {
-    match app-id="^org.arqueon.dankmail$"
-    open-on-workspace "chat"
-}
-
 // @id=wr_1783736816287518280 @name=thunar
 window-rule {
     match app-id="^thunar$"
@@ -368,12 +362,6 @@ window-rule {
     default-column-width { proportion 0.7; }
 }
 
-// @id=wr_1790724377889658955 @name=org.arqueon.dankmail
-window-rule {
-    match app-id="^org.arqueon.dankmail$"
-    default-column-width { proportion 0.7; }
-}
-
 // @id=wr_1791489296289878949 @name=chrome-tasks.arqueonautis.org__-Default
 window-rule {
     match app-id="^chrome-tasks.arqueonautis.org__-Default$"
@@ -386,4 +374,9 @@ window-rule {
     match app-id="^chrome-mail.google.com__mail_-Default$" title="^Inbox - arqueonautis@gmail.com - Gmail$"
     open-on-workspace "chat"
     default-column-width { proportion 0.65; }
+}
+
+// @id=wr_1792290612627413451 @name=org.arqueon.dankmail
+window-rule {
+    match app-id="^org.arqueon.dankmail$" is-floating=true
 }

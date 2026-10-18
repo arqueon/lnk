@@ -199,6 +199,7 @@ window-rule {
 
 window-rule {
     match app-id=r#"com.github.th_ch.youtube_music"#
+    match app-id=r#"music\.youtube\.com"#
     match app-id=r#"Steam"#
     match app-id=r#"Aonsoku"#
     match app-id=r#"sinope\.tailf70cf8\.ts\.net"#
