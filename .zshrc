@@ -342,6 +342,16 @@ alias big="expac -H M '%m\\t%n' | sort -h | nl"
 alias vpn-udg='sudo systemd-run --unit=vpn-udg --collect openfortivpn'
 alias vpn-udg-off='sudo systemctl stop vpn-udg'
 alias vpn-udg-status='systemctl status vpn-udg --no-pager; ip -brief addr show ppp0 2>/dev/null || echo "sin ppp0"'
+# VPN UdeG de sinope (script /usr/local/bin/udg-vpn; sin límite de tiempo desde 18-oct; apagar con vpn-sinope-off). Ej.: vpn-sinope "revisar oficina"
+vpn-sinope() { ssh -t sinope sudo udg-vpn up "${(qq)${*:-sin motivo}}"; }
+alias vpn-sinope-off='ssh sinope sudo udg-vpn down'
+alias vpn-sinope-status='ssh sinope udg-vpn status'
+
+# Cuentas extra de Claude Code (la de arqueonautis es `claude` a secas, en ~/.claude).
+# CLAUDE.md, settings, skills y agents se comparten por symlink; sesiones e inicio de sesión van aparte.
+# openusage las reporta al hub de sinope con openusage-cuenta@claude_udgN.service.
+alias claude_udg1='CLAUDE_CONFIG_DIR=$HOME/.claude-udg1 claude'
+alias claude_udg2='CLAUDE_CONFIG_DIR=$HOME/.claude-udg2 claude'
 
 # Salida legible y diagnostico.
 alias grep='grep --color=auto'
