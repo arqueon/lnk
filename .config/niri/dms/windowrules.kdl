@@ -380,3 +380,9 @@ window-rule {
 window-rule {
     match app-id="^org.arqueon.dankmail$" is-floating=true
 }
+
+// @id=wr_1792421388682804009 @name=io.github.lgse.Strata
+window-rule {
+    match app-id="^io.github.lgse.Strata$"
+    default-column-width { proportion 0.65; }
+}
