@@ -45,6 +45,7 @@ spawn-sh-at-startup "exec ~/.config/niri/scripts/launch-trilium.sh"
 // ── Binds propios ──
 binds {
     Mod+F1 { spawn "firefox"; }
+    Mod+Shift+Return { spawn "strata"; }
     Mod+Alt+F1 { spawn-sh "~/.config/niri/scripts/run_chrome.sh"; }
     Mod+Shift+F2 repeat=false hotkey-overlay-title="Apps de Google por cuenta" { spawn "~/.config/niri/scripts/launch-google-apps-menu.sh"; }
     Mod+F4 hotkey-overlay-title="Trilium Notes" { spawn "~/.config/niri/scripts/launch-trilium.sh"; }
