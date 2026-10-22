@@ -1,34 +1,26 @@
 #!/bin/bash
 
 WP=${1:?Wallpaper path required}
-GREETER_WALLPAPER="$HOME/.cache/DankMaterialShell/greeter-wallpaper.jpg"
-mkdir -p "$(dirname "$GREETER_WALLPAPER")"
-cp -- "$WP" "$GREETER_WALLPAPER"
-chmod 644 "$GREETER_WALLPAPER"
 
 # =============================================================================
 # BLOQUE ESPECÍFICO POR ENTORNO
 # =============================================================================
 if [[ "${XDG_CURRENT_DESKTOP,,}" == *niri* ]]; then
-    # Generar colores en modo dark de forma SÍNCRONA antes de que DMS
-    # dispare su propio matugen async al hacer wallpaper set.
-    # Así cuando wallpaper set termine, los colores ya están en dark.
-    dms matugen generate --value "$WP" --mode dark
-
-    # En DMS 1.5 podemos usar el comando global para establecer el wallpaper,
-    # lo que soluciona el problema de que al apagarse un monitor y volver a encenderse
-    # se quede sin fondo, ya que 'set' define el wallpaper por defecto para todas las pantallas presentes y futuras.
+    # Dux 2.0 owns both steps: `wallpaper set` stores the path for every present
+    # and future output and regenerates the palette with the user's spec,
+    # scheme, contrast and smart mode. Pre-generating here ran matugen twice and
+    # could contradict smart mode, so the script no longer does it.
     dms ipc call wallpaper set "$WP"
 
-    dms ipc call settings set greeterWallpaperPath "$GREETER_WALLPAPER"
-
-    # DMS puede reemplazar settings.json de forma atómica. Mantener el grupo
-    # del greeter evita que el siguiente logout deje la pantalla sin iniciar.
-    DMS_SETTINGS="$HOME/.config/DankMaterialShell/settings.json"
+    # Dux can replace settings.json atomically. Keeping the greeter group on it
+    # means the next logout still finds a readable config. The greeter takes the
+    # wallpaper from session.json (updated by `wallpaper set`) and grants itself
+    # access with ACLs; Dux 2.0 removed the old `greeterWallpaperPath` setting.
+    DUX_SETTINGS="$HOME/.config/dms/settings.json"
     case " $(id -nG) " in
         *" greeter "*)
-            chgrp greeter "$DMS_SETTINGS" 2>/dev/null || true
-            chmod g+r "$DMS_SETTINGS" 2>/dev/null || true
+            chgrp greeter "$DUX_SETTINGS" 2>/dev/null || true
+            chmod g+r "$DUX_SETTINGS" 2>/dev/null || true
             ;;
     esac
 elif [ "$XDG_CURRENT_DESKTOP" == "qtile" ] || [ "$DESKTOP_SESSION" == "qtile" ]; then
@@ -36,7 +28,7 @@ elif [ "$XDG_CURRENT_DESKTOP" == "qtile" ] || [ "$DESKTOP_SESSION" == "qtile" ];
     qtile cmd-obj -o cmd -f reload_config
 fi
 
-# dms-theme-sync ya observa la firma de colores/ajustes de DMS con autoSync y
+# Dux Theme Sync ya observa la firma de colores/ajustes de Dux con autoSync y
 # agrupa los cambios antes de aplicar. No forzar aquí una segunda pasada: con
 # varias ventanas de Chrome abiertas, dos recargas GTK consecutivas podían dejar
 # el indicador de pestaña activa desactualizado en unas ventanas y no en otras.
@@ -45,13 +37,13 @@ fi
 # BLOQUE DE TEMA DESACTIVADO — ahora lo gestiona el plugin dmsThemeSync.
 # Se conserva comentado como referencia; NO borrar. Reactivar quitando los '#'.
 # =============================================================================
-# # Obtener fuentes, iconos y cursor desde DMS settings.json de forma dinámica
-# DMS_SETTINGS="$HOME/.config/DankMaterialShell/settings.json"
-# if [ -f "$DMS_SETTINGS" ] && command -v jq >/dev/null 2>&1; then
-#     MONO_FONT=$(jq -r '.monoFontFamily // empty' "$DMS_SETTINGS")
-#     PROP_FONT=$(jq -r '.fontFamily // empty' "$DMS_SETTINGS")
-#     ICON_THEME=$(jq -r '.iconTheme // empty' "$DMS_SETTINGS")
-#     CURSOR_THEME=$(jq -r '.cursorSettings.theme // empty' "$DMS_SETTINGS")
+# # Obtener fuentes, iconos y cursor desde los ajustes de Dux de forma dinámica
+# DUX_SETTINGS="$HOME/.config/dms/settings.json"
+# if [ -f "$DUX_SETTINGS" ] && command -v jq >/dev/null 2>&1; then
+#     MONO_FONT=$(jq -r '.monoFontFamily // empty' "$DUX_SETTINGS")
+#     PROP_FONT=$(jq -r '.fontFamily // empty' "$DUX_SETTINGS")
+#     ICON_THEME=$(jq -r '.iconTheme // empty' "$DUX_SETTINGS")
+#     CURSOR_THEME=$(jq -r '.cursorSettings.theme // empty' "$DUX_SETTINGS")
 # fi
 #
 # MONO_FONT=${MONO_FONT:-"FantasqueSansM Nerd Font Mono"}
@@ -97,7 +89,7 @@ fi
 #     <edit mode="assign" name="antialias"><bool>true</bool></edit>
 #   </match>
 #
-#   <!-- DMS Font overrides -->
+#   <!-- Dux Font overrides -->
 #   <alias>
 #     <family>monospace</family>
 #     <prefer>
