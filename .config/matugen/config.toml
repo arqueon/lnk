@@ -3,3 +3,7 @@
 [templates.fuzzel]
 input_path = '~/.config/matugen/templates/fuzzel-colors.ini'
 output_path = '~/.config/fuzzel/colors.ini'
+
+[templates.strata]
+input_path = '~/.config/matugen/templates/strata-theme.toml'
+output_path = '~/.config/strata/themes/matugen.toml'
