@@ -224,7 +224,7 @@ SERVICE_METADATA = {
         "category": "Media Arr",
         "desc": "Gestión automática de música",
         "icon": "󰚗",
-        "server": "sinope",
+        "server": "nas-btb",
         "order": 64
     },
     "bazarr.arqueonautis.org": {
@@ -257,7 +257,7 @@ SERVICE_METADATA = {
         "category": "Media",
         "desc": "Recomendaciones musicales Last.fm para Lidarr",
         "icon": "󰋋",
-        "server": "sinope",
+        "server": "nas-btb",
         "order": 72
     },
     "qbittorrent.arqueonautis.org": {
@@ -309,7 +309,7 @@ SERVICE_METADATA = {
         "category": "Monitoreo",
         "desc": "Visitas y descargas de los sitios web",
         "icon": "󰄨",
-        "server": "sinope",
+        "server": "nas-btb",
         "order": 81
     },
     "adguard.arqueonautis.org": {
@@ -719,7 +719,7 @@ def build_catalogs():
 
     # 2. Agregar o actualizar con Cloudflare Tunnel Ingress (para servicios nuevos como Digipad)
     for host in cf_hostnames:
-        if host in ("arqueonautis.org", "crm.arqueonautis.org", "barbies.arqueonautis.org", "hacker.arqueonautis.org", "formularios.arqueonautis.org"):
+        if host in ("crm.arqueonautis.org", "barbies.arqueonautis.org", "hacker.arqueonautis.org", "formularios.arqueonautis.org") or host in MENU_SKIP:
             # Omitir alias obsoletos o redirigidos
             continue
         
@@ -765,6 +765,75 @@ def build_catalogs():
     return sinope_list, nasbtb_list
 
 
+# ── Menú único (Mod+Ctrl+S, 2026-10-24) ─────────────────────────────────────────
+# Categorías de primer nivel del menú; el host real y el estado viajan aparte.
+MENU_SKIP = {
+    "cleanuparr.arqueonautis.org",   # el ingress apunta a Calibre-Web (:8093); Cleanuparr ya no existe
+    "btb.arqueonautis.org",          # alias que redirige a Grist BTB
+    "www.barbiestesteadoras.org",    # alias del sitio BTB
+}
+MENU_EXTRA = {
+    "sinope.tailf70cf8.ts.net:9696": {"name": "Prowlarr", "category": "Media Arr", "desc": "Indexadores para Scryer y los *arr (solo tailnet)", "icon": "󰍉", "server": "sinope", "order": 63, "url": "https://sinope.tailf70cf8.ts.net:9696/"},
+    "formaciondocente.arqueonautis.org": {"name": "Formación Docente (Moodle)", "category": "Docencia", "desc": "Moodle de pruebas de Formación Docente", "icon": "󰑴", "server": "nas-btb", "order": 26},
+    "digipad.barbiestesteadoras.org": {"name": "Digipad BTB", "category": "Docencia", "desc": "Muros colaborativos de BTB", "icon": "󰽉", "server": "nas-btb", "order": 47},
+    "hermes-ximena.arqueonautis.org": {"name": "Hermes · Ximena", "category": "Agentes", "desc": "WebUI de Hermes de Ximena", "icon": "󰚩", "server": "sinope", "order": 99},
+    "hermes-jc.arqueonautis.org": {"name": "Hermes · Juan Carlos", "category": "Agentes", "desc": "WebUI de Hermes de Juan Carlos", "icon": "󰚩", "server": "sinope", "order": 99},
+}
+SERVICE_METADATA.update({k: v for k, v in MENU_EXTRA.items() if k not in SERVICE_METADATA})
+
+# Detenidos y deshabilitados en sinope desde la migración a Scryer + Weaver (2026-10-20).
+SUSPENDED = {"sonarr.arqueonautis.org", "radarr.arqueonautis.org", "sabnzbd.arqueonautis.org",
+             "seerr.arqueonautis.org", "foreseerr.arqueonautis.org", "profilarr.arqueonautis.org"}
+
+MENU_CATEGORIES = [  # (nombre, icono) en el orden del primer nivel
+    ("Media", "󰎈"), ("Descargas y *arr", "󰇚"), ("Educación", "󰑴"), ("Productividad", "󰏫"),
+    ("Agentes e IA", "󰚩"), ("Hogar y finanzas", "󰋜"), ("Sitios públicos", "󰖟"), ("Administración", "󰒓"),
+]
+OLD_TO_MENU = {
+    "Media": "Media", "Media Arr": "Descargas y *arr", "Descargas": "Descargas y *arr",
+    "Docencia": "Educación", "Productividad": "Productividad", "Utilidades": "Productividad",
+    "Mensajería": "Productividad", "Memoria": "Agentes e IA", "Agentes": "Agentes e IA",
+    "Hogar": "Hogar y finanzas", "Finanzas": "Hogar y finanzas", "Público": "Sitios públicos",
+    "Documentación": "Sitios públicos", "Monitoreo": "Administración", "Infraestructura": "Administración",
+    "Seguridad": "Administración", "Automatización": "Administración",
+}
+MENU_CATEGORY_BY_HOST = {
+    "seerr.arqueonautis.org": "Descargas y *arr", "foreseerr.arqueonautis.org": "Descargas y *arr",
+    "aurral.arqueonautis.org": "Descargas y *arr", "changes.arqueonautis.org": "Productividad",
+    "finanzas.barbiestesteadoras.org": "Sitios públicos", "videostream.arqueonautis.org": "Hogar y finanzas",
+    "actual-mcp.arqueonautis.org": "Agentes e IA", "arqueonautis.org": "Sitios públicos",
+    "cartografias-antifascistas.arqueonautis.org": "Sitios públicos", "cursos-ia.arqueonautis.org": "Educación",
+    "iaeducacion.udgplus.udg.mx": "Educación", "lt.arqueonautis.org": "Educación",
+    "produccion.arqueonautis.org": "Educación", "links.barbiestesteadoras.org": "Sitios públicos",
+    "turn.barbiestesteadoras.org:3478": "Administración", "100.95.27.14:30084": "Administración",
+    "100.95.27.14:31050": "Administración", "hermes-jc.arqueonautis.org": "Agentes e IA",
+}
+MENU_CATEGORY_BY_NAME = {  # para entradas de Kuma sin metadatos
+    "LanguageTool": "Educación", "Videostream": "Hogar y finanzas", "Actual MCP": "Agentes e IA",
+    "Cursos IA": "Educación", "IA Educación UDGplus": "Educación", "Produccion": "Educación",
+    "Cartografias-antifascistas": "Sitios públicos", "Arqueonautis.org": "Sitios públicos",
+    "LinkBreeze": "Sitios públicos", "TURN videollamadas": "Administración",
+    "Grist origen": "Administración", "Kuma testigo": "Administración",
+}
+
+
+def build_menu_catalog(sinope_list, nasbtb_list):
+    """Lista única para el menú: categoría nueva, host real y estado."""
+    out, seen = [], set()
+    for item in sinope_list + nasbtb_list:
+        host_key = item["url"].replace("https://", "").replace("http://", "").split("/")[0].rstrip("/")
+        if host_key in MENU_SKIP or item["url"] in seen:
+            continue
+        seen.add(item["url"])
+        cat = (MENU_CATEGORY_BY_HOST.get(host_key) or MENU_CATEGORY_BY_NAME.get(item["name"])
+               or OLD_TO_MENU.get(item["category"]) or "Productividad")
+        status = "suspendido" if host_key in SUSPENDED else "activo"
+        out.append(dict(item, category=cat, status=status))
+    rank = {c: i for i, (c, _) in enumerate(MENU_CATEGORIES)}
+    out.sort(key=lambda x: (rank.get(x["category"], 99), x["status"] != "activo", x["order"], x["name"].lower()))
+    return out
+
+
 def write_outputs(sinope_list, nasbtb_list):
     # Escribir JSON global
     homelab_data = {
@@ -785,6 +854,14 @@ def write_outputs(sinope_list, nasbtb_list):
         with open(base / "nas-btb-services.tsv", "w", encoding="utf-8") as f:
             for item in nasbtb_list:
                 f.write(f"{item['icon']}\t{item['name']}\t{item['url']}\t{item['category']}\t{item['desc']}\n")
+
+    catalog = build_menu_catalog(sinope_list, nasbtb_list)
+    header = "# icono\tnombre\turl\tcategoría\thost\testado\tdescripción — generado por sync-homelab-services.py\n"
+    for base in [DATA_DIR, LNK_DATA_DIR]:
+        with open(base / "homelab-catalog.tsv", "w", encoding="utf-8") as f:
+            f.write(header)
+            for it in catalog:
+                f.write(f"{it['icon']}\t{it['name']}\t{it['url']}\t{it['category']}\t{it['server']}\t{it['status']}\t{it['desc']}\n")
 
     print(f"✓ Catálogos generados con éxito:")
     print(f"  - Sinope: {len(sinope_list)} servicios registrados")

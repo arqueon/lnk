@@ -1,0 +1,88 @@
+# icono	nombre	url	categoría	host	estado	descripción — generado por sync-homelab-services.py
+󰕼	Jellyfin	https://jellyfin.arqueonautis.org	Media	sinope	activo	Servidor de cine y series
+󰕼	Jellyfin BTB	https://media.barbiestesteadoras.org/	Media	nas-btb	activo	Videoteca de medios de BTB
+󰵂	Immich	https://immich.arqueonautis.org	Media	sinope	activo	Gestor y galería fotográfica
+󰵂	Immich BTB	https://fotos.barbiestesteadoras.org/	Media	nas-btb	activo	Galería y respaldo de fotos BTB
+󰋋	Navidrome	https://navidrome.arqueonautis.org	Media	sinope	activo	Servidor de streaming de música
+󰋼	Calibre-Web	https://libros.arqueonautis.org	Media	sinope	activo	Biblioteca de libros de Gerardo (Calibre)
+󰄛	Scryer	https://scryer.arqueonautis.org	Media	sinope	activo	Películas, series, anime y solicitudes (prueba: sustituye Seerr/Sonarr/Radarr)
+󰍉	Prowlarr	https://sinope.tailf70cf8.ts.net:9696/	Descargas y *arr	sinope	activo	Indexadores para Scryer y los *arr (solo tailnet)
+󰚗	Lidarr	https://lidarr.arqueonautis.org	Descargas y *arr	nas-btb	activo	Gestión automática de música
+󰚗	Bazarr	https://bazarr.arqueonautis.org	Descargas y *arr	sinope	activo	Gestión de subtítulos
+󰚗	Decypharr	https://sinope.tailf70cf8.ts.net:8282/	Descargas y *arr	sinope	activo	Gestor de colas y puente Debrid para *arr
+󰋋	Aurral	https://aurral.arqueonautis.org	Descargas y *arr	nas-btb	activo	Recomendaciones musicales Last.fm para Lidarr
+󰒍	qBittorrent Sinope	https://qbittorrent.arqueonautis.org	Descargas y *arr	sinope	activo	Cliente BitTorrent en Sinope
+󰇚	Weaver	https://sinope.tailf70cf8.ts.net:9090/	Descargas y *arr	sinope	activo	Cliente Usenet de Scryer (solo Tailscale; prueba: sustituye SABnzbd)
+󰇚	slskd (Soulseek)	https://slskd.arqueonautis.org	Descargas y *arr	sinope	activo	Cliente Soulseek P2P vía VPS
+󰄛	Seerr (Overseerr)	https://seerr.arqueonautis.org	Descargas y *arr	sinope	suspendido	Solicitudes y descubrimiento multimedia
+󰄛	Foreseerr	https://foreseerr.arqueonautis.org	Descargas y *arr	sinope	suspendido	Descubrimiento multimedia alternativo
+󰚗	Sonarr	https://sonarr.arqueonautis.org	Descargas y *arr	sinope	suspendido	Gestión automática de series
+󰚗	Radarr	https://radarr.arqueonautis.org	Descargas y *arr	sinope	suspendido	Gestión automática de películas
+󰚗	Profilarr	https://profilarr.arqueonautis.org	Descargas y *arr	sinope	suspendido	Sincronización de perfiles TRaSH
+󰇚	SABnzbd	https://sabnzbd.arqueonautis.org	Descargas y *arr	sinope	suspendido	Cliente de descargas Usenet
+󰽉	Digipad	https://muros.arqueonautis.org	Educación	sinope	activo	Muros y pizarras colaborativas
+󰏤	Moodle BTB	https://cursos.barbiestesteadoras.org/login/index.php	Educación	nas-btb	activo	Plataforma de cursos y talleres
+󰑴	Formación Docente (Moodle)	https://formaciondocente.arqueonautis.org	Educación	nas-btb	activo	Moodle de pruebas de Formación Docente
+󰙴	Particify (arqueonautis)	https://particify.arqueonautis.org/	Educación	nas-btb	activo	Participación en clases; misma instancia que vivo.barbiestesteadoras.org
+󰙴	Particify BTB	https://vivo.barbiestesteadoras.org/	Educación	nas-btb	activo	Participación interactiva en vivo; misma instancia que particify.arqueonautis.org
+󰍡	Claper	https://claper.arqueonautis.org	Educación	sinope	activo	Presentaciones interactivas
+󰏤	Moodle Dev	https://moodle-dev.arqueonautis.org	Educación	sinope	activo	Entorno de desarrollo de microcursos
+󰊫	Atlas de contenidos	http://100.107.89.3:8132/?status=publicada&view=table&row=section&col=categories&sort=title	Educación	sinope	activo	Inventario editorial y relaciones de IA y Aprendizaje
+󰍡	Claper (Abdel)	https://claper.abdelvidrio.org	Educación	nas-btb	activo	Presentaciones interactivas de Abdel; migrado a nas-btb 12-sep-2026
+󰽉	Digipad (Abdel)	https://digipad.abdelvidrio.org	Educación	nas-btb	activo	Muros y pizarras colaborativas de Abdel; migrado a nas-btb 12-sep-2026
+󰽉	Digipad BTB	https://digipad.barbiestesteadoras.org	Educación	nas-btb	activo	Muros colaborativos de BTB
+󰆼	Muestreo BTB	https://muestreo.barbiestesteadoras.org/	Educación	nas-btb	activo	Registro de muestras y análisis
+󰒋	Produccion	https://produccion.arqueonautis.org	Educación	sinope	activo	Servicio en produccion.arqueonautis.org
+󰆼	Tablero Sustancias	https://tablero.analisissustanciaspsicoactivas.org	Educación	sinope	activo	Tablero Shiny de análisis de sustancias
+󰒋	Cursos IA	https://cursos-ia.arqueonautis.org	Educación	sinope	activo	Cursos IA
+󰒋	IA Educación UDGplus	https://iaeducacion.udgplus.udg.mx/	Educación	sinope	activo	IA Educación UDGplus
+󰒋	LanguageTool	https://lt.arqueonautis.org/v2/languages	Educación	sinope	activo	LanguageTool
+󰒋	Nextcloud	https://nextcloud.arqueonautis.org	Productividad	sinope	activo	Archivos, sincronización y oficina
+󰧻	Trilium	https://trilium.arqueonautis.org	Productividad	sinope	activo	Notas personales y académicas (Access; nativos por Tailscale :37840)
+󰆼	Grist BTB	https://grist.barbiestesteadoras.org/	Productividad	nas-btb	activo	Bases de datos colaborativas y tablas
+󰊢	Vikunja Tasks	https://tasks.arqueonautis.org	Productividad	sinope	activo	Gestión de tareas y proyectos
+󰒋	Nextcloud BTB	https://nextcloud.barbiestesteadoras.org/	Productividad	nas-btb	activo	Archivos compartidos y trabajo en equipo
+󰈙	Collabora Online BTB	https://collabora.barbiestesteadoras.org/	Productividad	nas-btb	activo	Edición ofimática en navegador
+󰒱	Ferdium Server	https://ferdium.arqueonautis.org/user/login	Productividad	nas-btb	activo	Servidor de sincronización y panel de Ferdium en nas-btb
+󰊓	Easy!Appointments	https://easyappointments.arqueonautis.org	Productividad	nas-btb	activo	Gestión de citas y reservas en nas-btb
+󰌹	Linkwarden	https://linkwarden.arqueonautis.org	Productividad	sinope	activo	Archivo y guardado de enlaces web
+󰈙	Wallabag	https://wallabag.arqueonautis.org	Productividad	sinope	activo	Lectura diferida (read-it-later)
+󰈦	BentoPDF BTB	https://pdf.barbiestesteadoras.org/	Productividad	nas-btb	activo	Herramientas de documentos PDF
+󰑈	Miniflux	https://miniflux.arqueonautis.org	Productividad	sinope	activo	Lector RSS minimalista
+󰈦	BentoPDF	https://pdf.arqueonautis.org	Productividad	sinope	activo	Herramientas de manipulación de PDF
+󰛐	changedetection.io	https://changes.arqueonautis.org	Productividad	sinope	activo	Vigilancia de cambios en páginas web
+󰒋	Hindsight · API/MCP	http://100.107.89.3:18888/docs	Agentes e IA	sinope	activo	API y MCP por banco (/mcp/<banco>/, con clave de tenant)
+󰑓	Hindsight · UI	http://100.107.89.3:19999/	Agentes e IA	sinope	activo	Memoria de agentes: búsqueda y bancos arq-infra, arq-udgplus, arq-agentes
+󰚩	Hermes Web	https://hermes.arqueonautis.org	Agentes e IA	sinope	activo	Interfaz web de Hermes Agent
+󰚩	Hermes · Juan Carlos	https://hermes-jc.arqueonautis.org	Agentes e IA	sinope	activo	WebUI de Hermes de Juan Carlos
+󰚩	Hermes · Ximena	https://hermes-ximena.arqueonautis.org	Agentes e IA	sinope	activo	WebUI de Hermes de Ximena
+󰒋	Actual MCP	https://actual-mcp.arqueonautis.org/	Agentes e IA	sinope	activo	Actual MCP
+󰄛	Mealie	https://mealie.arqueonautis.org	Hogar y finanzas	sinope	activo	Gestión de recetas y planificador de menú
+󰄲	Actual Budget	https://actual.arqueonautis.org	Hogar y finanzas	sinope	activo	Presupuesto personal basado en sobres
+󰟀	Home Assistant	https://ha.arqueonautis.org	Hogar y finanzas	sinope	activo	Automatización y control del hogar
+󰒋	Videostream	https://videostream.arqueonautis.org	Hogar y finanzas	sinope	activo	Videostream
+󰖟	Barbies Testeadoras Web	https://barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Sitio web principal BTB
+󰖟	Barbie Hacker	https://hacker.barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Portal de divulgación y guías BTB
+󰕥	Formularios BTB	https://formularios.barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Formularios de registro e ingreso
+󰄲	Portal Financiero BTB	https://finanzas.barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Gestión financiera institucional
+󰖟	Transparencia BTB	https://transparencia.barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Información pública y rendición de cuentas
+󰈙	Documentación BTB	https://docs.barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Guías y base de conocimiento
+󰈙	Ficha BTB	https://ficha.barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Fichas técnicas y registro
+󰈙	Informes BTB	https://informes.barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Informes de actividades y resultados
+󰒋	Cartografias-antifascistas	https://cartografias-antifascistas.arqueonautis.org	Sitios públicos	sinope	activo	Servicio en cartografias-antifascistas.arqueonautis.org
+󰒋	Arqueonautis.org	https://arqueonautis.org	Sitios públicos	sinope	activo	Arqueonautis.org
+󰒋	LinkBreeze	https://links.barbiestesteadoras.org	Sitios públicos	nas-btb	activo	NAS BTB · LinkBreeze
+󰌋	Vaultwarden BTB	https://vault.barbiestesteadoras.org/	Administración	nas-btb	activo	Gestor de contraseñas de organización
+󰦨	n8n BTB	https://automatizaciones.barbiestesteadoras.org/	Administración	nas-btb	activo	Automatizaciones e integraciones BTB
+󰂚	ntfy BTB	https://notify.barbiestesteadoras.org/	Administración	nas-btb	activo	Notificaciones centinela de NAS-BTB
+󰒋	TrueNAS SCALE UI	https://100.95.27.14/	Administración	nas-btb	activo	Panel de administración TrueNAS (Tailscale)
+󱓞	Uptime Kuma	https://kuma.arqueonautis.org	Administración	sinope	activo	Disponibilidad sintética del Homelab
+󰄨	Umami	https://umami.arqueonautis.org/	Administración	nas-btb	activo	Visitas y descargas de los sitios web
+󰒋	TURN videollamadas	http://turn.barbiestesteadoras.org:3478	Administración	nas-btb	activo	TURN de Nextcloud Talk (coturn en anytype-vps)
+󰒋	AdGuard Home	https://adguard.arqueonautis.org	Administración	sinope	activo	DNS filtrante y control de red
+󰌋	Vaultwarden (Arqueonautis)	https://vault.arqueonautis.org	Administración	sinope	activo	Gestor de contraseñas personal
+󰦨	n8n Sinope	https://automation.arqueonautis.org	Administración	sinope	activo	Flujos y automatizaciones del servidor
+󰂚	ntfy Sinope	https://notify.arqueonautis.org	Administración	sinope	activo	Servidor de notificaciones push
+󰒋	Nextcloud AIO Panel	https://aio.arqueonautis.org	Administración	sinope	activo	Panel de administración Nextcloud AIO
+󰒋	Grist origen	http://100.95.27.14:30084/status	Administración	nas-btb	activo	NAS BTB · Grist origen
+󰒋	Kuma testigo	http://100.95.27.14:31050/	Administración	nas-btb	activo	NAS BTB · Kuma testigo

@@ -27,6 +27,7 @@
 .config/niri/config.kdl
 .config/niri/data/ai-apps.tsv
 .config/niri/data/homelab-services.json
+.config/niri/data/homelab-catalog.tsv
 .config/niri/data/nas-btb-services.tsv
 .config/niri/data/sinope-services.tsv
 .config/niri/dms/binds.kdl

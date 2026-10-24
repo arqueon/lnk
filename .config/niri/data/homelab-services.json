@@ -227,12 +227,12 @@
       "server": "sinope"
     },
     {
-      "name": "Lidarr",
-      "url": "https://lidarr.arqueonautis.org",
+      "name": "Prowlarr",
+      "url": "https://sinope.tailf70cf8.ts.net:9696/",
       "category": "Media Arr",
-      "desc": "Gestión automática de música",
-      "icon": "󰚗",
-      "order": 64,
+      "desc": "Indexadores para Scryer y los *arr (solo tailnet)",
+      "icon": "󰍉",
+      "order": 63,
       "server": "sinope"
     },
     {
@@ -260,15 +260,6 @@
       "desc": "Gestor de colas y puente Debrid para *arr",
       "icon": "󰚗",
       "order": 69,
-      "server": "sinope"
-    },
-    {
-      "name": "Aurral",
-      "url": "https://aurral.arqueonautis.org",
-      "category": "Media",
-      "desc": "Recomendaciones musicales Last.fm para Lidarr",
-      "icon": "󰋋",
-      "order": 72,
       "server": "sinope"
     },
     {
@@ -317,15 +308,6 @@
       "server": "sinope"
     },
     {
-      "name": "Umami",
-      "url": "https://umami.arqueonautis.org/",
-      "category": "Monitoreo",
-      "desc": "Visitas y descargas de los sitios web",
-      "icon": "󰄨",
-      "order": 81,
-      "server": "sinope"
-    },
-    {
       "name": "AdGuard Home",
       "url": "https://adguard.arqueonautis.org",
       "category": "Infraestructura",
@@ -353,37 +335,10 @@
       "server": "sinope"
     },
     {
-      "name": "Btb",
-      "url": "https://btb.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en btb.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
       "name": "Cartografias-antifascistas",
       "url": "https://cartografias-antifascistas.arqueonautis.org",
       "category": "Servicios",
       "desc": "Servicio en cartografias-antifascistas.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
-      "name": "Cleanuparr",
-      "url": "https://cleanuparr.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en cleanuparr.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
-      "name": "Hermes-jc",
-      "url": "https://hermes-jc.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en hermes-jc.arqueonautis.org",
       "icon": "󰒋",
       "order": 90,
       "server": "sinope"
@@ -431,6 +386,24 @@
       "desc": "Interfaz web de Hermes Agent",
       "icon": "󰚩",
       "order": 98,
+      "server": "sinope"
+    },
+    {
+      "name": "Hermes · Juan Carlos",
+      "url": "https://hermes-jc.arqueonautis.org",
+      "category": "Agentes",
+      "desc": "WebUI de Hermes de Juan Carlos",
+      "icon": "󰚩",
+      "order": 99,
+      "server": "sinope"
+    },
+    {
+      "name": "Hermes · Ximena",
+      "url": "https://hermes-ximena.arqueonautis.org",
+      "category": "Agentes",
+      "desc": "WebUI de Hermes de Ximena",
+      "icon": "󰚩",
+      "order": 99,
       "server": "sinope"
     },
     {
@@ -571,6 +544,15 @@
       "server": "nas-btb"
     },
     {
+      "name": "Formación Docente (Moodle)",
+      "url": "https://formaciondocente.arqueonautis.org",
+      "category": "Docencia",
+      "desc": "Moodle de pruebas de Formación Docente",
+      "icon": "󰑴",
+      "order": 26,
+      "server": "nas-btb"
+    },
+    {
       "name": "Particify (arqueonautis)",
       "url": "https://particify.arqueonautis.org/",
       "category": "Docencia",
@@ -643,6 +625,15 @@
       "server": "nas-btb"
     },
     {
+      "name": "Digipad BTB",
+      "url": "https://digipad.barbiestesteadoras.org",
+      "category": "Docencia",
+      "desc": "Muros colaborativos de BTB",
+      "icon": "󰽉",
+      "order": 47,
+      "server": "nas-btb"
+    },
+    {
       "name": "Jellyfin BTB",
       "url": "https://media.barbiestesteadoras.org/",
       "category": "Media",
@@ -670,6 +661,15 @@
       "server": "nas-btb"
     },
     {
+      "name": "Lidarr",
+      "url": "https://lidarr.arqueonautis.org",
+      "category": "Media Arr",
+      "desc": "Gestión automática de música",
+      "icon": "󰚗",
+      "order": 64,
+      "server": "nas-btb"
+    },
+    {
       "name": "Portal Financiero BTB",
       "url": "https://finanzas.barbiestesteadoras.org/",
       "category": "Finanzas",
@@ -685,6 +685,15 @@
       "desc": "Información pública y rendición de cuentas",
       "icon": "󰖟",
       "order": 70,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Aurral",
+      "url": "https://aurral.arqueonautis.org",
+      "category": "Media",
+      "desc": "Recomendaciones musicales Last.fm para Lidarr",
+      "icon": "󰋋",
+      "order": 72,
       "server": "nas-btb"
     },
     {
@@ -730,6 +739,15 @@
       "desc": "Panel de administración TrueNAS (Tailscale)",
       "icon": "󰒋",
       "order": 80,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.arqueonautis.org/",
+      "category": "Monitoreo",
+      "desc": "Visitas y descargas de los sitios web",
+      "icon": "󰄨",
+      "order": 81,
       "server": "nas-btb"
     },
     {
