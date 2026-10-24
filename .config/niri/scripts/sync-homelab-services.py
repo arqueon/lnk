@@ -179,6 +179,14 @@ SERVICE_METADATA = {
         "server": "sinope",
         "order": 54
     },
+    "scryer.arqueonautis.org": {
+        "name": "Scryer",
+        "category": "Media",
+        "desc": "Películas, series, anime y solicitudes (prueba: sustituye Seerr/Sonarr/Radarr)",
+        "icon": "󰄛",
+        "server": "sinope",
+        "order": 55
+    },
     "seerr.arqueonautis.org": {
         "name": "Seerr (Overseerr)",
         "category": "Media",
@@ -259,6 +267,15 @@ SERVICE_METADATA = {
         "icon": "󰒍",
         "server": "sinope",
         "order": 75
+    },
+    "sinope.tailf70cf8.ts.net:9090": {
+        "name": "Weaver",
+        "url": "https://sinope.tailf70cf8.ts.net:9090/",
+        "category": "Descargas",
+        "desc": "Cliente Usenet de Scryer (solo Tailscale; prueba: sustituye SABnzbd)",
+        "icon": "󰇚",
+        "server": "sinope",
+        "order": 76
     },
     "sabnzbd.arqueonautis.org": {
         "name": "SABnzbd",

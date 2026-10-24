@@ -18,6 +18,7 @@
 󰵂	Immich	https://immich.arqueonautis.org	Media	Gestor y galería fotográfica
 󰋋	Navidrome	https://navidrome.arqueonautis.org	Media	Servidor de streaming de música
 󰋼	Calibre-Web	https://libros.arqueonautis.org	Media	Biblioteca de libros de Gerardo (Calibre)
+󰄛	Scryer	https://scryer.arqueonautis.org	Media	Películas, series, anime y solicitudes (prueba: sustituye Seerr/Sonarr/Radarr)
 󰄛	Seerr (Overseerr)	https://seerr.arqueonautis.org	Media	Solicitudes y descubrimiento multimedia
 󰄛	Foreseerr	https://foreseerr.arqueonautis.org	Media	Descubrimiento multimedia alternativo
 󰚗	Sonarr	https://sonarr.arqueonautis.org	Media Arr	Gestión automática de series
@@ -28,6 +29,7 @@
 󰚗	Decypharr	https://sinope.tailf70cf8.ts.net:8282/	Media Arr	Gestor de colas y puente Debrid para *arr
 󰋋	Aurral	https://aurral.arqueonautis.org	Media	Recomendaciones musicales Last.fm para Lidarr
 󰒍	qBittorrent Sinope	https://qbittorrent.arqueonautis.org	Descargas	Cliente BitTorrent en Sinope
+󰇚	Weaver	https://sinope.tailf70cf8.ts.net:9090/	Descargas	Cliente Usenet de Scryer (solo Tailscale; prueba: sustituye SABnzbd)
 󰇚	SABnzbd	https://sabnzbd.arqueonautis.org	Descargas	Cliente de descargas Usenet
 󰇚	slskd (Soulseek)	https://slskd.arqueonautis.org	Descargas	Cliente Soulseek P2P vía VPS
 󱓞	Uptime Kuma	https://kuma.arqueonautis.org	Monitoreo	Disponibilidad sintética del Homelab
@@ -36,14 +38,9 @@
 󰌋	Vaultwarden (Arqueonautis)	https://vault.arqueonautis.org	Seguridad	Gestor de contraseñas personal
 󰦨	n8n Sinope	https://automation.arqueonautis.org	Automatización	Flujos y automatizaciones del servidor
 󰒋	Btb	https://btb.arqueonautis.org	Servicios	Servicio en btb.arqueonautis.org
-󰒋	Cartera-microcredenciales	https://cartera-microcredenciales.arqueonautis.org	Servicios	Servicio en cartera-microcredenciales.arqueonautis.org
 󰒋	Cartografias-antifascistas	https://cartografias-antifascistas.arqueonautis.org	Servicios	Servicio en cartografias-antifascistas.arqueonautis.org
-󰒋	Catalogo-microcredenciales	https://catalogo-microcredenciales.arqueonautis.org	Servicios	Servicio en catalogo-microcredenciales.arqueonautis.org
 󰒋	Cleanuparr	https://cleanuparr.arqueonautis.org	Servicios	Servicio en cleanuparr.arqueonautis.org
-󰒋	Consola-microcredenciales	https://consola-microcredenciales.arqueonautis.org	Servicios	Servicio en consola-microcredenciales.arqueonautis.org
 󰒋	Hermes-jc	https://hermes-jc.arqueonautis.org	Servicios	Servicio en hermes-jc.arqueonautis.org
-󰒋	Id-microcredenciales	https://id-microcredenciales.arqueonautis.org	Servicios	Servicio en id-microcredenciales.arqueonautis.org
-󰒋	Microcredenciales	https://microcredenciales.arqueonautis.org	Servicios	Servicio en microcredenciales.arqueonautis.org
 󰂚	ntfy Sinope	https://notify.arqueonautis.org	Monitoreo	Servidor de notificaciones push
 󰒋	Produccion	https://produccion.arqueonautis.org	Servicios	Servicio en produccion.arqueonautis.org
 󰛐	changedetection.io	https://changes.arqueonautis.org	Monitoreo	Vigilancia de cambios en páginas web

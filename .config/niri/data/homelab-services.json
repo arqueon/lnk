@@ -182,6 +182,15 @@
       "server": "sinope"
     },
     {
+      "name": "Scryer",
+      "url": "https://scryer.arqueonautis.org",
+      "category": "Media",
+      "desc": "Películas, series, anime y solicitudes (prueba: sustituye Seerr/Sonarr/Radarr)",
+      "icon": "󰄛",
+      "order": 55,
+      "server": "sinope"
+    },
+    {
       "name": "Seerr (Overseerr)",
       "url": "https://seerr.arqueonautis.org",
       "category": "Media",
@@ -272,6 +281,15 @@
       "server": "sinope"
     },
     {
+      "name": "Weaver",
+      "url": "https://sinope.tailf70cf8.ts.net:9090/",
+      "category": "Descargas",
+      "desc": "Cliente Usenet de Scryer (solo Tailscale; prueba: sustituye SABnzbd)",
+      "icon": "󰇚",
+      "order": 76,
+      "server": "sinope"
+    },
+    {
       "name": "SABnzbd",
       "url": "https://sabnzbd.arqueonautis.org",
       "category": "Descargas",
@@ -344,28 +362,10 @@
       "server": "sinope"
     },
     {
-      "name": "Cartera-microcredenciales",
-      "url": "https://cartera-microcredenciales.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en cartera-microcredenciales.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
       "name": "Cartografias-antifascistas",
       "url": "https://cartografias-antifascistas.arqueonautis.org",
       "category": "Servicios",
       "desc": "Servicio en cartografias-antifascistas.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
-      "name": "Catalogo-microcredenciales",
-      "url": "https://catalogo-microcredenciales.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en catalogo-microcredenciales.arqueonautis.org",
       "icon": "󰒋",
       "order": 90,
       "server": "sinope"
@@ -380,37 +380,10 @@
       "server": "sinope"
     },
     {
-      "name": "Consola-microcredenciales",
-      "url": "https://consola-microcredenciales.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en consola-microcredenciales.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
       "name": "Hermes-jc",
       "url": "https://hermes-jc.arqueonautis.org",
       "category": "Servicios",
       "desc": "Servicio en hermes-jc.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
-      "name": "Id-microcredenciales",
-      "url": "https://id-microcredenciales.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en id-microcredenciales.arqueonautis.org",
-      "icon": "󰒋",
-      "order": 90,
-      "server": "sinope"
-    },
-    {
-      "name": "Microcredenciales",
-      "url": "https://microcredenciales.arqueonautis.org",
-      "category": "Servicios",
-      "desc": "Servicio en microcredenciales.arqueonautis.org",
       "icon": "󰒋",
       "order": 90,
       "server": "sinope"

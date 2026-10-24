@@ -21,6 +21,8 @@ tab_bar_right_separator = " · "
 
 [ui.sidebar.agents.rows_by_agent]        # en Claude, mostrar en qué está trabajando
 claude = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
+# en pi, la etiqueta de subagentes activos que publica pi-subagents (2026-10-22)
+pi = [["state_icon", "machine", "workspace", "tab"], ["agent", "state_text"]]
 
 [keys]
 # Prefijo: ctrl+space (antes ctrl+b). Lo poco frecuente sigue tras el prefijo;

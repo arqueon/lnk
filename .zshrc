@@ -523,3 +523,6 @@ if (( _zsh_has_tty )) && [[ -o zle ]] && [[ -r /usr/share/zsh/plugins/zsh-syntax
 fi
 
 unset _zsh_has_tty
+
+# pi con Hermes de sinope como modelo (túnel hermes-api-tunnel.service, proveedor «hermes» en ~/.pi/agent/models.json; 2026-10-21)
+alias pi-hermes='pi --provider hermes --model hermes-agent --no-tools --no-context-files --system-prompt "Te están usando desde pi en casa-cachyos. Tus herramientas se ejecutan en sinope, no en este equipo; para tocar casa usa SSH si hace falta."'

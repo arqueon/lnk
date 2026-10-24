@@ -1,4 +1,4 @@
-// DMS Window Rules - Managed by DankMaterialShell
+// DMS Window Rules - Managed by Dux Shell
 // Do not edit manually - changes may be overwritten
 
 // @id=wr_1771867449453995758 @name=Zotero
@@ -296,7 +296,7 @@ window-rule {
 
 // @id=dms-floating-windows @name=DMS Floating Windows
 window-rule {
-    match app-id="^com.danklinux.dms$"
+    match app-id="^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$"
     open-floating true
 }
 
@@ -376,13 +376,35 @@ window-rule {
     default-column-width { proportion 0.65; }
 }
 
-// @id=wr_1792290612627413451 @name=org.arqueon.dankmail
-window-rule {
-    match app-id="^org.arqueon.dankmail$" is-floating=true
-}
-
 // @id=wr_1792421388682804009 @name=io.github.lgse.Strata
 window-rule {
     match app-id="^io.github.lgse.Strata$"
+    open-on-workspace "files"
     default-column-width { proportion 0.65; }
+}
+
+// @id=wr_1792637874692148633 @name=org.arqueon.dankmail
+window-rule {
+    match app-id="^org.arqueon.dankmail$" title="^Dank Mail$"
+    open-on-workspace "chat"
+    default-column-width { proportion 0.7; }
+}
+
+// @id=wr_1792638387628098212 @name=chrome-classroom.google.com__-Default
+window-rule {
+    match app-id="^chrome-classroom.google.com__-Default$"
+    default-column-width { proportion 0.65; }
+}
+
+// @id=wr_1792868817018041869 @name=java-lang-Thread
+window-rule {
+    match app-id="^java-lang-Thread$"
+    open-on-workspace "media"
+    default-column-width { proportion 0.4; }
+}
+
+// @id=dms-window-opaque @name=DMS Window Opaque
+window-rule {
+    match app-id="^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$"
+    opacity 1.00
 }
