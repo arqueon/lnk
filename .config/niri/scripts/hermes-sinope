@@ -37,6 +37,8 @@ case "${profile}" in
     open_webui_port=18080
     tui_session="hermes-tui"
     published_webui_url="https://hermes.arqueonautis.org/"
+    # Messaging daemons that live next to the gateway (SimpleX since 2026-10-23).
+    messaging_units="simplex-chat.service"
     ;;
   hermes-abdel)
     display_name="Hermina · Abdel"
@@ -49,6 +51,7 @@ case "${profile}" in
     open_webui_port=18081
     tui_session="hermina-tui"
     published_webui_url=""
+    messaging_units=""
     ;;
 esac
 
@@ -66,16 +69,22 @@ Uso: hermes-sinope [PERFIL] COMANDO
 Perfil detectado: ${display_name} (${remote_user}@sinope)
 Perfiles: hermes | hermes-abdel (alias: ruben | abdel | hermina)
 
-Interfaces:
-  webui       WebUI existente
-  dashboard   Dashboard oficial
-  desktop     Cliente Desktop oficial
-  hermes-one  Hermes One (Desktop comunitario, perfil aislado)
+Interfaces de uso diario (siempre activas o locales):
+  webui       WebUI comunitaria (pública tras Cloudflare Access en el perfil hermes)
+  desktop     Cliente Desktop oficial (SSH)
   tui         TUI oficial persistente en tmux
   gate        Hermes Gate para sesiones tmux
+
+Administración bajo demanda (laboratorio, se enciende al abrirla):
+  dashboard   Dashboard oficial: configuración, cron, herramientas
+
+Laboratorio bajo demanda (se encienden al abrirlas; stop-labs las apaga):
   workspace   Hermes Workspace
   pwa         Hermes UI PWA
-  open-webui  Open WebUI
+  open-webui  Open WebUI (pesada, ~2 GB)
+  hermes-one  Hermes One (Desktop comunitario, perfil aislado)
+
+En el teléfono el chat va por SimpleX (perfil hermes) o Discord (hermes-abdel); no pasa por este menú.
 
 Administración:
   profile     Muestra la identidad detectada
@@ -290,16 +299,27 @@ prepare_desktop_connection() {
   mv "${temp_file}" "${registry_file}"
 }
 
-desktop() {
-  local desktop_binary="${HOME}/.hermes/hermes-agent/apps/desktop/release/linux-unpacked/Hermes"
+find_desktop_binary() {
+  local candidate
   # Verify the official package resources: the same command name is also used
   # by an unrelated speech-to-text application.
   if [[ -x /usr/bin/hermes-desktop && -f /usr/lib/hermes-agent-desktop/app.asar ]]; then
-    desktop_binary="/usr/bin/hermes-desktop"
-  elif [[ ! -x "${desktop_binary}" ]]; then
-    desktop_binary="${HOME}/.local/share/hermes-desktop-sinope/linux-unpacked/Hermes"
+    printf '/usr/bin/hermes-desktop\n'
+    return 0
   fi
-  if [[ ! -x "${desktop_binary}" ]]; then
+  for candidate in "${HOME}/.hermes/hermes-agent/apps/desktop/release/linux-unpacked/Hermes" \
+    "${HOME}/.local/share/hermes-desktop-sinope/linux-unpacked/Hermes"; do
+    if [[ -x "${candidate}" ]]; then
+      printf '%s\n' "${candidate}"
+      return 0
+    fi
+  done
+  return 1
+}
+
+desktop() {
+  local desktop_binary
+  if ! desktop_binary="$(find_desktop_binary)"; then
     printf 'Desktop oficial no está instalado en esta computadora.\n' >&2
     exit 3
   fi
@@ -469,6 +489,9 @@ case "${command}" in
   desktop)
     desktop "$@"
     ;;
+  desktop-available)
+    find_desktop_binary >/dev/null
+    ;;
   hermes-one)
     hermes_one "$@"
     ;;
@@ -504,15 +527,15 @@ case "${command}" in
     ;;
   status)
     printf '%s (%s)\n\n' "${display_name}" "${target}"
-    remote 'for unit in hermes-gateway.service hermes-webui.service hermes-dashboard-lab.service hermes-workspace-lab.service hermes-ui-pwa-lab.service open-webui-hermes-lab.service; do printf "%-38s " "$unit"; systemctl --user is-active "$unit" || true; done'
+    remote "for unit in hermes-gateway.service ${messaging_units} hermes-webui.service hermes-dashboard-lab.service hermes-workspace-lab.service hermes-ui-pwa-lab.service open-webui-hermes-lab.service; do printf '%-38s ' \"\$unit\"; systemctl --user is-active \"\$unit\" || true; done"
     printf '\nTúneles locales:\n'
     for action in webui dashboard workspace pwa open-webui; do
       unit="$(tunnel_unit_name "${action}")"
       printf '%-55s %s\n' "${unit}" "$(systemctl --user is-active "${unit}" 2>/dev/null || true)"
     done
     printf '\nClientes locales:\n'
-    if [[ -x "${HOME}/.hermes/hermes-agent/apps/desktop/release/linux-unpacked/Hermes" || -x "${HOME}/.local/share/hermes-desktop-sinope/linux-unpacked/Hermes" ]]; then
-      printf '%-38s %s\n' "Desktop oficial" instalado
+    if desktop_binary="$(find_desktop_binary)"; then
+      printf '%-38s %s\n' "Desktop oficial" "instalado (${desktop_binary})"
     else
       printf '%-38s %s\n' "Desktop oficial" "no instalado"
     fi

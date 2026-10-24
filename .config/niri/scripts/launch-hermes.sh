@@ -47,12 +47,20 @@ if [[ "${1:-}" =~ ^https?:// ]]; then
   open_url "$1"
 fi
 
-choices=$'WebUI comunitaria\twebui\nDashboard oficial\tdashboard\nDesktop oficial\tdesktop'
+# Daily interfaces first; on-demand labs are labelled so it is clear that
+# opening one starts a service on sinope ("Detener laboratorios" stops them).
+choices=$'WebUI comunitaria\twebui'
+if "${hermes_cli}" "${profile}" desktop-available 2>/dev/null; then
+  choices+=$'\nDesktop oficial\tdesktop'
+fi
+choices+=$'\nTUI oficial persistente (tmux)\ttui\nHermes Gate (sesiones tmux)\tgate'
+choices+=$'\nDashboard oficial · administración (bajo demanda)\tdashboard'
+choices+=$'\nLaboratorio · Hermes Workspace\tworkspace\nLaboratorio · Hermes UI PWA\tpwa\nLaboratorio · Open WebUI (pesada)\topen-webui'
 if [[ -x "${script_dir}/launch-hermes-one.sh" ]] \
   && "${script_dir}/launch-hermes-one.sh" --available; then
-  choices+=$'\nHermes One (comunitaria)\thermes-one'
+  choices+=$'\nLaboratorio · Hermes One (comunitaria)\thermes-one'
 fi
-choices+=$'\nTUI oficial persistente (tmux)\ttui\nHermes Gate (sesiones tmux)\tgate\nHermes Workspace\tworkspace\nHermes UI PWA\tpwa\nOpen WebUI (pesada)\topen-webui\nEstado de interfaces\tstatus\nPreparar tmux remoto (UTF-8 + portapapeles)\ttmux-setup\nDetener laboratorios y túneles\tstop-labs'
+choices+=$'\nEstado de interfaces\tstatus\nPreparar tmux remoto (UTF-8 + portapapeles)\ttmux-setup\nDetener laboratorios y túneles\tstop-labs'
 
 select_choice() {
   local selected="" menu_lines
