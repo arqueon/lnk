@@ -126,9 +126,14 @@ apply_sink_config() {
 if [ "$TARGET" = "local" ] || [ "$TARGET" = "bocinas" ]; then
     cleanup_parasitic_clock
     if ! pactl list sinks short 2>/dev/null | grep -q "$LOCAL_SINK"; then
-        echo "Error: no se encontró el sink local $LOCAL_SINK"
-        notify "Audio" "No se encontraron las bocinas locales" critical dialog-error
-        exit 1
+        # Otros equipos (abdel-home): primera salida ALSA que no sea HDMI ni Bluetooth.
+        LOCAL_SINK=$(pactl list sinks short 2>/dev/null | awk '$2 ~ /^alsa_output\./ && $2 !~ /hdmi/ { print $2; exit }')
+        LOCAL_NAME="Audio local"
+        if [ -z "$LOCAL_SINK" ]; then
+            echo "Error: no se encontró ninguna salida de audio local"
+            notify "Audio" "No se encontraron las bocinas locales" critical dialog-error
+            exit 1
+        fi
     fi
     apply_sink_config "$LOCAL_SINK" "$LOCAL_NAME" "$LOCAL_VOL"
     exit 0
