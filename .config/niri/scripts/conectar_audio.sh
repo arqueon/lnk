@@ -92,19 +92,19 @@ wait_for_card() {
 }
 
 ensure_bluetooth_ready() {
-    if ! bluetoothctl show 2>/dev/null | grep -q "Powered: yes"; then
-        echo "Asegurando Bluetooth activo..."
+    # Nunca hacer «rfkill block»: si el adaptador se reinicia a la vez (el RTL8761BU lo hace al colgarse),
+    # systemd-rfkill guarda el bloqueo y el adaptador vuelve bloqueado. Solo desbloquear. (2026-10-24)
+    rfkill unblock bluetooth >/dev/null 2>&1 || true
+    for ((i = 1; i <= 5; i++)); do
+        bluetoothctl show 2>/dev/null | grep -q "Powered: yes" && return 0
+        echo "Asegurando Bluetooth activo ($i/5)..."
         bluetoothctl power on >/dev/null 2>&1 || true
         sleep 1
-    fi
-    if ! bluetoothctl show 2>/dev/null | grep -q "Powered: yes"; then
-        echo "Reintentando activación mediante rfkill..."
-        rfkill block bluetooth >/dev/null 2>&1 || true
-        sleep 0.5
-        rfkill unblock bluetooth >/dev/null 2>&1 || true
-        sleep 0.5
-        bluetoothctl power on >/dev/null 2>&1 || true
-    fi
+    done
+    # Sigue sin encender: el firmware del adaptador está colgado (kernel: «tx timeout» / «-110»).
+    echo "Error: el adaptador Bluetooth no responde. Reconéctalo o ejecuta: sudo usbreset 0bda:a728"
+    notify "Bluetooth colgado" "El adaptador no responde. Desconecta y reconecta el USB Bluetooth (o: sudo usbreset 0bda:a728)." critical dialog-error
+    exit 1
 }
 
 apply_sink_config() {
