@@ -7,7 +7,7 @@ find_shelly_appimage() {
 
   shelly list appimage --json 2>/dev/null \
     | jq -r '
-        map(select((.DesktopName // "") == "Anytype"))
+        map(select((.DesktopName // "") | startswith("Anytype")))
         | last
         | .Path // empty
       '
