@@ -1,0 +1,16 @@
+# Marcadores SFTP para la acción «Open SFTP bookmark…» de Strata (strata-extras).
+# Formato: etiqueta<TAB>URI. Origen: carpeta «Tailscale (SFTP)» de Krusader en casa (2026-10-24).
+Sinope · Home (100.107.89.3)	sftp://sinope@100.107.89.3/home/sinope	Servidores
+Sinope · Raíz (100.107.89.3)	sftp://sinope@100.107.89.3/	Servidores
+Sinope · Hermes Agent (100.107.89.3)	sftp://hermes@100.107.89.3/home/hermes	Servidores
+NAS BTB · TrueNAS (100.95.27.14)	sftp://abdel@100.95.27.14/	Servidores
+Casa · Rubén (100.99.87.42)	sftp://ruben@100.99.87.42/home/ruben	Mis equipos
+Oficina · Rubén (100.88.105.60)	sftp://ruben@100.88.105.60/home/ruben	Mis equipos
+Laptop · Rubén (100.117.71.46)	sftp://ruben@100.117.71.46/home/ruben	Mis equipos
+Abdel · Home (100.66.134.39)	sftp://abdel@100.66.134.39/home/abdel	Otros equipos
+Abdel · Lite (100.73.162.49)	sftp://abdel@100.73.162.49/home/abdel	Otros equipos
+CachyOS JC · root (100.104.208.98)	sftp://root@100.104.208.98/	Otros equipos
+Negocio Gerardo iMac · root (100.67.244.114)	sftp://root@100.67.244.114/	Otros equipos
+Negocio Gerardo GA-870A-UD3 · root (100.118.154.114)	sftp://root@100.118.154.114/	Otros equipos
+NAS Sinope · root (100.80.22.19)	sftp://root@100.80.22.19/	Servidores
+Anytype VPS · root (100.99.18.41)	sftp://root@100.99.18.41/	Servidores

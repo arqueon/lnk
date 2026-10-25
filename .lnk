@@ -85,3 +85,4 @@
 .p10k.zsh
 .sdocs/styles.yaml
 .zshrc
+.config/strata-extras/sftp-bookmarks.tsv
