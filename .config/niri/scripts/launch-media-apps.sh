@@ -17,6 +17,3 @@ for url in "${urls[@]}"; do
     ~/.config/niri/scripts/run_chrome.sh --app="$url" &
     sleep 0.2
 done
-
-# Aonsoku ya es una aplicación nativa; su binario no está en PATH.
-/opt/Aonsoku/aonsoku &
