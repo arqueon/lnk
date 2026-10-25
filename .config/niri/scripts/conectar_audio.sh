@@ -107,6 +107,14 @@ ensure_bluetooth_ready() {
     exit 1
 }
 
+block_role_switch() {
+    # El RTL8761BU (fw 0xdfc6d922) deja de transmitir ACL al pasar a Peripheral y el A2DP muere
+    # con «LMP Response Timeout». El kernel restablece la política en cada encendido. (2026-10-25)
+    # Ver ~/Projects/utils/bluetooth-rtl8761bu
+    [ -x /usr/local/bin/bt-sin-role-switch ] || return 0
+    sudo -n /usr/local/bin/bt-sin-role-switch >/dev/null 2>&1 || true
+}
+
 apply_sink_config() {
     local sink=$1
     local name=$2
@@ -211,7 +219,8 @@ SINK_NAME=""
 for ((attempt = 1; attempt <= MAX_BT_RETRIES; attempt++)); do
     echo "Intento de conexión $attempt de $MAX_BT_RETRIES a $NAME ($MAC)..."
     ensure_bluetooth_ready
-    
+    block_role_switch
+
     # Intentar conexión directa
     if timeout "$BT_CONNECT_TIMEOUT" bluetoothctl connect "$MAC" >/dev/null 2>&1; then
         # Esperar a que PipeWire cree la tarjeta o sink
