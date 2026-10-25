@@ -169,6 +169,28 @@ fi
 cleanup_parasitic_clock
 ensure_bluetooth_ready
 
+# Primera vez en este equipo (p. ej. abdel-home): emparejar. El dispositivo debe estar en modo de emparejamiento.
+if ! bluetoothctl info "$MAC" 2>/dev/null | grep -q "Paired: yes"; then
+    echo "$NAME no está emparejado en este equipo; buscándolo (ponlo en modo de emparejamiento)..."
+    notify "$NAME" "Emparejando por primera vez: pon el dispositivo en modo de emparejamiento." normal bluetooth
+    timeout 25 bluetoothctl --timeout 20 scan on >/dev/null 2>&1 &
+    SCAN_PID=$!
+    for ((i = 1; i <= 20; i++)); do
+        bluetoothctl devices 2>/dev/null | grep -qi "$MAC" && break
+        sleep 1
+    done
+    if ! timeout 25 bluetoothctl pair "$MAC" >/dev/null 2>&1; then
+        kill "$SCAN_PID" >/dev/null 2>&1 || true
+        bluetoothctl scan off >/dev/null 2>&1 || true
+        echo "Error: no se pudo emparejar $NAME."
+        notify "$NAME" "No se pudo emparejar. ¿Está en modo de emparejamiento y cerca?" critical dialog-error
+        exit 1
+    fi
+    kill "$SCAN_PID" >/dev/null 2>&1 || true
+    bluetoothctl scan off >/dev/null 2>&1 || true
+    echo "$NAME emparejado."
+fi
+
 bluetoothctl trust "$MAC" >/dev/null 2>&1 || true
 
 # Si está en estado fantasma (Connected: yes pero sin audio), forzar desconexión limpia primero
