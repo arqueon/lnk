@@ -137,14 +137,17 @@ esac
 
 SEARCH_ALL="󰍉   Buscar en todo"
 while true; do
-    sel="$({ for entry in "${CATEGORIES[@]}"; do
+    sel="$({ printf '%s\n' "$TAILNET"
+             for entry in "${CATEGORIES[@]}"; do
                  cat_name="${entry%%|*}"; cat_icon="${entry##*|}"
                  printf "%s   %-28s (%s)  ▸\n" "$cat_icon" "$cat_name" "$(count_where 4 "$cat_name")"
              done
              printf "󰒋   %-28s ▸\n" "Hosts"
              printf '%s\n' "$SEARCH_ALL"; } | pick "󰒋 Servicios ❯ " "Elegir categoría, host o «Buscar en todo»…")"
     [[ -z "$sel" ]] && exit 0
-    if [[ "$sel" == "$SEARCH_ALL" ]]; then
+    if [[ "$sel" == "$TAILNET" ]]; then
+        open_url "$TAILNET_URL" activo
+    elif [[ "$sel" == "$SEARCH_ALL" ]]; then
         service_menu "󰍉 Todos ❯ " 0 "" both || continue
     elif [[ "$sel" == *"Hosts "* ]]; then
         hosts_menu || continue
