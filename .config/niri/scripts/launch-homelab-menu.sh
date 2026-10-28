@@ -93,17 +93,14 @@ open_url() {
     fi
 }
 
-# Muestra una lista de servicios y abre el elegido; devuelve 1 si se pidió volver.
-# En la lista de un host, la primera opción abre la página de la tailnet en la sección de ese host.
+# Muestra una lista de servicios y abre el elegido; devuelve 1 si se pidió volver
 service_menu() {
     local prompt="$1" col="$2" val="$3" extra="$4" sel
-    sel="$({ if [[ "$col" == 5 ]]; then printf '%s\n' "$TAILNET"; fi
-             printf '%s\n' "$BACK"; service_lines "$col" "$val" "$extra"; } | pick "$prompt" "Buscar servicio…")"
+    sel="$({ printf '%s\n' "$BACK"; service_lines "$col" "$val" "$extra"; } | pick "$prompt" "Buscar servicio…")"
     # service_lines corre en una subshell: reconstruir los mapas en esta
     service_lines "$col" "$val" "$extra" >/dev/null
     [[ -z "$sel" ]] && exit 0
     [[ "$sel" == "$BACK" ]] && return 1
-    [[ "$sel" == "$TAILNET" ]] && open_url "$TAILNET_URL#$val" activo
     if [[ -n "${URL_MAP[$sel]:-}" ]]; then
         open_url "${URL_MAP[$sel]}" "${STATUS_MAP[$sel]:-activo}"
     elif [[ "$sel" =~ ^https?:// ]]; then
@@ -112,14 +109,16 @@ service_menu() {
     exit 0
 }
 
+# La primera opción abre la página de toda la tailnet, por encima de los hosts.
 hosts_menu() {
     local sel h
     while true; do
-        sel="$({ printf '%s\n' "$BACK"
+        sel="$({ printf '%s\n' "$TAILNET" "$BACK"
                  for h in sinope nas-btb; do
                      printf "󰒋   %-28s (%s)  ▸\n" "$(host_label "$h")" "$(count_where 5 "$h")"
                  done; } | pick "󰒋 Hosts ❯ " "Elegir host…")"
         [[ -z "$sel" ]] && exit 0
+        [[ "$sel" == "$TAILNET" ]] && open_url "$TAILNET_URL" activo
         [[ "$sel" == "$BACK" ]] && return 1
         for h in sinope nas-btb; do
             if [[ "$sel" == *"$(host_label "$h") "* ]]; then
@@ -137,17 +136,14 @@ esac
 
 SEARCH_ALL="󰍉   Buscar en todo"
 while true; do
-    sel="$({ printf '%s\n' "$TAILNET"
-             for entry in "${CATEGORIES[@]}"; do
+    sel="$({ for entry in "${CATEGORIES[@]}"; do
                  cat_name="${entry%%|*}"; cat_icon="${entry##*|}"
                  printf "%s   %-28s (%s)  ▸\n" "$cat_icon" "$cat_name" "$(count_where 4 "$cat_name")"
              done
              printf "󰒋   %-28s ▸\n" "Hosts"
              printf '%s\n' "$SEARCH_ALL"; } | pick "󰒋 Servicios ❯ " "Elegir categoría, host o «Buscar en todo»…")"
     [[ -z "$sel" ]] && exit 0
-    if [[ "$sel" == "$TAILNET" ]]; then
-        open_url "$TAILNET_URL" activo
-    elif [[ "$sel" == "$SEARCH_ALL" ]]; then
+    if [[ "$sel" == "$SEARCH_ALL" ]]; then
         service_menu "󰍉 Todos ❯ " 0 "" both || continue
     elif [[ "$sel" == *"Hosts "* ]]; then
         hosts_menu || continue
