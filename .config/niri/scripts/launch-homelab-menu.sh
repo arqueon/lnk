@@ -32,6 +32,9 @@ CATEGORIES=("Media|󰎈" "Descargas y *arr|󰇚" "Educación|󰑴" "Productivida
 HOST_LABEL_sinope="Sinope"
 HOST_LABEL_nas_btb="NAS-BTB"
 BACK="‹  Volver"
+# Página generada en sinope con todos los equipos de la tailnet y sus servicios (~/Projects/utils/tailnet-inicio)
+TAILNET="󰖟   Tailnet · equipos y servicios"
+TAILNET_URL="https://sinope.tailf70cf8.ts.net:8600/"
 
 host_label() { local v="HOST_LABEL_${1//-/_}"; printf '%s' "${!v:-$1}"; }
 
@@ -90,14 +93,17 @@ open_url() {
     fi
 }
 
-# Muestra una lista de servicios y abre el elegido; devuelve 1 si se pidió volver
+# Muestra una lista de servicios y abre el elegido; devuelve 1 si se pidió volver.
+# En la lista de un host, la primera opción abre la página de la tailnet en la sección de ese host.
 service_menu() {
     local prompt="$1" col="$2" val="$3" extra="$4" sel
-    sel="$({ printf '%s\n' "$BACK"; service_lines "$col" "$val" "$extra"; } | pick "$prompt" "Buscar servicio…")"
+    sel="$({ if [[ "$col" == 5 ]]; then printf '%s\n' "$TAILNET"; fi
+             printf '%s\n' "$BACK"; service_lines "$col" "$val" "$extra"; } | pick "$prompt" "Buscar servicio…")"
     # service_lines corre en una subshell: reconstruir los mapas en esta
     service_lines "$col" "$val" "$extra" >/dev/null
     [[ -z "$sel" ]] && exit 0
     [[ "$sel" == "$BACK" ]] && return 1
+    [[ "$sel" == "$TAILNET" ]] && open_url "$TAILNET_URL#$val" activo
     if [[ -n "${URL_MAP[$sel]:-}" ]]; then
         open_url "${URL_MAP[$sel]}" "${STATUS_MAP[$sel]:-activo}"
     elif [[ "$sel" =~ ^https?:// ]]; then
