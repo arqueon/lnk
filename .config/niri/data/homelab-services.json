@@ -101,15 +101,6 @@
       "server": "sinope"
     },
     {
-      "name": "Claper",
-      "url": "https://claper.arqueonautis.org",
-      "category": "Docencia",
-      "desc": "Presentaciones interactivas",
-      "icon": "󰍡",
-      "order": 38,
-      "server": "sinope"
-    },
-    {
       "name": "Moodle Dev",
       "url": "https://moodle-dev.arqueonautis.org",
       "category": "Docencia",
@@ -339,6 +330,24 @@
       "url": "https://cartografias-antifascistas.arqueonautis.org",
       "category": "Servicios",
       "desc": "Servicio en cartografias-antifascistas.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Hermes-gerardo",
+      "url": "https://hermes-gerardo.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en hermes-gerardo.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
+      "name": "Hermina",
+      "url": "https://hermina.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en hermina.arqueonautis.org",
       "icon": "󰒋",
       "order": 90,
       "server": "sinope"
@@ -589,6 +598,15 @@
       "server": "nas-btb"
     },
     {
+      "name": "Claper",
+      "url": "https://claper.arqueonautis.org",
+      "category": "Docencia",
+      "desc": "Presentaciones interactivas (también claper.barbiestesteadoras.org)",
+      "icon": "󰍡",
+      "order": 38,
+      "server": "nas-btb"
+    },
+    {
       "name": "n8n BTB",
       "url": "https://automatizaciones.barbiestesteadoras.org/",
       "category": "Automatización",
@@ -604,15 +622,6 @@
       "desc": "Notificaciones centinela de NAS-BTB",
       "icon": "󰂚",
       "order": 42,
-      "server": "nas-btb"
-    },
-    {
-      "name": "Claper (Abdel)",
-      "url": "https://claper.abdelvidrio.org",
-      "category": "Docencia",
-      "desc": "Presentaciones interactivas de Abdel; migrado a nas-btb 12-sep-2026",
-      "icon": "󰍡",
-      "order": 45,
       "server": "nas-btb"
     },
     {

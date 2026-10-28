@@ -104,12 +104,13 @@ SERVICE_METADATA = {
         "order": 27,
         "url": "https://particify.arqueonautis.org/"
     },
+    # Instancia única en nas-btb desde 2026-10-27; claper.barbiestesteadoras.org y claper.abdelvidrio.org redirigen aquí.
     "claper.arqueonautis.org": {
         "name": "Claper",
         "category": "Docencia",
-        "desc": "Presentaciones interactivas",
+        "desc": "Presentaciones interactivas (también claper.barbiestesteadoras.org)",
         "icon": "󰍡",
-        "server": "sinope",
+        "server": "nas-btb",
         "order": 38
     },
     "moodle-dev.arqueonautis.org": {
@@ -572,14 +573,6 @@ SERVICE_METADATA = {
         "icon": "󰒋",
         "server": "nas-btb",
         "order": 82
-    },
-    "claper.abdelvidrio.org": {
-        "name": "Claper (Abdel)",
-        "category": "Docencia",
-        "desc": "Presentaciones interactivas de Abdel; migrado a nas-btb 12-sep-2026",
-        "icon": "󰍡",
-        "server": "nas-btb",
-        "order": 45
     },
     "digipad.abdelvidrio.org": {
         "name": "Digipad (Abdel)",

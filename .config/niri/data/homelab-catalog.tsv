@@ -25,10 +25,9 @@
 󰑴	Formación Docente (Moodle)	https://formaciondocente.arqueonautis.org	Educación	nas-btb	activo	Moodle de pruebas de Formación Docente
 󰙴	Particify (arqueonautis)	https://particify.arqueonautis.org/	Educación	nas-btb	activo	Participación en clases; misma instancia que vivo.barbiestesteadoras.org
 󰙴	Particify BTB	https://vivo.barbiestesteadoras.org/	Educación	nas-btb	activo	Participación interactiva en vivo; misma instancia que particify.arqueonautis.org
-󰍡	Claper	https://claper.arqueonautis.org	Educación	sinope	activo	Presentaciones interactivas
+󰍡	Claper	https://claper.arqueonautis.org	Educación	nas-btb	activo	Presentaciones interactivas (también claper.barbiestesteadoras.org)
 󰏤	Moodle Dev	https://moodle-dev.arqueonautis.org	Educación	sinope	activo	Entorno de desarrollo de microcursos
 󰊫	Atlas de contenidos	http://100.107.89.3:8132/?status=publicada&view=table&row=section&col=categories&sort=title	Educación	sinope	activo	Inventario editorial y relaciones de IA y Aprendizaje
-󰍡	Claper (Abdel)	https://claper.abdelvidrio.org	Educación	nas-btb	activo	Presentaciones interactivas de Abdel; migrado a nas-btb 12-sep-2026
 󰽉	Digipad (Abdel)	https://digipad.abdelvidrio.org	Educación	nas-btb	activo	Muros y pizarras colaborativas de Abdel; migrado a nas-btb 12-sep-2026
 󰽉	Digipad BTB	https://digipad.barbiestesteadoras.org	Educación	nas-btb	activo	Muros colaborativos de BTB
 󰆼	Muestreo BTB	https://muestreo.barbiestesteadoras.org/	Educación	nas-btb	activo	Registro de muestras y análisis
@@ -50,6 +49,8 @@
 󰈦	BentoPDF BTB	https://pdf.barbiestesteadoras.org/	Productividad	nas-btb	activo	Herramientas de documentos PDF
 󰑈	Miniflux	https://miniflux.arqueonautis.org	Productividad	sinope	activo	Lector RSS minimalista
 󰈦	BentoPDF	https://pdf.arqueonautis.org	Productividad	sinope	activo	Herramientas de manipulación de PDF
+󰒋	Hermes-gerardo	https://hermes-gerardo.arqueonautis.org	Productividad	sinope	activo	Servicio en hermes-gerardo.arqueonautis.org
+󰒋	Hermina	https://hermina.arqueonautis.org	Productividad	sinope	activo	Servicio en hermina.arqueonautis.org
 󰛐	changedetection.io	https://changes.arqueonautis.org	Productividad	sinope	activo	Vigilancia de cambios en páginas web
 󰒋	Hindsight · API/MCP	http://100.107.89.3:18888/docs	Agentes e IA	sinope	activo	API y MCP por banco (/mcp/<banco>/, con clave de tenant)
 󰑓	Hindsight · UI	http://100.107.89.3:19999/	Agentes e IA	sinope	activo	Memoria de agentes: búsqueda y bancos arq-infra, arq-udgplus, arq-agentes
