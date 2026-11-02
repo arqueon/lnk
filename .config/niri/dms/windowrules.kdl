@@ -403,6 +403,18 @@ window-rule {
     default-column-width { proportion 0.4; }
 }
 
+// @id=wr_1793456049613127691 @name=google-chrome-beta
+window-rule {
+    match app-id="^google-chrome-beta$" title="^Home - Classroom - Google Chrome$"
+    open-on-workspace "write"
+}
+
+// @id=wr_1793639586816356273 @name=beacon
+window-rule {
+    match app-id="^beacon$"
+    open-on-workspace "media"
+}
+
 // @id=dms-window-opaque @name=DMS Window Opaque
 window-rule {
     match app-id="^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$"
