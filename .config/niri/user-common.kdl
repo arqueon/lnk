@@ -86,6 +86,7 @@ binds {
     Mod+Shift+Right { focus-monitor-right; }
 
     // Utilidades (pisan a dms/binds a propósito)
+    Mod+H hotkey-overlay-title="Multiplexor (Herdr / DMS)" { spawn "dms" "ipc" "call" "mux" "toggle"; }
     Mod+L allow-when-locked=true { spawn-sh "dms ipc call lock lock"; }
     Mod+T { toggle-window-floating; }
     Mod+I { consume-window-into-column; }
