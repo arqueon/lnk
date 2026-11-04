@@ -4,14 +4,26 @@ onboarding = false
 delivery = "system"
 
 [theme]
-name = "gruvbox"
+# Hereda en tiempo real la paleta dank16 + Material 3 que Matugen/DMS inyectan en Kitty
+name = "terminal"
 auto_switch = false
+
+[theme.custom]
+panel_bg = "reset"
+
+[worktrees]
+directory = "~/.herdr/worktrees"
+
+[session]
+resume_agents_on_restore = true
 
 [ui]
 prompt_new_tab_name = false             # pestañas sin preguntar nombre (las nombra herdr-automatic-rename)
 agent_panel_sort = "priority"            # cola de atención: lo bloqueado primero
 status_indicators = "symbols"            # glifos distintos por estado, no solo color
 show_agent_labels_on_pane_borders = true # ver qué agente hay en cada split
+pane_scrollbars = false                  # selección limpia de texto sin columna de scrollbar
+window_title = "{hostname}: {workspace} › {tab}"
 tab_bar_right = [
   { type = "zoom" },
   { type = "hostname" },
@@ -19,8 +31,15 @@ tab_bar_right = [
 ]
 tab_bar_right_separator = " · "
 
-[ui.sidebar.agents.rows_by_agent]        # en Claude, mostrar en qué está trabajando
+[ui.sidebar.spaces]
+rows = [["state_icon", "workspace"], ["branch", "git_status"]]
+
+[ui.sidebar.agents.rows_by_agent]        # mostrar en qué está trabajando cada agente de la flota
 claude = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
+codex = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
+gemini = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
+opencode = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
+hermes = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
 # en pi, la etiqueta de subagentes activos que publica pi-subagents (2026-10-22)
 pi = [["state_icon", "machine", "workspace", "tab"], ["agent", "state_text"]]
 
@@ -47,12 +66,15 @@ focus_agent = "ctrl+alt+1..9"
 switch_tab = "alt+1..9"
 previous_tab = ["prefix+p", "ctrl+alt+left"]
 next_tab = ["prefix+n", "ctrl+alt+right"]
+move_tab_previous = "alt+shift+left"
+move_tab_next = "alt+shift+right"
 previous_workspace = "ctrl+alt+up"
 next_workspace = "ctrl+alt+down"
 focus_pane_left = ["prefix+h", "alt+left"]
 focus_pane_down = ["prefix+j", "alt+down"]
 focus_pane_up = ["prefix+k", "alt+up"]
 focus_pane_right = ["prefix+l", "alt+right"]
+last_pane = ["prefix+tab", "alt+backtick"]
 
 # Crear y organizar
 new_tab = ["prefix+c", "alt+n"]

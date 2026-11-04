@@ -7,3 +7,7 @@ output_path = '~/.config/fuzzel/colors.ini'
 [templates.strata]
 input_path = '~/.config/matugen/templates/strata-theme.toml'
 output_path = '~/.config/strata/themes/matugen.toml'
+
+[templates.herdr_app]
+input_path = '~/.config/matugen/templates/herdr-app-theme.json'
+output_path = '~/.config/herdr-app/themes/matugen.json'
