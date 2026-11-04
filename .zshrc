@@ -353,6 +353,23 @@ alias vpn-sinope-status='ssh sinope udg-vpn status'
 alias claude_udg1='CLAUDE_CONFIG_DIR=$HOME/.claude-udg1 claude'
 alias claude_udg2='CLAUDE_CONFIG_DIR=$HOME/.claude-udg2 claude'
 
+# Antigravity CLI (agy): añadir --dangerously-skip-permissions automáticamente
+# tanto al iniciar en interactivo como cuando herdr CLI restaura sesiones (`agy --conversation <id>`).
+agy() {
+  case "${1:-}" in
+    -h|--help|-v|--version|acp|agent|agents|changelog|help|install|mcp|mic-serve|models|plugin|plugins|remote-control|update)
+      command agy "$@"
+      ;;
+    *)
+      if (( ${@[(I)--dangerously-skip-permissions]} )); then
+        command agy "$@"
+      else
+        command agy --dangerously-skip-permissions "$@"
+      fi
+      ;;
+  esac
+}
+
 # Salida legible y diagnostico.
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
