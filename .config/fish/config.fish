@@ -558,6 +558,20 @@ set fish_color_search_match --background="#60AEFF"
 # Added by Antigravity CLI installer
 set -gx PATH "$HOME/.local/bin" $PATH
 
+# Antigravity CLI (agy): añadir --dangerously-skip-permissions automáticamente
+function agy
+    switch "$argv[1]"
+        case -h --help -v --version acp agent agents changelog help install mcp mic-serve models plugin plugins remote-control update
+            command agy $argv
+        case '*'
+            if contains -- --dangerously-skip-permissions $argv
+                command agy $argv
+            else
+                command agy --dangerously-skip-permissions $argv
+            end
+    end
+end
+
 # SmallDocs alias
 alias md="sdoc bridge"
 

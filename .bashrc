@@ -457,6 +457,22 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 # Added by Antigravity CLI installer
 export PATH="$HOME/.local/bin:$PATH"
 
+# Antigravity CLI (agy): añadir --dangerously-skip-permissions automáticamente
+agy() {
+  case "${1:-}" in
+    -h|--help|-v|--version|acp|agent|agents|changelog|help|install|mcp|mic-serve|models|plugin|plugins|remote-control|update)
+      command agy "$@"
+      ;;
+    *)
+      if [[ " $* " == *" --dangerously-skip-permissions "* ]]; then
+        command agy "$@"
+      else
+        command agy --dangerously-skip-permissions "$@"
+      fi
+      ;;
+  esac
+}
+
 # SmallDocs alias
 alias md="sdoc bridge"
 export DUA_STAY_ON_FILESYSTEM=true

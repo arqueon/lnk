@@ -1,2 +1,6 @@
 # Copias de respaldo que Variety deja al actualizarse (p. ej. get_wallpaper_before_0.9.2)
 .config/variety/scripts/*_before_*
+
+# Tipos y jsconfig autogenerados por herdr-app dentro de cada mod
+.config/herdr-app/mods/*/gpui-kit.d.ts
+.config/herdr-app/mods/*/jsconfig.json

@@ -1,0 +1,11 @@
+{
+  "zoom": 1,
+  "sounds": {
+    "enabled": true
+  },
+  "minimum_contrast": 1,
+  "theme": "matugen",
+  "ui_font": "Adwaita Sans",
+  "font": "JetBrainsMonoNL Nerd Font",
+  "font_size": 16
+}

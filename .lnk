@@ -1,6 +1,6 @@
 .bashrc
-.bin/lnk_pull_force.sh
 .bin/lnk_pull.sh
+.bin/lnk_pull_force.sh
 .bin/lnk_push.sh
 .bin/pick_color.sh
 .config/alacritty/alacritty.toml
@@ -10,6 +10,14 @@
 .config/fusuma/config.yml
 .config/fuzzel/fuzzel.ini
 .config/ghostty/config
+.config/herdr-app/keys.json
+.config/herdr-app/layouts/dux.json
+.config/herdr-app/mods/dux-pane
+.config/herdr-app/mods/dux-status
+.config/herdr-app/mods/dux-tabs
+.config/herdr-app/mods/dux-triage
+.config/herdr-app/mods/preview-plus
+.config/herdr-app/settings.json
 .config/herdr/config.toml
 .config/kitty/kitty.conf
 .config/matugen/config.toml
@@ -19,8 +27,8 @@
 .config/niri/animations.kdl
 .config/niri/config.kdl
 .config/niri/data/ai-apps.tsv
-.config/niri/data/homelab-services.json
 .config/niri/data/homelab-catalog.tsv
+.config/niri/data/homelab-services.json
 .config/niri/data/nas-btb-services.tsv
 .config/niri/data/sinope-services.tsv
 .config/niri/dms/binds.kdl
@@ -62,6 +70,7 @@
 .config/niri/user-common.kdl
 .config/niri/window-rules.kdl
 .config/paru
+.config/strata-extras/sftp-bookmarks.tsv
 .config/systemd/user/sdoc-library.service
 .config/user-dirs.locale
 .config/variety/banned.txt
@@ -80,10 +89,9 @@
 .local/bin/nas-btb-unlock
 .local/bin/sdoc-embed-images
 .local/bin/sdoc-open
-.local/bin/variety-favorites-bootstrap
 .local/bin/variety-favorite-shared
+.local/bin/variety-favorites-bootstrap
 .local/share/applications/sdoc.desktop
 .p10k.zsh
 .sdocs/styles.yaml
 .zshrc
-.config/strata-extras/sftp-bookmarks.tsv
