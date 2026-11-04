@@ -17,6 +17,9 @@ directory = "~/.herdr/worktrees"
 [session]
 resume_agents_on_restore = true
 
+[terminal]
+default_shell = "/bin/zsh"
+
 [ui]
 prompt_new_tab_name = false             # pestañas sin preguntar nombre (las nombra herdr-automatic-rename)
 agent_panel_sort = "priority"            # cola de atención: lo bloqueado primero
