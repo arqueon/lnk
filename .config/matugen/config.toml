@@ -11,3 +11,9 @@ output_path = '~/.config/strata/themes/matugen.toml'
 [templates.herdr_app]
 input_path = '~/.config/matugen/templates/herdr-app-theme.json'
 output_path = '~/.config/herdr-app/themes/matugen.json'
+
+[templates.herdr]
+input_path = '~/.config/matugen/templates/herdr-config.toml'
+output_path = '~/.config/herdr/config.toml'
+post_hook = '~/.local/bin/herdr server reload-config >/dev/null 2>&1 || herdr server reload-config >/dev/null 2>&1 || true'
+

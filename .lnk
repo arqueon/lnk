@@ -18,11 +18,11 @@
 .config/herdr-app/mods/dux-triage
 .config/herdr-app/mods/preview-plus
 .config/herdr-app/settings.json
-.config/herdr/config.toml
 .config/kitty/kitty.conf
 .config/matugen/config.toml
 .config/matugen/templates/fuzzel-colors.ini
 .config/matugen/templates/herdr-app-theme.json
+.config/matugen/templates/herdr-config.toml
 .config/matugen/templates/strata-theme.toml
 .config/niri/animations.kdl
 .config/niri/config.kdl
