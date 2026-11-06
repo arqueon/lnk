@@ -415,6 +415,13 @@ window-rule {
     open-on-workspace "media"
 }
 
+// @id=wr_1793749240043508705 @name=herdr-app
+window-rule {
+    match app-id="^herdr-app$"
+    open-on-workspace "agents2"
+    default-column-width { proportion 0.9; }
+}
+
 // @id=dms-window-opaque @name=DMS Window Opaque
 window-rule {
     match app-id="^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$"

@@ -10,7 +10,7 @@ workspace "web" {
 workspace "agents" {
     open-on-output "DP-2"
 }
-workspace "files" {
+workspace "agents2" {
     open-on-output "DP-2"
 }
 workspace "write" {
@@ -24,7 +24,7 @@ workspace "media" {
 workspace "chat" {
     open-on-output "HDMI-A-1"
 }
-workspace "agents2" {
+workspace "files" {
     open-on-output "HDMI-A-1"
 }
 workspace "ref" {
