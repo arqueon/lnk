@@ -50,6 +50,7 @@
     "alt-/": "app.help",
     "alt-e": "mod.open:panel-archivos",
     "alt-r": "mod.open:panel-cambios",
+    "ctrl-shift-r": "mod.open:agent-resume",
 
     "ctrl-+": "app.zoom_in",
     "ctrl--": "app.zoom_out",
