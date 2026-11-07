@@ -1,0 +1,13 @@
+# Máquinas remotas de TUIOS en CASA (mismas que `herdr machine list`). 2026-11-07
+# Por host (lnk --host casa): en oficina, oficina no debe aparecer como remota.
+# tuios hosts add escribe en config.toml: si agregas una, muévela aquí.
+
+[hosts.sinope]
+addr = "sinope@sinope"
+
+[hosts.hermes]
+addr = "hermes-sinope"
+
+[hosts.oficina]
+addr = "oficina"
+connect_timeout = 25
