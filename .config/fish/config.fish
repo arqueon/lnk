@@ -573,7 +573,6 @@ function agy
 end
 
 # SmallDocs alias
-alias md="sdoc bridge"
 
 # >>> fish-tweak-tool managed block >>>
 # Managed by Fish Tweak Tool — edits inside this block are overwritten.
@@ -581,8 +580,6 @@ type -q starship; and starship init fish | source
 # type -q tinty; and tinty init
 # <<< fish-tweak-tool managed block <<<
 
-# added by the sdoc installer
-set -gx PATH $HOME/.sdocs/bin $PATH
 
 # opencode
 fish_add_path /home/ruben/.opencode/bin

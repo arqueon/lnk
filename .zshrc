@@ -24,7 +24,6 @@ path=(
   "$HOME/.bin"
   "$HOME/.local/bin"
   "$HOME/Applications"
-  "$HOME/.sdocs/bin"
   "$HOME/.opencode/bin"
   $path
 )
@@ -515,7 +514,6 @@ alias undopush='git push -f origin HEAD^:master'
 alias rg='rg --sort path'
 alias cls='clean'
 alias c='clear'
-alias md='sdoc bridge'
 # herdr corriendo en sinope (usuario sinope; «sinope» a secas entra como root). Ej.: hsin --session microcred
 alias hsin='herdr --remote sinope@sinope'
 

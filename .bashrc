@@ -474,7 +474,6 @@ agy() {
 }
 
 # SmallDocs alias
-alias md="sdoc bridge"
 export DUA_STAY_ON_FILESYSTEM=true
 
 # Local configuration & credentials
