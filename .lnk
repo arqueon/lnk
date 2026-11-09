@@ -86,7 +86,6 @@
 .local/bin/nas-btb-unlock
 .local/bin/variety-favorite-shared
 .local/bin/variety-favorites-bootstrap
-.local/share/applications/sdoc.desktop
 .p10k.zsh
 .sdocs/styles.yaml
 .zshrc
