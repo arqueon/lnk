@@ -32,7 +32,7 @@ done
 m=~/.config/mimeapps.list
 if [ -f "$m" ] && [ ! -L "$m" ] && grep -q 'sdoc.desktop' "$m"; then
   cp -p "$m" "$m.bak-smalldocs-2026-11-08"
-  sed -i -E 's/(^|;)sdoc\.desktop;?/\1/g; /^text\/(x-)?markdown=$/d' "$m"
+  sed -i -E 's/([=;])sdoc\.desktop;?/\1/g; /^[^=[]+=$/d' "$m"
   echo "mimeapps.list sin sdoc.desktop"
 fi
 command -v update-desktop-database >/dev/null && update-desktop-database ~/.local/share/applications 2>/dev/null
