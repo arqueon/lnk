@@ -69,7 +69,6 @@
 .config/niri/window-rules.kdl
 .config/paru
 .config/strata-extras/sftp-bookmarks.tsv
-.config/systemd/user/sdoc-library.service
 .config/tuios/config.toml
 .config/user-dirs.locale
 .config/variety/banned.txt
