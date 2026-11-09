@@ -42,45 +42,35 @@ Norma completa: página `[[AI Memory Protocol]]` dentro del grafo.
 - **Respetar carpetas contenedoras temáticas:** Si el nuevo proyecto pertenece a un ecosistema que ya dispone de un subdirectorio temático agrupador (como `~/Projects/dms/<plugin>` para extensiones de DMS), debe crearse **dentro de dicho subdirectorio**, nunca suelto en la raíz de `~/Projects/`.
 - **Evitar duplicaciones:** No crear clones o workspaces paralelos en la raíz si el proyecto ya pertenece a un subdirectorio temático; usar y mantener la ruta canónica agrupada.
 
-## Decisiones, muestras y VoBo → SmallDocs editorial
+## Decisiones, muestras y VoBo → Plannotator (desde 2026-11-08; sustituye a SmallDocs)
 
-Toda entrega que requiera **comparar, decidir, revisar una muestra, fijar alcance, solicitar
-ajustes o dar VoBo** debe presentarse en SmallDocs, no quedar dispersa únicamente en el chat.
-La respuesta conversacional puede resumir el resultado, pero el expediente legible y la
-decisión persistida viven en el `.md`.
+SmallDocs queda **retirado** como canal de decisiones. Su licencia es Elastic-2.0, que no es libre; el renderizado vive en smalldocs.org y el bridge tiene un tiempo de espera que pierde los envíos. Los `.sdocs/` existentes se conservan como archivo: no se abren nuevos ni se usan `sdoc`, `md` ni `sdoc-embed-images`.
 
-- Crear el documento dentro del proyecto, normalmente bajo `.sdocs/`, y abrirlo editable en
-  segundo plano con `md <archivo.md>`; este atajo ejecuta `sdoc bridge`.
-- Si contiene imágenes locales, ejecutar **antes de abrirlo**
-  `sdoc-embed-images <archivo.md> --compress`. El helper incrusta WebP de alta nitidez (máximo 1920 px y calidad 88) para preservar el texto y detalles de capturas/gráficos sin bloquear HTTPS. Si se requieren detalles extremadamente finos, puede usarse `--max-dim 2048 --quality 92`.
-- Si el documento es masivo o su URL supera aproximadamente 120 KB, generar el enlace corto
-  con `sdoc share <archivo.md> --short` y abrir ese enlace en lugar de forzar la URL local.
-- Al cerrar, clasificar el SmallDoc: si aporta memoria duradera —decisión confirmada,
-  arquitectura, procedimiento, QA o contexto reutilizable— convertirlo en una página real
-  bajo `/home/ruben/Nextcloud/Projects/arq-graph/pages/`, con cabecera Logseq y nombre
-  enlazable, conservando el front matter/bloques necesarios para SmallDocs. Enlazarlo desde
-  la página de contexto y el journal. Muestras efímeras, formularios descartados y entregas
-  coyunturales permanecen fuera; no usar un directorio oculto como destino final ni migrar
-  todos los SmallDocs indiscriminadamente.
-- Si existe una decisión estructurable, incorporar un bloque `form`. **NO usar únicamente `md <archivo.md>` (`sdoc bridge`)**, ya que no mantiene un escuchador activo en el agente y causa que la interfaz se atore en `Sending...` al expirar la sesión. Para solicitar y recibir respuestas, ejecutar **`sdoc feedback <archivo.md>`** en primer plano o mediante una tarea cuyo término/stdout sea observado. Configurar `final: true` en el botón del formulario (o un solo botón final) para que el bridge registre la respuesta y finalice limpiamente con código 0.
-- El formulario debe registrar: decisión, alcance, condiciones o ajustes, observaciones
-  opcionales y, cuando aplique, autorización de publicación o despliegue.
-- Las opciones deben ser concretas y mutuamente distinguibles. La primera puede ser la
-  recomendada, pero nunca presentar como tomada una decisión que el usuario no envió.
-- Tras el envío, leer `answers`/`submissions`, aplicar solo lo autorizado y conservar esas
-  secciones como evidencia de VoBo.
-- Para muestras visuales, incluir comparación, criterios y una pregunta de decisión; no
-  limitarse a una galería sin contexto.
-- Mantener el documento ligero para que el bridge conecte: comprimir imágenes, usar solo las
-  necesarias y separar un anexo visual si los data URI vuelven excesivo el Markdown. Confirmar
-  que la sesión sigue viva; si no conecta, abrir de inmediato una versión ligera.
-- Usar el perfil **Almagre editorial SmallDocs**: papel cálido, texto azul tinta, acento
-  almagre, verde olivo, tipografía Lora, tablas editorializadas y contraste AA en claro/oscuro.
-  Copiar la plantilla canónica desde la página Logseq
-  `[[Protocolo editorial SmallDocs para decisiones y VoBo]]` y ejecutar
-  `sdoc color-analysis <archivo.md>` si se usan colores.
-- Al cerrar una compuerta, registrar el resultado en la página de contexto de Logseq y en el
-  journal del día, enlazando el SmallDoc cuando sea útil y sin copiar secretos.
+Las entregas que piden **comparar, decidir, revisar una muestra, fijar alcance, solicitar ajustes o dar VoBo** se escriben como Markdown revisable y se abren en **Plannotator** (`plannotator`, licencia MIT/Apache-2.0, local y sin telemetría). No deben quedar dispersas en el chat. La respuesta conversacional resume; el expediente y la decisión viven en el `.md`.
 
-Esto no aplica a respuestas breves o preguntas simples que no generen artefacto, decisión,
-comparación ni autorización.
+- **Archivo:** va dentro del proyecto, en `.revision/<tema>-AAAA-MM-DD.md`. Se escribe Markdown plano: sin front matter de estilos ni bloques `form`, `chart`, `cells` o `slide`. Las imágenes van con su ruta relativa normal (`![alt](imagenes/x.png)`), sin incrustarlas ni comprimirlas. Los diagramas van en bloques ```mermaid. Límite: 2 MiB por archivo.
+- **Preguntas:** se escriben como bloques en el propio documento, y Plannotator los muestra como tarjetas:
+  ```markdown
+  :::question
+  ¿Con qué motor producimos la v5?
+
+  Contexto breve: qué afecta la elección y qué se sabe ya (puede llevar una imagen).
+
+  - [ ] HyperFrames — flujo probado, días de trabajo
+  - [ ] Remotion — reconstruir voz y QA, semanas
+
+  Recommended: HyperFrames — flujo probado, días de trabajo
+  :::
+  ```
+  `:::question` admite una sola opción, `:::question-multi` varias y `:::question-text` texto libre. La primera línea es la pregunta, y las opciones se escriben como `- [ ] etiqueta — por qué`. Cada ronda lleva unas 8 preguntas como máximo. Las opciones deben ser concretas, distinguibles entre sí y nombrar la acción y el alcance que autorizan (nunca un «aprobar» a secas). `Recommended:` marca la recomendación, pero nunca se presenta como tomada una decisión que el usuario no envió.
+- **Abrir:**
+  - *Claude Code* (≥ 2.1.287, con el plugin `plannotator@plannotator`): `plannotator annotate <archivo>` o `/plannotator-annotate <archivo>`. Claude **no espera**: termina el turno y la respuesta llega después como mensaje del plugin. Si se cierra la terminal, se recupera con `claude --continue`.
+  - *Codex, Gemini y otros agentes*: correr `plannotator annotate <archivo> --gate --json --result-file .revision/<tema>.respuesta.json` como tarea de fondo observada; el resultado sale por stdout y en el JSON. La otra vía es el Inbox por MCP (`plannotator inbox mcp`) y leer la respuesta con `wait_for_reply`. En Codex, ejecutar con escalación porque abre puerto y navegador.
+  - *Solo anotar*, sin compuerta: `plannotator annotate <archivo>`. Las ediciones que Rubén guarde en el navegador se escriben en el archivo.
+- **Después de recibir la respuesta:** anexar al final del `.md` una sección `## Respuestas (AAAA-MM-DD)` con lo recibido, copiado literalmente, y aplicar solo lo autorizado. Esa sección es la evidencia del VoBo.
+- **Si Plannotator no está instalado o falla dos veces:** preguntar con `AskUserQuestion` (o la herramienta equivalente del agente) y registrar la respuesta en el `.md`. No reintentar en bucle.
+- **Entregables pulidos para terceros** (informes, slides, PDF o DOCX): usar **Quarto** (`quarto preview` / `quarto render`) y publicar el HTML estático en sinope. No usar enlaces de SmallDocs.
+- **Al cerrar una compuerta:** hacer `retain` en Hindsight con la decisión, el motivo y la ruta del `.md`, sin secretos.
+
+No aplica a preguntas breves ni aclaraciones que caben en el chat.
+
