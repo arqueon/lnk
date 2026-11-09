@@ -18,7 +18,7 @@ Las reglas de operación siguientes siguen vigentes para ese uso.
 - En Sinope: usar el MCP `logseq_db_lab` de Hermes o el MCP privado `http://sinope.tailf70cf8.ts.net:12327/mcp`. Las credenciales viven en la configuración privada del cliente/servicio; nunca copiarlas al grafo ni al chat. Hermes carga el cambio en una sesión nueva; `/reload-mcp` renueva sus herramientas.
 - El acceso autorizado comprende el grafo completo, incluido contenido personal, con lectura y escritura. Buscar antes de crear, conservar estructura de bloques y enlazar el contexto con el journal de la fecha correspondiente.
 - Si DB/MCP no está disponible, informar el bloqueo y conservar el trabajo pendiente en el proyecto; no usar los OG como destino alternativo ni declarar que algo se registró sin verificarlo.
-- SmallDocs duraderos: decisiones, arquitectura, procedimientos y QA de proyectos → `retain` en Hindsight (banco del área, con etiquetas); solo los de contenido personal o académico se incorporan al grafo DB mediante CLI/MCP.
+- Expedientes de revisión (`.revision/`) duraderos: decisiones, arquitectura, procedimientos y QA de proyectos → `retain` en Hindsight (banco del área, con etiquetas); solo los de contenido personal o académico se incorporan al grafo DB mediante CLI/MCP.
 
 Las referencias operativas a los grafos OG y las secciones siguientes sobre «Memoria duradera → Logseq» o logs de agentes en el journal quedan sustituidas por este aviso para proyectos, infraestructura, docencia UDGPlus y agentes (ahora en Hindsight). No cambia las demás reglas del proyecto.
 
