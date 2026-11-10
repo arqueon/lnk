@@ -20,7 +20,7 @@ import json, os, shlex, signal, subprocess, sys, time
 SHELLS = {"zsh", "bash", "fish", "sh"}
 # Argumentos de reanudación que no hay que copiar (se ponen los nuevos)
 DROP_WITH_VALUE = {"--resume", "-r", "--session-id", "--session", "--conversation"}
-DROP_FLAG = {"--continue", "-c"}
+DROP_FLAG = {"--continue", "-c", "resume"}
 
 
 def run(argv, check=True):
@@ -52,7 +52,8 @@ def cmdline(pid):
 
 def find_pid(pane_id, agent):
     """El proceso del agente: nombre claude/pi y HERDR_PANE_ID de ese panel."""
-    names = {"claude": {"claude"}, "pi": {"pi"}}.get(agent, {agent})
+    names = {"claude": {"claude"}, "pi": {"pi"}, "codex": {"codex"},
+             "agy": {"agy"}, "antigravity": {"agy"}, "antigravity_cli": {"agy"}}.get(agent, {agent})
     for d in os.listdir("/proc"):
         if not d.isdigit():
             continue
@@ -70,7 +71,7 @@ def find_pid(pane_id, agent):
 def launch_flags(argv):
     """Flags con que se lanzó el agente, sin los de reanudación."""
     args = argv[1:]
-    if args and os.path.basename(args[0]) in {"claude", "pi", "cli.js"}:
+    if args and os.path.basename(args[0]) in {"claude", "pi", "codex", "agy", "cli.js"}:
         args = args[1:]
     out, skip = [], False
     for a in args:
@@ -92,6 +93,10 @@ def resume_cmd(agent, session, cwd, flags):
         base = ["claude", "--resume", session]
     elif agent == "pi":
         base = ["pi", "--session", session]
+    elif agent == "codex":
+        base = ["codex", "resume", session]
+    elif agent in ("agy", "antigravity", "antigravity_cli"):
+        base = ["agy", "--conversation", session]
     else:
         return None
     return f"cd {shlex.quote(cwd)} && " + " ".join(shlex.quote(a) for a in base + flags)
