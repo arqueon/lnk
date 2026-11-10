@@ -1,0 +1,10 @@
+# Navegador para agentes
+
+> Movido literalmente desde ~/AGENTS.md el 2026-11-10.
+
+## Navegador para agentes: qué herramienta usar (desde 2026-10-26)
+
+- **Claude in Chrome** → acciones en el Chrome real de Rubén con sus sesiones (Classroom, Gmail web, paneles con login). **Playwright MCP** → automatizar flujos y formularios en un navegador aparte.
+- **`chrome-devtools` (CLI de Chrome DevTools MCP 1.12, en `~/.local/bin`)** → **auditar y diagnosticar**: `lighthouse_audit <pageId> --device mobile` (accesibilidad, buenas prácticas, SEO, «agentic browsing»), trazas de rendimiento/LCP, `get_css_styles` (cascada, heredados, `@keyframes`, at-rules), red y heap snapshots (closures retenidas). Es un daemon: `new_page <url>` → `list_pages` → herramienta con `<pageId>` → `stop` al terminar. Config global en `~/.config/cd4a/config.json`: Chromium del sistema, headless, perfil aislado sin cookies, **sin telemetría ni envío de URLs a CrUX** (importa para Moodle/sinope internos), cabeceras redactadas, capturas WebP ≤1400 px. Skills: `chrome-devtools-cli`, `a11y-debugging`, `debug-optimize-lcp`, `memory-leak-debugging`, `cookie-debugging` (escritas para MCP: cada herramienta es `chrome-devtools <herramienta>`). No está registrado como servidor MCP a propósito, para no cargar ~40 esquemas en cada sesión; si hace falta: `claude mcp add chrome-devtools -- chrome-devtools-mcp`.
+- **`modern-web-guidance`** (skill + CLI local, sin red) → antes de escribir HTML/CSS/JS de cliente (Hugo, temas Moodle, SmallDocs, artifacts, H5P): `modern-web-guidance search "<2-5 palabras>"` → `retrieve <id>`. Prioriza lo nativo (dialog/popover, anchor positioning, `:user-valid`, View Transitions) sobre dependencias.
+- Telemetría desactivada en `~/.config/environment.d/20-web-telemetria.conf` (`CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS=1`, `DISABLE_TELEMETRY=1`; se aplica al iniciar sesión). Actualizar: `npm i -g --prefix ~/.local chrome-devtools-mcp@latest modern-web-guidance@latest`; las skills son symlinks al paquete y se actualizan solas.
