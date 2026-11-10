@@ -6,6 +6,7 @@
 .config/alacritty/alacritty.toml
 .config/fastfetch/config.jsonc
 .config/fastfetch/logo_cachy.png
+.config/fish/conf.d/agent-resume.fish
 .config/fish/config.fish
 .config/fusuma/config.yml
 .config/fuzzel/fuzzel.ini
@@ -71,6 +72,7 @@
 .config/strata-extras/sftp-bookmarks.tsv
 .config/tuios/config.toml
 .config/user-dirs.locale
+.config/user-tmpfiles.d/claude-tmp.conf
 .config/variety/banned.txt
 .config/variety/scripts
 .config/variety/variety.conf

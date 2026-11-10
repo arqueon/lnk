@@ -541,3 +541,19 @@ unset _zsh_has_tty
 
 # pi con Hermes de sinope como modelo (túnel hermes-api-tunnel.service, proveedor «hermes» en ~/.pi/agent/models.json; 2026-10-21)
 alias pi-hermes='pi --provider hermes --model hermes-agent --no-tools --no-context-files --system-prompt "Te están usando desde pi en casa-cachyos. Tus herramientas se ejecutan en sinope, no en este equipo; para tocar casa usa SSH si hace falta."'
+
+# >>> agent-resume >>>
+# Agent resume (herdr-agent-resume): a restored Herdr terminal starts its agent again.
+# Set AGENT_RESUME_AUTO=0 to pause it; `install.py --no-auto` removes these lines.
+if [[ -o interactive && -n "$HC_TERMINAL_ID" ]]; then
+    __agent_resume() {
+        add-zsh-hook -d precmd __agent_resume
+        unfunction __agent_resume
+        if [[ "$AGENT_RESUME_AUTO" != 0 && -f '/home/ruben/.config/herdr-app/mods/agent-resume/agent_resume.py' ]]; then
+            command python3 '/home/ruben/.config/herdr-app/mods/agent-resume/agent_resume.py' here || command python3 '/home/ruben/.config/herdr-app/mods/agent-resume/agent_resume.py' after $?
+        fi
+    }
+    autoload -Uz add-zsh-hook && add-zsh-hook precmd __agent_resume
+fi
+# <<< agent-resume <<<
+
