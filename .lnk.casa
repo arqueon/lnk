@@ -1,3 +1,10 @@
+.agents/rules/agent-vault.md
+.agents/rules/cloudflare-cf.md
+.agents/rules/logseq-historico.md
+.agents/rules/memoria-hindsight.md
+.agents/rules/navegador-agentes.md
+.agents/rules/plannotator-vobo.md
+.agents/rules/proyectos-y-repos.md
 .config/gtk-3.0/bookmarks
 .config/niri-mimeapps.list
 .config/niri/input.kdl
