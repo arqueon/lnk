@@ -20,7 +20,7 @@ import json, os, shlex, signal, subprocess, sys, time
 SHELLS = {"zsh", "bash", "fish", "sh"}
 # Argumentos de reanudación que no hay que copiar (se ponen los nuevos)
 DROP_WITH_VALUE = {"--resume", "-r", "--session-id", "--session", "--conversation"}
-DROP_FLAG = {"--continue", "-c", "resume"}
+DROP_FLAG = {"--continue", "resume"}  # -c solo se quita en Claude (en Codex es -c clave=valor)
 
 
 def run(argv, check=True):
@@ -170,6 +170,8 @@ def plan(only, force):
             sess = (a.get("agent_session") or {}).get("value")
             pid = find_pid(a["pane_id"], a["agent"])
             flags = launch_flags(cmdline(pid)) if pid else []
+            if a["agent"] == "claude":
+                flags = [f for f in flags if f != "-c"]
             item = {"pane": a["pane_id"], "agent": a["agent"], "status": a.get("agent_status"),
                     "session": sess, "cwd": a["cwd"], "pid": pid, "flags": flags,
                     "title": a.get("terminal_title_stripped"),
