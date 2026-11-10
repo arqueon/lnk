@@ -97,6 +97,13 @@ def resume_cmd(agent, session, cwd, flags):
     return f"cd {shlex.quote(cwd)} && " + " ".join(shlex.quote(a) for a in base + flags)
 
 
+def app_do(cmd, **kw):
+    argv = ["herdr-app", "do", cmd]
+    for k, v in kw.items():
+        argv += [f"--{k}", v]
+    return run(argv)
+
+
 def app_terminals():
     ls = jrun(["herdr-app", "ls"])
     terms = {}
@@ -188,9 +195,9 @@ def apply(p):
         for i, a in enumerate(todo):
             before = app_terminals()
             if i == 0:
-                run(["herdr-app", "do", json.dumps({"name": "space.new", "args": {"name": ws["label"][:60], "folder": a["cwd"]}})])
+                app_do("space.new", name=ws["label"][:60], folder=a["cwd"], machine="")
             else:
-                run(["herdr-app", "do", json.dumps({"name": "pane.split", "args": {"direction": "right", "pane": space_pane}})])
+                app_do("pane.split", direction="right", pane=space_pane)
             term, info = new_terminal(before)
             space_pane = space_pane or info["pane"]
             print(f"  {a['pane']} → {term}: deteniendo pid {a['pid']} en la TUI…", flush=True)
@@ -201,7 +208,7 @@ def apply(p):
             run(["hc", "send", term, a["cmd"]])
             print(f"  ✓ {a['cmd']}")
         if ws["shell_panes"] and space_pane:
-            run(["herdr-app", "do", json.dumps({"name": "pane.split", "args": {"direction": "down", "pane": space_pane}})])
+            app_do("pane.split", direction="down", pane=space_pane)
 
 
 def main():
