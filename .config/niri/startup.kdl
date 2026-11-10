@@ -22,6 +22,9 @@ spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite -o \"$HOSTNAME\" = star-lite ]
 spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite -o \"$HOSTNAME\" = star-lite ] || exec ferdium"
 spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite -o \"$HOSTNAME\" = star-lite ] || exec zotero"
 spawn-sh-at-startup "sleep 10 && exec variety"
+// herdr-app: reanuda los agentes (Claude/Pi/Codex…) que seguían vivos al reiniciar,
+// en cuanto se abre la ventana. Sale sola si el host no tiene el mod agent-resume.
+spawn-sh-at-startup "[ \"$HOSTNAME\" = abdel-lite -o \"$HOSTNAME\" = star-lite ] || exec ~/.local/bin/restore-herdr-agents"
 // spawn-sh-at-startup "logseq"
 // Tine (AppImage de Shelly en ~/.local/bin; glob para sobrevivir a updates).
 // Regla de workspace "notes" en dms/windowrules.kdl.
