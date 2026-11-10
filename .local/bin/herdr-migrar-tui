@@ -1,0 +1,228 @@
+#!/usr/bin/env python3
+"""Migra los agentes vivos de la TUI de herdr (herdr 0.9.x) a la app (herdr-app / hc).
+
+Por cada workspace de la TUI con agentes crea un space en herdr-app con el mismo
+nombre y carpeta, detiene el agente en la TUI (SIGTERM, para no tener la misma
+sesión corriendo en dos sitios) y teclea `claude --resume <id>` / `pi --session <ruta>`
+en la terminal nueva. El hook del mod agent-resume etiqueta la terminal al arrancar,
+así que tras reiniciar se reanuda igual que cualquier otra de la app.
+
+  herdr-migrar-tui                 plan, sin tocar nada (por defecto)
+  herdr-migrar-tui --apply         hacerlo
+  herdr-migrar-tui --apply wJ wQ   solo esos workspaces
+  --force                          incluir agentes que estén trabajando (los interrumpe)
+
+Nunca migra el agente desde el que se ejecuta (HERDR_PANE_ID): esa sesión se
+cierra a mano y se reanuda con el comando que imprime el plan.
+"""
+import json, os, shlex, signal, subprocess, sys, time
+
+SHELLS = {"zsh", "bash", "fish", "sh"}
+# Argumentos de reanudación que no hay que copiar (se ponen los nuevos)
+DROP_WITH_VALUE = {"--resume", "-r", "--session-id", "--session", "--conversation"}
+DROP_FLAG = {"--continue", "-c"}
+
+
+def run(argv, check=True):
+    out = subprocess.run(argv, capture_output=True, text=True)
+    if check and out.returncode != 0:
+        raise RuntimeError(f"{argv[0]} {argv[1] if len(argv) > 1 else ''}: {out.stderr.strip() or out.stdout.strip()}")
+    return out.stdout
+
+
+def jrun(argv):
+    return json.loads(run(argv))
+
+
+def pane_env(pid):
+    try:
+        with open(f"/proc/{pid}/environ", "rb") as f:
+            return dict(kv.split("=", 1) for kv in f.read().decode(errors="replace").split("\0") if "=" in kv)
+    except OSError:
+        return {}
+
+
+def cmdline(pid):
+    try:
+        with open(f"/proc/{pid}/cmdline", "rb") as f:
+            return [a.decode(errors="replace") for a in f.read().split(b"\0") if a]
+    except OSError:
+        return []
+
+
+def find_pid(pane_id, agent):
+    """El proceso del agente: nombre claude/pi y HERDR_PANE_ID de ese panel."""
+    names = {"claude": {"claude"}, "pi": {"pi"}}.get(agent, {agent})
+    for d in os.listdir("/proc"):
+        if not d.isdigit():
+            continue
+        argv = cmdline(d)
+        if not argv:
+            continue
+        base = os.path.basename(argv[0])
+        if base not in names and not (base in {"node", "bun"} and len(argv) > 1 and os.path.basename(argv[1]) in names):
+            continue
+        if pane_env(d).get("HERDR_PANE_ID") == pane_id:
+            return int(d)
+    return None
+
+
+def launch_flags(argv):
+    """Flags con que se lanzó el agente, sin los de reanudación."""
+    args = argv[1:]
+    if args and os.path.basename(args[0]) in {"claude", "pi", "cli.js"}:
+        args = args[1:]
+    out, skip = [], False
+    for a in args:
+        if skip:
+            skip = False
+            continue
+        key = a.split("=", 1)[0]
+        if key in DROP_WITH_VALUE:
+            skip = "=" not in a
+            continue
+        if a in DROP_FLAG:
+            continue
+        out.append(a)
+    return out
+
+
+def resume_cmd(agent, session, cwd, flags):
+    if agent == "claude":
+        base = ["claude", "--resume", session]
+    elif agent == "pi":
+        base = ["pi", "--session", session]
+    else:
+        return None
+    return f"cd {shlex.quote(cwd)} && " + " ".join(shlex.quote(a) for a in base + flags)
+
+
+def app_terminals():
+    ls = jrun(["herdr-app", "ls"])
+    terms = {}
+    for sp in ls.get("spaces", []):
+        for tab in sp.get("tabs", []):
+            for t in tab.get("terminals", []):
+                terms[t["terminal"]] = {"space": sp["id"], "pane": t["pane"]}
+    return terms
+
+
+def new_terminal(before):
+    for _ in range(40):
+        now = app_terminals()
+        fresh = [t for t in now if t not in before]
+        if fresh:
+            return fresh[0], now[fresh[0]]
+        time.sleep(0.25)
+    raise RuntimeError("herdr-app no mostró la terminal nueva")
+
+
+def wait_shell(term):
+    for _ in range(60):
+        t = jrun(["hc", "get", term, "--json"])
+        fg = t.get("foreground") or {}
+        if t.get("pid") and fg.get("pid") == t.get("pid") and fg.get("name") in SHELLS:
+            time.sleep(1.0)  # firstmate: dar margen a que el shell termine de arrancar
+            return
+        time.sleep(0.25)
+    raise RuntimeError(f"{term} no llegó a un shell")
+
+
+def stop(pid):
+    try:
+        os.kill(pid, signal.SIGTERM)
+    except ProcessLookupError:
+        return True
+    for _ in range(60):
+        if not os.path.exists(f"/proc/{pid}"):
+            return True
+        time.sleep(0.25)
+    os.kill(pid, signal.SIGKILL)
+    time.sleep(0.5)
+    return not os.path.exists(f"/proc/{pid}")
+
+
+def plan(only, force):
+    me = os.environ.get("HERDR_PANE_ID")
+    wss = jrun(["herdr", "workspace", "list"])["result"]["workspaces"]
+    agents = jrun(["herdr", "agent", "list"])["result"]["agents"]
+    panes = jrun(["herdr", "pane", "list"])["result"]["panes"]
+    out = []
+    for ws in sorted(wss, key=lambda w: w["number"]):
+        if only and ws["workspace_id"] not in only:
+            continue
+        items = []
+        for a in agents:
+            if a["workspace_id"] != ws["workspace_id"]:
+                continue
+            sess = (a.get("agent_session") or {}).get("value")
+            pid = find_pid(a["pane_id"], a["agent"])
+            flags = launch_flags(cmdline(pid)) if pid else []
+            item = {"pane": a["pane_id"], "agent": a["agent"], "status": a.get("agent_status"),
+                    "session": sess, "cwd": a["cwd"], "pid": pid, "flags": flags,
+                    "title": a.get("terminal_title_stripped"),
+                    "cmd": resume_cmd(a["agent"], sess, a["cwd"], flags) if sess else None}
+            if a["pane_id"] == me:
+                item["skip"] = "es esta misma sesión: ciérrala y reanúdala a mano"
+            elif not sess or not item["cmd"]:
+                item["skip"] = "sin sesión reanudable"
+            elif not pid:
+                item["skip"] = "no encuentro el proceso"
+            elif a.get("agent_status") == "working" and not force:
+                item["skip"] = "está trabajando (usa --force o espera)"
+            items.append(item)
+        if not items:
+            continue
+        shells = sum(1 for p in panes if p["pane_id"].startswith(ws["workspace_id"] + ":") and not p.get("agent"))
+        out.append({"workspace": ws["workspace_id"], "label": ws["label"], "agents": items, "shell_panes": shells})
+    return out
+
+
+def apply(p):
+    for ws in p:
+        todo = [a for a in ws["agents"] if "skip" not in a]
+        if not todo:
+            continue
+        print(f"\n▶ {ws['workspace']} «{ws['label']}»", flush=True)
+        space_pane = None
+        for i, a in enumerate(todo):
+            before = app_terminals()
+            if i == 0:
+                run(["herdr-app", "do", json.dumps({"name": "space.new", "args": {"name": ws["label"][:60], "folder": a["cwd"]}})])
+            else:
+                run(["herdr-app", "do", json.dumps({"name": "pane.split", "args": {"direction": "right", "pane": space_pane}})])
+            term, info = new_terminal(before)
+            space_pane = space_pane or info["pane"]
+            print(f"  {a['pane']} → {term}: deteniendo pid {a['pid']} en la TUI…", flush=True)
+            if not stop(a["pid"]):
+                print(f"  ✗ no pude detener {a['pid']}; no lo reanudo para no duplicar la sesión")
+                continue
+            wait_shell(term)
+            run(["hc", "send", term, a["cmd"]])
+            print(f"  ✓ {a['cmd']}")
+        if ws["shell_panes"] and space_pane:
+            run(["herdr-app", "do", json.dumps({"name": "pane.split", "args": {"direction": "down", "pane": space_pane}})])
+
+
+def main():
+    args = sys.argv[1:]
+    do_apply = "--apply" in args
+    force = "--force" in args
+    only = {a for a in args if not a.startswith("--")}
+    p = plan(only, force)
+    for ws in p:
+        print(f"{ws['workspace']}  «{ws['label']}»  (+{ws['shell_panes']} panel(es) de shell)")
+        for a in ws["agents"]:
+            mark = "  ·" if "skip" in a else "  →"
+            print(f"{mark} {a['pane']} {a['agent']} [{a['status']}] {a['title']}")
+            print(f"      {a['cmd']}")
+            if "skip" in a:
+                print(f"      (se omite: {a['skip']})")
+    if do_apply:
+        apply(p)
+    else:
+        print("\n(plan solamente; --apply para hacerlo)")
+
+
+if __name__ == "__main__":
+    main()

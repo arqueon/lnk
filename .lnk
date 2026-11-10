@@ -80,10 +80,12 @@
 .local/bin/fastfetch-format
 .local/bin/ferdium-modo
 .local/bin/herdr-atajos
+.local/bin/herdr-migrar-tui
 .local/bin/hermes-sinope
 .local/bin/hermes-tui
 .local/bin/hermina-tui
 .local/bin/nas-btb-unlock
+.local/bin/restore-herdr-agents
 .local/bin/variety-favorite-shared
 .local/bin/variety-favorites-bootstrap
 .p10k.zsh

@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Reanuda los agentes de herdr-app tras reiniciar, sin pulsar Ctrl+Shift+R.
+#
+# Adaptación del patrón de Jankees van Woezik («Getting my Herdr agents back after
+# a reboot») sobre el mod agent-resume ya instalado: el mod guarda la sesión en una
+# etiqueta de cada terminal de herdr-core (hook SessionStart) con el boot-id, y la
+# olvida si el agente se cerró antes de apagar. Por eso no hace falta el filtro de
+# journalctl: solo vuelven los agentes que seguían vivos al reiniciar.
+#
+# Se lanza desde niri (spawn-at-startup). Corre una sola vez por arranque.
+set -u
+
+marker="${XDG_RUNTIME_DIR:-/tmp}/herdr-agent-restore.done"
+[ -e "$marker" ] && exit 0
+mod="$HOME/.config/herdr-app/mods/agent-resume/agent_resume.py"
+[ -f "$mod" ] || exit 0
+log="${XDG_STATE_HOME:-$HOME/.local/state}/herdr-agent-restore.log"
+mkdir -p "$(dirname "$log")"
+
+# No abre la ventana: espera a que la abras (hasta 15 min) y entonces reanuda.
+# Si no se abre a tiempo, sale sin marcar y queda Ctrl+Shift+R.
+ok=""
+for _ in $(seq 1 450); do
+    if herdr-app ls >/dev/null 2>&1 && hc ls --json >/dev/null 2>&1; then
+        ok=1; break
+    fi
+    sleep 2
+done
+[ -n "$ok" ] || exit 0
+sleep 4   # margen para que los shells restaurados terminen de arrancar
+
+touch "$marker"
+{
+    printf '== %s\n' "$(date -Is)"
+    python3 "$mod" resume
+} >>"$log" 2>&1
