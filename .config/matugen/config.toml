@@ -17,3 +17,21 @@ input_path = '~/.config/matugen/templates/herdr-config.toml'
 output_path = '~/.config/herdr/config.toml'
 post_hook = '~/.local/bin/herdr server reload-config >/dev/null 2>&1 || herdr server reload-config >/dev/null 2>&1 || true'
 
+[templates.plannotator]
+input_path = '~/.config/matugen/templates/plannotator-theme.css'
+output_path = '~/.plannotator/matugen.css'
+
+[templates.quarto]
+input_path = '~/.config/matugen/templates/quarto-matugen.scss'
+output_path = '~/.config/quarto/themes/matugen.scss'
+post_hook = 'for d in ~/.local/opt/quarto-*/share/formats/html/bootstrap/themes ~/.local/opt/quarto-*/share/formats/revealjs/themes; do [ -d "$d" ] && for t in matugen.scss matugen-dark.scss matugen-light.scss; do ln -sf "$HOME/.config/quarto/themes/$t" "$d/$t"; done; done 2>/dev/null || true'
+
+[templates.quarto_dark]
+input_path = '~/.config/matugen/templates/quarto-matugen-dark.scss'
+output_path = '~/.config/quarto/themes/matugen-dark.scss'
+
+[templates.quarto_light]
+input_path = '~/.config/matugen/templates/quarto-matugen-light.scss'
+output_path = '~/.config/quarto/themes/matugen-light.scss'
+
+

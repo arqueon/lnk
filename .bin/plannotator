@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+PRELOAD="$HOME/.config/plannotator/matugen-preload.js"
+if [ -f "$PRELOAD" ]; then
+  case " ${BUN_OPTIONS:-} " in
+    *" --preload $PRELOAD "*) ;;
+    *) export BUN_OPTIONS="${BUN_OPTIONS:+$BUN_OPTIONS }--preload $PRELOAD" ;;
+  esac
+fi
+exec "$HOME/.local/bin/plannotator" "$@"

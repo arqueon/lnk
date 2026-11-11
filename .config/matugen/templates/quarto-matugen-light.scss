@@ -1,0 +1,63 @@
+/*-- scss:defaults --*/
+// Tema Quarto (HTML + Reveal.js) generado por Matugen — Variante Clara
+
+$theme: "matugen-light" !default;
+
+$body-bg:                   {{colors.surface.light.hex}} !default;
+$body-color:                {{colors.on_surface.light.hex}} !default;
+$text-muted:                {{colors.on_surface_variant.light.hex}} !default;
+
+$primary:                   {{colors.primary.light.hex}} !default;
+$secondary:                 {{colors.secondary.light.hex}} !default;
+$info:                      {{colors.tertiary.light.hex}} !default;
+$success:                   mix(#16a34a, {{colors.primary.light.hex}}, 72%) !default;
+$warning:                   mix(#ca8a04, {{colors.secondary.light.hex}}, 75%) !default;
+$danger:                    {{colors.error.light.hex}} !default;
+$light:                     {{colors.surface_container_low.light.hex}} !default;
+$dark:                      {{colors.on_surface.light.hex}} !default;
+
+$link-color:                {{colors.primary.light.hex}} !default;
+$selection-bg:              {{colors.primary_container.light.hex}} !default;
+$selection-color:           {{colors.on_primary_container.light.hex}} !default;
+
+$border-color:              {{colors.outline_variant.light.hex}} !default;
+$table-border-color:        {{colors.outline_variant.light.hex}} !default;
+$card-bg:                   {{colors.surface_container_low.light.hex}} !default;
+$card-border-color:         {{colors.outline_variant.light.hex}} !default;
+$popover-bg:                {{colors.surface_container_high.light.hex}} !default;
+
+$code-block-bg:             {{colors.surface_container_low.light.hex}} !default;
+$code-block-border-color:   {{colors.outline_variant.light.hex}} !default;
+$code-bg:                   {{colors.surface_container.light.hex}} !default;
+$code-color:                {{colors.tertiary.light.hex}} !default;
+$btn-code-copy-color:       {{colors.on_surface_variant.light.hex}} !default;
+$btn-code-copy-color-active:{{colors.primary.light.hex}} !default;
+
+$navbar-bg:                 {{colors.surface_container_low.light.hex}} !default;
+$navbar-fg:                 {{colors.on_surface.light.hex}} !default;
+$sidebar-bg:                {{colors.surface_container_low.light.hex}} !default;
+$sidebar-fg:                {{colors.on_surface.light.hex}} !default;
+$toc-active-border:         {{colors.primary.light.hex}} !default;
+$toc-inactive-border:       {{colors.outline_variant.light.hex}} !default;
+
+$callout-color-note:        {{colors.primary.light.hex}} !default;
+$callout-color-tip:         $success !default;
+$callout-color-warning:     $warning !default;
+$callout-color-caution:     {{colors.tertiary.light.hex}} !default;
+$callout-color-important:   {{colors.error.light.hex}} !default;
+
+// Reveal.js
+$presentation-heading-color:      {{colors.primary.light.hex}} !default;
+$presentation-list-bullet-color:  {{colors.secondary.light.hex}} !default;
+$input-panel-bg:                  {{colors.surface_container.light.hex}} !default;
+
+/*-- scss:rules --*/
+div.sourceCode, pre.sourceCode {
+  background-color: {{colors.surface_container_low.light.hex}};
+  border: 1px solid {{colors.outline_variant.light.hex}};
+  border-radius: 6px;
+}
+
+.callout {
+  background-color: {{colors.surface_container_low.light.hex}};
+}

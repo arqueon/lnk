@@ -1,0 +1,67 @@
+/* Tema de Plannotator generado por Matugen (DMS).
+ * Cubre modo oscuro (por defecto) y modo claro (.light), incluyendo
+ * tokens de superficie, diagramas Mermaid 12 y terminal integrada.
+ */
+html[class*="theme-"]:not(.light),
+:root:not(.light) {
+  --background: {{colors.surface.dark.hex}};
+  --foreground: {{colors.on_surface.dark.hex}};
+  --card: {{colors.surface_container_low.dark.hex}};
+  --card-foreground: {{colors.on_surface.dark.hex}};
+  --popover: {{colors.surface_container_high.dark.hex}};
+  --popover-foreground: {{colors.on_surface.dark.hex}};
+  --primary: {{colors.primary.dark.hex}};
+  --primary-foreground: {{colors.on_primary.dark.hex}};
+  --secondary: {{colors.secondary_container.dark.hex}};
+  --secondary-foreground: {{colors.on_secondary_container.dark.hex}};
+  --muted: {{colors.surface_container.dark.hex}};
+  --muted-foreground: {{colors.on_surface_variant.dark.hex}};
+  --accent: {{colors.tertiary.dark.hex}};
+  --accent-foreground: {{colors.on_tertiary.dark.hex}};
+  --destructive: {{colors.error.dark.hex}};
+  --destructive-foreground: {{colors.on_error.dark.hex}};
+  --border: {{colors.outline_variant.dark.hex}};
+  --input: {{colors.surface_container_highest.dark.hex}};
+  --ring: {{colors.primary.dark.hex}};
+  --success: color-mix(in oklab, #4ade80 72%, {{colors.primary.dark.hex}});
+  --success-foreground: {{colors.surface.dark.hex}};
+  --warning: color-mix(in oklab, #facc15 74%, {{colors.secondary.dark.hex}});
+  --warning-foreground: {{colors.surface.dark.hex}};
+  --code-bg: {{colors.surface_container_lowest.dark.hex}};
+  --focus-highlight: {{colors.primary.dark.hex}};
+  --surface-0: {{colors.surface_container_low.dark.hex}};
+  --surface-1: {{colors.surface_container.dark.hex}};
+  --surface-2: {{colors.surface_container_high.dark.hex}};
+}
+
+html[class*="theme-"].light,
+:root.light {
+  --background: {{colors.surface.light.hex}};
+  --foreground: {{colors.on_surface.light.hex}};
+  --card: {{colors.surface_container_low.light.hex}};
+  --card-foreground: {{colors.on_surface.light.hex}};
+  --popover: {{colors.surface_container_high.light.hex}};
+  --popover-foreground: {{colors.on_surface.light.hex}};
+  --primary: {{colors.primary.light.hex}};
+  --primary-foreground: {{colors.on_primary.light.hex}};
+  --secondary: {{colors.secondary_container.light.hex}};
+  --secondary-foreground: {{colors.on_secondary_container.light.hex}};
+  --muted: {{colors.surface_container.light.hex}};
+  --muted-foreground: {{colors.on_surface_variant.light.hex}};
+  --accent: {{colors.tertiary.light.hex}};
+  --accent-foreground: {{colors.on_tertiary.light.hex}};
+  --destructive: {{colors.error.light.hex}};
+  --destructive-foreground: {{colors.on_error.light.hex}};
+  --border: {{colors.outline_variant.light.hex}};
+  --input: {{colors.surface_container_highest.light.hex}};
+  --ring: {{colors.primary.light.hex}};
+  --success: color-mix(in oklab, #16a34a 75%, {{colors.primary.light.hex}});
+  --success-foreground: {{colors.surface.light.hex}};
+  --warning: color-mix(in oklab, #ca8a04 78%, {{colors.secondary.light.hex}});
+  --warning-foreground: {{colors.surface.light.hex}};
+  --code-bg: {{colors.surface_container_lowest.light.hex}};
+  --focus-highlight: {{colors.primary.light.hex}};
+  --surface-0: {{colors.surface_container_low.light.hex}};
+  --surface-1: {{colors.surface_container.light.hex}};
+  --surface-2: {{colors.surface_container_high.light.hex}};
+}

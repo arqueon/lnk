@@ -3,6 +3,7 @@
 .bin/lnk_pull_force.sh
 .bin/lnk_push.sh
 .bin/pick_color.sh
+.bin/plannotator
 .config/alacritty/alacritty.toml
 .config/fastfetch/config.jsonc
 .config/fastfetch/logo_cachy.png
@@ -24,6 +25,10 @@
 .config/matugen/templates/fuzzel-colors.ini
 .config/matugen/templates/herdr-app-theme.json
 .config/matugen/templates/herdr-config.toml
+.config/matugen/templates/plannotator-theme.css
+.config/matugen/templates/quarto-matugen-dark.scss
+.config/matugen/templates/quarto-matugen-light.scss
+.config/matugen/templates/quarto-matugen.scss
 .config/matugen/templates/strata-theme.toml
 .config/niri/animations.kdl
 .config/niri/config.kdl
@@ -69,6 +74,7 @@
 .config/niri/user-common.kdl
 .config/niri/window-rules.kdl
 .config/paru
+.config/plannotator/matugen-preload.js
 .config/strata-extras/sftp-bookmarks.tsv
 .config/tuios/config.toml
 .config/user-dirs.locale
