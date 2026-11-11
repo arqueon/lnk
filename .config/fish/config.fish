@@ -572,7 +572,13 @@ function agy
     end
 end
 
-# SmallDocs alias
+# Quarto (con tema Matugen) y Plannotator
+function qprev;   quarto preview $argv[1] --to html -M theme:matugen $argv[2..-1]; end
+function qhtml;   quarto render $argv[1] --to html -M theme:matugen --embed-resources $argv[2..-1]; end
+function qslides; quarto render $argv[1] --to revealjs -M theme:matugen --embed-resources $argv[2..-1]; end
+function qdocx;   quarto render $argv[1] --to docx $argv[2..-1]; end
+function qpdf;    quarto render $argv[1] --to pdf $argv[2..-1]; end
+alias pna="plannotator annotate"
 
 # >>> fish-tweak-tool managed block >>>
 # Managed by Fish Tweak Tool — edits inside this block are overwritten.

@@ -473,7 +473,13 @@ agy() {
   esac
 }
 
-# SmallDocs alias
+# Quarto (con tema Matugen) y Plannotator
+qprev()   { quarto preview "$1" --to html -M theme:matugen "${@:2}"; }
+qhtml()   { quarto render "$1" --to html -M theme:matugen --embed-resources "${@:2}"; }
+qslides() { quarto render "$1" --to revealjs -M theme:matugen --embed-resources "${@:2}"; }
+qdocx()   { quarto render "$1" --to docx "${@:2}"; }
+qpdf()    { quarto render "$1" --to pdf "${@:2}"; }
+alias pna='plannotator annotate'
 export DUA_STAY_ON_FILESYSTEM=true
 
 # Local configuration & credentials

@@ -517,6 +517,14 @@ alias c='clear'
 # herdr corriendo en sinope (usuario sinope; «sinope» a secas entra como root). Ej.: hsin --session microcred
 alias hsin='herdr --remote sinope@sinope'
 
+# Quarto (con tema Matugen) y Plannotator
+qprev()   { quarto preview "$1" --to html -M theme:matugen "${@:2}"; }
+qhtml()   { quarto render "$1" --to html -M theme:matugen --embed-resources "${@:2}"; }
+qslides() { quarto render "$1" --to revealjs -M theme:matugen --embed-resources "${@:2}"; }
+qdocx()   { quarto render "$1" --to docx "${@:2}"; }
+qpdf()    { quarto render "$1" --to pdf "${@:2}"; }
+alias pna='plannotator annotate'
+
 # No se migran cb/cz/cf: sobrescribirian archivos que ahora gestiona lnk.
 
 # Prompt del shell: Powerlevel10k (con fallback a Starship si estuviera disponible).
