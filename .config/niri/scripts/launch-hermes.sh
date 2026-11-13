@@ -22,45 +22,15 @@ open_url() {
   exec xdg-open "$1"
 }
 
-show_status() {
-  local status_rc
-
-  set +e
-  "${hermes_cli}" "${profile}" status
-  status_rc=$?
-  set -e
-
-  printf '\n'
-  if [[ -t 0 ]]; then
-    read -r -n 1 -s -p "Pulsa cualquier tecla para cerrar…" || true
-    printf '\n'
-  fi
-  return "${status_rc}"
-}
-
-if [[ "${1:-}" == "--show-status" ]]; then
-  show_status
-  exit $?
-fi
-
 if [[ "${1:-}" =~ ^https?:// ]]; then
   open_url "$1"
 fi
 
-# Daily interfaces first; on-demand labs are labelled so it is clear that
-# opening one starts a service on sinope ("Detener laboratorios" stops them).
-choices=$'WebUI comunitaria\twebui'
+choices=$'Webapp oficial\twebui'
 if "${hermes_cli}" "${profile}" desktop-available 2>/dev/null; then
   choices+=$'\nDesktop oficial\tdesktop'
 fi
-choices+=$'\nTUI oficial persistente (tmux)\ttui\nHermes Gate (sesiones tmux)\tgate'
-choices+=$'\nDashboard oficial · administración (bajo demanda)\tdashboard'
-choices+=$'\nLaboratorio · Hermes Workspace\tworkspace\nLaboratorio · Hermes UI PWA\tpwa\nLaboratorio · Open WebUI (pesada)\topen-webui'
-if [[ -x "${script_dir}/launch-hermes-one.sh" ]] \
-  && "${script_dir}/launch-hermes-one.sh" --available; then
-  choices+=$'\nLaboratorio · Hermes One (comunitaria)\thermes-one'
-fi
-choices+=$'\nEstado de interfaces\tstatus\nPreparar tmux remoto (UTF-8 + portapapeles)\ttmux-setup\nDetener laboratorios y túneles\tstop-labs'
+choices+=$'\nTUI oficial persistente (tmux)\ttui'
 
 select_choice() {
   local selected="" menu_lines
@@ -70,7 +40,7 @@ select_choice() {
   elif command -v rofi >/dev/null 2>&1; then
     selected="$(printf '%s\n' "${choices}" | cut -f1 | rofi -dmenu -i -p "${identity}" 2>/dev/null || true)"
   elif command -v zenity >/dev/null 2>&1; then
-    selected="$(printf '%s\n' "${choices}" | cut -f1 | zenity --list --title="Interfaces remotas de Hermes" --text="Cuenta detectada: ${identity}" --column="Interfaz" --height=520 --width=560 2>/dev/null || true)"
+    selected="$(printf '%s\n' "${choices}" | cut -f1 | zenity --list --title="Interfaces remotas de Hermes" --text="Cuenta detectada: ${identity}" --column="Interfaz" --height=360 --width=560 2>/dev/null || true)"
   elif command -v kdialog >/dev/null 2>&1; then
     local -a menu_args=()
     local label action
@@ -92,11 +62,6 @@ select_choice() {
 action="$(select_choice)"
 [[ -n "${action}" ]] || exit 0
 
-if [[ "${action}" == open-webui ]]; then
-  notify-send -t 15000 "Hermes remoto" \
-    "Iniciando Open WebUI; el primer arranque puede tardar cerca de un minuto."
-fi
-
 terminal="${TERMINAL:-}"
 if [[ -z "${terminal}" ]]; then
   for candidate in kitty foot alacritty wezterm; do
@@ -108,7 +73,7 @@ if [[ -z "${terminal}" ]]; then
 fi
 
 case "${action}" in
-  tui|gate)
+  tui)
     if [[ -z "${terminal}" ]]; then
       notify-send -u critical "Hermes remoto" "No se encontró una terminal compatible."
       exit 1
@@ -119,18 +84,8 @@ case "${action}" in
       '"$0" "$1" "$2" || { rc=$?; printf "\n[salida %s] Pulsa una tecla para cerrar…" "$rc"; read -r -n 1 -s; exit "$rc"; }' \
       "${hermes_cli}" "${profile}" "${action}"
     ;;
-  status)
-    if [[ -z "${terminal}" ]]; then
-      notify-send -u critical "Hermes remoto" "No se encontró una terminal compatible."
-      exit 1
-    fi
-    exec "${terminal}" -e "${script_dir}/launch-hermes.sh" --show-status
-    ;;
   desktop)
     exec "${hermes_cli}" "${profile}" desktop
-    ;;
-  hermes-one)
-    exec "${hermes_cli}" "${profile}" hermes-one
     ;;
   *)
     if output="$("${hermes_cli}" "${profile}" "${action}" 2>&1)"; then

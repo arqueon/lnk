@@ -30,11 +30,8 @@ case "${profile}" in
     display_name="Hermes · Rubén"
     remote_user="hermes"
     remote_home="/home/hermes"
-    webui_port=8787
+    webui_port=9120
     dashboard_port=9119
-    workspace_port=13300
-    pwa_port=19120
-    open_webui_port=18080
     tui_session="hermes-tui"
     published_webui_url="https://hermes.arqueonautis.org/"
     # Messaging daemons that live next to the gateway (SimpleX since 2026-10-23).
@@ -44,11 +41,8 @@ case "${profile}" in
     display_name="Hermina · Abdel"
     remote_user="hermes-abdel"
     remote_home="/home/hermes-abdel"
-    webui_port=8788
+    webui_port=9121
     dashboard_port=9120
-    workspace_port=13301
-    pwa_port=19121
-    open_webui_port=18081
     tui_session="hermina-tui"
     published_webui_url=""
     messaging_units=""
@@ -69,29 +63,21 @@ Uso: hermes-sinope [PERFIL] COMANDO
 Perfil detectado: ${display_name} (${remote_user}@sinope)
 Perfiles: hermes | hermes-abdel (alias: ruben | abdel | hermina)
 
-Interfaces de uso diario (siempre activas o locales):
-  webui       WebUI comunitaria (pública tras Cloudflare Access en el perfil hermes)
+Interfaces principales:
+  webui       Webapp oficial (pública tras Cloudflare Access en hermes; túnel :9121 en hermes-abdel)
   desktop     Cliente Desktop oficial (SSH)
   tui         TUI oficial persistente en tmux
   gate        Hermes Gate para sesiones tmux
-
-Administración bajo demanda (laboratorio, se enciende al abrirla):
-  dashboard   Dashboard oficial: configuración, cron, herramientas
-
-Laboratorio bajo demanda (se encienden al abrirlas; stop-labs las apaga):
-  workspace   Hermes Workspace
-  pwa         Hermes UI PWA
-  open-webui  Open WebUI (pesada, ~2 GB)
-  hermes-one  Hermes One (Desktop comunitario, perfil aislado)
+  dashboard   Dashboard oficial: configuración, cron, herramientas (:9119)
 
 En el teléfono el chat va por SimpleX (perfil hermes) o Discord (hermes-abdel); no pasa por este menú.
 
 Administración:
-  profile     Muestra la identidad detectada
-  gate-setup  Prepara el perfil actual en Hermes Gate
-  tmux-setup  Instala UTF-8/OSC 52 en el tmux remoto de este perfil
-  status      Estado remoto y de los túneles locales
-  stop-labs   Detiene laboratorios y túneles; conserva Gateway y WebUI
+  profile      Muestra la identidad detectada
+  gate-setup   Prepara el perfil actual en Hermes Gate
+  tmux-setup   Instala UTF-8/OSC 52 en el tmux remoto de este perfil
+  status       Estado remoto y de los túneles locales
+  stop-tunnels Detiene los túneles SSH locales; conserva los servicios remotos
 EOF
 }
 
@@ -162,8 +148,7 @@ ensure_tunnel() {
       -L "127.0.0.1:${local_port}:127.0.0.1:${remote_port}" "${target}"
   fi
 
-  # Open WebUI can take close to a minute on its first cold start.
-  for _ in $(seq 1 1200); do
+  for _ in $(seq 1 300); do
     if curl -fsS --max-time 1 "http://127.0.0.1:${local_port}/" >/dev/null 2>&1; then
       return 0
     fi
@@ -339,65 +324,6 @@ desktop() {
     exec "${desktop_binary}" --disable-setuid-sandbox "$@"
 }
 
-hermes_one_pilot_root() {
-  printf '%s\n' "${HERMES_ONE_PILOT_ROOT:-${HOME}/Projects/hermes-one-pilot}"
-}
-
-hermes_one() {
-  local launcher="${script_dir}/launch-hermes-one.sh"
-  local hermes_home settings settings_source key_path local_port temp_file
-  if [[ ! -x "${launcher}" ]] || ! "${launcher}" --available; then
-    printf 'Hermes One no está instalado en esta computadora.\n' >&2
-    exit 3
-  fi
-
-  # Hermes One (community Desktop) reads its connection from
-  # ${HERMES_HOME}/desktop.json, and its AppRun points HERMES_HOME at
-  # <pilot>/profile/hermes-home.  In SSH mode the app opens its own tunnel to
-  # the remote API server (:8642) with the key given here, so that key must
-  # work non-interactively (BatchMode).  Without this file it starts a local
-  # backend and never reaches Sinope.
-  hermes_home="$(hermes_one_pilot_root)/profile/hermes-home"
-  settings="${hermes_home}/desktop.json"
-  key_path="${HOME}/.ssh/id_ed25519_casa"
-  local_port=18642
-  if [[ "${profile}" == "hermes-abdel" ]]; then
-    key_path="${abdel_key}"
-    local_port=18643
-  fi
-  if [[ ! -r "${key_path}" ]]; then
-    printf 'Hermes One necesita la clave SSH %s para %s.\n' "${key_path}" "${target}" >&2
-    exit 3
-  fi
-
-  mkdir -p "${hermes_home}"
-  settings_source=/dev/null
-  if [[ -s "${settings}" ]] && jq -e 'type == "object"' "${settings}" >/dev/null 2>&1; then
-    settings_source="${settings}"
-  fi
-  temp_file="$(mktemp "${hermes_home}/desktop.json.XXXXXX")"
-  jq -n --slurpfile current "${settings_source}" \
-    --arg host "${sinope_host}" --arg user "${remote_user}" --arg key "${key_path}" \
-    --argjson local_port "${local_port}" '
-      ($current[0] // {})
-      | .connectionMode = "ssh"
-      | .remoteUrl = (.remoteUrl // ("http://" + $host + ":8642"))
-      | .remoteApiKey = (.remoteApiKey // "")
-      | .sshConfig = ((.sshConfig // {}) + {
-          host: $host, port: 22, username: $user, keyPath: $key,
-          remotePort: 8642, localPort: $local_port
-        })
-    ' >"${temp_file}"
-  chmod 600 "${temp_file}"
-  mv "${temp_file}" "${settings}"
-
-  if [[ "${HERMES_DESKTOP_DRY_RUN:-0}" == 1 ]]; then
-    printf '%s: conexión SSH de Hermes One preparada.\n' "${display_name}"
-    return 0
-  fi
-  exec "${launcher}" "$@"
-}
-
 find_gate_dir() {
   local candidate
   if [[ -n "${HERMES_GATE_DIR:-}" ]]; then
@@ -468,32 +394,19 @@ case "${command}" in
     if [[ -n "${HERMES_SINOPE_WEBUI_URL:-${published_webui_url}}" ]]; then
       webui_url="${HERMES_SINOPE_WEBUI_URL:-${published_webui_url}}"
       open_browser "${webui_url}"
-      printf '%s · WebUI comunitaria lista en %s\n' "${display_name}" "${webui_url}"
+      printf '%s · Webapp oficial lista en %s\n' "${display_name}" "${webui_url}"
     else
-      web_interface webui 'WebUI comunitaria' hermes-webui.service "${webui_port}" active
+      web_interface webui 'Webapp oficial' hermes-gateway.service "${webui_port}" active
     fi
     ;;
   dashboard)
     web_interface dashboard 'Dashboard oficial' hermes-dashboard-lab.service "${dashboard_port}" start
-    ;;
-  workspace)
-    # Workspace fetches its dashboard token from :9119; start both units.
-    web_interface workspace 'Workspace' 'hermes-dashboard-lab.service hermes-workspace-lab.service' "${workspace_port}" start
-    ;;
-  pwa)
-    web_interface pwa 'Hermes UI PWA' hermes-ui-pwa-lab.service "${pwa_port}" start
-    ;;
-  open-webui)
-    web_interface open-webui 'Open WebUI' open-webui-hermes-lab.service "${open_webui_port}" start
     ;;
   desktop)
     desktop "$@"
     ;;
   desktop-available)
     find_desktop_binary >/dev/null
-    ;;
-  hermes-one)
-    hermes_one "$@"
     ;;
   tui)
     session_name="${1:-${tui_session}}"
@@ -527,9 +440,9 @@ case "${command}" in
     ;;
   status)
     printf '%s (%s)\n\n' "${display_name}" "${target}"
-    remote "for unit in hermes-gateway.service ${messaging_units} hermes-webui.service hermes-dashboard-lab.service hermes-workspace-lab.service hermes-ui-pwa-lab.service open-webui-hermes-lab.service; do printf '%-38s ' \"\$unit\"; systemctl --user is-active \"\$unit\" || true; done"
+    remote "for unit in hermes-gateway.service ${messaging_units} hermes-webui.service hermes-dashboard-lab.service; do printf '%-38s ' \"\$unit\"; systemctl --user is-active \"\$unit\" || true; done"
     printf '\nTúneles locales:\n'
-    for action in webui dashboard workspace pwa open-webui; do
+    for action in webui dashboard; do
       unit="$(tunnel_unit_name "${action}")"
       printf '%-55s %s\n' "${unit}" "$(systemctl --user is-active "${unit}" 2>/dev/null || true)"
     done
@@ -539,23 +452,17 @@ case "${command}" in
     else
       printf '%-38s %s\n' "Desktop oficial" "no instalado"
     fi
-    if [[ -x "${script_dir}/launch-hermes-one.sh" ]] && "${script_dir}/launch-hermes-one.sh" --available; then
-      printf '%-38s %s\n' "Hermes One" "instalado ($(hermes_one_pilot_root))"
-    else
-      printf '%-38s %s\n' "Hermes One" "no instalado"
-    fi
     if gate_dir="$(find_gate_dir)"; then
       printf '%-38s %s\n' "Hermes Gate" "instalado (${gate_dir})"
     else
       printf '%-38s %s\n' "Hermes Gate" "no instalado"
     fi
     ;;
-  stop-labs)
-    remote 'systemctl --user stop hermes-dashboard-lab.service hermes-workspace-lab.service hermes-ui-pwa-lab.service open-webui-hermes-lab.service'
-    for action in webui dashboard workspace pwa open-webui; do
+  stop-tunnels)
+    for action in webui dashboard; do
       systemctl --user stop "$(tunnel_unit_name "${action}")" >/dev/null 2>&1 || true
     done
-    printf '%s: laboratorios y túneles detenidos; Gateway y WebUI continúan activos.\n' "${display_name}"
+    printf '%s: túneles locales detenidos; los servicios en Sinope siguen activos.\n' "${display_name}"
     ;;
   -h|--help|help|'')
     usage
