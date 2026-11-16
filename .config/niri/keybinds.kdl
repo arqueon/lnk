@@ -40,6 +40,7 @@ binds {
     Mod+F11 hotkey-overlay-title="Home Assistant" { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=https://ha.arqueonautis.org/casa-vistosa/principal"; }
     Mod+Alt+F11 { spawn "antigravity-ide"; }
     Mod+Shift+F11 hotkey-overlay-title="Catálogo de Apps de IA" { spawn "~/.config/niri/scripts/launch-ai-menu.sh"; }
+    Mod+Ctrl+F11 repeat=false hotkey-overlay-title="Cuota de imágenes Gemini (Antigravity)" { spawn "~/.config/niri/scripts/gemini-image-quota.py" "--notify"; }
     Mod+F12 hotkey-overlay-title="Vikunja Tasks" { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=https://tasks.arqueonautis.org"; }
 
     Mod+Alt+F12 hotkey-overlay-title="Emoji Picker" { spawn "dms" "ipc" "call" "emojiPicker" "toggle"; }
