@@ -21,5 +21,6 @@ El detalle de cada tema está en `~/.agents/rules/`. Lee el archivo indicado cua
 
 ## Herramientas por tema
 - Cloudflare: usa el CLI `cf` mediante `cf-arq @perfil`; confirma las escrituras con Rubén. → `cloudflare-cf.md`
-- Navegador: Claude in Chrome para sesiones reales, Playwright para flujos aparte y `chrome-devtools` para auditar. Antes de escribir HTML/CSS/JS, consulta `modern-web-guidance`. → `navegador-agentes.md`
+- Navegador: Claude in Chrome para sesiones reales, Playwright para flujos aparte y `chrome-devtools` para auditar. Antes de escribir HTML/CSS/JS, consulta `modern-web-guidance` (solo lo técnico); para la apariencia, usa `tastemaker` o `frontend-design` y la ficha de estilo del proyecto. → `navegador-agentes.md`
+- Interfaces (UX/UI): la ficha de UI del proyecto manda sobre `tastemaker`; el piso de accesibilidad se cita, no se copia; cada criterio de ficha o de encargo nombra su origen en el proyecto y se comprueba con sí o no sobre una captura. → `criterios-ux-ui.md`
 - Subagentes: no pases `model` (usa el valor por defecto) salvo que la tarea exija razonamiento difícil; nunca `opus`/`fable` para búsquedas o lecturas.
