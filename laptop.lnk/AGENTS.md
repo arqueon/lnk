@@ -85,3 +85,9 @@ Las entregas que piden **comparar, decidir, revisar una muestra, fijar alcance, 
 
 No aplica a preguntas breves ni aclaraciones que caben en el chat.
 
+## Interfaces (UX/UI) — criterios y ficha de UI (desde 2026-11-17)
+
+- Regla completa (una página): `~/.config/lnk/casa.lnk/.agents/rules/criterios-ux-ui.md`. Léela antes de diseñar, maquetar o revisar una interfaz que no sea una herramienta interna desechable.
+- La ficha de UI del proyecto (`<proyecto>/diseno/[<identidad>/]`: `patterns.md`, `sharp_edges.md`, `validations.md`, `nivel-*.jpg`) manda sobre `tastemaker`. El piso de accesibilidad se cita desde la regla, no se copia.
+- Cada criterio de ficha o de encargo nombra su origen en el proyecto y se comprueba con sí o no sobre una captura, midiendo el resultado y no el medio. Lo que comparten todas las piezas (piezas fijas) se fija en la ficha antes de encargar.
+- Aviso del 18-nov-2026 con lo que cambió en FD, LIA y FI: `~/.config/lnk/.revision/aviso-sesiones-criterios-ui-2026-11-18.md`.
