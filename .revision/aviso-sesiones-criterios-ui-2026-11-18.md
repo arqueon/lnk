@@ -36,6 +36,16 @@
 - Si compilas con `compilar.py` un curso con `"identidad": "pulso"` que tenga un libro interactivo, su descripción saldrá reestructurada (franja «N capítulos · tiempo», pliegues, «Qué sigue»).
 - La ficha de UI de Pulso (`diseno/pulso/` en el repo de cursos de FD) vale también para FI: es la misma identidad.
 
+### FI · novedades del 21-nov-2026 (decisiones de Rubén, `.revision/integracion-ui-pulso-2026-11-21.md` del repo de cursos de FD)
+
+Pruebas tiene ahora `local_fdudg` 0.28.0 y `theme_spacefd` 0.3.4. Rubén decidió que dos piezas valgan para **toda la identidad Pulso**, así que alcanzan a tus cursos:
+
+- **Portada del curso (ya activa en pruebas, sin recompilar).** Todo curso de identidad `fi` con finalización activada muestra a sus estudiantes la portada «Retomo y recorro»: tarjeta «Donde te quedaste», «n de N actividades» y las unidades en columnas. Docentes y modo edición ven la de siempre. No se capturó en ningún curso de FI: revísala en FI-QA-01, FI-QA-02 y FI-QA-INT.
+- **Páginas plegadas (al recompilar).** `compilar.py` pliega las páginas de todo curso con `"identidad": "pulso"`: cada `<h2>` sale como parte cerrada; solo abren las que llevan recuadro de Bitácora. Compilé `fi-lia-10h@ocultable` en una copia privada del espejo, sin desplegar: sus diez páginas se pliegan sin error.
+- **Riesgo sin verificar:** tus páginas llevan H5P incrustados dentro de partes que nacen cerradas (hasta cuatro por página en `fi-lia-10h`). Un H5P que arranca oculto puede salir con altura equivocada al abrirse. El plugin avisa a H5P con un `resize` al abrir cada parte, pero solo se probó con una página mínima. Compruébalo en tu primera recompilación; `"pagina_plegada": false` en el `curso.json` apaga el plegado en ese curso.
+- **Piel de H5P en Pulso (0.3.3 y 0.3.4):** el enunciado de Question Set ya no va pegado al marco; en teléfono «Anterior» queda como flecha para que «Comprobar» y «Terminar» conserven su texto; el contador interno del libro («5 / 10») se oculta; el subtítulo del caso ramificado sale en Literata.
+- **Bitácora de Pulso (0.26.0 y 0.28.0):** tablero de estado en vez de la lista con barras, para quien es dueño de la Bitácora.
+
 ## PG y preselección
 
 - No se tocó su código ni su sitio. Solo les aplica la regla general: ficha de UI por proyecto cuando haya interfaz que diseñar, y criterios con origen y comprobación sobre captura.
