@@ -36,6 +36,13 @@
 - Si compilas con `compilar.py` un curso con `"identidad": "pulso"` que tenga un libro interactivo, su descripción saldrá reestructurada (franja «N capítulos · tiempo», pliegues, «Qué sigue»).
 - La ficha de UI de Pulso (`diseno/pulso/` en el repo de cursos de FD) vale también para FI: es la misma identidad.
 
+## Orden de los sitios (decisión de Rubén, 21-nov-2026)
+
+**Pruebas → moodle-45 → oficial.** Se desarrolla y se mide en pruebas (`formaciondocente.arqueonautis.org`); se revisa con Rubén en moodle-45 (el «estudio de forja», `FD_DESTINO=moodle45`), que debe tener el mismo plugin, tema y distribución visual que irá a la oficial; de ahí sale el paquete para `plataformas.udgplus.udg.mx`. Desde el 21-nov pruebas y moodle-45 tienen `local_fdudg` 0.28.1 y `theme_spacefd` 0.3.4. Un cambio aplicado en caliente en moodle-45 debe quedar en git con su versión el mismo día: el del 21-nov (`262ab88`) viajó sin versión y se recogió en la 0.28.1. Detalle en `RELEVO.md` del repo de cursos de FD.
+
+- **FD (0.28.1):** desde 768 px la portada del curso muestra la imagen entera a la izquierda y el título a la derecha (antes, una banda de 260 px que recortaba las portadas con personas, como la de FD-CAA). Vale para todos los cursos FD.
+- **FI en moodle-45:** 24 cursos con identidad `fi` muestran desde el 21-nov la portada «Retomo y recorro» a sus estudiantes.
+
 ### FI · novedades del 21-nov-2026 (decisiones de Rubén, `.revision/integracion-ui-pulso-2026-11-21.md` del repo de cursos de FD)
 
 Pruebas tiene ahora `local_fdudg` 0.28.0 y `theme_spacefd` 0.3.4. Rubén decidió que dos piezas valgan para **toda la identidad Pulso**, así que alcanzan a tus cursos:
