@@ -557,8 +557,8 @@ if [[ -o interactive && -n "$HC_TERMINAL_ID" ]]; then
     __agent_resume() {
         add-zsh-hook -d precmd __agent_resume
         unfunction __agent_resume
-        if [[ "$AGENT_RESUME_AUTO" != 0 && -f '/home/ruben/.config/herdr-app/mods/agent-resume/agent_resume.py' ]]; then
-            command python3 '/home/ruben/.config/herdr-app/mods/agent-resume/agent_resume.py' here || command python3 '/home/ruben/.config/herdr-app/mods/agent-resume/agent_resume.py' after $?
+        if [[ "$AGENT_RESUME_AUTO" != 0 && -f "$HOME/.config/herdr-app/mods/agent-resume/agent_resume.py" ]]; then
+            command python3 "$HOME/.config/herdr-app/mods/agent-resume/agent_resume.py" here || command python3 "$HOME/.config/herdr-app/mods/agent-resume/agent_resume.py" after $?
         fi
     }
     autoload -Uz add-zsh-hook && add-zsh-hook precmd __agent_resume

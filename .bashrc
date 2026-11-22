@@ -492,8 +492,8 @@ if [[ $- == *i* && -n "$HC_TERMINAL_ID" ]]; then
     __agent_resume() {
         PROMPT_COMMAND="${PROMPT_COMMAND/__agent_resume;/}"
         unset -f __agent_resume
-        if [[ "$AGENT_RESUME_AUTO" != 0 && -f '/home/ruben/.config/herdr-app/mods/agent-resume/agent_resume.py' ]]; then
-            command python3 '/home/ruben/.config/herdr-app/mods/agent-resume/agent_resume.py' here || command python3 '/home/ruben/.config/herdr-app/mods/agent-resume/agent_resume.py' after $?
+        if [[ "$AGENT_RESUME_AUTO" != 0 && -f "$HOME/.config/herdr-app/mods/agent-resume/agent_resume.py" ]]; then
+            command python3 "$HOME/.config/herdr-app/mods/agent-resume/agent_resume.py" here || command python3 "$HOME/.config/herdr-app/mods/agent-resume/agent_resume.py" after $?
         fi
     }
     PROMPT_COMMAND="__agent_resume;${PROMPT_COMMAND}"
