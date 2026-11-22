@@ -19,7 +19,6 @@
 .config/herdr-app/mods/dux-tabs
 .config/herdr-app/mods/dux-triage
 .config/herdr-app/mods/preview-plus
-.config/herdr-app/settings.json
 .config/kitty/kitty.conf
 .config/matugen/config.toml
 .config/matugen/templates/fuzzel-colors.ini
