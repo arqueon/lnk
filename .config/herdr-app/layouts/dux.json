@@ -7,9 +7,6 @@
     16
   ],
   "theme": "matugen",
-  "font": "JetBrainsMono Nerd Font",
-  "font_size": 16,
-  "ui_font": "Adwaita Sans",
   "preview": "layouts/dux.svg",
   "cloned_from": {
     "name": "main",
