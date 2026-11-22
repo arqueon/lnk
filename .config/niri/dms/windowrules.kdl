@@ -379,6 +379,7 @@ window-rule {
 // @id=wr_1792421388682804009 @name=io.github.lgse.Strata
 window-rule {
     match app-id="^io.github.lgse.Strata$"
+    open-focused true
     open-on-workspace "files"
     default-column-width { proportion 0.65; }
 }
@@ -418,8 +419,22 @@ window-rule {
 // @id=wr_1793749240043508705 @name=herdr-app
 window-rule {
     match app-id="^herdr-app$"
-    open-on-workspace "agents2"
+    open-on-workspace "agents"
     default-column-width { proportion 0.9; }
+}
+
+// @id=wr_1794669430760053186 @name=org.arqueon.duxmail
+window-rule {
+    match app-id="^org.arqueon.duxmail$" title="^Dux Mail$"
+    open-on-workspace "chat"
+    default-column-width { proportion 0.65; }
+}
+
+// @id=wr_1794805478066305917 @name=dev.duxlabs.calendar
+window-rule {
+    match app-id="^dev.duxlabs.calendar$"
+    open-on-workspace "chat"
+    default-column-width { proportion 0.65; }
 }
 
 // @id=wr_1795013223626369998 @name=dev.duxlabs.files.chooser
