@@ -371,6 +371,15 @@
       "server": "sinope"
     },
     {
+      "name": "Readest",
+      "url": "https://readest.arqueonautis.org",
+      "category": "Servicios",
+      "desc": "Servicio en readest.arqueonautis.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "sinope"
+    },
+    {
       "name": "changedetection.io",
       "url": "https://changes.arqueonautis.org",
       "category": "Monitoreo",
@@ -465,6 +474,24 @@
       "url": "https://lt.arqueonautis.org/v2/languages",
       "category": "General",
       "desc": "LanguageTool",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "sinope"
+    },
+    {
+      "name": "Trama · cartera WAS",
+      "url": "https://cartera.potenciacomun.org/",
+      "category": "General",
+      "desc": "Trama · cartera WAS",
+      "icon": "󰒋",
+      "order": 100,
+      "server": "sinope"
+    },
+    {
+      "name": "Trama · did.json",
+      "url": "https://potenciacomun.org/.well-known/did.json",
+      "category": "General",
+      "desc": "Trama · did.json",
       "icon": "󰒋",
       "order": 100,
       "server": "sinope"
@@ -715,6 +742,15 @@
       "server": "nas-btb"
     },
     {
+      "name": "DroppedNeedle",
+      "url": "https://droppedneedle.arqueonautis.org",
+      "category": "Media",
+      "desc": "Peticiones y organización de la biblioteca de música (reemplazo de MusicSeerr)",
+      "icon": "󰋋",
+      "order": 73,
+      "server": "nas-btb"
+    },
+    {
       "name": "Ficha BTB",
       "url": "https://ficha.barbiestesteadoras.org/",
       "category": "Público",
@@ -766,6 +802,24 @@
       "desc": "TURN de Nextcloud Talk (coturn en anytype-vps)",
       "icon": "󰒋",
       "order": 82,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Cartografias-antifascistas",
+      "url": "https://cartografias-antifascistas.org",
+      "category": "Servicios",
+      "desc": "Servicio en cartografias-antifascistas.org",
+      "icon": "󰒋",
+      "order": 90,
+      "server": "nas-btb"
+    },
+    {
+      "name": "Www",
+      "url": "https://www.cartografias-antifascistas.org",
+      "category": "Servicios",
+      "desc": "Servicio en www.cartografias-antifascistas.org",
+      "icon": "󰒋",
+      "order": 90,
       "server": "nas-btb"
     },
     {

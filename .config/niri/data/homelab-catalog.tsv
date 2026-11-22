@@ -6,6 +6,7 @@
 󰋋	Navidrome	https://navidrome.arqueonautis.org	Media	sinope	activo	Servidor de streaming de música
 󰋼	Calibre-Web	https://libros.arqueonautis.org	Media	sinope	activo	Biblioteca de libros de Gerardo (Calibre)
 󰄛	Scryer	https://scryer.arqueonautis.org	Media	sinope	activo	Películas, series, anime y solicitudes (prueba: sustituye Seerr/Sonarr/Radarr)
+󰋋	DroppedNeedle	https://droppedneedle.arqueonautis.org	Media	nas-btb	activo	Peticiones y organización de la biblioteca de música (reemplazo de MusicSeerr)
 󰍉	Prowlarr	https://sinope.tailf70cf8.ts.net:9696/	Descargas y *arr	sinope	activo	Indexadores para Scryer y los *arr (solo tailnet)
 󰚗	Lidarr	https://lidarr.arqueonautis.org	Descargas y *arr	nas-btb	activo	Gestión automática de música
 󰚗	Bazarr	https://bazarr.arqueonautis.org	Descargas y *arr	sinope	activo	Gestión de subtítulos
@@ -51,7 +52,11 @@
 󰈦	BentoPDF	https://pdf.arqueonautis.org	Productividad	sinope	activo	Herramientas de manipulación de PDF
 󰒋	Hermes-gerardo	https://hermes-gerardo.arqueonautis.org	Productividad	sinope	activo	Servicio en hermes-gerardo.arqueonautis.org
 󰒋	Hermina	https://hermina.arqueonautis.org	Productividad	sinope	activo	Servicio en hermina.arqueonautis.org
+󰒋	Readest	https://readest.arqueonautis.org	Productividad	sinope	activo	Servicio en readest.arqueonautis.org
+󰒋	Www	https://www.cartografias-antifascistas.org	Productividad	nas-btb	activo	Servicio en www.cartografias-antifascistas.org
 󰛐	changedetection.io	https://changes.arqueonautis.org	Productividad	sinope	activo	Vigilancia de cambios en páginas web
+󰒋	Trama · cartera WAS	https://cartera.potenciacomun.org/	Productividad	sinope	activo	Trama · cartera WAS
+󰒋	Trama · did.json	https://potenciacomun.org/.well-known/did.json	Productividad	sinope	activo	Trama · did.json
 󰒋	Hindsight · API/MCP	http://100.107.89.3:18888/docs	Agentes e IA	sinope	activo	API y MCP por banco (/mcp/<banco>/, con clave de tenant)
 󰑓	Hindsight · UI	http://100.107.89.3:19999/	Agentes e IA	sinope	activo	Memoria de agentes: búsqueda y bancos arq-infra, arq-udgplus, arq-agentes
 󰚩	Hermes Web	https://hermes.arqueonautis.org	Agentes e IA	sinope	activo	Interfaz web de Hermes Agent
@@ -71,6 +76,7 @@
 󰈙	Ficha BTB	https://ficha.barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Fichas técnicas y registro
 󰈙	Informes BTB	https://informes.barbiestesteadoras.org/	Sitios públicos	nas-btb	activo	Informes de actividades y resultados
 󰒋	Cartografias-antifascistas	https://cartografias-antifascistas.arqueonautis.org	Sitios públicos	sinope	activo	Servicio en cartografias-antifascistas.arqueonautis.org
+󰒋	Cartografias-antifascistas	https://cartografias-antifascistas.org	Sitios públicos	nas-btb	activo	Servicio en cartografias-antifascistas.org
 󰒋	Arqueonautis.org	https://arqueonautis.org	Sitios públicos	sinope	activo	Arqueonautis.org
 󰒋	LinkBreeze	https://links.barbiestesteadoras.org	Sitios públicos	nas-btb	activo	NAS BTB · LinkBreeze
 󰌋	Vaultwarden BTB	https://vault.barbiestesteadoras.org/	Administración	nas-btb	activo	Gestor de contraseñas de organización

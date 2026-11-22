@@ -261,6 +261,15 @@ SERVICE_METADATA = {
         "server": "nas-btb",
         "order": 72
     },
+    # DroppedNeedle 3.1 en nas-btb (Custom App musica-arr, 2026-11-21): peticiones y biblioteca de música, sin Lidarr.
+    "droppedneedle.arqueonautis.org": {
+        "name": "DroppedNeedle",
+        "category": "Media",
+        "desc": "Peticiones y organización de la biblioteca de música (reemplazo de MusicSeerr)",
+        "icon": "󰋋",
+        "server": "nas-btb",
+        "order": 73
+    },
     "qbittorrent.arqueonautis.org": {
         "name": "qBittorrent Sinope",
         "category": "Descargas",

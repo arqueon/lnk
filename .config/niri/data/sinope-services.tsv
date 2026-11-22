@@ -39,6 +39,7 @@
 󰒋	Hermina	https://hermina.arqueonautis.org	Servicios	Servicio en hermina.arqueonautis.org
 󰂚	ntfy Sinope	https://notify.arqueonautis.org	Monitoreo	Servidor de notificaciones push
 󰒋	Produccion	https://produccion.arqueonautis.org	Servicios	Servicio en produccion.arqueonautis.org
+󰒋	Readest	https://readest.arqueonautis.org	Servicios	Servicio en readest.arqueonautis.org
 󰛐	changedetection.io	https://changes.arqueonautis.org	Monitoreo	Vigilancia de cambios en páginas web
 󰒋	Nextcloud AIO Panel	https://aio.arqueonautis.org	Infraestructura	Panel de administración Nextcloud AIO
 󰚩	Hermes Web	https://hermes.arqueonautis.org	Agentes	Interfaz web de Hermes Agent
@@ -50,4 +51,6 @@
 󰒋	Cursos IA	https://cursos-ia.arqueonautis.org	General	Cursos IA
 󰒋	IA Educación UDGplus	https://iaeducacion.udgplus.udg.mx/	General	IA Educación UDGplus
 󰒋	LanguageTool	https://lt.arqueonautis.org/v2/languages	General	LanguageTool
+󰒋	Trama · cartera WAS	https://cartera.potenciacomun.org/	General	Trama · cartera WAS
+󰒋	Trama · did.json	https://potenciacomun.org/.well-known/did.json	General	Trama · did.json
 󰒋	Videostream	https://videostream.arqueonautis.org	General	Videostream

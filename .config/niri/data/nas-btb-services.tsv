@@ -24,12 +24,15 @@
 󰖟	Transparencia BTB	https://transparencia.barbiestesteadoras.org/	Público	Información pública y rendición de cuentas
 󰋋	Aurral	https://aurral.arqueonautis.org	Media	Recomendaciones musicales Last.fm para Lidarr
 󰈙	Documentación BTB	https://docs.barbiestesteadoras.org/	Documentación	Guías y base de conocimiento
+󰋋	DroppedNeedle	https://droppedneedle.arqueonautis.org	Media	Peticiones y organización de la biblioteca de música (reemplazo de MusicSeerr)
 󰈙	Ficha BTB	https://ficha.barbiestesteadoras.org/	Público	Fichas técnicas y registro
 󰈙	Informes BTB	https://informes.barbiestesteadoras.org/	Documentación	Informes de actividades y resultados
 󰆼	Muestreo BTB	https://muestreo.barbiestesteadoras.org/	Docencia	Registro de muestras y análisis
 󰒋	TrueNAS SCALE UI	https://100.95.27.14/	Infraestructura	Panel de administración TrueNAS (Tailscale)
 󰄨	Umami	https://umami.arqueonautis.org/	Monitoreo	Visitas y descargas de los sitios web
 󰒋	TURN videollamadas	http://turn.barbiestesteadoras.org:3478	General	TURN de Nextcloud Talk (coturn en anytype-vps)
+󰒋	Cartografias-antifascistas	https://cartografias-antifascistas.org	Servicios	Servicio en cartografias-antifascistas.org
+󰒋	Www	https://www.cartografias-antifascistas.org	Servicios	Servicio en www.cartografias-antifascistas.org
 󰒋	Grist origen	http://100.95.27.14:30084/status	General	NAS BTB · Grist origen
 󰒋	Kuma testigo	http://100.95.27.14:31050/	General	NAS BTB · Kuma testigo
 󰒋	LinkBreeze	https://links.barbiestesteadoras.org	General	NAS BTB · LinkBreeze
