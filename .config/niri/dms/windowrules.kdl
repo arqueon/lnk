@@ -422,6 +422,12 @@ window-rule {
     default-column-width { proportion 0.9; }
 }
 
+// @id=wr_1795013223626369998 @name=dev.duxlabs.files.chooser
+window-rule {
+    match app-id="^dev.duxlabs.files.chooser$"
+    open-floating true
+}
+
 // @id=dms-window-opaque @name=DMS Window Opaque
 window-rule {
     match app-id="^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$"
