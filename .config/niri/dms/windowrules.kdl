@@ -379,6 +379,7 @@ window-rule {
 // @id=wr_1792421388682804009 @name=io.github.lgse.Strata
 window-rule {
     match app-id="^io.github.lgse.Strata$"
+    open-maximized true
     open-focused true
     open-on-workspace "files"
     default-column-width { proportion 0.65; }
@@ -441,6 +442,12 @@ window-rule {
 window-rule {
     match app-id="^dev.duxlabs.files.chooser$"
     open-floating true
+}
+
+// @id=wr_1795390687611633476 @name=chrome-droppedneedle.arqueonautis.org__-Default
+window-rule {
+    match app-id="^chrome-droppedneedle.arqueonautis.org__-Default$"
+    open-on-workspace "media"
 }
 
 // @id=dms-window-opaque @name=DMS Window Opaque

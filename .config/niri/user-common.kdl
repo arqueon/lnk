@@ -95,6 +95,8 @@ binds {
     Mod+Shift+K { spawn "thunar"; } // recupera el bind pisado por dms/binds (move-window-up)
     Mod+Alt+V { spawn "sh" "-c" "blueman-manager & pwvucontrol"; }
     Mod+Ctrl+Shift+G { spawn-sh "LASTFM_LOVE_DMS=required exec ~/.config/niri/scripts/lastfm-love-now"; } // DMS manda; no amar una pista remota retrasada
+    Mod+Shift+F { maximize-window-to-edges; } // pisa fullscreen-window de dms/binds para maximizar respetando la barra vertical
+    Mod+Alt+Shift+F { fullscreen-window; } // conserva pantalla completa real para videos/juegos
 }
 
 // ── Fixes para apps Java (JDownloader, etc.) ──
