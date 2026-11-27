@@ -14,8 +14,8 @@ binds {
     // ── Lanzadores: terminal y archivos ──
     Mod+Return { spawn "kitty"; }
     Mod+Shift+Return { spawn-sh "thunar"; }
-    Mod+Shift+Z { spawn "nemo"; }
-    Mod+Shift+K { spawn "thunar"; }
+    Mod+Shift+Z { spawn "herdr-app"; }
+    Mod+Shift+K { spawn "dfiles"; }
     Mod+F6 { spawn "krusader"; }
 
     // ── Lanzadores: teclas de función (F1-F12 = apps principales) ──
@@ -36,7 +36,7 @@ binds {
     Mod+F10 { spawn "~/.config/niri/scripts/launch-anytype.sh"; }
     Mod+Alt+F10 { spawn "claude-desktop"; }
     Mod+Shift+F10 hotkey-overlay-title="Interfaces remotas de Hermes" { spawn "~/.config/niri/scripts/launch-hermes.sh"; }
-    Mod+Ctrl+F10 hotkey-overlay-title="DeepSeek Harness" { spawn "~/.config/niri/scripts/launch-deepseek-harness.sh"; }
+    Mod+Ctrl+F10 hotkey-overlay-title="Herder" { spawn "herdr-app"; }
     Mod+F11 hotkey-overlay-title="Home Assistant" { spawn-sh "~/.config/niri/scripts/run_chrome.sh --app=https://ha.arqueonautis.org/casa-vistosa/principal"; }
     Mod+Alt+F11 { spawn "antigravity-ide"; }
     Mod+Shift+F11 hotkey-overlay-title="Catálogo de Apps de IA" { spawn "~/.config/niri/scripts/launch-ai-menu.sh"; }
